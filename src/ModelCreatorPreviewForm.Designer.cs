@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ModelCreatorPreviewForm));
             this.previewTextBox = new System.Windows.Forms.TextBox();
             this.modelCreatorBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.cancelButton = new System.Windows.Forms.Button();
@@ -122,6 +123,7 @@
             this.Controls.Add(this.okButton);
             this.Controls.Add(this.cancelButton);
             this.Controls.Add(this.previewTextBox);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MinimumSize = new System.Drawing.Size(480, 440);
             this.Name = "ModelCreatorPreviewForm";
             this.Text = "Preview";

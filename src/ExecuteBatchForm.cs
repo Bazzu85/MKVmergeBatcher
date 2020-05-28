@@ -33,7 +33,6 @@ namespace MKVmergeBatcher.src
         private string output = "";
         private bool processRunning = false;
         private int progressPercentage = 0;
-        private int mkvmergePid = 0;
         private int warnings = 0;
         private int errors = 0;
 
@@ -78,7 +77,6 @@ namespace MKVmergeBatcher.src
 
         private void LaunchProcess()
         {
-            mkvmergePid = 0;
             workingFile += 1;
             currentElaboratingFile = this.videoFileList[workingFile - 1];
             BatcherManagement batcherManagement = new BatcherManagement(userData);

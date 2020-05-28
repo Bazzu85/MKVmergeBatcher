@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ExecuteBatchForm));
             this.workingOnLabel = new System.Windows.Forms.Label();
             this.fileNameLabel = new System.Windows.Forms.Label();
             this.totalProgressLabel = new System.Windows.Forms.Label();
@@ -176,6 +177,7 @@
             this.Controls.Add(this.totalProgressLabel);
             this.Controls.Add(this.fileNameLabel);
             this.Controls.Add(this.workingOnLabel);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MinimumSize = new System.Drawing.Size(990, 440);
             this.Name = "ExecuteBatchForm";
             this.Text = "Batch Execution";
