@@ -88,6 +88,9 @@
             this.MCForcedFlag = new System.Windows.Forms.DataGridViewCheckBoxColumn();
             this.MCRemoveFlag = new System.Windows.Forms.DataGridViewCheckBoxColumn();
             this.MCPreviewButton = new System.Windows.Forms.Button();
+            this.tabAbout = new System.Windows.Forms.TabPage();
+            this.aboutTextBox = new System.Windows.Forms.RichTextBox();
+            this.AboutVersionLabel = new System.Windows.Forms.Label();
             this.tracksBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.fileToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -108,6 +111,7 @@
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.MCDataGridView)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.typeBindingSource)).BeginInit();
+            this.tabAbout.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.tracksBindingSource)).BeginInit();
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.modelCreatorBindingSource)).BeginInit();
@@ -119,6 +123,7 @@
             this.tabControl1.Controls.Add(this.tabBatcher);
             this.tabControl1.Controls.Add(this.tabManageModels);
             this.tabControl1.Controls.Add(this.tabModelCreator);
+            this.tabControl1.Controls.Add(this.tabAbout);
             this.tabControl1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tabControl1.Location = new System.Drawing.Point(0, 24);
             this.tabControl1.Name = "tabControl1";
@@ -310,7 +315,7 @@
             // 
             // MMMoveBottomButton
             // 
-            this.MMMoveBottomButton.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.MMMoveBottomButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.MMMoveBottomButton.Location = new System.Drawing.Point(806, 114);
             this.MMMoveBottomButton.Name = "MMMoveBottomButton";
             this.MMMoveBottomButton.Size = new System.Drawing.Size(102, 21);
@@ -321,7 +326,7 @@
             // 
             // MMMoveTopButton
             // 
-            this.MMMoveTopButton.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.MMMoveTopButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.MMMoveTopButton.Location = new System.Drawing.Point(806, 87);
             this.MMMoveTopButton.Name = "MMMoveTopButton";
             this.MMMoveTopButton.Size = new System.Drawing.Size(102, 21);
@@ -332,7 +337,7 @@
             // 
             // MMMoveDownButton
             // 
-            this.MMMoveDownButton.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.MMMoveDownButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.MMMoveDownButton.Location = new System.Drawing.Point(806, 60);
             this.MMMoveDownButton.Name = "MMMoveDownButton";
             this.MMMoveDownButton.Size = new System.Drawing.Size(102, 21);
@@ -343,7 +348,7 @@
             // 
             // MMMoveUpButton
             // 
-            this.MMMoveUpButton.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.MMMoveUpButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.MMMoveUpButton.Location = new System.Drawing.Point(806, 33);
             this.MMMoveUpButton.Name = "MMMoveUpButton";
             this.MMMoveUpButton.Size = new System.Drawing.Size(102, 21);
@@ -354,7 +359,7 @@
             // 
             // MMRemoveSelectedButton
             // 
-            this.MMRemoveSelectedButton.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.MMRemoveSelectedButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.MMRemoveSelectedButton.Location = new System.Drawing.Point(806, 6);
             this.MMRemoveSelectedButton.Name = "MMRemoveSelectedButton";
             this.MMRemoveSelectedButton.Size = new System.Drawing.Size(102, 21);
@@ -501,7 +506,7 @@
             // 
             // MCLoadDefaultButton
             // 
-            this.MCLoadDefaultButton.Location = new System.Drawing.Point(7, 148);
+            this.MCLoadDefaultButton.Location = new System.Drawing.Point(5, 148);
             this.MCLoadDefaultButton.Name = "MCLoadDefaultButton";
             this.MCLoadDefaultButton.Size = new System.Drawing.Size(133, 23);
             this.MCLoadDefaultButton.TabIndex = 33;
@@ -711,6 +716,41 @@
             this.MCPreviewButton.UseVisualStyleBackColor = true;
             this.MCPreviewButton.Click += new System.EventHandler(this.MCPreviewButton_Click);
             // 
+            // tabAbout
+            // 
+            this.tabAbout.Controls.Add(this.aboutTextBox);
+            this.tabAbout.Controls.Add(this.AboutVersionLabel);
+            this.tabAbout.Location = new System.Drawing.Point(4, 22);
+            this.tabAbout.Name = "tabAbout";
+            this.tabAbout.Padding = new System.Windows.Forms.Padding(3);
+            this.tabAbout.Size = new System.Drawing.Size(916, 481);
+            this.tabAbout.TabIndex = 3;
+            this.tabAbout.Text = "About";
+            this.tabAbout.UseVisualStyleBackColor = true;
+            // 
+            // aboutTextBox
+            // 
+            this.aboutTextBox.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.aboutTextBox.BulletIndent = 1;
+            this.aboutTextBox.Font = new System.Drawing.Font("Courier New", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.aboutTextBox.Location = new System.Drawing.Point(6, 19);
+            this.aboutTextBox.Name = "aboutTextBox";
+            this.aboutTextBox.ReadOnly = true;
+            this.aboutTextBox.Size = new System.Drawing.Size(904, 456);
+            this.aboutTextBox.TabIndex = 1;
+            this.aboutTextBox.Text = resources.GetString("aboutTextBox.Text");
+            // 
+            // AboutVersionLabel
+            // 
+            this.AboutVersionLabel.AutoSize = true;
+            this.AboutVersionLabel.Location = new System.Drawing.Point(3, 3);
+            this.AboutVersionLabel.Name = "AboutVersionLabel";
+            this.AboutVersionLabel.Size = new System.Drawing.Size(112, 13);
+            this.AboutVersionLabel.TabIndex = 0;
+            this.AboutVersionLabel.Text = "Mkvmerge Batcher v. ";
+            // 
             // tracksBindingSource
             // 
             this.tracksBindingSource.DataSource = typeof(MKVmergeBatcher.src.obj.UserData.ModelCreator.Tracks);
@@ -767,6 +807,7 @@
             this.MainMenuStrip = this.menuStrip1;
             this.MinimumSize = new System.Drawing.Size(940, 570);
             this.Name = "Form1";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "MKVmerge Batcher";
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.Form1_FormClosed);
             this.LocationChanged += new System.EventHandler(this.Form1_LocationChanged);
@@ -786,6 +827,8 @@
             this.panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.MCDataGridView)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.typeBindingSource)).EndInit();
+            this.tabAbout.ResumeLayout(false);
+            this.tabAbout.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.tracksBindingSource)).EndInit();
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
@@ -859,6 +902,9 @@
         private System.Windows.Forms.Button MCSaveDefaultButton;
         private System.Windows.Forms.CheckBox MCDisableCompressionCheckBox;
         private System.Windows.Forms.Button BTCExectuteNowButton;
+        private System.Windows.Forms.TabPage tabAbout;
+        private System.Windows.Forms.RichTextBox aboutTextBox;
+        private System.Windows.Forms.Label AboutVersionLabel;
     }
 }
 

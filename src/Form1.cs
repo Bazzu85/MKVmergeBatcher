@@ -27,6 +27,7 @@ namespace MKVmergeBatcher
             InitializeComponent();
             RestoreWindowData();
             SetDataSources();
+            SetLabels();
 
         }
         #region Manage Window Data with Properties (save/restore)
@@ -63,6 +64,15 @@ namespace MKVmergeBatcher
 
         private void RestoreWindowData()
         {
+            //If CallUpgrade boolean is true (new defined settings by new build number)
+            //   call the settings upgrade from previous version
+            //   set the CallUpgrade to false to prevent this part for future app launch with this version
+            if (Settings.Default.CallUpgrade)
+            {
+                Settings.Default.Upgrade();
+                Settings.Default.CallUpgrade = false;
+            }
+
             this.WindowState = FormWindowState.Normal;
             this.StartPosition = FormStartPosition.Manual;
 
@@ -101,6 +111,13 @@ namespace MKVmergeBatcher
             this.additionalFlagsBindingSource.DataSource = userData.modelCreator.additionalFlags;
             this.batcherBindingSource.DataSource = userData.batcher;
             this.modelBindingSource.DataSource = userData.modelManagement.modelList;
+        }
+        private void SetLabels()
+        {
+            var version = System.Reflection.Assembly.GetExecutingAssembly().GetName().Version;
+
+            AboutVersionLabel.Text = "Mkvmerge Batcher " + version;
+            this.Text = "MKVmerge Batcher " + version;
         }
         private void Form1_FormClosed(object sender, FormClosedEventArgs e)
         {
@@ -499,8 +516,8 @@ namespace MKVmergeBatcher
             userData.modelManagement.modelList.RemoveAt(MMListBox.SelectedIndex);
         }
 
-        #endregion
 
+        #endregion
 
     }
 
