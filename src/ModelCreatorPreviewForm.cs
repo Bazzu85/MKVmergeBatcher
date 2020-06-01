@@ -43,7 +43,7 @@ namespace MKVmergeBatcher.src
         #endregion
 
         #region Buttons Methods
-        private void addToModelButton_Click(object sender, System.EventArgs e)
+        private void okButton_Click(object sender, System.EventArgs e)
         {
             if (!string.IsNullOrEmpty(addToModelTextBox.Text))
             {
@@ -51,13 +51,14 @@ namespace MKVmergeBatcher.src
                 model.modelName = addToModelTextBox.Text;
                 model.modelContent = previewTextBox.Text;
                 userData.modelManagement.modelList.Add(model);
+                this.DialogResult = DialogResult.OK;
+                this.Close();
             }
-        }
-
-        private void okButton_Click(object sender, System.EventArgs e)
-        {
-            this.DialogResult = DialogResult.OK;
-            this.Close();
+            else
+            {
+                MessageBox.Show("Please insert a Model name to save or use the Cancel button", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+            
         }
         #endregion
 

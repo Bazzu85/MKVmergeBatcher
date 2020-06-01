@@ -29,13 +29,15 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle11 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle12 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle10 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabBatcher = new System.Windows.Forms.TabPage();
+            this.BTCPathLabel = new System.Windows.Forms.Label();
+            this.BTCExtensionsLabel = new System.Windows.Forms.Label();
             this.BTCExectuteNowButton = new System.Windows.Forms.Button();
             this.BTCModelsComboBox = new System.Windows.Forms.ComboBox();
             this.modelBindingSource = new System.Windows.Forms.BindingSource(this.components);
@@ -88,14 +90,12 @@
             this.MCForcedFlag = new System.Windows.Forms.DataGridViewCheckBoxColumn();
             this.MCRemoveFlag = new System.Windows.Forms.DataGridViewCheckBoxColumn();
             this.MCPreviewButton = new System.Windows.Forms.Button();
-            this.tabAbout = new System.Windows.Forms.TabPage();
+            this.tabHelp = new System.Windows.Forms.TabPage();
             this.aboutTextBox = new System.Windows.Forms.RichTextBox();
-            this.AboutVersionLabel = new System.Windows.Forms.Label();
             this.tracksBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.fileToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.exitToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.toolsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.modelCreatorBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.modelManagementBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.tabControl1.SuspendLayout();
@@ -111,7 +111,7 @@
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.MCDataGridView)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.typeBindingSource)).BeginInit();
-            this.tabAbout.SuspendLayout();
+            this.tabHelp.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.tracksBindingSource)).BeginInit();
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.modelCreatorBindingSource)).BeginInit();
@@ -123,7 +123,7 @@
             this.tabControl1.Controls.Add(this.tabBatcher);
             this.tabControl1.Controls.Add(this.tabManageModels);
             this.tabControl1.Controls.Add(this.tabModelCreator);
-            this.tabControl1.Controls.Add(this.tabAbout);
+            this.tabControl1.Controls.Add(this.tabHelp);
             this.tabControl1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tabControl1.Location = new System.Drawing.Point(0, 24);
             this.tabControl1.Name = "tabControl1";
@@ -135,6 +135,8 @@
             // tabBatcher
             // 
             this.tabBatcher.AutoScroll = true;
+            this.tabBatcher.Controls.Add(this.BTCPathLabel);
+            this.tabBatcher.Controls.Add(this.BTCExtensionsLabel);
             this.tabBatcher.Controls.Add(this.BTCExectuteNowButton);
             this.tabBatcher.Controls.Add(this.BTCModelsComboBox);
             this.tabBatcher.Controls.Add(this.BTCCreateBatButton);
@@ -153,10 +155,28 @@
             this.tabBatcher.Text = "Batcher";
             this.tabBatcher.UseVisualStyleBackColor = true;
             // 
+            // BTCPathLabel
+            // 
+            this.BTCPathLabel.AutoSize = true;
+            this.BTCPathLabel.Location = new System.Drawing.Point(3, 35);
+            this.BTCPathLabel.Name = "BTCPathLabel";
+            this.BTCPathLabel.Size = new System.Drawing.Size(32, 13);
+            this.BTCPathLabel.TabIndex = 11;
+            this.BTCPathLabel.Text = "Path:";
+            // 
+            // BTCExtensionsLabel
+            // 
+            this.BTCExtensionsLabel.AutoSize = true;
+            this.BTCExtensionsLabel.Location = new System.Drawing.Point(3, 61);
+            this.BTCExtensionsLabel.Name = "BTCExtensionsLabel";
+            this.BTCExtensionsLabel.Size = new System.Drawing.Size(61, 13);
+            this.BTCExtensionsLabel.TabIndex = 10;
+            this.BTCExtensionsLabel.Text = "Extensions:";
+            // 
             // BTCExectuteNowButton
             // 
             this.BTCExectuteNowButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.BTCExectuteNowButton.Location = new System.Drawing.Point(747, 450);
+            this.BTCExectuteNowButton.Location = new System.Drawing.Point(752, 450);
             this.BTCExectuteNowButton.Name = "BTCExectuteNowButton";
             this.BTCExectuteNowButton.Size = new System.Drawing.Size(75, 23);
             this.BTCExectuteNowButton.TabIndex = 9;
@@ -171,10 +191,11 @@
             this.BTCModelsComboBox.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
             this.BTCModelsComboBox.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
             this.BTCModelsComboBox.DataSource = this.modelBindingSource;
+            this.BTCModelsComboBox.DisplayMember = "modelName";
             this.BTCModelsComboBox.FormattingEnabled = true;
             this.BTCModelsComboBox.Location = new System.Drawing.Point(6, 423);
             this.BTCModelsComboBox.Name = "BTCModelsComboBox";
-            this.BTCModelsComboBox.Size = new System.Drawing.Size(897, 21);
+            this.BTCModelsComboBox.Size = new System.Drawing.Size(902, 21);
             this.BTCModelsComboBox.TabIndex = 7;
             // 
             // modelBindingSource
@@ -184,7 +205,7 @@
             // BTCCreateBatButton
             // 
             this.BTCCreateBatButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.BTCCreateBatButton.Location = new System.Drawing.Point(828, 450);
+            this.BTCCreateBatButton.Location = new System.Drawing.Point(833, 450);
             this.BTCCreateBatButton.Name = "BTCCreateBatButton";
             this.BTCCreateBatButton.Size = new System.Drawing.Size(75, 23);
             this.BTCCreateBatButton.TabIndex = 8;
@@ -199,14 +220,16 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.BTCVideoFilesListBox.ContextMenuStrip = this.BTCVideoFilesListContextMenuStrip;
             this.BTCVideoFilesListBox.FormattingEnabled = true;
+            this.BTCVideoFilesListBox.HorizontalScrollbar = true;
             this.BTCVideoFilesListBox.Location = new System.Drawing.Point(6, 84);
             this.BTCVideoFilesListBox.Name = "BTCVideoFilesListBox";
             this.BTCVideoFilesListBox.SelectionMode = System.Windows.Forms.SelectionMode.MultiSimple;
-            this.BTCVideoFilesListBox.Size = new System.Drawing.Size(897, 329);
+            this.BTCVideoFilesListBox.Size = new System.Drawing.Size(902, 329);
             this.BTCVideoFilesListBox.TabIndex = 6;
             // 
             // BTCVideoFilesListContextMenuStrip
             // 
+            this.BTCVideoFilesListContextMenuStrip.ImageScalingSize = new System.Drawing.Size(20, 20);
             this.BTCVideoFilesListContextMenuStrip.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.BTCReverseSelectionToolStripMenuItem,
             this.BTCCleanSelectionToolStripMenuItem});
@@ -232,12 +255,11 @@
             this.BTCVideoExtensionsTextBox.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.BTCVideoExtensionsTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.batcherBindingSource, "videoExtensions", true));
-            this.BTCVideoExtensionsTextBox.Location = new System.Drawing.Point(6, 58);
+            this.BTCVideoExtensionsTextBox.Location = new System.Drawing.Point(70, 58);
             this.BTCVideoExtensionsTextBox.Name = "BTCVideoExtensionsTextBox";
-            this.BTCVideoExtensionsTextBox.Size = new System.Drawing.Size(897, 20);
+            this.BTCVideoExtensionsTextBox.Size = new System.Drawing.Size(838, 20);
             this.BTCVideoExtensionsTextBox.TabIndex = 5;
             this.BTCVideoExtensionsTextBox.MouseClick += new System.Windows.Forms.MouseEventHandler(this.BTCVideoExtensionsTextBox_MouseClick);
-            this.BTCVideoExtensionsTextBox.TextChanged += new System.EventHandler(this.BTCVideoExtensionsTextBox_TextChanged);
             // 
             // batcherBindingSource
             // 
@@ -246,7 +268,7 @@
             // BTCVideoBrowseButton
             // 
             this.BTCVideoBrowseButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.BTCVideoBrowseButton.Location = new System.Drawing.Point(828, 32);
+            this.BTCVideoBrowseButton.Location = new System.Drawing.Point(833, 32);
             this.BTCVideoBrowseButton.Name = "BTCVideoBrowseButton";
             this.BTCVideoBrowseButton.Size = new System.Drawing.Size(75, 20);
             this.BTCVideoBrowseButton.TabIndex = 4;
@@ -259,19 +281,19 @@
             this.BTCFilePathTextBox.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.BTCFilePathTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.batcherBindingSource, "lastVideoPath", true));
-            this.BTCFilePathTextBox.Location = new System.Drawing.Point(6, 32);
+            this.BTCFilePathTextBox.Location = new System.Drawing.Point(70, 32);
             this.BTCFilePathTextBox.Name = "BTCFilePathTextBox";
-            this.BTCFilePathTextBox.Size = new System.Drawing.Size(816, 20);
+            this.BTCFilePathTextBox.Size = new System.Drawing.Size(757, 20);
             this.BTCFilePathTextBox.TabIndex = 3;
             // 
             // BTCMkvMergePathBrowseButton
             // 
             this.BTCMkvMergePathBrowseButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.BTCMkvMergePathBrowseButton.Location = new System.Drawing.Point(828, 5);
+            this.BTCMkvMergePathBrowseButton.Location = new System.Drawing.Point(794, 6);
             this.BTCMkvMergePathBrowseButton.Name = "BTCMkvMergePathBrowseButton";
-            this.BTCMkvMergePathBrowseButton.Size = new System.Drawing.Size(75, 20);
+            this.BTCMkvMergePathBrowseButton.Size = new System.Drawing.Size(114, 20);
             this.BTCMkvMergePathBrowseButton.TabIndex = 2;
-            this.BTCMkvMergePathBrowseButton.Text = "Browse";
+            this.BTCMkvMergePathBrowseButton.Text = "Browse MkvMerge";
             this.BTCMkvMergePathBrowseButton.UseVisualStyleBackColor = true;
             this.BTCMkvMergePathBrowseButton.Click += new System.EventHandler(this.BTCMkvMergePathBrowseButton_Click);
             // 
@@ -291,7 +313,7 @@
             this.BTCMkvMergePathTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.batcherBindingSource, "mvkMergePath", true));
             this.BTCMkvMergePathTextBox.Location = new System.Drawing.Point(115, 6);
             this.BTCMkvMergePathTextBox.Name = "BTCMkvMergePathTextBox";
-            this.BTCMkvMergePathTextBox.Size = new System.Drawing.Size(707, 20);
+            this.BTCMkvMergePathTextBox.Size = new System.Drawing.Size(673, 20);
             this.BTCMkvMergePathTextBox.TabIndex = 0;
             // 
             // tabManageModels
@@ -386,6 +408,7 @@
             this.MMModelContentTextBox.Location = new System.Drawing.Point(8, 341);
             this.MMModelContentTextBox.Multiline = true;
             this.MMModelContentTextBox.Name = "MMModelContentTextBox";
+            this.MMModelContentTextBox.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
             this.MMModelContentTextBox.Size = new System.Drawing.Size(900, 132);
             this.MMModelContentTextBox.TabIndex = 2;
             // 
@@ -572,14 +595,14 @@
             this.MCDataGridView.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
             this.MCDataGridView.BackgroundColor = System.Drawing.SystemColors.Window;
             this.MCDataGridView.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.MCDataGridView.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle9.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle9.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle9.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle9.SelectionBackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle9.SelectionForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle9.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.MCDataGridView.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle9;
             this.MCDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.MCDataGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.MCExternalDataGridViewType,
@@ -592,26 +615,26 @@
             this.MCDefaultFlag,
             this.MCForcedFlag,
             this.MCRemoveFlag});
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.MCDataGridView.DefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle11.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle11.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle11.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle11.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle11.SelectionBackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle11.SelectionForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle11.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.MCDataGridView.DefaultCellStyle = dataGridViewCellStyle11;
             this.MCDataGridView.EditMode = System.Windows.Forms.DataGridViewEditMode.EditOnEnter;
             this.MCDataGridView.Location = new System.Drawing.Point(8, 19);
             this.MCDataGridView.MultiSelect = false;
             this.MCDataGridView.Name = "MCDataGridView";
-            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle4.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.MCDataGridView.RowHeadersDefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle12.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle12.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle12.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle12.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle12.SelectionBackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle12.SelectionForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle12.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.MCDataGridView.RowHeadersDefaultCellStyle = dataGridViewCellStyle12;
             this.MCDataGridView.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.MCDataGridView.Size = new System.Drawing.Size(738, 338);
             this.MCDataGridView.TabIndex = 25;
@@ -635,8 +658,8 @@
             // MCPositionInOriginalFile
             // 
             this.MCPositionInOriginalFile.DataPropertyName = "position";
-            dataGridViewCellStyle2.NullValue = null;
-            this.MCPositionInOriginalFile.DefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle10.NullValue = null;
+            this.MCPositionInOriginalFile.DefaultCellStyle = dataGridViewCellStyle10;
             this.MCPositionInOriginalFile.HeaderText = "Position";
             this.MCPositionInOriginalFile.Name = "MCPositionInOriginalFile";
             this.MCPositionInOriginalFile.ToolTipText = "Position of track in files. Format F:P. F is file number starting from 0. File 0 " +
@@ -716,40 +739,28 @@
             this.MCPreviewButton.UseVisualStyleBackColor = true;
             this.MCPreviewButton.Click += new System.EventHandler(this.MCPreviewButton_Click);
             // 
-            // tabAbout
+            // tabHelp
             // 
-            this.tabAbout.Controls.Add(this.aboutTextBox);
-            this.tabAbout.Controls.Add(this.AboutVersionLabel);
-            this.tabAbout.Location = new System.Drawing.Point(4, 22);
-            this.tabAbout.Name = "tabAbout";
-            this.tabAbout.Padding = new System.Windows.Forms.Padding(3);
-            this.tabAbout.Size = new System.Drawing.Size(916, 481);
-            this.tabAbout.TabIndex = 3;
-            this.tabAbout.Text = "About";
-            this.tabAbout.UseVisualStyleBackColor = true;
+            this.tabHelp.Controls.Add(this.aboutTextBox);
+            this.tabHelp.Location = new System.Drawing.Point(4, 22);
+            this.tabHelp.Name = "tabHelp";
+            this.tabHelp.Padding = new System.Windows.Forms.Padding(3);
+            this.tabHelp.Size = new System.Drawing.Size(916, 481);
+            this.tabHelp.TabIndex = 3;
+            this.tabHelp.Text = "Help";
+            this.tabHelp.UseVisualStyleBackColor = true;
             // 
             // aboutTextBox
             // 
-            this.aboutTextBox.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
             this.aboutTextBox.BulletIndent = 1;
+            this.aboutTextBox.Dock = System.Windows.Forms.DockStyle.Fill;
             this.aboutTextBox.Font = new System.Drawing.Font("Courier New", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.aboutTextBox.Location = new System.Drawing.Point(6, 19);
+            this.aboutTextBox.Location = new System.Drawing.Point(3, 3);
             this.aboutTextBox.Name = "aboutTextBox";
             this.aboutTextBox.ReadOnly = true;
-            this.aboutTextBox.Size = new System.Drawing.Size(904, 456);
+            this.aboutTextBox.Size = new System.Drawing.Size(910, 475);
             this.aboutTextBox.TabIndex = 1;
             this.aboutTextBox.Text = resources.GetString("aboutTextBox.Text");
-            // 
-            // AboutVersionLabel
-            // 
-            this.AboutVersionLabel.AutoSize = true;
-            this.AboutVersionLabel.Location = new System.Drawing.Point(3, 3);
-            this.AboutVersionLabel.Name = "AboutVersionLabel";
-            this.AboutVersionLabel.Size = new System.Drawing.Size(112, 13);
-            this.AboutVersionLabel.TabIndex = 0;
-            this.AboutVersionLabel.Text = "Mkvmerge Batcher v. ";
             // 
             // tracksBindingSource
             // 
@@ -757,9 +768,9 @@
             // 
             // menuStrip1
             // 
+            this.menuStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.fileToolStripMenuItem,
-            this.toolsToolStripMenuItem});
+            this.fileToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Size = new System.Drawing.Size(924, 24);
@@ -781,12 +792,6 @@
             this.exitToolStripMenuItem.Size = new System.Drawing.Size(135, 22);
             this.exitToolStripMenuItem.Text = "Exit";
             this.exitToolStripMenuItem.Click += new System.EventHandler(this.exitToolStripMenuItem_Click);
-            // 
-            // toolsToolStripMenuItem
-            // 
-            this.toolsToolStripMenuItem.Name = "toolsToolStripMenuItem";
-            this.toolsToolStripMenuItem.Size = new System.Drawing.Size(46, 20);
-            this.toolsToolStripMenuItem.Text = "Tools";
             // 
             // modelCreatorBindingSource
             // 
@@ -827,8 +832,7 @@
             this.panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.MCDataGridView)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.typeBindingSource)).EndInit();
-            this.tabAbout.ResumeLayout(false);
-            this.tabAbout.PerformLayout();
+            this.tabHelp.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.tracksBindingSource)).EndInit();
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
@@ -848,7 +852,6 @@
         private System.Windows.Forms.MenuStrip menuStrip1;
         private System.Windows.Forms.ToolStripMenuItem fileToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem exitToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem toolsToolStripMenuItem;
         private System.Windows.Forms.Button MCPreviewButton;
         private System.Windows.Forms.GroupBox tracksGroupBox;
         private System.Windows.Forms.Button MCExternalTrackClearListButton;
@@ -902,9 +905,10 @@
         private System.Windows.Forms.Button MCSaveDefaultButton;
         private System.Windows.Forms.CheckBox MCDisableCompressionCheckBox;
         private System.Windows.Forms.Button BTCExectuteNowButton;
-        private System.Windows.Forms.TabPage tabAbout;
+        private System.Windows.Forms.TabPage tabHelp;
         private System.Windows.Forms.RichTextBox aboutTextBox;
-        private System.Windows.Forms.Label AboutVersionLabel;
+        private System.Windows.Forms.Label BTCPathLabel;
+        private System.Windows.Forms.Label BTCExtensionsLabel;
     }
 }
 

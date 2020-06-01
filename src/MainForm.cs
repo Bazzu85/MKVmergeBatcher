@@ -115,9 +115,7 @@ namespace MKVmergeBatcher
         private void SetLabels()
         {
             var version = System.Reflection.Assembly.GetExecutingAssembly().GetName().Version;
-
-            AboutVersionLabel.Text = "Mkvmerge Batcher " + version;
-            this.Text = "MKVmerge Batcher " + version;
+this.Text = "MKVmerge Batcher " + version;
         }
         private void Form1_FormClosed(object sender, FormClosedEventArgs e)
         {
@@ -279,6 +277,13 @@ namespace MKVmergeBatcher
 
             }
             ;
+            //update the list videoExtensionList splitting videoExtensions
+            string[] array = userData.batcher.videoExtensions.Split(',');
+            userData.batcher.videoExtensionList.Clear();
+            if (array.Length != 0)
+            {
+                userData.batcher.videoExtensionList = array.ToList();
+            }
             if (userData.batcher.videoExtensionList.Count() > 0)
             {
                 string extensionsFilter = "Video Files |";
@@ -331,6 +336,7 @@ namespace MKVmergeBatcher
             }
         }
 
+        /*
         private void BTCVideoExtensionsTextBox_TextChanged(object sender, EventArgs e)
         {
             //update the list videoExtensionList splitting videoExtensions
@@ -341,6 +347,8 @@ namespace MKVmergeBatcher
                 userData.batcher.videoExtensionList = array.ToList();
             }
         }
+        */
+
         private void BTCVideoExtensionsTextBox_MouseClick(object sender, MouseEventArgs e)
         {
             ToolTip tt = new ToolTip();
@@ -438,6 +446,20 @@ namespace MKVmergeBatcher
             return rc;
         }
 
+        private void BTCClearListBoxButton_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void BTCRevertSelectionButton_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void BTCSelectNoneButton_Click(object sender, EventArgs e)
+        {
+
+        }
 
         #endregion
 
@@ -461,8 +483,14 @@ namespace MKVmergeBatcher
         {
             if (MMListBox.SelectedIndex >= 0)
             {
-                userData.modelManagement.modelList[MMListBox.SelectedIndex].modelName = MMModelNameTextBox.Text;
-                userData.modelManagement.modelList[MMListBox.SelectedIndex].modelContent = MMModelContentTextBox.Text;
+                //userData.modelManagement.modelList[MMListBox.SelectedIndex].modelName = MMModelNameTextBox.Text;
+                //userData.modelManagement.modelList[MMListBox.SelectedIndex].modelContent = MMModelContentTextBox.Text;
+                UserData.ModelManagement.Model model = new UserData.ModelManagement.Model() 
+                {
+                modelName = MMModelNameTextBox.Text,
+                modelContent = MMModelContentTextBox.Text
+                };
+                userData.modelManagement.modelList[MMListBox.SelectedIndex] = model;
             }
         }
 
@@ -519,6 +547,7 @@ namespace MKVmergeBatcher
 
         #endregion
 
+       
     }
 
 }

@@ -34,9 +34,8 @@
             this.modelCreatorBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.cancelButton = new System.Windows.Forms.Button();
             this.okButton = new System.Windows.Forms.Button();
-            this.addModelLabel = new System.Windows.Forms.Label();
+            this.modelNameLabel = new System.Windows.Forms.Label();
             this.addToModelTextBox = new System.Windows.Forms.TextBox();
-            this.addToModelButton = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.modelCreatorBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
@@ -80,36 +79,25 @@
             this.okButton.UseVisualStyleBackColor = true;
             this.okButton.Click += new System.EventHandler(this.okButton_Click);
             // 
-            // addModelLabel
+            // modelNameLabel
             // 
-            this.addModelLabel.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
+            this.modelNameLabel.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.addModelLabel.AutoSize = true;
-            this.addModelLabel.Location = new System.Drawing.Point(12, 340);
-            this.addModelLabel.Name = "addModelLabel";
-            this.addModelLabel.Size = new System.Drawing.Size(72, 13);
-            this.addModelLabel.TabIndex = 3;
-            this.addModelLabel.Text = "Add to model:";
+            this.modelNameLabel.AutoSize = true;
+            this.modelNameLabel.Location = new System.Drawing.Point(12, 340);
+            this.modelNameLabel.Name = "modelNameLabel";
+            this.modelNameLabel.Size = new System.Drawing.Size(68, 13);
+            this.modelNameLabel.TabIndex = 3;
+            this.modelNameLabel.Text = "Model name:";
             // 
             // addToModelTextBox
             // 
             this.addToModelTextBox.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.addToModelTextBox.Location = new System.Drawing.Point(90, 337);
+            this.addToModelTextBox.Location = new System.Drawing.Point(86, 337);
             this.addToModelTextBox.Name = "addToModelTextBox";
-            this.addToModelTextBox.Size = new System.Drawing.Size(281, 20);
+            this.addToModelTextBox.Size = new System.Drawing.Size(366, 20);
             this.addToModelTextBox.TabIndex = 1;
-            // 
-            // addToModelButton
-            // 
-            this.addToModelButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.addToModelButton.Location = new System.Drawing.Point(377, 337);
-            this.addToModelButton.Name = "addToModelButton";
-            this.addToModelButton.Size = new System.Drawing.Size(75, 23);
-            this.addToModelButton.TabIndex = 2;
-            this.addToModelButton.Text = "Add";
-            this.addToModelButton.UseVisualStyleBackColor = true;
-            this.addToModelButton.Click += new System.EventHandler(this.addToModelButton_Click);
             // 
             // ModelCreatorPreviewForm
             // 
@@ -117,9 +105,8 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.CancelButton = this.cancelButton;
             this.ClientSize = new System.Drawing.Size(464, 401);
-            this.Controls.Add(this.addToModelButton);
             this.Controls.Add(this.addToModelTextBox);
-            this.Controls.Add(this.addModelLabel);
+            this.Controls.Add(this.modelNameLabel);
             this.Controls.Add(this.okButton);
             this.Controls.Add(this.cancelButton);
             this.Controls.Add(this.previewTextBox);
@@ -138,9 +125,8 @@
         private System.Windows.Forms.TextBox previewTextBox;
         private System.Windows.Forms.Button cancelButton;
         private System.Windows.Forms.Button okButton;
-        private System.Windows.Forms.Label addModelLabel;
+        private System.Windows.Forms.Label modelNameLabel;
         private System.Windows.Forms.TextBox addToModelTextBox;
-        private System.Windows.Forms.Button addToModelButton;
         private System.Windows.Forms.BindingSource modelCreatorBindingSource;
     }
 }

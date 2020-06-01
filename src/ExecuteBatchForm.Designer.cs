@@ -132,7 +132,7 @@
             this.outputTextBox.Location = new System.Drawing.Point(76, 85);
             this.outputTextBox.Name = "outputTextBox";
             this.outputTextBox.ReadOnly = true;
-            this.outputTextBox.Size = new System.Drawing.Size(886, 250);
+            this.outputTextBox.Size = new System.Drawing.Size(886, 241);
             this.outputTextBox.TabIndex = 8;
             this.outputTextBox.Text = "";
             // 

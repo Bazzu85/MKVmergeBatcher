@@ -32,6 +32,7 @@ namespace MKVmergeBatcher.src
         private string currentElaboratingFile = "";
         private string output = "";
         private bool processRunning = false;
+        private bool processEnded = false;
         private int progressPercentage = 0;
         private int warnings = 0;
         private int errors = 0;
@@ -46,7 +47,7 @@ namespace MKVmergeBatcher.src
             totalFileToExecute = videoFileList.Count();
             UpdateFormControls();
             timer.Interval = 1000;
-            timer.Enabled = true;
+            //timer.Enabled = true;
         }
 
         #region Generic Methods
@@ -65,13 +66,34 @@ namespace MKVmergeBatcher.src
         {
             workingOnLabel.Text = "Working on file number " + workingFile + " of " + totalFileToExecute;
             fileNameTextBox.Text = currentElaboratingFile;
-            outputTextBox.Text = output;
-            outputTextBox.SelectionStart = outputTextBox.Text.Length;
-            outputTextBox.ScrollToCaret();
             this.progressBar.Value = progressPercentage;
             warningsLabel.Text = "Warnings: " + warnings;
             errorsLabel.Text = "Errors: " + errors;
-
+            if (processRunning)
+            {
+                startButton.Enabled = false;
+                stopButton.Enabled = true;
+            } else
+            {
+                startButton.Enabled = true;
+                stopButton.Enabled = false;
+            }
+            /*
+            outputTextBox.Text = output;
+            outputTextBox.SelectionStart = outputTextBox.Text.Length;
+            outputTextBox.ScrollToCaret();
+            */
+            if (!String.IsNullOrEmpty(output))
+            {
+                outputTextBox.AppendText(Environment.NewLine + output);
+                output = "";
+            }
+            if (processEnded)
+            {
+                processEnded = false;
+                string messaggeText = "Elaborated files: " + totalFileToExecute + Environment.NewLine + "Warnings: " + warnings + Environment.NewLine + "Errors: " + errors;
+                MessageBox.Show(this, messaggeText, "Summary", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
         }
         #endregion
 
@@ -123,6 +145,8 @@ namespace MKVmergeBatcher.src
 
             if (!processRunning)
             {
+                startButton.Enabled = false;
+                stopButton.Enabled = true;
                 processRunning = true;
                 workingFile = 0;
                 progressPercentage = 0;
@@ -168,8 +192,8 @@ namespace MKVmergeBatcher.src
             try
             {
                 Process proc = Process.GetProcessById(processId);
-                Console.WriteLine("KillProcessAndChildrens: processId: " + proc.Id);
-                Console.WriteLine("KillProcessAndChildrens: processName: " + proc.ProcessName);
+                //Console.WriteLine("KillProcessAndChildrens: processId: " + proc.Id);
+                //Console.WriteLine("KillProcessAndChildrens: processName: " + proc.ProcessName);
 
                 if (!proc.HasExited) proc.Kill();
             }
@@ -207,8 +231,14 @@ namespace MKVmergeBatcher.src
         {
             if (!String.IsNullOrEmpty(errLine.Data))
             {
-                output += Environment.NewLine + errLine.Data;
-                Console.WriteLine("process working: " + errLine.Data);
+                if (String.IsNullOrEmpty(output))
+                {
+                    output += errLine.Data;
+                }
+                else
+                {
+                    output += Environment.NewLine + errLine.Data;
+                }
             }
         }
         private void ProcessExitedHandler(object sender, EventArgs e)
@@ -233,7 +263,8 @@ namespace MKVmergeBatcher.src
                 {
                     //timer.Enabled = false;
                     processRunning = false;
-                }
+                    processEnded = true;
+                    }
             }
         }
 
