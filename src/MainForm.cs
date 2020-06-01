@@ -573,6 +573,7 @@ this.Text = "MKVmerge Batcher " + version;
                     }
                     addingIndex++;
                 }
+                MMListBox.SelectedIndex = newSelectedIndex + 1;
                 MMListBox.SelectedIndex = newSelectedIndex;
             }
         }
