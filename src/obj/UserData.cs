@@ -35,7 +35,6 @@ namespace MKVmergeBatcher.src.obj
                 public string suffix { get; set; } = "";
                 public Boolean defaultFlag { get; set; }
                 public Boolean forcedFlag { get; set; }
-                public Boolean removeFlag { get; set; }
             }
 
             public BindingList<Tracks> defaultTracks = new BindingList<Tracks>();

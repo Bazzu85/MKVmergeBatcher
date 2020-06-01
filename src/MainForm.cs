@@ -120,7 +120,12 @@ this.Text = "MKVmerge Batcher " + version;
         private void Form1_FormClosed(object sender, FormClosedEventArgs e)
         {
             SaveWindowData();
-            userDataJsonManagement.WriteUserData(userData);
+            userData = userDataJsonManagement.WriteUserData(userData);
+            //After the form is closed the components.Dispose() is called.
+            //sometimes the code throw a bad System.IndexOutOfRangeException for apparently no reason 
+            //in this method the DataGridView is corretcly populated
+            //Disposing the resource release now prevent this error lately
+            this.MCDataGridView.Dispose();
         }
         #endregion
 
@@ -246,6 +251,11 @@ this.Text = "MKVmerge Batcher " + version;
             }
         }
 
+        private void MCDataGridView_DataError(object sender, DataGridViewDataErrorEventArgs e)
+        {
+            string error = "Error in datagridview: " + "Column: " + e.ColumnIndex + " Row: " + e.RowIndex + " Error: " + e.Exception;
+            MessageBox.Show(this, error, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+        }
         #endregion
 
         #region Batcher Methods
@@ -544,10 +554,29 @@ this.Text = "MKVmerge Batcher " + version;
             userData.modelManagement.modelList.RemoveAt(MMListBox.SelectedIndex);
         }
 
-
+        private void MMSortByModelNameButton_Click(object sender, EventArgs e)
+        {
+            if (userData.modelManagement.modelList.Count() > 0)
+            {
+                string previouslySelectedModel = userData.modelManagement.modelList[MMListBox.SelectedIndex].modelName;
+                
+                List<UserData.ModelManagement.Model> sortedList = userData.modelManagement.modelList.OrderBy(o => o.modelName).ToList();
+                userData.modelManagement.modelList.Clear();
+                int addingIndex = 0;
+                int newSelectedIndex = 0;
+                foreach (UserData.ModelManagement.Model item in sortedList)
+                {
+                    userData.modelManagement.modelList.Add(item);
+                    if (item.modelName == previouslySelectedModel)
+                    {
+                        newSelectedIndex = addingIndex;
+                    }
+                    addingIndex++;
+                }
+                MMListBox.SelectedIndex = newSelectedIndex;
+            }
+        }
         #endregion
-
-       
     }
 
 }

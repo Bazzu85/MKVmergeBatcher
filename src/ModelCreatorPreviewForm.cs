@@ -47,6 +47,15 @@ namespace MKVmergeBatcher.src
         {
             if (!string.IsNullOrEmpty(addToModelTextBox.Text))
             {
+                //search the typed model name in current list
+                foreach (UserData.ModelManagement.Model item in userData.modelManagement.modelList)
+                {
+                    if (item.modelName == addToModelTextBox.Text)
+                    {
+                        MessageBox.Show("Model name already in Models List. Please insert a different Model name", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                        return;
+                    }
+                }
                 UserData.ModelManagement.Model model = new UserData.ModelManagement.Model();
                 model.modelName = addToModelTextBox.Text;
                 model.modelContent = previewTextBox.Text;
