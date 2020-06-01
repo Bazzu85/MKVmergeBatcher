@@ -578,6 +578,7 @@ this.Text = "MKVmerge Batcher " + version;
             }
         }
         #endregion
+
     }
 
 }
