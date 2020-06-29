@@ -29,11 +29,11 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabBatcher = new System.Windows.Forms.TabPage();
             this.BTCPathLabel = new System.Windows.Forms.Label();
@@ -54,6 +54,7 @@
             this.BTCMkvMergePathLabel = new System.Windows.Forms.Label();
             this.BTCMkvMergePathTextBox = new System.Windows.Forms.TextBox();
             this.tabManageModels = new System.Windows.Forms.TabPage();
+            this.MMSortByModelNameButton = new System.Windows.Forms.Button();
             this.MMMoveBottomButton = new System.Windows.Forms.Button();
             this.MMMoveTopButton = new System.Windows.Forms.Button();
             this.MMMoveDownButton = new System.Windows.Forms.Button();
@@ -78,7 +79,16 @@
             this.MCExternalTrackMoveUpButton = new System.Windows.Forms.Button();
             this.MCExternalTrackClearListButton = new System.Windows.Forms.Button();
             this.MCDataGridView = new System.Windows.Forms.DataGridView();
+            this.MCDataGridViewType = new System.Windows.Forms.DataGridViewComboBoxColumn();
             this.typeBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.MCPositionInOriginalFile = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.MCLanguageCode = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.MCLanguageName = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.MCExternalFlag = new System.Windows.Forms.DataGridViewCheckBoxColumn();
+            this.MCExtension = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.MCSuffix = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.MCDefaultFlag = new System.Windows.Forms.DataGridViewCheckBoxColumn();
+            this.MCForcedFlag = new System.Windows.Forms.DataGridViewCheckBoxColumn();
             this.MCPreviewButton = new System.Windows.Forms.Button();
             this.tabHelp = new System.Windows.Forms.TabPage();
             this.aboutTextBox = new System.Windows.Forms.RichTextBox();
@@ -88,16 +98,6 @@
             this.exitToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.modelCreatorBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.modelManagementBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.MCDataGridViewType = new System.Windows.Forms.DataGridViewComboBoxColumn();
-            this.MCPositionInOriginalFile = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.MCLanguageCode = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.MCLanguageName = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.MCExternalFlag = new System.Windows.Forms.DataGridViewCheckBoxColumn();
-            this.MCExtension = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.MCSuffix = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.MCDefaultFlag = new System.Windows.Forms.DataGridViewCheckBoxColumn();
-            this.MCForcedFlag = new System.Windows.Forms.DataGridViewCheckBoxColumn();
-            this.MMSortByModelNameButton = new System.Windows.Forms.Button();
             this.tabControl1.SuspendLayout();
             this.tabBatcher.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.modelBindingSource)).BeginInit();
@@ -186,7 +186,7 @@
             // 
             // BTCModelsComboBox
             // 
-            this.BTCModelsComboBox.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.BTCModelsComboBox.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.BTCModelsComboBox.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
             this.BTCModelsComboBox.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
@@ -336,6 +336,17 @@
             this.tabManageModels.Text = "Manage Models";
             this.tabManageModels.UseVisualStyleBackColor = true;
             // 
+            // MMSortByModelNameButton
+            // 
+            this.MMSortByModelNameButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.MMSortByModelNameButton.Location = new System.Drawing.Point(806, 141);
+            this.MMSortByModelNameButton.Name = "MMSortByModelNameButton";
+            this.MMSortByModelNameButton.Size = new System.Drawing.Size(102, 36);
+            this.MMSortByModelNameButton.TabIndex = 9;
+            this.MMSortByModelNameButton.Text = "Sort by Model Name";
+            this.MMSortByModelNameButton.UseVisualStyleBackColor = true;
+            this.MMSortByModelNameButton.Click += new System.EventHandler(this.MMSortByModelNameButton_Click);
+            // 
             // MMMoveBottomButton
             // 
             this.MMMoveBottomButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
@@ -393,7 +404,7 @@
             // 
             // MMSaveButton
             // 
-            this.MMSaveButton.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.MMSaveButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.MMSaveButton.Location = new System.Drawing.Point(806, 314);
             this.MMSaveButton.Name = "MMSaveButton";
             this.MMSaveButton.Size = new System.Drawing.Size(102, 21);
@@ -404,7 +415,8 @@
             // 
             // MMModelContentTextBox
             // 
-            this.MMModelContentTextBox.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.MMModelContentTextBox.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.MMModelContentTextBox.Font = new System.Drawing.Font("Courier New", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.MMModelContentTextBox.Location = new System.Drawing.Point(8, 341);
             this.MMModelContentTextBox.Multiline = true;
@@ -415,7 +427,8 @@
             // 
             // MMModelNameTextBox
             // 
-            this.MMModelNameTextBox.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.MMModelNameTextBox.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.MMModelNameTextBox.Location = new System.Drawing.Point(8, 315);
             this.MMModelNameTextBox.Name = "MMModelNameTextBox";
             this.MMModelNameTextBox.Size = new System.Drawing.Size(792, 20);
@@ -451,7 +464,7 @@
             // 
             // additionalFlagsGroupBox
             // 
-            this.additionalFlagsGroupBox.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.additionalFlagsGroupBox.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.additionalFlagsGroupBox.Controls.Add(this.MCDisableCompressionCheckBox);
             this.additionalFlagsGroupBox.Controls.Add(this.MCCleanTitleCheckBox);
@@ -502,7 +515,8 @@
             // 
             // tracksGroupBox
             // 
-            this.tracksGroupBox.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.tracksGroupBox.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.tracksGroupBox.Controls.Add(this.panel1);
             this.tracksGroupBox.Controls.Add(this.MCDataGridView);
@@ -590,20 +604,19 @@
             // 
             // MCDataGridView
             // 
-            this.MCDataGridView.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
+            this.MCDataGridView.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.MCDataGridView.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
             this.MCDataGridView.BackgroundColor = System.Drawing.SystemColors.Window;
             this.MCDataGridView.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.MCDataGridView.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle5.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle5.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle5.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.MCDataGridView.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle5;
             this.MCDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.MCDataGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.MCDataGridViewType,
@@ -615,34 +628,112 @@
             this.MCSuffix,
             this.MCDefaultFlag,
             this.MCForcedFlag});
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.MCDataGridView.DefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle7.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle7.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle7.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle7.SelectionBackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle7.SelectionForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle7.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.MCDataGridView.DefaultCellStyle = dataGridViewCellStyle7;
             this.MCDataGridView.EditMode = System.Windows.Forms.DataGridViewEditMode.EditOnEnter;
             this.MCDataGridView.Location = new System.Drawing.Point(8, 19);
             this.MCDataGridView.MultiSelect = false;
             this.MCDataGridView.Name = "MCDataGridView";
-            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle4.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.MCDataGridView.RowHeadersDefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle8.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle8.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle8.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle8.SelectionBackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle8.SelectionForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.MCDataGridView.RowHeadersDefaultCellStyle = dataGridViewCellStyle8;
             this.MCDataGridView.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.MCDataGridView.Size = new System.Drawing.Size(738, 338);
             this.MCDataGridView.TabIndex = 25;
             this.MCDataGridView.DataError += new System.Windows.Forms.DataGridViewDataErrorEventHandler(this.MCDataGridView_DataError);
             // 
+            // MCDataGridViewType
+            // 
+            this.MCDataGridViewType.DataPropertyName = "type";
+            this.MCDataGridViewType.DataSource = this.typeBindingSource;
+            this.MCDataGridViewType.DisplayMember = "type";
+            this.MCDataGridViewType.DisplayStyle = System.Windows.Forms.DataGridViewComboBoxDisplayStyle.ComboBox;
+            this.MCDataGridViewType.HeaderText = "Track Type";
+            this.MCDataGridViewType.Name = "MCDataGridViewType";
+            this.MCDataGridViewType.ToolTipText = "Track Type (Video/Audio/Subtitle)";
+            this.MCDataGridViewType.ValueMember = "type";
+            this.MCDataGridViewType.Width = 68;
+            // 
             // typeBindingSource
             // 
             this.typeBindingSource.DataSource = typeof(MKVmergeBatcher.src.obj.UserData.ModelCreator.Type);
+            // 
+            // MCPositionInOriginalFile
+            // 
+            this.MCPositionInOriginalFile.DataPropertyName = "position";
+            dataGridViewCellStyle6.NullValue = null;
+            this.MCPositionInOriginalFile.DefaultCellStyle = dataGridViewCellStyle6;
+            this.MCPositionInOriginalFile.HeaderText = "Position";
+            this.MCPositionInOriginalFile.Name = "MCPositionInOriginalFile";
+            this.MCPositionInOriginalFile.ToolTipText = "Position of track in files. Format F:P. F is file number starting from 0. File 0 " +
+    "is original file. Additional file are external files. P is track position in rel" +
+    "ated file starting from 0.";
+            this.MCPositionInOriginalFile.Width = 69;
+            // 
+            // MCLanguageCode
+            // 
+            this.MCLanguageCode.DataPropertyName = "languageCode";
+            this.MCLanguageCode.HeaderText = "Language Code";
+            this.MCLanguageCode.Name = "MCLanguageCode";
+            this.MCLanguageCode.ToolTipText = "Language Code for mkvmerge (ex. und/eng/ita)";
+            this.MCLanguageCode.Width = 108;
+            // 
+            // MCLanguageName
+            // 
+            this.MCLanguageName.DataPropertyName = "languageName";
+            this.MCLanguageName.HeaderText = "Language Name";
+            this.MCLanguageName.Name = "MCLanguageName";
+            this.MCLanguageName.ToolTipText = "Language name for destination file";
+            this.MCLanguageName.Width = 111;
+            // 
+            // MCExternalFlag
+            // 
+            this.MCExternalFlag.DataPropertyName = "externalFlag";
+            this.MCExternalFlag.HeaderText = "External";
+            this.MCExternalFlag.Name = "MCExternalFlag";
+            this.MCExternalFlag.ToolTipText = "Mark the track as external file. With custom suffix and extension";
+            this.MCExternalFlag.Width = 51;
+            // 
+            // MCExtension
+            // 
+            this.MCExtension.DataPropertyName = "extension";
+            this.MCExtension.HeaderText = "Extension";
+            this.MCExtension.Name = "MCExtension";
+            this.MCExtension.ToolTipText = "Extension of external files (the file must have same file name as base file)";
+            this.MCExtension.Width = 78;
+            // 
+            // MCSuffix
+            // 
+            this.MCSuffix.DataPropertyName = "suffix";
+            this.MCSuffix.HeaderText = "Suffix";
+            this.MCSuffix.Name = "MCSuffix";
+            this.MCSuffix.ToolTipText = "Suffix for external file";
+            this.MCSuffix.Width = 58;
+            // 
+            // MCDefaultFlag
+            // 
+            this.MCDefaultFlag.DataPropertyName = "defaultFlag";
+            this.MCDefaultFlag.HeaderText = "Default";
+            this.MCDefaultFlag.Name = "MCDefaultFlag";
+            this.MCDefaultFlag.Width = 47;
+            // 
+            // MCForcedFlag
+            // 
+            this.MCForcedFlag.DataPropertyName = "forcedFlag";
+            this.MCForcedFlag.HeaderText = "Forced";
+            this.MCForcedFlag.Name = "MCForcedFlag";
+            this.MCForcedFlag.Width = 46;
             // 
             // MCPreviewButton
             // 
@@ -716,95 +807,6 @@
             // modelManagementBindingSource
             // 
             this.modelManagementBindingSource.DataSource = typeof(MKVmergeBatcher.src.obj.UserData.ModelManagement);
-            // 
-            // MCDataGridViewType
-            // 
-            this.MCDataGridViewType.DataPropertyName = "type";
-            this.MCDataGridViewType.DataSource = this.typeBindingSource;
-            this.MCDataGridViewType.DisplayMember = "type";
-            this.MCDataGridViewType.DisplayStyle = System.Windows.Forms.DataGridViewComboBoxDisplayStyle.ComboBox;
-            this.MCDataGridViewType.HeaderText = "Track Type";
-            this.MCDataGridViewType.Name = "MCDataGridViewType";
-            this.MCDataGridViewType.ToolTipText = "Track Type (Video/Audio/Subtitle)";
-            this.MCDataGridViewType.ValueMember = "type";
-            this.MCDataGridViewType.Width = 68;
-            // 
-            // MCPositionInOriginalFile
-            // 
-            this.MCPositionInOriginalFile.DataPropertyName = "position";
-            dataGridViewCellStyle2.NullValue = null;
-            this.MCPositionInOriginalFile.DefaultCellStyle = dataGridViewCellStyle2;
-            this.MCPositionInOriginalFile.HeaderText = "Position";
-            this.MCPositionInOriginalFile.Name = "MCPositionInOriginalFile";
-            this.MCPositionInOriginalFile.ToolTipText = "Position of track in files. Format F:P. F is file number starting from 0. File 0 " +
-    "is original file. Additional file are external files. P is track position in rel" +
-    "ated file starting from 0.";
-            this.MCPositionInOriginalFile.Width = 69;
-            // 
-            // MCLanguageCode
-            // 
-            this.MCLanguageCode.DataPropertyName = "languageCode";
-            this.MCLanguageCode.HeaderText = "Language Code";
-            this.MCLanguageCode.Name = "MCLanguageCode";
-            this.MCLanguageCode.ToolTipText = "Language Code for mkvmerge (ex. und/eng/ita)";
-            this.MCLanguageCode.Width = 108;
-            // 
-            // MCLanguageName
-            // 
-            this.MCLanguageName.DataPropertyName = "languageName";
-            this.MCLanguageName.HeaderText = "Language Name";
-            this.MCLanguageName.Name = "MCLanguageName";
-            this.MCLanguageName.ToolTipText = "Language name for destination file";
-            this.MCLanguageName.Width = 111;
-            // 
-            // MCExternalFlag
-            // 
-            this.MCExternalFlag.DataPropertyName = "externalFlag";
-            this.MCExternalFlag.HeaderText = "External";
-            this.MCExternalFlag.Name = "MCExternalFlag";
-            this.MCExternalFlag.ToolTipText = "Mark the track as external file. With custom suffix and extension";
-            this.MCExternalFlag.Width = 51;
-            // 
-            // MCExtension
-            // 
-            this.MCExtension.DataPropertyName = "extension";
-            this.MCExtension.HeaderText = "Extension";
-            this.MCExtension.Name = "MCExtension";
-            this.MCExtension.ToolTipText = "Extension of external files (the file must have same file name as base file)";
-            this.MCExtension.Width = 78;
-            // 
-            // MCSuffix
-            // 
-            this.MCSuffix.DataPropertyName = "suffix";
-            this.MCSuffix.HeaderText = "Suffix";
-            this.MCSuffix.Name = "MCSuffix";
-            this.MCSuffix.ToolTipText = "Suffix for external file";
-            this.MCSuffix.Width = 58;
-            // 
-            // MCDefaultFlag
-            // 
-            this.MCDefaultFlag.DataPropertyName = "defaultFlag";
-            this.MCDefaultFlag.HeaderText = "Default";
-            this.MCDefaultFlag.Name = "MCDefaultFlag";
-            this.MCDefaultFlag.Width = 47;
-            // 
-            // MCForcedFlag
-            // 
-            this.MCForcedFlag.DataPropertyName = "forcedFlag";
-            this.MCForcedFlag.HeaderText = "Forced";
-            this.MCForcedFlag.Name = "MCForcedFlag";
-            this.MCForcedFlag.Width = 46;
-            // 
-            // MMSortByModelNameButton
-            // 
-            this.MMSortByModelNameButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.MMSortByModelNameButton.Location = new System.Drawing.Point(806, 141);
-            this.MMSortByModelNameButton.Name = "MMSortByModelNameButton";
-            this.MMSortByModelNameButton.Size = new System.Drawing.Size(102, 36);
-            this.MMSortByModelNameButton.TabIndex = 9;
-            this.MMSortByModelNameButton.Text = "Sort by Model Name";
-            this.MMSortByModelNameButton.UseVisualStyleBackColor = true;
-            this.MMSortByModelNameButton.Click += new System.EventHandler(this.MMSortByModelNameButton_Click);
             // 
             // Form1
             // 
