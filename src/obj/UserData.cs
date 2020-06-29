@@ -65,6 +65,9 @@ namespace MKVmergeBatcher.src.obj
 
             public List<string> videoFileList = new List<string>();
 
+            public int lastUsedModel { get; set; } = 0;
+
+
         }
 
         public ModelManagement modelManagement = new ModelManagement();

@@ -28,6 +28,7 @@ namespace MKVmergeBatcher
             RestoreWindowData();
             SetDataSources();
             SetLabels();
+            SetLastModelUsed();
 
         }
         #region Manage Window Data with Properties (save/restore)
@@ -60,6 +61,13 @@ namespace MKVmergeBatcher
             // Save settings
             Settings.Default.Save();
 
+        }
+        private void SaveLastUsedModel()
+        {
+            if (userData.modelManagement.modelList.Count > 0 && BTCModelsComboBox.SelectedIndex >= 0)
+            {
+                userData.batcher.lastUsedModel = BTCModelsComboBox.SelectedIndex;
+            }
         }
 
         private void RestoreWindowData()
@@ -117,9 +125,18 @@ namespace MKVmergeBatcher
             var version = System.Reflection.Assembly.GetExecutingAssembly().GetName().Version;
 this.Text = "MKVmerge Batcher " + version;
         }
+
+        private void SetLastModelUsed()
+        {
+            if (userData.modelManagement.modelList.Count > 0)
+            {
+                BTCModelsComboBox.SelectedIndex = userData.batcher.lastUsedModel;
+            }
+        }
         private void Form1_FormClosed(object sender, FormClosedEventArgs e)
         {
             SaveWindowData();
+            SaveLastUsedModel();
             userData = userDataJsonManagement.WriteUserData(userData);
             //After the form is closed the components.Dispose() is called.
             //sometimes the code throw a bad System.IndexOutOfRangeException for apparently no reason 
@@ -133,6 +150,7 @@ this.Text = "MKVmerge Batcher " + version;
         private void exitToolStripMenuItem_Click(object sender, EventArgs e)
         {
             SaveWindowData();
+            SaveLastUsedModel();
             userDataJsonManagement.WriteUserData(userData);
             this.Close();
         }
