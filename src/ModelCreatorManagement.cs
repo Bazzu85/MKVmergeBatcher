@@ -177,6 +177,7 @@ namespace MKVmergeBatcher.src
             }
             #endregion
 
+
             //Transfer errorList to single string
             foreach (string item in errorList)
             {
@@ -233,6 +234,12 @@ namespace MKVmergeBatcher.src
             if (userData.modelCreator.additionalFlags.addAttachments)
             {
                 preview += "||attachments|| ";
+            }
+            #endregion
+            #region Add chapters
+            if (userData.modelCreator.additionalFlags.addChapters)
+            {
+                preview += "||chapters|| ";
             }
             #endregion
             #region --track-order

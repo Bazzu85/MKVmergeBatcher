@@ -77,8 +77,18 @@ namespace MKVmergeBatcher
                 {
                     cmdLine = cmdLine.Replace("||attachments||", "");
                 }
-
-
+            }
+            //if ||chapters|| is in model search the fileName_chapters.xml file and add to the cmdLine
+            if (cmdLine.Contains("||chapters||"))
+            {
+                string capthersFile = Path.GetDirectoryName(videoFile) + "\\" + Path.GetFileNameWithoutExtension(videoFile) + "_chapters.xml";
+                if (File.Exists(capthersFile)) {
+                    string capthersString = " --chapters ^\"" + capthersFile + "^\" ";
+                    cmdLine = cmdLine.Replace("||chapters||", capthersString);
+                } else
+                {
+                    cmdLine = cmdLine.Replace("||chapters||", "");
+                }
             }
             return cmdLine;
         }

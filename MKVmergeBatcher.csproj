@@ -40,7 +40,7 @@
     <MapFileExtensions>true</MapFileExtensions>
     <PublisherName>Bazzu</PublisherName>
     <ApplicationRevision>4</ApplicationRevision>
-    <ApplicationVersion>1.1.75.20200</ApplicationVersion>
+    <ApplicationVersion>1.1.76.20205</ApplicationVersion>
     <UseApplicationTrust>false</UseApplicationTrust>
     <CreateDesktopShortcut>true</CreateDesktopShortcut>
     <PublishWizardCompleted>true</PublishWizardCompleted>

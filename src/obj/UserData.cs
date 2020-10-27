@@ -47,6 +47,7 @@ namespace MKVmergeBatcher.src.obj
                 public Boolean cleanTitle { get; set; }
                 public Boolean disableCompression { get; set; }
                 public Boolean addAttachments { get; set; }
+                public Boolean addChapters { get; set; }
             }
 
             public string preview { get; set; } = "";
