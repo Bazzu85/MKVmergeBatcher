@@ -56,10 +56,24 @@ Additional tags:
 NEW IN > 1.1.76 version
 - Add attachments: add in the model the ||attachments|| tag. When executing the creating/executing the batch the app search for all file 
   under a folder named as executing file name and add them as attachments. The --no-attachments and Add attachements are exclusives
+  
+  Example:
+  
+  VideoFile: C:\Video\test.mkv
+  
+  Attachment1: C:\Video\test\font1.ttf
+  
+  Attachment1: C:\Video\test\font2.ttf
 
 NEW IN > 1.1.77 version
 - Add chapters: add in the model the ||chapters|| tag. The chapter must have this name fileName_chapters.xml. If the xml is not in the 
   folder, the tag is skipped
+  
+  Example:
+  
+  VideoFile: C:\Video\test.mkv
+  
+  Chapter file: C:\Video\test_chapters.xml
 
 ### 3.2 Preview and Model Creation
 Clicking on preview the insered data will be validated.
