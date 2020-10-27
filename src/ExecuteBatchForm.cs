@@ -192,8 +192,6 @@ namespace MKVmergeBatcher.src
             try
             {
                 Process proc = Process.GetProcessById(processId);
-                //Console.WriteLine("KillProcessAndChildrens: processId: " + proc.Id);
-                //Console.WriteLine("KillProcessAndChildrens: processName: " + proc.ProcessName);
 
                 if (!proc.HasExited) proc.Kill();
             }

@@ -55,11 +55,9 @@ namespace MKVmergeBatcher
             {
                 string attachmentsDirectory = Path.GetDirectoryName(videoFile) + "\\" + Path.GetFileNameWithoutExtension(videoFile);
                 string attachmentsString = "";
-                Console.WriteLine(attachmentsDirectory);
 
                 if (Directory.Exists(attachmentsDirectory))
                 {
-                    Console.WriteLine("trovata directory");
                     string[] allFiles = Directory.GetFiles(attachmentsDirectory, "*.*", SearchOption.TopDirectoryOnly);
                     if (allFiles.Length != 0)
                     {
@@ -71,14 +69,12 @@ namespace MKVmergeBatcher
                                 attachmentsString += "--attach-file ^\"" + item + "^\" ";
                             }
                         }
-                        Console.WriteLine("stringa generata: " + attachmentsString);
                         cmdLine = cmdLine.Replace("||attachments||", attachmentsString);
 
                     }
                 }
                 else
                 {
-                    Console.WriteLine("non trovata directory");
                     cmdLine = cmdLine.Replace("||attachments||", "");
                 }
 
