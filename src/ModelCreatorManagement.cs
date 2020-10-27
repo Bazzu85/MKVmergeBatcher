@@ -170,6 +170,13 @@ namespace MKVmergeBatcher.src
                 }
             }
             #endregion
+            #region --no-attachments and add attachments
+            if (userData.modelCreator.additionalFlags.noAttachments && userData.modelCreator.additionalFlags.addAttachments)
+            {
+                errorList.Add("Use only one flag between --no-attachments and Add Attachments");
+            }
+            #endregion
+
             //Transfer errorList to single string
             foreach (string item in errorList)
             {
@@ -220,6 +227,12 @@ namespace MKVmergeBatcher.src
             if (userData.modelCreator.additionalFlags.cleanTitle)
             {
                 preview += "--title ^\"^\"" + " ";
+            }
+            #endregion
+            #region Add attachments
+            if (userData.modelCreator.additionalFlags.addAttachments)
+            {
+                preview += "||attachments|| ";
             }
             #endregion
             #region --track-order
@@ -359,6 +372,7 @@ namespace MKVmergeBatcher.src
                 completeTrackString += "--no-subtitles ";
             }
             #endregion
+
             //copy all track0 data strings to preview
             foreach (string track0String in tracksStringList)
             {

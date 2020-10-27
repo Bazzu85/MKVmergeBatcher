@@ -1,4 +1,5 @@
 ﻿using MKVmergeBatcher.src.obj;
+using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Text;
@@ -48,6 +49,41 @@ namespace MKVmergeBatcher
             cmdLine = cmdLine.Replace("||outputFileName||", outputFileName);
             cmdLine = cmdLine.Replace("||inputFileName||", inputFileName);
             cmdLine = cmdLine.Replace("||inputFileNameWithoutExtension||", inputFileNameWithoutExtension);
+
+            //Grab all files from a folder named a file name to append it replacing the ||attachments|| tag
+            if (cmdLine.Contains("||attachments||"))
+            {
+                string attachmentsDirectory = Path.GetDirectoryName(videoFile) + "\\" + Path.GetFileNameWithoutExtension(videoFile);
+                string attachmentsString = "";
+                Console.WriteLine(attachmentsDirectory);
+
+                if (Directory.Exists(attachmentsDirectory))
+                {
+                    Console.WriteLine("trovata directory");
+                    string[] allFiles = Directory.GetFiles(attachmentsDirectory, "*.*", SearchOption.TopDirectoryOnly);
+                    if (allFiles.Length != 0)
+                    {
+                        foreach (string item in allFiles)
+                        {
+                            // Check file dimension. Use only file with dimension > 0
+                            FileInfo fi = new FileInfo(item);
+                            if (fi.Length > 0) {
+                                attachmentsString += "--attach-file ^\"" + item + "^\" ";
+                            }
+                        }
+                        Console.WriteLine("stringa generata: " + attachmentsString);
+                        cmdLine = cmdLine.Replace("||attachments||", attachmentsString);
+
+                    }
+                }
+                else
+                {
+                    Console.WriteLine("non trovata directory");
+                    cmdLine = cmdLine.Replace("||attachments||", "");
+                }
+
+
+            }
             return cmdLine;
         }
     }

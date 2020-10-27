@@ -29,10 +29,10 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle13 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle15 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle16 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle14 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabBatcher = new System.Windows.Forms.TabPage();
@@ -66,8 +66,9 @@
             this.MMListBox = new System.Windows.Forms.ListBox();
             this.tabModelCreator = new System.Windows.Forms.TabPage();
             this.additionalFlagsGroupBox = new System.Windows.Forms.GroupBox();
-            this.MCDisableCompressionCheckBox = new System.Windows.Forms.CheckBox();
+            this.MCAddAttachmentsCheckBox = new System.Windows.Forms.CheckBox();
             this.additionalFlagsBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.MCDisableCompressionCheckBox = new System.Windows.Forms.CheckBox();
             this.MCCleanTitleCheckBox = new System.Windows.Forms.CheckBox();
             this.MCNoAttachmentsCheckBox = new System.Windows.Forms.CheckBox();
             this.tracksGroupBox = new System.Windows.Forms.GroupBox();
@@ -98,6 +99,7 @@
             this.exitToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.modelCreatorBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.modelManagementBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.MCToolTip = new System.Windows.Forms.ToolTip(this.components);
             this.tabControl1.SuspendLayout();
             this.tabBatcher.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.modelBindingSource)).BeginInit();
@@ -466,6 +468,7 @@
             // 
             this.additionalFlagsGroupBox.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.additionalFlagsGroupBox.Controls.Add(this.MCAddAttachmentsCheckBox);
             this.additionalFlagsGroupBox.Controls.Add(this.MCDisableCompressionCheckBox);
             this.additionalFlagsGroupBox.Controls.Add(this.MCCleanTitleCheckBox);
             this.additionalFlagsGroupBox.Controls.Add(this.MCNoAttachmentsCheckBox);
@@ -475,6 +478,23 @@
             this.additionalFlagsGroupBox.TabIndex = 28;
             this.additionalFlagsGroupBox.TabStop = false;
             this.additionalFlagsGroupBox.Text = "Additional Flags";
+            // 
+            // MCAddAttachmentsCheckBox
+            // 
+            this.MCAddAttachmentsCheckBox.AutoSize = true;
+            this.MCAddAttachmentsCheckBox.DataBindings.Add(new System.Windows.Forms.Binding("Checked", this.additionalFlagsBindingSource, "addAttachments", true));
+            this.MCAddAttachmentsCheckBox.Location = new System.Drawing.Point(328, 19);
+            this.MCAddAttachmentsCheckBox.Name = "MCAddAttachmentsCheckBox";
+            this.MCAddAttachmentsCheckBox.Size = new System.Drawing.Size(107, 17);
+            this.MCAddAttachmentsCheckBox.TabIndex = 3;
+            this.MCAddAttachmentsCheckBox.Text = "Add Attachments";
+            this.MCToolTip.SetToolTip(this.MCAddAttachmentsCheckBox, "Generate in the model a ||attachments|| tag that in the result execution add all " +
+        "attachments from the folder named as file name");
+            this.MCAddAttachmentsCheckBox.UseVisualStyleBackColor = true;
+            // 
+            // additionalFlagsBindingSource
+            // 
+            this.additionalFlagsBindingSource.DataSource = typeof(MKVmergeBatcher.src.obj.UserData.ModelCreator.AdditionalFlags);
             // 
             // MCDisableCompressionCheckBox
             // 
@@ -486,10 +506,6 @@
             this.MCDisableCompressionCheckBox.TabIndex = 2;
             this.MCDisableCompressionCheckBox.Text = "--compression none";
             this.MCDisableCompressionCheckBox.UseVisualStyleBackColor = true;
-            // 
-            // additionalFlagsBindingSource
-            // 
-            this.additionalFlagsBindingSource.DataSource = typeof(MKVmergeBatcher.src.obj.UserData.ModelCreator.AdditionalFlags);
             // 
             // MCCleanTitleCheckBox
             // 
@@ -609,14 +625,14 @@
             this.MCDataGridView.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
             this.MCDataGridView.BackgroundColor = System.Drawing.SystemColors.Window;
             this.MCDataGridView.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle5.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle5.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle5.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.MCDataGridView.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle5;
+            dataGridViewCellStyle13.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle13.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle13.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle13.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle13.SelectionBackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle13.SelectionForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle13.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.MCDataGridView.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle13;
             this.MCDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.MCDataGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.MCDataGridViewType,
@@ -628,26 +644,26 @@
             this.MCSuffix,
             this.MCDefaultFlag,
             this.MCForcedFlag});
-            dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle7.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle7.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle7.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle7.SelectionBackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle7.SelectionForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle7.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.MCDataGridView.DefaultCellStyle = dataGridViewCellStyle7;
+            dataGridViewCellStyle15.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle15.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle15.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle15.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle15.SelectionBackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle15.SelectionForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle15.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.MCDataGridView.DefaultCellStyle = dataGridViewCellStyle15;
             this.MCDataGridView.EditMode = System.Windows.Forms.DataGridViewEditMode.EditOnEnter;
             this.MCDataGridView.Location = new System.Drawing.Point(8, 19);
             this.MCDataGridView.MultiSelect = false;
             this.MCDataGridView.Name = "MCDataGridView";
-            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle8.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle8.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle8.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle8.SelectionBackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle8.SelectionForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.MCDataGridView.RowHeadersDefaultCellStyle = dataGridViewCellStyle8;
+            dataGridViewCellStyle16.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle16.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle16.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle16.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle16.SelectionBackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle16.SelectionForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle16.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.MCDataGridView.RowHeadersDefaultCellStyle = dataGridViewCellStyle16;
             this.MCDataGridView.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.MCDataGridView.Size = new System.Drawing.Size(738, 338);
             this.MCDataGridView.TabIndex = 25;
@@ -672,8 +688,8 @@
             // MCPositionInOriginalFile
             // 
             this.MCPositionInOriginalFile.DataPropertyName = "position";
-            dataGridViewCellStyle6.NullValue = null;
-            this.MCPositionInOriginalFile.DefaultCellStyle = dataGridViewCellStyle6;
+            dataGridViewCellStyle14.NullValue = null;
+            this.MCPositionInOriginalFile.DefaultCellStyle = dataGridViewCellStyle14;
             this.MCPositionInOriginalFile.HeaderText = "Position";
             this.MCPositionInOriginalFile.Name = "MCPositionInOriginalFile";
             this.MCPositionInOriginalFile.ToolTipText = "Position of track in files. Format F:P. F is file number starting from 0. File 0 " +
@@ -916,6 +932,8 @@
         private System.Windows.Forms.DataGridViewCheckBoxColumn MCDefaultFlag;
         private System.Windows.Forms.DataGridViewCheckBoxColumn MCForcedFlag;
         private System.Windows.Forms.Button MMSortByModelNameButton;
+        private System.Windows.Forms.CheckBox MCAddAttachmentsCheckBox;
+        private System.Windows.Forms.ToolTip MCToolTip;
     }
 }
 

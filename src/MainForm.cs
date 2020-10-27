@@ -84,7 +84,7 @@ namespace MKVmergeBatcher
             this.WindowState = FormWindowState.Normal;
             this.StartPosition = FormStartPosition.Manual;
 
-            // Set window location
+            // Set window locationaaa
             if (Settings.Default.WindowLocation != null)
             {
                 this.Location = Settings.Default.WindowLocation;

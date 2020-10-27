@@ -26,6 +26,8 @@
     <UpdatePackageVersion>False</UpdatePackageVersion>
     <AssemblyInfoVersionType>SettingsVersion</AssemblyInfoVersionType>
     <InheritWinAppVersionFrom>AssemblyVersion</InheritWinAppVersionFrom>
+    <AssemblyVersionSettings>
+    </AssemblyVersionSettings>
     <PublishUrl>n:\Google Drive\Programmazione\MkvmergeBatcher\</PublishUrl>
     <Install>true</Install>
     <InstallFrom>Disk</InstallFrom>
@@ -38,13 +40,11 @@
     <MapFileExtensions>true</MapFileExtensions>
     <PublisherName>Bazzu</PublisherName>
     <ApplicationRevision>4</ApplicationRevision>
-    <ApplicationVersion>1.1.66.20181</ApplicationVersion>
+    <ApplicationVersion>1.1.73.20200</ApplicationVersion>
     <UseApplicationTrust>false</UseApplicationTrust>
     <CreateDesktopShortcut>true</CreateDesktopShortcut>
     <PublishWizardCompleted>true</PublishWizardCompleted>
     <BootstrapperEnabled>true</BootstrapperEnabled>
-    <AssemblyVersionSettings>
-    </AssemblyVersionSettings>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <PlatformTarget>AnyCPU</PlatformTarget>
@@ -222,7 +222,9 @@
     <Content Include="icon.ico" />
     <Content Include="ILMergeOrder.txt" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Folder Include="Properties\DataSources\" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
     <PropertyGroup>

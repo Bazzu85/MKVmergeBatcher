@@ -47,6 +47,13 @@ The PositionInOriginalFile is the relative track position in choosen file starti
 - Default: if choosen the track will be marked as default in destination file.
 PS only 1 track by type can be default at the same time
 - Forced: if choosen the track will be marked as Forced in destination file.
+Additional tags:
+- --no-attachments: add in the model the --no-attachments parameter
+- --title empty: add in the model the --title parameter with empty value
+- --compression none: add in the model the --compression parameter with "none" value
+NEW IN > 1.1.75 version
+- Add attachments: add in the model the ||attachments|| tag. When executing the creating/executing the batch the app search for all file 
+  under a folder named as executing file name and add them as attachments. The --no-attachments and Add attachements are exclusives
 
 ### 3.2 Preview and Model Creation
 Clicking on preview the insered data will be validated.
