@@ -79,3 +79,11 @@ NEW IN > 1.1.77 version
 Clicking on preview the insered data will be validated.
 If all is ok, a new window appear with the Model Generated. Typing a name and clicking Add, the generated model will be saved in Models List
 
+# Known BUG a Fix
+
+## The GUI start but is not showing?
+
+Close the program in taskbar if open (right click, close)
+Open the %localappdata% folder (WIN+R and type %localappdata%) 
+Delete the MKVmergeBatcher folder
+Try to open MKVmergeBatcher
