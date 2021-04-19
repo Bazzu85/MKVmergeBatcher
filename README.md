@@ -79,6 +79,12 @@ NEW IN > 1.1.77 version
 Clicking on preview the insered data will be validated.
 If all is ok, a new window appear with the Model Generated. Typing a name and clicking Add, the generated model will be saved in Models List
 
+## 4. Queue Tab new in > 1.1.78
+
+Now MKVBatcher has the ability to store multiple video (with it's own model choosen) in a queue.
+After finishing to build the queue you can choose to create a unique big bat file or execute al conversion with one click.
+ATTENCTION: modifying the models (adding, reordering, deleting) cause the queue to automatically been emptied
+
 # Known BUG and hot to fix it
 
 ## The GUI start but is not showing?
