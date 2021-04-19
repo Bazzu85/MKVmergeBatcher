@@ -88,6 +88,23 @@ namespace MKVmergeBatcher.src.obj
         }
 
 
+        public QueueManagement queueManagement = new QueueManagement();
+
+        public class QueueManagement
+        {
+            public BindingList<Queue> queueList = new BindingList<Queue>();
+
+            [NotifyPropertyChanged]
+            public class Queue
+            {
+                public string fileName { get; set; } = "";
+                public int modelIndex { get; set; }
+                public string modelName { get; set; } = "";
+            }
+
+        }
+
+
         /// <summary>
         /// Set the default data if not already setted for UserData object 
         /// </summary>

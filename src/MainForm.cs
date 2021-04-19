@@ -437,6 +437,28 @@ this.Text = "MKVmerge Batcher " + version;
                 executeBatchForm.ShowDialog();
             }
         }
+
+        private void BTCAddToQueueButton_Click(object sender, EventArgs e)
+        {
+            int rc = CheckForBatcherExecution();
+            if (rc == 0)
+            {
+                List<string> videoFileList = ExtractVideoFileListToWorkOn();
+
+                foreach (string videoFile in videoFileList)
+                {
+                    UserData.QueueManagement.Queue queue = new UserData.QueueManagement.Queue();
+                    queue.fileName = videoFile;
+                    queue.modelIndex = BTCModelsComboBox.SelectedIndex;
+                    queue.modelName = userData.modelManagement.modelList[queue.modelIndex].modelName;
+
+                    userData.queueManagement.queueList.Add(queue);
+                }
+
+            }
+
+        }
+
         private List<string> ExtractVideoFileListToWorkOn()
         {
             List<string> videoFileList = new List<string>();
@@ -527,6 +549,7 @@ this.Text = "MKVmerge Batcher " + version;
             if (MMListBox.SelectedIndex > 0)
             {
                 MMMoveModel(MMListBox.SelectedIndex, MMListBox.SelectedIndex - 1);
+                ClearQueue();
             }
         }
 
@@ -535,6 +558,7 @@ this.Text = "MKVmerge Batcher " + version;
             if (MMListBox.SelectedIndex < userData.modelManagement.modelList.Count() - 1)
             {
                 MMMoveModel(MMListBox.SelectedIndex, MMListBox.SelectedIndex + 1);
+                ClearQueue();
             }
         }
 
@@ -546,6 +570,7 @@ this.Text = "MKVmerge Batcher " + version;
                 {
                     MMMoveModel(MMListBox.SelectedIndex, i);
                 }
+                ClearQueue();
             }
         }
 
@@ -557,6 +582,7 @@ this.Text = "MKVmerge Batcher " + version;
                 {
                     MMMoveModel(MMListBox.SelectedIndex, i);
                 }
+                ClearQueue();
             }
         }
         private void MMMoveModel(int source, int destination)
@@ -570,6 +596,7 @@ this.Text = "MKVmerge Batcher " + version;
         private void MMRemoveSelectedButton_Click(object sender, EventArgs e)
         {
             userData.modelManagement.modelList.RemoveAt(MMListBox.SelectedIndex);
+            ClearQueue();
         }
 
         private void MMSortByModelNameButton_Click(object sender, EventArgs e)
@@ -594,6 +621,12 @@ this.Text = "MKVmerge Batcher " + version;
                 MMListBox.SelectedIndex = newSelectedIndex + 1;
                 MMListBox.SelectedIndex = newSelectedIndex;
             }
+            ClearQueue();
+        }
+
+        private void ClearQueue()
+        {
+            userData.queueManagement.queueList.Clear();
         }
         #endregion
 
