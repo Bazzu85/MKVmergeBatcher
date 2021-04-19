@@ -60,6 +60,7 @@ namespace MKVmergeBatcher
             }
             // Save settings
             Settings.Default.Save();
+            Settings.Default.Reload();
 
         }
         private void SaveLastUsedModel()
@@ -104,7 +105,8 @@ namespace MKVmergeBatcher
         }
         private void Form1_LocationChanged(object sender, EventArgs e)
         {
-            SaveWindowData();
+            //2021-04-19 remove as the location and windows state where not saved anymore
+            //SaveWindowData();
         }
 
         #endregion
@@ -424,7 +426,7 @@ this.Text = "MKVmerge Batcher " + version;
                     }
                     BatcherManagement batcherManagement = new BatcherManagement(userData);
                     List<string> videoFileList = ExtractVideoFileListToWorkOn();
-                    batcherManagement.CreateBat(videoFileList, saveFileDialog.FileName, BTCModelsComboBox.SelectedIndex);
+                    batcherManagement.CreateBat(videoFileList, saveFileDialog.FileName, BTCModelsComboBox.SelectedIndex, false);
                 }
             }
         }
@@ -435,7 +437,7 @@ this.Text = "MKVmerge Batcher " + version;
             {
                 List<string> videoFileList = ExtractVideoFileListToWorkOn();
 
-                ExecuteBatchForm executeBatchForm = new ExecuteBatchForm(this.userData, videoFileList, BTCModelsComboBox.SelectedIndex);
+                ExecuteBatchForm executeBatchForm = new ExecuteBatchForm(this.userData, videoFileList, BTCModelsComboBox.SelectedIndex, false);
                 executeBatchForm.ShowDialog();
             }
         }
@@ -447,14 +449,33 @@ this.Text = "MKVmerge Batcher " + version;
             {
                 List<string> videoFileList = ExtractVideoFileListToWorkOn();
 
+                Boolean error = false;
+
                 foreach (string videoFile in videoFileList)
                 {
-                    UserData.QueueManagement.Queue queue = new UserData.QueueManagement.Queue();
-                    queue.fileName = videoFile;
-                    queue.modelIndex = BTCModelsComboBox.SelectedIndex;
-                    queue.modelName = userData.modelManagement.modelList[queue.modelIndex].modelName;
+                    foreach(UserData.QueueManagement.Queue queueItem in userData.queueManagement.queueList)
+                    {
+                        Console.WriteLine("errore: " + error);
 
-                    userData.queueManagement.queueList.Add(queue);
+                        if (queueItem.fileName == videoFile)
+                        {
+                            MessageBox.Show("File " + videoFile + " alreay in queue", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                            error = true;
+                            break;
+                        }
+                    }
+                    if (!error)
+                    {
+                        UserData.QueueManagement.Queue queue = new UserData.QueueManagement.Queue();
+                        queue.fileName = videoFile;
+                        queue.modelIndex = BTCModelsComboBox.SelectedIndex;
+                        queue.modelName = userData.modelManagement.modelList[queue.modelIndex].modelName;
+
+                        userData.queueManagement.queueList.Add(queue);
+                    } else
+                    {
+                        break;
+                    }
                 }
 
             }
@@ -626,12 +647,61 @@ this.Text = "MKVmerge Batcher " + version;
                 {
                     userData.queueManagement.queueList.RemoveAt(row.Index);
                 }
-
             }
             else
             {
                 MessageBox.Show("No rows to remove", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
+        }
+
+        private void QClearQueueButton_Click(object sender, EventArgs e)
+        {
+            ClearQueue();
+        }
+
+        private void QCreateBatButton_Click(object sender, EventArgs e)
+        {
+            if (QDataGridView.RowCount > 0)
+            {
+                SaveFileDialog saveFileDialog = new SaveFileDialog()
+                {
+                    AddExtension = true,
+                    DefaultExt = "bat",
+                    InitialDirectory = BTCFilePathTextBox.Text,
+                    Filter = "bat files (*.bat)|*.bat"
+                };
+                if (saveFileDialog.ShowDialog() == DialogResult.OK)
+                {
+                    if (Path.GetExtension(saveFileDialog.FileName) != ".bat")
+                    {
+                        saveFileDialog.FileName += ".bat";
+                    }
+                    BatcherManagement batcherManagement = new BatcherManagement(userData);
+                    
+                    //empty videoFileList passing the executeFromQueue flag to true
+                    List<string> videoFileList = new List<string>();
+                    batcherManagement.CreateBat(videoFileList, saveFileDialog.FileName, 0, true);
+                }
+            } else
+            {
+                MessageBox.Show("The queue is empty", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        private void QExecNowButton_Click(object sender, EventArgs e)
+        {
+            if (QDataGridView.RowCount > 0)
+            {
+                //empty videoFileList passing the executeFromQueue flag to true
+                List<string> videoFileList = new List<string>();
+
+                ExecuteBatchForm executeBatchForm = new ExecuteBatchForm(this.userData, videoFileList, 0, true);
+                executeBatchForm.ShowDialog();
+            } else
+            {
+                MessageBox.Show("The queue is empty", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+
         }
     }
         #endregion

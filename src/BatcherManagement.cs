@@ -16,21 +16,35 @@ namespace MKVmergeBatcher
             this.userData = userData;
         }
 
-        internal void CreateBat(List<string> videoFileList, string batFileName, int selectedModelIndex)
+        internal void CreateBat(List<string> videoFileList, string batFileName, int selectedModelIndex, Boolean executeFromQueue)
         {
             List<string> batLinesList = new List<string>();
 
-            foreach (string videoFile in videoFileList)
+            if (executeFromQueue)
             {
-                string cmdLine = CreateCmd(videoFile, selectedModelIndex);
-                cmdLine += ">> " + Path.GetFileNameWithoutExtension(batFileName) + ".log";
-                batLinesList.Add(cmdLine);
+                foreach (UserData.QueueManagement.Queue queue in this.userData.queueManagement.queueList)
+                {
+                    string cmdLine = CreateCmd(queue.fileName, queue.modelIndex);
+                    cmdLine += ">> " + Path.GetFileNameWithoutExtension(batFileName) + ".log";
+                    batLinesList.Add(cmdLine);
+                }
             }
+            else
+            {
+                foreach (string videoFile in videoFileList)
+                {
+                    string cmdLine = CreateCmd(videoFile, selectedModelIndex);
+                    cmdLine += ">> " + Path.GetFileNameWithoutExtension(batFileName) + ".log";
+                    batLinesList.Add(cmdLine);
+                }
+            }
+
             batLinesList.Add("pause");
             //Get current code page to write file. For italy is 850
             int currentCodePage = Thread.CurrentThread.CurrentCulture.TextInfo.OEMCodePage;
             File.WriteAllLines(batFileName, batLinesList.ToArray(), Encoding.GetEncoding(currentCodePage));
         }
+
         internal string CreateCmd(string videoFile, int selectedModelIndex)
         {
             string mkvmergePath = userData.batcher.mvkMergePath;

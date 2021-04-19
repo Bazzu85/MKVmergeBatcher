@@ -27,6 +27,7 @@ namespace MKVmergeBatcher.src
 
         private List<string> videoFileList;
         private int selectedIndex;
+        private Boolean executeFromQueue;
         private int workingFile = 0;
         private int totalFileToExecute = 0;
         private string currentElaboratingFile = "";
@@ -37,14 +38,22 @@ namespace MKVmergeBatcher.src
         private int warnings = 0;
         private int errors = 0;
 
-        public ExecuteBatchForm(UserData userData, List<string> videoFileList, int selectedIndex)
+        public ExecuteBatchForm(UserData userData, List<string> videoFileList, int selectedIndex, Boolean executeFromQueue)
         {
             this.userData = userData;
             this.videoFileList = videoFileList;
             this.selectedIndex = selectedIndex;
+            this.executeFromQueue = executeFromQueue;
             InitializeComponent();
             RestoreWindowData();
-            totalFileToExecute = videoFileList.Count();
+            if (executeFromQueue)
+            {
+                totalFileToExecute = userData.queueManagement.queueList.Count();
+            } else
+            {
+                totalFileToExecute = videoFileList.Count();
+            }
+            
             UpdateFormControls();
             timer.Interval = 1000;
             //timer.Enabled = true;
@@ -93,6 +102,11 @@ namespace MKVmergeBatcher.src
                 processEnded = false;
                 string messaggeText = "Elaborated files: " + totalFileToExecute + Environment.NewLine + "Warnings: " + warnings + Environment.NewLine + "Errors: " + errors;
                 MessageBox.Show(this, messaggeText, "Summary", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                if (this.executeFromQueue)
+                {
+                    userData.queueManagement.queueList.Clear();
+                }
+                
             }
         }
         #endregion
@@ -100,10 +114,20 @@ namespace MKVmergeBatcher.src
         private void LaunchProcess()
         {
             workingFile += 1;
-            currentElaboratingFile = this.videoFileList[workingFile - 1];
-            BatcherManagement batcherManagement = new BatcherManagement(userData);
-            string cmdLine = batcherManagement.CreateCmd(this.videoFileList[workingFile - 1], this.selectedIndex);
-
+            string cmdLine = "";
+            if (executeFromQueue)
+            {
+                currentElaboratingFile = this.userData.queueManagement.queueList[workingFile - 1].fileName;
+                BatcherManagement batcherManagement = new BatcherManagement(userData);
+                cmdLine = batcherManagement.CreateCmd(this.userData.queueManagement.queueList[workingFile - 1].fileName, this.userData.queueManagement.queueList[workingFile - 1].modelIndex);
+            }
+            else
+            {
+                currentElaboratingFile = this.videoFileList[workingFile - 1];
+                BatcherManagement batcherManagement = new BatcherManagement(userData);
+                cmdLine = batcherManagement.CreateCmd(this.videoFileList[workingFile - 1], this.selectedIndex);
+            }
+            
             cmdLine = cmdLine.Replace("\"" + userData.batcher.mvkMergePath + "\"", "");
             cmdLine = cmdLine.Replace("^","");
 
