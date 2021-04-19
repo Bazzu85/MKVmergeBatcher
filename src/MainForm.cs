@@ -119,6 +119,7 @@ namespace MKVmergeBatcher
             this.additionalFlagsBindingSource.DataSource = userData.modelCreator.additionalFlags;
             this.batcherBindingSource.DataSource = userData.batcher;
             this.modelBindingSource.DataSource = userData.modelManagement.modelList;
+            this.queueBindingSource.DataSource = userData.queueManagement.queueList;
         }
         private void SetLabels()
         {
@@ -242,6 +243,7 @@ this.Text = "MKVmerge Batcher " + version;
             if (modelCreatorPreviewForm.DialogResult == DialogResult.OK)
             {
                 this.userData = modelCreatorPreviewForm.userData;
+                ClearQueue();
             }
         }
         private void MCSaveDefaultButton_Click(object sender, EventArgs e)
@@ -496,21 +498,6 @@ this.Text = "MKVmerge Batcher " + version;
             return rc;
         }
 
-        private void BTCClearListBoxButton_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void BTCRevertSelectionButton_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void BTCSelectNoneButton_Click(object sender, EventArgs e)
-        {
-
-        }
-
         #endregion
 
         #region Model Manager Methods
@@ -630,6 +617,23 @@ this.Text = "MKVmerge Batcher " + version;
         }
         #endregion
 
+        #region Queue Methods
+        private void QRemoveFromQueueButton_Click(object sender, EventArgs e)
+        {
+            if (QDataGridView.SelectedRows.Count > 0)
+            {
+                foreach (DataGridViewRow row in QDataGridView.SelectedRows)
+                {
+                    userData.queueManagement.queueList.RemoveAt(row.Index);
+                }
+
+            }
+            else
+            {
+                MessageBox.Show("No rows to remove", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
     }
+        #endregion
 
 }

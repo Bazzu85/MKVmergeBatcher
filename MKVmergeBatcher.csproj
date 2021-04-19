@@ -40,7 +40,7 @@
     <MapFileExtensions>true</MapFileExtensions>
     <PublisherName>Bazzu</PublisherName>
     <ApplicationRevision>4</ApplicationRevision>
-    <ApplicationVersion>1.1.77.20208</ApplicationVersion>
+    <ApplicationVersion>1.1.77.20223</ApplicationVersion>
     <UseApplicationTrust>false</UseApplicationTrust>
     <CreateDesktopShortcut>true</CreateDesktopShortcut>
     <PublishWizardCompleted>true</PublishWizardCompleted>
@@ -193,6 +193,7 @@
     <None Include="ILMerge.props" />
     <None Include="packages.config" />
     <None Include="Properties\app.manifest" />
+    <None Include="Properties\DataSources\MKVmergeBatcher.src.obj.UserData+QueueManagement+Queue.datasource" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -222,9 +223,7 @@
     <Content Include="icon.ico" />
     <Content Include="ILMergeOrder.txt" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Properties\DataSources\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
     <PropertyGroup>
