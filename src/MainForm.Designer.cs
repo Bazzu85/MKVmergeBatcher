@@ -29,10 +29,10 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle33 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle35 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle36 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle34 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabBatcher = new System.Windows.Forms.TabPage();
@@ -93,6 +93,13 @@
             this.MCDefaultFlag = new System.Windows.Forms.DataGridViewCheckBoxColumn();
             this.MCForcedFlag = new System.Windows.Forms.DataGridViewCheckBoxColumn();
             this.MCPreviewButton = new System.Windows.Forms.Button();
+            this.tabQueue = new System.Windows.Forms.TabPage();
+            this.QExecNowButton = new System.Windows.Forms.Button();
+            this.QCreateBatButton = new System.Windows.Forms.Button();
+            this.QClearQueueButton = new System.Windows.Forms.Button();
+            this.QRemoveFromQueueButton = new System.Windows.Forms.Button();
+            this.QDataGridView = new System.Windows.Forms.DataGridView();
+            this.queueBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.tabHelp = new System.Windows.Forms.TabPage();
             this.aboutTextBox = new System.Windows.Forms.RichTextBox();
             this.tracksBindingSource = new System.Windows.Forms.BindingSource(this.components);
@@ -102,16 +109,14 @@
             this.modelCreatorBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.modelManagementBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.MCToolTip = new System.Windows.Forms.ToolTip(this.components);
-            this.tabQueue = new System.Windows.Forms.TabPage();
-            this.queueBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.QDataGridView = new System.Windows.Forms.DataGridView();
             this.fileNameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.modelIndexDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.modelNameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.QRemoveFromQueueButton = new System.Windows.Forms.Button();
-            this.QClearQueueButton = new System.Windows.Forms.Button();
-            this.QCreateBatButton = new System.Windows.Forms.Button();
-            this.QExecNowButton = new System.Windows.Forms.Button();
+            this.jobStatus = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.modelIndexDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.QRemoveOkButton = new System.Windows.Forms.Button();
+            this.BTCClearQueueButton = new System.Windows.Forms.Button();
+            this.QRemoveWarningButton = new System.Windows.Forms.Button();
+            this.QRemoveErrorButton = new System.Windows.Forms.Button();
             this.tabControl1.SuspendLayout();
             this.tabBatcher.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.modelBindingSource)).BeginInit();
@@ -125,14 +130,14 @@
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.MCDataGridView)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.typeBindingSource)).BeginInit();
+            this.tabQueue.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.QDataGridView)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.queueBindingSource)).BeginInit();
             this.tabHelp.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.tracksBindingSource)).BeginInit();
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.modelCreatorBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.modelManagementBindingSource)).BeginInit();
-            this.tabQueue.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.queueBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.QDataGridView)).BeginInit();
             this.SuspendLayout();
             // 
             // tabControl1
@@ -153,6 +158,7 @@
             // tabBatcher
             // 
             this.tabBatcher.AutoScroll = true;
+            this.tabBatcher.Controls.Add(this.BTCClearQueueButton);
             this.tabBatcher.Controls.Add(this.BTCAddToQueueButton);
             this.tabBatcher.Controls.Add(this.BTCPathLabel);
             this.tabBatcher.Controls.Add(this.BTCExtensionsLabel);
@@ -667,14 +673,14 @@
             this.MCDataGridView.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
             this.MCDataGridView.BackgroundColor = System.Drawing.SystemColors.Window;
             this.MCDataGridView.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            dataGridViewCellStyle33.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle33.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle33.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle33.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle33.SelectionBackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle33.SelectionForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle33.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.MCDataGridView.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle33;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.MCDataGridView.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.MCDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.MCDataGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.MCDataGridViewType,
@@ -686,26 +692,26 @@
             this.MCSuffix,
             this.MCDefaultFlag,
             this.MCForcedFlag});
-            dataGridViewCellStyle35.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle35.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle35.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle35.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle35.SelectionBackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle35.SelectionForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle35.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.MCDataGridView.DefaultCellStyle = dataGridViewCellStyle35;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.MCDataGridView.DefaultCellStyle = dataGridViewCellStyle3;
             this.MCDataGridView.EditMode = System.Windows.Forms.DataGridViewEditMode.EditOnEnter;
             this.MCDataGridView.Location = new System.Drawing.Point(8, 19);
             this.MCDataGridView.MultiSelect = false;
             this.MCDataGridView.Name = "MCDataGridView";
-            dataGridViewCellStyle36.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle36.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle36.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle36.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle36.SelectionBackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle36.SelectionForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle36.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.MCDataGridView.RowHeadersDefaultCellStyle = dataGridViewCellStyle36;
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.MCDataGridView.RowHeadersDefaultCellStyle = dataGridViewCellStyle4;
             this.MCDataGridView.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.MCDataGridView.Size = new System.Drawing.Size(738, 338);
             this.MCDataGridView.TabIndex = 25;
@@ -730,8 +736,8 @@
             // MCPositionInOriginalFile
             // 
             this.MCPositionInOriginalFile.DataPropertyName = "position";
-            dataGridViewCellStyle34.NullValue = null;
-            this.MCPositionInOriginalFile.DefaultCellStyle = dataGridViewCellStyle34;
+            dataGridViewCellStyle2.NullValue = null;
+            this.MCPositionInOriginalFile.DefaultCellStyle = dataGridViewCellStyle2;
             this.MCPositionInOriginalFile.HeaderText = "Position";
             this.MCPositionInOriginalFile.Name = "MCPositionInOriginalFile";
             this.MCPositionInOriginalFile.ToolTipText = "Position of track in files. Format F:P. F is file number starting from 0. File 0 " +
@@ -804,6 +810,97 @@
             this.MCPreviewButton.UseVisualStyleBackColor = true;
             this.MCPreviewButton.Click += new System.EventHandler(this.MCPreviewButton_Click);
             // 
+            // tabQueue
+            // 
+            this.tabQueue.Controls.Add(this.QRemoveErrorButton);
+            this.tabQueue.Controls.Add(this.QRemoveWarningButton);
+            this.tabQueue.Controls.Add(this.QRemoveOkButton);
+            this.tabQueue.Controls.Add(this.QExecNowButton);
+            this.tabQueue.Controls.Add(this.QCreateBatButton);
+            this.tabQueue.Controls.Add(this.QClearQueueButton);
+            this.tabQueue.Controls.Add(this.QRemoveFromQueueButton);
+            this.tabQueue.Controls.Add(this.QDataGridView);
+            this.tabQueue.Location = new System.Drawing.Point(4, 22);
+            this.tabQueue.Name = "tabQueue";
+            this.tabQueue.Padding = new System.Windows.Forms.Padding(3);
+            this.tabQueue.Size = new System.Drawing.Size(916, 481);
+            this.tabQueue.TabIndex = 4;
+            this.tabQueue.Text = "Queue";
+            this.tabQueue.UseVisualStyleBackColor = true;
+            // 
+            // QExecNowButton
+            // 
+            this.QExecNowButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.QExecNowButton.Location = new System.Drawing.Point(777, 93);
+            this.QExecNowButton.Name = "QExecNowButton";
+            this.QExecNowButton.Size = new System.Drawing.Size(131, 23);
+            this.QExecNowButton.TabIndex = 32;
+            this.QExecNowButton.Text = "Exec Now";
+            this.QExecNowButton.UseVisualStyleBackColor = true;
+            this.QExecNowButton.Click += new System.EventHandler(this.QExecNowButton_Click);
+            // 
+            // QCreateBatButton
+            // 
+            this.QCreateBatButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.QCreateBatButton.Location = new System.Drawing.Point(777, 64);
+            this.QCreateBatButton.Name = "QCreateBatButton";
+            this.QCreateBatButton.Size = new System.Drawing.Size(131, 23);
+            this.QCreateBatButton.TabIndex = 31;
+            this.QCreateBatButton.Text = "Create BAT";
+            this.QCreateBatButton.UseVisualStyleBackColor = true;
+            this.QCreateBatButton.Click += new System.EventHandler(this.QCreateBatButton_Click);
+            // 
+            // QClearQueueButton
+            // 
+            this.QClearQueueButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.QClearQueueButton.Location = new System.Drawing.Point(777, 35);
+            this.QClearQueueButton.Name = "QClearQueueButton";
+            this.QClearQueueButton.Size = new System.Drawing.Size(133, 23);
+            this.QClearQueueButton.TabIndex = 30;
+            this.QClearQueueButton.Text = "Clear Queue";
+            this.QClearQueueButton.UseVisualStyleBackColor = true;
+            this.QClearQueueButton.Click += new System.EventHandler(this.QClearQueueButton_Click);
+            // 
+            // QRemoveFromQueueButton
+            // 
+            this.QRemoveFromQueueButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.QRemoveFromQueueButton.Location = new System.Drawing.Point(777, 6);
+            this.QRemoveFromQueueButton.Name = "QRemoveFromQueueButton";
+            this.QRemoveFromQueueButton.Size = new System.Drawing.Size(133, 23);
+            this.QRemoveFromQueueButton.TabIndex = 29;
+            this.QRemoveFromQueueButton.Text = "Remove From Queue";
+            this.QRemoveFromQueueButton.UseVisualStyleBackColor = true;
+            this.QRemoveFromQueueButton.Click += new System.EventHandler(this.QRemoveFromQueueButton_Click);
+            // 
+            // QDataGridView
+            // 
+            this.QDataGridView.AllowUserToAddRows = false;
+            this.QDataGridView.AllowUserToDeleteRows = false;
+            this.QDataGridView.AllowUserToResizeRows = false;
+            this.QDataGridView.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.QDataGridView.AutoGenerateColumns = false;
+            this.QDataGridView.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
+            this.QDataGridView.BackgroundColor = System.Drawing.SystemColors.Window;
+            this.QDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.QDataGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.fileNameDataGridViewTextBoxColumn,
+            this.modelNameDataGridViewTextBoxColumn,
+            this.jobStatus,
+            this.modelIndexDataGridViewTextBoxColumn});
+            this.QDataGridView.DataSource = this.queueBindingSource;
+            this.QDataGridView.Location = new System.Drawing.Point(0, 0);
+            this.QDataGridView.Name = "QDataGridView";
+            this.QDataGridView.ReadOnly = true;
+            this.QDataGridView.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.QDataGridView.Size = new System.Drawing.Size(771, 481);
+            this.QDataGridView.TabIndex = 0;
+            // 
+            // queueBindingSource
+            // 
+            this.queueBindingSource.DataSource = typeof(MKVmergeBatcher.src.obj.UserData.QueueManagement.Queue);
+            // 
             // tabHelp
             // 
             this.tabHelp.Controls.Add(this.aboutTextBox);
@@ -866,49 +963,6 @@
             // 
             this.modelManagementBindingSource.DataSource = typeof(MKVmergeBatcher.src.obj.UserData.ModelManagement);
             // 
-            // tabQueue
-            // 
-            this.tabQueue.Controls.Add(this.QExecNowButton);
-            this.tabQueue.Controls.Add(this.QCreateBatButton);
-            this.tabQueue.Controls.Add(this.QClearQueueButton);
-            this.tabQueue.Controls.Add(this.QRemoveFromQueueButton);
-            this.tabQueue.Controls.Add(this.QDataGridView);
-            this.tabQueue.Location = new System.Drawing.Point(4, 22);
-            this.tabQueue.Name = "tabQueue";
-            this.tabQueue.Padding = new System.Windows.Forms.Padding(3);
-            this.tabQueue.Size = new System.Drawing.Size(916, 481);
-            this.tabQueue.TabIndex = 4;
-            this.tabQueue.Text = "Queue";
-            this.tabQueue.UseVisualStyleBackColor = true;
-            // 
-            // queueBindingSource
-            // 
-            this.queueBindingSource.DataSource = typeof(MKVmergeBatcher.src.obj.UserData.QueueManagement.Queue);
-            // 
-            // QDataGridView
-            // 
-            this.QDataGridView.AllowUserToAddRows = false;
-            this.QDataGridView.AllowUserToDeleteRows = false;
-            this.QDataGridView.AllowUserToResizeRows = false;
-            this.QDataGridView.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.QDataGridView.AutoGenerateColumns = false;
-            this.QDataGridView.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
-            this.QDataGridView.BackgroundColor = System.Drawing.SystemColors.Window;
-            this.QDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.QDataGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.fileNameDataGridViewTextBoxColumn,
-            this.modelIndexDataGridViewTextBoxColumn,
-            this.modelNameDataGridViewTextBoxColumn});
-            this.QDataGridView.DataSource = this.queueBindingSource;
-            this.QDataGridView.Location = new System.Drawing.Point(0, 0);
-            this.QDataGridView.Name = "QDataGridView";
-            this.QDataGridView.ReadOnly = true;
-            this.QDataGridView.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.QDataGridView.Size = new System.Drawing.Size(771, 481);
-            this.QDataGridView.TabIndex = 0;
-            // 
             // fileNameDataGridViewTextBoxColumn
             // 
             this.fileNameDataGridViewTextBoxColumn.DataPropertyName = "fileName";
@@ -917,6 +971,22 @@
             this.fileNameDataGridViewTextBoxColumn.ReadOnly = true;
             this.fileNameDataGridViewTextBoxColumn.Width = 48;
             // 
+            // modelNameDataGridViewTextBoxColumn
+            // 
+            this.modelNameDataGridViewTextBoxColumn.DataPropertyName = "modelName";
+            this.modelNameDataGridViewTextBoxColumn.HeaderText = "Choosen Model";
+            this.modelNameDataGridViewTextBoxColumn.Name = "modelNameDataGridViewTextBoxColumn";
+            this.modelNameDataGridViewTextBoxColumn.ReadOnly = true;
+            this.modelNameDataGridViewTextBoxColumn.Width = 97;
+            // 
+            // jobStatus
+            // 
+            this.jobStatus.DataPropertyName = "jobStatus";
+            this.jobStatus.HeaderText = "Job Status";
+            this.jobStatus.Name = "jobStatus";
+            this.jobStatus.ReadOnly = true;
+            this.jobStatus.Width = 76;
+            // 
             // modelIndexDataGridViewTextBoxColumn
             // 
             this.modelIndexDataGridViewTextBoxColumn.DataPropertyName = "modelIndex";
@@ -924,58 +994,51 @@
             this.modelIndexDataGridViewTextBoxColumn.Name = "modelIndexDataGridViewTextBoxColumn";
             this.modelIndexDataGridViewTextBoxColumn.ReadOnly = true;
             this.modelIndexDataGridViewTextBoxColumn.Visible = false;
+            this.modelIndexDataGridViewTextBoxColumn.Width = 86;
             // 
-            // modelNameDataGridViewTextBoxColumn
+            // QRemoveOkButton
             // 
-            this.modelNameDataGridViewTextBoxColumn.DataPropertyName = "modelName";
-            this.modelNameDataGridViewTextBoxColumn.HeaderText = "Choosen Model";
-            this.modelNameDataGridViewTextBoxColumn.Name = "modelNameDataGridViewTextBoxColumn";
-            this.modelNameDataGridViewTextBoxColumn.ReadOnly = true;
-            this.modelNameDataGridViewTextBoxColumn.Width = 106;
+            this.QRemoveOkButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.QRemoveOkButton.Location = new System.Drawing.Point(777, 122);
+            this.QRemoveOkButton.Name = "QRemoveOkButton";
+            this.QRemoveOkButton.Size = new System.Drawing.Size(131, 23);
+            this.QRemoveOkButton.TabIndex = 33;
+            this.QRemoveOkButton.Text = "Remove OK jobs";
+            this.QRemoveOkButton.UseVisualStyleBackColor = true;
+            this.QRemoveOkButton.Click += new System.EventHandler(this.QRemoveOkButton_Click);
             // 
-            // QRemoveFromQueueButton
+            // BTCClearQueueButton
             // 
-            this.QRemoveFromQueueButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.QRemoveFromQueueButton.Location = new System.Drawing.Point(777, 6);
-            this.QRemoveFromQueueButton.Name = "QRemoveFromQueueButton";
-            this.QRemoveFromQueueButton.Size = new System.Drawing.Size(133, 23);
-            this.QRemoveFromQueueButton.TabIndex = 29;
-            this.QRemoveFromQueueButton.Text = "Remove From Queue";
-            this.QRemoveFromQueueButton.UseVisualStyleBackColor = true;
-            this.QRemoveFromQueueButton.Click += new System.EventHandler(this.QRemoveFromQueueButton_Click);
+            this.BTCClearQueueButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.BTCClearQueueButton.Location = new System.Drawing.Point(562, 450);
+            this.BTCClearQueueButton.Name = "BTCClearQueueButton";
+            this.BTCClearQueueButton.Size = new System.Drawing.Size(89, 23);
+            this.BTCClearQueueButton.TabIndex = 13;
+            this.BTCClearQueueButton.Text = "Clear Queue";
+            this.BTCClearQueueButton.UseVisualStyleBackColor = true;
+            this.BTCClearQueueButton.Click += new System.EventHandler(this.BTCClearQueueButton_Click);
             // 
-            // QClearQueueButton
+            // QRemoveWarningButton
             // 
-            this.QClearQueueButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.QClearQueueButton.Location = new System.Drawing.Point(777, 35);
-            this.QClearQueueButton.Name = "QClearQueueButton";
-            this.QClearQueueButton.Size = new System.Drawing.Size(133, 23);
-            this.QClearQueueButton.TabIndex = 30;
-            this.QClearQueueButton.Text = "Clear Queue";
-            this.QClearQueueButton.UseVisualStyleBackColor = true;
-            this.QClearQueueButton.Click += new System.EventHandler(this.QClearQueueButton_Click);
+            this.QRemoveWarningButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.QRemoveWarningButton.Location = new System.Drawing.Point(777, 151);
+            this.QRemoveWarningButton.Name = "QRemoveWarningButton";
+            this.QRemoveWarningButton.Size = new System.Drawing.Size(131, 23);
+            this.QRemoveWarningButton.TabIndex = 34;
+            this.QRemoveWarningButton.Text = "Remove Warning jobs";
+            this.QRemoveWarningButton.UseVisualStyleBackColor = true;
+            this.QRemoveWarningButton.Click += new System.EventHandler(this.QRemoveWarningButton_Click);
             // 
-            // QCreateBatButton
+            // QRemoveErrorButton
             // 
-            this.QCreateBatButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.QCreateBatButton.Location = new System.Drawing.Point(777, 64);
-            this.QCreateBatButton.Name = "QCreateBatButton";
-            this.QCreateBatButton.Size = new System.Drawing.Size(131, 23);
-            this.QCreateBatButton.TabIndex = 31;
-            this.QCreateBatButton.Text = "Create BAT";
-            this.QCreateBatButton.UseVisualStyleBackColor = true;
-            this.QCreateBatButton.Click += new System.EventHandler(this.QCreateBatButton_Click);
-            // 
-            // QExecNowButton
-            // 
-            this.QExecNowButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.QExecNowButton.Location = new System.Drawing.Point(777, 93);
-            this.QExecNowButton.Name = "QExecNowButton";
-            this.QExecNowButton.Size = new System.Drawing.Size(131, 23);
-            this.QExecNowButton.TabIndex = 32;
-            this.QExecNowButton.Text = "Exec Now";
-            this.QExecNowButton.UseVisualStyleBackColor = true;
-            this.QExecNowButton.Click += new System.EventHandler(this.QExecNowButton_Click);
+            this.QRemoveErrorButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.QRemoveErrorButton.Location = new System.Drawing.Point(777, 180);
+            this.QRemoveErrorButton.Name = "QRemoveErrorButton";
+            this.QRemoveErrorButton.Size = new System.Drawing.Size(131, 23);
+            this.QRemoveErrorButton.TabIndex = 35;
+            this.QRemoveErrorButton.Text = "Remove Error jobs";
+            this.QRemoveErrorButton.UseVisualStyleBackColor = true;
+            this.QRemoveErrorButton.Click += new System.EventHandler(this.QRemoveErrorButton_Click);
             // 
             // Form1
             // 
@@ -1008,15 +1071,15 @@
             this.panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.MCDataGridView)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.typeBindingSource)).EndInit();
+            this.tabQueue.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.QDataGridView)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.queueBindingSource)).EndInit();
             this.tabHelp.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.tracksBindingSource)).EndInit();
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.modelCreatorBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.modelManagementBindingSource)).EndInit();
-            this.tabQueue.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.queueBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.QDataGridView)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -1094,14 +1157,19 @@
         private System.Windows.Forms.Button BTCAddToQueueButton;
         private System.Windows.Forms.TabPage tabQueue;
         private System.Windows.Forms.DataGridView QDataGridView;
-        private System.Windows.Forms.DataGridViewTextBoxColumn fileNameDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn modelIndexDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn modelNameDataGridViewTextBoxColumn;
         private System.Windows.Forms.BindingSource queueBindingSource;
         private System.Windows.Forms.Button QExecNowButton;
         private System.Windows.Forms.Button QCreateBatButton;
         private System.Windows.Forms.Button QClearQueueButton;
         private System.Windows.Forms.Button QRemoveFromQueueButton;
+        private System.Windows.Forms.DataGridViewTextBoxColumn fileNameDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn modelNameDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn jobStatus;
+        private System.Windows.Forms.DataGridViewTextBoxColumn modelIndexDataGridViewTextBoxColumn;
+        private System.Windows.Forms.Button QRemoveOkButton;
+        private System.Windows.Forms.Button BTCClearQueueButton;
+        private System.Windows.Forms.Button QRemoveWarningButton;
+        private System.Windows.Forms.Button QRemoveErrorButton;
     }
 }
 

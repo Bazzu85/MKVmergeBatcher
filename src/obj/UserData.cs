@@ -100,6 +100,7 @@ namespace MKVmergeBatcher.src.obj
                 public string fileName { get; set; } = "";
                 public int modelIndex { get; set; }
                 public string modelName { get; set; } = "";
+                public string jobStatus { get; set; } = "";
             }
 
         }

@@ -123,6 +123,28 @@ namespace MKVmergeBatcher
             this.modelBindingSource.DataSource = userData.modelManagement.modelList;
             this.queueBindingSource.DataSource = userData.queueManagement.queueList;
         }
+        private void ClearQueue()
+        {
+            userData.queueManagement.queueList.Clear();
+        }
+
+        private void ClearQueue(string jobStatus)
+        {
+            List<UserData.QueueManagement.Queue> tempQueueList = new List<UserData.QueueManagement.Queue>();
+            foreach (UserData.QueueManagement.Queue queue in userData.queueManagement.queueList)
+            {
+                if (queue.jobStatus != jobStatus)
+                {
+                    tempQueueList.Add(queue);
+                }
+            }
+            ClearQueue();
+            foreach (UserData.QueueManagement.Queue queue in tempQueueList)
+            {
+                userData.queueManagement.queueList.Add(queue);
+            }
+        }
+
         private void SetLabels()
         {
             var version = System.Reflection.Assembly.GetExecutingAssembly().GetName().Version;
@@ -481,6 +503,10 @@ this.Text = "MKVmerge Batcher " + version;
             }
 
         }
+        private void BTCClearQueueButton_Click(object sender, EventArgs e)
+        {
+            ClearQueue();
+        }
 
         private List<string> ExtractVideoFileListToWorkOn()
         {
@@ -632,10 +658,6 @@ this.Text = "MKVmerge Batcher " + version;
             ClearQueue();
         }
 
-        private void ClearQueue()
-        {
-            userData.queueManagement.queueList.Clear();
-        }
         #endregion
 
         #region Queue Methods
@@ -702,6 +724,21 @@ this.Text = "MKVmerge Batcher " + version;
                 MessageBox.Show("The queue is empty", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
 
+        }
+
+        private void QRemoveOkButton_Click(object sender, EventArgs e)
+        {
+            ClearQueue("OK");
+        }
+
+        private void QRemoveWarningButton_Click(object sender, EventArgs e)
+        {
+            ClearQueue("Warning");
+        }
+
+        private void QRemoveErrorButton_Click(object sender, EventArgs e)
+        {
+            ClearQueue("Error");
         }
     }
         #endregion

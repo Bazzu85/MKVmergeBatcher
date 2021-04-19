@@ -102,10 +102,12 @@ namespace MKVmergeBatcher.src
                 processEnded = false;
                 string messaggeText = "Elaborated files: " + totalFileToExecute + Environment.NewLine + "Warnings: " + warnings + Environment.NewLine + "Errors: " + errors;
                 MessageBox.Show(this, messaggeText, "Summary", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                /*
                 if (this.executeFromQueue)
                 {
                     userData.queueManagement.queueList.Clear();
                 }
+                */
                 
             }
         }
@@ -269,11 +271,25 @@ namespace MKVmergeBatcher.src
             {
                 switch (process.ExitCode)
                 {
+                    case 0:
+                        if (this.executeFromQueue)
+                        {
+                            userData.queueManagement.queueList[workingFile - 1].jobStatus = "OK";
+                        }
+                        break;
                     case 1:
                         warnings += 1;
+                        if (this.executeFromQueue)
+                        {
+                            userData.queueManagement.queueList[workingFile - 1].jobStatus = "Warning";
+                        }
                         break;
                     case 2:
                         errors += 1;
+                        if (this.executeFromQueue)
+                        {
+                            userData.queueManagement.queueList[workingFile - 1].jobStatus = "Error";
+                        }
                         break;
                 }
                 progressPercentage = (workingFile * 100) / totalFileToExecute;
@@ -293,9 +309,13 @@ namespace MKVmergeBatcher.src
         private void timer_Tick(object sender, EventArgs e)
         {
             UpdateFormControls();
-            if (process != null && process.HasExited && !processRunning)
+            if (process != null)
             {
-                timer.Enabled = false;
+                if (process.HasExited && !processRunning)
+                {
+                    timer.Enabled = false;
+                }
+
             }
         }
     }
