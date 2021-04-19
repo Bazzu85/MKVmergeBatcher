@@ -33,6 +33,7 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabBatcher = new System.Windows.Forms.TabPage();
@@ -109,14 +110,14 @@
             this.modelCreatorBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.modelManagementBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.MCToolTip = new System.Windows.Forms.ToolTip(this.components);
-            this.fileNameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.modelNameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.jobStatus = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.modelIndexDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.QRemoveOkButton = new System.Windows.Forms.Button();
             this.BTCClearQueueButton = new System.Windows.Forms.Button();
             this.QRemoveWarningButton = new System.Windows.Forms.Button();
             this.QRemoveErrorButton = new System.Windows.Forms.Button();
+            this.fileNameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.modelNameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.jobStatus = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.modelIndexDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tabControl1.SuspendLayout();
             this.tabBatcher.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.modelBindingSource)).BeginInit();
@@ -876,12 +877,14 @@
             // 
             this.QDataGridView.AllowUserToAddRows = false;
             this.QDataGridView.AllowUserToDeleteRows = false;
+            this.QDataGridView.AllowUserToResizeColumns = false;
             this.QDataGridView.AllowUserToResizeRows = false;
             this.QDataGridView.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.QDataGridView.AutoGenerateColumns = false;
-            this.QDataGridView.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
+            this.QDataGridView.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.QDataGridView.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
             this.QDataGridView.BackgroundColor = System.Drawing.SystemColors.Window;
             this.QDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.QDataGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
@@ -893,6 +896,8 @@
             this.QDataGridView.Location = new System.Drawing.Point(0, 0);
             this.QDataGridView.Name = "QDataGridView";
             this.QDataGridView.ReadOnly = true;
+            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.QDataGridView.RowsDefaultCellStyle = dataGridViewCellStyle5;
             this.QDataGridView.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.QDataGridView.Size = new System.Drawing.Size(771, 481);
             this.QDataGridView.TabIndex = 0;
@@ -963,39 +968,6 @@
             // 
             this.modelManagementBindingSource.DataSource = typeof(MKVmergeBatcher.src.obj.UserData.ModelManagement);
             // 
-            // fileNameDataGridViewTextBoxColumn
-            // 
-            this.fileNameDataGridViewTextBoxColumn.DataPropertyName = "fileName";
-            this.fileNameDataGridViewTextBoxColumn.HeaderText = "File";
-            this.fileNameDataGridViewTextBoxColumn.Name = "fileNameDataGridViewTextBoxColumn";
-            this.fileNameDataGridViewTextBoxColumn.ReadOnly = true;
-            this.fileNameDataGridViewTextBoxColumn.Width = 48;
-            // 
-            // modelNameDataGridViewTextBoxColumn
-            // 
-            this.modelNameDataGridViewTextBoxColumn.DataPropertyName = "modelName";
-            this.modelNameDataGridViewTextBoxColumn.HeaderText = "Choosen Model";
-            this.modelNameDataGridViewTextBoxColumn.Name = "modelNameDataGridViewTextBoxColumn";
-            this.modelNameDataGridViewTextBoxColumn.ReadOnly = true;
-            this.modelNameDataGridViewTextBoxColumn.Width = 97;
-            // 
-            // jobStatus
-            // 
-            this.jobStatus.DataPropertyName = "jobStatus";
-            this.jobStatus.HeaderText = "Job Status";
-            this.jobStatus.Name = "jobStatus";
-            this.jobStatus.ReadOnly = true;
-            this.jobStatus.Width = 76;
-            // 
-            // modelIndexDataGridViewTextBoxColumn
-            // 
-            this.modelIndexDataGridViewTextBoxColumn.DataPropertyName = "modelIndex";
-            this.modelIndexDataGridViewTextBoxColumn.HeaderText = "modelIndex";
-            this.modelIndexDataGridViewTextBoxColumn.Name = "modelIndexDataGridViewTextBoxColumn";
-            this.modelIndexDataGridViewTextBoxColumn.ReadOnly = true;
-            this.modelIndexDataGridViewTextBoxColumn.Visible = false;
-            this.modelIndexDataGridViewTextBoxColumn.Width = 86;
-            // 
             // QRemoveOkButton
             // 
             this.QRemoveOkButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
@@ -1039,6 +1011,38 @@
             this.QRemoveErrorButton.Text = "Remove Error jobs";
             this.QRemoveErrorButton.UseVisualStyleBackColor = true;
             this.QRemoveErrorButton.Click += new System.EventHandler(this.QRemoveErrorButton_Click);
+            // 
+            // fileNameDataGridViewTextBoxColumn
+            // 
+            this.fileNameDataGridViewTextBoxColumn.DataPropertyName = "fileName";
+            this.fileNameDataGridViewTextBoxColumn.FillWeight = 250F;
+            this.fileNameDataGridViewTextBoxColumn.HeaderText = "File";
+            this.fileNameDataGridViewTextBoxColumn.Name = "fileNameDataGridViewTextBoxColumn";
+            this.fileNameDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // modelNameDataGridViewTextBoxColumn
+            // 
+            this.modelNameDataGridViewTextBoxColumn.DataPropertyName = "modelName";
+            this.modelNameDataGridViewTextBoxColumn.FillWeight = 200F;
+            this.modelNameDataGridViewTextBoxColumn.HeaderText = "Choosen Model";
+            this.modelNameDataGridViewTextBoxColumn.Name = "modelNameDataGridViewTextBoxColumn";
+            this.modelNameDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // jobStatus
+            // 
+            this.jobStatus.DataPropertyName = "jobStatus";
+            this.jobStatus.FillWeight = 60F;
+            this.jobStatus.HeaderText = "Job Status";
+            this.jobStatus.Name = "jobStatus";
+            this.jobStatus.ReadOnly = true;
+            // 
+            // modelIndexDataGridViewTextBoxColumn
+            // 
+            this.modelIndexDataGridViewTextBoxColumn.DataPropertyName = "modelIndex";
+            this.modelIndexDataGridViewTextBoxColumn.HeaderText = "modelIndex";
+            this.modelIndexDataGridViewTextBoxColumn.Name = "modelIndexDataGridViewTextBoxColumn";
+            this.modelIndexDataGridViewTextBoxColumn.ReadOnly = true;
+            this.modelIndexDataGridViewTextBoxColumn.Visible = false;
             // 
             // Form1
             // 
@@ -1162,14 +1166,14 @@
         private System.Windows.Forms.Button QCreateBatButton;
         private System.Windows.Forms.Button QClearQueueButton;
         private System.Windows.Forms.Button QRemoveFromQueueButton;
-        private System.Windows.Forms.DataGridViewTextBoxColumn fileNameDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn modelNameDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn jobStatus;
-        private System.Windows.Forms.DataGridViewTextBoxColumn modelIndexDataGridViewTextBoxColumn;
         private System.Windows.Forms.Button QRemoveOkButton;
         private System.Windows.Forms.Button BTCClearQueueButton;
         private System.Windows.Forms.Button QRemoveWarningButton;
         private System.Windows.Forms.Button QRemoveErrorButton;
+        private System.Windows.Forms.DataGridViewTextBoxColumn fileNameDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn modelNameDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn jobStatus;
+        private System.Windows.Forms.DataGridViewTextBoxColumn modelIndexDataGridViewTextBoxColumn;
     }
 }
 
