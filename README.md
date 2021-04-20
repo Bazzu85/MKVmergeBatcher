@@ -94,7 +94,7 @@ Open the %localappdata% folder (WIN+R and type %localappdata%)
 Delete the MKVmergeBatcher folder
 Try to open MKVmergeBatcher
 
-## Process bug. Not yet discovered the motivation sometimes occurs
+## Process bug. Not yet discovered the motivation sometimes occurs. Theorically handled in > 1.1.82
 
 See the end of this message for details on invoking 
 just-in-time (JIT) debugging instead of this dialog box.
