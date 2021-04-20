@@ -309,13 +309,22 @@ namespace MKVmergeBatcher.src
         private void timer_Tick(object sender, EventArgs e)
         {
             UpdateFormControls();
-            if (process != null)
+            try
             {
-                if (process.HasExited && !processRunning)
+                if (process != null)
                 {
-                    timer.Enabled = false;
+                    //Console.WriteLine("process: " + process.ProcessName);
+                    Console.WriteLine("process.HasExited: " + process.HasExited);
+                    Console.WriteLine("processRunning: " + processRunning);
+                    if (process.HasExited && !processRunning)
+                    {
+                        timer.Enabled = false;
+                    }
                 }
-
+            }
+            catch (InvalidOperationException ex)
+            {
+                Console.WriteLine("error: " + ex.Message);
             }
         }
     }
