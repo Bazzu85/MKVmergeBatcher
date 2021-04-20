@@ -93,3 +93,17 @@ Close the program in taskbar if open (right click, close)
 Open the %localappdata% folder (WIN+R and type %localappdata%) 
 Delete the MKVmergeBatcher folder
 Try to open MKVmergeBatcher
+
+## Process bug. Not yet discovered the motivation sometimes occurs
+
+See the end of this message for details on invoking 
+just-in-time (JIT) debugging instead of this dialog box.
+
+************** Exception Text **************
+System.InvalidOperationException: No process is associated with this object.
+   at System.Diagnostics.Process.EnsureState(State state)
+   at System.Diagnostics.Process.get_HasExited()
+   at MKVmergeBatcher.src.ExecuteBatchForm.timer_Tick(Object sender, EventArgs e)
+   at System.Windows.Forms.Timer.OnTick(EventArgs e)
+   at System.Windows.Forms.Timer.TimerNativeWindow.WndProc(Message& m)
+   at System.Windows.Forms.NativeWindow.Callback(IntPtr hWnd, Int32 msg, IntPtr wparam, IntPtr lparam)

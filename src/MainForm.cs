@@ -505,7 +505,15 @@ this.Text = "MKVmerge Batcher " + version;
         }
         private void BTCClearQueueButton_Click(object sender, EventArgs e)
         {
-            ClearQueue();
+            if (userData.queueManagement.queueList.Count > 0)
+            {
+                DialogResult dr = MessageBox.Show("Do you want to clear the queue?", "Warning", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+
+                if (dr == DialogResult.Yes)
+                {
+                    ClearQueue();
+                }
+            }
         }
 
         private List<string> ExtractVideoFileListToWorkOn()
@@ -678,7 +686,15 @@ this.Text = "MKVmerge Batcher " + version;
 
         private void QClearQueueButton_Click(object sender, EventArgs e)
         {
-            ClearQueue();
+            if (userData.queueManagement.queueList.Count > 0)
+            {
+                DialogResult dr = MessageBox.Show("Do you want to clear the queue?", "Warning", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+
+                if (dr == DialogResult.Yes)
+                {
+                    ClearQueue();
+                }
+            }
         }
 
         private void QCreateBatButton_Click(object sender, EventArgs e)
@@ -728,17 +744,41 @@ this.Text = "MKVmerge Batcher " + version;
 
         private void QRemoveOkButton_Click(object sender, EventArgs e)
         {
-            ClearQueue("OK");
+            if (userData.queueManagement.queueList.Count > 0)
+            {
+                DialogResult dr = MessageBox.Show("Do you want to clear the OK jobs?", "Warning", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+
+                if (dr == DialogResult.Yes)
+                {
+                    ClearQueue("OK");
+                }
+            }
         }
 
         private void QRemoveWarningButton_Click(object sender, EventArgs e)
         {
-            ClearQueue("Warning");
+            if (userData.queueManagement.queueList.Count > 0)
+            {
+                DialogResult dr = MessageBox.Show("Do you want to clear the Warning jobs?", "Warning", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+
+                if (dr == DialogResult.Yes)
+                {
+                    ClearQueue("Warning");
+                }
+            }
         }
 
         private void QRemoveErrorButton_Click(object sender, EventArgs e)
         {
-            ClearQueue("Error");
+            if (userData.queueManagement.queueList.Count > 0)
+            {
+                DialogResult dr = MessageBox.Show("Do you want to clear the Error jobs?", "Warning", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+
+                if (dr == DialogResult.Yes)
+                {
+                    ClearQueue("Error");
+                }
+            }
         }
     }
         #endregion
