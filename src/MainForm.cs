@@ -486,7 +486,10 @@ this.Text = "MKVmerge Batcher " + version;
                             break;
                         }
                     }
-                    if (!error)
+                }
+                if (!error)
+                {
+                    foreach (string videoFile in videoFileList)
                     {
                         UserData.QueueManagement.Queue queue = new UserData.QueueManagement.Queue();
                         queue.fileName = videoFile;
@@ -494,14 +497,9 @@ this.Text = "MKVmerge Batcher " + version;
                         queue.modelName = userData.modelManagement.modelList[queue.modelIndex].modelName;
 
                         userData.queueManagement.queueList.Add(queue);
-                    } else
-                    {
-                        break;
                     }
                 }
-
             }
-
         }
         private void BTCClearQueueButton_Click(object sender, EventArgs e)
         {
@@ -735,7 +733,20 @@ this.Text = "MKVmerge Batcher " + version;
 
                 ExecuteBatchForm executeBatchForm = new ExecuteBatchForm(this.userData, videoFileList, 0, true);
                 executeBatchForm.ShowDialog();
-            } else
+                if (userData.modelCreator.additionalFlags.autoClearOkJobs)
+                {
+                    ClearQueue("OK");
+                }
+                if (userData.modelCreator.additionalFlags.autoClearWarningJobs)
+                {
+                    ClearQueue("Warning");
+                }
+                if (userData.modelCreator.additionalFlags.autoClearErrorJobs)
+                {
+                    ClearQueue("Error");
+                }
+            }
+            else
             {
                 MessageBox.Show("The queue is empty", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }

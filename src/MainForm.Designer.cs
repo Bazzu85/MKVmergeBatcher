@@ -37,6 +37,7 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabBatcher = new System.Windows.Forms.TabPage();
+            this.BTCClearQueueButton = new System.Windows.Forms.Button();
             this.BTCAddToQueueButton = new System.Windows.Forms.Button();
             this.BTCPathLabel = new System.Windows.Forms.Label();
             this.BTCExtensionsLabel = new System.Windows.Forms.Label();
@@ -95,11 +96,19 @@
             this.MCForcedFlag = new System.Windows.Forms.DataGridViewCheckBoxColumn();
             this.MCPreviewButton = new System.Windows.Forms.Button();
             this.tabQueue = new System.Windows.Forms.TabPage();
+            this.QAutoClearOkJobsCheckBox = new System.Windows.Forms.CheckBox();
+            this.QRemoveErrorButton = new System.Windows.Forms.Button();
+            this.QRemoveWarningButton = new System.Windows.Forms.Button();
+            this.QRemoveOkButton = new System.Windows.Forms.Button();
             this.QExecNowButton = new System.Windows.Forms.Button();
             this.QCreateBatButton = new System.Windows.Forms.Button();
             this.QClearQueueButton = new System.Windows.Forms.Button();
             this.QRemoveFromQueueButton = new System.Windows.Forms.Button();
             this.QDataGridView = new System.Windows.Forms.DataGridView();
+            this.fileNameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.modelNameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.jobStatus = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.modelIndexDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.queueBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.tabHelp = new System.Windows.Forms.TabPage();
             this.aboutTextBox = new System.Windows.Forms.RichTextBox();
@@ -110,14 +119,8 @@
             this.modelCreatorBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.modelManagementBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.MCToolTip = new System.Windows.Forms.ToolTip(this.components);
-            this.QRemoveOkButton = new System.Windows.Forms.Button();
-            this.BTCClearQueueButton = new System.Windows.Forms.Button();
-            this.QRemoveWarningButton = new System.Windows.Forms.Button();
-            this.QRemoveErrorButton = new System.Windows.Forms.Button();
-            this.fileNameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.modelNameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.jobStatus = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.modelIndexDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.QAutoClearWarningJobsCheckBox = new System.Windows.Forms.CheckBox();
+            this.QAutoClearErrorJobsCheckBox = new System.Windows.Forms.CheckBox();
             this.tabControl1.SuspendLayout();
             this.tabBatcher.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.modelBindingSource)).BeginInit();
@@ -180,6 +183,17 @@
             this.tabBatcher.TabIndex = 0;
             this.tabBatcher.Text = "Batcher";
             this.tabBatcher.UseVisualStyleBackColor = true;
+            // 
+            // BTCClearQueueButton
+            // 
+            this.BTCClearQueueButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.BTCClearQueueButton.Location = new System.Drawing.Point(562, 450);
+            this.BTCClearQueueButton.Name = "BTCClearQueueButton";
+            this.BTCClearQueueButton.Size = new System.Drawing.Size(89, 23);
+            this.BTCClearQueueButton.TabIndex = 13;
+            this.BTCClearQueueButton.Text = "Clear Queue";
+            this.BTCClearQueueButton.UseVisualStyleBackColor = true;
+            this.BTCClearQueueButton.Click += new System.EventHandler(this.BTCClearQueueButton_Click);
             // 
             // BTCAddToQueueButton
             // 
@@ -813,6 +827,9 @@
             // 
             // tabQueue
             // 
+            this.tabQueue.Controls.Add(this.QAutoClearErrorJobsCheckBox);
+            this.tabQueue.Controls.Add(this.QAutoClearWarningJobsCheckBox);
+            this.tabQueue.Controls.Add(this.QAutoClearOkJobsCheckBox);
             this.tabQueue.Controls.Add(this.QRemoveErrorButton);
             this.tabQueue.Controls.Add(this.QRemoveWarningButton);
             this.tabQueue.Controls.Add(this.QRemoveOkButton);
@@ -828,6 +845,50 @@
             this.tabQueue.TabIndex = 4;
             this.tabQueue.Text = "Queue";
             this.tabQueue.UseVisualStyleBackColor = true;
+            // 
+            // QAutoClearOkJobsCheckBox
+            // 
+            this.QAutoClearOkJobsCheckBox.AutoSize = true;
+            this.QAutoClearOkJobsCheckBox.DataBindings.Add(new System.Windows.Forms.Binding("Checked", this.additionalFlagsBindingSource, "autoClearOkJobs", true));
+            this.QAutoClearOkJobsCheckBox.Location = new System.Drawing.Point(777, 209);
+            this.QAutoClearOkJobsCheckBox.Name = "QAutoClearOkJobsCheckBox";
+            this.QAutoClearOkJobsCheckBox.Size = new System.Drawing.Size(117, 17);
+            this.QAutoClearOkJobsCheckBox.TabIndex = 36;
+            this.QAutoClearOkJobsCheckBox.Text = "Auto Clear Ok Jobs";
+            this.QAutoClearOkJobsCheckBox.UseVisualStyleBackColor = true;
+            // 
+            // QRemoveErrorButton
+            // 
+            this.QRemoveErrorButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.QRemoveErrorButton.Location = new System.Drawing.Point(777, 180);
+            this.QRemoveErrorButton.Name = "QRemoveErrorButton";
+            this.QRemoveErrorButton.Size = new System.Drawing.Size(131, 23);
+            this.QRemoveErrorButton.TabIndex = 35;
+            this.QRemoveErrorButton.Text = "Remove Error jobs";
+            this.QRemoveErrorButton.UseVisualStyleBackColor = true;
+            this.QRemoveErrorButton.Click += new System.EventHandler(this.QRemoveErrorButton_Click);
+            // 
+            // QRemoveWarningButton
+            // 
+            this.QRemoveWarningButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.QRemoveWarningButton.Location = new System.Drawing.Point(777, 151);
+            this.QRemoveWarningButton.Name = "QRemoveWarningButton";
+            this.QRemoveWarningButton.Size = new System.Drawing.Size(131, 23);
+            this.QRemoveWarningButton.TabIndex = 34;
+            this.QRemoveWarningButton.Text = "Remove Warning jobs";
+            this.QRemoveWarningButton.UseVisualStyleBackColor = true;
+            this.QRemoveWarningButton.Click += new System.EventHandler(this.QRemoveWarningButton_Click);
+            // 
+            // QRemoveOkButton
+            // 
+            this.QRemoveOkButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.QRemoveOkButton.Location = new System.Drawing.Point(777, 122);
+            this.QRemoveOkButton.Name = "QRemoveOkButton";
+            this.QRemoveOkButton.Size = new System.Drawing.Size(131, 23);
+            this.QRemoveOkButton.TabIndex = 33;
+            this.QRemoveOkButton.Text = "Remove OK jobs";
+            this.QRemoveOkButton.UseVisualStyleBackColor = true;
+            this.QRemoveOkButton.Click += new System.EventHandler(this.QRemoveOkButton_Click);
             // 
             // QExecNowButton
             // 
@@ -902,6 +963,38 @@
             this.QDataGridView.Size = new System.Drawing.Size(771, 481);
             this.QDataGridView.TabIndex = 0;
             // 
+            // fileNameDataGridViewTextBoxColumn
+            // 
+            this.fileNameDataGridViewTextBoxColumn.DataPropertyName = "fileName";
+            this.fileNameDataGridViewTextBoxColumn.FillWeight = 250F;
+            this.fileNameDataGridViewTextBoxColumn.HeaderText = "File";
+            this.fileNameDataGridViewTextBoxColumn.Name = "fileNameDataGridViewTextBoxColumn";
+            this.fileNameDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // modelNameDataGridViewTextBoxColumn
+            // 
+            this.modelNameDataGridViewTextBoxColumn.DataPropertyName = "modelName";
+            this.modelNameDataGridViewTextBoxColumn.FillWeight = 200F;
+            this.modelNameDataGridViewTextBoxColumn.HeaderText = "Choosen Model";
+            this.modelNameDataGridViewTextBoxColumn.Name = "modelNameDataGridViewTextBoxColumn";
+            this.modelNameDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // jobStatus
+            // 
+            this.jobStatus.DataPropertyName = "jobStatus";
+            this.jobStatus.FillWeight = 60F;
+            this.jobStatus.HeaderText = "Job Status";
+            this.jobStatus.Name = "jobStatus";
+            this.jobStatus.ReadOnly = true;
+            // 
+            // modelIndexDataGridViewTextBoxColumn
+            // 
+            this.modelIndexDataGridViewTextBoxColumn.DataPropertyName = "modelIndex";
+            this.modelIndexDataGridViewTextBoxColumn.HeaderText = "modelIndex";
+            this.modelIndexDataGridViewTextBoxColumn.Name = "modelIndexDataGridViewTextBoxColumn";
+            this.modelIndexDataGridViewTextBoxColumn.ReadOnly = true;
+            this.modelIndexDataGridViewTextBoxColumn.Visible = false;
+            // 
             // queueBindingSource
             // 
             this.queueBindingSource.DataSource = typeof(MKVmergeBatcher.src.obj.UserData.QueueManagement.Queue);
@@ -968,81 +1061,26 @@
             // 
             this.modelManagementBindingSource.DataSource = typeof(MKVmergeBatcher.src.obj.UserData.ModelManagement);
             // 
-            // QRemoveOkButton
+            // QAutoClearWarningJobsCheckBox
             // 
-            this.QRemoveOkButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.QRemoveOkButton.Location = new System.Drawing.Point(777, 122);
-            this.QRemoveOkButton.Name = "QRemoveOkButton";
-            this.QRemoveOkButton.Size = new System.Drawing.Size(131, 23);
-            this.QRemoveOkButton.TabIndex = 33;
-            this.QRemoveOkButton.Text = "Remove OK jobs";
-            this.QRemoveOkButton.UseVisualStyleBackColor = true;
-            this.QRemoveOkButton.Click += new System.EventHandler(this.QRemoveOkButton_Click);
+            this.QAutoClearWarningJobsCheckBox.DataBindings.Add(new System.Windows.Forms.Binding("Checked", this.additionalFlagsBindingSource, "autoClearWarningJobs", true));
+            this.QAutoClearWarningJobsCheckBox.Location = new System.Drawing.Point(777, 232);
+            this.QAutoClearWarningJobsCheckBox.Name = "QAutoClearWarningJobsCheckBox";
+            this.QAutoClearWarningJobsCheckBox.Size = new System.Drawing.Size(131, 31);
+            this.QAutoClearWarningJobsCheckBox.TabIndex = 37;
+            this.QAutoClearWarningJobsCheckBox.Text = "Auto Clear Warning Jobs";
+            this.QAutoClearWarningJobsCheckBox.UseVisualStyleBackColor = true;
             // 
-            // BTCClearQueueButton
+            // QAutoClearErrorJobsCheckBox
             // 
-            this.BTCClearQueueButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.BTCClearQueueButton.Location = new System.Drawing.Point(562, 450);
-            this.BTCClearQueueButton.Name = "BTCClearQueueButton";
-            this.BTCClearQueueButton.Size = new System.Drawing.Size(89, 23);
-            this.BTCClearQueueButton.TabIndex = 13;
-            this.BTCClearQueueButton.Text = "Clear Queue";
-            this.BTCClearQueueButton.UseVisualStyleBackColor = true;
-            this.BTCClearQueueButton.Click += new System.EventHandler(this.BTCClearQueueButton_Click);
-            // 
-            // QRemoveWarningButton
-            // 
-            this.QRemoveWarningButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.QRemoveWarningButton.Location = new System.Drawing.Point(777, 151);
-            this.QRemoveWarningButton.Name = "QRemoveWarningButton";
-            this.QRemoveWarningButton.Size = new System.Drawing.Size(131, 23);
-            this.QRemoveWarningButton.TabIndex = 34;
-            this.QRemoveWarningButton.Text = "Remove Warning jobs";
-            this.QRemoveWarningButton.UseVisualStyleBackColor = true;
-            this.QRemoveWarningButton.Click += new System.EventHandler(this.QRemoveWarningButton_Click);
-            // 
-            // QRemoveErrorButton
-            // 
-            this.QRemoveErrorButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.QRemoveErrorButton.Location = new System.Drawing.Point(777, 180);
-            this.QRemoveErrorButton.Name = "QRemoveErrorButton";
-            this.QRemoveErrorButton.Size = new System.Drawing.Size(131, 23);
-            this.QRemoveErrorButton.TabIndex = 35;
-            this.QRemoveErrorButton.Text = "Remove Error jobs";
-            this.QRemoveErrorButton.UseVisualStyleBackColor = true;
-            this.QRemoveErrorButton.Click += new System.EventHandler(this.QRemoveErrorButton_Click);
-            // 
-            // fileNameDataGridViewTextBoxColumn
-            // 
-            this.fileNameDataGridViewTextBoxColumn.DataPropertyName = "fileName";
-            this.fileNameDataGridViewTextBoxColumn.FillWeight = 250F;
-            this.fileNameDataGridViewTextBoxColumn.HeaderText = "File";
-            this.fileNameDataGridViewTextBoxColumn.Name = "fileNameDataGridViewTextBoxColumn";
-            this.fileNameDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // modelNameDataGridViewTextBoxColumn
-            // 
-            this.modelNameDataGridViewTextBoxColumn.DataPropertyName = "modelName";
-            this.modelNameDataGridViewTextBoxColumn.FillWeight = 200F;
-            this.modelNameDataGridViewTextBoxColumn.HeaderText = "Choosen Model";
-            this.modelNameDataGridViewTextBoxColumn.Name = "modelNameDataGridViewTextBoxColumn";
-            this.modelNameDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // jobStatus
-            // 
-            this.jobStatus.DataPropertyName = "jobStatus";
-            this.jobStatus.FillWeight = 60F;
-            this.jobStatus.HeaderText = "Job Status";
-            this.jobStatus.Name = "jobStatus";
-            this.jobStatus.ReadOnly = true;
-            // 
-            // modelIndexDataGridViewTextBoxColumn
-            // 
-            this.modelIndexDataGridViewTextBoxColumn.DataPropertyName = "modelIndex";
-            this.modelIndexDataGridViewTextBoxColumn.HeaderText = "modelIndex";
-            this.modelIndexDataGridViewTextBoxColumn.Name = "modelIndexDataGridViewTextBoxColumn";
-            this.modelIndexDataGridViewTextBoxColumn.ReadOnly = true;
-            this.modelIndexDataGridViewTextBoxColumn.Visible = false;
+            this.QAutoClearErrorJobsCheckBox.AutoSize = true;
+            this.QAutoClearErrorJobsCheckBox.DataBindings.Add(new System.Windows.Forms.Binding("Checked", this.additionalFlagsBindingSource, "autoClearErrorJobs", true));
+            this.QAutoClearErrorJobsCheckBox.Location = new System.Drawing.Point(777, 269);
+            this.QAutoClearErrorJobsCheckBox.Name = "QAutoClearErrorJobsCheckBox";
+            this.QAutoClearErrorJobsCheckBox.Size = new System.Drawing.Size(125, 17);
+            this.QAutoClearErrorJobsCheckBox.TabIndex = 38;
+            this.QAutoClearErrorJobsCheckBox.Text = "Auto Clear Error Jobs";
+            this.QAutoClearErrorJobsCheckBox.UseVisualStyleBackColor = true;
             // 
             // Form1
             // 
@@ -1076,6 +1114,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.MCDataGridView)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.typeBindingSource)).EndInit();
             this.tabQueue.ResumeLayout(false);
+            this.tabQueue.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.QDataGridView)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.queueBindingSource)).EndInit();
             this.tabHelp.ResumeLayout(false);
@@ -1174,6 +1213,9 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn modelNameDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn jobStatus;
         private System.Windows.Forms.DataGridViewTextBoxColumn modelIndexDataGridViewTextBoxColumn;
+        private System.Windows.Forms.CheckBox QAutoClearOkJobsCheckBox;
+        private System.Windows.Forms.CheckBox QAutoClearErrorJobsCheckBox;
+        private System.Windows.Forms.CheckBox QAutoClearWarningJobsCheckBox;
     }
 }
 
