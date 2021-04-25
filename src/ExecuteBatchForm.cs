@@ -31,6 +31,7 @@ namespace MKVmergeBatcher.src
         private int workingFile = 0;
         private int totalFileToExecute = 0;
         private string currentElaboratingFile = "";
+        private string outputFileName = "";
         private string output = "";
         private bool processRunning = false;
         private bool processEnded = false;
@@ -122,14 +123,16 @@ namespace MKVmergeBatcher.src
                 currentElaboratingFile = this.userData.queueManagement.queueList[workingFile - 1].fileName;
                 BatcherManagement batcherManagement = new BatcherManagement(userData);
                 cmdLine = batcherManagement.CreateCmd(this.userData.queueManagement.queueList[workingFile - 1].fileName, this.userData.queueManagement.queueList[workingFile - 1].modelIndex);
+                outputFileName = batcherManagement.GetOutputFileName(userData.queueManagement.queueList[workingFile - 1].fileName);
             }
             else
             {
                 currentElaboratingFile = this.videoFileList[workingFile - 1];
                 BatcherManagement batcherManagement = new BatcherManagement(userData);
                 cmdLine = batcherManagement.CreateCmd(this.videoFileList[workingFile - 1], this.selectedIndex);
+                outputFileName = batcherManagement.GetOutputFileName(this.videoFileList[workingFile - 1]);
             }
-            
+
             cmdLine = cmdLine.Replace("\"" + userData.batcher.mvkMergePath + "\"", "");
             cmdLine = cmdLine.Replace("^","");
 
@@ -269,6 +272,7 @@ namespace MKVmergeBatcher.src
         {
             if (processRunning)
             {
+    
                 switch (process.ExitCode)
                 {
                     case 0:
@@ -276,12 +280,20 @@ namespace MKVmergeBatcher.src
                         {
                             userData.queueManagement.queueList[workingFile - 1].jobStatus = "OK";
                         }
+                        if (!string.IsNullOrEmpty(userData.options.moveOkFilesTo))
+                        {
+                            MoveFile(outputFileName, userData.options.moveOkFilesTo);
+                        }
                         break;
                     case 1:
                         warnings += 1;
                         if (this.executeFromQueue)
                         {
                             userData.queueManagement.queueList[workingFile - 1].jobStatus = "Warning";
+                        }
+                        if (!string.IsNullOrEmpty(userData.options.moveWarningFilesTo))
+                        {
+                            MoveFile(outputFileName, userData.options.moveWarningFilesTo);
                         }
                         break;
                     case 2:
@@ -306,6 +318,19 @@ namespace MKVmergeBatcher.src
             }
         }
 
+        private void MoveFile(string fileName, string fileNewFolder)
+        {
+            //Console.WriteLine(Path.GetDirectoryName(fileName));
+            
+            string destinationPath = Path.GetDirectoryName(fileName) + "\\" + fileNewFolder;
+            string destinationFile = destinationPath + "\\" + Path.GetFileName(fileName);
+            if (!Directory.Exists(destinationPath))
+            {
+                Directory.CreateDirectory(destinationPath);
+            }
+            File.Move(fileName, destinationFile);
+        }
+
         private void timer_Tick(object sender, EventArgs e)
         {
             UpdateFormControls();
@@ -314,8 +339,8 @@ namespace MKVmergeBatcher.src
                 if (process != null)
                 {
                     //Console.WriteLine("process: " + process.ProcessName);
-                    Console.WriteLine("process.HasExited: " + process.HasExited);
-                    Console.WriteLine("processRunning: " + processRunning);
+                    //Console.WriteLine("process.HasExited: " + process.HasExited);
+                    //Console.WriteLine("processRunning: " + processRunning);
                     if (process.HasExited && !processRunning)
                     {
                         timer.Enabled = false;

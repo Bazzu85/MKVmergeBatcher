@@ -49,13 +49,7 @@ namespace MKVmergeBatcher
         {
             string mkvmergePath = userData.batcher.mvkMergePath;
             string cmdLine = "";
-            string outputFileName = Path.GetDirectoryName(videoFile) + "\\" + Path.GetFileNameWithoutExtension(videoFile) + ".mkv";
-            int i = 0;
-            while (File.Exists(outputFileName))
-            {
-                i++;
-                outputFileName = Path.GetDirectoryName(videoFile) + "\\" + Path.GetFileNameWithoutExtension(videoFile) + " (" + i + ")" + ".mkv";
-            }
+            string outputFileName = GetOutputFileName(videoFile);
             string inputFileName = videoFile;
             string inputFileNameWithoutExtension = Path.GetDirectoryName(videoFile) + "\\" + Path.GetFileNameWithoutExtension(videoFile);
             cmdLine += userData.modelManagement.modelList[selectedModelIndex].modelContent;
@@ -105,6 +99,18 @@ namespace MKVmergeBatcher
                 }
             }
             return cmdLine;
+        }
+
+        internal string GetOutputFileName(string file)
+        {
+            string outputFileName = Path.GetDirectoryName(file) + "\\" + Path.GetFileNameWithoutExtension(file) + ".mkv";
+            int i = 0;
+            while (File.Exists(outputFileName))
+            {
+                i++;
+                outputFileName = Path.GetDirectoryName(file) + "\\" + Path.GetFileNameWithoutExtension(file) + " (" + i + ")" + ".mkv";
+            }
+            return outputFileName;
         }
     }
 }

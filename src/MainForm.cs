@@ -122,6 +122,7 @@ namespace MKVmergeBatcher
             this.batcherBindingSource.DataSource = userData.batcher;
             this.modelBindingSource.DataSource = userData.modelManagement.modelList;
             this.queueBindingSource.DataSource = userData.queueManagement.queueList;
+            this.optionsBindingSource.DataSource = userData.options;
         }
         private void ClearQueue()
         {
@@ -477,7 +478,7 @@ this.Text = "MKVmerge Batcher " + version;
                 {
                     foreach(UserData.QueueManagement.Queue queueItem in userData.queueManagement.queueList)
                     {
-                        Console.WriteLine("errore: " + error);
+                        //Console.WriteLine("errore: " + error);
 
                         if (queueItem.fileName == videoFile)
                         {
@@ -485,6 +486,10 @@ this.Text = "MKVmerge Batcher " + version;
                             error = true;
                             break;
                         }
+                    }
+                    if (error)
+                    {
+                        break;
                     }
                 }
                 if (!error)

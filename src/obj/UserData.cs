@@ -105,11 +105,16 @@ namespace MKVmergeBatcher.src.obj
                 public string modelName { get; set; } = "";
                 public string jobStatus { get; set; } = "";
             }
-
-            
-
         }
 
+        public Options options = new Options();
+
+        public class Options
+        {
+            public string moveOkFilesTo { get; set; } = "";
+            public string moveWarningFilesTo { get; set; } = "";
+
+        }
 
         /// <summary>
         /// Set the default data if not already setted for UserData object 

@@ -96,6 +96,8 @@
             this.MCForcedFlag = new System.Windows.Forms.DataGridViewCheckBoxColumn();
             this.MCPreviewButton = new System.Windows.Forms.Button();
             this.tabQueue = new System.Windows.Forms.TabPage();
+            this.QAutoClearErrorJobsCheckBox = new System.Windows.Forms.CheckBox();
+            this.QAutoClearWarningJobsCheckBox = new System.Windows.Forms.CheckBox();
             this.QAutoClearOkJobsCheckBox = new System.Windows.Forms.CheckBox();
             this.QRemoveErrorButton = new System.Windows.Forms.Button();
             this.QRemoveWarningButton = new System.Windows.Forms.Button();
@@ -110,6 +112,11 @@
             this.jobStatus = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.modelIndexDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.queueBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.tabOptions = new System.Windows.Forms.TabPage();
+            this.OMoveWarningFilesTextBox = new System.Windows.Forms.TextBox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.OMoveOkFilesTextBox = new System.Windows.Forms.TextBox();
+            this.OMoveOkFilesLabel = new System.Windows.Forms.Label();
             this.tabHelp = new System.Windows.Forms.TabPage();
             this.aboutTextBox = new System.Windows.Forms.RichTextBox();
             this.tracksBindingSource = new System.Windows.Forms.BindingSource(this.components);
@@ -119,8 +126,8 @@
             this.modelCreatorBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.modelManagementBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.MCToolTip = new System.Windows.Forms.ToolTip(this.components);
-            this.QAutoClearWarningJobsCheckBox = new System.Windows.Forms.CheckBox();
-            this.QAutoClearErrorJobsCheckBox = new System.Windows.Forms.CheckBox();
+            this.optionsBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.OToolTip = new System.Windows.Forms.ToolTip(this.components);
             this.tabControl1.SuspendLayout();
             this.tabBatcher.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.modelBindingSource)).BeginInit();
@@ -137,11 +144,13 @@
             this.tabQueue.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.QDataGridView)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.queueBindingSource)).BeginInit();
+            this.tabOptions.SuspendLayout();
             this.tabHelp.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.tracksBindingSource)).BeginInit();
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.modelCreatorBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.modelManagementBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.optionsBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // tabControl1
@@ -150,6 +159,7 @@
             this.tabControl1.Controls.Add(this.tabManageModels);
             this.tabControl1.Controls.Add(this.tabModelCreator);
             this.tabControl1.Controls.Add(this.tabQueue);
+            this.tabControl1.Controls.Add(this.tabOptions);
             this.tabControl1.Controls.Add(this.tabHelp);
             this.tabControl1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tabControl1.Location = new System.Drawing.Point(0, 24);
@@ -846,8 +856,32 @@
             this.tabQueue.Text = "Queue";
             this.tabQueue.UseVisualStyleBackColor = true;
             // 
+            // QAutoClearErrorJobsCheckBox
+            // 
+            this.QAutoClearErrorJobsCheckBox.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.QAutoClearErrorJobsCheckBox.AutoSize = true;
+            this.QAutoClearErrorJobsCheckBox.DataBindings.Add(new System.Windows.Forms.Binding("Checked", this.additionalFlagsBindingSource, "autoClearErrorJobs", true));
+            this.QAutoClearErrorJobsCheckBox.Location = new System.Drawing.Point(777, 269);
+            this.QAutoClearErrorJobsCheckBox.Name = "QAutoClearErrorJobsCheckBox";
+            this.QAutoClearErrorJobsCheckBox.Size = new System.Drawing.Size(125, 17);
+            this.QAutoClearErrorJobsCheckBox.TabIndex = 38;
+            this.QAutoClearErrorJobsCheckBox.Text = "Auto Clear Error Jobs";
+            this.QAutoClearErrorJobsCheckBox.UseVisualStyleBackColor = true;
+            // 
+            // QAutoClearWarningJobsCheckBox
+            // 
+            this.QAutoClearWarningJobsCheckBox.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.QAutoClearWarningJobsCheckBox.DataBindings.Add(new System.Windows.Forms.Binding("Checked", this.additionalFlagsBindingSource, "autoClearWarningJobs", true));
+            this.QAutoClearWarningJobsCheckBox.Location = new System.Drawing.Point(777, 232);
+            this.QAutoClearWarningJobsCheckBox.Name = "QAutoClearWarningJobsCheckBox";
+            this.QAutoClearWarningJobsCheckBox.Size = new System.Drawing.Size(131, 31);
+            this.QAutoClearWarningJobsCheckBox.TabIndex = 37;
+            this.QAutoClearWarningJobsCheckBox.Text = "Auto Clear Warning Jobs";
+            this.QAutoClearWarningJobsCheckBox.UseVisualStyleBackColor = true;
+            // 
             // QAutoClearOkJobsCheckBox
             // 
+            this.QAutoClearOkJobsCheckBox.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.QAutoClearOkJobsCheckBox.AutoSize = true;
             this.QAutoClearOkJobsCheckBox.DataBindings.Add(new System.Windows.Forms.Binding("Checked", this.additionalFlagsBindingSource, "autoClearOkJobs", true));
             this.QAutoClearOkJobsCheckBox.Location = new System.Drawing.Point(777, 209);
@@ -999,6 +1033,63 @@
             // 
             this.queueBindingSource.DataSource = typeof(MKVmergeBatcher.src.obj.UserData.QueueManagement.Queue);
             // 
+            // tabOptions
+            // 
+            this.tabOptions.Controls.Add(this.OMoveWarningFilesTextBox);
+            this.tabOptions.Controls.Add(this.label1);
+            this.tabOptions.Controls.Add(this.OMoveOkFilesTextBox);
+            this.tabOptions.Controls.Add(this.OMoveOkFilesLabel);
+            this.tabOptions.Location = new System.Drawing.Point(4, 22);
+            this.tabOptions.Name = "tabOptions";
+            this.tabOptions.Padding = new System.Windows.Forms.Padding(3);
+            this.tabOptions.Size = new System.Drawing.Size(916, 481);
+            this.tabOptions.TabIndex = 5;
+            this.tabOptions.Text = "Options";
+            this.tabOptions.UseVisualStyleBackColor = true;
+            // 
+            // OMoveWarningFilesTextBox
+            // 
+            this.OMoveWarningFilesTextBox.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.OMoveWarningFilesTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.optionsBindingSource, "moveWarningFilesTo", true));
+            this.OMoveWarningFilesTextBox.Location = new System.Drawing.Point(124, 29);
+            this.OMoveWarningFilesTextBox.Name = "OMoveWarningFilesTextBox";
+            this.OMoveWarningFilesTextBox.Size = new System.Drawing.Size(784, 20);
+            this.OMoveWarningFilesTextBox.TabIndex = 5;
+            this.OToolTip.SetToolTip(this.OMoveWarningFilesTextBox, "Specify the directory where the ok files are moved. Can be specified only a folde" +
+        "r name like WarningFiles");
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(3, 32);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(116, 13);
+            this.label1.TabIndex = 4;
+            this.label1.Text = "Move Warning Files to:";
+            this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
+            // OMoveOkFilesTextBox
+            // 
+            this.OMoveOkFilesTextBox.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.OMoveOkFilesTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.optionsBindingSource, "moveOkFilesTo", true));
+            this.OMoveOkFilesTextBox.Location = new System.Drawing.Point(124, 3);
+            this.OMoveOkFilesTextBox.Name = "OMoveOkFilesTextBox";
+            this.OMoveOkFilesTextBox.Size = new System.Drawing.Size(784, 20);
+            this.OMoveOkFilesTextBox.TabIndex = 3;
+            this.OToolTip.SetToolTip(this.OMoveOkFilesTextBox, "Specify the directory where the ok files are moved. Can be specified only a folde" +
+        "r name like OkFiles");
+            // 
+            // OMoveOkFilesLabel
+            // 
+            this.OMoveOkFilesLabel.Location = new System.Drawing.Point(3, 6);
+            this.OMoveOkFilesLabel.Name = "OMoveOkFilesLabel";
+            this.OMoveOkFilesLabel.Size = new System.Drawing.Size(115, 17);
+            this.OMoveOkFilesLabel.TabIndex = 2;
+            this.OMoveOkFilesLabel.Text = "Move Ok Files to:";
+            this.OMoveOkFilesLabel.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
             // tabHelp
             // 
             this.tabHelp.Controls.Add(this.aboutTextBox);
@@ -1061,26 +1152,9 @@
             // 
             this.modelManagementBindingSource.DataSource = typeof(MKVmergeBatcher.src.obj.UserData.ModelManagement);
             // 
-            // QAutoClearWarningJobsCheckBox
+            // optionsBindingSource
             // 
-            this.QAutoClearWarningJobsCheckBox.DataBindings.Add(new System.Windows.Forms.Binding("Checked", this.additionalFlagsBindingSource, "autoClearWarningJobs", true));
-            this.QAutoClearWarningJobsCheckBox.Location = new System.Drawing.Point(777, 232);
-            this.QAutoClearWarningJobsCheckBox.Name = "QAutoClearWarningJobsCheckBox";
-            this.QAutoClearWarningJobsCheckBox.Size = new System.Drawing.Size(131, 31);
-            this.QAutoClearWarningJobsCheckBox.TabIndex = 37;
-            this.QAutoClearWarningJobsCheckBox.Text = "Auto Clear Warning Jobs";
-            this.QAutoClearWarningJobsCheckBox.UseVisualStyleBackColor = true;
-            // 
-            // QAutoClearErrorJobsCheckBox
-            // 
-            this.QAutoClearErrorJobsCheckBox.AutoSize = true;
-            this.QAutoClearErrorJobsCheckBox.DataBindings.Add(new System.Windows.Forms.Binding("Checked", this.additionalFlagsBindingSource, "autoClearErrorJobs", true));
-            this.QAutoClearErrorJobsCheckBox.Location = new System.Drawing.Point(777, 269);
-            this.QAutoClearErrorJobsCheckBox.Name = "QAutoClearErrorJobsCheckBox";
-            this.QAutoClearErrorJobsCheckBox.Size = new System.Drawing.Size(125, 17);
-            this.QAutoClearErrorJobsCheckBox.TabIndex = 38;
-            this.QAutoClearErrorJobsCheckBox.Text = "Auto Clear Error Jobs";
-            this.QAutoClearErrorJobsCheckBox.UseVisualStyleBackColor = true;
+            this.optionsBindingSource.DataSource = typeof(MKVmergeBatcher.src.obj.UserData.Options);
             // 
             // Form1
             // 
@@ -1117,12 +1191,15 @@
             this.tabQueue.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.QDataGridView)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.queueBindingSource)).EndInit();
+            this.tabOptions.ResumeLayout(false);
+            this.tabOptions.PerformLayout();
             this.tabHelp.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.tracksBindingSource)).EndInit();
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.modelCreatorBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.modelManagementBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.optionsBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -1216,6 +1293,13 @@
         private System.Windows.Forms.CheckBox QAutoClearOkJobsCheckBox;
         private System.Windows.Forms.CheckBox QAutoClearErrorJobsCheckBox;
         private System.Windows.Forms.CheckBox QAutoClearWarningJobsCheckBox;
+        private System.Windows.Forms.TabPage tabOptions;
+        private System.Windows.Forms.TextBox OMoveOkFilesTextBox;
+        private System.Windows.Forms.Label OMoveOkFilesLabel;
+        private System.Windows.Forms.TextBox OMoveWarningFilesTextBox;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.BindingSource optionsBindingSource;
+        private System.Windows.Forms.ToolTip OToolTip;
     }
 }
 
