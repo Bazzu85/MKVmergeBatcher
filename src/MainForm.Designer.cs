@@ -113,7 +113,9 @@
             this.modelIndexDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.queueBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.tabOptions = new System.Windows.Forms.TabPage();
+            this.OReplaceExistingDestinationFileCheckBox = new System.Windows.Forms.CheckBox();
             this.OMoveWarningFilesTextBox = new System.Windows.Forms.TextBox();
+            this.optionsBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.label1 = new System.Windows.Forms.Label();
             this.OMoveOkFilesTextBox = new System.Windows.Forms.TextBox();
             this.OMoveOkFilesLabel = new System.Windows.Forms.Label();
@@ -126,7 +128,6 @@
             this.modelCreatorBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.modelManagementBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.MCToolTip = new System.Windows.Forms.ToolTip(this.components);
-            this.optionsBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.OToolTip = new System.Windows.Forms.ToolTip(this.components);
             this.tabControl1.SuspendLayout();
             this.tabBatcher.SuspendLayout();
@@ -145,12 +146,12 @@
             ((System.ComponentModel.ISupportInitialize)(this.QDataGridView)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.queueBindingSource)).BeginInit();
             this.tabOptions.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.optionsBindingSource)).BeginInit();
             this.tabHelp.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.tracksBindingSource)).BeginInit();
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.modelCreatorBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.modelManagementBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.optionsBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // tabControl1
@@ -1035,6 +1036,7 @@
             // 
             // tabOptions
             // 
+            this.tabOptions.Controls.Add(this.OReplaceExistingDestinationFileCheckBox);
             this.tabOptions.Controls.Add(this.OMoveWarningFilesTextBox);
             this.tabOptions.Controls.Add(this.label1);
             this.tabOptions.Controls.Add(this.OMoveOkFilesTextBox);
@@ -1047,6 +1049,17 @@
             this.tabOptions.Text = "Options";
             this.tabOptions.UseVisualStyleBackColor = true;
             // 
+            // OReplaceExistingDestinationFileCheckBox
+            // 
+            this.OReplaceExistingDestinationFileCheckBox.AutoSize = true;
+            this.OReplaceExistingDestinationFileCheckBox.DataBindings.Add(new System.Windows.Forms.Binding("Checked", this.optionsBindingSource, "replaceExistingDestinationFile", true));
+            this.OReplaceExistingDestinationFileCheckBox.Location = new System.Drawing.Point(6, 59);
+            this.OReplaceExistingDestinationFileCheckBox.Name = "OReplaceExistingDestinationFileCheckBox";
+            this.OReplaceExistingDestinationFileCheckBox.Size = new System.Drawing.Size(185, 17);
+            this.OReplaceExistingDestinationFileCheckBox.TabIndex = 6;
+            this.OReplaceExistingDestinationFileCheckBox.Text = "Replace existing destination files?";
+            this.OReplaceExistingDestinationFileCheckBox.UseVisualStyleBackColor = true;
+            // 
             // OMoveWarningFilesTextBox
             // 
             this.OMoveWarningFilesTextBox.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
@@ -1058,6 +1071,10 @@
             this.OMoveWarningFilesTextBox.TabIndex = 5;
             this.OToolTip.SetToolTip(this.OMoveWarningFilesTextBox, "Specify the directory where the ok files are moved. Can be specified only a folde" +
         "r name like WarningFiles");
+            // 
+            // optionsBindingSource
+            // 
+            this.optionsBindingSource.DataSource = typeof(MKVmergeBatcher.src.obj.UserData.Options);
             // 
             // label1
             // 
@@ -1152,10 +1169,6 @@
             // 
             this.modelManagementBindingSource.DataSource = typeof(MKVmergeBatcher.src.obj.UserData.ModelManagement);
             // 
-            // optionsBindingSource
-            // 
-            this.optionsBindingSource.DataSource = typeof(MKVmergeBatcher.src.obj.UserData.Options);
-            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -1193,13 +1206,13 @@
             ((System.ComponentModel.ISupportInitialize)(this.queueBindingSource)).EndInit();
             this.tabOptions.ResumeLayout(false);
             this.tabOptions.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.optionsBindingSource)).EndInit();
             this.tabHelp.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.tracksBindingSource)).EndInit();
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.modelCreatorBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.modelManagementBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.optionsBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -1300,6 +1313,7 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.BindingSource optionsBindingSource;
         private System.Windows.Forms.ToolTip OToolTip;
+        private System.Windows.Forms.CheckBox OReplaceExistingDestinationFileCheckBox;
     }
 }
 

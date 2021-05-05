@@ -113,6 +113,7 @@ namespace MKVmergeBatcher.src.obj
         {
             public string moveOkFilesTo { get; set; } = "";
             public string moveWarningFilesTo { get; set; } = "";
+            public Boolean replaceExistingDestinationFile { get; set; }
 
         }
 

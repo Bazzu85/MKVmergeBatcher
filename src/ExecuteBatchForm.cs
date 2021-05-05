@@ -324,11 +324,29 @@ namespace MKVmergeBatcher.src
             
             string destinationPath = Path.GetDirectoryName(fileName) + "\\" + fileNewFolder;
             string destinationFile = destinationPath + "\\" + Path.GetFileName(fileName);
+            
+            
             if (!Directory.Exists(destinationPath))
             {
                 Directory.CreateDirectory(destinationPath);
             }
-            File.Move(fileName, destinationFile);
+            
+            if (userData.options.replaceExistingDestinationFile)
+            {
+                string destinationFileBackup = destinationFile;
+                int i = 0;
+                while (File.Exists(destinationFileBackup))
+                {
+                    i++;
+                    destinationFileBackup = Path.GetDirectoryName(destinationFile) + "\\" + Path.GetFileNameWithoutExtension(destinationFile) + "_backup" + i + Path.GetExtension(destinationFile);
+                }
+                File.Replace(fileName, destinationFile, destinationFileBackup);
+            } else
+            {
+                if (!File.Exists(destinationFile)){
+                    File.Move(fileName, destinationFile);
+                }
+            }
         }
 
         private void timer_Tick(object sender, EventArgs e)
