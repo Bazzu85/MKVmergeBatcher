@@ -113,9 +113,10 @@
             this.modelIndexDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.queueBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.tabOptions = new System.Windows.Forms.TabPage();
+            this.ODeleteIncompleteFileCheckBox = new System.Windows.Forms.CheckBox();
+            this.optionsBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.OReplaceExistingDestinationFileCheckBox = new System.Windows.Forms.CheckBox();
             this.OMoveWarningFilesTextBox = new System.Windows.Forms.TextBox();
-            this.optionsBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.label1 = new System.Windows.Forms.Label();
             this.OMoveOkFilesTextBox = new System.Windows.Forms.TextBox();
             this.OMoveOkFilesLabel = new System.Windows.Forms.Label();
@@ -1036,6 +1037,7 @@
             // 
             // tabOptions
             // 
+            this.tabOptions.Controls.Add(this.ODeleteIncompleteFileCheckBox);
             this.tabOptions.Controls.Add(this.OReplaceExistingDestinationFileCheckBox);
             this.tabOptions.Controls.Add(this.OMoveWarningFilesTextBox);
             this.tabOptions.Controls.Add(this.label1);
@@ -1048,6 +1050,21 @@
             this.tabOptions.TabIndex = 5;
             this.tabOptions.Text = "Options";
             this.tabOptions.UseVisualStyleBackColor = true;
+            // 
+            // ODeleteIncompleteFileCheckBox
+            // 
+            this.ODeleteIncompleteFileCheckBox.AutoSize = true;
+            this.ODeleteIncompleteFileCheckBox.DataBindings.Add(new System.Windows.Forms.Binding("Checked", this.optionsBindingSource, "deleteIncompleteFile", true));
+            this.ODeleteIncompleteFileCheckBox.Location = new System.Drawing.Point(197, 59);
+            this.ODeleteIncompleteFileCheckBox.Name = "ODeleteIncompleteFileCheckBox";
+            this.ODeleteIncompleteFileCheckBox.Size = new System.Drawing.Size(185, 17);
+            this.ODeleteIncompleteFileCheckBox.TabIndex = 7;
+            this.ODeleteIncompleteFileCheckBox.Text = "Replace existing destination files?";
+            this.ODeleteIncompleteFileCheckBox.UseVisualStyleBackColor = true;
+            // 
+            // optionsBindingSource
+            // 
+            this.optionsBindingSource.DataSource = typeof(MKVmergeBatcher.src.obj.UserData.Options);
             // 
             // OReplaceExistingDestinationFileCheckBox
             // 
@@ -1071,10 +1088,6 @@
             this.OMoveWarningFilesTextBox.TabIndex = 5;
             this.OToolTip.SetToolTip(this.OMoveWarningFilesTextBox, "Specify the directory where the ok files are moved. Can be specified only a folde" +
         "r name like WarningFiles");
-            // 
-            // optionsBindingSource
-            // 
-            this.optionsBindingSource.DataSource = typeof(MKVmergeBatcher.src.obj.UserData.Options);
             // 
             // label1
             // 
@@ -1314,6 +1327,7 @@
         private System.Windows.Forms.BindingSource optionsBindingSource;
         private System.Windows.Forms.ToolTip OToolTip;
         private System.Windows.Forms.CheckBox OReplaceExistingDestinationFileCheckBox;
+        private System.Windows.Forms.CheckBox ODeleteIncompleteFileCheckBox;
     }
 }
 

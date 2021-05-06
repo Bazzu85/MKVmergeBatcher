@@ -189,8 +189,21 @@ namespace MKVmergeBatcher.src
         private void stopButton_Click(object sender, EventArgs e)
         {
             KillProcess();
+            if (userData.options.deleteIncompleteFile)
+            {
+                DeleteIncompleteFile();
+            }
+            
         }
 
+        private void DeleteIncompleteFile()
+        {
+            // Console.WriteLine("Deleting file :" + outputFileName);
+            if (File.Exists(outputFileName))
+            {
+                File.Delete(outputFileName);
+            }
+        }
 
         private void ExecuteBatchForm_FormClosing(object sender, FormClosingEventArgs e)
         {
@@ -340,7 +353,13 @@ namespace MKVmergeBatcher.src
                     i++;
                     destinationFileBackup = Path.GetDirectoryName(destinationFile) + "\\" + Path.GetFileNameWithoutExtension(destinationFile) + "_backup" + i + Path.GetExtension(destinationFile);
                 }
-                File.Replace(fileName, destinationFile, destinationFileBackup);
+                if (File.Exists(destinationFile)){
+                    File.Replace(fileName, destinationFile, destinationFileBackup);
+                } else
+                {
+                    File.Move(fileName, destinationFile);
+                }
+
             } else
             {
                 if (!File.Exists(destinationFile)){
