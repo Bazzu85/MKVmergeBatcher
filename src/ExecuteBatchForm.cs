@@ -189,12 +189,7 @@ namespace MKVmergeBatcher.src
         private void stopButton_Click(object sender, EventArgs e)
         {
             KillProcess();
-            if (userData.options.deleteIncompleteFile)
-            {
-                DeleteIncompleteFile();
             }
-            
-        }
 
         private void DeleteIncompleteFile()
         {
@@ -217,6 +212,10 @@ namespace MKVmergeBatcher.src
                 processRunning = false;
                 KillProcessAndChildrens(process.Id);
                 //timer.Enabled = false;
+                if (userData.options.deleteIncompleteFile)
+                {
+                    DeleteIncompleteFile();
+                }
             }
         }
 
