@@ -1057,9 +1057,9 @@
             this.ODeleteIncompleteFileCheckBox.DataBindings.Add(new System.Windows.Forms.Binding("Checked", this.optionsBindingSource, "deleteIncompleteFile", true));
             this.ODeleteIncompleteFileCheckBox.Location = new System.Drawing.Point(197, 59);
             this.ODeleteIncompleteFileCheckBox.Name = "ODeleteIncompleteFileCheckBox";
-            this.ODeleteIncompleteFileCheckBox.Size = new System.Drawing.Size(185, 17);
+            this.ODeleteIncompleteFileCheckBox.Size = new System.Drawing.Size(138, 17);
             this.ODeleteIncompleteFileCheckBox.TabIndex = 7;
-            this.ODeleteIncompleteFileCheckBox.Text = "Replace existing destination files?";
+            this.ODeleteIncompleteFileCheckBox.Text = "Delete incomplete files?";
             this.ODeleteIncompleteFileCheckBox.UseVisualStyleBackColor = true;
             // 
             // optionsBindingSource
