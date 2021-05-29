@@ -192,12 +192,44 @@ namespace MKVmergeBatcher.src
             }
 
         private void DeleteIncompleteFile()
-        {
+        {   
             // Console.WriteLine("Deleting file :" + outputFileName);
             if (File.Exists(outputFileName))
             {
+                FileInfo file = new FileInfo(outputFileName);
+                while (IsFileLocked(file))
+                {
+                    //Console.WriteLine("sleep");
+                    Thread.Sleep(1000);
+                }
                 File.Delete(outputFileName);
             }
+        }
+
+        protected virtual bool IsFileLocked(FileInfo file)
+        {
+            FileStream stream = null;
+
+            try
+            {
+                stream = file.Open(FileMode.Open, FileAccess.ReadWrite, FileShare.None);
+            }
+            catch (IOException)
+            {
+                //the file is unavailable because it is:
+                //still being written to
+                //or being processed by another thread
+                //or does not exist (has already been processed)
+                return true;
+            }
+            finally
+            {
+                if (stream != null)
+                    stream.Close();
+            }
+
+            //file is not locked
+            return false;
         }
 
         private void ExecuteBatchForm_FormClosing(object sender, FormClosingEventArgs e)
