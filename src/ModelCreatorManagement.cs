@@ -52,7 +52,8 @@ namespace MKVmergeBatcher.src
                 if (positionElements.Length != 2)
                 {
                     errorList.Add("Row " + i + " >> Position >> " + "Not in F:P format");
-
+                    //break positioned here beacause if continuing the evaluation on positionElements with a length < 2, cause expection in next ifs
+                    break;
                 }
                 if (positionElements[0] == "0" && item.externalFlag)
                 {
