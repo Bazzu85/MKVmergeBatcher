@@ -368,12 +368,7 @@ namespace MKVmergeBatcher.src
             string destinationPath = fileNewFolder;
             destinationPath = destinationPath.Replace("%originalFolder%", Path.GetDirectoryName(fileName));
 
-            //if the destination folder is not writable, no move to do
-            if (!IsDirectoryWritable(destinationPath, false))
-            {
-                return;
-            }
-
+            
             //Console.WriteLine("destinationPath: " + destinationPath);
 
             string destinationFile = destinationPath + "\\" + Path.GetFileName(fileName);
@@ -382,7 +377,14 @@ namespace MKVmergeBatcher.src
             {
                 Directory.CreateDirectory(destinationPath);
             }
-            
+
+            //if the destination folder is not writable, no move to do
+            if (!IsDirectoryWritable(destinationPath, false))
+            {
+                return;
+            }
+
+
             if (userData.options.replaceExistingDestinationFile)
             {
                 string destinationFileBackup = destinationFile;
