@@ -111,8 +111,8 @@ namespace MKVmergeBatcher.src.obj
 
         public class Options
         {
-            public string moveOkFilesTo { get; set; } = "";
-            public string moveWarningFilesTo { get; set; } = "";
+            public string moveOkFilesTo { get; set; } = "%originalFolder%";
+            public string moveWarningFilesTo { get; set; } = "%originalFolder%";
             public Boolean replaceExistingDestinationFile { get; set; }
             public Boolean deleteIncompleteFile { get; set; }
 
@@ -131,6 +131,14 @@ namespace MKVmergeBatcher.src.obj
             userData.modelCreator.typeList.Add(new UserData.ModelCreator.Type { type = "Audio" });
             userData.modelCreator.typeList.Add(new UserData.ModelCreator.Type { type = "Subtitle" });
             userData.batcher.videoFileList.Clear();
+            if (string.IsNullOrEmpty(userData.options.moveOkFilesTo))
+            {
+                userData.options.moveOkFilesTo = "%originalFolder%";
+            }
+            if (string.IsNullOrEmpty(userData.options.moveWarningFilesTo))
+            {
+                userData.options.moveWarningFilesTo = "%originalFolder%";
+            }
             return userData;
         }
 

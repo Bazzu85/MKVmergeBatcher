@@ -149,7 +149,7 @@ namespace MKVmergeBatcher
         private void SetLabels()
         {
             var version = System.Reflection.Assembly.GetExecutingAssembly().GetName().Version;
-this.Text = "MKVmerge Batcher " + version;
+            this.Text = "MKVmerge Batcher " + version;
         }
 
         private void SetLastModelUsed()
@@ -476,7 +476,7 @@ this.Text = "MKVmerge Batcher " + version;
 
                 foreach (string videoFile in videoFileList)
                 {
-                    foreach(UserData.QueueManagement.Queue queueItem in userData.queueManagement.queueList)
+                    foreach (UserData.QueueManagement.Queue queueItem in userData.queueManagement.queueList)
                     {
                         //Console.WriteLine("errore: " + error);
 
@@ -580,10 +580,10 @@ this.Text = "MKVmerge Batcher " + version;
             {
                 //userData.modelManagement.modelList[MMListBox.SelectedIndex].modelName = MMModelNameTextBox.Text;
                 //userData.modelManagement.modelList[MMListBox.SelectedIndex].modelContent = MMModelContentTextBox.Text;
-                UserData.ModelManagement.Model model = new UserData.ModelManagement.Model() 
+                UserData.ModelManagement.Model model = new UserData.ModelManagement.Model()
                 {
-                modelName = MMModelNameTextBox.Text,
-                modelContent = MMModelContentTextBox.Text
+                    modelName = MMModelNameTextBox.Text,
+                    modelContent = MMModelContentTextBox.Text
                 };
                 userData.modelManagement.modelList[MMListBox.SelectedIndex] = model;
             }
@@ -649,7 +649,7 @@ this.Text = "MKVmerge Batcher " + version;
             if (userData.modelManagement.modelList.Count() > 0)
             {
                 string previouslySelectedModel = userData.modelManagement.modelList[MMListBox.SelectedIndex].modelName;
-                
+
                 List<UserData.ModelManagement.Model> sortedList = userData.modelManagement.modelList.OrderBy(o => o.modelName).ToList();
                 userData.modelManagement.modelList.Clear();
                 int addingIndex = 0;
@@ -718,7 +718,7 @@ this.Text = "MKVmerge Batcher " + version;
                         saveFileDialog.FileName += ".bat";
                     }
                     BatcherManagement batcherManagement = new BatcherManagement(userData);
-                    
+
                     //empty videoFileList passing the executeFromQueue flag to true
                     List<string> videoFileList = new List<string>();
                     batcherManagement.CreateBat(videoFileList, saveFileDialog.FileName, 0, true);
@@ -796,7 +796,12 @@ this.Text = "MKVmerge Batcher " + version;
                 }
             }
         }
-    }
+
         #endregion
 
+        #region Options Methods
+
+        #endregion
+    }
 }
+   

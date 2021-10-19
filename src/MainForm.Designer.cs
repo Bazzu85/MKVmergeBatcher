@@ -1086,8 +1086,9 @@
             this.OMoveWarningFilesTextBox.Name = "OMoveWarningFilesTextBox";
             this.OMoveWarningFilesTextBox.Size = new System.Drawing.Size(784, 20);
             this.OMoveWarningFilesTextBox.TabIndex = 5;
-            this.OToolTip.SetToolTip(this.OMoveWarningFilesTextBox, "Specify the directory where the ok files are moved. Can be specified only a folde" +
-        "r name like WarningFiles");
+            this.OToolTip.SetToolTip(this.OMoveWarningFilesTextBox, "Specify the directory where the ok files are moved. Using the keyword %originalFo" +
+        "lder% means the original file folder and can be appended something. Example %ori" +
+        "ginalFolder%\\1wrn");
             // 
             // label1
             // 
@@ -1108,8 +1109,9 @@
             this.OMoveOkFilesTextBox.Name = "OMoveOkFilesTextBox";
             this.OMoveOkFilesTextBox.Size = new System.Drawing.Size(784, 20);
             this.OMoveOkFilesTextBox.TabIndex = 3;
-            this.OToolTip.SetToolTip(this.OMoveOkFilesTextBox, "Specify the directory where the ok files are moved. Can be specified only a folde" +
-        "r name like OkFiles");
+            this.OToolTip.SetToolTip(this.OMoveOkFilesTextBox, "Specify the directory where the ok files are moved. Using the keyword %originalFo" +
+        "lder% means the original file folder and can be appended something. Example %ori" +
+        "ginalFolder%\\1ok");
             // 
             // OMoveOkFilesLabel
             // 

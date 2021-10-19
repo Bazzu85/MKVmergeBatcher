@@ -364,12 +364,20 @@ namespace MKVmergeBatcher.src
 
         private void MoveFile(string fileName, string fileNewFolder)
         {
-            //Console.WriteLine(Path.GetDirectoryName(fileName));
-            
-            string destinationPath = Path.GetDirectoryName(fileName) + "\\" + fileNewFolder;
+            //Change the wildcard with the file directory (if in destination folder string)
+            string destinationPath = fileNewFolder;
+            destinationPath = destinationPath.Replace("%originalFolder%", Path.GetDirectoryName(fileName));
+
+            //if the destination folder is not writable, no move to do
+            if (!IsDirectoryWritable(destinationPath, false))
+            {
+                return;
+            }
+
+            //Console.WriteLine("destinationPath: " + destinationPath);
+
             string destinationFile = destinationPath + "\\" + Path.GetFileName(fileName);
-            
-            
+
             if (!Directory.Exists(destinationPath))
             {
                 Directory.CreateDirectory(destinationPath);
@@ -396,6 +404,30 @@ namespace MKVmergeBatcher.src
                 if (!File.Exists(destinationFile)){
                     File.Move(fileName, destinationFile);
                 }
+            }
+        }
+
+        public bool IsDirectoryWritable(string dirPath, bool throwIfFails = false)
+        {
+            try
+            {
+                using (FileStream fs = File.Create(
+                    Path.Combine(
+                        dirPath,
+                        Path.GetRandomFileName()
+                    ),
+                    1,
+                    FileOptions.DeleteOnClose)
+                )
+                { }
+                return true;
+            }
+            catch
+            {
+                if (throwIfFails)
+                    throw;
+                else
+                    return false;
             }
         }
 

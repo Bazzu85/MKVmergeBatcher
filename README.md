@@ -85,6 +85,20 @@ Now MKVBatcher has the ability to store multiple video (with it's own model choo
 After finishing to build the queue you can choose to create a unique big bat file or execute al conversion with one click.
 ATTENCTION: modifying the models (adding, reordering, deleting) cause the queue to automatically been emptied
 
+## 5. Options Tab
+
+### 5.1 Move ok or warning execution to a destination folder of your choice. 
+If specified a directory, if the user can write into it, the elaborated file will be moved here.
+The wildcard %originalFolder% can be used to move files into subfolders. Ex. %originalFolder%\1ok
+
+### 5.2 Replace existing destination files?
+When moving a elaborated file to a folder specified in 5.1, there can be a same name file already there. 
+Activating the flag will overwrite this file. 
+Not activating the flag, the file already in folder will be renamed.
+
+### 5.3 Delete imcomplete files?
+If the execution is stopped before creating the final file, activating this flag will automatically delete the incomplete file
+
 # Known BUG and hot to fix it
 
 ## The GUI start but is not showing?
