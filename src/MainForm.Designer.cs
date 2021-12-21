@@ -29,11 +29,11 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle16 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle18 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle19 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle17 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle20 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabBatcher = new System.Windows.Forms.TabPage();
@@ -69,8 +69,9 @@
             this.MMListBox = new System.Windows.Forms.ListBox();
             this.tabModelCreator = new System.Windows.Forms.TabPage();
             this.additionalFlagsGroupBox = new System.Windows.Forms.GroupBox();
-            this.MCAddChaptersCheckBox = new System.Windows.Forms.CheckBox();
+            this.MCNoGlobalTagsCheckBox = new System.Windows.Forms.CheckBox();
             this.additionalFlagsBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.MCAddChaptersCheckBox = new System.Windows.Forms.CheckBox();
             this.MCAddAttachmentsCheckBox = new System.Windows.Forms.CheckBox();
             this.MCDisableCompressionCheckBox = new System.Windows.Forms.CheckBox();
             this.MCCleanTitleCheckBox = new System.Windows.Forms.CheckBox();
@@ -113,11 +114,15 @@
             this.modelIndexDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.queueBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.tabOptions = new System.Windows.Forms.TabPage();
-            this.ODeleteIncompleteFileCheckBox = new System.Windows.Forms.CheckBox();
+            this.OExcludeFileNameContainingAddButton = new System.Windows.Forms.Button();
+            this.OExcludeFileNameContainingListBox = new System.Windows.Forms.ListBox();
             this.optionsBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.OExcludeFileNameContainingTextBox = new System.Windows.Forms.TextBox();
+            this.OExcludeFileNameContainingLabel = new System.Windows.Forms.Label();
+            this.ODeleteIncompleteFileCheckBox = new System.Windows.Forms.CheckBox();
             this.OReplaceExistingDestinationFileCheckBox = new System.Windows.Forms.CheckBox();
             this.OMoveWarningFilesTextBox = new System.Windows.Forms.TextBox();
-            this.label1 = new System.Windows.Forms.Label();
+            this.OMoveWarningFilesLabel = new System.Windows.Forms.Label();
             this.OMoveOkFilesTextBox = new System.Windows.Forms.TextBox();
             this.OMoveOkFilesLabel = new System.Windows.Forms.Label();
             this.tabHelp = new System.Windows.Forms.TabPage();
@@ -130,6 +135,8 @@
             this.modelManagementBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.MCToolTip = new System.Windows.Forms.ToolTip(this.components);
             this.OToolTip = new System.Windows.Forms.ToolTip(this.components);
+            this.excludeFileNameContainingBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.OExcludeFileNameContainingRemoveButton = new System.Windows.Forms.Button();
             this.tabControl1.SuspendLayout();
             this.tabBatcher.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.modelBindingSource)).BeginInit();
@@ -153,6 +160,7 @@
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.modelCreatorBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.modelManagementBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.excludeFileNameContainingBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // tabControl1
@@ -529,6 +537,7 @@
             // 
             this.additionalFlagsGroupBox.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.additionalFlagsGroupBox.Controls.Add(this.MCNoGlobalTagsCheckBox);
             this.additionalFlagsGroupBox.Controls.Add(this.MCAddChaptersCheckBox);
             this.additionalFlagsGroupBox.Controls.Add(this.MCAddAttachmentsCheckBox);
             this.additionalFlagsGroupBox.Controls.Add(this.MCDisableCompressionCheckBox);
@@ -540,6 +549,21 @@
             this.additionalFlagsGroupBox.TabIndex = 28;
             this.additionalFlagsGroupBox.TabStop = false;
             this.additionalFlagsGroupBox.Text = "Additional Flags";
+            // 
+            // MCNoGlobalTagsCheckBox
+            // 
+            this.MCNoGlobalTagsCheckBox.AutoSize = true;
+            this.MCNoGlobalTagsCheckBox.DataBindings.Add(new System.Windows.Forms.Binding("Checked", this.additionalFlagsBindingSource, "noGlobalTags", true));
+            this.MCNoGlobalTagsCheckBox.Location = new System.Drawing.Point(8, 42);
+            this.MCNoGlobalTagsCheckBox.Name = "MCNoGlobalTagsCheckBox";
+            this.MCNoGlobalTagsCheckBox.Size = new System.Drawing.Size(98, 17);
+            this.MCNoGlobalTagsCheckBox.TabIndex = 5;
+            this.MCNoGlobalTagsCheckBox.Text = "--no-global-tags";
+            this.MCNoGlobalTagsCheckBox.UseVisualStyleBackColor = true;
+            // 
+            // additionalFlagsBindingSource
+            // 
+            this.additionalFlagsBindingSource.DataSource = typeof(MKVmergeBatcher.src.obj.UserData.ModelCreator.AdditionalFlags);
             // 
             // MCAddChaptersCheckBox
             // 
@@ -553,10 +577,6 @@
             this.MCToolTip.SetToolTip(this.MCAddChaptersCheckBox, "Generate in the model a ||chapters|| tag that in the result execution add (if exi" +
         "sts) the fileName_chapters.xml from the same folder as file name");
             this.MCAddChaptersCheckBox.UseVisualStyleBackColor = true;
-            // 
-            // additionalFlagsBindingSource
-            // 
-            this.additionalFlagsBindingSource.DataSource = typeof(MKVmergeBatcher.src.obj.UserData.ModelCreator.AdditionalFlags);
             // 
             // MCAddAttachmentsCheckBox
             // 
@@ -700,14 +720,14 @@
             this.MCDataGridView.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
             this.MCDataGridView.BackgroundColor = System.Drawing.SystemColors.Window;
             this.MCDataGridView.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.MCDataGridView.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle16.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle16.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle16.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle16.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle16.SelectionBackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle16.SelectionForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle16.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.MCDataGridView.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle16;
             this.MCDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.MCDataGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.MCDataGridViewType,
@@ -719,26 +739,26 @@
             this.MCSuffix,
             this.MCDefaultFlag,
             this.MCForcedFlag});
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.MCDataGridView.DefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle18.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle18.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle18.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle18.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle18.SelectionBackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle18.SelectionForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle18.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.MCDataGridView.DefaultCellStyle = dataGridViewCellStyle18;
             this.MCDataGridView.EditMode = System.Windows.Forms.DataGridViewEditMode.EditOnEnter;
             this.MCDataGridView.Location = new System.Drawing.Point(8, 19);
             this.MCDataGridView.MultiSelect = false;
             this.MCDataGridView.Name = "MCDataGridView";
-            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle4.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.MCDataGridView.RowHeadersDefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle19.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle19.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle19.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle19.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle19.SelectionBackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle19.SelectionForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle19.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.MCDataGridView.RowHeadersDefaultCellStyle = dataGridViewCellStyle19;
             this.MCDataGridView.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.MCDataGridView.Size = new System.Drawing.Size(738, 338);
             this.MCDataGridView.TabIndex = 25;
@@ -763,8 +783,8 @@
             // MCPositionInOriginalFile
             // 
             this.MCPositionInOriginalFile.DataPropertyName = "position";
-            dataGridViewCellStyle2.NullValue = null;
-            this.MCPositionInOriginalFile.DefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle17.NullValue = null;
+            this.MCPositionInOriginalFile.DefaultCellStyle = dataGridViewCellStyle17;
             this.MCPositionInOriginalFile.HeaderText = "Position";
             this.MCPositionInOriginalFile.Name = "MCPositionInOriginalFile";
             this.MCPositionInOriginalFile.ToolTipText = "Position of track in files. Format F:P. F is file number starting from 0. File 0 " +
@@ -993,8 +1013,8 @@
             this.QDataGridView.Location = new System.Drawing.Point(0, 0);
             this.QDataGridView.Name = "QDataGridView";
             this.QDataGridView.ReadOnly = true;
-            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.QDataGridView.RowsDefaultCellStyle = dataGridViewCellStyle5;
+            dataGridViewCellStyle20.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.QDataGridView.RowsDefaultCellStyle = dataGridViewCellStyle20;
             this.QDataGridView.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.QDataGridView.Size = new System.Drawing.Size(771, 481);
             this.QDataGridView.TabIndex = 0;
@@ -1037,10 +1057,15 @@
             // 
             // tabOptions
             // 
+            this.tabOptions.Controls.Add(this.OExcludeFileNameContainingRemoveButton);
+            this.tabOptions.Controls.Add(this.OExcludeFileNameContainingAddButton);
+            this.tabOptions.Controls.Add(this.OExcludeFileNameContainingListBox);
+            this.tabOptions.Controls.Add(this.OExcludeFileNameContainingTextBox);
+            this.tabOptions.Controls.Add(this.OExcludeFileNameContainingLabel);
             this.tabOptions.Controls.Add(this.ODeleteIncompleteFileCheckBox);
             this.tabOptions.Controls.Add(this.OReplaceExistingDestinationFileCheckBox);
             this.tabOptions.Controls.Add(this.OMoveWarningFilesTextBox);
-            this.tabOptions.Controls.Add(this.label1);
+            this.tabOptions.Controls.Add(this.OMoveWarningFilesLabel);
             this.tabOptions.Controls.Add(this.OMoveOkFilesTextBox);
             this.tabOptions.Controls.Add(this.OMoveOkFilesLabel);
             this.tabOptions.Location = new System.Drawing.Point(4, 22);
@@ -1050,6 +1075,50 @@
             this.tabOptions.TabIndex = 5;
             this.tabOptions.Text = "Options";
             this.tabOptions.UseVisualStyleBackColor = true;
+            // 
+            // OExcludeFileNameContainingAddButton
+            // 
+            this.OExcludeFileNameContainingAddButton.Location = new System.Drawing.Point(300, 82);
+            this.OExcludeFileNameContainingAddButton.Name = "OExcludeFileNameContainingAddButton";
+            this.OExcludeFileNameContainingAddButton.Size = new System.Drawing.Size(75, 20);
+            this.OExcludeFileNameContainingAddButton.TabIndex = 11;
+            this.OExcludeFileNameContainingAddButton.Text = "Add ->";
+            this.OExcludeFileNameContainingAddButton.UseVisualStyleBackColor = true;
+            this.OExcludeFileNameContainingAddButton.Click += new System.EventHandler(this.OExcludeFileNameContainingAddButton_Click);
+            // 
+            // OExcludeFileNameContainingListBox
+            // 
+            this.OExcludeFileNameContainingListBox.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.OExcludeFileNameContainingListBox.DataSource = this.excludeFileNameContainingBindingSource;
+            this.OExcludeFileNameContainingListBox.DisplayMember = "fileNameContaning";
+            this.OExcludeFileNameContainingListBox.FormattingEnabled = true;
+            this.OExcludeFileNameContainingListBox.Location = new System.Drawing.Point(381, 82);
+            this.OExcludeFileNameContainingListBox.Name = "OExcludeFileNameContainingListBox";
+            this.OExcludeFileNameContainingListBox.Size = new System.Drawing.Size(527, 95);
+            this.OExcludeFileNameContainingListBox.TabIndex = 10;
+            // 
+            // optionsBindingSource
+            // 
+            this.optionsBindingSource.DataSource = typeof(MKVmergeBatcher.src.obj.UserData.Options);
+            // 
+            // OExcludeFileNameContainingTextBox
+            // 
+            this.OExcludeFileNameContainingTextBox.Location = new System.Drawing.Point(162, 82);
+            this.OExcludeFileNameContainingTextBox.Name = "OExcludeFileNameContainingTextBox";
+            this.OExcludeFileNameContainingTextBox.Size = new System.Drawing.Size(132, 20);
+            this.OExcludeFileNameContainingTextBox.TabIndex = 9;
+            this.OToolTip.SetToolTip(this.OExcludeFileNameContainingTextBox, "Specify the File Name to exclude from extraction. Separate by ,");
+            // 
+            // OExcludeFileNameContainingLabel
+            // 
+            this.OExcludeFileNameContainingLabel.AutoSize = true;
+            this.OExcludeFileNameContainingLabel.Location = new System.Drawing.Point(6, 85);
+            this.OExcludeFileNameContainingLabel.Name = "OExcludeFileNameContainingLabel";
+            this.OExcludeFileNameContainingLabel.Size = new System.Drawing.Size(150, 13);
+            this.OExcludeFileNameContainingLabel.TabIndex = 8;
+            this.OExcludeFileNameContainingLabel.Text = "Exclude File Name containing:";
+            this.OExcludeFileNameContainingLabel.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // ODeleteIncompleteFileCheckBox
             // 
@@ -1061,10 +1130,6 @@
             this.ODeleteIncompleteFileCheckBox.TabIndex = 7;
             this.ODeleteIncompleteFileCheckBox.Text = "Delete incomplete files?";
             this.ODeleteIncompleteFileCheckBox.UseVisualStyleBackColor = true;
-            // 
-            // optionsBindingSource
-            // 
-            this.optionsBindingSource.DataSource = typeof(MKVmergeBatcher.src.obj.UserData.Options);
             // 
             // OReplaceExistingDestinationFileCheckBox
             // 
@@ -1090,15 +1155,15 @@
         "lder% means the original file folder and can be appended something. Example %ori" +
         "ginalFolder%\\1wrn");
             // 
-            // label1
+            // OMoveWarningFilesLabel
             // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(3, 32);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(116, 13);
-            this.label1.TabIndex = 4;
-            this.label1.Text = "Move Warning Files to:";
-            this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.OMoveWarningFilesLabel.AutoSize = true;
+            this.OMoveWarningFilesLabel.Location = new System.Drawing.Point(3, 32);
+            this.OMoveWarningFilesLabel.Name = "OMoveWarningFilesLabel";
+            this.OMoveWarningFilesLabel.Size = new System.Drawing.Size(116, 13);
+            this.OMoveWarningFilesLabel.TabIndex = 4;
+            this.OMoveWarningFilesLabel.Text = "Move Warning Files to:";
+            this.OMoveWarningFilesLabel.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // OMoveOkFilesTextBox
             // 
@@ -1184,6 +1249,20 @@
             // 
             this.modelManagementBindingSource.DataSource = typeof(MKVmergeBatcher.src.obj.UserData.ModelManagement);
             // 
+            // excludeFileNameContainingBindingSource
+            // 
+            this.excludeFileNameContainingBindingSource.DataSource = typeof(MKVmergeBatcher.src.obj.UserData.Options.ExcludeFileNameContaining);
+            // 
+            // OExcludeFileNameContainingRemoveButton
+            // 
+            this.OExcludeFileNameContainingRemoveButton.Location = new System.Drawing.Point(300, 108);
+            this.OExcludeFileNameContainingRemoveButton.Name = "OExcludeFileNameContainingRemoveButton";
+            this.OExcludeFileNameContainingRemoveButton.Size = new System.Drawing.Size(75, 20);
+            this.OExcludeFileNameContainingRemoveButton.TabIndex = 12;
+            this.OExcludeFileNameContainingRemoveButton.Text = "<- Remove";
+            this.OExcludeFileNameContainingRemoveButton.UseVisualStyleBackColor = true;
+            this.OExcludeFileNameContainingRemoveButton.Click += new System.EventHandler(this.OExcludeFileNameContainingRemoveButton_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -1228,6 +1307,7 @@
             this.menuStrip1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.modelCreatorBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.modelManagementBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.excludeFileNameContainingBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -1325,11 +1405,18 @@
         private System.Windows.Forms.TextBox OMoveOkFilesTextBox;
         private System.Windows.Forms.Label OMoveOkFilesLabel;
         private System.Windows.Forms.TextBox OMoveWarningFilesTextBox;
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label OMoveWarningFilesLabel;
         private System.Windows.Forms.BindingSource optionsBindingSource;
         private System.Windows.Forms.ToolTip OToolTip;
         private System.Windows.Forms.CheckBox OReplaceExistingDestinationFileCheckBox;
         private System.Windows.Forms.CheckBox ODeleteIncompleteFileCheckBox;
+        private System.Windows.Forms.CheckBox MCNoGlobalTagsCheckBox;
+        private System.Windows.Forms.Label OExcludeFileNameContainingLabel;
+        private System.Windows.Forms.TextBox OExcludeFileNameContainingTextBox;
+        private System.Windows.Forms.Button OExcludeFileNameContainingAddButton;
+        private System.Windows.Forms.ListBox OExcludeFileNameContainingListBox;
+        private System.Windows.Forms.BindingSource excludeFileNameContainingBindingSource;
+        private System.Windows.Forms.Button OExcludeFileNameContainingRemoveButton;
     }
 }
 

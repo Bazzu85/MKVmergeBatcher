@@ -123,6 +123,7 @@ namespace MKVmergeBatcher
             this.modelBindingSource.DataSource = userData.modelManagement.modelList;
             this.queueBindingSource.DataSource = userData.queueManagement.queueList;
             this.optionsBindingSource.DataSource = userData.options;
+            this.excludeFileNameContainingBindingSource.DataSource = userData.options.excludeFileNameContainingList;
         }
         private void ClearQueue()
         {
@@ -376,7 +377,20 @@ namespace MKVmergeBatcher
                 List<string> allFilesList = new List<string>();
                 foreach (string item in allFiles)
                 {
+                    Boolean videoExtensionsOk = false;
                     if (userData.batcher.videoExtensions.Contains(Path.GetExtension(item).Remove(0, 1)))
+                    {
+                        videoExtensionsOk = true;
+                    }
+                    Boolean fileNameOk = true;
+                    foreach (UserData.Options.ExcludeFileNameContaining excludeFileNameContaining in userData.options.excludeFileNameContainingList)
+                    {
+                        if (item.Contains(excludeFileNameContaining.fileNameContaning))
+                        {
+                            fileNameOk = false;
+                        }
+                    }
+                    if (videoExtensionsOk && fileNameOk)
                     {
                         userData.batcher.videoFileList.Add(item);
                     }
@@ -800,8 +814,42 @@ namespace MKVmergeBatcher
         #endregion
 
         #region Options Methods
+        private void OExcludeFileNameContainingAddButton_Click(object sender, EventArgs e)
+        {
+            if (String.IsNullOrEmpty(OExcludeFileNameContainingTextBox.Text))
+            {
+                MessageBox.Show("No File Name Provided", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            } else
+            {
+                Boolean error = false;
+
+                foreach (UserData.Options.ExcludeFileNameContaining excludeFileNameContaining in userData.options.excludeFileNameContainingList)
+                {
+                    if (excludeFileNameContaining.fileNameContaning == OExcludeFileNameContainingTextBox.Text)
+                    {
+                        MessageBox.Show("String already added", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        error = true;
+                    }
+                }
+                if (!error)
+                {
+                    UserData.Options.ExcludeFileNameContaining excludeFileNameContaining = new UserData.Options.ExcludeFileNameContaining();
+                    excludeFileNameContaining.fileNameContaning = OExcludeFileNameContainingTextBox.Text;
+                    userData.options.excludeFileNameContainingList.Add(excludeFileNameContaining);
+                }
+            }
+        }
+        private void OExcludeFileNameContainingRemoveButton_Click(object sender, EventArgs e)
+        {
+            if (OExcludeFileNameContainingListBox.SelectedIndex >= 0)
+            {
+                userData.options.excludeFileNameContainingList.RemoveAt(OExcludeFileNameContainingListBox.SelectedIndex);
+            }
+        }
 
         #endregion
+
+
     }
 }
    

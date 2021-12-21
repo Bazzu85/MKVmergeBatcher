@@ -40,7 +40,7 @@
     <MapFileExtensions>true</MapFileExtensions>
     <PublisherName>Bazzu</PublisherName>
     <ApplicationRevision>4</ApplicationRevision>
-    <ApplicationVersion>1.1.92.20297</ApplicationVersion>
+    <ApplicationVersion>1.1.93.20314</ApplicationVersion>
     <UseApplicationTrust>false</UseApplicationTrust>
     <CreateDesktopShortcut>true</CreateDesktopShortcut>
     <PublishWizardCompleted>true</PublishWizardCompleted>
@@ -195,6 +195,7 @@
     <None Include="ILMerge.props" />
     <None Include="packages.config" />
     <None Include="Properties\app.manifest" />
+    <None Include="Properties\DataSources\MKVmergeBatcher.src.obj.UserData+Options+ExcludeFileNameContaining.datasource" />
     <None Include="Properties\DataSources\MKVmergeBatcher.src.obj.UserData+Options.datasource" />
     <None Include="Properties\DataSources\MKVmergeBatcher.src.obj.UserData+QueueManagement+Queue.datasource" />
     <None Include="Properties\Settings.settings">

@@ -48,6 +48,8 @@ namespace MKVmergeBatcher.src.obj
                 public Boolean disableCompression { get; set; }
                 public Boolean addAttachments { get; set; }
                 public Boolean addChapters { get; set; }
+                public Boolean noGlobalTags { get; set; }
+                
                 public Boolean autoClearOkJobs { get; set; }
                 public Boolean autoClearWarningJobs { get; set; }
                 public Boolean autoClearErrorJobs { get; set; }
@@ -116,6 +118,13 @@ namespace MKVmergeBatcher.src.obj
             public Boolean replaceExistingDestinationFile { get; set; }
             public Boolean deleteIncompleteFile { get; set; }
 
+            public BindingList<ExcludeFileNameContaining> excludeFileNameContainingList = new BindingList<ExcludeFileNameContaining>();
+
+            [NotifyPropertyChanged]
+            public class ExcludeFileNameContaining
+            {
+                public string fileNameContaning { get; set; } = "";
+            }
         }
 
         /// <summary>

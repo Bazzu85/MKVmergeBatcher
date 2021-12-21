@@ -215,6 +215,13 @@ namespace MKVmergeBatcher.src
                 preview += "--no-attachments ";
             }
             #endregion
+            #region--no-global-tags
+            //Adding noGlobalTags Flag
+            if (userData.modelCreator.additionalFlags.noGlobalTags)
+            {
+                preview += "--no-global-tags ";
+            }
+            #endregion
 
             #region track0 Data
             preview += GenerateTrackString(0);
