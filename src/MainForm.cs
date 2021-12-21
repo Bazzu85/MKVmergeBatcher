@@ -385,7 +385,7 @@ namespace MKVmergeBatcher
                     Boolean fileNameOk = true;
                     foreach (UserData.Options.ExcludeFileNameContaining excludeFileNameContaining in userData.options.excludeFileNameContainingList)
                     {
-                        if (item.Contains(excludeFileNameContaining.fileNameContaning))
+                        if (item.ToUpper().Contains(excludeFileNameContaining.fileNameContaning.ToUpper()))
                         {
                             fileNameOk = false;
                         }
@@ -825,7 +825,7 @@ namespace MKVmergeBatcher
 
                 foreach (UserData.Options.ExcludeFileNameContaining excludeFileNameContaining in userData.options.excludeFileNameContainingList)
                 {
-                    if (excludeFileNameContaining.fileNameContaning == OExcludeFileNameContainingTextBox.Text)
+                    if (excludeFileNameContaining.fileNameContaning.ToUpper() == OExcludeFileNameContainingTextBox.Text.ToUpper())
                     {
                         MessageBox.Show("String already added", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                         error = true;

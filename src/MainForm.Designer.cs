@@ -29,11 +29,11 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle16 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle18 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle19 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle17 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle20 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabBatcher = new System.Windows.Forms.TabPage();
@@ -114,12 +114,14 @@
             this.modelIndexDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.queueBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.tabOptions = new System.Windows.Forms.TabPage();
+            this.OExcludeFileNameContainingRemoveButton = new System.Windows.Forms.Button();
             this.OExcludeFileNameContainingAddButton = new System.Windows.Forms.Button();
             this.OExcludeFileNameContainingListBox = new System.Windows.Forms.ListBox();
-            this.optionsBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.excludeFileNameContainingBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.OExcludeFileNameContainingTextBox = new System.Windows.Forms.TextBox();
             this.OExcludeFileNameContainingLabel = new System.Windows.Forms.Label();
             this.ODeleteIncompleteFileCheckBox = new System.Windows.Forms.CheckBox();
+            this.optionsBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.OReplaceExistingDestinationFileCheckBox = new System.Windows.Forms.CheckBox();
             this.OMoveWarningFilesTextBox = new System.Windows.Forms.TextBox();
             this.OMoveWarningFilesLabel = new System.Windows.Forms.Label();
@@ -135,8 +137,6 @@
             this.modelManagementBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.MCToolTip = new System.Windows.Forms.ToolTip(this.components);
             this.OToolTip = new System.Windows.Forms.ToolTip(this.components);
-            this.excludeFileNameContainingBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.OExcludeFileNameContainingRemoveButton = new System.Windows.Forms.Button();
             this.tabControl1.SuspendLayout();
             this.tabBatcher.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.modelBindingSource)).BeginInit();
@@ -154,13 +154,13 @@
             ((System.ComponentModel.ISupportInitialize)(this.QDataGridView)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.queueBindingSource)).BeginInit();
             this.tabOptions.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.excludeFileNameContainingBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.optionsBindingSource)).BeginInit();
             this.tabHelp.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.tracksBindingSource)).BeginInit();
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.modelCreatorBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.modelManagementBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.excludeFileNameContainingBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // tabControl1
@@ -720,14 +720,14 @@
             this.MCDataGridView.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
             this.MCDataGridView.BackgroundColor = System.Drawing.SystemColors.Window;
             this.MCDataGridView.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            dataGridViewCellStyle16.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle16.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle16.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle16.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle16.SelectionBackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle16.SelectionForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle16.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.MCDataGridView.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle16;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.MCDataGridView.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.MCDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.MCDataGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.MCDataGridViewType,
@@ -739,26 +739,26 @@
             this.MCSuffix,
             this.MCDefaultFlag,
             this.MCForcedFlag});
-            dataGridViewCellStyle18.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle18.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle18.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle18.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle18.SelectionBackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle18.SelectionForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle18.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.MCDataGridView.DefaultCellStyle = dataGridViewCellStyle18;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.MCDataGridView.DefaultCellStyle = dataGridViewCellStyle3;
             this.MCDataGridView.EditMode = System.Windows.Forms.DataGridViewEditMode.EditOnEnter;
             this.MCDataGridView.Location = new System.Drawing.Point(8, 19);
             this.MCDataGridView.MultiSelect = false;
             this.MCDataGridView.Name = "MCDataGridView";
-            dataGridViewCellStyle19.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle19.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle19.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle19.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle19.SelectionBackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle19.SelectionForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle19.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.MCDataGridView.RowHeadersDefaultCellStyle = dataGridViewCellStyle19;
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.MCDataGridView.RowHeadersDefaultCellStyle = dataGridViewCellStyle4;
             this.MCDataGridView.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.MCDataGridView.Size = new System.Drawing.Size(738, 338);
             this.MCDataGridView.TabIndex = 25;
@@ -783,8 +783,8 @@
             // MCPositionInOriginalFile
             // 
             this.MCPositionInOriginalFile.DataPropertyName = "position";
-            dataGridViewCellStyle17.NullValue = null;
-            this.MCPositionInOriginalFile.DefaultCellStyle = dataGridViewCellStyle17;
+            dataGridViewCellStyle2.NullValue = null;
+            this.MCPositionInOriginalFile.DefaultCellStyle = dataGridViewCellStyle2;
             this.MCPositionInOriginalFile.HeaderText = "Position";
             this.MCPositionInOriginalFile.Name = "MCPositionInOriginalFile";
             this.MCPositionInOriginalFile.ToolTipText = "Position of track in files. Format F:P. F is file number starting from 0. File 0 " +
@@ -1013,8 +1013,8 @@
             this.QDataGridView.Location = new System.Drawing.Point(0, 0);
             this.QDataGridView.Name = "QDataGridView";
             this.QDataGridView.ReadOnly = true;
-            dataGridViewCellStyle20.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.QDataGridView.RowsDefaultCellStyle = dataGridViewCellStyle20;
+            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.QDataGridView.RowsDefaultCellStyle = dataGridViewCellStyle5;
             this.QDataGridView.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.QDataGridView.Size = new System.Drawing.Size(771, 481);
             this.QDataGridView.TabIndex = 0;
@@ -1076,6 +1076,16 @@
             this.tabOptions.Text = "Options";
             this.tabOptions.UseVisualStyleBackColor = true;
             // 
+            // OExcludeFileNameContainingRemoveButton
+            // 
+            this.OExcludeFileNameContainingRemoveButton.Location = new System.Drawing.Point(300, 108);
+            this.OExcludeFileNameContainingRemoveButton.Name = "OExcludeFileNameContainingRemoveButton";
+            this.OExcludeFileNameContainingRemoveButton.Size = new System.Drawing.Size(75, 20);
+            this.OExcludeFileNameContainingRemoveButton.TabIndex = 12;
+            this.OExcludeFileNameContainingRemoveButton.Text = "<- Remove";
+            this.OExcludeFileNameContainingRemoveButton.UseVisualStyleBackColor = true;
+            this.OExcludeFileNameContainingRemoveButton.Click += new System.EventHandler(this.OExcludeFileNameContainingRemoveButton_Click);
+            // 
             // OExcludeFileNameContainingAddButton
             // 
             this.OExcludeFileNameContainingAddButton.Location = new System.Drawing.Point(300, 82);
@@ -1098,9 +1108,9 @@
             this.OExcludeFileNameContainingListBox.Size = new System.Drawing.Size(527, 95);
             this.OExcludeFileNameContainingListBox.TabIndex = 10;
             // 
-            // optionsBindingSource
+            // excludeFileNameContainingBindingSource
             // 
-            this.optionsBindingSource.DataSource = typeof(MKVmergeBatcher.src.obj.UserData.Options);
+            this.excludeFileNameContainingBindingSource.DataSource = typeof(MKVmergeBatcher.src.obj.UserData.Options.ExcludeFileNameContaining);
             // 
             // OExcludeFileNameContainingTextBox
             // 
@@ -1130,6 +1140,10 @@
             this.ODeleteIncompleteFileCheckBox.TabIndex = 7;
             this.ODeleteIncompleteFileCheckBox.Text = "Delete incomplete files?";
             this.ODeleteIncompleteFileCheckBox.UseVisualStyleBackColor = true;
+            // 
+            // optionsBindingSource
+            // 
+            this.optionsBindingSource.DataSource = typeof(MKVmergeBatcher.src.obj.UserData.Options);
             // 
             // OReplaceExistingDestinationFileCheckBox
             // 
@@ -1249,20 +1263,6 @@
             // 
             this.modelManagementBindingSource.DataSource = typeof(MKVmergeBatcher.src.obj.UserData.ModelManagement);
             // 
-            // excludeFileNameContainingBindingSource
-            // 
-            this.excludeFileNameContainingBindingSource.DataSource = typeof(MKVmergeBatcher.src.obj.UserData.Options.ExcludeFileNameContaining);
-            // 
-            // OExcludeFileNameContainingRemoveButton
-            // 
-            this.OExcludeFileNameContainingRemoveButton.Location = new System.Drawing.Point(300, 108);
-            this.OExcludeFileNameContainingRemoveButton.Name = "OExcludeFileNameContainingRemoveButton";
-            this.OExcludeFileNameContainingRemoveButton.Size = new System.Drawing.Size(75, 20);
-            this.OExcludeFileNameContainingRemoveButton.TabIndex = 12;
-            this.OExcludeFileNameContainingRemoveButton.Text = "<- Remove";
-            this.OExcludeFileNameContainingRemoveButton.UseVisualStyleBackColor = true;
-            this.OExcludeFileNameContainingRemoveButton.Click += new System.EventHandler(this.OExcludeFileNameContainingRemoveButton_Click);
-            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -1300,6 +1300,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.queueBindingSource)).EndInit();
             this.tabOptions.ResumeLayout(false);
             this.tabOptions.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.excludeFileNameContainingBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.optionsBindingSource)).EndInit();
             this.tabHelp.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.tracksBindingSource)).EndInit();
@@ -1307,7 +1308,6 @@
             this.menuStrip1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.modelCreatorBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.modelManagementBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.excludeFileNameContainingBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 

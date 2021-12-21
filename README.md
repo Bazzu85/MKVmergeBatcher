@@ -80,6 +80,9 @@ NEW IN > 1.1.77 version
   
   Chapter file: C:\Video\test_chapters.xml
 
+NEW IN > 1.1.93 version
+- --no-global-tags: add in the model the --no-global-tags parameter
+
 ### 3.2 Preview and Model Creation
 Clicking on preview the insered data will be validated.
 If all is ok, a new window appear with the Model Generated. Typing a name and clicking Add, the generated model will be saved in Models List
@@ -103,6 +106,11 @@ Not activating the flag, the file already in folder will be renamed.
 
 ### 5.3 Delete imcomplete files?
 If the execution is stopped before creating the final file, activating this flag will automatically delete the incomplete file
+
+### 5.4 Exclude File Name Contanint
+NEW IN > 1.1.93 version
+With this option you can add some patterns to a pool of excluded File Names Patterns. When using the Browse function the file 
+name containing at least one pattern will not be extracted (case insensitive)
 
 # Known BUG and hot to fix it
 
