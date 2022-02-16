@@ -484,6 +484,10 @@ namespace MKVmergeBatcher.src.queue
             }
             if (MainForm.queueData.jobList.Count > 0)
             {
+                if (String.IsNullOrEmpty(MainForm.mainData.lastBatFilePath))
+                {
+                    MainForm.mainData.lastBatFilePath = Directory.GetCurrentDirectory();
+                }
                 SaveFileDialog saveFileDialog = new SaveFileDialog()
                 {
                     AddExtension = true,

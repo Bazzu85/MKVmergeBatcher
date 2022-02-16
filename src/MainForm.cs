@@ -225,6 +225,11 @@ namespace MKVmergeBatcher.src
         private void BrowseVideoFilesButton_Click(object sender, EventArgs e)
         {
             Logger.Trace(System.Reflection.MethodBase.GetCurrentMethod().Name);
+            if (String.IsNullOrEmpty(mainData.videoFilePath))
+            {
+                mainData.videoFilePath = Directory.GetCurrentDirectory();
+            }
+
             OpenFileDialog openFileDialog = new OpenFileDialog()
             {
                 InitialDirectory = mainData.videoFilePath,

@@ -125,6 +125,10 @@ namespace MKVmergeBatcher.src.options
         private void browseMkvMergeLocationButton_Click(object sender, EventArgs e)
         {
             Logger.Trace(System.Reflection.MethodBase.GetCurrentMethod().Name);
+            if (String.IsNullOrEmpty(mkvMergeLocationTextBox.Text))
+            {
+                mkvMergeLocationTextBox.Text = Directory.GetCurrentDirectory();
+            }
             OpenFileDialog openFileDialog = new OpenFileDialog()
             {
                 InitialDirectory = mkvMergeLocationTextBox.Text,
