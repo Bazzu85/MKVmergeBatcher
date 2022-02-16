@@ -1,0 +1,315 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="AddFileNumberNotGreaterThan" xml:space="preserve">
+    <value>Aggiungi un numero file non maggiore di </value>
+  </data>
+  <data name="AddLabel" xml:space="preserve">
+    <value>Aggiungi</value>
+  </data>
+  <data name="AddModel" xml:space="preserve">
+    <value>Aggiungi Modello</value>
+  </data>
+  <data name="AddTrack" xml:space="preserve">
+    <value>Aggiungi traccia</value>
+  </data>
+  <data name="AddTrackFromFileNumber0" xml:space="preserve">
+    <value>Aggiungi almeno una traccia dal file numero 0 (file di input)</value>
+  </data>
+  <data name="AddTrackOrUseCustomModel" xml:space="preserve">
+    <value>Aggiungi almeno una traccia or usa un modello personalizzato</value>
+  </data>
+  <data name="CallTypeNotPassed" xml:space="preserve">
+    <value>Tipologia di chiamata non impostata</value>
+  </data>
+  <data name="CannotStopQueue" xml:space="preserve">
+    <value>Impossibile stoppare la coda</value>
+  </data>
+  <data name="DigitModelName" xml:space="preserve">
+    <value>Digita il nome del modello</value>
+  </data>
+  <data name="DoYouWantStopCurrentJob" xml:space="preserve">
+    <value>Coda in elaborazione. Vuoi stoppare l'attuale job?</value>
+  </data>
+  <data name="EditModel" xml:space="preserve">
+    <value>Modifica Modello</value>
+  </data>
+  <data name="EditTrack" xml:space="preserve">
+    <value>Modifica traccia</value>
+  </data>
+  <data name="EmptyModelList" xml:space="preserve">
+    <value>Nessun modello generato</value>
+  </data>
+  <data name="ErrorLabel" xml:space="preserve">
+    <value>Errore</value>
+  </data>
+  <data name="ExtensionNotRequired" xml:space="preserve">
+    <value>L'estensione può essere specificata solo per file aggiuntivi (Numero file originale &gt; 0)</value>
+  </data>
+  <data name="FileAlreadyInQueue" xml:space="preserve">
+    <value>File già nella coda</value>
+  </data>
+  <data name="InsertLanguageCode" xml:space="preserve">
+    <value>Inserisci il language code</value>
+  </data>
+  <data name="NoFilesToAddToQueue" xml:space="preserve">
+    <value>Nessun file da aggiungere alla coda</value>
+  </data>
+  <data name="NothingToStart" xml:space="preserve">
+    <value>Niente da startare</value>
+  </data>
+  <data name="OriginalFileNumberPositionAlreadyInTrackList" xml:space="preserve">
+    <value>Numero e posizione del file originale già inseriti</value>
+  </data>
+  <data name="SaveCurrentCompiledModel" xml:space="preserve">
+    <value>Vuoi salvare il modello?</value>
+  </data>
+  <data name="SaveCurrentTrack" xml:space="preserve">
+    <value>Vuoi salvare la traccia?</value>
+  </data>
+  <data name="SaveLabel" xml:space="preserve">
+    <value>Salva</value>
+  </data>
+  <data name="SelectTrackType" xml:space="preserve">
+    <value>Seleziona il tipo di traccia</value>
+  </data>
+  <data name="SpecifySuffixOrExtension" xml:space="preserve">
+    <value>Per file aggiuntivi deve essere specificato almeno un suffisso o una estensione</value>
+  </data>
+  <data name="SuffixNotRequired" xml:space="preserve">
+    <value>Il suffisso può essere specificato solo per file aggiuntivi (Numero file originale &gt; 0)</value>
+  </data>
+  <data name="SummaryLabel" xml:space="preserve">
+    <value>Summary</value>
+  </data>
+  <data name="UseDifferentModelName" xml:space="preserve">
+    <value>Usa un nome modello diverso. L'attuale è già presente.</value>
+  </data>
+  <data name="UseOneAttachmentFlag" xml:space="preserve">
+    <value>Usa un solo flag tra --no-attachments e Add Attachments</value>
+  </data>
+  <data name="WarningLabel" xml:space="preserve">
+    <value>Attenzione</value>
+  </data>
+  <data name="ErrorJobLabel" xml:space="preserve">
+    <value>Errore</value>
+  </data>
+  <data name="WarningJobLabel" xml:space="preserve">
+    <value>Warning</value>
+  </data>
+  <data name="OkJobLabel" xml:space="preserve">
+    <value>Ok</value>
+  </data>
+  <data name="AreYouSure" xml:space="preserve">
+    <value>Sei sicuro?</value>
+  </data>
+  <data name="ElaboratedFiles" xml:space="preserve">
+    <value>File elaborati</value>
+  </data>
+  <data name="Summary" xml:space="preserve">
+    <value>Riassunto</value>
+  </data>
+  <data name="WorkingOnJob" xml:space="preserve">
+    <value>Lavorando sul job</value>
+  </data>
+  <data name="Of" xml:space="preserve">
+    <value>di</value>
+  </data>
+  <data name="File" xml:space="preserve">
+    <value>File</value>
+  </data>
+  <data name="PendingJobLabel" xml:space="preserve">
+    <value>In sospeso</value>
+  </data>
+  <data name="RunningJobLabel" xml:space="preserve">
+    <value>In Esecuzione</value>
+  </data>
+  <data name="ProcessStarted" xml:space="preserve">
+    <value>Elaborazione iniziata</value>
+  </data>
+  <data name="ExitCode" xml:space="preserve">
+    <value>Esito</value>
+  </data>
+  <data name="Process" xml:space="preserve">
+    <value>Processo</value>
+  </data>
+  <data name="Moved" xml:space="preserve">
+    <value>Spostato</value>
+  </data>
+  <data name="To" xml:space="preserve">
+    <value>verso</value>
+  </data>
+  <data name="MakingBackup" xml:space="preserve">
+    <value>creando un backup</value>
+  </data>
+  <data name="AreYouSurePleaseMakeBackup" xml:space="preserve">
+    <value>Sei sicuro? I dati attuali verranno sovrascritti. Fai un backup della cartella di configurazione</value>
+  </data>
+  <data name="UserDataImported" xml:space="preserve">
+    <value>UserData importato</value>
+  </data>
+  <data name="InfoLabel" xml:space="preserve">
+    <value>Info</value>
+  </data>
+  <data name="WorkingOnModel" xml:space="preserve">
+    <value>Lavorando sul modello</value>
+  </data>
+  <data name="View" xml:space="preserve">
+    <value>Visualizza</value>
+  </data>
+  <data name="Help" xml:space="preserve">
+    <value>?</value>
+  </data>
+  <data name="ImportV1UserDatajson" xml:space="preserve">
+    <value>Importa dati da v1</value>
+  </data>
+  <data name="Models" xml:space="preserve">
+    <value>Modelli</value>
+  </data>
+  <data name="Options" xml:space="preserve">
+    <value>Opzioni</value>
+  </data>
+  <data name="About" xml:space="preserve">
+    <value>About</value>
+  </data>
+  <data name="Subtitle" xml:space="preserve">
+    <value>Sottotitolo</value>
+  </data>
+  <data name="Video" xml:space="preserve">
+    <value>Video</value>
+  </data>
+  <data name="Audio" xml:space="preserve">
+    <value>Audio</value>
+  </data>
+  <data name="NoMkvMergeLocation" xml:space="preserve">
+    <value>La posizione di MkvMerge nelle opzioni non è stata impostata</value>
+  </data>
+  <data name="SelectCorrectMkvmerge" xml:space="preserve">
+    <value>Seleziona il file mkvmerge.exe corretto</value>
+  </data>
+  <data name="BatCreatedClearQueue" xml:space="preserve">
+    <value>File Bat Creato. Vuoi pulire la coda di Job?</value>
+  </data>
+  <data name="JobNoLongerAvailable" xml:space="preserve">
+    <value>Job non più disponibile. Chiudo la finestra.</value>
+  </data>
+  <data name="NothingToPutInBat" xml:space="preserve">
+    <value>Nessun job da mettere nel file Bat</value>
+  </data>
+</root>

@@ -1,6 +1,6 @@
 # MKVmergeBatcher
 
-This windows form allow users to create/execute custom created mkv models.
+Create/execute custom created models to batch you Mkvmerge work.
 
 If you like my work please consider to buy me a coffee, thanks!
 
@@ -8,130 +8,209 @@ If you like my work please consider to buy me a coffee, thanks!
 
 Join the MkvMergeBather Discord server to chat and support: https://discord.gg/Eztf8tQWdt
 
-## 1. Batcher Tab
+## How the app works
 
-Before using the Batcher tab add some model. See 3. Model Creator Tab and 2. Manage Models Tab
+- Fill all options in View-Options (only the first time)
+- Create your preferd model
+- Choose the input files to work on
+- Add to the queue
+- Launch the queue when you're ready
 
-### 1.1 First steps
-First at all select the mkvmerge.exe location. Without this nothing can be done
-Customize the video extension of the file you want to manage (format: ext1,ext2,ext3)
+All app infos (options, models, queue) is stored in the "configuration" folder alongside the MKVmergeBatcher.exe
+The logs are store in the "logs" folder alongside the MKVmergeBatcher.exe
 
-### 1.2 Add file or entire folder to app
-Using the second browse button a window appear to choose a single file or an entire folder (because of the limitation of the environment, using "Folder Selection." you can add all files from the folder and nested ones)
-The files choosen are added at mid window. 
-No file selected -> all files will be elaborated
-Some file selected -> Only those files will be elaborated
-Using mouse right click you can work on selection
+## How models works
 
-### 1.3 Choosing model
-With the drop down box at bottom of page you can select the right model based on choosen files structure. (use mediainfo to check every file structure)
+The scope of the app is to create and use a user created model for multiple files with the same track structure.
 
-### 1.4 Create bat
-If all is ok, the app let you save a .bat file with the command line to exectute the batching work on the choosen files.
+Example: lets say we have in the same folder 1 file **VideoFile**.mkv with:
+- 1 video track (position number 0)
+- 1 audio track (english one, position number 1)
 
-### 1.5 Exec Now
-If all is ok, a new Window appear. Clicking Start the app start to directly elaborate the files/model choosen giving real time results.
+and some addition files with the same name but with different extension or additional suffix. For example 
+- An audio file: **VideoFile**.IT.mp3
+- A subtitle file VideoFile.srt (italian subtitle)
 
-## 2. Model Management
+and we want to create a mkv file with
+- 1 video track (from original input file)
+- 1 audio track (italian, from external file)
+- 1 audio track (english, from original input file)
+- 1 forced subtitle (italian, from external file)
 
-In this tab all model create can be modified/deleted/sorted
+we can create a model like this:
 
-## 3. Model Creator Tab
+![image](https://user-images.githubusercontent.com/7345587/153687782-a062dccb-426c-478b-89e2-3b772c364285.png)
 
-### 3.1 Model Prepation
-In this tab the app let you build a destination file structure specifing where every track come from.
-We have some fields to populate:
-- Track type: Video/Audio/Subtitle
-- Position: The original position of the track in files. Format OriginalFileNumber:PositionInOriginalFile
-The basic file (the one choosed in Batcher Tab) is the OriginalFileNumber 0 and cannot be external. Additional external files has to be > 0
-The PositionInOriginalFile is the relative track position in choosen file starting from 0
-- Language Code: default is und for no language code. You can specify any language code accepted by mkvmerge (ex. eng or ita)
-- Language Name: can be empty and specify the track text in destination file
-- External: not flagged for basic file (the one choosed in Batcher Tab), flagged for every external file
-- Extension: the extension for external file. The file name without extension must be identical for every external file
-- Suffix: a suffix for differentiate the external files with same extension.
-- Default: if choosen the track will be marked as default in destination file.
-PS only 1 track by type can be default at the same time
-- Forced: if choosen the track will be marked as Forced in destination file.
+As you see we build the destination track structure specifying from where each track is taken.
 
-Additional tags:
-- --no-attachments: add in the model the --no-attachments parameter
-- --title empty: add in the model the --title parameter with empty value
-- --compression none: add in the model the --compression parameter with "none" value
+Without adding additional flags-arguments the generated model is this:
 
-NEW IN > 1.1.76 version
-- Add attachments: add in the model the ||attachments|| tag. When executing the creating/executing the batch the app search for all file 
-  under a folder named as executing file name and add them as attachments. The --no-attachments and Add attachements are exclusives
+![image](https://user-images.githubusercontent.com/7345587/153687907-22e5de70-0831-42a1-aacf-af7605e60d97.png)
+
+This model is now ready to use with as many files you want with the above illustrated file structure
+
+Check the [Add-edit model section](README.md#add-edit-model) for additional infos
+
+## Main Page
+
+![image](https://user-images.githubusercontent.com/7345587/153685326-bf11a3f4-76a5-46a4-b7ee-0539961db059.png)
+
+- Video file path: the path from where to grab the video file to work on
+- Search in subfolders? : If activated the video file grabbed are taken also from subfolders
+- Apply file name exclusion? : if activated the file name exclusion is used according to the associated Options section
+- Video file list: the video file found. 
+  - You can drag and drop your files
+  - With a right click you can revert or clear the selection
+  - If no file are selected, all files are elaborated
+- Model combobox: the model to use when adding to queue
+- Show queue: Show the queue window. Please refer to the [queue section](README.md#Queue) to know how to use it
+- Add to queue: Add to queue the selected file using the selected model. Please refer to the [queue section](README.md#Queue) to know how to use it
+
+## File - Import v1 userdata.json
+
+if you are a v1 Mkvmerge Batcher user you can import your old userdata.json configuration file to v2
+
+All you previous model are imported
+
+![image](https://user-images.githubusercontent.com/7345587/153686497-2e9ba031-0afd-46c0-b0f1-55ac623fc364.png)
+
+- Old userdata.json file: Specify the v1 Mkvmerge Batcher userdata.json to import
+- Import button: start to import the old configuration file converting it to the v2 standard
+
+## View - Models
+
+In this section you can organize your models. Selecting a model the right part of the window is updated with the model details
+
+![image](https://user-images.githubusercontent.com/7345587/153686795-34bc4be2-2cb6-44a4-8ad0-5a3ea3088bf6.png)
+
+- Move buttons: you can move to Top-Bottom-Up-Down the selected model
+- Sort button: you can sort the models by his name
+- Add model (+): Open the model creation window
+- Delete model: delete the currently selected model
+- Edit model: Open the model edit window
+
+Double clicking on a model automatically opens the edit window.
+
+### Add-Edit Model
+
+![image](https://user-images.githubusercontent.com/7345587/153687047-6484de9e-b119-460c-a274-f660fe1a7b7f.png)
+
+Every change made on this window (obviously if the custom command is not activated), is instantly reflected on the bottom command text.
+
+#### Tracks section
+- Move buttons: you can move to Top-Bottom-Up-Down the selected track
+- Add track (+): Open the track creation window
+- Delete track: delete the currently selected track
+- Copy track: Open the track creation window using the selected track as model
+- Edit track: Open the track edit window
+
+Double clicking on a track automatically opens the edit window.
+
+#### Input files arguments
+
+This options affects all input files in the generated model. According to the [above example](README.md#how-models-works) this options are used for all 3 files (input file, external audio file, external subtitle files)
+- --no-attachments: add this option to all input files
+- --compression none: add the --compression <fileNumber>:none arguments to all input files
+- --no-global-tags: add this option to all input files
+- --no-track-tags: add this option to all input files
+- Custom user arguments: With this text field you can specify any arguments to use for all input files. Please check the resulting model after adding it
   
-  Example:
+#### Output file arguments
+
+- --title empty: add the --title "" option to the output file
+- Add attachments: add the ||attachments|| wildcard to the output files. Please refer to the [wildcard section](README.md#Wildcards) to know how to use it
+- Add chapters: add the ||chapters|| wildcard to the output files. Please refer to the [wildcard section](README.md#Wildcards) to know how to use it
   
-  VideoFile: C:\Video\test.mkv
+#### Custom commands
   
-  Attachment1: C:\Video\test\font1.ttf
+If you prefer to provide you custom command enable it and digit in the text field. You can use all the wildard. Please refer to the [wildcard section](README.md#Wildcards) to know how to use it
   
-  Attachment1: C:\Video\test\font2.ttf
+#### Wildcards
 
-NEW IN > 1.1.77 version
-- Add chapters: add in the model the ||chapters|| tag. The chapter must have this name fileName_chapters.xml. If the xml is not in the 
-  folder, the tag is skipped
+When using a model with many files, the wildcards are used to replace some core informations (input file/output file ecc) when adding these to the queue at runtime.
   
-  Example:
+- ||mkvmergePath|| : the mkvmerge path specified in [options](README.md#view---options)
+- ||outputFileFullPath|| : the output file full path. This path is generated by the program using
+  - The input file name
+  - Adding (n) at the end of the file name to make this unique
+  - Forcing the mkv extension
+- ||inputFileName|| : the input file name choosen when adding to queue
+- ||inputFileNameWithoutExtension||: the input file name choosen when adding to queue but without the extension. Usefull for external files with a suffix/different externsion. According to the [above example](README.md#how-models-works) the model contains **||inputFileNameWithoutExtension||.IT.mp3** for the external audio file and **||inputFileNameWithoutExtension||.srt** for the external subtitle file
+  this options are used for all 3 files (input file, external audio file, external subtitle files)
+- ||inputFileFolder|| : the folder where the input file is stored
+- ||attachments|| : the attachments to add to the output file. Create a folder alongside the input file with the same name and place the attachments into it. When adding to queue all files in this folder are added to the output file as attachments.
   
-  VideoFile: C:\Video\test.mkv
+  Example: 
   
-  Chapter file: C:\Video\test_chapters.xml
+  Input file: c:\test\inputFile.mp4
+  
+  Attachments folder: c:\test\inputFile\
+- ||chapters|| : the chapter file to add to the output file. The chapter file need to be name like this: 
+  Example: 
+  
+  Input file: c:\test\inputFile.mp4
+  
+  chapters file: c:\test\inputFile__chapters.xml
 
-NEW IN > 1.1.93 version
-- --no-global-tags: add in the model the --no-global-tags parameter
+## View - Options
 
-### 3.2 Preview and Model Creation
-Clicking on preview the insered data will be validated.
-If all is ok, a new window appear with the Model Generated. Typing a name and clicking Add, the generated model will be saved in Models List
+### General options
 
-## 4. Queue Tab new in > 1.1.78
+![image](https://user-images.githubusercontent.com/7345587/153709877-0dea2a6c-7015-4c88-b863-14ccfe75e2ed.png)
 
-Now MKVBatcher has the ability to store multiple video (with it's own model choosen) in a queue.
-After finishing to build the queue you can choose to create a unique big bat file or execute al conversion with one click.
-ATTENCTION: modifying the models (adding, reordering, deleting) cause the queue to automatically been emptied
+- Log level:  You can choose between
+  - Info
+  - Debug
+  - Trace
+  
+  If you're having issues please activate the trace log, reproduce the problem and send me the log file
+  
+- Language: Choose the app localization language. If you want you can contact and help me to add you language.
+- MKVmerge location: the location of mkvmerge.exe file (drag and drop allowed) 
+- Extensions: the extension accepted in the main page file list. The file with different extension are not considered
+- Exclude file names containing: like the extension options above, the file that contains the provided texts are not considered in the main page file list
 
-## 5. Options Tab
+### Queue options
 
-### 5.1 Move ok or warning execution to a destination folder of your choice. 
-If specified a directory, if the user can write into it, the elaborated file will be moved here.
-The wildcard %originalFolder% can be used to move files into subfolders. Ex. %originalFolder%\1ok
+![image](https://user-images.githubusercontent.com/7345587/153710216-b9b6282d-fbaa-4880-843c-776abb5f0d2b.png)
 
-### 5.2 Replace existing destination files?
-When moving a elaborated file to a folder specified in 5.1, there can be a same name file already there. 
-Activating the flag will overwrite this file. 
-Not activating the flag, the file already in folder will be renamed.
+- Move Ok files to: when a job ends with a exit code 0 (Ok), the output file will be moved in a destination folder according to this options. Default: %originalFolder% -> no move
+- Move Warning files to: when a job ends with a exit code 1 (Warning), the output file will be moved in a destination folder according to this options. Default: %originalFolder% -> no move
+- Replace destination file (when moving): If this option is activated, when moving a file (check "Move Ok files to" and "Move Warning files to"), if the file is already in destination directory
+  - The current destination file is renamed appending "_backup" to the file name
+  - The output file is then moved to the destination folder
+- Delete incomplete files when stopping queue: If this option is activated, when manually stopping the queue, the not completed output file is deleted
+- Automatically remove Ok Jobs: If this option is activated, when the queue is not running, the jobs in status "Ok" are automatically removed. Can be changed even in [queue context menu](README.md#jobs-section)
+- Automatically remove Warning Jobs: If this option is activated, when the queue is not running, the jobs in status "Warning" are automatically removed. Can be changed even in [queue context menu](README.md#jobs-section)
 
-### 5.3 Delete imcomplete files?
-If the execution is stopped before creating the final file, activating this flag will automatically delete the incomplete file
 
-### 5.4 Exclude File Name Contanint
-NEW IN > 1.1.93 version
-With this option you can add some patterns to a pool of excluded File Names Patterns. When using the Browse function the file 
-name containing at least one pattern will not be extracted (case insensitive)
+## Queue
 
-# Known BUG and hot to fix it
+The queue window once opened remains active even if the user closes it. The queue work runs in background too giving a message when finishing
+  
+![image](https://user-images.githubusercontent.com/7345587/154110989-1d5aacf1-ba95-4f74-94db-f64670c67dc4.png)
 
-## The GUI start but is not showing?
+#### Jobs section
+- Move buttons: you can move to Top-Bottom-Up-Down the selected job
+- Delete job: delete the currently selected track
+- Copy track: Open the track creation window using the selected track as model
+- Clear queue (X button): Clear all jobs
+- Right click context menu:
+  
+  ![image](https://user-images.githubusercontent.com/7345587/154242552-626ae7c8-970a-4fb3-a97f-b1684ba5c2e0.png)
 
-Close the program in taskbar if open (right click, close)
-Open the %localappdata% folder (WIN+R and type %localappdata%) 
-Delete the MKVmergeBatcher folder
-Try to open MKVmergeBatcher
+  - Clear queue: Same as above
+  - Reset all Ok jobs: Change the status of all Ok Jobs in "Pending"
+  - Reset all Warnning jobs: Change the status of all Warning Jobs in "Pending"
+  - Reset all Error jobs: Change the status of all Error Jobs in "Pending"
+  - Clear all Ok jobs: Delete all the job in status Ok
+  - Clear all Warnning jobs: Delete all the job in status Warning
+  - Clear all Error jobs: Delete all the job in status Error
+  - Automatically remove Ok Jobs: If this option is activated, when the queue is not running, the jobs in status "Ok" are automatically removed.
+  - Automatically remove Warning Jobs: If this option is activated, when the queue is not running, the jobs in status "Warning" are automatically removed. 
 
-## Process bug. Not yet discovered the motivation sometimes occurs. Theorically handled in > 1.1.82
+Create Bat: All eligible jobs (Pending status) will be saved to a choosen bat file. After the creation a job delete confirmation appear to let the user choose if delete the exported jobs from the queue.
 
-See the end of this message for details on invoking 
-just-in-time (JIT) debugging instead of this dialog box.
+Start: Start the queue elaboration
 
-************** Exception Text **************
-System.InvalidOperationException: No process is associated with this object.
-   at System.Diagnostics.Process.EnsureState(State state)
-   at System.Diagnostics.Process.get_HasExited()
-   at MKVmergeBatcher.src.ExecuteBatchForm.timer_Tick(Object sender, EventArgs e)
-   at System.Windows.Forms.Timer.OnTick(EventArgs e)
-   at System.Windows.Forms.Timer.TimerNativeWindow.WndProc(Message& m)
-   at System.Windows.Forms.NativeWindow.Callback(IntPtr hWnd, Int32 msg, IntPtr wparam, IntPtr lparam)
+Stop: Stop the queue elaboration. 

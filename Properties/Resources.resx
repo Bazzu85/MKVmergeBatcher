@@ -46,7 +46,7 @@
     
     mimetype: application/x-microsoft.net.object.binary.base64
     value   : The object must be serialized with 
-            : System.Serialization.Formatters.Binary.BinaryFormatter
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
             : and then encoded with base64 encoding.
     
     mimetype: application/x-microsoft.net.object.soap.base64
@@ -60,6 +60,7 @@
             : and then encoded with base64 encoding.
     -->
   <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
     <xsd:element name="root" msdata:IsDataSet="true">
       <xsd:complexType>
         <xsd:choice maxOccurs="unbounded">
@@ -68,9 +69,10 @@
               <xsd:sequence>
                 <xsd:element name="value" type="xsd:string" minOccurs="0" />
               </xsd:sequence>
-              <xsd:attribute name="name" type="xsd:string" />
+              <xsd:attribute name="name" use="required" type="xsd:string" />
               <xsd:attribute name="type" type="xsd:string" />
               <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
             </xsd:complexType>
           </xsd:element>
           <xsd:element name="assembly">
@@ -85,9 +87,10 @@
                 <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
                 <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
               </xsd:sequence>
-              <xsd:attribute name="name" type="xsd:string" msdata:Ordinal="1" />
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
               <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
               <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
             </xsd:complexType>
           </xsd:element>
           <xsd:element name="resheader">
@@ -109,9 +112,204 @@
     <value>2.0</value>
   </resheader>
   <resheader name="reader">
-    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <resheader name="writer">
-    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="AddFileNumberNotGreaterThan" xml:space="preserve">
+    <value>Please add a file number not greater than </value>
+  </data>
+  <data name="AddLabel" xml:space="preserve">
+    <value>Add</value>
+  </data>
+  <data name="AddModel" xml:space="preserve">
+    <value>Add Model</value>
+  </data>
+  <data name="AddTrack" xml:space="preserve">
+    <value>Add Track</value>
+  </data>
+  <data name="AddTrackFromFileNumber0" xml:space="preserve">
+    <value>Please add at least a track from file number 0 (input file)</value>
+  </data>
+  <data name="AddTrackOrUseCustomModel" xml:space="preserve">
+    <value>Please add at least a track or use a custom model</value>
+  </data>
+  <data name="CallTypeNotPassed" xml:space="preserve">
+    <value>Call type not passed</value>
+  </data>
+  <data name="CannotStopQueue" xml:space="preserve">
+    <value>Cannot stop queue</value>
+  </data>
+  <data name="DigitModelName" xml:space="preserve">
+    <value>Please digit model name</value>
+  </data>
+  <data name="DoYouWantStopCurrentJob" xml:space="preserve">
+    <value>Queue is running. Do you want to stop current job?</value>
+  </data>
+  <data name="EditModel" xml:space="preserve">
+    <value>Edit Model</value>
+  </data>
+  <data name="EditTrack" xml:space="preserve">
+    <value>Edit Track</value>
+  </data>
+  <data name="EmptyModelList" xml:space="preserve">
+    <value>No models generated</value>
+  </data>
+  <data name="ErrorLabel" xml:space="preserve">
+    <value>Error</value>
+  </data>
+  <data name="ExtensionNotRequired" xml:space="preserve">
+    <value>Original file extension can be specified for additional files (Original file number &gt; 0)</value>
+  </data>
+  <data name="FileAlreadyInQueue" xml:space="preserve">
+    <value>Already in queue</value>
+  </data>
+  <data name="InsertLanguageCode" xml:space="preserve">
+    <value>Please insert the language code</value>
+  </data>
+  <data name="NoFilesToAddToQueue" xml:space="preserve">
+    <value>No file to add to queue</value>
+  </data>
+  <data name="NothingToStart" xml:space="preserve">
+    <value>Nothing to start</value>
+  </data>
+  <data name="OriginalFileNumberPositionAlreadyInTrackList" xml:space="preserve">
+    <value>Original file number and position already in track list</value>
+  </data>
+  <data name="SaveCurrentCompiledModel" xml:space="preserve">
+    <value>Do you want to save current compiled model?</value>
+  </data>
+  <data name="SaveCurrentTrack" xml:space="preserve">
+    <value>Do you want to save current track?</value>
+  </data>
+  <data name="SaveLabel" xml:space="preserve">
+    <value>Save</value>
+  </data>
+  <data name="SelectTrackType" xml:space="preserve">
+    <value>Please select track type</value>
+  </data>
+  <data name="SpecifySuffixOrExtension" xml:space="preserve">
+    <value>For additional files (Original file number &gt; 0) you must specify at least a suffix or file extension</value>
+  </data>
+  <data name="SuffixNotRequired" xml:space="preserve">
+    <value>Original file suffix can be specified for additional files (Original file number &gt; 0)</value>
+  </data>
+  <data name="SummaryLabel" xml:space="preserve">
+    <value>Summary</value>
+  </data>
+  <data name="UseDifferentModelName" xml:space="preserve">
+    <value>Please use a different model name. Model is already in list.</value>
+  </data>
+  <data name="UseOneAttachmentFlag" xml:space="preserve">
+    <value>Use only one flag between --no-attachments and Add Attachments</value>
+  </data>
+  <data name="WarningLabel" xml:space="preserve">
+    <value>Warning</value>
+  </data>
+  <data name="ErrorJobLabel" xml:space="preserve">
+    <value>Error</value>
+  </data>
+  <data name="WarningJobLabel" xml:space="preserve">
+    <value>Warning</value>
+  </data>
+  <data name="OkJobLabel" xml:space="preserve">
+    <value>Ok</value>
+  </data>
+  <data name="AreYouSure" xml:space="preserve">
+    <value>Are you sure?</value>
+  </data>
+  <data name="ElaboratedFiles" xml:space="preserve">
+    <value>Elaborated files</value>
+  </data>
+  <data name="Summary" xml:space="preserve">
+    <value>Summary</value>
+  </data>
+  <data name="WorkingOnJob" xml:space="preserve">
+    <value>Working on job</value>
+  </data>
+  <data name="Of" xml:space="preserve">
+    <value>of</value>
+  </data>
+  <data name="File" xml:space="preserve">
+    <value>File</value>
+  </data>
+  <data name="PendingJobLabel" xml:space="preserve">
+    <value>Pending</value>
+  </data>
+  <data name="RunningJobLabel" xml:space="preserve">
+    <value>Running</value>
+  </data>
+  <data name="ProcessStarted" xml:space="preserve">
+    <value>Process started</value>
+  </data>
+  <data name="ExitCode" xml:space="preserve">
+    <value>Exit code</value>
+  </data>
+  <data name="Process" xml:space="preserve">
+    <value>Process</value>
+  </data>
+  <data name="Moved" xml:space="preserve">
+    <value>Moved</value>
+  </data>
+  <data name="To" xml:space="preserve">
+    <value>to</value>
+  </data>
+  <data name="MakingBackup" xml:space="preserve">
+    <value>making a backup</value>
+  </data>
+  <data name="AreYouSurePleaseMakeBackup" xml:space="preserve">
+    <value>Are you sure? Current data will be overwritted. Please make a backup of the configuration folder</value>
+  </data>
+  <data name="UserDataImported" xml:space="preserve">
+    <value>UserData imported</value>
+  </data>
+  <data name="InfoLabel" xml:space="preserve">
+    <value>Info</value>
+  </data>
+  <data name="WorkingOnModel" xml:space="preserve">
+    <value>Working on model</value>
+  </data>
+  <data name="View" xml:space="preserve">
+    <value>View</value>
+  </data>
+  <data name="Help" xml:space="preserve">
+    <value>?</value>
+  </data>
+  <data name="ImportV1UserDatajson" xml:space="preserve">
+    <value>Import v1 userdata.json</value>
+  </data>
+  <data name="Models" xml:space="preserve">
+    <value>Models</value>
+  </data>
+  <data name="Options" xml:space="preserve">
+    <value>Options</value>
+  </data>
+  <data name="About" xml:space="preserve">
+    <value>About</value>
+  </data>
+  <data name="Subtitle" xml:space="preserve">
+    <value>Subtitle</value>
+  </data>
+  <data name="Video" xml:space="preserve">
+    <value>Video</value>
+  </data>
+  <data name="Audio" xml:space="preserve">
+    <value>Audio</value>
+  </data>
+  <data name="NoMkvMergeLocation" xml:space="preserve">
+    <value>The mkvmerge location in options is not setted</value>
+  </data>
+  <data name="SelectCorrectMkvmerge" xml:space="preserve">
+    <value>Select a correct mkvmerge.exe file</value>
+  </data>
+  <data name="BatCreatedClearQueue" xml:space="preserve">
+    <value>Bat File created. Do you want to clear the queue?</value>
+  </data>
+  <data name="JobNoLongerAvailable" xml:space="preserve">
+    <value>Job no longer available. Closing.</value>
+  </data>
+  <data name="NothingToPutInBat" xml:space="preserve">
+    <value>No jobs to put in Bat file</value>
+  </data>
 </root>

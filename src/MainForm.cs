@@ -1,330 +1,233 @@
-﻿using MKVmergeBatcher.Properties;
-using MKVmergeBatcher.src;
-using MKVmergeBatcher.src.obj;
-using Newtonsoft.Json;
+﻿using MKVmergeBatcher.src.help;
+using MKVmergeBatcher.src.legacy;
+using MKVmergeBatcher.src.models;
+using MKVmergeBatcher.src.options;
+using MKVmergeBatcher.src.queue;
+using MKVmergeBatcher.src.windows;
+using NLog;
 using System;
-using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using System.Windows.Forms;
 
-namespace MKVmergeBatcher
+namespace MKVmergeBatcher.src
 {
-
-    public partial class Form1 : Form
+    public partial class MainForm : Form
     {
-        #region Variables
+        public static readonly Logger Logger = NLog.LogManager.GetCurrentClassLogger();
 
-        UserData userData = new UserData();
-        UserDataJsonManagement userDataJsonManagement = new UserDataJsonManagement();
+        public LocaleManager localeManager = new LocaleManager();
+        public static OptionsData optionsData = new OptionsData();
+        public static OptionsJson optionsJson = new OptionsJson();
+        public static LogConfigurationManager logConfigurationManager = new LogConfigurationManager();
+        public static MainData mainData = new MainData();
+        public static MainJson mainJson = new MainJson();
+        public static ModelsData modelsData = new ModelsData();
+        public static ModelsJson modelsJson = new ModelsJson();
+        public static ModelsForm modelsForm;
+        public static WindowsData windowsData = new WindowsData();
+        public static WindowsJson windowsJson = new WindowsJson();
+        public static QueueData queueData = new QueueData();
+        public static QueueJson queueJson = new QueueJson();
+        public static QueueManager queueManager = new QueueManager();
+        public static QueueForm queueForm;
+        public static FormWindowState lastWindowState = new FormWindowState();
 
 
-        #endregion
-        public Form1()
+
+        public MainForm()
         {
-            userData = userDataJsonManagement.ReadUserData();
-
             InitializeComponent();
-            RestoreWindowData();
-            SetDataSources();
-            SetLabels();
-            SetLastModelUsed();
-
-        }
-        #region Manage Window Data with Properties (save/restore)
-        private void SaveWindowData()
-        {
-
-            // Copy window size to app settings
-            if (this.WindowState == FormWindowState.Normal)
-            {
-                Settings.Default.WindowSize = this.Size;
-            }
-            else
-            {
-                Settings.Default.WindowSize = this.RestoreBounds.Size;
-            }
-
-            if (this.WindowState == FormWindowState.Maximized)
-            {
-                Settings.Default.WindowMaximized = true;
-            }
-            else
-            {
-                Settings.Default.WindowMaximized = false;
-
-                // Ovverride the Settings.Default.WindowLocation only if not maximized
-                // This is to prevent loss of location returning normal from maximize
-                Settings.Default.WindowLocation = this.Location;
-
-            }
-            // Save settings
-            Settings.Default.Save();
-            Settings.Default.Reload();
-
-        }
-        private void SaveLastUsedModel()
-        {
-            if (userData.modelManagement.modelList.Count > 0 && BTCModelsComboBox.SelectedIndex >= 0)
-            {
-                userData.batcher.lastUsedModel = BTCModelsComboBox.SelectedIndex;
-            }
+            ReadConfigFiles();
+            RestoreWindowPositionAndSize();
+            SetDataSource();
+            SetControlsContent();
         }
 
-        private void RestoreWindowData()
+        private void ReadConfigFiles()
         {
-            //If CallUpgrade boolean is true (new defined settings by new build number)
-            //   call the settings upgrade from previous version
-            //   set the CallUpgrade to false to prevent this part for future app launch with this version
-            if (Settings.Default.CallUpgrade)
-            {
-                Settings.Default.Upgrade();
-                Settings.Default.CallUpgrade = false;
-            }
-
-            this.WindowState = FormWindowState.Normal;
-            this.StartPosition = FormStartPosition.Manual;
-
-            // Set window locationaaa
-            if (Settings.Default.WindowLocation != null)
-            {
-                this.Location = Settings.Default.WindowLocation;
-            }
-
-            // Set window size
-            if (Settings.Default.WindowSize != null)
-            {
-                this.Size = Settings.Default.WindowSize;
-            }
-
-            if (Settings.Default.WindowMaximized == true)
-            {
-                this.WindowState = FormWindowState.Maximized;
-            }
-
-        }
-        private void Form1_LocationChanged(object sender, EventArgs e)
-        {
-            //2021-04-19 remove as the location and windows state where not saved anymore
-            //SaveWindowData();
+            optionsJson.ReadOptionsJson();
+            Logger.Trace(System.Reflection.MethodBase.GetCurrentMethod().Name);
+            //Console.WriteLine("selectedLogLevel: " + MainForm.optionsData.selectedLogLevel);
+            localeManager.SetLocale(this);
+            SetTopMenuTexts();
+            mainJson.ReadMainJson();
+            modelsJson.ReadModelsJson();
+            windowsJson.ReadWindowsJson();
+            queueJson.ReadQueueJson();
         }
 
-        #endregion
-        #region Generics Methods
-        private void SetDataSources()
+        private void RestoreWindowPositionAndSize()
         {
-            //The association of MCDataGridView.DataSource to tracksBindingSource need to be here
-            //if specified in designer, Visual Studio add the column in data source automatically 
-            this.MCDataGridView.DataSource = this.tracksBindingSource;
-            this.tracksBindingSource.DataSource = userData.modelCreator.tracks;
-            this.typeBindingSource.DataSource = userData.modelCreator.typeList;
-            this.additionalFlagsBindingSource.DataSource = userData.modelCreator.additionalFlags;
-            this.batcherBindingSource.DataSource = userData.batcher;
-            this.modelBindingSource.DataSource = userData.modelManagement.modelList;
-            this.queueBindingSource.DataSource = userData.queueManagement.queueList;
-            this.optionsBindingSource.DataSource = userData.options;
-            this.excludeFileNameContainingBindingSource.DataSource = userData.options.excludeFileNameContainingList;
-        }
-        private void ClearQueue()
-        {
-            userData.queueManagement.queueList.Clear();
-        }
-
-        private void ClearQueue(string jobStatus)
-        {
-            List<UserData.QueueManagement.Queue> tempQueueList = new List<UserData.QueueManagement.Queue>();
-            foreach (UserData.QueueManagement.Queue queue in userData.queueManagement.queueList)
+            Logger.Trace(System.Reflection.MethodBase.GetCurrentMethod().Name);
+            if (MainForm.windowsData.mainWindow.width > 0 && MainForm.windowsData.mainWindow.height > 0)
             {
-                if (queue.jobStatus != jobStatus)
+                //this is mandatory to make the position modification working
+                this.StartPosition = FormStartPosition.Manual;
+                this.Width = MainForm.windowsData.mainWindow.width;
+                this.Height = MainForm.windowsData.mainWindow.height;
+                this.Top = MainForm.windowsData.mainWindow.top;
+                this.Left = MainForm.windowsData.mainWindow.left;
+                if (MainForm.windowsData.mainWindow.maximized)
                 {
-                    tempQueueList.Add(queue);
+                    this.WindowState = FormWindowState.Maximized;
                 }
             }
-            ClearQueue();
-            foreach (UserData.QueueManagement.Queue queue in tempQueueList)
-            {
-                userData.queueManagement.queueList.Add(queue);
-            }
         }
-
-        private void SetLabels()
+        /// <summary>
+        /// Set the locale from the variable from options. When copying to other forms, remember to change the 
+        /// </summary>
+        private void SetDataSource()
         {
+            Logger.Trace(System.Reflection.MethodBase.GetCurrentMethod().Name);
+            this.optionsDataBindingSource.DataSource = optionsData;
+            this.mainDataBindingSource.DataSource = mainData;
+            this.videoFileBindingSource.DataSource = mainData.videoFileList;
+            this.modelBindingSource.DataSource = modelsData.modelList;
+        }
+        private void ResetFormBindings()
+        {
+            Logger.Trace(System.Reflection.MethodBase.GetCurrentMethod().Name);
+            this.optionsDataBindingSource.ResetBindings(false);
+            this.mainDataBindingSource.ResetBindings(false);
+            this.videoFileBindingSource.ResetBindings(false);
+            this.modelBindingSource.ResetBindings(false);
+        }
+        private void SetControlsContent()
+        {
+            Logger.Trace(System.Reflection.MethodBase.GetCurrentMethod().Name);
             var version = System.Reflection.Assembly.GetExecutingAssembly().GetName().Version;
             this.Text = "MKVmerge Batcher " + version;
+
+            if (MainForm.modelsData.modelList.Count > 0)
+            {
+                modelsComboBox.SelectedIndex = modelsData.lastModelUsed;
+            }
+
         }
 
-        private void SetLastModelUsed()
+        #region Top Menu Methods
+        private void optionsToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            if (userData.modelManagement.modelList.Count > 0)
+            Logger.Trace(System.Reflection.MethodBase.GetCurrentMethod().Name);
+            string currentLocale = MainForm.optionsData.selectedLocale;
+            OptionsForm optionsForm = new OptionsForm();
+            optionsForm.ShowDialog();
+            optionsJson.WriteOptionsJson();
+            if (MainForm.optionsData.selectedLocale != currentLocale)
             {
-                BTCModelsComboBox.SelectedIndex = userData.batcher.lastUsedModel;
+                localeManager.SetLocale(this);
+                SetTopMenuTexts();
             }
         }
-        private void Form1_FormClosed(object sender, FormClosedEventArgs e)
-        {
-            SaveWindowData();
-            SaveLastUsedModel();
-            userData = userDataJsonManagement.WriteUserData(userData);
-            //After the form is closed the components.Dispose() is called.
-            //sometimes the code throw a bad System.IndexOutOfRangeException for apparently no reason 
-            //in this method the DataGridView is corretcly populated
-            //Disposing the resource release now prevent this error lately
-            this.MCDataGridView.Dispose();
-        }
-        #endregion
 
-        #region Top Menu methods
+        private void SetTopMenuTexts()
+        {
+            // localization not working automatically for the top menu so need to be setted manually
+            fileToolStripMenuItem.Text = Properties.Resources.File;
+            importV1UserDatajsonToolStripMenuItem.Text = Properties.Resources.ImportV1UserDatajson;
+
+            viewToolStripMenuItem.Text = Properties.Resources.View;
+            modelsToolStripMenuItem.Text = Properties.Resources.Models;
+            optionsToolStripMenuItem.Text = Properties.Resources.Options;
+
+            helpToolStripMenuItem.Text = Properties.Resources.Help;
+            aboutToolStripMenuItem.Text = Properties.Resources.About;
+
+        }
+
         private void exitToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            SaveWindowData();
-            SaveLastUsedModel();
-            userDataJsonManagement.WriteUserData(userData);
+            Logger.Trace(System.Reflection.MethodBase.GetCurrentMethod().Name);
+            SaveData();
             this.Close();
         }
 
-        #endregion
-
-        #region Model Creator Methods
-
-        private void MCTrackRemoveSelectedButton_Click(object sender, EventArgs e)
+        private void modelsToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            foreach (DataGridViewRow item in this.MCDataGridView.SelectedRows)
-            {
-                int i = item.Index;
-                if (userData.modelCreator.tracks.Count > i)
-                {
-                    userData.modelCreator.tracks.RemoveAt(i);
-                }
-            }
-            this.tracksBindingSource.ResetBindings(false);
+            Logger.Trace(System.Reflection.MethodBase.GetCurrentMethod().Name);
+            modelsForm = new ModelsForm(this);
+            modelsForm.ShowDialog();
         }
-
-        private void MCTrackClearListButton_Click(object sender, EventArgs e)
+        private void importV1UserDatajsonToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            if (userData.modelCreator.tracks.Count > 0)
-            {
-                this.userData.modelCreator.tracks.Clear();
-            }
-        }
-
-        private void MCTrackMoveUpButton_Click(object sender, EventArgs e)
-        {
-            foreach (DataGridViewRow item in this.MCDataGridView.SelectedRows)
-            {
-                int i = item.Index;
-
-                if (i == 0)
-                {
-                    return;
-                }
-                else
-                {
-                    MCMoveTracksDataViewGridRow(i, i - 1);
-                }
-            }
-        }
-
-        private void MCTrackMoveDownButton_Click(object sender, EventArgs e)
-        {
-            foreach (DataGridViewRow item in this.MCDataGridView.SelectedRows)
-            {
-                int i = item.Index;
-
-                if (i == userData.modelCreator.tracks.Count - 1)
-                {
-                    return;
-                }
-                else
-                {
-                    MCMoveTracksDataViewGridRow(i, i + 1);
-                }
-            }
-        }
-
-        /// <summary>
-        /// Move row from source to destination in MCDataGridView
-        /// </summary>
-        /// <param name="source">source</param>
-        /// <param name="destination">destination</param>
-        private void MCMoveTracksDataViewGridRow(int source, int destination)
-        {
-            var tmp = userData.modelCreator.tracks[destination];
-            userData.modelCreator.tracks[destination] = userData.modelCreator.tracks[source];
-            userData.modelCreator.tracks[source] = tmp;
-            MCDataGridView.Rows[destination].Selected = true;
-        }
-
-        private void MCPreviewButton_Click(object sender, EventArgs e)
-        {
-            ModelCreatorManagement modelCreatorManagement = new ModelCreatorManagement(this.userData);
-            string errorList = modelCreatorManagement.CheckLists();
-            if (!String.IsNullOrEmpty(errorList))
-            {
-                MessageBox.Show(errorList, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                return;
-            }
-            this.userData = modelCreatorManagement.userData;
-            ModelCreatorPreviewForm modelCreatorPreviewForm = new ModelCreatorPreviewForm(this.userData);
-            modelCreatorPreviewForm.ShowDialog();
-            if (modelCreatorPreviewForm.DialogResult == DialogResult.OK)
-            {
-                this.userData = modelCreatorPreviewForm.userData;
-                ClearQueue();
-            }
-        }
-        private void MCSaveDefaultButton_Click(object sender, EventArgs e)
-        {
-            this.userData.modelCreator.defaultTracks.Clear();
-            //Using the SerializeObject and DeserializeObject create a totaly new instance of the tracklist to save
-            //avoiding the modification reflection between BindingList<Tracks> defaultTracks and BindingList<Tracks> tracks
-            List<UserData.ModelCreator.Tracks> tracks = JsonConvert.DeserializeObject<List<UserData.ModelCreator.Tracks>>(JsonConvert.SerializeObject(this.userData.modelCreator.tracks));
-            foreach (UserData.ModelCreator.Tracks track in tracks)
-            {
-                this.userData.modelCreator.defaultTracks.Add(track);
-            }
-
-        }
-
-        private void MCLoadDefaultButton_Click(object sender, EventArgs e)
-        {
-            this.userData.modelCreator.tracks.Clear();
-            //Using the SerializeObject and DeserializeObject create a totaly new instance of the tracklist to load
-            //avoiding the modification reflection between BindingList<Tracks> defaultTracks and BindingList<Tracks> tracks
-            List<UserData.ModelCreator.Tracks> defaultTracks = JsonConvert.DeserializeObject<List<UserData.ModelCreator.Tracks>>(JsonConvert.SerializeObject(this.userData.modelCreator.defaultTracks));
-            foreach (UserData.ModelCreator.Tracks track in defaultTracks)
-            {
-                this.userData.modelCreator.tracks.Add(track);
-            }
-        }
-
-        private void MCDataGridView_DataError(object sender, DataGridViewDataErrorEventArgs e)
-        {
-            string error = "Error in datagridview: " + "Column: " + e.ColumnIndex + " Row: " + e.RowIndex + " Error: " + e.Exception;
-            MessageBox.Show(this, error, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            Logger.Trace(System.Reflection.MethodBase.GetCurrentMethod().Name);
+            ImportLegacyForm importLegacyDataForm = new ImportLegacyForm();
+            importLegacyDataForm.ShowDialog();
+            ResetFormBindings();
+            SetControlsContent();
         }
         #endregion
 
-        #region Batcher Methods
-        private void BTCMkvMergePathBrowseButton_Click(object sender, EventArgs e)
+        #region Form Event Methods
+        private void MainForm_FormClosed(object sender, FormClosedEventArgs e)
         {
-            OpenFileDialog openFileDialog = new OpenFileDialog()
-            {
-                InitialDirectory = userData.batcher.mvkMergePath,
-                Filter = "exe files (*.exe)|*.exe"
+            Logger.Trace(System.Reflection.MethodBase.GetCurrentMethod().Name);
+            SaveData();
+        }
 
-            }
-            ;
-            if (openFileDialog.ShowDialog() == DialogResult.OK)
+        private void SaveData()
+        {
+            Logger.Trace(System.Reflection.MethodBase.GetCurrentMethod().Name);
+            SaveWindowPositionAndSize();
+            optionsJson.WriteOptionsJson();
+            mainJson.WriteMainJson();
+            modelsJson.WriteModelsJson();
+            windowsJson.WriteWindowsJson();
+            queueJson.WriteQueueJson();
+            LogManager.Shutdown();
+        }
+        private void SaveWindowPositionAndSize()
+        {
+            Logger.Trace(System.Reflection.MethodBase.GetCurrentMethod().Name);
+            if (this.WindowState == FormWindowState.Maximized)
             {
-                userData.batcher.mvkMergePath = openFileDialog.FileName;
+                MainForm.windowsData.mainWindow.maximized = true;
+            }
+            else
+            {
+                MainForm.windowsData.mainWindow.maximized = false;
+                MainForm.windowsData.mainWindow.width = this.Width;
+                MainForm.windowsData.mainWindow.height = this.Height;
+                MainForm.windowsData.mainWindow.top = this.Top;
+                MainForm.windowsData.mainWindow.left = this.Left;
+            }
+        }
+        #endregion
+
+        #region Video File List Methods
+        private void VideoFilesPathTextBox_DragDrop(object sender, DragEventArgs e)
+        {
+            Logger.Trace(System.Reflection.MethodBase.GetCurrentMethod().Name);
+            string[] fileList = (string[])e.Data.GetData(DataFormats.FileDrop);
+            if (fileList != null && fileList.Length != 0)
+            {
+                if (!Directory.Exists(fileList[0]))
+                {
+                    Logger.Debug("VideoFilesPathTextBox_DragDrop: not a directory");
+                }
+                else
+                {
+                    VideoFilesPathTextBox.Text = fileList[0];
+                }
             }
         }
 
-        private void BTCVideoBrowseButton_Click(object sender, EventArgs e)
+        private void VideoFilesPathTextBox_DragEnter(object sender, DragEventArgs e)
         {
+            Logger.Trace(System.Reflection.MethodBase.GetCurrentMethod().Name);
+            if (e.Data.GetDataPresent(DataFormats.FileDrop))
+                e.Effect = DragDropEffects.Copy;
+            else
+                e.Effect = DragDropEffects.None;
+        }
+
+        private void BrowseVideoFilesButton_Click(object sender, EventArgs e)
+        {
+            Logger.Trace(System.Reflection.MethodBase.GetCurrentMethod().Name);
             OpenFileDialog openFileDialog = new OpenFileDialog()
             {
-                InitialDirectory = userData.batcher.lastVideoPath,
+                InitialDirectory = mainData.videoFilePath,
                 ValidateNames = false,
                 CheckFileExists = false,
                 CheckPathExists = true,
@@ -333,22 +236,13 @@ namespace MKVmergeBatcher
 
             }
             ;
-            //update the list videoExtensionList splitting videoExtensions
-            string[] array = userData.batcher.videoExtensions.Split(',');
-            userData.batcher.videoExtensionList.Clear();
-            if (array.Length != 0)
-            {
-                userData.batcher.videoExtensionList = array.ToList();
-            }
-            if (userData.batcher.videoExtensionList.Count() > 0)
+            if (optionsData.extensionList.Count() > 0)
             {
                 string extensionsFilter = "Video Files |";
-                int i = 0;
-                foreach (string item in userData.batcher.videoExtensionList)
+                for (int i = 0; i < optionsData.extensionList.Count(); i++)
                 {
-                    i++;
-                    extensionsFilter += "*." + item;
-                    if (i < userData.batcher.videoExtensionList.Count())
+                    extensionsFilter += "*." + optionsData.extensionList[i].extension;
+                    if (i != optionsData.extensionList.Count() - 1)
                     {
                         extensionsFilter += ";";
                     }
@@ -357,499 +251,281 @@ namespace MKVmergeBatcher
             }
             if (openFileDialog.ShowDialog() == DialogResult.OK)
             {
-                userData.batcher.lastVideoPath = Path.GetDirectoryName(openFileDialog.FileName);
-                GetVideoFileNameList(openFileDialog);
-                BTCVideoFilesListBox.Items.Clear();
-                foreach (string item in userData.batcher.videoFileList)
-                {
-                    BTCVideoFilesListBox.Items.Add(item);
-                }
-
+                VideoFilesPathTextBox.Text = Path.GetDirectoryName(openFileDialog.FileName);
+                GetVideoFileListFromBrowse(openFileDialog);
             }
         }
-
-        private void GetVideoFileNameList(OpenFileDialog openFileDialog)
+        private void GetVideoFileListFromBrowse(OpenFileDialog openFileDialog)
         {
-            userData.batcher.videoFileList.Clear();
+            Logger.Trace(System.Reflection.MethodBase.GetCurrentMethod().Name);
+            mainData.videoFileList.Clear();
             if (openFileDialog.FileName.Contains("Folder Selection."))
             {
-                string[] allFiles = Directory.GetFiles(Path.GetDirectoryName(openFileDialog.FileName), "*.*", SearchOption.AllDirectories);
-                List<string> allFilesList = new List<string>();
-                foreach (string item in allFiles)
-                {
-                    Boolean videoExtensionsOk = false;
-                    if (userData.batcher.videoExtensions.Contains(Path.GetExtension(item).Remove(0, 1)))
-                    {
-                        videoExtensionsOk = true;
-                    }
-                    Boolean fileNameOk = true;
-                    foreach (UserData.Options.ExcludeFileNameContaining excludeFileNameContaining in userData.options.excludeFileNameContainingList)
-                    {
-                        if (item.ToUpper().Contains(excludeFileNameContaining.fileNameContaning.ToUpper()))
-                        {
-                            fileNameOk = false;
-                        }
-                    }
-                    if (videoExtensionsOk && fileNameOk)
-                    {
-                        userData.batcher.videoFileList.Add(item);
-                    }
-                }
+                GetVideoFileListFromDirectory(Path.GetDirectoryName(openFileDialog.FileName));
             }
             else
             {
                 foreach (string file in openFileDialog.FileNames)
                 {
-                    userData.batcher.videoFileList.Add(file);
-                }
-            }
-        }
-
-        /*
-        private void BTCVideoExtensionsTextBox_TextChanged(object sender, EventArgs e)
-        {
-            //update the list videoExtensionList splitting videoExtensions
-            string[] array = userData.batcher.videoExtensions.Split(',');
-            userData.batcher.videoExtensionList.Clear();
-            if (array.Length != 0)
-            {
-                userData.batcher.videoExtensionList = array.ToList();
-            }
-        }
-        */
-
-        private void BTCVideoExtensionsTextBox_MouseClick(object sender, MouseEventArgs e)
-        {
-            ToolTip tt = new ToolTip();
-            tt.Show("Video file filter format: ext1,ext2,ext3", BTCVideoExtensionsTextBox, 100, 0, 1000);
-        }
-
-        private void BTCCleanSelectionToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            if (BTCVideoFilesListBox.Items.Count > 0)
-            {
-                BTCVideoFilesListBox.ClearSelected();
-            }
-        }
-
-        private void BTCReverseSelectionToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            if (BTCVideoFilesListBox.Items.Count > 0)
-            {
-                for (int i = 0; i < BTCVideoFilesListBox.Items.Count; i++)
-                {
-                    BTCVideoFilesListBox.SetSelected(i, !BTCVideoFilesListBox.GetSelected(i));
-                }
-            }
-        }
-
-        private void BTCCreateBatButton_Click(object sender, EventArgs e)
-        {
-            int rc = CheckForBatcherExecution();
-            if (rc == 0)
-            {
-                SaveFileDialog saveFileDialog = new SaveFileDialog()
-                {
-                    AddExtension = true,
-                    DefaultExt = "bat",
-                    InitialDirectory = BTCFilePathTextBox.Text,
-                    Filter = "bat files (*.bat)|*.bat"
-                };
-                if (saveFileDialog.ShowDialog() == DialogResult.OK)
-                {
-                    if (Path.GetExtension(saveFileDialog.FileName) != ".bat")
+                    Boolean acceptableFile = CheckIfFileIsAcceptable(file);
+                    if (acceptableFile)
                     {
-                        saveFileDialog.FileName += ".bat";
+                        mainData.videoFileList.Add(new MainData.VideoFile() { videoFileName = file });
                     }
-                    BatcherManagement batcherManagement = new BatcherManagement(userData);
-                    List<string> videoFileList = ExtractVideoFileListToWorkOn();
-                    batcherManagement.CreateBat(videoFileList, saveFileDialog.FileName, BTCModelsComboBox.SelectedIndex, false);
                 }
             }
+            videoFileListBox.SelectedIndex = -1;
         }
-        private void BTCExectuteNowButton_Click(object sender, EventArgs e)
+        private void videoFileListBox_DragDrop(object sender, DragEventArgs e)
         {
-            int rc = CheckForBatcherExecution();
-            if (rc == 0)
+            Logger.Trace(System.Reflection.MethodBase.GetCurrentMethod().Name);
+            mainData.videoFileList.Clear();
+            string[] fileList = (string[])e.Data.GetData(DataFormats.FileDrop);
+            if (fileList != null && fileList.Length != 0)
             {
-                List<string> videoFileList = ExtractVideoFileListToWorkOn();
-
-                ExecuteBatchForm executeBatchForm = new ExecuteBatchForm(this.userData, videoFileList, BTCModelsComboBox.SelectedIndex, false);
-                executeBatchForm.ShowDialog();
-            }
-        }
-
-        private void BTCAddToQueueButton_Click(object sender, EventArgs e)
-        {
-            int rc = CheckForBatcherExecution();
-            if (rc == 0)
-            {
-                List<string> videoFileList = ExtractVideoFileListToWorkOn();
-
-                Boolean error = false;
-
-                foreach (string videoFile in videoFileList)
+                foreach (string file in fileList)
                 {
-                    foreach (UserData.QueueManagement.Queue queueItem in userData.queueManagement.queueList)
+                    if (Directory.Exists(file))
                     {
-                        //Console.WriteLine("errore: " + error);
-
-                        if (queueItem.fileName == videoFile)
+                        GetVideoFileListFromDirectory(file);
+                    }
+                    else
+                    {
+                        Boolean acceptableFile = CheckIfFileIsAcceptable(file);
+                        if (acceptableFile)
                         {
-                            MessageBox.Show("File " + videoFile + " alreay in queue", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                            error = true;
-                            break;
+                            mainData.videoFileList.Add(new MainData.VideoFile() { videoFileName = file });
                         }
                     }
-                    if (error)
-                    {
-                        break;
-                    }
-                }
-                if (!error)
-                {
-                    foreach (string videoFile in videoFileList)
-                    {
-                        UserData.QueueManagement.Queue queue = new UserData.QueueManagement.Queue();
-                        queue.fileName = videoFile;
-                        queue.modelIndex = BTCModelsComboBox.SelectedIndex;
-                        queue.modelName = userData.modelManagement.modelList[queue.modelIndex].modelName;
-
-                        userData.queueManagement.queueList.Add(queue);
-                    }
                 }
             }
-        }
-        private void BTCClearQueueButton_Click(object sender, EventArgs e)
-        {
-            if (userData.queueManagement.queueList.Count > 0)
-            {
-                DialogResult dr = MessageBox.Show("Do you want to clear the queue?", "Warning", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
-
-                if (dr == DialogResult.Yes)
-                {
-                    ClearQueue();
-                }
-            }
+            videoFileListBox.SelectedIndex = -1;
         }
 
-        private List<string> ExtractVideoFileListToWorkOn()
+        private void GetVideoFileListFromDirectory(string path)
         {
-            List<string> videoFileList = new List<string>();
-
-            if (BTCVideoFilesListBox.SelectedIndices.Count == 0)
+            Logger.Trace(System.Reflection.MethodBase.GetCurrentMethod().Name);
+            string[] allFiles;
+            if (mainData.SubfolderSearch)
             {
-                foreach (string videoFile in BTCVideoFilesListBox.Items)
-                {
-                    videoFileList.Add(videoFile);
-                }
+                allFiles = Directory.GetFiles(path, "*.*", SearchOption.AllDirectories);
             }
             else
             {
-                foreach (string videoFile in BTCVideoFilesListBox.SelectedItems)
-                {
-                    videoFileList.Add(videoFile);
-                }
+                allFiles = Directory.GetFiles(path, "*.*", SearchOption.TopDirectoryOnly);
             }
-            return videoFileList;
+            foreach (string item in allFiles)
+            {
+                Boolean acceptableFile = CheckIfFileIsAcceptable(item);
+                if (!acceptableFile)
+                {
+                    continue;
+                }
+                mainData.videoFileList.Add(new MainData.VideoFile() { videoFileName = item });
+            }
         }
 
-        private int CheckForBatcherExecution()
+        private Boolean CheckIfFileIsAcceptable(string item)
         {
-            int rc = 0;
-            if (BTCModelsComboBox.SelectedIndex < 0)
+            Logger.Trace(System.Reflection.MethodBase.GetCurrentMethod().Name);
+            Boolean extensionOk = false;
+            foreach (options.OptionsData.Extension ext in optionsData.extensionList)
             {
-                MessageBox.Show("Select or add a Model", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                return 1;
+                if (ext.extension == Path.GetExtension(item).Remove(0, 1))
+                {
+                    extensionOk = true;
+                }
             }
-            if (BTCVideoFilesListBox.Items.Count <= 0)
+            // if the file extension is not allowed, jump to next
+            if (!extensionOk)
             {
-                MessageBox.Show("No video file found. Please Browse a file or folder", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                return 1;
+                return false;
             }
-            return rc;
+            if (mainData.ApplyFileNameExclusion)
+            {
+                Boolean fileNameToExclude = false;
+
+                for (int i = 0; i < optionsData.excludeFileNameContainingList.Count(); i++)
+                {
+                    string efnc = optionsData.excludeFileNameContainingList[i].excludeFileNameContaining;
+                    if (item.ToUpper().Contains(efnc.ToUpper()))
+                    {
+                        fileNameToExclude = true;
+                    }
+                }
+                // if the file name contains an exclusion pattern, jump to next
+                if (fileNameToExclude)
+                {
+                    return false;
+                }
+            }
+            return true;
+        }
+
+        private void reverseSelectionToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Logger.Trace(System.Reflection.MethodBase.GetCurrentMethod().Name);
+            if (videoFileListBox.SelectedItems.Count > 0)
+            {
+                for (int i = 0; i < videoFileListBox.Items.Count; i++)
+                {
+                    videoFileListBox.SetSelected(i, !videoFileListBox.GetSelected(i));
+                }
+            }
+        }
+
+        private void clearSelectionToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Logger.Trace(System.Reflection.MethodBase.GetCurrentMethod().Name);
+            if (videoFileListBox.SelectedItems.Count > 0)
+            {
+                videoFileListBox.ClearSelected();
+            }
+        }
+        #endregion
+
+        #region Models methods
+        public void ChangeModelComboBoxIndex(int index)
+        {
+            Logger.Trace(System.Reflection.MethodBase.GetCurrentMethod().Name);
+            modelsComboBox.SelectedIndex = index;
+        }
+        private void modelsComboBox_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            Logger.Trace(System.Reflection.MethodBase.GetCurrentMethod().Name);
+            if (modelsComboBox.SelectedIndex >= 0)
+            {
+                modelsData.lastModelUsed = modelsComboBox.SelectedIndex;
+            }
         }
 
         #endregion
 
-        #region Model Manager Methods
-
-        private void MMListBox_SelectedIndexChanged(object sender, EventArgs e)
+        #region DragEnter methods
+        private void videoFileListBox_DragEnter(object sender, DragEventArgs e)
         {
-            if (MMListBox.SelectedIndex >= 0)
-            {
-                MMModelNameTextBox.Text = userData.modelManagement.modelList[MMListBox.SelectedIndex].modelName;
-                MMModelContentTextBox.Text = userData.modelManagement.modelList[MMListBox.SelectedIndex].modelContent;
-            }
+            Logger.Trace(System.Reflection.MethodBase.GetCurrentMethod().Name);
+            if (e.Data.GetDataPresent(DataFormats.FileDrop))
+                e.Effect = DragDropEffects.Copy;
             else
-            {
-                MMModelNameTextBox.Text = "";
-                MMModelContentTextBox.Text = "";
-            }
+                e.Effect = DragDropEffects.None;
         }
-
-        private void MMSaveButton_Click(object sender, EventArgs e)
-        {
-            if (MMListBox.SelectedIndex >= 0)
-            {
-                //userData.modelManagement.modelList[MMListBox.SelectedIndex].modelName = MMModelNameTextBox.Text;
-                //userData.modelManagement.modelList[MMListBox.SelectedIndex].modelContent = MMModelContentTextBox.Text;
-                UserData.ModelManagement.Model model = new UserData.ModelManagement.Model()
-                {
-                    modelName = MMModelNameTextBox.Text,
-                    modelContent = MMModelContentTextBox.Text
-                };
-                userData.modelManagement.modelList[MMListBox.SelectedIndex] = model;
-            }
-        }
-
-        private void MMMoveUpButton_Click(object sender, EventArgs e)
-        {
-            if (MMListBox.SelectedIndex > 0)
-            {
-                MMMoveModel(MMListBox.SelectedIndex, MMListBox.SelectedIndex - 1);
-                ClearQueue();
-            }
-        }
-
-        private void MMMoveDownButton_Click(object sender, EventArgs e)
-        {
-            if (MMListBox.SelectedIndex < userData.modelManagement.modelList.Count() - 1)
-            {
-                MMMoveModel(MMListBox.SelectedIndex, MMListBox.SelectedIndex + 1);
-                ClearQueue();
-            }
-        }
-
-        private void MMMoveTopButton_Click(object sender, EventArgs e)
-        {
-            if (MMListBox.SelectedIndex > 0)
-            {
-                for (int i = MMListBox.SelectedIndex; i >= 0; i--)
-                {
-                    MMMoveModel(MMListBox.SelectedIndex, i);
-                }
-                ClearQueue();
-            }
-        }
-
-        private void MMMoveBottomButton_Click(object sender, EventArgs e)
-        {
-            if (MMListBox.SelectedIndex < userData.modelManagement.modelList.Count() - 1)
-            {
-                for (int i = MMListBox.SelectedIndex; i <= userData.modelManagement.modelList.Count() - 1; i++)
-                {
-                    MMMoveModel(MMListBox.SelectedIndex, i);
-                }
-                ClearQueue();
-            }
-        }
-        private void MMMoveModel(int source, int destination)
-        {
-            var tmp = userData.modelManagement.modelList[destination];
-            userData.modelManagement.modelList[destination] = userData.modelManagement.modelList[source];
-            userData.modelManagement.modelList[source] = tmp;
-            MMListBox.SelectedIndex = destination;
-        }
-
-        private void MMRemoveSelectedButton_Click(object sender, EventArgs e)
-        {
-            userData.modelManagement.modelList.RemoveAt(MMListBox.SelectedIndex);
-            ClearQueue();
-        }
-
-        private void MMSortByModelNameButton_Click(object sender, EventArgs e)
-        {
-            if (userData.modelManagement.modelList.Count() > 0)
-            {
-                string previouslySelectedModel = userData.modelManagement.modelList[MMListBox.SelectedIndex].modelName;
-
-                List<UserData.ModelManagement.Model> sortedList = userData.modelManagement.modelList.OrderBy(o => o.modelName).ToList();
-                userData.modelManagement.modelList.Clear();
-                int addingIndex = 0;
-                int newSelectedIndex = 0;
-                foreach (UserData.ModelManagement.Model item in sortedList)
-                {
-                    userData.modelManagement.modelList.Add(item);
-                    if (item.modelName == previouslySelectedModel)
-                    {
-                        newSelectedIndex = addingIndex;
-                    }
-                    addingIndex++;
-                }
-                MMListBox.SelectedIndex = newSelectedIndex + 1;
-                MMListBox.SelectedIndex = newSelectedIndex;
-            }
-            ClearQueue();
-        }
-
         #endregion
+        private void addTestModelButton_Click(object sender, EventArgs e)
+        {
+            Logger.Trace(System.Reflection.MethodBase.GetCurrentMethod().Name);
+            ModelsData.Model.Track track = new ModelsData.Model.Track()
+            {
+                type = "Video",
+                originalFileNumber = 0,
+                originalFileTrackPosition = 0,
+                language = "ita",
+                name = "Italiano",
+                DefaultFlag = true,
+                ForcedFlag = true,
+                originalFileSuffix = "_ita",
+                originalFileExtension = "srt"
+            };
+            ModelsData.Model.CustomInputFileArguments customInputFileArguments = new ModelsData.Model.CustomInputFileArguments();
+            customInputFileArguments.noAttachments = true;
+            ModelsData.Model.CustomOutputFileArguments customOutputFileArguments = new ModelsData.Model.CustomOutputFileArguments();
+            customOutputFileArguments.emptyTitle = true;
+            ModelsData.Model model = new ModelsData.Model();
+            model.modelName = "test model " + DateTime.Now.ToString();
+            model.trackList.Add(track);
+            model.customInputFileArguments = customInputFileArguments;
+            model.customOutputFileArguments = customOutputFileArguments;
+            modelsData.modelList.Add(model);
+        }
 
         #region Queue Methods
-        private void QRemoveFromQueueButton_Click(object sender, EventArgs e)
+        private void addToQueueButton_Click(object sender, EventArgs e)
         {
-            if (QDataGridView.SelectedRows.Count > 0)
+            bool result = queueManager.CheckJobs(this);
+            if (!result)
             {
-                foreach (DataGridViewRow row in QDataGridView.SelectedRows)
+                if (!String.IsNullOrEmpty(queueManager.errorList))
                 {
-                    userData.queueManagement.queueList.RemoveAt(row.Index);
+                    MessageBox.Show(queueManager.errorList, Properties.Resources.ErrorLabel, MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
             }
             else
             {
-                MessageBox.Show("No rows to remove", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                queueManager.AddToQueue(this);
+                ShowQueueForm();
             }
         }
-
-        private void QClearQueueButton_Click(object sender, EventArgs e)
-        {
-            if (userData.queueManagement.queueList.Count > 0)
-            {
-                DialogResult dr = MessageBox.Show("Do you want to clear the queue?", "Warning", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
-
-                if (dr == DialogResult.Yes)
-                {
-                    ClearQueue();
-                }
-            }
-        }
-
-        private void QCreateBatButton_Click(object sender, EventArgs e)
-        {
-            if (QDataGridView.RowCount > 0)
-            {
-                SaveFileDialog saveFileDialog = new SaveFileDialog()
-                {
-                    AddExtension = true,
-                    DefaultExt = "bat",
-                    InitialDirectory = BTCFilePathTextBox.Text,
-                    Filter = "bat files (*.bat)|*.bat"
-                };
-                if (saveFileDialog.ShowDialog() == DialogResult.OK)
-                {
-                    if (Path.GetExtension(saveFileDialog.FileName) != ".bat")
-                    {
-                        saveFileDialog.FileName += ".bat";
-                    }
-                    BatcherManagement batcherManagement = new BatcherManagement(userData);
-
-                    //empty videoFileList passing the executeFromQueue flag to true
-                    List<string> videoFileList = new List<string>();
-                    batcherManagement.CreateBat(videoFileList, saveFileDialog.FileName, 0, true);
-                }
-            } else
-            {
-                MessageBox.Show("The queue is empty", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
-        }
-
-        private void QExecNowButton_Click(object sender, EventArgs e)
-        {
-            if (QDataGridView.RowCount > 0)
-            {
-                //empty videoFileList passing the executeFromQueue flag to true
-                List<string> videoFileList = new List<string>();
-
-                ExecuteBatchForm executeBatchForm = new ExecuteBatchForm(this.userData, videoFileList, 0, true);
-                executeBatchForm.ShowDialog();
-                if (userData.modelCreator.additionalFlags.autoClearOkJobs)
-                {
-                    ClearQueue("OK");
-                }
-                if (userData.modelCreator.additionalFlags.autoClearWarningJobs)
-                {
-                    ClearQueue("Warning");
-                }
-                if (userData.modelCreator.additionalFlags.autoClearErrorJobs)
-                {
-                    ClearQueue("Error");
-                }
-            }
-            else
-            {
-                MessageBox.Show("The queue is empty", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
-
-        }
-
-        private void QRemoveOkButton_Click(object sender, EventArgs e)
-        {
-            if (userData.queueManagement.queueList.Count > 0)
-            {
-                DialogResult dr = MessageBox.Show("Do you want to clear the OK jobs?", "Warning", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
-
-                if (dr == DialogResult.Yes)
-                {
-                    ClearQueue("OK");
-                }
-            }
-        }
-
-        private void QRemoveWarningButton_Click(object sender, EventArgs e)
-        {
-            if (userData.queueManagement.queueList.Count > 0)
-            {
-                DialogResult dr = MessageBox.Show("Do you want to clear the Warning jobs?", "Warning", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
-
-                if (dr == DialogResult.Yes)
-                {
-                    ClearQueue("Warning");
-                }
-            }
-        }
-
-        private void QRemoveErrorButton_Click(object sender, EventArgs e)
-        {
-            if (userData.queueManagement.queueList.Count > 0)
-            {
-                DialogResult dr = MessageBox.Show("Do you want to clear the Error jobs?", "Warning", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
-
-                if (dr == DialogResult.Yes)
-                {
-                    ClearQueue("Error");
-                }
-            }
-        }
-
         #endregion
 
-        #region Options Methods
-        private void OExcludeFileNameContainingAddButton_Click(object sender, EventArgs e)
+        private void showQueueButton_Click(object sender, EventArgs e)
         {
-            if (String.IsNullOrEmpty(OExcludeFileNameContainingTextBox.Text))
-            {
-                MessageBox.Show("No File Name Provided", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            } else
-            {
-                Boolean error = false;
+            Logger.Trace(System.Reflection.MethodBase.GetCurrentMethod().Name);
+            ShowQueueForm();
+        }
 
-                foreach (UserData.Options.ExcludeFileNameContaining excludeFileNameContaining in userData.options.excludeFileNameContainingList)
+        private void ShowQueueForm()
+        {
+            // if queueForm is never been showed or is closed, generate it again
+            if (queueForm == null || queueForm.IsDisposed)
+            {
+                queueForm = new QueueForm(this);
+            }
+            queueForm.Show();
+            if (queueForm.WindowState == FormWindowState.Minimized)
+            {
+                queueForm.WindowState = queueForm.GetLastWindowState();
+            }
+
+            queueForm.BringToFront();
+            Application.DoEvents();
+        }
+
+        private void MainForm_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            Logger.Trace(System.Reflection.MethodBase.GetCurrentMethod().Name);
+
+            if (MainForm.queueData.running)
+            {
+                DialogResult dr = MessageBox.Show(this, Properties.Resources.DoYouWantStopCurrentJob, Properties.Resources.WarningLabel, MessageBoxButtons.YesNoCancel, MessageBoxIcon.Warning);
+                if (dr == DialogResult.Cancel)
                 {
-                    if (excludeFileNameContaining.fileNameContaning.ToUpper() == OExcludeFileNameContainingTextBox.Text.ToUpper())
+                    e.Cancel = true;
+                    return;
+                }
+                if (dr == DialogResult.Yes)
+                {
+                    queueManager.StopJob();
+                    if (MainForm.queueData.running)
                     {
-                        MessageBox.Show("String already added", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                        error = true;
+                        MessageBox.Show(Properties.Resources.CannotStopQueue, Properties.Resources.ErrorLabel, MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        e.Cancel = true;
+                        return;
                     }
                 }
-                if (!error)
+                if (dr == DialogResult.No)
                 {
-                    UserData.Options.ExcludeFileNameContaining excludeFileNameContaining = new UserData.Options.ExcludeFileNameContaining();
-                    excludeFileNameContaining.fileNameContaning = OExcludeFileNameContainingTextBox.Text;
-                    userData.options.excludeFileNameContainingList.Add(excludeFileNameContaining);
+                    e.Cancel = true;
+                    return;
                 }
             }
         }
-        private void OExcludeFileNameContainingRemoveButton_Click(object sender, EventArgs e)
+
+        private void aboutToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            if (OExcludeFileNameContainingListBox.SelectedIndex >= 0)
-            {
-                userData.options.excludeFileNameContainingList.RemoveAt(OExcludeFileNameContainingListBox.SelectedIndex);
-            }
+            AboutForm aboutForm = new AboutForm();
+            aboutForm.ShowDialog();
         }
 
-        #endregion
-
-
+        private void MainForm_Resize(object sender, EventArgs e)
+        {
+            // When window state changes
+            if (WindowState != lastWindowState)
+            {
+                if (WindowState == FormWindowState.Maximized || WindowState == FormWindowState.Normal)
+                {
+                    lastWindowState = WindowState;
+                }
+            }
+        }
     }
 }
-   

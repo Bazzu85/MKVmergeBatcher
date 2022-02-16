@@ -117,212 +117,439 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <metadata name="modelBindingSource.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>17, 56</value>
-  </metadata>
-  <metadata name="BTCVideoFilesListContextMenuStrip.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>620, 17</value>
-  </metadata>
-  <metadata name="batcherBindingSource.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>1284, 17</value>
-  </metadata>
-  <metadata name="additionalFlagsBindingSource.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>1071, 17</value>
-  </metadata>
-  <metadata name="MCToolTip.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>420, 56</value>
-  </metadata>
-  <metadata name="MCDataGridViewType.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <metadata name="typeBindingSource.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+  <metadata name="menuStrip.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>17, 17</value>
   </metadata>
-  <metadata name="MCPositionInOriginalFile.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="importV1UserDatajsonToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>198, 22</value>
+  </data>
+  <data name="importV1UserDatajsonToolStripMenuItem.Text" xml:space="preserve">
+    <value>Import v1 userdata.json</value>
+  </data>
+  <data name="exitToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>198, 22</value>
+  </data>
+  <data name="exitToolStripMenuItem.Text" xml:space="preserve">
+    <value>Exit</value>
+  </data>
+  <data name="fileToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>37, 20</value>
+  </data>
+  <data name="fileToolStripMenuItem.Text" xml:space="preserve">
+    <value>File</value>
+  </data>
+  <data name="modelsToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>116, 22</value>
+  </data>
+  <data name="modelsToolStripMenuItem.Text" xml:space="preserve">
+    <value>Models</value>
+  </data>
+  <data name="optionsToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>116, 22</value>
+  </data>
+  <data name="optionsToolStripMenuItem.Text" xml:space="preserve">
+    <value>Options</value>
+  </data>
+  <data name="viewToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>44, 20</value>
+  </data>
+  <data name="viewToolStripMenuItem.Text" xml:space="preserve">
+    <value>View</value>
+  </data>
+  <data name="aboutToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>67, 22</value>
+  </data>
+  <data name="helpToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>24, 20</value>
+  </data>
+  <data name="helpToolStripMenuItem.Text" xml:space="preserve">
+    <value>?</value>
+  </data>
+  <data name="menuStrip.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 0</value>
+  </data>
+  <data name="menuStrip.Size" type="System.Drawing.Size, System.Drawing">
+    <value>784, 24</value>
+  </data>
+  <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="menuStrip.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="menuStrip.Text" xml:space="preserve">
+    <value>Menu</value>
+  </data>
+  <data name="&gt;&gt;menuStrip.Name" xml:space="preserve">
+    <value>menuStrip</value>
+  </data>
+  <data name="&gt;&gt;menuStrip.Type" xml:space="preserve">
+    <value>System.Windows.Forms.MenuStrip, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;menuStrip.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;menuStrip.ZOrder" xml:space="preserve">
+    <value>11</value>
+  </data>
+  <data name="videoFilePathLabel.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
+  </data>
+  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="videoFilePathLabel.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="videoFilePathLabel.Location" type="System.Drawing.Point, System.Drawing">
+    <value>12, 35</value>
+  </data>
+  <data name="videoFilePathLabel.Size" type="System.Drawing.Size, System.Drawing">
+    <value>81, 13</value>
+  </data>
+  <data name="videoFilePathLabel.TabIndex" type="System.Int32, mscorlib">
+    <value>3</value>
+  </data>
+  <data name="videoFilePathLabel.Text" xml:space="preserve">
+    <value>Video File Path:</value>
+  </data>
+  <data name="&gt;&gt;videoFilePathLabel.Name" xml:space="preserve">
+    <value>videoFilePathLabel</value>
+  </data>
+  <data name="&gt;&gt;videoFilePathLabel.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;videoFilePathLabel.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;videoFilePathLabel.ZOrder" xml:space="preserve">
+    <value>10</value>
+  </data>
+  <data name="VideoFilesPathTextBox.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Left, Right</value>
+  </data>
+  <metadata name="mainDataBindingSource.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>329, 17</value>
   </metadata>
-  <metadata name="MCLanguageCode.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+  <data name="VideoFilesPathTextBox.Location" type="System.Drawing.Point, System.Drawing">
+    <value>99, 32</value>
+  </data>
+  <data name="VideoFilesPathTextBox.Size" type="System.Drawing.Size, System.Drawing">
+    <value>592, 20</value>
+  </data>
+  <data name="VideoFilesPathTextBox.TabIndex" type="System.Int32, mscorlib">
+    <value>4</value>
+  </data>
+  <data name="&gt;&gt;VideoFilesPathTextBox.Name" xml:space="preserve">
+    <value>VideoFilesPathTextBox</value>
+  </data>
+  <data name="&gt;&gt;VideoFilesPathTextBox.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;VideoFilesPathTextBox.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;VideoFilesPathTextBox.ZOrder" xml:space="preserve">
+    <value>9</value>
+  </data>
+  <data name="BrowseVideoFilesButton.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Right</value>
+  </data>
+  <data name="BrowseVideoFilesButton.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="BrowseVideoFilesButton.Location" type="System.Drawing.Point, System.Drawing">
+    <value>697, 32</value>
+  </data>
+  <data name="BrowseVideoFilesButton.Size" type="System.Drawing.Size, System.Drawing">
+    <value>75, 20</value>
+  </data>
+  <data name="BrowseVideoFilesButton.TabIndex" type="System.Int32, mscorlib">
+    <value>5</value>
+  </data>
+  <data name="BrowseVideoFilesButton.Text" xml:space="preserve">
+    <value>Browse</value>
+  </data>
+  <data name="&gt;&gt;BrowseVideoFilesButton.Name" xml:space="preserve">
+    <value>BrowseVideoFilesButton</value>
+  </data>
+  <data name="&gt;&gt;BrowseVideoFilesButton.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;BrowseVideoFilesButton.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;BrowseVideoFilesButton.ZOrder" xml:space="preserve">
+    <value>8</value>
+  </data>
+  <data name="videoFileListBox.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Bottom, Left, Right</value>
+  </data>
+  <metadata name="videoFileListContextMenuStrip.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>853, 17</value>
+  </metadata>
+  <data name="reverseSelectionToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>165, 22</value>
+  </data>
+  <data name="reverseSelectionToolStripMenuItem.Text" xml:space="preserve">
+    <value>Reverse Selection</value>
+  </data>
+  <data name="clearSelectionToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>165, 22</value>
+  </data>
+  <data name="clearSelectionToolStripMenuItem.Text" xml:space="preserve">
+    <value>Clear Selection</value>
+  </data>
+  <data name="videoFileListContextMenuStrip.Size" type="System.Drawing.Size, System.Drawing">
+    <value>166, 48</value>
+  </data>
+  <data name="&gt;&gt;videoFileListContextMenuStrip.Name" xml:space="preserve">
+    <value>videoFileListContextMenuStrip</value>
+  </data>
+  <data name="&gt;&gt;videoFileListContextMenuStrip.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ContextMenuStrip, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <metadata name="videoFileBindingSource.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>512, 17</value>
+  </metadata>
+  <data name="videoFileListBox.HorizontalScrollbar" type="System.Boolean, mscorlib">
     <value>True</value>
+  </data>
+  <data name="videoFileListBox.Location" type="System.Drawing.Point, System.Drawing">
+    <value>12, 81</value>
+  </data>
+  <data name="videoFileListBox.Size" type="System.Drawing.Size, System.Drawing">
+    <value>760, 303</value>
+  </data>
+  <data name="videoFileListBox.TabIndex" type="System.Int32, mscorlib">
+    <value>6</value>
+  </data>
+  <data name="&gt;&gt;videoFileListBox.Name" xml:space="preserve">
+    <value>videoFileListBox</value>
+  </data>
+  <data name="&gt;&gt;videoFileListBox.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ListBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;videoFileListBox.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;videoFileListBox.ZOrder" xml:space="preserve">
+    <value>7</value>
+  </data>
+  <metadata name="optionsDataBindingSource.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>132, 17</value>
   </metadata>
-  <metadata name="MCLanguageName.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <metadata name="MCExternalFlag.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <metadata name="MCExtension.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <metadata name="MCSuffix.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <metadata name="MCDefaultFlag.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <metadata name="MCForcedFlag.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <metadata name="jobStatus.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <metadata name="queueBindingSource.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>531, 56</value>
-  </metadata>
-  <metadata name="excludeFileNameContainingBindingSource.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>798, 56</value>
-  </metadata>
-  <metadata name="OToolTip.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>696, 56</value>
-  </metadata>
-  <metadata name="optionsBindingSource.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>171, 17</value>
-  </metadata>
-  <data name="aboutTextBox.Text" xml:space="preserve">
-    <value>## 1. Batcher Tab
-
-Before using the Batcher tab add some model. See 3. Model Creator Tab and 2. Manage Models Tab
-
-### 1.1 First steps
-First at all select the mkvmerge.exe location. Without this nothing can be done
-Customize the video extension of the file you want to manage (format: ext1,ext2,ext3)
-
-### 1.2 Add file or entire folder to app
-Using the second browse button a window appear to choose a single file or an entire folder (because of the limitation of the environment, using "Folder Selection." you can add all files from the folder and nested ones)
-The files choosen are added at mid window. 
-No file selected -&gt; all files will be elaborated
-Some file selected -&gt; Only those files will be elaborated
-Using mouse right click you can work on selection
-
-### 1.3 Choosing model
-With the drop down box at bottom of page you can select the right model based on choosen files structure. (use mediainfo to check every file structure)
-
-### 1.4 Create bat
-If all is ok, the app let you save a .bat file with the command line to exectute the batching work on the choosen files.
-
-### 1.5 Exec Now
-If all is ok, a new Window appear. Clicking Start the app start to directly elaborate the files/model choosen giving real time results.
-
-## 2. Model Management
-
-In this tab all model create can be modified/deleted/sorted
-
-## 3. Model Creator Tab
-
-### 3.1 Model Prepation
-In this tab the app let you build a destination file structure specifing where every track come from.
-We have some fields to populate:
-- Track type: Video/Audio/Subtitle
-- Position: The original position of the track in files. Format OriginalFileNumber:PositionInOriginalFile
-The basic file (the one choosed in Batcher Tab) is the OriginalFileNumber 0 and cannot be external. Additional external files has to be &gt; 0
-The PositionInOriginalFile is the relative track position in choosen file starting from 0
-- Language Code: default is und for no language code. You can specify any language code accepted by mkvmerge (ex. eng or ita)
-- Language Name: can be empty and specify the track text in destination file
-- External: not flagged for basic file (the one choosed in Batcher Tab), flagged for every external file
-- Extension: the extension for external file. The file name without extension must be identical for every external file
-- Suffix: a suffix for differentiate the external files with same extension.
-- Default: if choosen the track will be marked as default in destination file.
-PS only 1 track by type can be default at the same time
-- Forced: if choosen the track will be marked as Forced in destination file.
-
-Additional tags:
-- --no-attachments: add in the model the --no-attachments parameter
-- --title empty: add in the model the --title parameter with empty value
-- --compression none: add in the model the --compression parameter with "none" value
-
-NEW IN &gt; 1.1.76 version
-- Add attachments: add in the model the ||attachments|| tag. When executing the creating/executing the batch the app search for all file 
-  under a folder named as executing file name and add them as attachments. The --no-attachments and Add attachements are exclusives
-  
-  Example:
-  
-  VideoFile: C:\Video\test.mkv
-  
-  Attachment1: C:\Video\test\font1.ttf
-  
-  Attachment1: C:\Video\test\font2.ttf
-
-NEW IN &gt; 1.1.77 version
-- Add chapters: add in the model the ||chapters|| tag. The chapter must have this name fileName_chapters.xml. If the xml is not in the 
-  folder, the tag is skipped
-  
-  Example:
-  
-  VideoFile: C:\Video\test.mkv
-  
-  Chapter file: C:\Video\test_chapters.xml
-
-NEW IN &gt; 1.1.93 version
-- --no-global-tags: add in the model the --no-global-tags parameter
-
-### 3.2 Preview and Model Creation
-Clicking on preview the insered data will be validated.
-If all is ok, a new window appear with the Model Generated. Typing a name and clicking Add, the generated model will be saved in Models List
-
-## 4. Queue Tab new in &gt; 1.1.78
-
-Now MKVBatcher has the ability to store multiple video (with it's own model choosen) in a queue.
-After finishing to build the queue you can choose to create a unique big bat file or execute al conversion with one click.
-ATTENCTION: modifying the models (adding, reordering, deleting) cause the queue to automatically been emptied
-
-## 5. Options Tab
-
-### 5.1 Move ok or warning execution to a destination folder of your choice. 
-If specified a directory, if the user can write into it, the elaborated file will be moved here.
-The wildcard %originalFolder% can be used to move files into subfolders. Ex. %originalFolder%\1ok
-
-### 5.2 Replace existing destination files?
-When moving a elaborated file to a folder specified in 5.1, there can be a same name file already there. 
-Activating the flag will overwrite this file. 
-Not activating the flag, the file already in folder will be renamed.
-
-### 5.3 Delete imcomplete files?
-If the execution is stopped before creating the final file, activating this flag will automatically delete the incomplete file
-
-### 5.4 Exclude File Name Contanint
-NEW IN &gt; 1.1.93 version
-With this option you can add some patterns to a pool of excluded File Names Patterns. When using the Browse function the file 
-name containing at least one pattern will not be extracted (case insensitive)
-
-# Known BUG and hot to fix it
-
-## The GUI start but is not showing?
-
-Close the program in taskbar if open (right click, close)
-Open the %localappdata% folder (WIN+R and type %localappdata%) 
-Delete the MKVmergeBatcher folder
-Try to open MKVmergeBatcher
-
-## Process bug. Not yet discovered the motivation sometimes occurs. Theorically handled in &gt; 1.1.82
-
-See the end of this message for details on invoking 
-just-in-time (JIT) debugging instead of this dialog box.
-
-************** Exception Text **************
-System.InvalidOperationException: No process is associated with this object.
-   at System.Diagnostics.Process.EnsureState(State state)
-   at System.Diagnostics.Process.get_HasExited()
-   at MKVmergeBatcher.src.ExecuteBatchForm.timer_Tick(Object sender, EventArgs e)
-   at System.Windows.Forms.Timer.OnTick(EventArgs e)
-   at System.Windows.Forms.Timer.TimerNativeWindow.WndProc(Message&amp; m)
-   at System.Windows.Forms.NativeWindow.Callback(IntPtr hWnd, Int32 msg, IntPtr wparam, IntPtr lparam)
+  <data name="addToQueueButton.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Bottom, Right</value>
+  </data>
+  <data name="addToQueueButton.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
+    <value>Flat</value>
+  </data>
+  <data name="addToQueueButton.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6
+        JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAACXBIWXMAATr2AAE69gE6sVc6AAAAyklE
+        QVRYR+3UywnCQBSF4WxcKgiutQIFsQ4tRF27EsQiBF97C9AWbCRgBxbgfwKCiDKvSIjcA98izL3DkHlk
+        Fss/Z4QlWsVXBZkiR7f4qiAz1G8B2q81jjg4qEa1zz0eYguN7XDFHSfs8V7/MU2s4LsA1apH6WMDjX1b
+        wGv9z1PPM1BmKr+GAywQvOcd9KCVh1CPepPSxgU36PeFUM8ZmiM6DUwwhw5RCPWMoTksluikHEIXr0Oa
+        cg1dvK9p7EPkUspDZbFYSk6WPQArGFxL6vFXJgAAAABJRU5ErkJggg==
 </value>
   </data>
-  <metadata name="tracksBindingSource.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>343, 17</value>
+  <data name="addToQueueButton.ImageAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>MiddleLeft</value>
+  </data>
+  <data name="addToQueueButton.Location" type="System.Drawing.Point, System.Drawing">
+    <value>661, 418</value>
+  </data>
+  <data name="addToQueueButton.Size" type="System.Drawing.Size, System.Drawing">
+    <value>111, 31</value>
+  </data>
+  <data name="addToQueueButton.TabIndex" type="System.Int32, mscorlib">
+    <value>7</value>
+  </data>
+  <data name="addToQueueButton.Text" xml:space="preserve">
+    <value>Add to Queue</value>
+  </data>
+  <data name="addToQueueButton.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>MiddleRight</value>
+  </data>
+  <data name="&gt;&gt;addToQueueButton.Name" xml:space="preserve">
+    <value>addToQueueButton</value>
+  </data>
+  <data name="&gt;&gt;addToQueueButton.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;addToQueueButton.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;addToQueueButton.ZOrder" xml:space="preserve">
+    <value>6</value>
+  </data>
+  <data name="showQueueButton.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Bottom, Right</value>
+  </data>
+  <data name="showQueueButton.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
+    <value>Flat</value>
+  </data>
+  <data name="showQueueButton.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6
+        JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAACXBIWXMAATr2AAE69gE6sVc6AAAAc0lE
+        QVRYR+3UwQ1AQBhE4b04kkicqYhG6EHUQRdUJNGHNwWs08ruYV7yXed3QHDOlViHAX1i2tT2Zy0uPLgT
+        0+YJ3YhWYcKCOTFtjtAN56Jlfwmzf4Yq64/IuQYbDuyJaVPbuhGtxoq/HkDbuuGcc6UUwgvP72AD/r82
+        4wAAAABJRU5ErkJggg==
+</value>
+  </data>
+  <data name="showQueueButton.ImageAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>MiddleLeft</value>
+  </data>
+  <data name="showQueueButton.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="showQueueButton.Location" type="System.Drawing.Point, System.Drawing">
+    <value>546, 418</value>
+  </data>
+  <data name="showQueueButton.Size" type="System.Drawing.Size, System.Drawing">
+    <value>109, 31</value>
+  </data>
+  <data name="showQueueButton.TabIndex" type="System.Int32, mscorlib">
+    <value>8</value>
+  </data>
+  <data name="showQueueButton.Text" xml:space="preserve">
+    <value>Show Queue</value>
+  </data>
+  <data name="showQueueButton.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>MiddleRight</value>
+  </data>
+  <data name="&gt;&gt;showQueueButton.Name" xml:space="preserve">
+    <value>showQueueButton</value>
+  </data>
+  <data name="&gt;&gt;showQueueButton.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;showQueueButton.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;showQueueButton.ZOrder" xml:space="preserve">
+    <value>5</value>
+  </data>
+  <data name="subfolderSearchCheckBox.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="subfolderSearchCheckBox.Location" type="System.Drawing.Point, System.Drawing">
+    <value>15, 58</value>
+  </data>
+  <data name="subfolderSearchCheckBox.Size" type="System.Drawing.Size, System.Drawing">
+    <value>128, 17</value>
+  </data>
+  <data name="subfolderSearchCheckBox.TabIndex" type="System.Int32, mscorlib">
+    <value>9</value>
+  </data>
+  <data name="subfolderSearchCheckBox.Text" xml:space="preserve">
+    <value>Search in subfolders?</value>
+  </data>
+  <data name="&gt;&gt;subfolderSearchCheckBox.Name" xml:space="preserve">
+    <value>subfolderSearchCheckBox</value>
+  </data>
+  <data name="&gt;&gt;subfolderSearchCheckBox.Type" xml:space="preserve">
+    <value>System.Windows.Forms.CheckBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;subfolderSearchCheckBox.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;subfolderSearchCheckBox.ZOrder" xml:space="preserve">
+    <value>4</value>
+  </data>
+  <data name="applyFileNameExclusionCheckBox.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="applyFileNameExclusionCheckBox.Location" type="System.Drawing.Point, System.Drawing">
+    <value>149, 58</value>
+  </data>
+  <data name="applyFileNameExclusionCheckBox.Size" type="System.Drawing.Size, System.Drawing">
+    <value>150, 17</value>
+  </data>
+  <data name="applyFileNameExclusionCheckBox.TabIndex" type="System.Int32, mscorlib">
+    <value>10</value>
+  </data>
+  <data name="applyFileNameExclusionCheckBox.Text" xml:space="preserve">
+    <value>Apply file name exclusion?</value>
+  </data>
+  <data name="&gt;&gt;applyFileNameExclusionCheckBox.Name" xml:space="preserve">
+    <value>applyFileNameExclusionCheckBox</value>
+  </data>
+  <data name="&gt;&gt;applyFileNameExclusionCheckBox.Type" xml:space="preserve">
+    <value>System.Windows.Forms.CheckBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;applyFileNameExclusionCheckBox.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;applyFileNameExclusionCheckBox.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="modelsComboBox.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Bottom, Left, Right</value>
+  </data>
+  <metadata name="modelBindingSource.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>688, 17</value>
   </metadata>
-  <metadata name="menuStrip1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>505, 17</value>
+  <data name="modelsComboBox.Location" type="System.Drawing.Point, System.Drawing">
+    <value>12, 391</value>
+  </data>
+  <data name="modelsComboBox.Size" type="System.Drawing.Size, System.Drawing">
+    <value>760, 21</value>
+  </data>
+  <data name="modelsComboBox.TabIndex" type="System.Int32, mscorlib">
+    <value>11</value>
+  </data>
+  <data name="&gt;&gt;modelsComboBox.Name" xml:space="preserve">
+    <value>modelsComboBox</value>
+  </data>
+  <data name="&gt;&gt;modelsComboBox.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ComboBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;modelsComboBox.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;modelsComboBox.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="addTestModelButton.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Bottom, Left</value>
+  </data>
+  <data name="addTestModelButton.Location" type="System.Drawing.Point, System.Drawing">
+    <value>12, 426</value>
+  </data>
+  <data name="addTestModelButton.Size" type="System.Drawing.Size, System.Drawing">
+    <value>94, 23</value>
+  </data>
+  <data name="addTestModelButton.TabIndex" type="System.Int32, mscorlib">
+    <value>12</value>
+  </data>
+  <data name="addTestModelButton.Text" xml:space="preserve">
+    <value>Add test model</value>
+  </data>
+  <data name="addTestModelButton.Visible" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="&gt;&gt;addTestModelButton.Name" xml:space="preserve">
+    <value>addTestModelButton</value>
+  </data>
+  <data name="&gt;&gt;addTestModelButton.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;addTestModelButton.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;addTestModelButton.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
   </metadata>
-  <metadata name="modelCreatorBindingSource.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>866, 17</value>
-  </metadata>
-  <metadata name="modelManagementBindingSource.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>182, 56</value>
-  </metadata>
-  <metadata name="$this.TrayHeight" type="System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>172</value>
-  </metadata>
-  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="$this.AutoScaleDimensions" type="System.Drawing.SizeF, System.Drawing">
+    <value>6, 13</value>
+  </data>
+  <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
+    <value>784, 461</value>
+  </data>
   <data name="$this.Icon" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         AAABAAEAlpYAAAEAIABwawEAFgAAACgAAACWAAAALAEAAAEAIAAAAAAAkF8BABMLAAATCwAAAAAAAAAA
@@ -1878,5 +2105,101 @@ System.InvalidOperationException: No process is associated with this object.
         /AD////////////////////////8AP////////////////////////wA////////////////////////
         /AA=
 </value>
+  </data>
+  <data name="$this.MinimumSize" type="System.Drawing.Size, System.Drawing">
+    <value>800, 500</value>
+  </data>
+  <data name="$this.Text" xml:space="preserve">
+    <value>MKVmerge Batcher</value>
+  </data>
+  <data name="&gt;&gt;fileToolStripMenuItem.Name" xml:space="preserve">
+    <value>fileToolStripMenuItem</value>
+  </data>
+  <data name="&gt;&gt;fileToolStripMenuItem.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;importV1UserDatajsonToolStripMenuItem.Name" xml:space="preserve">
+    <value>importV1UserDatajsonToolStripMenuItem</value>
+  </data>
+  <data name="&gt;&gt;importV1UserDatajsonToolStripMenuItem.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;exitToolStripMenuItem.Name" xml:space="preserve">
+    <value>exitToolStripMenuItem</value>
+  </data>
+  <data name="&gt;&gt;exitToolStripMenuItem.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;viewToolStripMenuItem.Name" xml:space="preserve">
+    <value>viewToolStripMenuItem</value>
+  </data>
+  <data name="&gt;&gt;viewToolStripMenuItem.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;modelsToolStripMenuItem.Name" xml:space="preserve">
+    <value>modelsToolStripMenuItem</value>
+  </data>
+  <data name="&gt;&gt;modelsToolStripMenuItem.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;optionsToolStripMenuItem.Name" xml:space="preserve">
+    <value>optionsToolStripMenuItem</value>
+  </data>
+  <data name="&gt;&gt;optionsToolStripMenuItem.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;helpToolStripMenuItem.Name" xml:space="preserve">
+    <value>helpToolStripMenuItem</value>
+  </data>
+  <data name="&gt;&gt;helpToolStripMenuItem.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;aboutToolStripMenuItem.Name" xml:space="preserve">
+    <value>aboutToolStripMenuItem</value>
+  </data>
+  <data name="&gt;&gt;aboutToolStripMenuItem.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;mainDataBindingSource.Name" xml:space="preserve">
+    <value>mainDataBindingSource</value>
+  </data>
+  <data name="&gt;&gt;mainDataBindingSource.Type" xml:space="preserve">
+    <value>System.Windows.Forms.BindingSource, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;reverseSelectionToolStripMenuItem.Name" xml:space="preserve">
+    <value>reverseSelectionToolStripMenuItem</value>
+  </data>
+  <data name="&gt;&gt;reverseSelectionToolStripMenuItem.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;clearSelectionToolStripMenuItem.Name" xml:space="preserve">
+    <value>clearSelectionToolStripMenuItem</value>
+  </data>
+  <data name="&gt;&gt;clearSelectionToolStripMenuItem.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;videoFileBindingSource.Name" xml:space="preserve">
+    <value>videoFileBindingSource</value>
+  </data>
+  <data name="&gt;&gt;videoFileBindingSource.Type" xml:space="preserve">
+    <value>System.Windows.Forms.BindingSource, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;optionsDataBindingSource.Name" xml:space="preserve">
+    <value>optionsDataBindingSource</value>
+  </data>
+  <data name="&gt;&gt;optionsDataBindingSource.Type" xml:space="preserve">
+    <value>System.Windows.Forms.BindingSource, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;modelBindingSource.Name" xml:space="preserve">
+    <value>modelBindingSource</value>
+  </data>
+  <data name="&gt;&gt;modelBindingSource.Type" xml:space="preserve">
+    <value>System.Windows.Forms.BindingSource, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;$this.Name" xml:space="preserve">
+    <value>MainForm</value>
+  </data>
+  <data name="&gt;&gt;$this.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Form, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
 </root>
