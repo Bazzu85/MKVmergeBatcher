@@ -1907,4 +1907,7 @@
   <data name="$this.Text" xml:space="preserve">
     <value>Coda</value>
   </data>
+  <data name="autoClearErrorJobsToolStripMenuItem.Text" xml:space="preserve">
+    <value>Rimuovi automaticamente i job in stato "Errore"?</value>
+  </data>
 </root>

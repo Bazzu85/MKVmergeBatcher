@@ -1798,4 +1798,7 @@
   <data name="$this.Text" xml:space="preserve">
     <value>Opzioni</value>
   </data>
+  <data name="autoClearErrorJobsCheckBox.Text" xml:space="preserve">
+    <value>Rimuovi automaticamente i job in stato "Errore"?</value>
+  </data>
 </root>

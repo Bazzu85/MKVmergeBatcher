@@ -57,6 +57,7 @@ namespace MKVmergeBatcher.src.options
             this.addExtensionButton = new System.Windows.Forms.Button();
             this.queueTabPage = new System.Windows.Forms.TabPage();
             this.replaceExistingDestinationFilesCheckBox = new System.Windows.Forms.CheckBox();
+            this.autoClearErrorJobsCheckBox = new System.Windows.Forms.CheckBox();
             this.autoClearWarningJobsCheckBox = new System.Windows.Forms.CheckBox();
             this.autoClearOkJobsCheckBox = new System.Windows.Forms.CheckBox();
             this.deleteIncompleteFilesCheckBox = new System.Windows.Forms.CheckBox();
@@ -90,8 +91,8 @@ namespace MKVmergeBatcher.src.options
             // 
             // mkvMergeLocationTextBox
             // 
-            resources.ApplyResources(this.mkvMergeLocationTextBox, "mkvMergeLocationTextBox");
             this.mkvMergeLocationTextBox.AllowDrop = true;
+            resources.ApplyResources(this.mkvMergeLocationTextBox, "mkvMergeLocationTextBox");
             this.mkvMergeLocationTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.optionsDataBindingSource, "mkvMergeLocation", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
             this.mkvMergeLocationTextBox.Name = "mkvMergeLocationTextBox";
             this.mkvMergeLocationTextBox.DragDrop += new System.Windows.Forms.DragEventHandler(this.mkvMergeLocationTextBox_DragDrop);
@@ -108,11 +109,11 @@ namespace MKVmergeBatcher.src.options
             // 
             // logLevelsComboBox
             // 
-            resources.ApplyResources(this.logLevelsComboBox, "logLevelsComboBox");
             this.logLevelsComboBox.DataSource = this.logLevelBindingSource;
             this.logLevelsComboBox.DisplayMember = "logLevel";
             this.logLevelsComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.logLevelsComboBox.FormattingEnabled = true;
+            resources.ApplyResources(this.logLevelsComboBox, "logLevelsComboBox");
             this.logLevelsComboBox.Name = "logLevelsComboBox";
             this.logLevelsComboBox.ValueMember = "logLevel";
             this.logLevelsComboBox.SelectedIndexChanged += new System.EventHandler(this.logLevelsComboBox_SelectedIndexChanged);
@@ -128,11 +129,11 @@ namespace MKVmergeBatcher.src.options
             // 
             // localeComboBox
             // 
-            resources.ApplyResources(this.localeComboBox, "localeComboBox");
             this.localeComboBox.DataSource = this.localeBindingSource;
             this.localeComboBox.DisplayMember = "localeName";
             this.localeComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.localeComboBox.FormattingEnabled = true;
+            resources.ApplyResources(this.localeComboBox, "localeComboBox");
             this.localeComboBox.Name = "localeComboBox";
             this.localeComboBox.ValueMember = "localeCode";
             this.localeComboBox.SelectedIndexChanged += new System.EventHandler(this.localeComboBox_SelectedIndexChanged);
@@ -151,7 +152,6 @@ namespace MKVmergeBatcher.src.options
             // 
             // generalTabPage
             // 
-            resources.ApplyResources(this.generalTabPage, "generalTabPage");
             this.generalTabPage.Controls.Add(this.excludeFileNameContiningGroupBox);
             this.generalTabPage.Controls.Add(this.extensionsGroupBox);
             this.generalTabPage.Controls.Add(this.logLevelLabel);
@@ -161,6 +161,7 @@ namespace MKVmergeBatcher.src.options
             this.generalTabPage.Controls.Add(this.browseMkvMergeLocationButton);
             this.generalTabPage.Controls.Add(this.logLevelsComboBox);
             this.generalTabPage.Controls.Add(this.mkvMergeLocationTextBox);
+            resources.ApplyResources(this.generalTabPage, "generalTabPage");
             this.generalTabPage.Name = "generalTabPage";
             this.generalTabPage.UseVisualStyleBackColor = true;
             // 
@@ -248,8 +249,8 @@ namespace MKVmergeBatcher.src.options
             // 
             // queueTabPage
             // 
-            resources.ApplyResources(this.queueTabPage, "queueTabPage");
             this.queueTabPage.Controls.Add(this.replaceExistingDestinationFilesCheckBox);
+            this.queueTabPage.Controls.Add(this.autoClearErrorJobsCheckBox);
             this.queueTabPage.Controls.Add(this.autoClearWarningJobsCheckBox);
             this.queueTabPage.Controls.Add(this.autoClearOkJobsCheckBox);
             this.queueTabPage.Controls.Add(this.deleteIncompleteFilesCheckBox);
@@ -257,6 +258,7 @@ namespace MKVmergeBatcher.src.options
             this.queueTabPage.Controls.Add(this.moveOkFilesToTextBox);
             this.queueTabPage.Controls.Add(this.moveWarningFilesToLabel);
             this.queueTabPage.Controls.Add(this.moveOkFilesToLabel);
+            resources.ApplyResources(this.queueTabPage, "queueTabPage");
             this.queueTabPage.Name = "queueTabPage";
             this.queueTabPage.UseVisualStyleBackColor = true;
             // 
@@ -266,6 +268,13 @@ namespace MKVmergeBatcher.src.options
             this.replaceExistingDestinationFilesCheckBox.DataBindings.Add(new System.Windows.Forms.Binding("CheckState", this.optionsDataBindingSource, "replaceExistingDestinationFiles", true));
             this.replaceExistingDestinationFilesCheckBox.Name = "replaceExistingDestinationFilesCheckBox";
             this.replaceExistingDestinationFilesCheckBox.UseVisualStyleBackColor = true;
+            // 
+            // autoClearErrorJobsCheckBox
+            // 
+            resources.ApplyResources(this.autoClearErrorJobsCheckBox, "autoClearErrorJobsCheckBox");
+            this.autoClearErrorJobsCheckBox.DataBindings.Add(new System.Windows.Forms.Binding("CheckState", this.optionsDataBindingSource, "autoClearErrorJobs", true));
+            this.autoClearErrorJobsCheckBox.Name = "autoClearErrorJobsCheckBox";
+            this.autoClearErrorJobsCheckBox.UseVisualStyleBackColor = true;
             // 
             // autoClearWarningJobsCheckBox
             // 
@@ -290,14 +299,14 @@ namespace MKVmergeBatcher.src.options
             // 
             // moveWarningFilesToTextBox
             // 
-            resources.ApplyResources(this.moveWarningFilesToTextBox, "moveWarningFilesToTextBox");
             this.moveWarningFilesToTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.optionsDataBindingSource, "moveWarningFilesTo", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
+            resources.ApplyResources(this.moveWarningFilesToTextBox, "moveWarningFilesToTextBox");
             this.moveWarningFilesToTextBox.Name = "moveWarningFilesToTextBox";
             // 
             // moveOkFilesToTextBox
             // 
-            resources.ApplyResources(this.moveOkFilesToTextBox, "moveOkFilesToTextBox");
             this.moveOkFilesToTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.optionsDataBindingSource, "moveOkFilesTo", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
+            resources.ApplyResources(this.moveOkFilesToTextBox, "moveOkFilesToTextBox");
             this.moveOkFilesToTextBox.Name = "moveOkFilesToTextBox";
             // 
             // moveWarningFilesToLabel
@@ -370,5 +379,6 @@ namespace MKVmergeBatcher.src.options
         private System.Windows.Forms.BindingSource excludeFileNameContainingBindingSource;
         private System.Windows.Forms.CheckBox autoClearOkJobsCheckBox;
         private System.Windows.Forms.CheckBox autoClearWarningJobsCheckBox;
+        private System.Windows.Forms.CheckBox autoClearErrorJobsCheckBox;
     }
 }

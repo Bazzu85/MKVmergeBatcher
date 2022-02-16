@@ -134,6 +134,15 @@ namespace MKVmergeBatcher.src.legacy
             #region deleteIncompleteFile
             MainForm.optionsData.deleteIncompleteFiles = userData.options.deleteIncompleteFile;
             #endregion
+            #region autoClearOkJobs
+            MainForm.optionsData.autoClearOkJobs = userData.modelCreator.additionalFlags.autoClearOkJobs;
+            #endregion
+            #region autoClearWarningJobs
+            MainForm.optionsData.autoClearWarningJobs = userData.modelCreator.additionalFlags.autoClearWarningJobs;
+            #endregion
+            #region autoClearErrorJobs
+            MainForm.optionsData.autoClearWarningJobs = userData.modelCreator.additionalFlags.autoClearWarningJobs;
+            #endregion
             #endregion
 
             #region mainData

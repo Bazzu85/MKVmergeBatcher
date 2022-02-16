@@ -52,6 +52,7 @@ namespace MKVmergeBatcher.src.options
         public Boolean deleteIncompleteFiles { get; set; }
         public Boolean autoClearOkJobs { get; set; }
         public Boolean autoClearWarningJobs { get; set; }
+        public Boolean autoClearErrorJobs { get; set; }
         #endregion
 
         public void SetDefault()

@@ -111,6 +111,10 @@ namespace MKVmergeBatcher.src.queue
             {
                 autoClearWarningJobsToolStripMenuItem.Checked = MainForm.optionsData.autoClearWarningJobs;
             }
+            if (MainForm.optionsData.autoClearErrorJobs != autoClearErrorJobsToolStripMenuItem.Checked)
+            {
+                autoClearErrorJobsToolStripMenuItem.Checked = MainForm.optionsData.autoClearErrorJobs;
+            }
         }
 
         private void SetControlsContent()
@@ -154,12 +158,14 @@ namespace MKVmergeBatcher.src.queue
                 {
                     MainForm.queueManager.ClearJobs(Properties.Resources.OkJobLabel);
                 }
-
                 if (MainForm.optionsData.autoClearWarningJobs)
                 {
                     MainForm.queueManager.ClearJobs(Properties.Resources.WarningJobLabel);
                 }
-
+                if (MainForm.optionsData.autoClearErrorJobs)
+                {
+                    MainForm.queueManager.ClearJobs(Properties.Resources.ErrorJobLabel);
+                }
                 if (MainForm.queueData.processEnded)
                 {
                     totalProgressBar.Value = MainForm.queueData.currentRunningJob;
@@ -572,5 +578,13 @@ namespace MKVmergeBatcher.src.queue
             }
         }
 
+        private void autoClearErrorJobsToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            if (!loadingForm)
+            {
+                MainForm.optionsData.autoClearErrorJobs = autoClearErrorJobsToolStripMenuItem.Checked;
+                queueContextMenuStrip.Show();
+            }
+        }
     }
 }
