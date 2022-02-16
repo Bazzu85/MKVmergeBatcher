@@ -9,7 +9,7 @@ using System.Runtime.InteropServices;
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("")]
 [assembly: AssemblyProduct("MKVmergeBatcher")]
-[assembly: AssemblyCopyright("Copyright ©  2020")]
+[assembly: AssemblyCopyright("Copyright ©  2022")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
 
@@ -19,7 +19,7 @@ using System.Runtime.InteropServices;
 [assembly: ComVisible(false)]
 
 // The following GUID is for the ID of the typelib if this project is exposed to COM
-[assembly: Guid("294ff679-872f-4ede-87f1-5ea0332eaa74")]
+[assembly: Guid("03d8e0c9-b8a3-43d5-a825-b08cdbbd9123")]
 
 // Version information for an assembly consists of the following four values:
 //
@@ -31,5 +31,5 @@ using System.Runtime.InteropServices;
 // You can specify all the values or you can default the Build and Revision Numbers
 // by using the '*' as shown below:
 // [assembly: AssemblyVersion("1.0.*")]
-[assembly: AssemblyVersion("1.1.93.20318")]
-[assembly: AssemblyFileVersion("1.1.92.20318")]
+[assembly: AssemblyVersion("2.0.24.604")]
+[assembly: AssemblyFileVersion("2.0.24.598")]

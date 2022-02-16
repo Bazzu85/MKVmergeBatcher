@@ -1,9 +1,9 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
-VisualStudioVersion = 16.0.30011.22
+VisualStudioVersion = 16.0.31911.196
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MKVmergeBatcher", "MKVmergeBatcher.csproj", "{294FF679-872F-4EDE-87F1-5EA0332EAA74}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MKVmergeBatcher", "MKVmergeBatcher.csproj", "{03D8E0C9-B8A3-43D5-A825-B08CDBBD9123}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -11,32 +11,21 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{294FF679-872F-4EDE-87F1-5EA0332EAA74}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{294FF679-872F-4EDE-87F1-5EA0332EAA74}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{294FF679-872F-4EDE-87F1-5EA0332EAA74}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{294FF679-872F-4EDE-87F1-5EA0332EAA74}.Release|Any CPU.Build.0 = Release|Any CPU
+		{03D8E0C9-B8A3-43D5-A825-B08CDBBD9123}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{03D8E0C9-B8A3-43D5-A825-B08CDBBD9123}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{03D8E0C9-B8A3-43D5-A825-B08CDBBD9123}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{03D8E0C9-B8A3-43D5-A825-B08CDBBD9123}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
-		SolutionGuid = {3BE86D62-41B9-4CF0-BB7D-089A27788D0D}
+		SolutionGuid = {FFDCC5B8-F772-47E1-89D1-FF2B5A03D005}
 	EndGlobalSection
 	GlobalSection(AutomaticVersions) = postSolution
-		UpdateAssemblyVersion.Debug|Any CPU = True
-		UpdateAssemblyFileVersion.Debug|Any CPU = True
-		UpdateAssemblyInfoVersion.Debug|Any CPU = True
-		ShouldCreateLogs.Debug|Any CPU = True
-		AssemblyVersionSettings.Debug|Any CPU = None.None.None.Increment
-		AssemblyFileVersionSettings.Debug|Any CPU = None.None.None.Increment
-		AssemblyInfoVersionSettings.Debug|Any CPU = None.None.None.Increment
-		UpdatePackageVersion.Debug|Any CPU = False
-		AssemblyInfoVersionType.Debug|Any CPU = SettingsVersion
-		InheritWinAppVersionFrom.Debug|Any CPU = None
 		UpdateAssemblyVersion.Release|Any CPU = True
 		UpdateAssemblyFileVersion.Release|Any CPU = True
 		UpdateAssemblyInfoVersion.Release|Any CPU = True
-		ShouldCreateLogs.Release|Any CPU = True
 		AssemblyVersionSettings.Release|Any CPU = None.None.Increment.None
 		AssemblyFileVersionSettings.Release|Any CPU = None.None.Increment.None
 		AssemblyInfoVersionSettings.Release|Any CPU = None.None.Increment.None
