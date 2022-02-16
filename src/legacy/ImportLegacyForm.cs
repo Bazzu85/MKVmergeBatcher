@@ -60,14 +60,11 @@ namespace MKVmergeBatcher.src.legacy
             Logger.Trace(System.Reflection.MethodBase.GetCurrentMethod().Name);
             if (String.IsNullOrEmpty(importLegacyData.oldUserDataJson))
             {
-                importLegacyData.oldUserDataJson = Directory.GetCurrentDirectory();
+                importLegacyData.oldUserDataJson = Directory.GetCurrentDirectory() + "\\";
             }
             OpenFileDialog openFileDialog = new OpenFileDialog()
             {
                 InitialDirectory = Path.GetDirectoryName(importLegacyData.oldUserDataJson),
-                ValidateNames = false,
-                CheckFileExists = false,
-                CheckPathExists = true,
                 Filter = "json files (*.json)|*.json"
             }
             ;

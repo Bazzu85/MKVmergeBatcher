@@ -109,7 +109,7 @@ namespace MKVmergeBatcher.src.legacy
             this.importLabel.Text = "Working on model 0 of 0";
             this.importLabel.Visible = false;
             // 
-            // ImportLegacyDataForm
+            // ImportLegacyForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -122,7 +122,7 @@ namespace MKVmergeBatcher.src.legacy
             this.Controls.Add(this.oldUserDataLabel);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MinimumSize = new System.Drawing.Size(450, 130);
-            this.Name = "ImportLegacyDataForm";
+            this.Name = "ImportLegacyForm";
             this.Text = "Import";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.ImportLegacyDataForm_FormClosing);
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.ImportLegacyDataForm_FormClosed);
