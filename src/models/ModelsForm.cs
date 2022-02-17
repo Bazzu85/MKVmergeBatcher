@@ -200,6 +200,7 @@ namespace MKVmergeBatcher.src.models
             if (addEditModelForm.DialogResult == DialogResult.OK)
             {
                 MainForm.modelsData.modelList.Add(addEditModelForm.GetModel());
+                MainForm.modelsJson.WriteModelsJson();
             }
         }
 
@@ -235,6 +236,7 @@ namespace MKVmergeBatcher.src.models
                 if (addEditModelForm.DialogResult == DialogResult.OK)
                 {
                     MainForm.modelsData.modelList[modelsListBox.SelectedIndex] = addEditModelForm.GetModel();
+                    MainForm.modelsJson.WriteModelsJson();
                 }
             }
         }
