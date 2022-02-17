@@ -195,6 +195,12 @@
   <data name="resetAllErrorJobsToolStripMenuItem.Text" xml:space="preserve">
     <value>Reset all Error Jobs</value>
   </data>
+  <data name="clearAllPendingJobsToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>269, 22</value>
+  </data>
+  <data name="clearAllPendingJobsToolStripMenuItem.Text" xml:space="preserve">
+    <value>Clear all Pending Jobs</value>
+  </data>
   <data name="clearAllOkJobsToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
     <value>269, 22</value>
   </data>
@@ -232,7 +238,7 @@
     <value>Automatically remove Error jobs?</value>
   </data>
   <data name="queueContextMenuStrip.Size" type="System.Drawing.Size, System.Drawing">
-    <value>270, 246</value>
+    <value>270, 268</value>
   </data>
   <data name="&gt;&gt;queueContextMenuStrip.Name" xml:space="preserve">
     <value>queueContextMenuStrip</value>
@@ -2544,6 +2550,12 @@
   <data name="&gt;&gt;autoClearWarningJobsToolStripMenuItem.Type" xml:space="preserve">
     <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
+  <data name="&gt;&gt;autoClearErrorJobsToolStripMenuItem.Name" xml:space="preserve">
+    <value>autoClearErrorJobsToolStripMenuItem</value>
+  </data>
+  <data name="&gt;&gt;autoClearErrorJobsToolStripMenuItem.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
   <data name="&gt;&gt;jobBindingSource.Name" xml:space="preserve">
     <value>jobBindingSource</value>
   </data>
@@ -2568,10 +2580,10 @@
   <data name="&gt;&gt;queueDataBindingSource.Type" xml:space="preserve">
     <value>System.Windows.Forms.BindingSource, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;autoClearErrorJobsToolStripMenuItem.Name" xml:space="preserve">
-    <value>autoClearErrorJobsToolStripMenuItem</value>
+  <data name="&gt;&gt;clearAllPendingJobsToolStripMenuItem.Name" xml:space="preserve">
+    <value>clearAllPendingJobsToolStripMenuItem</value>
   </data>
-  <data name="&gt;&gt;autoClearErrorJobsToolStripMenuItem.Type" xml:space="preserve">
+  <data name="&gt;&gt;clearAllPendingJobsToolStripMenuItem.Type" xml:space="preserve">
     <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;$this.Name" xml:space="preserve">
@@ -2579,5 +2591,8 @@
   </data>
   <data name="&gt;&gt;$this.Type" xml:space="preserve">
     <value>System.Windows.Forms.Form, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="stopButton.ToolTip" xml:space="preserve">
+    <value>Stop the running queue</value>
   </data>
 </root>

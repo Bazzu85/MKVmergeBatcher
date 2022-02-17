@@ -124,6 +124,15 @@ namespace MKVmergeBatcher.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Another instance is currently running. Closing this one..
+        /// </summary>
+        internal static string AnotherInstanceIsCurrentlyRunning {
+            get {
+                return ResourceManager.GetString("AnotherInstanceIsCurrentlyRunning", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Are you sure?.
         /// </summary>
         internal static string AreYouSure {

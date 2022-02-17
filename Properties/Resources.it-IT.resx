@@ -312,4 +312,7 @@
   <data name="NothingToPutInBat" xml:space="preserve">
     <value>Nessun job da mettere nel file Bat</value>
   </data>
+  <data name="AnotherInstanceIsCurrentlyRunning" xml:space="preserve">
+    <value>Un'altra istanza dell'applicazione è in esecuzione. Questa verrà chiusa.</value>
+  </data>
 </root>

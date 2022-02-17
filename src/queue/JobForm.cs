@@ -10,6 +10,7 @@ namespace MKVmergeBatcher.src.queue
         public LocaleManager localeManager = new LocaleManager();
 
         public int jobIndex;
+        public bool jobNoLongerAvailable = false;
         public JobForm(int inputJobIndex)
         {
             Logger.Trace(System.Reflection.MethodBase.GetCurrentMethod().Name);
@@ -57,18 +58,26 @@ namespace MKVmergeBatcher.src.queue
 
             if (MainForm.queueData.running)
             {
-                if (MainForm.queueData.currentRunningJobIndex >= 0)
+                // if the queue is running and we are watching the running job, update the output
+                // otherwise, if the current job is already executed disable the timer
+                if (MainForm.queueData.currentRunningJobIndex == jobIndex)
                 {
                     outputTextBox.Text = "";
                     outputTextBox.AppendText(MainForm.queueData.jobList[jobIndex].output);
+                } else
+                {
+                    if (MainForm.queueData.jobList[jobIndex].jobExecuted)
+                    {
+                        refreshTimer.Enabled = false;
+                    }
                 }
             }
             else
             {
                 if (jobIndex > MainForm.queueData.jobList.Count - 1)
                 {
-                    MessageBox.Show(this, Properties.Resources.JobNoLongerAvailable, Properties.Resources.WarningLabel, MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    this.Close();
+                    jobNoLongerAvailable = true;
+                    return;
                 }
                 else
                 {
@@ -90,6 +99,10 @@ namespace MKVmergeBatcher.src.queue
         private void JobForm_FormClosed(object sender, FormClosedEventArgs e)
         {
             Logger.Trace(System.Reflection.MethodBase.GetCurrentMethod().Name);
+            if (jobNoLongerAvailable)
+            {
+                MessageBox.Show(this, Properties.Resources.JobNoLongerAvailable, Properties.Resources.WarningLabel, MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
             SaveWindowPositionAndSize();
         }
         private void SaveWindowPositionAndSize()
@@ -111,10 +124,13 @@ namespace MKVmergeBatcher.src.queue
 
         private void refreshTimer_Tick(object sender, EventArgs e)
         {
-            refreshTimer.Enabled = false;
             SetControlsContent();
             ResetFormBindings();
-            refreshTimer.Enabled = true;
+            if (jobNoLongerAvailable)
+            {
+                this.Close();
+                return;
+            }
         }
     }
 }

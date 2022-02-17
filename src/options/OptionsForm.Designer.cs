@@ -65,6 +65,7 @@ namespace MKVmergeBatcher.src.options
             this.moveOkFilesToTextBox = new System.Windows.Forms.TextBox();
             this.moveWarningFilesToLabel = new System.Windows.Forms.Label();
             this.moveOkFilesToLabel = new System.Windows.Forms.Label();
+            this.allowMultipleInstacesCheckBox = new System.Windows.Forms.CheckBox();
             ((System.ComponentModel.ISupportInitialize)(this.optionsDataBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.logLevelBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.localeBindingSource)).BeginInit();
@@ -152,6 +153,7 @@ namespace MKVmergeBatcher.src.options
             // 
             // generalTabPage
             // 
+            this.generalTabPage.Controls.Add(this.allowMultipleInstacesCheckBox);
             this.generalTabPage.Controls.Add(this.excludeFileNameContiningGroupBox);
             this.generalTabPage.Controls.Add(this.extensionsGroupBox);
             this.generalTabPage.Controls.Add(this.logLevelLabel);
@@ -319,6 +321,13 @@ namespace MKVmergeBatcher.src.options
             resources.ApplyResources(this.moveOkFilesToLabel, "moveOkFilesToLabel");
             this.moveOkFilesToLabel.Name = "moveOkFilesToLabel";
             // 
+            // allowMultipleInstacesCheckBox
+            // 
+            resources.ApplyResources(this.allowMultipleInstacesCheckBox, "allowMultipleInstacesCheckBox");
+            this.allowMultipleInstacesCheckBox.DataBindings.Add(new System.Windows.Forms.Binding("CheckState", this.optionsDataBindingSource, "allowMultipleInstaces", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
+            this.allowMultipleInstacesCheckBox.Name = "allowMultipleInstacesCheckBox";
+            this.allowMultipleInstacesCheckBox.UseVisualStyleBackColor = true;
+            // 
             // OptionsForm
             // 
             resources.ApplyResources(this, "$this");
@@ -380,5 +389,6 @@ namespace MKVmergeBatcher.src.options
         private System.Windows.Forms.CheckBox autoClearOkJobsCheckBox;
         private System.Windows.Forms.CheckBox autoClearWarningJobsCheckBox;
         private System.Windows.Forms.CheckBox autoClearErrorJobsCheckBox;
+        private System.Windows.Forms.CheckBox allowMultipleInstacesCheckBox;
     }
 }

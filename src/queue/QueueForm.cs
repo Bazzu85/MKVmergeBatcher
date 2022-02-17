@@ -56,7 +56,6 @@ namespace MKVmergeBatcher.src.queue
             Logger.Trace(System.Reflection.MethodBase.GetCurrentMethod().Name);
 
             //Console.WriteLine("queueForm: tick");
-            queueTimer.Enabled = false;
             // Check if the locale is changed and update it
             //Console.WriteLine("queueForm: UpdateLocale()");
             UpdateLocale();
@@ -83,7 +82,6 @@ namespace MKVmergeBatcher.src.queue
             }
             //Console.WriteLine("queueForm: end tick");
 
-            queueTimer.Enabled = true;
 
         }
         private void SetDataSource()
@@ -450,6 +448,12 @@ namespace MKVmergeBatcher.src.queue
             }
         }
 
+        private void clearAllPendingJobsToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Logger.Trace(System.Reflection.MethodBase.GetCurrentMethod().Name);
+            MainForm.queueManager.ClearJobs(Properties.Resources.PendingJobLabel);
+            jobsDataGridView.Refresh();
+        }
         private void clearAllOkJobsToolStripMenuItem_Click(object sender, EventArgs e)
         {
             Logger.Trace(System.Reflection.MethodBase.GetCurrentMethod().Name);

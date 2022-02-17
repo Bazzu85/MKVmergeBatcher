@@ -136,6 +136,7 @@ namespace MKVmergeBatcher.src.queue
             job.fileNameWithoutExtension = Path.GetFileNameWithoutExtension(file);
             job.percentage = 0;
             job.jobStatus = Properties.Resources.PendingJobLabel;
+            job.jobExecuted = false;
             job.command = MainForm.modelsData.modelList[MainForm.modelsData.lastModelUsed].command;
 
             job.command = job.command.Replace("||mkvmergePath||", MainForm.optionsData.mkvMergeLocation);
@@ -424,6 +425,7 @@ namespace MKVmergeBatcher.src.queue
                             MainForm.queueData.jobList[MainForm.queueData.currentRunningJobIndex].jobStatus = Properties.Resources.ErrorJobLabel;
                             break;
                     }
+                    MainForm.queueData.jobList[MainForm.queueData.currentRunningJobIndex].jobExecuted = true;
                 }
                 catch (InvalidOperationException ex)
                 {
@@ -431,7 +433,6 @@ namespace MKVmergeBatcher.src.queue
 
                 }
                 wait = false;
-                //progressPercentage = (workingFile * 100) / totalFileToExecute;
                 if (MainForm.queueData.currentRunningJob != MainForm.queueData.totalJobsToExec)
                 {
                     Thread.Sleep(1000);
@@ -453,7 +454,7 @@ namespace MKVmergeBatcher.src.queue
 
             foreach (QueueData.Job job in MainForm.queueData.jobList)
             {
-                if (job.jobStatus == Properties.Resources.PendingJobLabel || job.jobStatus == Properties.Resources.RunningJobLabel)
+                if (!job.jobExecuted)
                 {
                     string cmdLine = job.command;
                     cmdLine += ">> " + Path.GetFileNameWithoutExtension(batFile) + ".log";
@@ -474,14 +475,8 @@ namespace MKVmergeBatcher.src.queue
             int i = 0;
             foreach (QueueData.Job job in MainForm.queueData.jobList)
             {
-                if (job.jobStatus == Properties.Resources.PendingJobLabel)
+                if (!job.jobExecuted)
                 {
-                    MainForm.queueData.currentRunningJobIndex = i;
-                    break;
-                }
-                if (job.jobStatus == Properties.Resources.RunningJobLabel)
-                {
-                    job.jobStatus = Properties.Resources.PendingJobLabel;
                     MainForm.queueData.currentRunningJobIndex = i;
                     break;
                 }
@@ -579,6 +574,7 @@ namespace MKVmergeBatcher.src.queue
                 if (job.jobStatus == inputJobStatus)
                 {
                     job.jobStatus = Properties.Resources.PendingJobLabel;
+                    job.jobExecuted = false;
                     job.percentage = 0;
                 }
             }
@@ -609,13 +605,15 @@ namespace MKVmergeBatcher.src.queue
 
             MainForm.queueData.currentRunningJob = 0;
             MainForm.queueData.currentRunningJobIndex = -1;
-            MainForm.queueData.totalJobsToExec = 0;
+            
             MainForm.queueData.warnings = 0;
             MainForm.queueData.errors = 0;
 
+            //update the total jobs number
+            MainForm.queueData.totalJobsToExec = 0;
             foreach (QueueData.Job job in MainForm.queueData.jobList)
             {
-                if (job.jobStatus == Properties.Resources.PendingJobLabel || job.jobStatus == Properties.Resources.RunningJobLabel)
+                if (!job.jobExecuted)
                 {
                     MainForm.queueData.totalJobsToExec++;
                 }

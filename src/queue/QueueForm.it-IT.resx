@@ -310,7 +310,7 @@
 </value>
   </data>
   <data name="stopButton.ToolTip" xml:space="preserve">
-    <value />
+    <value>Ferma l'esecuzione</value>
   </data>
   <data name="createBatButton.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
@@ -1909,5 +1909,29 @@
   </data>
   <data name="autoClearErrorJobsToolStripMenuItem.Text" xml:space="preserve">
     <value>Rimuovi automaticamente i job in stato "Errore"?</value>
+  </data>
+  <data name="fileFullPathDataGridViewTextBoxColumn.HeaderText" xml:space="preserve">
+    <value>fileFullPath</value>
+  </data>
+  <data name="fileNameDataGridViewTextBoxColumn.HeaderText" xml:space="preserve">
+    <value>File</value>
+  </data>
+  <data name="stopButton.Text" xml:space="preserve">
+    <value>Stop</value>
+  </data>
+  <data name="fileNameWithoutExtensionDataGridViewTextBoxColumn.HeaderText" xml:space="preserve">
+    <value>fileNameWithoutExtension</value>
+  </data>
+  <data name="warningLabel.Text" xml:space="preserve">
+    <value>Warning: 0</value>
+  </data>
+  <data name="startButton.Text" xml:space="preserve">
+    <value>Start</value>
+  </data>
+  <data name="outputDataGridViewTextBoxColumn.HeaderText" xml:space="preserve">
+    <value>output</value>
+  </data>
+  <data name="clearAllPendingJobsToolStripMenuItem.Text" xml:space="preserve">
+    <value>Elimina tutti i job in sospeso</value>
   </data>
 </root>

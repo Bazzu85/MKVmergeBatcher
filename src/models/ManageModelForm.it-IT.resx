@@ -1892,4 +1892,22 @@
   <data name="$this.Text" xml:space="preserve">
     <value>Modello</value>
   </data>
+  <data name="defaultFlagDataGridViewCheckBoxColumn.HeaderText" xml:space="preserve">
+    <value>Default</value>
+  </data>
+  <data name="forcedFlagDataGridViewCheckBoxColumn.HeaderText" xml:space="preserve">
+    <value>Forced</value>
+  </data>
+  <data name="languageDataGridViewTextBoxColumn.HeaderText" xml:space="preserve">
+    <value>Language Code</value>
+  </data>
+  <data name="noAttachmentsCheckBox.Text" xml:space="preserve">
+    <value>--no-attachments</value>
+  </data>
+  <data name="noGlobalTagsCheckBox.Text" xml:space="preserve">
+    <value>--no-global-tags</value>
+  </data>
+  <data name="noTrackTagsCheckBox.Text" xml:space="preserve">
+    <value>--no-track-tags</value>
+  </data>
 </root>

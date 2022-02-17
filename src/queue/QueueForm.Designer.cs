@@ -50,6 +50,7 @@ namespace MKVmergeBatcher.src.queue
             this.clearAllErrorJobsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.autoClearOkJobsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.autoClearWarningJobsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.autoClearErrorJobsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.jobBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.modelsListButtonsPanel = new System.Windows.Forms.Panel();
             this.moveJobDownButton = new System.Windows.Forms.Button();
@@ -71,7 +72,7 @@ namespace MKVmergeBatcher.src.queue
             this.outputTextBox = new System.Windows.Forms.TextBox();
             this.queueTimer = new System.Windows.Forms.Timer(this.components);
             this.queueDataBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.autoClearErrorJobsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.clearAllPendingJobsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             ((System.ComponentModel.ISupportInitialize)(this.jobsDataGridView)).BeginInit();
             this.queueContextMenuStrip.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.jobBindingSource)).BeginInit();
@@ -176,6 +177,7 @@ namespace MKVmergeBatcher.src.queue
             this.resetAllOkJobsToolStripMenuItem,
             this.resetAllWarningJobsToolStripMenuItem,
             this.resetAllErrorJobsToolStripMenuItem,
+            this.clearAllPendingJobsToolStripMenuItem,
             this.clearAllOkJobsToolStripMenuItem,
             this.clearAllWarningJobsToolStripMenuItem,
             this.clearAllErrorJobsToolStripMenuItem,
@@ -240,6 +242,13 @@ namespace MKVmergeBatcher.src.queue
             this.autoClearWarningJobsToolStripMenuItem.Name = "autoClearWarningJobsToolStripMenuItem";
             resources.ApplyResources(this.autoClearWarningJobsToolStripMenuItem, "autoClearWarningJobsToolStripMenuItem");
             this.autoClearWarningJobsToolStripMenuItem.Click += new System.EventHandler(this.autoClearWarningJobsToolStripMenuItem_Click);
+            // 
+            // autoClearErrorJobsToolStripMenuItem
+            // 
+            this.autoClearErrorJobsToolStripMenuItem.CheckOnClick = true;
+            this.autoClearErrorJobsToolStripMenuItem.Name = "autoClearErrorJobsToolStripMenuItem";
+            resources.ApplyResources(this.autoClearErrorJobsToolStripMenuItem, "autoClearErrorJobsToolStripMenuItem");
+            this.autoClearErrorJobsToolStripMenuItem.Click += new System.EventHandler(this.autoClearErrorJobsToolStripMenuItem_Click);
             // 
             // jobBindingSource
             // 
@@ -381,12 +390,11 @@ namespace MKVmergeBatcher.src.queue
             // 
             this.queueDataBindingSource.DataSource = typeof(MKVmergeBatcher.src.queue.QueueData);
             // 
-            // autoClearErrorJobsToolStripMenuItem
+            // clearAllPendingJobsToolStripMenuItem
             // 
-            this.autoClearErrorJobsToolStripMenuItem.CheckOnClick = true;
-            this.autoClearErrorJobsToolStripMenuItem.Name = "autoClearErrorJobsToolStripMenuItem";
-            resources.ApplyResources(this.autoClearErrorJobsToolStripMenuItem, "autoClearErrorJobsToolStripMenuItem");
-            this.autoClearErrorJobsToolStripMenuItem.Click += new System.EventHandler(this.autoClearErrorJobsToolStripMenuItem_Click);
+            this.clearAllPendingJobsToolStripMenuItem.Name = "clearAllPendingJobsToolStripMenuItem";
+            resources.ApplyResources(this.clearAllPendingJobsToolStripMenuItem, "clearAllPendingJobsToolStripMenuItem");
+            this.clearAllPendingJobsToolStripMenuItem.Click += new System.EventHandler(this.clearAllPendingJobsToolStripMenuItem_Click);
             // 
             // QueueForm
             // 
@@ -454,5 +462,6 @@ namespace MKVmergeBatcher.src.queue
         private System.Windows.Forms.ToolStripMenuItem autoClearOkJobsToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem autoClearWarningJobsToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem autoClearErrorJobsToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem clearAllPendingJobsToolStripMenuItem;
     }
 }

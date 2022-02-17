@@ -1801,4 +1801,7 @@
   <data name="autoClearErrorJobsCheckBox.Text" xml:space="preserve">
     <value>Rimuovi automaticamente i job in stato "Errore"?</value>
   </data>
+  <data name="allowMultipleInstacesCheckBox.Text" xml:space="preserve">
+    <value>Permetti instanze multiple dell'applicazione?</value>
+  </data>
 </root>

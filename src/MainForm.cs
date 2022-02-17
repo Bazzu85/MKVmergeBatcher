@@ -33,15 +33,26 @@ namespace MKVmergeBatcher.src
         public static QueueForm queueForm;
         public static FormWindowState lastWindowState = new FormWindowState();
 
-
-
         public MainForm()
         {
             InitializeComponent();
             ReadConfigFiles();
+            CheckInstance();
             RestoreWindowPositionAndSize();
             SetDataSource();
             SetControlsContent();
+        }
+
+        private void CheckInstance()
+        {
+            if (!optionsData.allowMultipleInstaces)
+            {
+                if (System.Diagnostics.Process.GetProcessesByName(System.IO.Path.GetFileNameWithoutExtension(System.Reflection.Assembly.GetEntryAssembly().Location)).Count() > 1)
+                {
+                    MessageBox.Show(Properties.Resources.AnotherInstanceIsCurrentlyRunning, Properties.Resources.ErrorLabel, MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    System.Diagnostics.Process.GetCurrentProcess().Kill();
+                }
+            }
         }
 
         private void ReadConfigFiles()
@@ -148,6 +159,7 @@ namespace MKVmergeBatcher.src
             Logger.Trace(System.Reflection.MethodBase.GetCurrentMethod().Name);
             modelsForm = new ModelsForm(this);
             modelsForm.ShowDialog();
+            modelsJson.WriteModelsJson();
         }
         private void importV1UserDatajsonToolStripMenuItem_Click(object sender, EventArgs e)
         {

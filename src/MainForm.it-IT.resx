@@ -1786,4 +1786,16 @@
         /AA=
 </value>
   </data>
+  <data name="$this.Text" xml:space="preserve">
+    <value>MKVmerge Batcher</value>
+  </data>
+  <data name="fileToolStripMenuItem.Text" xml:space="preserve">
+    <value>File</value>
+  </data>
+  <data name="helpToolStripMenuItem.Text" xml:space="preserve">
+    <value>?</value>
+  </data>
+  <data name="menuStrip.Text" xml:space="preserve">
+    <value>Menu</value>
+  </data>
 </root>

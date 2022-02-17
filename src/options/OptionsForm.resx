@@ -144,7 +144,7 @@
     <value>generalTabPage</value>
   </data>
   <data name="&gt;&gt;label1.ZOrder" xml:space="preserve">
-    <value>4</value>
+    <value>5</value>
   </data>
   <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
   <data name="browseMkvMergeLocationButton.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
@@ -172,14 +172,14 @@
     <value>generalTabPage</value>
   </data>
   <data name="&gt;&gt;browseMkvMergeLocationButton.ZOrder" xml:space="preserve">
-    <value>6</value>
-  </data>
-  <data name="mkvMergeLocationTextBox.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
-    <value>Top, Bottom, Left, Right</value>
+    <value>7</value>
   </data>
   <metadata name="optionsDataBindingSource.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>17, 17</value>
   </metadata>
+  <data name="mkvMergeLocationTextBox.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Bottom, Left, Right</value>
+  </data>
   <data name="mkvMergeLocationTextBox.Location" type="System.Drawing.Point, System.Drawing">
     <value>116, 39</value>
   </data>
@@ -199,8 +199,11 @@
     <value>generalTabPage</value>
   </data>
   <data name="&gt;&gt;mkvMergeLocationTextBox.ZOrder" xml:space="preserve">
-    <value>8</value>
+    <value>9</value>
   </data>
+  <metadata name="optionsDataBindingSource.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>17, 17</value>
+  </metadata>
   <data name="logLevelLabel.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
@@ -226,7 +229,7 @@
     <value>generalTabPage</value>
   </data>
   <data name="&gt;&gt;logLevelLabel.ZOrder" xml:space="preserve">
-    <value>2</value>
+    <value>3</value>
   </data>
   <metadata name="logLevelBindingSource.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>214, 17</value>
@@ -250,8 +253,11 @@
     <value>generalTabPage</value>
   </data>
   <data name="&gt;&gt;logLevelsComboBox.ZOrder" xml:space="preserve">
-    <value>7</value>
+    <value>8</value>
   </data>
+  <metadata name="logLevelBindingSource.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>214, 17</value>
+  </metadata>
   <data name="localeLabel.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
@@ -280,7 +286,7 @@
     <value>generalTabPage</value>
   </data>
   <data name="&gt;&gt;localeLabel.ZOrder" xml:space="preserve">
-    <value>5</value>
+    <value>6</value>
   </data>
   <metadata name="localeBindingSource.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>390, 17</value>
@@ -304,13 +310,373 @@
     <value>generalTabPage</value>
   </data>
   <data name="&gt;&gt;localeComboBox.ZOrder" xml:space="preserve">
-    <value>3</value>
+    <value>4</value>
   </data>
+  <metadata name="localeBindingSource.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>390, 17</value>
+  </metadata>
   <data name="optionsTabControl.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Top, Bottom, Left, Right</value>
   </data>
+  <data name="allowMultipleInstacesCheckBox.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="allowMultipleInstacesCheckBox.Location" type="System.Drawing.Point, System.Drawing">
+    <value>7, 328</value>
+  </data>
+  <data name="allowMultipleInstacesCheckBox.Size" type="System.Drawing.Size, System.Drawing">
+    <value>227, 17</value>
+  </data>
+  <data name="allowMultipleInstacesCheckBox.TabIndex" type="System.Int32, mscorlib">
+    <value>8</value>
+  </data>
+  <data name="allowMultipleInstacesCheckBox.Text" xml:space="preserve">
+    <value>Allow multiple instances of the application?</value>
+  </data>
+  <data name="&gt;&gt;allowMultipleInstacesCheckBox.Name" xml:space="preserve">
+    <value>allowMultipleInstacesCheckBox</value>
+  </data>
+  <data name="&gt;&gt;allowMultipleInstacesCheckBox.Type" xml:space="preserve">
+    <value>System.Windows.Forms.CheckBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;allowMultipleInstacesCheckBox.Parent" xml:space="preserve">
+    <value>generalTabPage</value>
+  </data>
+  <data name="&gt;&gt;allowMultipleInstacesCheckBox.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
   <data name="excludeFileNameContiningGroupBox.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Top, Left, Right</value>
+  </data>
+  <data name="&gt;&gt;newExcludeFileNameContainingTextBox.Name" xml:space="preserve">
+    <value>newExcludeFileNameContainingTextBox</value>
+  </data>
+  <data name="&gt;&gt;newExcludeFileNameContainingTextBox.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;newExcludeFileNameContainingTextBox.Parent" xml:space="preserve">
+    <value>excludeFileNameContiningGroupBox</value>
+  </data>
+  <data name="&gt;&gt;newExcludeFileNameContainingTextBox.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;removeExcludeFileNameContainingButton.Name" xml:space="preserve">
+    <value>removeExcludeFileNameContainingButton</value>
+  </data>
+  <data name="&gt;&gt;removeExcludeFileNameContainingButton.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;removeExcludeFileNameContainingButton.Parent" xml:space="preserve">
+    <value>excludeFileNameContiningGroupBox</value>
+  </data>
+  <data name="&gt;&gt;removeExcludeFileNameContainingButton.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="&gt;&gt;excludeFileNameContainingListBox.Name" xml:space="preserve">
+    <value>excludeFileNameContainingListBox</value>
+  </data>
+  <data name="&gt;&gt;excludeFileNameContainingListBox.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ListBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;excludeFileNameContainingListBox.Parent" xml:space="preserve">
+    <value>excludeFileNameContiningGroupBox</value>
+  </data>
+  <data name="&gt;&gt;excludeFileNameContainingListBox.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="&gt;&gt;addExcludeFileNameContainingButton.Name" xml:space="preserve">
+    <value>addExcludeFileNameContainingButton</value>
+  </data>
+  <data name="&gt;&gt;addExcludeFileNameContainingButton.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;addExcludeFileNameContainingButton.Parent" xml:space="preserve">
+    <value>excludeFileNameContiningGroupBox</value>
+  </data>
+  <data name="&gt;&gt;addExcludeFileNameContainingButton.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="excludeFileNameContiningGroupBox.Location" type="System.Drawing.Point, System.Drawing">
+    <value>7, 196</value>
+  </data>
+  <data name="excludeFileNameContiningGroupBox.Size" type="System.Drawing.Size, System.Drawing">
+    <value>389, 125</value>
+  </data>
+  <data name="excludeFileNameContiningGroupBox.TabIndex" type="System.Int32, mscorlib">
+    <value>7</value>
+  </data>
+  <data name="excludeFileNameContiningGroupBox.Text" xml:space="preserve">
+    <value>Exclude file name containing</value>
+  </data>
+  <data name="&gt;&gt;excludeFileNameContiningGroupBox.Name" xml:space="preserve">
+    <value>excludeFileNameContiningGroupBox</value>
+  </data>
+  <data name="&gt;&gt;excludeFileNameContiningGroupBox.Type" xml:space="preserve">
+    <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;excludeFileNameContiningGroupBox.Parent" xml:space="preserve">
+    <value>generalTabPage</value>
+  </data>
+  <data name="&gt;&gt;excludeFileNameContiningGroupBox.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="extensionsGroupBox.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Left, Right</value>
+  </data>
+  <data name="&gt;&gt;newExtensionTextBox.Name" xml:space="preserve">
+    <value>newExtensionTextBox</value>
+  </data>
+  <data name="&gt;&gt;newExtensionTextBox.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;newExtensionTextBox.Parent" xml:space="preserve">
+    <value>extensionsGroupBox</value>
+  </data>
+  <data name="&gt;&gt;newExtensionTextBox.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;removeExtensionButton.Name" xml:space="preserve">
+    <value>removeExtensionButton</value>
+  </data>
+  <data name="&gt;&gt;removeExtensionButton.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;removeExtensionButton.Parent" xml:space="preserve">
+    <value>extensionsGroupBox</value>
+  </data>
+  <data name="&gt;&gt;removeExtensionButton.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="&gt;&gt;extensionsListBox.Name" xml:space="preserve">
+    <value>extensionsListBox</value>
+  </data>
+  <data name="&gt;&gt;extensionsListBox.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ListBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;extensionsListBox.Parent" xml:space="preserve">
+    <value>extensionsGroupBox</value>
+  </data>
+  <data name="&gt;&gt;extensionsListBox.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="&gt;&gt;addExtensionButton.Name" xml:space="preserve">
+    <value>addExtensionButton</value>
+  </data>
+  <data name="&gt;&gt;addExtensionButton.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;addExtensionButton.Parent" xml:space="preserve">
+    <value>extensionsGroupBox</value>
+  </data>
+  <data name="&gt;&gt;addExtensionButton.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="extensionsGroupBox.Location" type="System.Drawing.Point, System.Drawing">
+    <value>7, 65</value>
+  </data>
+  <data name="extensionsGroupBox.Size" type="System.Drawing.Size, System.Drawing">
+    <value>389, 125</value>
+  </data>
+  <data name="extensionsGroupBox.TabIndex" type="System.Int32, mscorlib">
+    <value>6</value>
+  </data>
+  <data name="extensionsGroupBox.Text" xml:space="preserve">
+    <value>Extensions</value>
+  </data>
+  <data name="&gt;&gt;extensionsGroupBox.Name" xml:space="preserve">
+    <value>extensionsGroupBox</value>
+  </data>
+  <data name="&gt;&gt;extensionsGroupBox.Type" xml:space="preserve">
+    <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;extensionsGroupBox.Parent" xml:space="preserve">
+    <value>generalTabPage</value>
+  </data>
+  <data name="&gt;&gt;extensionsGroupBox.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="generalTabPage.Location" type="System.Drawing.Point, System.Drawing">
+    <value>4, 22</value>
+  </data>
+  <data name="generalTabPage.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>3, 3, 3, 3</value>
+  </data>
+  <data name="generalTabPage.Size" type="System.Drawing.Size, System.Drawing">
+    <value>402, 381</value>
+  </data>
+  <data name="generalTabPage.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="generalTabPage.Text" xml:space="preserve">
+    <value>General Options</value>
+  </data>
+  <data name="&gt;&gt;generalTabPage.Name" xml:space="preserve">
+    <value>generalTabPage</value>
+  </data>
+  <data name="&gt;&gt;generalTabPage.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TabPage, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;generalTabPage.Parent" xml:space="preserve">
+    <value>optionsTabControl</value>
+  </data>
+  <data name="&gt;&gt;generalTabPage.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;replaceExistingDestinationFilesCheckBox.Name" xml:space="preserve">
+    <value>replaceExistingDestinationFilesCheckBox</value>
+  </data>
+  <data name="&gt;&gt;replaceExistingDestinationFilesCheckBox.Type" xml:space="preserve">
+    <value>System.Windows.Forms.CheckBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;replaceExistingDestinationFilesCheckBox.Parent" xml:space="preserve">
+    <value>queueTabPage</value>
+  </data>
+  <data name="&gt;&gt;replaceExistingDestinationFilesCheckBox.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;autoClearErrorJobsCheckBox.Name" xml:space="preserve">
+    <value>autoClearErrorJobsCheckBox</value>
+  </data>
+  <data name="&gt;&gt;autoClearErrorJobsCheckBox.Type" xml:space="preserve">
+    <value>System.Windows.Forms.CheckBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;autoClearErrorJobsCheckBox.Parent" xml:space="preserve">
+    <value>queueTabPage</value>
+  </data>
+  <data name="&gt;&gt;autoClearErrorJobsCheckBox.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="&gt;&gt;autoClearWarningJobsCheckBox.Name" xml:space="preserve">
+    <value>autoClearWarningJobsCheckBox</value>
+  </data>
+  <data name="&gt;&gt;autoClearWarningJobsCheckBox.Type" xml:space="preserve">
+    <value>System.Windows.Forms.CheckBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;autoClearWarningJobsCheckBox.Parent" xml:space="preserve">
+    <value>queueTabPage</value>
+  </data>
+  <data name="&gt;&gt;autoClearWarningJobsCheckBox.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="&gt;&gt;autoClearOkJobsCheckBox.Name" xml:space="preserve">
+    <value>autoClearOkJobsCheckBox</value>
+  </data>
+  <data name="&gt;&gt;autoClearOkJobsCheckBox.Type" xml:space="preserve">
+    <value>System.Windows.Forms.CheckBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;autoClearOkJobsCheckBox.Parent" xml:space="preserve">
+    <value>queueTabPage</value>
+  </data>
+  <data name="&gt;&gt;autoClearOkJobsCheckBox.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="&gt;&gt;deleteIncompleteFilesCheckBox.Name" xml:space="preserve">
+    <value>deleteIncompleteFilesCheckBox</value>
+  </data>
+  <data name="&gt;&gt;deleteIncompleteFilesCheckBox.Type" xml:space="preserve">
+    <value>System.Windows.Forms.CheckBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;deleteIncompleteFilesCheckBox.Parent" xml:space="preserve">
+    <value>queueTabPage</value>
+  </data>
+  <data name="&gt;&gt;deleteIncompleteFilesCheckBox.ZOrder" xml:space="preserve">
+    <value>4</value>
+  </data>
+  <data name="&gt;&gt;moveWarningFilesToTextBox.Name" xml:space="preserve">
+    <value>moveWarningFilesToTextBox</value>
+  </data>
+  <data name="&gt;&gt;moveWarningFilesToTextBox.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;moveWarningFilesToTextBox.Parent" xml:space="preserve">
+    <value>queueTabPage</value>
+  </data>
+  <data name="&gt;&gt;moveWarningFilesToTextBox.ZOrder" xml:space="preserve">
+    <value>5</value>
+  </data>
+  <data name="&gt;&gt;moveOkFilesToTextBox.Name" xml:space="preserve">
+    <value>moveOkFilesToTextBox</value>
+  </data>
+  <data name="&gt;&gt;moveOkFilesToTextBox.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;moveOkFilesToTextBox.Parent" xml:space="preserve">
+    <value>queueTabPage</value>
+  </data>
+  <data name="&gt;&gt;moveOkFilesToTextBox.ZOrder" xml:space="preserve">
+    <value>6</value>
+  </data>
+  <data name="&gt;&gt;moveWarningFilesToLabel.Name" xml:space="preserve">
+    <value>moveWarningFilesToLabel</value>
+  </data>
+  <data name="&gt;&gt;moveWarningFilesToLabel.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;moveWarningFilesToLabel.Parent" xml:space="preserve">
+    <value>queueTabPage</value>
+  </data>
+  <data name="&gt;&gt;moveWarningFilesToLabel.ZOrder" xml:space="preserve">
+    <value>7</value>
+  </data>
+  <data name="&gt;&gt;moveOkFilesToLabel.Name" xml:space="preserve">
+    <value>moveOkFilesToLabel</value>
+  </data>
+  <data name="&gt;&gt;moveOkFilesToLabel.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;moveOkFilesToLabel.Parent" xml:space="preserve">
+    <value>queueTabPage</value>
+  </data>
+  <data name="&gt;&gt;moveOkFilesToLabel.ZOrder" xml:space="preserve">
+    <value>8</value>
+  </data>
+  <data name="queueTabPage.Location" type="System.Drawing.Point, System.Drawing">
+    <value>4, 22</value>
+  </data>
+  <data name="queueTabPage.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>3, 3, 3, 3</value>
+  </data>
+  <data name="queueTabPage.Size" type="System.Drawing.Size, System.Drawing">
+    <value>402, 381</value>
+  </data>
+  <data name="queueTabPage.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="queueTabPage.Text" xml:space="preserve">
+    <value>Queue</value>
+  </data>
+  <data name="&gt;&gt;queueTabPage.Name" xml:space="preserve">
+    <value>queueTabPage</value>
+  </data>
+  <data name="&gt;&gt;queueTabPage.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TabPage, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;queueTabPage.Parent" xml:space="preserve">
+    <value>optionsTabControl</value>
+  </data>
+  <data name="&gt;&gt;queueTabPage.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="optionsTabControl.Location" type="System.Drawing.Point, System.Drawing">
+    <value>12, 12</value>
+  </data>
+  <data name="optionsTabControl.Size" type="System.Drawing.Size, System.Drawing">
+    <value>410, 407</value>
+  </data>
+  <data name="optionsTabControl.TabIndex" type="System.Int32, mscorlib">
+    <value>6</value>
+  </data>
+  <data name="&gt;&gt;optionsTabControl.Name" xml:space="preserve">
+    <value>optionsTabControl</value>
+  </data>
+  <data name="&gt;&gt;optionsTabControl.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TabControl, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;optionsTabControl.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;optionsTabControl.ZOrder" xml:space="preserve">
+    <value>0</value>
   </data>
   <data name="newExcludeFileNameContainingTextBox.Location" type="System.Drawing.Point, System.Drawing">
     <value>7, 19</value>
@@ -366,12 +732,12 @@
   <data name="&gt;&gt;removeExcludeFileNameContainingButton.ZOrder" xml:space="preserve">
     <value>1</value>
   </data>
-  <data name="excludeFileNameContainingListBox.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
-    <value>Top, Left, Right</value>
-  </data>
   <metadata name="excludeFileNameContainingBindingSource.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>735, 17</value>
   </metadata>
+  <data name="excludeFileNameContainingListBox.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Left, Right</value>
+  </data>
   <data name="excludeFileNameContainingListBox.Location" type="System.Drawing.Point, System.Drawing">
     <value>144, 19</value>
   </data>
@@ -393,6 +759,9 @@
   <data name="&gt;&gt;excludeFileNameContainingListBox.ZOrder" xml:space="preserve">
     <value>2</value>
   </data>
+  <metadata name="excludeFileNameContainingBindingSource.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>735, 17</value>
+  </metadata>
   <data name="addExcludeFileNameContainingButton.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAO
@@ -424,33 +793,6 @@
   </data>
   <data name="&gt;&gt;addExcludeFileNameContainingButton.ZOrder" xml:space="preserve">
     <value>3</value>
-  </data>
-  <data name="excludeFileNameContiningGroupBox.Location" type="System.Drawing.Point, System.Drawing">
-    <value>7, 196</value>
-  </data>
-  <data name="excludeFileNameContiningGroupBox.Size" type="System.Drawing.Size, System.Drawing">
-    <value>389, 125</value>
-  </data>
-  <data name="excludeFileNameContiningGroupBox.TabIndex" type="System.Int32, mscorlib">
-    <value>7</value>
-  </data>
-  <data name="excludeFileNameContiningGroupBox.Text" xml:space="preserve">
-    <value>Exclude file name containing</value>
-  </data>
-  <data name="&gt;&gt;excludeFileNameContiningGroupBox.Name" xml:space="preserve">
-    <value>excludeFileNameContiningGroupBox</value>
-  </data>
-  <data name="&gt;&gt;excludeFileNameContiningGroupBox.Type" xml:space="preserve">
-    <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;excludeFileNameContiningGroupBox.Parent" xml:space="preserve">
-    <value>generalTabPage</value>
-  </data>
-  <data name="&gt;&gt;excludeFileNameContiningGroupBox.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <data name="extensionsGroupBox.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
-    <value>Top, Left, Right</value>
   </data>
   <data name="newExtensionTextBox.Location" type="System.Drawing.Point, System.Drawing">
     <value>7, 19</value>
@@ -506,12 +848,12 @@
   <data name="&gt;&gt;removeExtensionButton.ZOrder" xml:space="preserve">
     <value>1</value>
   </data>
-  <data name="extensionsListBox.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
-    <value>Top, Left, Right</value>
-  </data>
   <metadata name="extensionBindingSource.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>552, 17</value>
   </metadata>
+  <data name="extensionsListBox.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Left, Right</value>
+  </data>
   <data name="extensionsListBox.Location" type="System.Drawing.Point, System.Drawing">
     <value>144, 19</value>
   </data>
@@ -533,6 +875,9 @@
   <data name="&gt;&gt;extensionsListBox.ZOrder" xml:space="preserve">
     <value>2</value>
   </data>
+  <metadata name="extensionBindingSource.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>552, 17</value>
+  </metadata>
   <data name="addExtensionButton.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAO
@@ -561,57 +906,6 @@
   </data>
   <data name="&gt;&gt;addExtensionButton.ZOrder" xml:space="preserve">
     <value>3</value>
-  </data>
-  <data name="extensionsGroupBox.Location" type="System.Drawing.Point, System.Drawing">
-    <value>7, 65</value>
-  </data>
-  <data name="extensionsGroupBox.Size" type="System.Drawing.Size, System.Drawing">
-    <value>389, 125</value>
-  </data>
-  <data name="extensionsGroupBox.TabIndex" type="System.Int32, mscorlib">
-    <value>6</value>
-  </data>
-  <data name="extensionsGroupBox.Text" xml:space="preserve">
-    <value>Extensions</value>
-  </data>
-  <data name="&gt;&gt;extensionsGroupBox.Name" xml:space="preserve">
-    <value>extensionsGroupBox</value>
-  </data>
-  <data name="&gt;&gt;extensionsGroupBox.Type" xml:space="preserve">
-    <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;extensionsGroupBox.Parent" xml:space="preserve">
-    <value>generalTabPage</value>
-  </data>
-  <data name="&gt;&gt;extensionsGroupBox.ZOrder" xml:space="preserve">
-    <value>1</value>
-  </data>
-  <data name="generalTabPage.Location" type="System.Drawing.Point, System.Drawing">
-    <value>4, 22</value>
-  </data>
-  <data name="generalTabPage.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>3, 3, 3, 3</value>
-  </data>
-  <data name="generalTabPage.Size" type="System.Drawing.Size, System.Drawing">
-    <value>402, 381</value>
-  </data>
-  <data name="generalTabPage.TabIndex" type="System.Int32, mscorlib">
-    <value>0</value>
-  </data>
-  <data name="generalTabPage.Text" xml:space="preserve">
-    <value>General Options</value>
-  </data>
-  <data name="&gt;&gt;generalTabPage.Name" xml:space="preserve">
-    <value>generalTabPage</value>
-  </data>
-  <data name="&gt;&gt;generalTabPage.Type" xml:space="preserve">
-    <value>System.Windows.Forms.TabPage, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;generalTabPage.Parent" xml:space="preserve">
-    <value>optionsTabControl</value>
-  </data>
-  <data name="&gt;&gt;generalTabPage.ZOrder" xml:space="preserve">
-    <value>0</value>
   </data>
   <data name="replaceExistingDestinationFilesCheckBox.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -855,54 +1149,6 @@
   </data>
   <data name="&gt;&gt;moveOkFilesToLabel.ZOrder" xml:space="preserve">
     <value>8</value>
-  </data>
-  <data name="queueTabPage.Location" type="System.Drawing.Point, System.Drawing">
-    <value>4, 22</value>
-  </data>
-  <data name="queueTabPage.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>3, 3, 3, 3</value>
-  </data>
-  <data name="queueTabPage.Size" type="System.Drawing.Size, System.Drawing">
-    <value>402, 381</value>
-  </data>
-  <data name="queueTabPage.TabIndex" type="System.Int32, mscorlib">
-    <value>1</value>
-  </data>
-  <data name="queueTabPage.Text" xml:space="preserve">
-    <value>Queue</value>
-  </data>
-  <data name="&gt;&gt;queueTabPage.Name" xml:space="preserve">
-    <value>queueTabPage</value>
-  </data>
-  <data name="&gt;&gt;queueTabPage.Type" xml:space="preserve">
-    <value>System.Windows.Forms.TabPage, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;queueTabPage.Parent" xml:space="preserve">
-    <value>optionsTabControl</value>
-  </data>
-  <data name="&gt;&gt;queueTabPage.ZOrder" xml:space="preserve">
-    <value>1</value>
-  </data>
-  <data name="optionsTabControl.Location" type="System.Drawing.Point, System.Drawing">
-    <value>12, 12</value>
-  </data>
-  <data name="optionsTabControl.Size" type="System.Drawing.Size, System.Drawing">
-    <value>410, 407</value>
-  </data>
-  <data name="optionsTabControl.TabIndex" type="System.Int32, mscorlib">
-    <value>6</value>
-  </data>
-  <data name="&gt;&gt;optionsTabControl.Name" xml:space="preserve">
-    <value>optionsTabControl</value>
-  </data>
-  <data name="&gt;&gt;optionsTabControl.Type" xml:space="preserve">
-    <value>System.Windows.Forms.TabControl, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;optionsTabControl.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;optionsTabControl.ZOrder" xml:space="preserve">
-    <value>0</value>
   </data>
   <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>

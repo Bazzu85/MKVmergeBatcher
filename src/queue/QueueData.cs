@@ -14,16 +14,12 @@ namespace MKVmergeBatcher.src.queue
             public string fileFolder { get; set; } = "";
             public string fileFullPath { get; set; } = "";
             public int percentage { get; set; } = 0;
-            // Values: Pending - Running - Moving - Ok - Warning - Error
+            // Values: Pending - Running - Ok - Warning - Error
             public string jobStatus { get; set; } = "";
+            public bool jobExecuted { get; set; } = false;
             public string command { get; set; } = "";
             public string outputFileName { get; set; } = "";
             public string output { get; set; } = "";
-            public string tempOutput { get; set; } = "";
-            public string outputJobForm { get; set; } = "";
-            public string tempOutputJobForm { get; set; } = "";
-
-
         }
         public bool running { get; set; } = false;
         public bool processEnded { get; set; } = false;

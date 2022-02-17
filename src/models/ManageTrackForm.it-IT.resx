@@ -1776,4 +1776,7 @@
   <data name="forcedCheckBox.Text" xml:space="preserve">
     <value>Forced</value>
   </data>
+  <data name="defaultCheckBox.Text" xml:space="preserve">
+    <value>Default</value>
+  </data>
 </root>

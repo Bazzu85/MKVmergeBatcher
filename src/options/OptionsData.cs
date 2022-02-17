@@ -44,6 +44,8 @@ namespace MKVmergeBatcher.src.options
         {
             public string excludeFileNameContaining { get; set; } = "";
         }
+        public Boolean allowMultipleInstaces { get; set; }
+
         #endregion
         #region Queue options
         public string moveOkFilesTo { get; set; } = "%originalFolder%";
