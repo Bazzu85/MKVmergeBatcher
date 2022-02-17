@@ -47,7 +47,7 @@ namespace MKVmergeBatcher.src
         {
             if (!optionsData.allowMultipleInstaces)
             {
-                if (System.Diagnostics.Process.GetProcessesByName(System.IO.Path.GetFileNameWithoutExtension(System.Reflection.Assembly.GetEntryAssembly().Location)).Count() > 1)
+                if (System.Diagnostics.Process.GetProcessesByName(Path.GetFileNameWithoutExtension(System.Reflection.Assembly.GetEntryAssembly().Location)).Count() > 1)
                 {
                     MessageBox.Show(Properties.Resources.AnotherInstanceIsCurrentlyRunning, Properties.Resources.ErrorLabel, MessageBoxButtons.OK, MessageBoxIcon.Error);
                     System.Diagnostics.Process.GetCurrentProcess().Kill();
@@ -107,8 +107,7 @@ namespace MKVmergeBatcher.src
         private void SetControlsContent()
         {
             Logger.Trace(System.Reflection.MethodBase.GetCurrentMethod().Name);
-            var version = System.Reflection.Assembly.GetExecutingAssembly().GetName().Version;
-            this.Text = "MKVmerge Batcher " + version;
+            SetWindowTitle();
 
             if (MainForm.modelsData.modelList.Count > 0)
             {
@@ -129,7 +128,14 @@ namespace MKVmergeBatcher.src
             {
                 localeManager.SetLocale(this);
                 SetTopMenuTexts();
+                SetWindowTitle();
             }
+        }
+
+        private void SetWindowTitle()
+        {
+            var version = System.Reflection.Assembly.GetExecutingAssembly().GetName().Version;
+            this.Text = "MKVmerge Batcher " + version;
         }
 
         private void SetTopMenuTexts()
