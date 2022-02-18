@@ -43,6 +43,7 @@ namespace MKVmergeBatcher.src.options
             this.localeBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.optionsTabControl = new System.Windows.Forms.TabControl();
             this.generalTabPage = new System.Windows.Forms.TabPage();
+            this.allowMultipleInstacesCheckBox = new System.Windows.Forms.CheckBox();
             this.excludeFileNameContiningGroupBox = new System.Windows.Forms.GroupBox();
             this.newExcludeFileNameContainingTextBox = new System.Windows.Forms.TextBox();
             this.removeExcludeFileNameContainingButton = new System.Windows.Forms.Button();
@@ -65,7 +66,13 @@ namespace MKVmergeBatcher.src.options
             this.moveOkFilesToTextBox = new System.Windows.Forms.TextBox();
             this.moveWarningFilesToLabel = new System.Windows.Forms.Label();
             this.moveOkFilesToLabel = new System.Windows.Forms.Label();
-            this.allowMultipleInstacesCheckBox = new System.Windows.Forms.CheckBox();
+            this.versionTabPage = new System.Windows.Forms.TabPage();
+            this.checkVersionButton = new System.Windows.Forms.Button();
+            this.lastVersionFoundLabel = new System.Windows.Forms.Label();
+            this.currentVersionLabel = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.checkUpdatesCheckBox = new System.Windows.Forms.CheckBox();
             ((System.ComponentModel.ISupportInitialize)(this.optionsDataBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.logLevelBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.localeBindingSource)).BeginInit();
@@ -76,6 +83,7 @@ namespace MKVmergeBatcher.src.options
             this.extensionsGroupBox.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.extensionBindingSource)).BeginInit();
             this.queueTabPage.SuspendLayout();
+            this.versionTabPage.SuspendLayout();
             this.SuspendLayout();
             // 
             // label1
@@ -148,6 +156,7 @@ namespace MKVmergeBatcher.src.options
             resources.ApplyResources(this.optionsTabControl, "optionsTabControl");
             this.optionsTabControl.Controls.Add(this.generalTabPage);
             this.optionsTabControl.Controls.Add(this.queueTabPage);
+            this.optionsTabControl.Controls.Add(this.versionTabPage);
             this.optionsTabControl.Name = "optionsTabControl";
             this.optionsTabControl.SelectedIndex = 0;
             // 
@@ -166,6 +175,13 @@ namespace MKVmergeBatcher.src.options
             resources.ApplyResources(this.generalTabPage, "generalTabPage");
             this.generalTabPage.Name = "generalTabPage";
             this.generalTabPage.UseVisualStyleBackColor = true;
+            // 
+            // allowMultipleInstacesCheckBox
+            // 
+            resources.ApplyResources(this.allowMultipleInstacesCheckBox, "allowMultipleInstacesCheckBox");
+            this.allowMultipleInstacesCheckBox.DataBindings.Add(new System.Windows.Forms.Binding("CheckState", this.optionsDataBindingSource, "allowMultipleInstaces", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
+            this.allowMultipleInstacesCheckBox.Name = "allowMultipleInstacesCheckBox";
+            this.allowMultipleInstacesCheckBox.UseVisualStyleBackColor = true;
             // 
             // excludeFileNameContiningGroupBox
             // 
@@ -321,12 +337,51 @@ namespace MKVmergeBatcher.src.options
             resources.ApplyResources(this.moveOkFilesToLabel, "moveOkFilesToLabel");
             this.moveOkFilesToLabel.Name = "moveOkFilesToLabel";
             // 
-            // allowMultipleInstacesCheckBox
+            // versionTabPage
             // 
-            resources.ApplyResources(this.allowMultipleInstacesCheckBox, "allowMultipleInstacesCheckBox");
-            this.allowMultipleInstacesCheckBox.DataBindings.Add(new System.Windows.Forms.Binding("CheckState", this.optionsDataBindingSource, "allowMultipleInstaces", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
-            this.allowMultipleInstacesCheckBox.Name = "allowMultipleInstacesCheckBox";
-            this.allowMultipleInstacesCheckBox.UseVisualStyleBackColor = true;
+            this.versionTabPage.Controls.Add(this.checkVersionButton);
+            this.versionTabPage.Controls.Add(this.lastVersionFoundLabel);
+            this.versionTabPage.Controls.Add(this.currentVersionLabel);
+            this.versionTabPage.Controls.Add(this.label3);
+            this.versionTabPage.Controls.Add(this.label2);
+            this.versionTabPage.Controls.Add(this.checkUpdatesCheckBox);
+            resources.ApplyResources(this.versionTabPage, "versionTabPage");
+            this.versionTabPage.Name = "versionTabPage";
+            this.versionTabPage.UseVisualStyleBackColor = true;
+            // 
+            // checkVersionButton
+            // 
+            resources.ApplyResources(this.checkVersionButton, "checkVersionButton");
+            this.checkVersionButton.Name = "checkVersionButton";
+            this.checkVersionButton.UseVisualStyleBackColor = true;
+            this.checkVersionButton.Click += new System.EventHandler(this.checkVersionButton_Click);
+            // 
+            // lastVersionFoundLabel
+            // 
+            resources.ApplyResources(this.lastVersionFoundLabel, "lastVersionFoundLabel");
+            this.lastVersionFoundLabel.Name = "lastVersionFoundLabel";
+            // 
+            // currentVersionLabel
+            // 
+            resources.ApplyResources(this.currentVersionLabel, "currentVersionLabel");
+            this.currentVersionLabel.Name = "currentVersionLabel";
+            // 
+            // label3
+            // 
+            resources.ApplyResources(this.label3, "label3");
+            this.label3.Name = "label3";
+            // 
+            // label2
+            // 
+            resources.ApplyResources(this.label2, "label2");
+            this.label2.Name = "label2";
+            // 
+            // checkUpdatesCheckBox
+            // 
+            resources.ApplyResources(this.checkUpdatesCheckBox, "checkUpdatesCheckBox");
+            this.checkUpdatesCheckBox.DataBindings.Add(new System.Windows.Forms.Binding("CheckState", this.optionsDataBindingSource, "checkUpdates", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
+            this.checkUpdatesCheckBox.Name = "checkUpdatesCheckBox";
+            this.checkUpdatesCheckBox.UseVisualStyleBackColor = true;
             // 
             // OptionsForm
             // 
@@ -349,6 +404,8 @@ namespace MKVmergeBatcher.src.options
             ((System.ComponentModel.ISupportInitialize)(this.extensionBindingSource)).EndInit();
             this.queueTabPage.ResumeLayout(false);
             this.queueTabPage.PerformLayout();
+            this.versionTabPage.ResumeLayout(false);
+            this.versionTabPage.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -390,5 +447,12 @@ namespace MKVmergeBatcher.src.options
         private System.Windows.Forms.CheckBox autoClearWarningJobsCheckBox;
         private System.Windows.Forms.CheckBox autoClearErrorJobsCheckBox;
         private System.Windows.Forms.CheckBox allowMultipleInstacesCheckBox;
+        private System.Windows.Forms.TabPage versionTabPage;
+        private System.Windows.Forms.CheckBox checkUpdatesCheckBox;
+        private System.Windows.Forms.Label lastVersionFoundLabel;
+        private System.Windows.Forms.Label currentVersionLabel;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Button checkVersionButton;
     }
 }

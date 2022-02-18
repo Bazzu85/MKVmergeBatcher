@@ -57,6 +57,11 @@ namespace MKVmergeBatcher.src.options
         public Boolean autoClearErrorJobs { get; set; }
         #endregion
 
+        #region Version options
+        public Boolean checkUpdates { get; set; } = true;
+        public string lastVersionFound { get; set; }
+        #endregion
+
         public void SetDefault()
         {
             Logger.Trace(System.Reflection.MethodBase.GetCurrentMethod().Name);

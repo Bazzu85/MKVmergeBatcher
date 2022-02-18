@@ -101,6 +101,9 @@
     <Reference Include="NLog, Version=4.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c, processorArchitecture=MSIL">
       <HintPath>packages\NLog.4.7.13\lib\net45\NLog.dll</HintPath>
     </Reference>
+    <Reference Include="Octokit, Version=0.50.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>packages\Octokit.0.50.0\lib\net46\Octokit.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.AppContext, Version=4.1.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
       <HintPath>packages\System.AppContext.4.3.0\lib\net463\System.AppContext.dll</HintPath>
@@ -287,6 +290,7 @@
     <Compile Include="src\legacy\ImportLegacyData.cs" />
     <Compile Include="src\legacy\UserData.cs" />
     <Compile Include="src\legacy\UserDataJson.cs" />
+    <Compile Include="src\VersionManager.cs" />
     <Compile Include="src\LocaleManager.cs" />
     <Compile Include="src\LogConfigurationManager.cs" />
     <Compile Include="src\MainData.cs" />

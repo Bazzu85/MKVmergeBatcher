@@ -142,11 +142,11 @@
   <data name="localeComboBox.Location" type="System.Drawing.Point, System.Drawing">
     <value>241, 6</value>
   </data>
-  <data name="generalTabPage.Text" xml:space="preserve">
-    <value>Opzioni Generali</value>
+  <data name="allowMultipleInstacesCheckBox.Size" type="System.Drawing.Size, System.Drawing">
+    <value>230, 17</value>
   </data>
-  <data name="excludeFileNameContiningGroupBox.Text" xml:space="preserve">
-    <value>Escludi i nomi file che contengono</value>
+  <data name="allowMultipleInstacesCheckBox.Text" xml:space="preserve">
+    <value>Permetti instanze multiple dell'applicazione?</value>
   </data>
   <data name="removeExcludeFileNameContainingButton.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
@@ -165,8 +165,8 @@
         YII=
 </value>
   </data>
-  <data name="extensionsGroupBox.Text" xml:space="preserve">
-    <value>Estensioni</value>
+  <data name="excludeFileNameContiningGroupBox.Text" xml:space="preserve">
+    <value>Escludi i nomi file che contengono</value>
   </data>
   <data name="removeExtensionButton.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
@@ -185,14 +185,23 @@
         YII=
 </value>
   </data>
-  <data name="queueTabPage.Text" xml:space="preserve">
-    <value>Coda</value>
+  <data name="extensionsGroupBox.Text" xml:space="preserve">
+    <value>Estensioni</value>
+  </data>
+  <data name="generalTabPage.Text" xml:space="preserve">
+    <value>Opzioni Generali</value>
   </data>
   <data name="replaceExistingDestinationFilesCheckBox.Size" type="System.Drawing.Size, System.Drawing">
     <value>272, 17</value>
   </data>
   <data name="replaceExistingDestinationFilesCheckBox.Text" xml:space="preserve">
     <value>Sostituisci i file nella destinazione (durante la move)?</value>
+  </data>
+  <data name="autoClearErrorJobsCheckBox.Size" type="System.Drawing.Size, System.Drawing">
+    <value>254, 17</value>
+  </data>
+  <data name="autoClearErrorJobsCheckBox.Text" xml:space="preserve">
+    <value>Rimuovi automaticamente i job in stato "Errore"?</value>
   </data>
   <data name="autoClearWarningJobsCheckBox.Size" type="System.Drawing.Size, System.Drawing">
     <value>266, 17</value>
@@ -238,6 +247,48 @@
   </data>
   <data name="moveOkFilesToLabel.Text" xml:space="preserve">
     <value>Muovi i file ok in:</value>
+  </data>
+  <data name="queueTabPage.Text" xml:space="preserve">
+    <value>Coda</value>
+  </data>
+  <data name="checkVersionButton.Location" type="System.Drawing.Point, System.Drawing">
+    <value>170, 48</value>
+  </data>
+  <data name="checkVersionButton.Size" type="System.Drawing.Size, System.Drawing">
+    <value>86, 27</value>
+  </data>
+  <data name="checkVersionButton.Text" xml:space="preserve">
+    <value>Controlla ora!</value>
+  </data>
+  <data name="lastVersionFoundLabel.Location" type="System.Drawing.Point, System.Drawing">
+    <value>127, 55</value>
+  </data>
+  <data name="currentVersionLabel.Location" type="System.Drawing.Point, System.Drawing">
+    <value>127, 32</value>
+  </data>
+  <data name="label3.Size" type="System.Drawing.Size, System.Drawing">
+    <value>118, 13</value>
+  </data>
+  <data name="label3.Text" xml:space="preserve">
+    <value>Ultima versione trovata:</value>
+  </data>
+  <data name="label2.Location" type="System.Drawing.Point, System.Drawing">
+    <value>38, 32</value>
+  </data>
+  <data name="label2.Size" type="System.Drawing.Size, System.Drawing">
+    <value>86, 13</value>
+  </data>
+  <data name="label2.Text" xml:space="preserve">
+    <value>Versione attuale:</value>
+  </data>
+  <data name="checkUpdatesCheckBox.Size" type="System.Drawing.Size, System.Drawing">
+    <value>239, 17</value>
+  </data>
+  <data name="checkUpdatesCheckBox.Text" xml:space="preserve">
+    <value>Controlla automaticamente gli aggiornamenti?</value>
+  </data>
+  <data name="versionTabPage.Text" xml:space="preserve">
+    <value>Versione App</value>
   </data>
   <data name="$this.Icon" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
@@ -1797,11 +1848,5 @@
   </data>
   <data name="$this.Text" xml:space="preserve">
     <value>Opzioni</value>
-  </data>
-  <data name="autoClearErrorJobsCheckBox.Text" xml:space="preserve">
-    <value>Rimuovi automaticamente i job in stato "Errore"?</value>
-  </data>
-  <data name="allowMultipleInstacesCheckBox.Text" xml:space="preserve">
-    <value>Permetti instanze multiple dell'applicazione?</value>
   </data>
 </root>

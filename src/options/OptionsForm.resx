@@ -174,12 +174,12 @@
   <data name="&gt;&gt;browseMkvMergeLocationButton.ZOrder" xml:space="preserve">
     <value>7</value>
   </data>
-  <metadata name="optionsDataBindingSource.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>17, 17</value>
-  </metadata>
   <data name="mkvMergeLocationTextBox.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Top, Bottom, Left, Right</value>
   </data>
+  <metadata name="optionsDataBindingSource.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>17, 17</value>
+  </metadata>
   <data name="mkvMergeLocationTextBox.Location" type="System.Drawing.Point, System.Drawing">
     <value>116, 39</value>
   </data>
@@ -201,9 +201,6 @@
   <data name="&gt;&gt;mkvMergeLocationTextBox.ZOrder" xml:space="preserve">
     <value>9</value>
   </data>
-  <metadata name="optionsDataBindingSource.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>17, 17</value>
-  </metadata>
   <data name="logLevelLabel.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
@@ -255,9 +252,6 @@
   <data name="&gt;&gt;logLevelsComboBox.ZOrder" xml:space="preserve">
     <value>8</value>
   </data>
-  <metadata name="logLevelBindingSource.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>214, 17</value>
-  </metadata>
   <data name="localeLabel.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
@@ -312,9 +306,6 @@
   <data name="&gt;&gt;localeComboBox.ZOrder" xml:space="preserve">
     <value>4</value>
   </data>
-  <metadata name="localeBindingSource.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>390, 17</value>
-  </metadata>
   <data name="optionsTabControl.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Top, Bottom, Left, Right</value>
   </data>
@@ -348,6 +339,15 @@
   <data name="excludeFileNameContiningGroupBox.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Top, Left, Right</value>
   </data>
+  <data name="newExcludeFileNameContainingTextBox.Location" type="System.Drawing.Point, System.Drawing">
+    <value>7, 19</value>
+  </data>
+  <data name="newExcludeFileNameContainingTextBox.Size" type="System.Drawing.Size, System.Drawing">
+    <value>100, 20</value>
+  </data>
+  <data name="newExcludeFileNameContainingTextBox.TabIndex" type="System.Int32, mscorlib">
+    <value>9</value>
+  </data>
   <data name="&gt;&gt;newExcludeFileNameContainingTextBox.Name" xml:space="preserve">
     <value>newExcludeFileNameContainingTextBox</value>
   </data>
@@ -359,6 +359,27 @@
   </data>
   <data name="&gt;&gt;newExcludeFileNameContainingTextBox.ZOrder" xml:space="preserve">
     <value>0</value>
+  </data>
+  <data name="removeExcludeFileNameContainingButton.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAO
+        wwAADsMBx2+oZAAAAJ1JREFUOE/dkkEKwjAURINS3AgeQHoAca8Xde+ioiAu9DKex/cwgZImVkE3DjwY
+        /p9MU9rwSzWwiOg/kgfOcIjoR0vWcIUTeOAOXUTvzJ2ZFQw0gQu0kK6e486M2aKOYFD1r5y8OzNVpYI5
+        7BxE6Z29XZAHa/OB/qhgCv1vrXc2WrCH5dMW5c5MVVvwT/MpJW6wgZeaQXrfHHffVAgPtukkxaOz9egA
+        AAAASUVORK5CYII=
+</value>
+  </data>
+  <data name="removeExcludeFileNameContainingButton.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="removeExcludeFileNameContainingButton.Location" type="System.Drawing.Point, System.Drawing">
+    <value>113, 50</value>
+  </data>
+  <data name="removeExcludeFileNameContainingButton.Size" type="System.Drawing.Size, System.Drawing">
+    <value>25, 25</value>
+  </data>
+  <data name="removeExcludeFileNameContainingButton.TabIndex" type="System.Int32, mscorlib">
+    <value>11</value>
   </data>
   <data name="&gt;&gt;removeExcludeFileNameContainingButton.Name" xml:space="preserve">
     <value>removeExcludeFileNameContainingButton</value>
@@ -372,6 +393,21 @@
   <data name="&gt;&gt;removeExcludeFileNameContainingButton.ZOrder" xml:space="preserve">
     <value>1</value>
   </data>
+  <data name="excludeFileNameContainingListBox.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Left, Right</value>
+  </data>
+  <metadata name="excludeFileNameContainingBindingSource.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>735, 17</value>
+  </metadata>
+  <data name="excludeFileNameContainingListBox.Location" type="System.Drawing.Point, System.Drawing">
+    <value>144, 19</value>
+  </data>
+  <data name="excludeFileNameContainingListBox.Size" type="System.Drawing.Size, System.Drawing">
+    <value>239, 95</value>
+  </data>
+  <data name="excludeFileNameContainingListBox.TabIndex" type="System.Int32, mscorlib">
+    <value>12</value>
+  </data>
   <data name="&gt;&gt;excludeFileNameContainingListBox.Name" xml:space="preserve">
     <value>excludeFileNameContainingListBox</value>
   </data>
@@ -383,6 +419,26 @@
   </data>
   <data name="&gt;&gt;excludeFileNameContainingListBox.ZOrder" xml:space="preserve">
     <value>2</value>
+  </data>
+  <data name="addExcludeFileNameContainingButton.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAO
+        wwAADsMBx2+oZAAAAFhJREFUOE9jGBmAFUqTBXiAeAqESR7gB+JlECZ5gCwDeIEYpBGEZYF4DRDzIYlx
+        ADFOAAqwqUAMshWEVwPxAyT+ciBOA2KiAVleQAYDbwAowEjy85ADDAwAOYoLjxBjnjQAAAAASUVORK5C
+        YII=
+</value>
+  </data>
+  <data name="addExcludeFileNameContainingButton.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="addExcludeFileNameContainingButton.Location" type="System.Drawing.Point, System.Drawing">
+    <value>113, 19</value>
+  </data>
+  <data name="addExcludeFileNameContainingButton.Size" type="System.Drawing.Size, System.Drawing">
+    <value>25, 25</value>
+  </data>
+  <data name="addExcludeFileNameContainingButton.TabIndex" type="System.Int32, mscorlib">
+    <value>10</value>
   </data>
   <data name="&gt;&gt;addExcludeFileNameContainingButton.Name" xml:space="preserve">
     <value>addExcludeFileNameContainingButton</value>
@@ -423,6 +479,15 @@
   <data name="extensionsGroupBox.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Top, Left, Right</value>
   </data>
+  <data name="newExtensionTextBox.Location" type="System.Drawing.Point, System.Drawing">
+    <value>7, 19</value>
+  </data>
+  <data name="newExtensionTextBox.Size" type="System.Drawing.Size, System.Drawing">
+    <value>100, 20</value>
+  </data>
+  <data name="newExtensionTextBox.TabIndex" type="System.Int32, mscorlib">
+    <value>5</value>
+  </data>
   <data name="&gt;&gt;newExtensionTextBox.Name" xml:space="preserve">
     <value>newExtensionTextBox</value>
   </data>
@@ -434,6 +499,27 @@
   </data>
   <data name="&gt;&gt;newExtensionTextBox.ZOrder" xml:space="preserve">
     <value>0</value>
+  </data>
+  <data name="removeExtensionButton.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAO
+        wwAADsMBx2+oZAAAAJ1JREFUOE/dkkEKwjAURINS3AgeQHoAca8Xde+ioiAu9DKex/cwgZImVkE3DjwY
+        /p9MU9rwSzWwiOg/kgfOcIjoR0vWcIUTeOAOXUTvzJ2ZFQw0gQu0kK6e486M2aKOYFD1r5y8OzNVpYI5
+        7BxE6Z29XZAHa/OB/qhgCv1vrXc2WrCH5dMW5c5MVVvwT/MpJW6wgZeaQXrfHHffVAgPtukkxaOz9egA
+        AAAASUVORK5CYII=
+</value>
+  </data>
+  <data name="removeExtensionButton.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="removeExtensionButton.Location" type="System.Drawing.Point, System.Drawing">
+    <value>113, 50</value>
+  </data>
+  <data name="removeExtensionButton.Size" type="System.Drawing.Size, System.Drawing">
+    <value>25, 25</value>
+  </data>
+  <data name="removeExtensionButton.TabIndex" type="System.Int32, mscorlib">
+    <value>7</value>
   </data>
   <data name="&gt;&gt;removeExtensionButton.Name" xml:space="preserve">
     <value>removeExtensionButton</value>
@@ -447,6 +533,21 @@
   <data name="&gt;&gt;removeExtensionButton.ZOrder" xml:space="preserve">
     <value>1</value>
   </data>
+  <data name="extensionsListBox.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Left, Right</value>
+  </data>
+  <metadata name="extensionBindingSource.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>552, 17</value>
+  </metadata>
+  <data name="extensionsListBox.Location" type="System.Drawing.Point, System.Drawing">
+    <value>144, 19</value>
+  </data>
+  <data name="extensionsListBox.Size" type="System.Drawing.Size, System.Drawing">
+    <value>239, 95</value>
+  </data>
+  <data name="extensionsListBox.TabIndex" type="System.Int32, mscorlib">
+    <value>8</value>
+  </data>
   <data name="&gt;&gt;extensionsListBox.Name" xml:space="preserve">
     <value>extensionsListBox</value>
   </data>
@@ -458,6 +559,23 @@
   </data>
   <data name="&gt;&gt;extensionsListBox.ZOrder" xml:space="preserve">
     <value>2</value>
+  </data>
+  <data name="addExtensionButton.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAO
+        wwAADsMBx2+oZAAAAFhJREFUOE9jGBmAFUqTBXiAeAqESR7gB+JlECZ5gCwDeIEYpBGEZYF4DRDzIYlx
+        ADFOAAqwqUAMshWEVwPxAyT+ciBOA2KiAVleQAYDbwAowEjy85ADDAwAOYoLjxBjnjQAAAAASUVORK5C
+        YII=
+</value>
+  </data>
+  <data name="addExtensionButton.Location" type="System.Drawing.Point, System.Drawing">
+    <value>113, 19</value>
+  </data>
+  <data name="addExtensionButton.Size" type="System.Drawing.Size, System.Drawing">
+    <value>25, 25</value>
+  </data>
+  <data name="addExtensionButton.TabIndex" type="System.Int32, mscorlib">
+    <value>6</value>
   </data>
   <data name="&gt;&gt;addExtensionButton.Name" xml:space="preserve">
     <value>addExtensionButton</value>
@@ -521,391 +639,6 @@
   </data>
   <data name="&gt;&gt;generalTabPage.ZOrder" xml:space="preserve">
     <value>0</value>
-  </data>
-  <data name="&gt;&gt;replaceExistingDestinationFilesCheckBox.Name" xml:space="preserve">
-    <value>replaceExistingDestinationFilesCheckBox</value>
-  </data>
-  <data name="&gt;&gt;replaceExistingDestinationFilesCheckBox.Type" xml:space="preserve">
-    <value>System.Windows.Forms.CheckBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;replaceExistingDestinationFilesCheckBox.Parent" xml:space="preserve">
-    <value>queueTabPage</value>
-  </data>
-  <data name="&gt;&gt;replaceExistingDestinationFilesCheckBox.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <data name="&gt;&gt;autoClearErrorJobsCheckBox.Name" xml:space="preserve">
-    <value>autoClearErrorJobsCheckBox</value>
-  </data>
-  <data name="&gt;&gt;autoClearErrorJobsCheckBox.Type" xml:space="preserve">
-    <value>System.Windows.Forms.CheckBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;autoClearErrorJobsCheckBox.Parent" xml:space="preserve">
-    <value>queueTabPage</value>
-  </data>
-  <data name="&gt;&gt;autoClearErrorJobsCheckBox.ZOrder" xml:space="preserve">
-    <value>1</value>
-  </data>
-  <data name="&gt;&gt;autoClearWarningJobsCheckBox.Name" xml:space="preserve">
-    <value>autoClearWarningJobsCheckBox</value>
-  </data>
-  <data name="&gt;&gt;autoClearWarningJobsCheckBox.Type" xml:space="preserve">
-    <value>System.Windows.Forms.CheckBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;autoClearWarningJobsCheckBox.Parent" xml:space="preserve">
-    <value>queueTabPage</value>
-  </data>
-  <data name="&gt;&gt;autoClearWarningJobsCheckBox.ZOrder" xml:space="preserve">
-    <value>2</value>
-  </data>
-  <data name="&gt;&gt;autoClearOkJobsCheckBox.Name" xml:space="preserve">
-    <value>autoClearOkJobsCheckBox</value>
-  </data>
-  <data name="&gt;&gt;autoClearOkJobsCheckBox.Type" xml:space="preserve">
-    <value>System.Windows.Forms.CheckBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;autoClearOkJobsCheckBox.Parent" xml:space="preserve">
-    <value>queueTabPage</value>
-  </data>
-  <data name="&gt;&gt;autoClearOkJobsCheckBox.ZOrder" xml:space="preserve">
-    <value>3</value>
-  </data>
-  <data name="&gt;&gt;deleteIncompleteFilesCheckBox.Name" xml:space="preserve">
-    <value>deleteIncompleteFilesCheckBox</value>
-  </data>
-  <data name="&gt;&gt;deleteIncompleteFilesCheckBox.Type" xml:space="preserve">
-    <value>System.Windows.Forms.CheckBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;deleteIncompleteFilesCheckBox.Parent" xml:space="preserve">
-    <value>queueTabPage</value>
-  </data>
-  <data name="&gt;&gt;deleteIncompleteFilesCheckBox.ZOrder" xml:space="preserve">
-    <value>4</value>
-  </data>
-  <data name="&gt;&gt;moveWarningFilesToTextBox.Name" xml:space="preserve">
-    <value>moveWarningFilesToTextBox</value>
-  </data>
-  <data name="&gt;&gt;moveWarningFilesToTextBox.Type" xml:space="preserve">
-    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;moveWarningFilesToTextBox.Parent" xml:space="preserve">
-    <value>queueTabPage</value>
-  </data>
-  <data name="&gt;&gt;moveWarningFilesToTextBox.ZOrder" xml:space="preserve">
-    <value>5</value>
-  </data>
-  <data name="&gt;&gt;moveOkFilesToTextBox.Name" xml:space="preserve">
-    <value>moveOkFilesToTextBox</value>
-  </data>
-  <data name="&gt;&gt;moveOkFilesToTextBox.Type" xml:space="preserve">
-    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;moveOkFilesToTextBox.Parent" xml:space="preserve">
-    <value>queueTabPage</value>
-  </data>
-  <data name="&gt;&gt;moveOkFilesToTextBox.ZOrder" xml:space="preserve">
-    <value>6</value>
-  </data>
-  <data name="&gt;&gt;moveWarningFilesToLabel.Name" xml:space="preserve">
-    <value>moveWarningFilesToLabel</value>
-  </data>
-  <data name="&gt;&gt;moveWarningFilesToLabel.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;moveWarningFilesToLabel.Parent" xml:space="preserve">
-    <value>queueTabPage</value>
-  </data>
-  <data name="&gt;&gt;moveWarningFilesToLabel.ZOrder" xml:space="preserve">
-    <value>7</value>
-  </data>
-  <data name="&gt;&gt;moveOkFilesToLabel.Name" xml:space="preserve">
-    <value>moveOkFilesToLabel</value>
-  </data>
-  <data name="&gt;&gt;moveOkFilesToLabel.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;moveOkFilesToLabel.Parent" xml:space="preserve">
-    <value>queueTabPage</value>
-  </data>
-  <data name="&gt;&gt;moveOkFilesToLabel.ZOrder" xml:space="preserve">
-    <value>8</value>
-  </data>
-  <data name="queueTabPage.Location" type="System.Drawing.Point, System.Drawing">
-    <value>4, 22</value>
-  </data>
-  <data name="queueTabPage.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>3, 3, 3, 3</value>
-  </data>
-  <data name="queueTabPage.Size" type="System.Drawing.Size, System.Drawing">
-    <value>402, 381</value>
-  </data>
-  <data name="queueTabPage.TabIndex" type="System.Int32, mscorlib">
-    <value>1</value>
-  </data>
-  <data name="queueTabPage.Text" xml:space="preserve">
-    <value>Queue</value>
-  </data>
-  <data name="&gt;&gt;queueTabPage.Name" xml:space="preserve">
-    <value>queueTabPage</value>
-  </data>
-  <data name="&gt;&gt;queueTabPage.Type" xml:space="preserve">
-    <value>System.Windows.Forms.TabPage, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;queueTabPage.Parent" xml:space="preserve">
-    <value>optionsTabControl</value>
-  </data>
-  <data name="&gt;&gt;queueTabPage.ZOrder" xml:space="preserve">
-    <value>1</value>
-  </data>
-  <data name="optionsTabControl.Location" type="System.Drawing.Point, System.Drawing">
-    <value>12, 12</value>
-  </data>
-  <data name="optionsTabControl.Size" type="System.Drawing.Size, System.Drawing">
-    <value>410, 407</value>
-  </data>
-  <data name="optionsTabControl.TabIndex" type="System.Int32, mscorlib">
-    <value>6</value>
-  </data>
-  <data name="&gt;&gt;optionsTabControl.Name" xml:space="preserve">
-    <value>optionsTabControl</value>
-  </data>
-  <data name="&gt;&gt;optionsTabControl.Type" xml:space="preserve">
-    <value>System.Windows.Forms.TabControl, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;optionsTabControl.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;optionsTabControl.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <data name="newExcludeFileNameContainingTextBox.Location" type="System.Drawing.Point, System.Drawing">
-    <value>7, 19</value>
-  </data>
-  <data name="newExcludeFileNameContainingTextBox.Size" type="System.Drawing.Size, System.Drawing">
-    <value>100, 20</value>
-  </data>
-  <data name="newExcludeFileNameContainingTextBox.TabIndex" type="System.Int32, mscorlib">
-    <value>9</value>
-  </data>
-  <data name="&gt;&gt;newExcludeFileNameContainingTextBox.Name" xml:space="preserve">
-    <value>newExcludeFileNameContainingTextBox</value>
-  </data>
-  <data name="&gt;&gt;newExcludeFileNameContainingTextBox.Type" xml:space="preserve">
-    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;newExcludeFileNameContainingTextBox.Parent" xml:space="preserve">
-    <value>excludeFileNameContiningGroupBox</value>
-  </data>
-  <data name="&gt;&gt;newExcludeFileNameContainingTextBox.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <data name="removeExcludeFileNameContainingButton.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-    <value>
-        iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAO
-        wwAADsMBx2+oZAAAAJ1JREFUOE/dkkEKwjAURINS3AgeQHoAca8Xde+ioiAu9DKex/cwgZImVkE3DjwY
-        /p9MU9rwSzWwiOg/kgfOcIjoR0vWcIUTeOAOXUTvzJ2ZFQw0gQu0kK6e486M2aKOYFD1r5y8OzNVpYI5
-        7BxE6Z29XZAHa/OB/qhgCv1vrXc2WrCH5dMW5c5MVVvwT/MpJW6wgZeaQXrfHHffVAgPtukkxaOz9egA
-        AAAASUVORK5CYII=
-</value>
-  </data>
-  <data name="removeExcludeFileNameContainingButton.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="removeExcludeFileNameContainingButton.Location" type="System.Drawing.Point, System.Drawing">
-    <value>113, 50</value>
-  </data>
-  <data name="removeExcludeFileNameContainingButton.Size" type="System.Drawing.Size, System.Drawing">
-    <value>25, 25</value>
-  </data>
-  <data name="removeExcludeFileNameContainingButton.TabIndex" type="System.Int32, mscorlib">
-    <value>11</value>
-  </data>
-  <data name="&gt;&gt;removeExcludeFileNameContainingButton.Name" xml:space="preserve">
-    <value>removeExcludeFileNameContainingButton</value>
-  </data>
-  <data name="&gt;&gt;removeExcludeFileNameContainingButton.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;removeExcludeFileNameContainingButton.Parent" xml:space="preserve">
-    <value>excludeFileNameContiningGroupBox</value>
-  </data>
-  <data name="&gt;&gt;removeExcludeFileNameContainingButton.ZOrder" xml:space="preserve">
-    <value>1</value>
-  </data>
-  <metadata name="excludeFileNameContainingBindingSource.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>735, 17</value>
-  </metadata>
-  <data name="excludeFileNameContainingListBox.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
-    <value>Top, Left, Right</value>
-  </data>
-  <data name="excludeFileNameContainingListBox.Location" type="System.Drawing.Point, System.Drawing">
-    <value>144, 19</value>
-  </data>
-  <data name="excludeFileNameContainingListBox.Size" type="System.Drawing.Size, System.Drawing">
-    <value>239, 95</value>
-  </data>
-  <data name="excludeFileNameContainingListBox.TabIndex" type="System.Int32, mscorlib">
-    <value>12</value>
-  </data>
-  <data name="&gt;&gt;excludeFileNameContainingListBox.Name" xml:space="preserve">
-    <value>excludeFileNameContainingListBox</value>
-  </data>
-  <data name="&gt;&gt;excludeFileNameContainingListBox.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ListBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;excludeFileNameContainingListBox.Parent" xml:space="preserve">
-    <value>excludeFileNameContiningGroupBox</value>
-  </data>
-  <data name="&gt;&gt;excludeFileNameContainingListBox.ZOrder" xml:space="preserve">
-    <value>2</value>
-  </data>
-  <metadata name="excludeFileNameContainingBindingSource.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>735, 17</value>
-  </metadata>
-  <data name="addExcludeFileNameContainingButton.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-    <value>
-        iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAO
-        wwAADsMBx2+oZAAAAFhJREFUOE9jGBmAFUqTBXiAeAqESR7gB+JlECZ5gCwDeIEYpBGEZYF4DRDzIYlx
-        ADFOAAqwqUAMshWEVwPxAyT+ciBOA2KiAVleQAYDbwAowEjy85ADDAwAOYoLjxBjnjQAAAAASUVORK5C
-        YII=
-</value>
-  </data>
-  <data name="addExcludeFileNameContainingButton.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="addExcludeFileNameContainingButton.Location" type="System.Drawing.Point, System.Drawing">
-    <value>113, 19</value>
-  </data>
-  <data name="addExcludeFileNameContainingButton.Size" type="System.Drawing.Size, System.Drawing">
-    <value>25, 25</value>
-  </data>
-  <data name="addExcludeFileNameContainingButton.TabIndex" type="System.Int32, mscorlib">
-    <value>10</value>
-  </data>
-  <data name="&gt;&gt;addExcludeFileNameContainingButton.Name" xml:space="preserve">
-    <value>addExcludeFileNameContainingButton</value>
-  </data>
-  <data name="&gt;&gt;addExcludeFileNameContainingButton.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;addExcludeFileNameContainingButton.Parent" xml:space="preserve">
-    <value>excludeFileNameContiningGroupBox</value>
-  </data>
-  <data name="&gt;&gt;addExcludeFileNameContainingButton.ZOrder" xml:space="preserve">
-    <value>3</value>
-  </data>
-  <data name="newExtensionTextBox.Location" type="System.Drawing.Point, System.Drawing">
-    <value>7, 19</value>
-  </data>
-  <data name="newExtensionTextBox.Size" type="System.Drawing.Size, System.Drawing">
-    <value>100, 20</value>
-  </data>
-  <data name="newExtensionTextBox.TabIndex" type="System.Int32, mscorlib">
-    <value>5</value>
-  </data>
-  <data name="&gt;&gt;newExtensionTextBox.Name" xml:space="preserve">
-    <value>newExtensionTextBox</value>
-  </data>
-  <data name="&gt;&gt;newExtensionTextBox.Type" xml:space="preserve">
-    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;newExtensionTextBox.Parent" xml:space="preserve">
-    <value>extensionsGroupBox</value>
-  </data>
-  <data name="&gt;&gt;newExtensionTextBox.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <data name="removeExtensionButton.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-    <value>
-        iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAO
-        wwAADsMBx2+oZAAAAJ1JREFUOE/dkkEKwjAURINS3AgeQHoAca8Xde+ioiAu9DKex/cwgZImVkE3DjwY
-        /p9MU9rwSzWwiOg/kgfOcIjoR0vWcIUTeOAOXUTvzJ2ZFQw0gQu0kK6e486M2aKOYFD1r5y8OzNVpYI5
-        7BxE6Z29XZAHa/OB/qhgCv1vrXc2WrCH5dMW5c5MVVvwT/MpJW6wgZeaQXrfHHffVAgPtukkxaOz9egA
-        AAAASUVORK5CYII=
-</value>
-  </data>
-  <data name="removeExtensionButton.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="removeExtensionButton.Location" type="System.Drawing.Point, System.Drawing">
-    <value>113, 50</value>
-  </data>
-  <data name="removeExtensionButton.Size" type="System.Drawing.Size, System.Drawing">
-    <value>25, 25</value>
-  </data>
-  <data name="removeExtensionButton.TabIndex" type="System.Int32, mscorlib">
-    <value>7</value>
-  </data>
-  <data name="&gt;&gt;removeExtensionButton.Name" xml:space="preserve">
-    <value>removeExtensionButton</value>
-  </data>
-  <data name="&gt;&gt;removeExtensionButton.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;removeExtensionButton.Parent" xml:space="preserve">
-    <value>extensionsGroupBox</value>
-  </data>
-  <data name="&gt;&gt;removeExtensionButton.ZOrder" xml:space="preserve">
-    <value>1</value>
-  </data>
-  <metadata name="extensionBindingSource.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>552, 17</value>
-  </metadata>
-  <data name="extensionsListBox.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
-    <value>Top, Left, Right</value>
-  </data>
-  <data name="extensionsListBox.Location" type="System.Drawing.Point, System.Drawing">
-    <value>144, 19</value>
-  </data>
-  <data name="extensionsListBox.Size" type="System.Drawing.Size, System.Drawing">
-    <value>239, 95</value>
-  </data>
-  <data name="extensionsListBox.TabIndex" type="System.Int32, mscorlib">
-    <value>8</value>
-  </data>
-  <data name="&gt;&gt;extensionsListBox.Name" xml:space="preserve">
-    <value>extensionsListBox</value>
-  </data>
-  <data name="&gt;&gt;extensionsListBox.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ListBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;extensionsListBox.Parent" xml:space="preserve">
-    <value>extensionsGroupBox</value>
-  </data>
-  <data name="&gt;&gt;extensionsListBox.ZOrder" xml:space="preserve">
-    <value>2</value>
-  </data>
-  <metadata name="extensionBindingSource.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>552, 17</value>
-  </metadata>
-  <data name="addExtensionButton.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-    <value>
-        iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAO
-        wwAADsMBx2+oZAAAAFhJREFUOE9jGBmAFUqTBXiAeAqESR7gB+JlECZ5gCwDeIEYpBGEZYF4DRDzIYlx
-        ADFOAAqwqUAMshWEVwPxAyT+ciBOA2KiAVleQAYDbwAowEjy85ADDAwAOYoLjxBjnjQAAAAASUVORK5C
-        YII=
-</value>
-  </data>
-  <data name="addExtensionButton.Location" type="System.Drawing.Point, System.Drawing">
-    <value>113, 19</value>
-  </data>
-  <data name="addExtensionButton.Size" type="System.Drawing.Size, System.Drawing">
-    <value>25, 25</value>
-  </data>
-  <data name="addExtensionButton.TabIndex" type="System.Int32, mscorlib">
-    <value>6</value>
-  </data>
-  <data name="&gt;&gt;addExtensionButton.Name" xml:space="preserve">
-    <value>addExtensionButton</value>
-  </data>
-  <data name="&gt;&gt;addExtensionButton.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;addExtensionButton.Parent" xml:space="preserve">
-    <value>extensionsGroupBox</value>
-  </data>
-  <data name="&gt;&gt;addExtensionButton.ZOrder" xml:space="preserve">
-    <value>3</value>
   </data>
   <data name="replaceExistingDestinationFilesCheckBox.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -1149,6 +882,246 @@
   </data>
   <data name="&gt;&gt;moveOkFilesToLabel.ZOrder" xml:space="preserve">
     <value>8</value>
+  </data>
+  <data name="queueTabPage.Location" type="System.Drawing.Point, System.Drawing">
+    <value>4, 22</value>
+  </data>
+  <data name="queueTabPage.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>3, 3, 3, 3</value>
+  </data>
+  <data name="queueTabPage.Size" type="System.Drawing.Size, System.Drawing">
+    <value>402, 381</value>
+  </data>
+  <data name="queueTabPage.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="queueTabPage.Text" xml:space="preserve">
+    <value>Queue</value>
+  </data>
+  <data name="&gt;&gt;queueTabPage.Name" xml:space="preserve">
+    <value>queueTabPage</value>
+  </data>
+  <data name="&gt;&gt;queueTabPage.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TabPage, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;queueTabPage.Parent" xml:space="preserve">
+    <value>optionsTabControl</value>
+  </data>
+  <data name="&gt;&gt;queueTabPage.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="checkVersionButton.Location" type="System.Drawing.Point, System.Drawing">
+    <value>152, 48</value>
+  </data>
+  <data name="checkVersionButton.Size" type="System.Drawing.Size, System.Drawing">
+    <value>75, 27</value>
+  </data>
+  <data name="checkVersionButton.TabIndex" type="System.Int32, mscorlib">
+    <value>3</value>
+  </data>
+  <data name="checkVersionButton.Text" xml:space="preserve">
+    <value>Check now!</value>
+  </data>
+  <data name="&gt;&gt;checkVersionButton.Name" xml:space="preserve">
+    <value>checkVersionButton</value>
+  </data>
+  <data name="&gt;&gt;checkVersionButton.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;checkVersionButton.Parent" xml:space="preserve">
+    <value>versionTabPage</value>
+  </data>
+  <data name="&gt;&gt;checkVersionButton.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="lastVersionFoundLabel.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="lastVersionFoundLabel.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="lastVersionFoundLabel.Location" type="System.Drawing.Point, System.Drawing">
+    <value>109, 55</value>
+  </data>
+  <data name="lastVersionFoundLabel.Size" type="System.Drawing.Size, System.Drawing">
+    <value>29, 13</value>
+  </data>
+  <data name="lastVersionFoundLabel.TabIndex" type="System.Int32, mscorlib">
+    <value>2</value>
+  </data>
+  <data name="lastVersionFoundLabel.Text" xml:space="preserve">
+    <value>2.x.x</value>
+  </data>
+  <data name="&gt;&gt;lastVersionFoundLabel.Name" xml:space="preserve">
+    <value>lastVersionFoundLabel</value>
+  </data>
+  <data name="&gt;&gt;lastVersionFoundLabel.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;lastVersionFoundLabel.Parent" xml:space="preserve">
+    <value>versionTabPage</value>
+  </data>
+  <data name="&gt;&gt;lastVersionFoundLabel.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="currentVersionLabel.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="currentVersionLabel.Location" type="System.Drawing.Point, System.Drawing">
+    <value>109, 32</value>
+  </data>
+  <data name="currentVersionLabel.Size" type="System.Drawing.Size, System.Drawing">
+    <value>29, 13</value>
+  </data>
+  <data name="currentVersionLabel.TabIndex" type="System.Int32, mscorlib">
+    <value>2</value>
+  </data>
+  <data name="currentVersionLabel.Text" xml:space="preserve">
+    <value>2.x.x</value>
+  </data>
+  <data name="&gt;&gt;currentVersionLabel.Name" xml:space="preserve">
+    <value>currentVersionLabel</value>
+  </data>
+  <data name="&gt;&gt;currentVersionLabel.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;currentVersionLabel.Parent" xml:space="preserve">
+    <value>versionTabPage</value>
+  </data>
+  <data name="&gt;&gt;currentVersionLabel.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="label3.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="label3.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="label3.Location" type="System.Drawing.Point, System.Drawing">
+    <value>6, 55</value>
+  </data>
+  <data name="label3.Size" type="System.Drawing.Size, System.Drawing">
+    <value>97, 13</value>
+  </data>
+  <data name="label3.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="label3.Text" xml:space="preserve">
+    <value>Last version found:</value>
+  </data>
+  <data name="&gt;&gt;label3.Name" xml:space="preserve">
+    <value>label3</value>
+  </data>
+  <data name="&gt;&gt;label3.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;label3.Parent" xml:space="preserve">
+    <value>versionTabPage</value>
+  </data>
+  <data name="&gt;&gt;label3.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="label2.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="label2.Location" type="System.Drawing.Point, System.Drawing">
+    <value>22, 32</value>
+  </data>
+  <data name="label2.Size" type="System.Drawing.Size, System.Drawing">
+    <value>81, 13</value>
+  </data>
+  <data name="label2.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="label2.Text" xml:space="preserve">
+    <value>Current version:</value>
+  </data>
+  <data name="&gt;&gt;label2.Name" xml:space="preserve">
+    <value>label2</value>
+  </data>
+  <data name="&gt;&gt;label2.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;label2.Parent" xml:space="preserve">
+    <value>versionTabPage</value>
+  </data>
+  <data name="&gt;&gt;label2.ZOrder" xml:space="preserve">
+    <value>4</value>
+  </data>
+  <data name="checkUpdatesCheckBox.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="checkUpdatesCheckBox.Location" type="System.Drawing.Point, System.Drawing">
+    <value>7, 7</value>
+  </data>
+  <data name="checkUpdatesCheckBox.Size" type="System.Drawing.Size, System.Drawing">
+    <value>183, 17</value>
+  </data>
+  <data name="checkUpdatesCheckBox.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="checkUpdatesCheckBox.Text" xml:space="preserve">
+    <value>Automatically check for updates?</value>
+  </data>
+  <data name="&gt;&gt;checkUpdatesCheckBox.Name" xml:space="preserve">
+    <value>checkUpdatesCheckBox</value>
+  </data>
+  <data name="&gt;&gt;checkUpdatesCheckBox.Type" xml:space="preserve">
+    <value>System.Windows.Forms.CheckBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;checkUpdatesCheckBox.Parent" xml:space="preserve">
+    <value>versionTabPage</value>
+  </data>
+  <data name="&gt;&gt;checkUpdatesCheckBox.ZOrder" xml:space="preserve">
+    <value>5</value>
+  </data>
+  <data name="versionTabPage.Location" type="System.Drawing.Point, System.Drawing">
+    <value>4, 22</value>
+  </data>
+  <data name="versionTabPage.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>3, 3, 3, 3</value>
+  </data>
+  <data name="versionTabPage.Size" type="System.Drawing.Size, System.Drawing">
+    <value>402, 381</value>
+  </data>
+  <data name="versionTabPage.TabIndex" type="System.Int32, mscorlib">
+    <value>2</value>
+  </data>
+  <data name="versionTabPage.Text" xml:space="preserve">
+    <value>App Version</value>
+  </data>
+  <data name="&gt;&gt;versionTabPage.Name" xml:space="preserve">
+    <value>versionTabPage</value>
+  </data>
+  <data name="&gt;&gt;versionTabPage.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TabPage, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;versionTabPage.Parent" xml:space="preserve">
+    <value>optionsTabControl</value>
+  </data>
+  <data name="&gt;&gt;versionTabPage.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="optionsTabControl.Location" type="System.Drawing.Point, System.Drawing">
+    <value>12, 12</value>
+  </data>
+  <data name="optionsTabControl.Size" type="System.Drawing.Size, System.Drawing">
+    <value>410, 407</value>
+  </data>
+  <data name="optionsTabControl.TabIndex" type="System.Int32, mscorlib">
+    <value>6</value>
+  </data>
+  <data name="&gt;&gt;optionsTabControl.Name" xml:space="preserve">
+    <value>optionsTabControl</value>
+  </data>
+  <data name="&gt;&gt;optionsTabControl.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TabControl, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;optionsTabControl.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;optionsTabControl.ZOrder" xml:space="preserve">
+    <value>0</value>
   </data>
   <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>

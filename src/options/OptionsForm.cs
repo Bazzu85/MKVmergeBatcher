@@ -12,6 +12,7 @@ namespace MKVmergeBatcher.src.options
         public static readonly Logger Logger = NLog.LogManager.GetCurrentClassLogger();
         Boolean loadingForm = false;
         public LocaleManager localeManager = new LocaleManager();
+        public VersionManager versionManager = new VersionManager();
 
         public OptionsForm()
         {
@@ -31,6 +32,19 @@ namespace MKVmergeBatcher.src.options
             //Console.WriteLine("selectedLogLevelIndex: " + MainForm.optionsData.selectedLogLevelIndex);
             logLevelsComboBox.SelectedIndex = MainForm.optionsData.selectedLogLevelIndex;
             localeComboBox.SelectedIndex = MainForm.optionsData.selectedLocaleIndex;
+
+            UpdateLabels();
+
+            // for test only
+            //MainForm.optionsData.lastVersionFound = "1.0.1";
+        }
+
+        private void UpdateLabels()
+        {
+            Logger.Trace(System.Reflection.MethodBase.GetCurrentMethod().Name);
+
+            currentVersionLabel.Text = versionManager.GenerateLocalVersionForGithub().ToString();
+            lastVersionFoundLabel.Text = MainForm.optionsData.lastVersionFound;
         }
 
         private void RestoreWindowPositionAndSize()
@@ -58,6 +72,16 @@ namespace MKVmergeBatcher.src.options
             this.localeBindingSource.DataSource = MainForm.optionsData.localeList;
             this.extensionBindingSource.DataSource = MainForm.optionsData.extensionList;
             this.excludeFileNameContainingBindingSource.DataSource = MainForm.optionsData.excludeFileNameContainingList;
+        }
+
+        private void ResetBindings()
+        {
+            Logger.Trace(System.Reflection.MethodBase.GetCurrentMethod().Name);
+            this.optionsDataBindingSource.ResetBindings(false);
+            this.logLevelBindingSource.ResetBindings(false);
+            this.localeBindingSource.ResetBindings(false);
+            this.extensionBindingSource.ResetBindings(false);
+            this.excludeFileNameContainingBindingSource.ResetBindings(false);
         }
 
         private void OptionsForm_FormClosed(object sender, FormClosedEventArgs e)
@@ -107,7 +131,11 @@ namespace MKVmergeBatcher.src.options
                 }
                 localeManager.SaveOldLocaleLabels();
                 localeManager.SetLocale(this);
+                //Console.WriteLine("MainForm.optionsData.lastVersionFound: " + MainForm.optionsData.lastVersionFound);
                 localeManager.UpdateNewLocaleLabels();
+
+                // update the labels
+                UpdateLabels();
             }
         }
 
@@ -258,6 +286,19 @@ namespace MKVmergeBatcher.src.options
                     excludeFileNameContainingListBox.SelectedIndex = index;
                 }
             }
+        }
+
+        private async void checkVersionButton_Click(object sender, EventArgs e)
+        {
+            await versionManager.CheckForUpdateAsync();
+            if (String.IsNullOrEmpty(versionManager.GetError()))
+            {
+                ResetBindings();
+            } else
+            {
+                MessageBox.Show(e.ToString(), Properties.Resources.ErrorLabel, MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            
         }
     }
 }
