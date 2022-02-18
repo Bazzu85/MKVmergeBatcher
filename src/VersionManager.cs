@@ -18,6 +18,7 @@ namespace MKVmergeBatcher.src
         internal async Task<bool> CheckForUpdateAsync()
         {
             bool newVersionFound = false;
+            error = "";
 
             Version latestGitHubVersion;
             // open the github connection and grab the latest version
@@ -30,6 +31,7 @@ namespace MKVmergeBatcher.src
             catch (RateLimitExceededException e)
             {
                 Logger.Info(e);
+                error = e.ToString();
                 return false;
             }
 

@@ -296,7 +296,7 @@ namespace MKVmergeBatcher.src.options
                 ResetBindings();
             } else
             {
-                MessageBox.Show(e.ToString(), Properties.Resources.ErrorLabel, MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show(versionManager.GetError(), Properties.Resources.ErrorLabel, MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
             
         }

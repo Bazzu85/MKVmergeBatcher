@@ -81,14 +81,20 @@ namespace MKVmergeBatcher.src
             if (optionsData.checkUpdates)
             {
                 bool newVersionFound = await versionManager.CheckForUpdateAsync();
-                if (newVersionFound)
+                if (String.IsNullOrEmpty(versionManager.GetError()))
                 {
-                    DialogResult dr = MessageBox.Show("New version found. Do you want to open the release page? You can disable the version check in options", Properties.Resources.InfoLabel, MessageBoxButtons.YesNo, MessageBoxIcon.Information);
-                    if (dr == DialogResult.Yes)
+                    if (newVersionFound)
                     {
-                        System.Diagnostics.Process.Start("https://github.com/Bazzu85/MKVmergeBatcher/releases/latest");
+                        DialogResult dr = MessageBox.Show("New version found. Do you want to open the release page? You can disable the version check in options", Properties.Resources.InfoLabel, MessageBoxButtons.YesNo, MessageBoxIcon.Information);
+                        if (dr == DialogResult.Yes)
+                        {
+                            System.Diagnostics.Process.Start("https://github.com/Bazzu85/MKVmergeBatcher/releases/latest");
+                        }
                     }
-                    
+                }
+                else
+                {
+                    MessageBox.Show(versionManager.GetError(), Properties.Resources.ErrorLabel, MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
             }
 
