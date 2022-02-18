@@ -55,7 +55,11 @@ namespace MKVmergeBatcher.src.queue
         {
             Logger.Trace(System.Reflection.MethodBase.GetCurrentMethod().Name);
 
-            //Console.WriteLine("queueForm: tick");
+            Console.WriteLine("queueForm: tick");
+
+            //disable the timer until is not ended the current elaboration
+            queueTimer.Enabled = false;
+
             // Check if the locale is changed and update it
             //Console.WriteLine("queueForm: UpdateLocale()");
             UpdateLocale();
@@ -81,6 +85,9 @@ namespace MKVmergeBatcher.src.queue
                 SetControlsContent();
             }
             //Console.WriteLine("queueForm: end tick");
+            
+            //re-enable the timer until is not ended the current elaboration
+            queueTimer.Enabled = true;
 
 
         }
@@ -166,6 +173,8 @@ namespace MKVmergeBatcher.src.queue
                 }
                 if (MainForm.queueData.processEnded)
                 {
+                    Console.WriteLine("processEnded");
+
                     totalProgressBar.Value = MainForm.queueData.currentRunningJob;
                     jobProgressBar.Value = jobProgressBar.Maximum;
                     string messaggeText = Properties.Resources.ElaboratedFiles + ": " + MainForm.queueData.totalJobsToExec + Environment.NewLine + Properties.Resources.WarningJobLabel + ": " + MainForm.queueData.warnings + Environment.NewLine + Properties.Resources.ErrorJobLabel + ": " + MainForm.queueData.errors;

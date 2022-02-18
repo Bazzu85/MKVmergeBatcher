@@ -124,6 +124,8 @@ namespace MKVmergeBatcher.src.queue
 
         private void refreshTimer_Tick(object sender, EventArgs e)
         {
+            refreshTimer.Enabled = false;
+
             SetControlsContent();
             ResetFormBindings();
             if (jobNoLongerAvailable)
@@ -131,6 +133,8 @@ namespace MKVmergeBatcher.src.queue
                 this.Close();
                 return;
             }
+            refreshTimer.Enabled = true;
+
         }
     }
 }
