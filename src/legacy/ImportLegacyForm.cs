@@ -123,10 +123,10 @@ namespace MKVmergeBatcher.src.legacy
             }
             #endregion
             #region moveOkFilesTo
-            MainForm.optionsData.moveOkFilesTo = userData.options.moveOkFilesTo;
+            MainForm.optionsData.moveOkFilesTo = userData.options.moveOkFilesTo.Replace("%originalFolder%", "||originalFolder||");
             #endregion
             #region moveWarningFilesTo
-            MainForm.optionsData.moveWarningFilesTo = userData.options.moveWarningFilesTo;
+            MainForm.optionsData.moveWarningFilesTo = userData.options.moveWarningFilesTo.Replace("%originalFolder%", "||originalFolder||");
             #endregion
             #region replaceExistingDestinationFiles
             MainForm.optionsData.replaceExistingDestinationFiles = userData.options.replaceExistingDestinationFile;

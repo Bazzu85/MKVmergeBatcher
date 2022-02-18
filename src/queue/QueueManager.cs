@@ -489,14 +489,14 @@ namespace MKVmergeBatcher.src.queue
             Logger.Trace(System.Reflection.MethodBase.GetCurrentMethod().Name);
 
             // if the destination folder is the original one, no move to do
-            if (fileNewFolder == "%originalFolder%")
+            if (fileNewFolder == "||originalFolder||")
             {
                 return;
             }
             //Change the wildcard with the file directory (if in destination folder string)
             string destinationPath = fileNewFolder;
 
-            destinationPath = destinationPath.Replace("%originalFolder%", Path.GetDirectoryName(fileName));
+            destinationPath = destinationPath.Replace("||originalFolder||", Path.GetDirectoryName(fileName));
 
             string destinationFile = destinationPath + "\\" + Path.GetFileName(fileName);
 

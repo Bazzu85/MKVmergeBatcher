@@ -20,7 +20,7 @@ Global
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
-		RESX_ExcelExportMode = SingleSheet
+		RESX_ExcelExportMode = Text
 		RESX_SaveFilesImmediatelyUponChange = False
 		SolutionGuid = {FFDCC5B8-F772-47E1-89D1-FF2B5A03D005}
 	EndGlobalSection

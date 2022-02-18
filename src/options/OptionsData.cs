@@ -48,8 +48,8 @@ namespace MKVmergeBatcher.src.options
 
         #endregion
         #region Queue options
-        public string moveOkFilesTo { get; set; } = "%originalFolder%";
-        public string moveWarningFilesTo { get; set; } = "%originalFolder%";
+        public string moveOkFilesTo { get; set; } = "||originalFolder||";
+        public string moveWarningFilesTo { get; set; } = "||originalFolder||";
         public Boolean replaceExistingDestinationFiles { get; set; }
         public Boolean deleteIncompleteFiles { get; set; }
         public Boolean autoClearOkJobs { get; set; }
@@ -92,6 +92,9 @@ namespace MKVmergeBatcher.src.options
                 MainForm.optionsData.extensionList.Add(new Extension() { extension = "mkv" });
                 MainForm.optionsData.extensionList.Add(new Extension() { extension = "mp4" });
             }
+
+            MainForm.optionsData.moveOkFilesTo = MainForm.optionsData.moveOkFilesTo.Replace("%originalFolder%", "||originalFolder||");
+            MainForm.optionsData.moveWarningFilesTo = MainForm.optionsData.moveWarningFilesTo.Replace("%originalFolder%", "||originalFolder||");
 
         }
     }
