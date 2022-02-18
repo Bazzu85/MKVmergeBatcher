@@ -318,4 +318,13 @@
   <data name="NewVersionFound" xml:space="preserve">
     <value>Trovata una nuova versione dell'app. Vuoi aprire la pagina delle release? Puoi disabilitare questo controllo dalle opzioni.</value>
   </data>
+  <data name="EnglishLanguageName" xml:space="preserve">
+    <value>Inglese</value>
+  </data>
+  <data name="ItalianLanguageName" xml:space="preserve">
+    <value>Italiano</value>
+  </data>
+  <data name="SpanishLanguageName" xml:space="preserve">
+    <value>Spagnolo</value>
+  </data>
 </root>

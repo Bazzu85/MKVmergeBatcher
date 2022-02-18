@@ -73,13 +73,18 @@ namespace MKVmergeBatcher.src.options
             MainForm.optionsData.localeList.Clear();
             MainForm.optionsData.localeList.Add(new Locale()
             {
-                localeName = "English",
+                localeName = Properties.Resources.EnglishLanguageName,
                 localeCode = "en-US"
             }); ;
             MainForm.optionsData.localeList.Add(new Locale()
             {
-                localeName = "Italiano",
+                localeName = Properties.Resources.ItalianLanguageName,
                 localeCode = "it-IT"
+            }); ;
+            MainForm.optionsData.localeList.Add(new Locale()
+            {
+                localeName = Properties.Resources.SpanishLanguageName,
+                localeCode = "es-ES"
             }); ;
 
             if (MainForm.optionsData.extensionList.Count() == 0)

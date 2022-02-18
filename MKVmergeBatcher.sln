@@ -20,17 +20,8 @@ Global
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
+		RESX_ExcelExportMode = SingleSheet
+		RESX_SaveFilesImmediatelyUponChange = False
 		SolutionGuid = {FFDCC5B8-F772-47E1-89D1-FF2B5A03D005}
-	EndGlobalSection
-	GlobalSection(AutomaticVersions) = postSolution
-		UpdateAssemblyVersion.Release|Any CPU = True
-		UpdateAssemblyFileVersion.Release|Any CPU = True
-		UpdateAssemblyInfoVersion.Release|Any CPU = True
-		AssemblyVersionSettings.Release|Any CPU = None.None.Increment.None
-		AssemblyFileVersionSettings.Release|Any CPU = None.None.Increment.None
-		AssemblyInfoVersionSettings.Release|Any CPU = None.None.Increment.None
-		UpdatePackageVersion.Release|Any CPU = False
-		AssemblyInfoVersionType.Release|Any CPU = SettingsVersion
-		InheritWinAppVersionFrom.Release|Any CPU = None
 	EndGlobalSection
 EndGlobal

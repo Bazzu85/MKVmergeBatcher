@@ -100,8 +100,8 @@ namespace MKVmergeBatcher.src.options
             // 
             // mkvMergeLocationTextBox
             // 
-            this.mkvMergeLocationTextBox.AllowDrop = true;
             resources.ApplyResources(this.mkvMergeLocationTextBox, "mkvMergeLocationTextBox");
+            this.mkvMergeLocationTextBox.AllowDrop = true;
             this.mkvMergeLocationTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.optionsDataBindingSource, "mkvMergeLocation", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
             this.mkvMergeLocationTextBox.Name = "mkvMergeLocationTextBox";
             this.mkvMergeLocationTextBox.DragDrop += new System.Windows.Forms.DragEventHandler(this.mkvMergeLocationTextBox_DragDrop);
@@ -118,11 +118,11 @@ namespace MKVmergeBatcher.src.options
             // 
             // logLevelsComboBox
             // 
+            resources.ApplyResources(this.logLevelsComboBox, "logLevelsComboBox");
             this.logLevelsComboBox.DataSource = this.logLevelBindingSource;
             this.logLevelsComboBox.DisplayMember = "logLevel";
             this.logLevelsComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.logLevelsComboBox.FormattingEnabled = true;
-            resources.ApplyResources(this.logLevelsComboBox, "logLevelsComboBox");
             this.logLevelsComboBox.Name = "logLevelsComboBox";
             this.logLevelsComboBox.ValueMember = "logLevel";
             this.logLevelsComboBox.SelectedIndexChanged += new System.EventHandler(this.logLevelsComboBox_SelectedIndexChanged);
@@ -138,11 +138,11 @@ namespace MKVmergeBatcher.src.options
             // 
             // localeComboBox
             // 
+            resources.ApplyResources(this.localeComboBox, "localeComboBox");
             this.localeComboBox.DataSource = this.localeBindingSource;
             this.localeComboBox.DisplayMember = "localeName";
             this.localeComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.localeComboBox.FormattingEnabled = true;
-            resources.ApplyResources(this.localeComboBox, "localeComboBox");
             this.localeComboBox.Name = "localeComboBox";
             this.localeComboBox.ValueMember = "localeCode";
             this.localeComboBox.SelectedIndexChanged += new System.EventHandler(this.localeComboBox_SelectedIndexChanged);
@@ -162,6 +162,7 @@ namespace MKVmergeBatcher.src.options
             // 
             // generalTabPage
             // 
+            resources.ApplyResources(this.generalTabPage, "generalTabPage");
             this.generalTabPage.Controls.Add(this.allowMultipleInstacesCheckBox);
             this.generalTabPage.Controls.Add(this.excludeFileNameContiningGroupBox);
             this.generalTabPage.Controls.Add(this.extensionsGroupBox);
@@ -172,7 +173,6 @@ namespace MKVmergeBatcher.src.options
             this.generalTabPage.Controls.Add(this.browseMkvMergeLocationButton);
             this.generalTabPage.Controls.Add(this.logLevelsComboBox);
             this.generalTabPage.Controls.Add(this.mkvMergeLocationTextBox);
-            resources.ApplyResources(this.generalTabPage, "generalTabPage");
             this.generalTabPage.Name = "generalTabPage";
             this.generalTabPage.UseVisualStyleBackColor = true;
             // 
@@ -267,6 +267,7 @@ namespace MKVmergeBatcher.src.options
             // 
             // queueTabPage
             // 
+            resources.ApplyResources(this.queueTabPage, "queueTabPage");
             this.queueTabPage.Controls.Add(this.replaceExistingDestinationFilesCheckBox);
             this.queueTabPage.Controls.Add(this.autoClearErrorJobsCheckBox);
             this.queueTabPage.Controls.Add(this.autoClearWarningJobsCheckBox);
@@ -276,7 +277,6 @@ namespace MKVmergeBatcher.src.options
             this.queueTabPage.Controls.Add(this.moveOkFilesToTextBox);
             this.queueTabPage.Controls.Add(this.moveWarningFilesToLabel);
             this.queueTabPage.Controls.Add(this.moveOkFilesToLabel);
-            resources.ApplyResources(this.queueTabPage, "queueTabPage");
             this.queueTabPage.Name = "queueTabPage";
             this.queueTabPage.UseVisualStyleBackColor = true;
             // 
@@ -317,14 +317,14 @@ namespace MKVmergeBatcher.src.options
             // 
             // moveWarningFilesToTextBox
             // 
-            this.moveWarningFilesToTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.optionsDataBindingSource, "moveWarningFilesTo", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
             resources.ApplyResources(this.moveWarningFilesToTextBox, "moveWarningFilesToTextBox");
+            this.moveWarningFilesToTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.optionsDataBindingSource, "moveWarningFilesTo", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
             this.moveWarningFilesToTextBox.Name = "moveWarningFilesToTextBox";
             // 
             // moveOkFilesToTextBox
             // 
-            this.moveOkFilesToTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.optionsDataBindingSource, "moveOkFilesTo", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
             resources.ApplyResources(this.moveOkFilesToTextBox, "moveOkFilesToTextBox");
+            this.moveOkFilesToTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.optionsDataBindingSource, "moveOkFilesTo", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
             this.moveOkFilesToTextBox.Name = "moveOkFilesToTextBox";
             // 
             // moveWarningFilesToLabel
@@ -339,13 +339,13 @@ namespace MKVmergeBatcher.src.options
             // 
             // versionTabPage
             // 
+            resources.ApplyResources(this.versionTabPage, "versionTabPage");
             this.versionTabPage.Controls.Add(this.checkVersionButton);
             this.versionTabPage.Controls.Add(this.lastVersionFoundLabel);
             this.versionTabPage.Controls.Add(this.currentVersionLabel);
             this.versionTabPage.Controls.Add(this.label3);
             this.versionTabPage.Controls.Add(this.label2);
             this.versionTabPage.Controls.Add(this.checkUpdatesCheckBox);
-            resources.ApplyResources(this.versionTabPage, "versionTabPage");
             this.versionTabPage.Name = "versionTabPage";
             this.versionTabPage.UseVisualStyleBackColor = true;
             // 

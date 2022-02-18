@@ -124,6 +124,10 @@ namespace MKVmergeBatcher.src.options
             Logger.Trace(System.Reflection.MethodBase.GetCurrentMethod().Name);
             if (!loadingForm)
             {
+                //forcing the loadingForm flag to prevent that this event is fired multiple times ultil it's finished
+                loadingForm = true;
+
+                // saving current locale code and index
                 if (localeComboBox.SelectedIndex >= 0)
                 {
                     MainForm.optionsData.selectedLocaleIndex = localeComboBox.SelectedIndex;
@@ -131,11 +135,21 @@ namespace MKVmergeBatcher.src.options
                 }
                 localeManager.SaveOldLocaleLabels();
                 localeManager.SetLocale(this);
+
+                // setting again the defaults data refreshing the localization
+                MainForm.optionsData.SetDefault();
+
+                // restoring the combobox index
+                if (MainForm.optionsData.selectedLocaleIndex >= 0)
+                {
+                    localeComboBox.SelectedIndex = MainForm.optionsData.selectedLocaleIndex;
+                }
                 //Console.WriteLine("MainForm.optionsData.lastVersionFound: " + MainForm.optionsData.lastVersionFound);
                 localeManager.UpdateNewLocaleLabels();
 
                 // update the labels
                 UpdateLabels();
+                loadingForm = false;
             }
         }
 

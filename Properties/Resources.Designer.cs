@@ -241,6 +241,15 @@ namespace MKVmergeBatcher.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to English.
+        /// </summary>
+        internal static string EnglishLanguageName {
+            get {
+                return ResourceManager.GetString("EnglishLanguageName", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Error.
         /// </summary>
         internal static string ErrorJobLabel {
@@ -327,6 +336,15 @@ namespace MKVmergeBatcher.Properties {
         internal static string InsertLanguageCode {
             get {
                 return ResourceManager.GetString("InsertLanguageCode", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Italian.
+        /// </summary>
+        internal static string ItalianLanguageName {
+            get {
+                return ResourceManager.GetString("ItalianLanguageName", resourceCulture);
             }
         }
         
@@ -525,6 +543,15 @@ namespace MKVmergeBatcher.Properties {
         internal static string SelectTrackType {
             get {
                 return ResourceManager.GetString("SelectTrackType", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Spanish.
+        /// </summary>
+        internal static string SpanishLanguageName {
+            get {
+                return ResourceManager.GetString("SpanishLanguageName", resourceCulture);
             }
         }
         

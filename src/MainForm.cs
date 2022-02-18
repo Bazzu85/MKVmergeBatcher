@@ -68,6 +68,7 @@ namespace MKVmergeBatcher.src
             Logger.Trace(System.Reflection.MethodBase.GetCurrentMethod().Name);
             //Console.WriteLine("selectedLogLevel: " + MainForm.optionsData.selectedLogLevel);
             localeManager.SetLocale(this);
+            optionsData.SetDefault();
             SetTopMenuTexts();
             mainJson.ReadMainJson();
             modelsJson.ReadModelsJson();

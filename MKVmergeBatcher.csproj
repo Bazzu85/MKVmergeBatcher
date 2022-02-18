@@ -395,6 +395,9 @@
     <EmbeddedResource Include="src\models\ModelsForm.resx">
       <DependentUpon>ModelsForm.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="src\options\OptionsForm.es-ES.resx">
+      <DependentUpon>OptionsForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="src\options\OptionsForm.it-IT.resx">
       <DependentUpon>OptionsForm.cs</DependentUpon>
       <SubType>Designer</SubType>
@@ -462,6 +465,9 @@
       <ProductName>.NET Framework 3.5 SP1</ProductName>
       <Install>false</Install>
     </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Translactions\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Import Project="packages\Microsoft.Extensions.Logging.Abstractions.6.0.0\build\Microsoft.Extensions.Logging.Abstractions.targets" Condition="Exists('packages\Microsoft.Extensions.Logging.Abstractions.6.0.0\build\Microsoft.Extensions.Logging.Abstractions.targets')" />
