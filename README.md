@@ -55,6 +55,7 @@ Check the [Add-edit model section](README.md#add-edit-model) for additional info
 
 ![image](https://user-images.githubusercontent.com/7345587/153685326-bf11a3f4-76a5-46a4-b7ee-0539961db059.png)
 
+- If the update check is enabled ([check here](README.md#app-version-options)), this is done at the start of the app opening a popup in case of new version available
 - Video file path: the path from where to grab the video file to work on
 - Search in subfolders? : If activated the video file grabbed are taken also from subfolders
 - Apply file name exclusion? : if activated the file name exclusion is used according to the associated Options section
@@ -187,10 +188,9 @@ When using a model with many files, the wildcards are used to replace some core 
 
 ![image](https://user-images.githubusercontent.com/7345587/154702153-81631b0d-be22-43b9-a134-482aa2b02b4c.png)
 
-- Automatically check for updates: if enabled, when the app starts 
-
-  
-
+- Automatically check for updates: if enabled, when the app starts checks the last version here on Github. if a new version is available a popup appear to let the user open the release page
+- Current version: the current running version
+- Last version found: the last checked version on github. Using the Check now button you can force an update check.
 
 ## Queue
 
