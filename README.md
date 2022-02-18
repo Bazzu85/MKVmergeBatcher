@@ -156,7 +156,7 @@ When using a model with many files, the wildcards are used to replace some core 
 
 ### General options
 
-![image](https://user-images.githubusercontent.com/7345587/153709877-0dea2a6c-7015-4c88-b863-14ccfe75e2ed.png)
+![image](https://user-images.githubusercontent.com/7345587/154701986-07ed9275-bf97-4982-8c95-f5c61093ece9.png)
 
 - Log level:  You can choose between
   - Info
@@ -172,7 +172,7 @@ When using a model with many files, the wildcards are used to replace some core 
 
 ### Queue options
 
-![image](https://user-images.githubusercontent.com/7345587/153710216-b9b6282d-fbaa-4880-843c-776abb5f0d2b.png)
+![image](https://user-images.githubusercontent.com/7345587/154702045-c1542768-1d39-4b55-b089-3417b860e275.png)
 
 - Move Ok files to: when a job ends with a exit code 0 (Ok), the output file will be moved in a destination folder according to this options. Default: %originalFolder% -> no move
 - Move Warning files to: when a job ends with a exit code 1 (Warning), the output file will be moved in a destination folder according to this options. Default: %originalFolder% -> no move
@@ -182,6 +182,14 @@ When using a model with many files, the wildcards are used to replace some core 
 - Delete incomplete files when stopping queue: If this option is activated, when manually stopping the queue, the not completed output file is deleted
 - Automatically remove Ok Jobs: If this option is activated, when the queue is not running, the jobs in status "Ok" are automatically removed. Can be changed even in [queue context menu](README.md#jobs-section)
 - Automatically remove Warning Jobs: If this option is activated, when the queue is not running, the jobs in status "Warning" are automatically removed. Can be changed even in [queue context menu](README.md#jobs-section)
+
+### App version options
+
+![image](https://user-images.githubusercontent.com/7345587/154702153-81631b0d-be22-43b9-a134-482aa2b02b4c.png)
+
+- Automatically check for updates: if enabled, when the app starts 
+
+  
 
 
 ## Queue
