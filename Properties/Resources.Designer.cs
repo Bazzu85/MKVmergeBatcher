@@ -367,6 +367,15 @@ namespace MKVmergeBatcher.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to New version found. Do you want to open the release page? You can disable the version check in options..
+        /// </summary>
+        internal static string NewVersionFound {
+            get {
+                return ResourceManager.GetString("NewVersionFound", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to No file to add to queue.
         /// </summary>
         internal static string NoFilesToAddToQueue {

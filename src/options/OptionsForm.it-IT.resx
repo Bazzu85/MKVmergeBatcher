@@ -1849,4 +1849,10 @@
   <data name="$this.Text" xml:space="preserve">
     <value>Opzioni</value>
   </data>
+  <data name="currentVersionLabel.Text" xml:space="preserve">
+    <value>2.x.x</value>
+  </data>
+  <data name="lastVersionFoundLabel.Text" xml:space="preserve">
+    <value>2.x.x</value>
+  </data>
 </root>

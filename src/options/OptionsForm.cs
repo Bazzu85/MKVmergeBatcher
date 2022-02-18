@@ -290,15 +290,23 @@ namespace MKVmergeBatcher.src.options
 
         private async void checkVersionButton_Click(object sender, EventArgs e)
         {
-            await versionManager.CheckForUpdateAsync();
+            bool newVersionFound = await versionManager.CheckForUpdateAsync();
             if (String.IsNullOrEmpty(versionManager.GetError()))
             {
-                ResetBindings();
-            } else
+                if (newVersionFound)
+                {
+                    DialogResult dr = MessageBox.Show(Properties.Resources.NewVersionFound, Properties.Resources.InfoLabel, MessageBoxButtons.YesNo, MessageBoxIcon.Information);
+                    if (dr == DialogResult.Yes)
+                    {
+                        System.Diagnostics.Process.Start("https://github.com/Bazzu85/MKVmergeBatcher/releases/latest");
+                    }
+                    ResetBindings();
+                }
+            }
+            else
             {
                 MessageBox.Show(versionManager.GetError(), Properties.Resources.ErrorLabel, MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
-            
         }
     }
 }

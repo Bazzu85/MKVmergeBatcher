@@ -85,7 +85,7 @@ namespace MKVmergeBatcher.src
                 {
                     if (newVersionFound)
                     {
-                        DialogResult dr = MessageBox.Show("New version found. Do you want to open the release page? You can disable the version check in options", Properties.Resources.InfoLabel, MessageBoxButtons.YesNo, MessageBoxIcon.Information);
+                        DialogResult dr = MessageBox.Show(Properties.Resources.NewVersionFound, Properties.Resources.InfoLabel, MessageBoxButtons.YesNo, MessageBoxIcon.Information);
                         if (dr == DialogResult.Yes)
                         {
                             System.Diagnostics.Process.Start("https://github.com/Bazzu85/MKVmergeBatcher/releases/latest");
@@ -97,34 +97,6 @@ namespace MKVmergeBatcher.src
                     MessageBox.Show(versionManager.GetError(), Properties.Resources.ErrorLabel, MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
             }
-
-            /*
-
-            Version fullVersion = System.Reflection.Assembly.GetExecutingAssembly().GetName().Version;
-
-            var localVersion = new Version(fullVersion.Major.ToString() + fullVersion.Minor.ToString() + fullVersion.Build.ToString());
-            Console.WriteLine(localVersion);
-
-            int versionComparison = localVersion.CompareTo(latestGitHubVersion);
-            if (versionComparison < 0)
-            {
-                //The version on GitHub is more up to date than this local release.
-            }
-            else if (versionComparison > 0)
-            {
-                //This local version is greater than the release version on GitHub.
-                //a
-            }
-            else
-            {
-                //This local Version and the Version on GitHub are equal.
-            }
-            
-            Console.WriteLine(
-                "The latest release is tagged at {0} and is named {1}",
-                latest.TagName,
-                latest.Name);
-            */
         }
 
         private void RestoreWindowPositionAndSize()

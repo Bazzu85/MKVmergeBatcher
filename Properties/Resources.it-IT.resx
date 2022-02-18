@@ -315,4 +315,7 @@
   <data name="AnotherInstanceIsCurrentlyRunning" xml:space="preserve">
     <value>Un'altra istanza dell'applicazione è in esecuzione. Questa verrà chiusa.</value>
   </data>
+  <data name="NewVersionFound" xml:space="preserve">
+    <value>Trovata una nuova versione dell'app. Vuoi aprire la pagina delle release? Puoi disabilitare questo controllo dalle opzioni.</value>
+  </data>
 </root>

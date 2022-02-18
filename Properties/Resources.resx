@@ -315,4 +315,7 @@
   <data name="AnotherInstanceIsCurrentlyRunning" xml:space="preserve">
     <value>Another instance is currently running. Closing this one.</value>
   </data>
+  <data name="NewVersionFound" xml:space="preserve">
+    <value>New version found. Do you want to open the release page? You can disable the version check in options.</value>
+  </data>
 </root>
