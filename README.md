@@ -175,8 +175,8 @@ When using a model with many files, the wildcards are used to replace some core 
 
 ![image](https://user-images.githubusercontent.com/7345587/154702045-c1542768-1d39-4b55-b089-3417b860e275.png)
 
-- Move Ok files to: when a job ends with a exit code 0 (Ok), the output file will be moved in a destination folder according to this options. Default: %originalFolder% -> no move
-- Move Warning files to: when a job ends with a exit code 1 (Warning), the output file will be moved in a destination folder according to this options. Default: %originalFolder% -> no move
+- Move Ok files to: when a job ends with a exit code 0 (Ok), the output file will be moved in a destination folder according to this options. Default: ||originalFolder|| -> no move
+- Move Warning files to: when a job ends with a exit code 1 (Warning), the output file will be moved in a destination folder according to this options. Default: ||originalFolder|| -> no move
 - Replace destination file (when moving): If this option is activated, when moving a file (check "Move Ok files to" and "Move Warning files to"), if the file is already in destination directory
   - The current destination file is renamed appending "_backup" to the file name
   - The output file is then moved to the destination folder
