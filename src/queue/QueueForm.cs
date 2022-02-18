@@ -53,9 +53,9 @@ namespace MKVmergeBatcher.src.queue
         }
         private void queueTimer_Tick(object sender, EventArgs e)
         {
-            Logger.Trace(System.Reflection.MethodBase.GetCurrentMethod().Name);
+            //Logger.Trace(System.Reflection.MethodBase.GetCurrentMethod().Name);
 
-            Console.WriteLine("queueForm: tick");
+            //Console.WriteLine("queueForm: tick");
 
             //disable the timer until is not ended the current elaboration
             queueTimer.Enabled = false;
@@ -106,7 +106,7 @@ namespace MKVmergeBatcher.src.queue
         }
         private void SetToolStripMenuItemFlags()
         {
-            Logger.Trace(System.Reflection.MethodBase.GetCurrentMethod().Name);
+            //Logger.Trace(System.Reflection.MethodBase.GetCurrentMethod().Name);
             //automatically allineate the toolstrip checkbox
             if (MainForm.optionsData.autoClearOkJobs != autoClearOkJobsToolStripMenuItem.Checked)
             {
@@ -173,7 +173,7 @@ namespace MKVmergeBatcher.src.queue
                 }
                 if (MainForm.queueData.processEnded)
                 {
-                    Console.WriteLine("processEnded");
+                    //Console.WriteLine("processEnded");
 
                     totalProgressBar.Value = MainForm.queueData.currentRunningJob;
                     jobProgressBar.Value = jobProgressBar.Maximum;

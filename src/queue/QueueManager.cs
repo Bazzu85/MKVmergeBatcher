@@ -495,9 +495,16 @@ namespace MKVmergeBatcher.src.queue
             }
             //Change the wildcard with the file directory (if in destination folder string)
             string destinationPath = fileNewFolder;
+
             destinationPath = destinationPath.Replace("%originalFolder%", Path.GetDirectoryName(fileName));
 
             string destinationFile = destinationPath + "\\" + Path.GetFileName(fileName);
+
+            // Prepend long file path support
+            if (!destinationFile.StartsWith(@"\\?\"))
+            {
+                destinationFile = @"\\?\" + destinationFile;
+            }
 
             if (!Directory.Exists(destinationPath))
             {
@@ -528,16 +535,32 @@ namespace MKVmergeBatcher.src.queue
                 }
                 else
                 {
-                    File.Move(fileName, destinationFile);
-                    Logger.Info("Moved " + fileName + " to " + destinationFile);
+                    try
+                    {
+                        File.Move(fileName, destinationFile);
+                        Logger.Info("Moved " + fileName + " to " + destinationFile);
+                    }
+                    catch (Exception ex)
+                    {
+                        Logger.Info("Cannot move " + fileName + " to " + destinationFile);
+                        Logger.Info("Error: " + ex);
+                    }
                 }
             }
             else
             {
                 if (!File.Exists(destinationFile))
                 {
-                    File.Move(fileName, destinationFile);
-                    Logger.Info("Moved " + fileName + " to " + destinationFile);
+                    try
+                    {
+                        File.Move(fileName, destinationFile);
+                        Logger.Info("Moved " + fileName + " to " + destinationFile);
+                    }
+                    catch (Exception ex)
+                    {
+                        Logger.Info("Cannot move " + fileName + " to " + destinationFile);
+                        Logger.Info("Error: " + ex);
+                    }
                 }
             }
         }
