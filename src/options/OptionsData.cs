@@ -96,6 +96,49 @@ namespace MKVmergeBatcher.src.options
             MainForm.optionsData.moveOkFilesTo = MainForm.optionsData.moveOkFilesTo.Replace("%originalFolder%", "||originalFolder||");
             MainForm.optionsData.moveWarningFilesTo = MainForm.optionsData.moveWarningFilesTo.Replace("%originalFolder%", "||originalFolder||");
 
+            if (MainForm.optionsData.selectedLocaleIndex >= 0)
+            {
+                string previouslySelectedLocale = MainForm.optionsData.selectedLocale;
+                for (int i = 0; i < MainForm.optionsData.localeList.Count - 1; i++)
+                {
+                    if (String.Compare(MainForm.optionsData.localeList[i].localeName, MainForm.optionsData.localeList[i + 1].localeName, true) > 0)
+                    {
+                        MoveLocale(i, i + 1);
+                        i = -1;
+                    }
+                }
+                int newSelectedIndex = 0;
+
+                for (int i = 0; i < MainForm.optionsData.localeList.Count(); i++)
+                {
+                    if (MainForm.optionsData.localeList[i].localeCode == previouslySelectedLocale)
+                    {
+                        newSelectedIndex = i;
+                    }
+                }
+                MainForm.optionsData.selectedLocaleIndex = newSelectedIndex;
+            }
+        }
+        private void MoveLocale(int source, int destination)
+        {
+            Logger.Trace(System.Reflection.MethodBase.GetCurrentMethod().Name);
+            while (source != destination)
+            {
+                if (destination > source)
+                {
+                    var tmp = MainForm.optionsData.localeList[source + 1];
+                    MainForm.optionsData.localeList[source + 1] = MainForm.optionsData.localeList[source];
+                    MainForm.optionsData.localeList[source] = tmp;
+                    source += 1;
+                }
+                else
+                {
+                    var tmp = MainForm.optionsData.localeList[source - 1];
+                    MainForm.optionsData.localeList[source - 1] = MainForm.optionsData.localeList[source];
+                    MainForm.optionsData.localeList[source] = tmp;
+                    source -= 1;
+                }
+            }
         }
     }
 }

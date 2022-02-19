@@ -175,7 +175,7 @@ namespace MKVmergeBatcher.src.models
                     if (String.Compare(MainForm.modelsData.modelList[i].modelName, MainForm.modelsData.modelList[i + 1].modelName, true) > 0)
                     {
                         MoveModel(i, i + 1);
-                        i = 0;
+                        i = -1;
                     }
                 }
                 int newSelectedIndex = 0;
