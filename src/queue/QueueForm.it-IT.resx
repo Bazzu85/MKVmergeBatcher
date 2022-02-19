@@ -137,9 +137,6 @@
     <value>comando</value>
   </data>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
-  <data name="queueContextMenuStrip.Size" type="System.Drawing.Size, System.Drawing">
-    <value>347, 202</value>
-  </data>
   <data name="clearQueueToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
     <value>346, 22</value>
   </data>
@@ -163,6 +160,12 @@
   </data>
   <data name="resetAllErrorJobsToolStripMenuItem.Text" xml:space="preserve">
     <value>Resetta tutti i job in errore</value>
+  </data>
+  <data name="clearAllPendingJobsToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>346, 22</value>
+  </data>
+  <data name="clearAllPendingJobsToolStripMenuItem.Text" xml:space="preserve">
+    <value>Elimina tutti i job in sospeso</value>
   </data>
   <data name="clearAllOkJobsToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
     <value>346, 22</value>
@@ -193,6 +196,21 @@
   </data>
   <data name="autoClearWarningJobsToolStripMenuItem.Text" xml:space="preserve">
     <value>Rimuovi automaticamente i job in stato "Warning"?</value>
+  </data>
+  <data name="autoClearErrorJobsToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>346, 22</value>
+  </data>
+  <data name="autoClearErrorJobsToolStripMenuItem.Text" xml:space="preserve">
+    <value>Rimuovi automaticamente i job in stato "Errore"?</value>
+  </data>
+  <data name="queueContextMenuStrip.Size" type="System.Drawing.Size, System.Drawing">
+    <value>347, 246</value>
+  </data>
+  <data name="queueContextMenuStrip.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="jobsDataGridView.ToolTip" xml:space="preserve">
+    <value />
   </data>
   <data name="moveJobDownButton.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
@@ -274,29 +292,8 @@
   <data name="moveJobTopButton.ToolTip" xml:space="preserve">
     <value>Muovi il job selezionato su</value>
   </data>
-  <data name="errorLabel.Location" type="System.Drawing.Point, System.Drawing">
-    <value>516, 13</value>
-  </data>
-  <data name="errorLabel.Size" type="System.Drawing.Size, System.Drawing">
-    <value>43, 13</value>
-  </data>
-  <data name="errorLabel.Text" xml:space="preserve">
-    <value>Errori: 0</value>
-  </data>
-  <data name="warningLabel.Location" type="System.Drawing.Point, System.Drawing">
-    <value>441, 13</value>
-  </data>
-  <data name="totalProgressBar.Location" type="System.Drawing.Point, System.Drawing">
-    <value>285, 13</value>
-  </data>
-  <data name="jobProgressBar.Location" type="System.Drawing.Point, System.Drawing">
-    <value>129, 13</value>
-  </data>
-  <data name="workingOnLabel.Size" type="System.Drawing.Size, System.Drawing">
-    <value>120, 13</value>
-  </data>
-  <data name="workingOnLabel.Text" xml:space="preserve">
-    <value>Lavorando sul job 0 di 0</value>
+  <data name="modelsListButtonsPanel.ToolTip" xml:space="preserve">
+    <value />
   </data>
   <data name="stopButton.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
@@ -335,6 +332,48 @@
   <data name="createBatButton.Text" xml:space="preserve">
     <value>Crea file Bat</value>
   </data>
+  <data name="createBatButton.ToolTip" xml:space="preserve">
+    <value>Crea un file Bat con il job in stato "In sospeso"</value>
+  </data>
+  <data name="errorLabel.Location" type="System.Drawing.Point, System.Drawing">
+    <value>516, 13</value>
+  </data>
+  <data name="errorLabel.Size" type="System.Drawing.Size, System.Drawing">
+    <value>43, 13</value>
+  </data>
+  <data name="errorLabel.Text" xml:space="preserve">
+    <value>Errori: 0</value>
+  </data>
+  <data name="errorLabel.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="warningLabel.Location" type="System.Drawing.Point, System.Drawing">
+    <value>441, 13</value>
+  </data>
+  <data name="warningLabel.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="totalProgressBar.Location" type="System.Drawing.Point, System.Drawing">
+    <value>285, 13</value>
+  </data>
+  <data name="totalProgressBar.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="jobProgressBar.Location" type="System.Drawing.Point, System.Drawing">
+    <value>129, 13</value>
+  </data>
+  <data name="jobProgressBar.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="workingOnLabel.Size" type="System.Drawing.Size, System.Drawing">
+    <value>120, 13</value>
+  </data>
+  <data name="workingOnLabel.Text" xml:space="preserve">
+    <value>Lavorando sul job 0 di 0</value>
+  </data>
+  <data name="workingOnLabel.ToolTip" xml:space="preserve">
+    <value />
+  </data>
   <data name="startButton.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6
@@ -347,6 +386,15 @@
         nXD2KG7ELnSVr6ISVks2gF7H47jFOXSvO3sdax3TWqaFZB3almLr50o2jCtoJRtA7CtZsJTq/G5B31rr
         mNYyJ+kb6oWitVxX+AicruUqrX9MMjnI8z4BvpNXdT9+hOAAAAAASUVORK5CYII=
 </value>
+  </data>
+  <data name="startButton.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="panel1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="outputTextBox.ToolTip" xml:space="preserve">
+    <value />
   </data>
   <data name="$this.Icon" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
@@ -1904,34 +1952,14 @@
         /AA=
 </value>
   </data>
+  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="$this.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>Inherit</value>
+  </data>
   <data name="$this.Text" xml:space="preserve">
     <value>Coda</value>
   </data>
-  <data name="autoClearErrorJobsToolStripMenuItem.Text" xml:space="preserve">
-    <value>Rimuovi automaticamente i job in stato "Errore"?</value>
-  </data>
-  <data name="fileFullPathDataGridViewTextBoxColumn.HeaderText" xml:space="preserve">
-    <value>fileFullPath</value>
-  </data>
-  <data name="fileNameDataGridViewTextBoxColumn.HeaderText" xml:space="preserve">
-    <value>File</value>
-  </data>
-  <data name="stopButton.Text" xml:space="preserve">
-    <value>Stop</value>
-  </data>
-  <data name="fileNameWithoutExtensionDataGridViewTextBoxColumn.HeaderText" xml:space="preserve">
-    <value>fileNameWithoutExtension</value>
-  </data>
-  <data name="warningLabel.Text" xml:space="preserve">
-    <value>Warning: 0</value>
-  </data>
-  <data name="startButton.Text" xml:space="preserve">
-    <value>Start</value>
-  </data>
-  <data name="outputDataGridViewTextBoxColumn.HeaderText" xml:space="preserve">
-    <value>output</value>
-  </data>
-  <data name="clearAllPendingJobsToolStripMenuItem.Text" xml:space="preserve">
-    <value>Elimina tutti i job in sospeso</value>
+  <data name="$this.ToolTip" xml:space="preserve">
+    <value />
   </data>
 </root>

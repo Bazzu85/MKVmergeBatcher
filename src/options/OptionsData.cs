@@ -55,8 +55,8 @@ namespace MKVmergeBatcher.src.options
         public Boolean autoClearOkJobs { get; set; }
         public Boolean autoClearWarningJobs { get; set; }
         public Boolean autoClearErrorJobs { get; set; }
+        public string outputFileFormat { get; set; } = "||originalInputFile||";
         #endregion
-
         #region Version options
         public Boolean checkUpdates { get; set; } = true;
         public string lastVersionFound { get; set; }

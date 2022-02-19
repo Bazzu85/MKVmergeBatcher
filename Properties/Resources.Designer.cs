@@ -511,6 +511,15 @@ namespace MKVmergeBatcher.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Do you want to save this options?.
+        /// </summary>
+        internal static string SaveCurrentOptions {
+            get {
+                return ResourceManager.GetString("SaveCurrentOptions", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Do you want to save current track?.
         /// </summary>
         internal static string SaveCurrentTrack {

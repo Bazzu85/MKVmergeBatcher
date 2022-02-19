@@ -327,4 +327,7 @@
   <data name="SpanishLanguageName" xml:space="preserve">
     <value>Spanish</value>
   </data>
+  <data name="SaveCurrentOptions" xml:space="preserve">
+    <value>Do you want to save this options?</value>
+  </data>
 </root>

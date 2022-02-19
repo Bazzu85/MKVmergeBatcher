@@ -89,6 +89,34 @@ namespace MKVmergeBatcher.src.options
             Logger.Trace(System.Reflection.MethodBase.GetCurrentMethod().Name);
             SaveWindowPositionAndSize();
         }
+
+        private void OptionsForm_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            Logger.Trace(System.Reflection.MethodBase.GetCurrentMethod().Name);
+
+            Boolean optionsOk = CheckOptions();
+
+            if (!optionsOk)
+            {
+                e.Cancel = true;
+                return;
+            }
+        }
+
+        private bool CheckOptions()
+        {
+            // check output file format
+            if (String.IsNullOrEmpty(MainForm.optionsData.outputFileFormat))
+            {
+                MainForm.optionsData.outputFileFormat = "||originalInputFile||";
+            }
+            if (!MainForm.optionsData.outputFileFormat.Contains("||originalInputFile||")) {
+                MessageBox.Show("Please review the Queue-Output file format field. The text must contain at least the wildcard \"||originalInputFile||\"", Properties.Resources.ErrorLabel, MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return false;
+            }
+            return true;
+        }
+
         private void SaveWindowPositionAndSize()
         {
             Logger.Trace(System.Reflection.MethodBase.GetCurrentMethod().Name);
@@ -322,5 +350,7 @@ namespace MKVmergeBatcher.src.options
                 MessageBox.Show(versionManager.GetError(), Properties.Resources.ErrorLabel, MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
+
+
     }
 }

@@ -1855,4 +1855,7 @@
   <data name="lastVersionFoundLabel.Text" xml:space="preserve">
     <value>2.x.x</value>
   </data>
+  <data name="outputFileFormatLabel.Text" xml:space="preserve">
+    <value>Formato file di output:</value>
+  </data>
 </root>

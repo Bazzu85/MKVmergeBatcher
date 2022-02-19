@@ -143,12 +143,29 @@ namespace MKVmergeBatcher.src.queue
 
             // generate the outputfile with a unique name
             int i = 0;
-            string outputFileFullPath = job.fileFolder + "\\" + job.fileNameWithoutExtension + ".mkv";
-            while (File.Exists(outputFileFullPath))
-            {
-                i++;
-                outputFileFullPath = job.fileFolder + "\\" + job.fileNameWithoutExtension + " (" + i + ")" + ".mkv";
+            string outputFileFullPath = "";
+            //if for some reason the outputFileFormat is empty use the standard way 
+            if (String.IsNullOrEmpty(MainForm.optionsData.outputFileFormat)){
+                outputFileFullPath = job.fileFolder + "\\" + job.fileNameWithoutExtension + ".mkv";
+                while (File.Exists(outputFileFullPath))
+                {
+                    i++;
+                    outputFileFullPath = job.fileFolder + "\\" + job.fileNameWithoutExtension + " (" + i + ")" + ".mkv";
+                }
             }
+            else // else use the user outputFileFormat pattern
+            {
+                outputFileFullPath = job.fileFolder + "\\" + MainForm.optionsData.outputFileFormat + ".mkv";
+                outputFileFullPath = outputFileFullPath.Replace("||originalInputFile||", job.fileNameWithoutExtension);
+                while (File.Exists(outputFileFullPath))
+                {
+                    i++;
+                    outputFileFullPath = job.fileFolder + "\\" + MainForm.optionsData.outputFileFormat + " (" + i + ")" + ".mkv";
+                    outputFileFullPath = outputFileFullPath.Replace("||originalInputFile||", job.fileNameWithoutExtension);
+                }
+            }
+
+            
             job.command = job.command.Replace("||outputFileFullPath||", outputFileFullPath);
             job.command = job.command.Replace("||inputFileFolder||", job.fileFolder);
             job.command = job.command.Replace("||inputFileName||", job.fileName);

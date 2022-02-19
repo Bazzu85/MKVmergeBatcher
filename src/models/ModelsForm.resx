@@ -169,7 +169,7 @@
     <value>emptyTitleCheckBox</value>
   </data>
   <data name="noTrackTagsCheckBox.ToolTip" xml:space="preserve">
-    <value />
+    <value>Add the --no-track-tags argument to all input files</value>
   </data>
   <data name="&gt;&gt;originalFileSuffixDataGridViewTextBoxColumn.Name" xml:space="preserve">
     <value>originalFileSuffixDataGridViewTextBoxColumn</value>
@@ -184,7 +184,7 @@
     <value>modelGroupBox</value>
   </data>
   <data name="noGlobalTagsCheckBox.ToolTip" xml:space="preserve">
-    <value />
+    <value>Add the --no-global-tags argument to all input files</value>
   </data>
   <data name="editModelButton.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Top, Right</value>

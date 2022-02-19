@@ -1890,4 +1890,10 @@
   <data name="noTrackTagsCheckBox.Text" xml:space="preserve">
     <value>--no-track-tags</value>
   </data>
+  <data name="noGlobalTagsCheckBox.ToolTip" xml:space="preserve">
+    <value>Aggiunge l'argomento --no-global-tags a tutti i file di input</value>
+  </data>
+  <data name="noTrackTagsCheckBox.ToolTip" xml:space="preserve">
+    <value>Aggiunge l'argomento --no-track-tags a tutti i file di input</value>
+  </data>
 </root>
