@@ -98,7 +98,10 @@ namespace MKVmergeBatcher.src.options
 
             if (MainForm.optionsData.selectedLocaleIndex >= 0)
             {
+                // saving the current selected locale
                 string previouslySelectedLocale = MainForm.optionsData.selectedLocale;
+
+                // ordering the locale list by name
                 for (int i = 0; i < MainForm.optionsData.localeList.Count - 1; i++)
                 {
                     if (String.Compare(MainForm.optionsData.localeList[i].localeName, MainForm.optionsData.localeList[i + 1].localeName, true) > 0)
@@ -107,6 +110,8 @@ namespace MKVmergeBatcher.src.options
                         i = -1;
                     }
                 }
+
+                // restoring the previously selected locale searching it by locale code
                 int newSelectedIndex = 0;
 
                 for (int i = 0; i < MainForm.optionsData.localeList.Count(); i++)
@@ -117,6 +122,31 @@ namespace MKVmergeBatcher.src.options
                     }
                 }
                 MainForm.optionsData.selectedLocaleIndex = newSelectedIndex;
+            } else
+            {
+                // if no locale selected force the english one
+                // ordering the locale list by name
+                for (int i = 0; i < MainForm.optionsData.localeList.Count - 1; i++)
+                {
+                    if (String.Compare(MainForm.optionsData.localeList[i].localeName, MainForm.optionsData.localeList[i + 1].localeName, true) > 0)
+                    {
+                        MoveLocale(i, i + 1);
+                        i = -1;
+                    }
+                }
+                // search and set the index for default locale
+                int newSelectedIndex = 0;
+
+                for (int i = 0; i < MainForm.optionsData.localeList.Count(); i++)
+                {
+                    if (MainForm.optionsData.localeList[i].localeCode == "en-US")
+                    {
+                        newSelectedIndex = i;
+                    }
+                }
+                MainForm.optionsData.selectedLocaleIndex = newSelectedIndex;
+                MainForm.optionsData.selectedLocale = "en-US";
+
             }
         }
         private void MoveLocale(int source, int destination)
