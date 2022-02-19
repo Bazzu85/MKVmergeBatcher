@@ -173,7 +173,7 @@ When using a model with many files, the wildcards are used to replace some core 
 
 ### Queue options
 
-![image](https://user-images.githubusercontent.com/7345587/154702045-c1542768-1d39-4b55-b089-3417b860e275.png)
+![image](https://user-images.githubusercontent.com/7345587/154822277-c5812384-4481-48e9-80c5-e6d5a60892c5.png)
 
 - Move Ok files to: when a job ends with a exit code 0 (Ok), the output file will be moved in a destination folder according to this options. Default: ||originalFolder|| -> no move
 - Move Warning files to: when a job ends with a exit code 1 (Warning), the output file will be moved in a destination folder according to this options. Default: ||originalFolder|| -> no move
@@ -183,6 +183,7 @@ When using a model with many files, the wildcards are used to replace some core 
 - Delete incomplete files when stopping queue: If this option is activated, when manually stopping the queue, the not completed output file is deleted
 - Automatically remove Ok Jobs: If this option is activated, when the queue is not running, the jobs in status "Ok" are automatically removed. Can be changed even in [queue context menu](README.md#jobs-section)
 - Automatically remove Warning Jobs: If this option is activated, when the queue is not running, the jobs in status "Warning" are automatically removed. Can be changed even in [queue context menu](README.md#jobs-section)
+- Output file format: You can specify some pattern to the generated output file name. For example using "before_||originalInputFile||_after" every output file is generated with the format "before_file_after.mkv". if the file exists "before_file_after (1).mkv" and so on
 
 ### App version options
 
