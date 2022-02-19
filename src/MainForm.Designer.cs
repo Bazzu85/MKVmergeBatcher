@@ -67,64 +67,64 @@ namespace MKVmergeBatcher.src
             // 
             // menuStrip
             // 
+            resources.ApplyResources(this.menuStrip, "menuStrip");
             this.menuStrip.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.fileToolStripMenuItem,
             this.viewToolStripMenuItem,
             this.helpToolStripMenuItem});
-            resources.ApplyResources(this.menuStrip, "menuStrip");
             this.menuStrip.Name = "menuStrip";
             // 
             // fileToolStripMenuItem
             // 
+            resources.ApplyResources(this.fileToolStripMenuItem, "fileToolStripMenuItem");
             this.fileToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.importV1UserDatajsonToolStripMenuItem,
             this.exitToolStripMenuItem});
             this.fileToolStripMenuItem.Name = "fileToolStripMenuItem";
-            resources.ApplyResources(this.fileToolStripMenuItem, "fileToolStripMenuItem");
             // 
             // importV1UserDatajsonToolStripMenuItem
             // 
-            this.importV1UserDatajsonToolStripMenuItem.Name = "importV1UserDatajsonToolStripMenuItem";
             resources.ApplyResources(this.importV1UserDatajsonToolStripMenuItem, "importV1UserDatajsonToolStripMenuItem");
+            this.importV1UserDatajsonToolStripMenuItem.Name = "importV1UserDatajsonToolStripMenuItem";
             this.importV1UserDatajsonToolStripMenuItem.Click += new System.EventHandler(this.importV1UserDatajsonToolStripMenuItem_Click);
             // 
             // exitToolStripMenuItem
             // 
-            this.exitToolStripMenuItem.Name = "exitToolStripMenuItem";
             resources.ApplyResources(this.exitToolStripMenuItem, "exitToolStripMenuItem");
+            this.exitToolStripMenuItem.Name = "exitToolStripMenuItem";
             this.exitToolStripMenuItem.Click += new System.EventHandler(this.exitToolStripMenuItem_Click);
             // 
             // viewToolStripMenuItem
             // 
+            resources.ApplyResources(this.viewToolStripMenuItem, "viewToolStripMenuItem");
             this.viewToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.modelsToolStripMenuItem,
             this.optionsToolStripMenuItem});
             this.viewToolStripMenuItem.Name = "viewToolStripMenuItem";
-            resources.ApplyResources(this.viewToolStripMenuItem, "viewToolStripMenuItem");
             // 
             // modelsToolStripMenuItem
             // 
-            this.modelsToolStripMenuItem.Name = "modelsToolStripMenuItem";
             resources.ApplyResources(this.modelsToolStripMenuItem, "modelsToolStripMenuItem");
+            this.modelsToolStripMenuItem.Name = "modelsToolStripMenuItem";
             this.modelsToolStripMenuItem.Click += new System.EventHandler(this.modelsToolStripMenuItem_Click);
             // 
             // optionsToolStripMenuItem
             // 
-            this.optionsToolStripMenuItem.Name = "optionsToolStripMenuItem";
             resources.ApplyResources(this.optionsToolStripMenuItem, "optionsToolStripMenuItem");
+            this.optionsToolStripMenuItem.Name = "optionsToolStripMenuItem";
             this.optionsToolStripMenuItem.Click += new System.EventHandler(this.optionsToolStripMenuItem_Click);
             // 
             // helpToolStripMenuItem
             // 
+            resources.ApplyResources(this.helpToolStripMenuItem, "helpToolStripMenuItem");
             this.helpToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.aboutToolStripMenuItem});
             this.helpToolStripMenuItem.Name = "helpToolStripMenuItem";
-            resources.ApplyResources(this.helpToolStripMenuItem, "helpToolStripMenuItem");
             // 
             // aboutToolStripMenuItem
             // 
-            this.aboutToolStripMenuItem.Name = "aboutToolStripMenuItem";
             resources.ApplyResources(this.aboutToolStripMenuItem, "aboutToolStripMenuItem");
+            this.aboutToolStripMenuItem.Name = "aboutToolStripMenuItem";
             this.aboutToolStripMenuItem.Click += new System.EventHandler(this.aboutToolStripMenuItem_Click);
             // 
             // videoFilePathLabel
@@ -134,8 +134,8 @@ namespace MKVmergeBatcher.src
             // 
             // VideoFilesPathTextBox
             // 
-            this.VideoFilesPathTextBox.AllowDrop = true;
             resources.ApplyResources(this.VideoFilesPathTextBox, "VideoFilesPathTextBox");
+            this.VideoFilesPathTextBox.AllowDrop = true;
             this.VideoFilesPathTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.mainDataBindingSource, "videoFilePath", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
             this.VideoFilesPathTextBox.Name = "VideoFilesPathTextBox";
             this.VideoFilesPathTextBox.DragDrop += new System.Windows.Forms.DragEventHandler(this.VideoFilesPathTextBox_DragDrop);
@@ -154,8 +154,8 @@ namespace MKVmergeBatcher.src
             // 
             // videoFileListBox
             // 
-            this.videoFileListBox.AllowDrop = true;
             resources.ApplyResources(this.videoFileListBox, "videoFileListBox");
+            this.videoFileListBox.AllowDrop = true;
             this.videoFileListBox.ContextMenuStrip = this.videoFileListContextMenuStrip;
             this.videoFileListBox.DataSource = this.videoFileBindingSource;
             this.videoFileListBox.DisplayMember = "videoFileName";
@@ -167,22 +167,22 @@ namespace MKVmergeBatcher.src
             // 
             // videoFileListContextMenuStrip
             // 
+            resources.ApplyResources(this.videoFileListContextMenuStrip, "videoFileListContextMenuStrip");
             this.videoFileListContextMenuStrip.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.reverseSelectionToolStripMenuItem,
             this.clearSelectionToolStripMenuItem});
             this.videoFileListContextMenuStrip.Name = "videoFileListContextMenuStrip";
-            resources.ApplyResources(this.videoFileListContextMenuStrip, "videoFileListContextMenuStrip");
             // 
             // reverseSelectionToolStripMenuItem
             // 
-            this.reverseSelectionToolStripMenuItem.Name = "reverseSelectionToolStripMenuItem";
             resources.ApplyResources(this.reverseSelectionToolStripMenuItem, "reverseSelectionToolStripMenuItem");
+            this.reverseSelectionToolStripMenuItem.Name = "reverseSelectionToolStripMenuItem";
             this.reverseSelectionToolStripMenuItem.Click += new System.EventHandler(this.reverseSelectionToolStripMenuItem_Click);
             // 
             // clearSelectionToolStripMenuItem
             // 
-            this.clearSelectionToolStripMenuItem.Name = "clearSelectionToolStripMenuItem";
             resources.ApplyResources(this.clearSelectionToolStripMenuItem, "clearSelectionToolStripMenuItem");
+            this.clearSelectionToolStripMenuItem.Name = "clearSelectionToolStripMenuItem";
             this.clearSelectionToolStripMenuItem.Click += new System.EventHandler(this.clearSelectionToolStripMenuItem_Click);
             // 
             // videoFileBindingSource

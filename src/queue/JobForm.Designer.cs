@@ -99,8 +99,8 @@ namespace MKVmergeBatcher.src.queue
             // 
             // percentageTextBox
             // 
-            this.percentageTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.jobBindingSource, "percentage", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
             resources.ApplyResources(this.percentageTextBox, "percentageTextBox");
+            this.percentageTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.jobBindingSource, "percentage", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
             this.percentageTextBox.Name = "percentageTextBox";
             this.percentageTextBox.ReadOnly = true;
             // 
@@ -111,8 +111,8 @@ namespace MKVmergeBatcher.src.queue
             // 
             // jobStatusTextBox
             // 
-            this.jobStatusTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.jobBindingSource, "jobStatus", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
             resources.ApplyResources(this.jobStatusTextBox, "jobStatusTextBox");
+            this.jobStatusTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.jobBindingSource, "jobStatus", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
             this.jobStatusTextBox.Name = "jobStatusTextBox";
             this.jobStatusTextBox.ReadOnly = true;
             // 

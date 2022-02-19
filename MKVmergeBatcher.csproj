@@ -350,10 +350,14 @@
     <Compile Include="src\queue\QueueManager.cs" />
     <Compile Include="src\windows\WindowsData.cs" />
     <Compile Include="src\windows\WindowsJson.cs" />
+    <EmbeddedResource Include="Properties\Resources.es-ES.resx" />
     <EmbeddedResource Include="Properties\Resources.it-IT.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.it-IT.Designer.cs</LastGenOutput>
       <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="src\help\AboutForm.es-ES.resx">
+      <DependentUpon>AboutForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="src\help\AboutForm.it-IT.resx">
       <DependentUpon>AboutForm.cs</DependentUpon>
@@ -361,8 +365,17 @@
     <EmbeddedResource Include="src\help\AboutForm.resx">
       <DependentUpon>AboutForm.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="src\legacy\ImportLegacyForm.es-ES.resx">
+      <DependentUpon>ImportLegacyForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="src\legacy\ImportLegacyForm.it-IT.resx">
+      <DependentUpon>ImportLegacyForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="src\legacy\ImportLegacyForm.resx">
       <DependentUpon>ImportLegacyForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="src\MainForm.es-ES.resx">
+      <DependentUpon>MainForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="src\MainForm.it-IT.resx">
       <DependentUpon>MainForm.cs</DependentUpon>
@@ -377,17 +390,26 @@
       <SubType>Designer</SubType>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
+    <EmbeddedResource Include="src\models\ManageModelForm.es-ES.resx">
+      <DependentUpon>ManageModelForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="src\models\ManageModelForm.it-IT.resx">
       <DependentUpon>ManageModelForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="src\models\ManageModelForm.resx">
       <DependentUpon>ManageModelForm.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="src\models\ManageTrackForm.es-ES.resx">
+      <DependentUpon>ManageTrackForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="src\models\ManageTrackForm.it-IT.resx">
       <DependentUpon>ManageTrackForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="src\models\ManageTrackForm.resx">
       <DependentUpon>ManageTrackForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="src\models\ModelsForm.es-ES.resx">
+      <DependentUpon>ModelsForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="src\models\ModelsForm.it-IT.resx">
       <DependentUpon>ModelsForm.cs</DependentUpon>
@@ -410,11 +432,17 @@
     <Content Include="NLog.config">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
+    <EmbeddedResource Include="src\queue\JobForm.es-ES.resx">
+      <DependentUpon>JobForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="src\queue\JobForm.it-IT.resx">
       <DependentUpon>JobForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="src\queue\JobForm.resx">
       <DependentUpon>JobForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="src\queue\QueueForm.es-ES.resx">
+      <DependentUpon>QueueForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="src\queue\QueueForm.it-IT.resx">
       <DependentUpon>QueueForm.cs</DependentUpon>

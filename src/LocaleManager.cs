@@ -1,5 +1,6 @@
 ﻿using MKVmergeBatcher.src.models;
 using MKVmergeBatcher.src.queue;
+using NLog;
 using System.ComponentModel;
 using System.Globalization;
 using System.Windows.Forms;
@@ -8,6 +9,8 @@ namespace MKVmergeBatcher.src
 {
     public class LocaleManager
     {
+        public static readonly Logger Logger = NLog.LogManager.GetCurrentClassLogger();
+
         public string oldVideoTrackType = "";
         public string oldAudioTrackType = "";
         public string oldSubtitleTrackType = "";
@@ -19,6 +22,7 @@ namespace MKVmergeBatcher.src
         // Method that receive a form and recursivelly update the controls locale
         internal void SetLocale(Form form)
         {
+            Logger.Info("Updating locale to {0}", MainForm.optionsData.selectedLocale);
             System.Threading.Thread.CurrentThread.CurrentUICulture = new CultureInfo(MainForm.optionsData.selectedLocale);
 
             ComponentResourceManager resources = new ComponentResourceManager(form.GetType());
