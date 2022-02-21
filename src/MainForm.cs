@@ -507,7 +507,10 @@ namespace MKVmergeBatcher.src
             else
             {
                 queueManager.AddToQueue(this);
-                ShowQueueForm();
+                if (MainForm.optionsData.showQueueWhenAdding)
+                {
+                    ShowQueueForm();
+                }
             }
         }
         #endregion

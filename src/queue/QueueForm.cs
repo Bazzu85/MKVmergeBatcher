@@ -177,8 +177,7 @@ namespace MKVmergeBatcher.src.queue
 
                     totalProgressBar.Value = MainForm.queueData.currentRunningJob;
                     jobProgressBar.Value = jobProgressBar.Maximum;
-                    string messaggeText = Properties.Resources.ElaboratedFiles + ": " + MainForm.queueData.totalJobsToExec + Environment.NewLine + Properties.Resources.WarningJobLabel + ": " + MainForm.queueData.warnings + Environment.NewLine + Properties.Resources.ErrorJobLabel + ": " + MainForm.queueData.errors;
-                    MessageBox.Show(this, messaggeText, Properties.Resources.Summary, MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    ShowSummary();
                     MainForm.queueData.processEnded = false;
                 }
                 EnableControls();
@@ -186,6 +185,41 @@ namespace MKVmergeBatcher.src.queue
             jobsDataGridView.Refresh();
 
         }
+
+        private void ShowSummary()
+        {
+            bool showSummary;
+            // if the options say to show summary enable it
+            if (MainForm.optionsData.showSummaryWhenQueueEnds)
+            {
+                showSummary = true;
+            } else
+            {
+                showSummary = false;
+            }
+            // if the options say to show summary only in case of warnings of errors, evaluate it
+            if (showSummary)
+            {
+                if (MainForm.optionsData.showSummaryOnlyWarningsErrors)
+                {
+                    if (MainForm.queueData.warnings > 0 || MainForm.queueData.errors > 0)
+                    {
+                        showSummary = true;
+                    } else
+                    {
+                        showSummary = false;
+                    }
+                }
+            }
+
+            //if the summary needs to be shown, do it
+            if (showSummary)
+            {
+                string messaggeText = Properties.Resources.ElaboratedFiles + ": " + MainForm.queueData.totalJobsToExec + Environment.NewLine + Properties.Resources.WarningJobLabel + ": " + MainForm.queueData.warnings + Environment.NewLine + Properties.Resources.ErrorJobLabel + ": " + MainForm.queueData.errors;
+                MessageBox.Show(this, messaggeText, Properties.Resources.Summary, MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+        }
+
         private void DisableControls()
         {
             Logger.Trace(System.Reflection.MethodBase.GetCurrentMethod().Name);

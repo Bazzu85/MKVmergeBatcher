@@ -1858,4 +1858,13 @@
   <data name="outputFileFormatLabel.Text" xml:space="preserve">
     <value>Formato file di output:</value>
   </data>
+  <data name="showQueueWhenAddingCheckBox.Text" xml:space="preserve">
+    <value>Visualizza la finestra della coda quando si aggiunge un job?</value>
+  </data>
+  <data name="showSummaryWhenQueueEndsCheckBox.Text" xml:space="preserve">
+    <value>Visualizza il Sommario quando la coda finisce l'elaborazione?</value>
+  </data>
+  <data name="showSummaryOnlyWarningsErrorsCheckBox.Text" xml:space="preserve">
+    <value>Visualizza il Sommario quando ci sono job in "Attenzione"/"Errore"</value>
+  </data>
 </root>

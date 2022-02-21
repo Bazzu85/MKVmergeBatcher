@@ -647,7 +647,7 @@
     <value>NoControl</value>
   </data>
   <data name="replaceExistingDestinationFilesCheckBox.Location" type="System.Drawing.Point, System.Drawing">
-    <value>9, 58</value>
+    <value>9, 85</value>
   </data>
   <data name="replaceExistingDestinationFilesCheckBox.Size" type="System.Drawing.Size, System.Drawing">
     <value>219, 17</value>
@@ -670,6 +670,96 @@
   <data name="&gt;&gt;replaceExistingDestinationFilesCheckBox.ZOrder" xml:space="preserve">
     <value>0</value>
   </data>
+  <data name="showSummaryOnlyWarningsErrorsCheckBox.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="showSummaryOnlyWarningsErrorsCheckBox.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="showSummaryOnlyWarningsErrorsCheckBox.Location" type="System.Drawing.Point, System.Drawing">
+    <value>9, 246</value>
+  </data>
+  <data name="showSummaryOnlyWarningsErrorsCheckBox.Size" type="System.Drawing.Size, System.Drawing">
+    <value>260, 17</value>
+  </data>
+  <data name="showSummaryOnlyWarningsErrorsCheckBox.TabIndex" type="System.Int32, mscorlib">
+    <value>4</value>
+  </data>
+  <data name="showSummaryOnlyWarningsErrorsCheckBox.Text" xml:space="preserve">
+    <value>Only show Summary when Warning/Errors occurs</value>
+  </data>
+  <data name="&gt;&gt;showSummaryOnlyWarningsErrorsCheckBox.Name" xml:space="preserve">
+    <value>showSummaryOnlyWarningsErrorsCheckBox</value>
+  </data>
+  <data name="&gt;&gt;showSummaryOnlyWarningsErrorsCheckBox.Type" xml:space="preserve">
+    <value>System.Windows.Forms.CheckBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;showSummaryOnlyWarningsErrorsCheckBox.Parent" xml:space="preserve">
+    <value>queueTabPage</value>
+  </data>
+  <data name="&gt;&gt;showSummaryOnlyWarningsErrorsCheckBox.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="showSummaryWhenQueueEndsCheckBox.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="showSummaryWhenQueueEndsCheckBox.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="showSummaryWhenQueueEndsCheckBox.Location" type="System.Drawing.Point, System.Drawing">
+    <value>9, 223</value>
+  </data>
+  <data name="showSummaryWhenQueueEndsCheckBox.Size" type="System.Drawing.Size, System.Drawing">
+    <value>232, 17</value>
+  </data>
+  <data name="showSummaryWhenQueueEndsCheckBox.TabIndex" type="System.Int32, mscorlib">
+    <value>4</value>
+  </data>
+  <data name="showSummaryWhenQueueEndsCheckBox.Text" xml:space="preserve">
+    <value>Show Summary when the queue work end?</value>
+  </data>
+  <data name="&gt;&gt;showSummaryWhenQueueEndsCheckBox.Name" xml:space="preserve">
+    <value>showSummaryWhenQueueEndsCheckBox</value>
+  </data>
+  <data name="&gt;&gt;showSummaryWhenQueueEndsCheckBox.Type" xml:space="preserve">
+    <value>System.Windows.Forms.CheckBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;showSummaryWhenQueueEndsCheckBox.Parent" xml:space="preserve">
+    <value>queueTabPage</value>
+  </data>
+  <data name="&gt;&gt;showSummaryWhenQueueEndsCheckBox.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="showQueueWhenAddingCheckBox.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="showQueueWhenAddingCheckBox.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="showQueueWhenAddingCheckBox.Location" type="System.Drawing.Point, System.Drawing">
+    <value>9, 200</value>
+  </data>
+  <data name="showQueueWhenAddingCheckBox.Size" type="System.Drawing.Size, System.Drawing">
+    <value>223, 17</value>
+  </data>
+  <data name="showQueueWhenAddingCheckBox.TabIndex" type="System.Int32, mscorlib">
+    <value>4</value>
+  </data>
+  <data name="showQueueWhenAddingCheckBox.Text" xml:space="preserve">
+    <value>Show Queue window when adding a job?</value>
+  </data>
+  <data name="&gt;&gt;showQueueWhenAddingCheckBox.Name" xml:space="preserve">
+    <value>showQueueWhenAddingCheckBox</value>
+  </data>
+  <data name="&gt;&gt;showQueueWhenAddingCheckBox.Type" xml:space="preserve">
+    <value>System.Windows.Forms.CheckBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;showQueueWhenAddingCheckBox.Parent" xml:space="preserve">
+    <value>queueTabPage</value>
+  </data>
+  <data name="&gt;&gt;showQueueWhenAddingCheckBox.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
   <data name="autoClearErrorJobsCheckBox.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
@@ -677,7 +767,7 @@
     <value>NoControl</value>
   </data>
   <data name="autoClearErrorJobsCheckBox.Location" type="System.Drawing.Point, System.Drawing">
-    <value>9, 150</value>
+    <value>9, 177</value>
   </data>
   <data name="autoClearErrorJobsCheckBox.Size" type="System.Drawing.Size, System.Drawing">
     <value>179, 17</value>
@@ -698,7 +788,7 @@
     <value>queueTabPage</value>
   </data>
   <data name="&gt;&gt;autoClearErrorJobsCheckBox.ZOrder" xml:space="preserve">
-    <value>1</value>
+    <value>4</value>
   </data>
   <data name="autoClearWarningJobsCheckBox.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -707,7 +797,7 @@
     <value>NoControl</value>
   </data>
   <data name="autoClearWarningJobsCheckBox.Location" type="System.Drawing.Point, System.Drawing">
-    <value>9, 127</value>
+    <value>9, 154</value>
   </data>
   <data name="autoClearWarningJobsCheckBox.Size" type="System.Drawing.Size, System.Drawing">
     <value>197, 17</value>
@@ -728,7 +818,7 @@
     <value>queueTabPage</value>
   </data>
   <data name="&gt;&gt;autoClearWarningJobsCheckBox.ZOrder" xml:space="preserve">
-    <value>2</value>
+    <value>5</value>
   </data>
   <data name="autoClearOkJobsCheckBox.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -737,7 +827,7 @@
     <value>NoControl</value>
   </data>
   <data name="autoClearOkJobsCheckBox.Location" type="System.Drawing.Point, System.Drawing">
-    <value>9, 104</value>
+    <value>9, 131</value>
   </data>
   <data name="autoClearOkJobsCheckBox.Size" type="System.Drawing.Size, System.Drawing">
     <value>171, 17</value>
@@ -758,13 +848,13 @@
     <value>queueTabPage</value>
   </data>
   <data name="&gt;&gt;autoClearOkJobsCheckBox.ZOrder" xml:space="preserve">
-    <value>3</value>
+    <value>6</value>
   </data>
   <data name="deleteIncompleteFilesCheckBox.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
   <data name="deleteIncompleteFilesCheckBox.Location" type="System.Drawing.Point, System.Drawing">
-    <value>9, 81</value>
+    <value>9, 108</value>
   </data>
   <data name="deleteIncompleteFilesCheckBox.Size" type="System.Drawing.Size, System.Drawing">
     <value>243, 17</value>
@@ -785,7 +875,7 @@
     <value>queueTabPage</value>
   </data>
   <data name="&gt;&gt;deleteIncompleteFilesCheckBox.ZOrder" xml:space="preserve">
-    <value>4</value>
+    <value>7</value>
   </data>
   <data name="moveWarningFilesToTextBox.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Top, Bottom, Left, Right</value>
@@ -812,7 +902,7 @@
     <value>queueTabPage</value>
   </data>
   <data name="&gt;&gt;moveWarningFilesToTextBox.ZOrder" xml:space="preserve">
-    <value>5</value>
+    <value>8</value>
   </data>
   <data name="outputFileFormatTextBox.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Top, Bottom, Left, Right</value>
@@ -821,7 +911,7 @@
     <value>Courier New, 8.25pt</value>
   </data>
   <data name="outputFileFormatTextBox.Location" type="System.Drawing.Point, System.Drawing">
-    <value>128, 170</value>
+    <value>128, 59</value>
   </data>
   <data name="outputFileFormatTextBox.Size" type="System.Drawing.Size, System.Drawing">
     <value>268, 20</value>
@@ -839,7 +929,7 @@
     <value>queueTabPage</value>
   </data>
   <data name="&gt;&gt;outputFileFormatTextBox.ZOrder" xml:space="preserve">
-    <value>6</value>
+    <value>9</value>
   </data>
   <data name="moveOkFilesToTextBox.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Top, Bottom, Left, Right</value>
@@ -866,7 +956,7 @@
     <value>queueTabPage</value>
   </data>
   <data name="&gt;&gt;moveOkFilesToTextBox.ZOrder" xml:space="preserve">
-    <value>7</value>
+    <value>10</value>
   </data>
   <data name="outputFileFormatLabel.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -875,7 +965,7 @@
     <value>NoControl</value>
   </data>
   <data name="outputFileFormatLabel.Location" type="System.Drawing.Point, System.Drawing">
-    <value>32, 173</value>
+    <value>32, 62</value>
   </data>
   <data name="outputFileFormatLabel.Size" type="System.Drawing.Size, System.Drawing">
     <value>90, 13</value>
@@ -896,7 +986,7 @@
     <value>queueTabPage</value>
   </data>
   <data name="&gt;&gt;outputFileFormatLabel.ZOrder" xml:space="preserve">
-    <value>8</value>
+    <value>11</value>
   </data>
   <data name="moveWarningFilesToLabel.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -923,7 +1013,7 @@
     <value>queueTabPage</value>
   </data>
   <data name="&gt;&gt;moveWarningFilesToLabel.ZOrder" xml:space="preserve">
-    <value>9</value>
+    <value>12</value>
   </data>
   <data name="moveOkFilesToLabel.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -950,7 +1040,7 @@
     <value>queueTabPage</value>
   </data>
   <data name="&gt;&gt;moveOkFilesToLabel.ZOrder" xml:space="preserve">
-    <value>10</value>
+    <value>13</value>
   </data>
   <data name="queueTabPage.Location" type="System.Drawing.Point, System.Drawing">
     <value>4, 22</value>

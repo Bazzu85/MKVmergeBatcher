@@ -50,12 +50,16 @@ namespace MKVmergeBatcher.src.options
         #region Queue options
         public string moveOkFilesTo { get; set; } = "||originalFolder||";
         public string moveWarningFilesTo { get; set; } = "||originalFolder||";
-        public Boolean replaceExistingDestinationFiles { get; set; }
-        public Boolean deleteIncompleteFiles { get; set; }
-        public Boolean autoClearOkJobs { get; set; }
-        public Boolean autoClearWarningJobs { get; set; }
-        public Boolean autoClearErrorJobs { get; set; }
         public string outputFileFormat { get; set; } = "||originalInputFile||";
+        public Boolean replaceExistingDestinationFiles { get; set; } = true;
+        public Boolean deleteIncompleteFiles { get; set; } = true;
+        public Boolean autoClearOkJobs { get; set; } = false;
+        public Boolean autoClearWarningJobs { get; set; } = false;
+        public Boolean autoClearErrorJobs { get; set; } = false;
+        public Boolean showQueueWhenAdding { get; set; } = true;
+        public Boolean showSummaryWhenQueueEnds { get; set; } = true;
+        public Boolean showSummaryOnlyWarningsErrors { get; set; } = false;
+
         #endregion
         #region Version options
         public Boolean checkUpdates { get; set; } = true;

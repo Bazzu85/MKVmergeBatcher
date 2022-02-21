@@ -58,6 +58,9 @@ namespace MKVmergeBatcher.src.options
             this.addExtensionButton = new System.Windows.Forms.Button();
             this.queueTabPage = new System.Windows.Forms.TabPage();
             this.replaceExistingDestinationFilesCheckBox = new System.Windows.Forms.CheckBox();
+            this.showSummaryOnlyWarningsErrorsCheckBox = new System.Windows.Forms.CheckBox();
+            this.showSummaryWhenQueueEndsCheckBox = new System.Windows.Forms.CheckBox();
+            this.showQueueWhenAddingCheckBox = new System.Windows.Forms.CheckBox();
             this.autoClearErrorJobsCheckBox = new System.Windows.Forms.CheckBox();
             this.autoClearWarningJobsCheckBox = new System.Windows.Forms.CheckBox();
             this.autoClearOkJobsCheckBox = new System.Windows.Forms.CheckBox();
@@ -270,6 +273,9 @@ namespace MKVmergeBatcher.src.options
             // queueTabPage
             // 
             this.queueTabPage.Controls.Add(this.replaceExistingDestinationFilesCheckBox);
+            this.queueTabPage.Controls.Add(this.showSummaryOnlyWarningsErrorsCheckBox);
+            this.queueTabPage.Controls.Add(this.showSummaryWhenQueueEndsCheckBox);
+            this.queueTabPage.Controls.Add(this.showQueueWhenAddingCheckBox);
             this.queueTabPage.Controls.Add(this.autoClearErrorJobsCheckBox);
             this.queueTabPage.Controls.Add(this.autoClearWarningJobsCheckBox);
             this.queueTabPage.Controls.Add(this.autoClearOkJobsCheckBox);
@@ -290,6 +296,27 @@ namespace MKVmergeBatcher.src.options
             this.replaceExistingDestinationFilesCheckBox.DataBindings.Add(new System.Windows.Forms.Binding("CheckState", this.optionsDataBindingSource, "replaceExistingDestinationFiles", true));
             this.replaceExistingDestinationFilesCheckBox.Name = "replaceExistingDestinationFilesCheckBox";
             this.replaceExistingDestinationFilesCheckBox.UseVisualStyleBackColor = true;
+            // 
+            // showSummaryOnlyWarningsErrorsCheckBox
+            // 
+            resources.ApplyResources(this.showSummaryOnlyWarningsErrorsCheckBox, "showSummaryOnlyWarningsErrorsCheckBox");
+            this.showSummaryOnlyWarningsErrorsCheckBox.DataBindings.Add(new System.Windows.Forms.Binding("CheckState", this.optionsDataBindingSource, "showSummaryOnlyWarningsErrors", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
+            this.showSummaryOnlyWarningsErrorsCheckBox.Name = "showSummaryOnlyWarningsErrorsCheckBox";
+            this.showSummaryOnlyWarningsErrorsCheckBox.UseVisualStyleBackColor = true;
+            // 
+            // showSummaryWhenQueueEndsCheckBox
+            // 
+            resources.ApplyResources(this.showSummaryWhenQueueEndsCheckBox, "showSummaryWhenQueueEndsCheckBox");
+            this.showSummaryWhenQueueEndsCheckBox.DataBindings.Add(new System.Windows.Forms.Binding("CheckState", this.optionsDataBindingSource, "showSummaryWhenQueueEnds", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
+            this.showSummaryWhenQueueEndsCheckBox.Name = "showSummaryWhenQueueEndsCheckBox";
+            this.showSummaryWhenQueueEndsCheckBox.UseVisualStyleBackColor = true;
+            // 
+            // showQueueWhenAddingCheckBox
+            // 
+            resources.ApplyResources(this.showQueueWhenAddingCheckBox, "showQueueWhenAddingCheckBox");
+            this.showQueueWhenAddingCheckBox.DataBindings.Add(new System.Windows.Forms.Binding("CheckState", this.optionsDataBindingSource, "showQueueWhenAdding", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
+            this.showQueueWhenAddingCheckBox.Name = "showQueueWhenAddingCheckBox";
+            this.showQueueWhenAddingCheckBox.UseVisualStyleBackColor = true;
             // 
             // autoClearErrorJobsCheckBox
             // 
@@ -472,5 +499,8 @@ namespace MKVmergeBatcher.src.options
         private System.Windows.Forms.Button checkVersionButton;
         private System.Windows.Forms.TextBox outputFileFormatTextBox;
         private System.Windows.Forms.Label outputFileFormatLabel;
+        private System.Windows.Forms.CheckBox showSummaryOnlyWarningsErrorsCheckBox;
+        private System.Windows.Forms.CheckBox showSummaryWhenQueueEndsCheckBox;
+        private System.Windows.Forms.CheckBox showQueueWhenAddingCheckBox;
     }
 }
