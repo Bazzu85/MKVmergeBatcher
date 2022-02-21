@@ -105,16 +105,16 @@ namespace MKVmergeBatcher.src.models
                 // if we are editing, the maxFileNumber must not consider this track
                 if (callType == ManageTrackForm.CallType.Add || callType == ManageTrackForm.CallType.Copy)
                 {
-                    if (track.originalFileNumber > maxFileNumber)
+                    if (ManageModelForm.model.trackList[i].originalFileNumber > maxFileNumber)
                     {
                         maxFileNumber = track.originalFileNumber;
                     }
                 }
                 else
                 {
-                    if (track.originalFileNumber > maxFileNumber && i != currentTrackIndex)
+                    if (ManageModelForm.model.trackList[i].originalFileNumber > maxFileNumber && i != currentTrackIndex)
                     {
-                        maxFileNumber = track.originalFileNumber;
+                        maxFileNumber = ManageModelForm.model.trackList[i].originalFileNumber;
                     }
                 }
 
@@ -127,6 +127,50 @@ namespace MKVmergeBatcher.src.models
 
                 result = false;
             }
+
+
+            // if we are editing a track check if after edit there are not "holes" in original file numbers. Ex 1 and 3 missing 2
+            if (callType == ManageTrackForm.CallType.Edit)
+            {
+                List<TrackSummary> trackSummaryArray = new List<TrackSummary>();
+
+                // add to the tracks Summary a row for every theoretically file number, based on maxFileNumber
+                for (int i = 0; i < maxFileNumber + 1; i++)
+                {
+                    trackSummaryArray.Add(new TrackSummary()
+                    {
+                        originalFileNumber = i,
+                        count = 0
+                    });
+                }
+                //update the counter for every originalFileNumber. At the end if there's an originalFileNumber with a count of zero, we have a problem
+                // in this situation we exclude the current editing one
+                for (int i = 0; i < ManageModelForm.model.trackList.Count; i++)
+                {
+                    foreach (TrackSummary item in trackSummaryArray)
+                    {
+                        if (item.originalFileNumber == ManageModelForm.model.trackList[i].originalFileNumber && i != currentTrackIndex)
+                        {
+                            item.count++;
+                            break;
+                        }
+                    }
+                }
+                //if there are empty tracks (exluding the one we are editing), give an error
+                foreach (TrackSummary item in trackSummaryArray)
+                {
+                    if (item.count == 0 && item.originalFileNumber != track.originalFileNumber)
+                    {
+                        String error = "Cannot modify this track. OriginalFileNumber {0} will have 0 occurences";
+                        error = error.Replace("{0}", item.originalFileNumber.ToString());
+                        errorIndex += 1;
+                        AddError(Properties.Resources.ErrorLabel + " n." + errorIndex + ": " + error);
+                        result = false;
+                        break;
+                    }
+                }
+            }
+
 
             for (int i = 0; i < ManageModelForm.model.trackList.Count; i++)
             {

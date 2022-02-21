@@ -1,5 +1,6 @@
 ﻿using NLog;
 using System;
+using System.Collections.Generic;
 using System.Windows.Forms;
 
 namespace MKVmergeBatcher.src.models
@@ -409,23 +410,62 @@ namespace MKVmergeBatcher.src.models
         {
             bool result = true;
             int maxFileNumber = -1;
-            // retrieve the maximum file number from track list
+            // retrieve the maximum file number from track list  not considering the one we want to delete
             for (int i = 0; i < model.trackList.Count; i++)
             {
-                if (model.trackList[i].originalFileNumber > maxFileNumber)
+                if (model.trackList[i].originalFileNumber > maxFileNumber && i != trackIndex)
                 {
                     maxFileNumber = model.trackList[i].originalFileNumber;
                 }
             }
-            if (model.trackList[trackIndex].originalFileNumber < maxFileNumber)
+            List<TrackSummary> trackSummaryArray = new List<TrackSummary>();
+
+            // add to the tracks Summary a row for every theoretically file number, based on maxFileNumber
+            for (int i=0; i < maxFileNumber + 1; i++)
             {
-                String error = "Cannot delete this track when there's a track with an higher file number ({0})";
-                error = error.Replace("{0}", maxFileNumber.ToString());
-                MessageBox.Show(error, Properties.Resources.ErrorLabel, MessageBoxButtons.OK, MessageBoxIcon.Error);
-                return false;
+                trackSummaryArray.Add(new TrackSummary()
+                {
+                    originalFileNumber = i,
+                    count = 0
+                });
+            }
+
+            //update the counter for every originalFileNumber. At the end if there's an originalFileNumber with a count of zero, we have a problem
+            for (int i = 0; i < model.trackList.Count; i++)
+            {
+                // if we are working on the track we want to delete, we don't count it
+                // otherwise search the originalFileNumber in the summary and add the counter
+                if (i == trackIndex)
+                {
+                    continue;
+                } else
+                {
+                    foreach (TrackSummary item in trackSummaryArray)
+                    {
+                        if (item.originalFileNumber == model.trackList[i].originalFileNumber)
+                        {
+                            item.count++;
+                            break;
+                        }
+                    }
+                }
+            }
+
+            //if there are empty tracks, give an error
+            foreach (TrackSummary item in trackSummaryArray)
+            {
+                if (item.count == 0)
+                {
+                    String error = "Cannot delete this track. OriginalFileNumber {0} will have 0 occurences";
+                    error = error.Replace("{0}", item.originalFileNumber.ToString());
+                    MessageBox.Show(error, Properties.Resources.ErrorLabel, MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    result = false; 
+                    break;
+                }
             }
             return result;
         }
+        
 
         private void copyTrackButton_Click(object sender, EventArgs e)
         {

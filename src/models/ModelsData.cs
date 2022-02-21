@@ -56,4 +56,9 @@ namespace MKVmergeBatcher.src.models
         public int lastModelUsed { get; set; } = 0;
 
     }
+    public class TrackSummary
+    {
+        public int originalFileNumber { get; set; }
+        public int count { get; set; } = 0;
+    }
 }
