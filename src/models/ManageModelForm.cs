@@ -378,6 +378,11 @@ namespace MKVmergeBatcher.src.models
 
             if (tracksDataGridView.SelectedRows.Count == 1)
             {
+                bool result = CheckTrackForDelete(tracksDataGridView.SelectedRows[0].Index);
+                if (!result)
+                {
+                    return;
+                }
                 int previuslySelectedindex = tracksDataGridView.SelectedRows[0].Index;
                 model.trackList.RemoveAt(tracksDataGridView.SelectedRows[0].Index);
                 if (tracksDataGridView.Rows.Count > 0)
@@ -390,7 +395,7 @@ namespace MKVmergeBatcher.src.models
                     if (newSelectedIndex < 0)
                     {
                         newSelectedIndex = 0;
-                    } 
+                    }
                     tracksDataGridView.Rows[newSelectedIndex].Selected = true;
                 }
                 if (model.trackList.Count > 0)
@@ -398,6 +403,28 @@ namespace MKVmergeBatcher.src.models
                     GenerateModel();
                 }
             }
+        }
+
+        private bool CheckTrackForDelete(int trackIndex)
+        {
+            bool result = true;
+            int maxFileNumber = -1;
+            // retrieve the maximum file number from track list
+            for (int i = 0; i < model.trackList.Count; i++)
+            {
+                if (model.trackList[i].originalFileNumber > maxFileNumber)
+                {
+                    maxFileNumber = model.trackList[i].originalFileNumber;
+                }
+            }
+            if (model.trackList[trackIndex].originalFileNumber < maxFileNumber)
+            {
+                String error = "Cannot delete this track when there's a track with an higher file number ({0})";
+                error = error.Replace("{0}", maxFileNumber.ToString());
+                MessageBox.Show(error, Properties.Resources.ErrorLabel, MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return false;
+            }
+            return result;
         }
 
         private void copyTrackButton_Click(object sender, EventArgs e)

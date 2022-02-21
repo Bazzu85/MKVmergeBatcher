@@ -126,7 +126,8 @@ namespace MKVmergeBatcher.src.options
                     }
                 }
                 MainForm.optionsData.selectedLocaleIndex = newSelectedIndex;
-            } else
+            }
+            else
             {
                 // if no locale selected force the english one
                 // ordering the locale list by name

@@ -150,7 +150,8 @@ namespace MKVmergeBatcher.src.queue
             int i = 0;
             string outputFileFullPath = "";
             //if for some reason the outputFileFormat is empty use the standard way 
-            if (String.IsNullOrEmpty(MainForm.optionsData.outputFileFormat)){
+            if (String.IsNullOrEmpty(MainForm.optionsData.outputFileFormat))
+            {
                 outputFileFullPath = job.fileFolder + "\\" + job.fileNameWithoutExtension + ".mkv";
                 while (File.Exists(outputFileFullPath))
                 {
@@ -170,7 +171,7 @@ namespace MKVmergeBatcher.src.queue
                 }
             }
 
-            
+
             job.command = job.command.Replace("||outputFileFullPath||", outputFileFullPath);
             job.command = job.command.Replace("||inputFileFolder||", job.fileFolder);
             job.command = job.command.Replace("||inputFileName||", job.fileName);
@@ -650,7 +651,7 @@ namespace MKVmergeBatcher.src.queue
 
             MainForm.queueData.currentRunningJob = 0;
             MainForm.queueData.currentRunningJobIndex = -1;
-            
+
             MainForm.queueData.warnings = 0;
             MainForm.queueData.errors = 0;
 

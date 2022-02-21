@@ -110,7 +110,8 @@ namespace MKVmergeBatcher.src.options
             {
                 MainForm.optionsData.outputFileFormat = "||originalInputFile||";
             }
-            if (!MainForm.optionsData.outputFileFormat.Contains("||originalInputFile||")) {
+            if (!MainForm.optionsData.outputFileFormat.Contains("||originalInputFile||"))
+            {
                 MessageBox.Show("Please review the Queue-Output file format field. The text must contain at least the wildcard \"||originalInputFile||\"", Properties.Resources.ErrorLabel, MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return false;
             }

@@ -1,13 +1,8 @@
-﻿using MKVmergeBatcher.src.models;
-using MKVmergeBatcher.src.queue;
-using NLog;
+﻿using NLog;
 using Octokit;
 using System;
 using System.Collections.Generic;
-using System.ComponentModel;
-using System.Globalization;
 using System.Threading.Tasks;
-using System.Windows.Forms;
 
 namespace MKVmergeBatcher.src
 {

@@ -85,7 +85,7 @@ namespace MKVmergeBatcher.src.queue
                 SetControlsContent();
             }
             //Console.WriteLine("queueForm: end tick");
-            
+
             //re-enable the timer until is not ended the current elaboration
             queueTimer.Enabled = true;
 
@@ -193,7 +193,8 @@ namespace MKVmergeBatcher.src.queue
             if (MainForm.optionsData.showSummaryWhenQueueEnds)
             {
                 showSummary = true;
-            } else
+            }
+            else
             {
                 showSummary = false;
             }
@@ -205,7 +206,8 @@ namespace MKVmergeBatcher.src.queue
                     if (MainForm.queueData.warnings > 0 || MainForm.queueData.errors > 0)
                     {
                         showSummary = true;
-                    } else
+                    }
+                    else
                     {
                         showSummary = false;
                     }
@@ -572,7 +574,7 @@ namespace MKVmergeBatcher.src.queue
                     {
                         for (int i = MainForm.queueData.jobList.Count - 1; i >= 0; i--)
                         {
-                            if (MainForm.queueData.jobList[i].jobStatus == Properties.Resources.PendingJobLabel 
+                            if (MainForm.queueData.jobList[i].jobStatus == Properties.Resources.PendingJobLabel
                              || MainForm.queueData.jobList[i].jobStatus == Properties.Resources.RunningJobLabel)
                             {
                                 MainForm.queueData.jobList.RemoveAt(i);

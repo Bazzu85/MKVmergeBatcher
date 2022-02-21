@@ -39,7 +39,6 @@ namespace MKVmergeBatcher.src.models
                     {
                         errorIndex += 1;
                         AddError(Properties.Resources.ErrorLabel + " n." + errorIndex + ": " + Properties.Resources.UseDifferentModelName + " (" + model.modelName + ")");
-
                         result = false;
                     }
                 }
