@@ -379,11 +379,6 @@ namespace MKVmergeBatcher.src.models
 
             if (tracksDataGridView.SelectedRows.Count == 1)
             {
-                bool result = CheckTrackForDelete(tracksDataGridView.SelectedRows[0].Index);
-                if (!result)
-                {
-                    return;
-                }
                 int previuslySelectedindex = tracksDataGridView.SelectedRows[0].Index;
                 model.trackList.RemoveAt(tracksDataGridView.SelectedRows[0].Index);
                 if (tracksDataGridView.Rows.Count > 0)
@@ -406,40 +401,37 @@ namespace MKVmergeBatcher.src.models
             }
         }
 
-        private bool CheckTrackForDelete(int trackIndex)
+        private void FixOriginalFileNumbers()
         {
-            bool result = true;
-            int maxFileNumber = -1;
-            // retrieve the maximum file number from track list  not considering the one we want to delete
-            for (int i = 0; i < model.trackList.Count; i++)
+            bool done = false;
+            while (!done)
             {
-                if (model.trackList[i].originalFileNumber > maxFileNumber && i != trackIndex)
+                int maxFileNumber = -1;
+                // retrieve the maximum file number from track list  not considering the one we want to delete
+                for (int i = 0; i < model.trackList.Count; i++)
                 {
-                    maxFileNumber = model.trackList[i].originalFileNumber;
+                    if (model.trackList[i].originalFileNumber > maxFileNumber)
+                    {
+                        maxFileNumber = model.trackList[i].originalFileNumber;
+                    }
                 }
-            }
-            List<TrackSummary> trackSummaryArray = new List<TrackSummary>();
 
-            // add to the tracks Summary a row for every theoretically file number, based on maxFileNumber
-            for (int i=0; i < maxFileNumber + 1; i++)
-            {
-                trackSummaryArray.Add(new TrackSummary()
-                {
-                    originalFileNumber = i,
-                    count = 0
-                });
-            }
+                List<TrackSummary> trackSummaryArray = new List<TrackSummary>();
 
-            //update the counter for every originalFileNumber. At the end if there's an originalFileNumber with a count of zero, we have a problem
-            for (int i = 0; i < model.trackList.Count; i++)
-            {
-                // if we are working on the track we want to delete, we don't count it
-                // otherwise search the originalFileNumber in the summary and add the counter
-                if (i == trackIndex)
+                // add to the tracks Summary a row for every theoretically file number, based on maxFileNumber
+                for (int i = 0; i < maxFileNumber + 1; i++)
                 {
-                    continue;
-                } else
+                    trackSummaryArray.Add(new TrackSummary()
+                    {
+                        originalFileNumber = i,
+                        count = 0
+                    });
+                }
+
+                //update the counter for every originalFileNumber. At the end if there's an originalFileNumber with a count of zero, we have a problem
+                for (int i = 0; i < model.trackList.Count; i++)
                 {
+                    // search the originalFileNumber in the summary and add the counter
                     foreach (TrackSummary item in trackSummaryArray)
                     {
                         if (item.originalFileNumber == model.trackList[i].originalFileNumber)
@@ -449,21 +441,38 @@ namespace MKVmergeBatcher.src.models
                         }
                     }
                 }
-            }
 
-            //if there are empty tracks, give an error
-            foreach (TrackSummary item in trackSummaryArray)
-            {
-                if (item.count == 0)
+                // if there are originalFileNumbers with zero occurrence, update all tracks decreasing the originalFileNumber
+                foreach (TrackSummary item in trackSummaryArray)
                 {
-                    String error = "Cannot delete this track. OriginalFileNumber {0} will have 0 occurences";
-                    error = error.Replace("{0}", item.originalFileNumber.ToString());
-                    MessageBox.Show(error, Properties.Resources.ErrorLabel, MessageBoxButtons.OK, MessageBoxIcon.Error);
-                    result = false; 
-                    break;
+                    if (item.count == 0)
+                    {
+                        for (int i = 0; i < model.trackList.Count; i++)
+                        {
+                            if (model.trackList[i].originalFileNumber > item.originalFileNumber)
+                            {
+                                model.trackList[i].originalFileNumber -= 1;
+                            }
+                        }
+                    }
+                }
+
+                //recalculate che maxFileNumber
+                int newMaxFileNumber = -1;
+                // retrieve the maximum file number from track list  not considering the one we want to delete
+                for (int i = 0; i < model.trackList.Count; i++)
+                {
+                    if (model.trackList[i].originalFileNumber > newMaxFileNumber)
+                    {
+                        newMaxFileNumber = model.trackList[i].originalFileNumber;
+                    }
+                }
+                //if the newMaxFileNumber is the same as the start, when can close the loop. otherwise we have to do all againg
+                if (newMaxFileNumber == maxFileNumber)
+                {
+                    done = true;
                 }
             }
-            return result;
         }
         
 
@@ -490,6 +499,7 @@ namespace MKVmergeBatcher.src.models
             Logger.Trace(System.Reflection.MethodBase.GetCurrentMethod().Name);
 
             EditTrack();
+
         }
         private void tracksDataGridView_DoubleClick(object sender, EventArgs e)
         {
@@ -520,6 +530,7 @@ namespace MKVmergeBatcher.src.models
 
             if (!customCommandCheckBox.Checked && !loadingForm)
             {
+                FixOriginalFileNumbers();
                 commandTextBox.Text = modelGenerator.GenerateModel(this);
             }
         }
