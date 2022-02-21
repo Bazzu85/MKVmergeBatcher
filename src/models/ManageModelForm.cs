@@ -378,10 +378,16 @@ namespace MKVmergeBatcher.src.models
 
             if (tracksDataGridView.SelectedRows.Count == 1)
             {
+                int previuslySelectedindex = tracksDataGridView.SelectedRows[0].Index;
                 model.trackList.RemoveAt(tracksDataGridView.SelectedRows[0].Index);
-                if (tracksDataGridView.SelectedRows.Count == 0 && tracksDataGridView.Rows.Count > 0)
+                if (tracksDataGridView.Rows.Count > 0)
                 {
-                    tracksDataGridView.Rows[0].Selected = true;
+                    int newSelectedIndex = previuslySelectedindex - 1;
+                    if (previuslySelectedindex - 1 < 0)
+                    {
+                        newSelectedIndex = 0;
+                    } 
+                    tracksDataGridView.Rows[newSelectedIndex].Selected = true;
                 }
                 if (model.trackList.Count > 0)
                 {

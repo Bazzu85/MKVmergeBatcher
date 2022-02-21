@@ -431,10 +431,16 @@ namespace MKVmergeBatcher.src.queue
 
             if (jobsDataGridView.SelectedRows.Count == 1)
             {
+                int previuslySelectedindex = jobsDataGridView.SelectedRows[0].Index;
                 MainForm.queueData.jobList.RemoveAt(jobsDataGridView.SelectedRows[0].Index);
-                if (jobsDataGridView.SelectedRows.Count == 0 && jobsDataGridView.Rows.Count > 0)
+                if (jobsDataGridView.Rows.Count > 0)
                 {
-                    jobsDataGridView.Rows[0].Selected = true;
+                    int newSelectedIndex = previuslySelectedindex - 1;
+                    if (previuslySelectedindex - 1 < 0)
+                    {
+                        newSelectedIndex = 0;
+                    }
+                    jobsDataGridView.Rows[newSelectedIndex].Selected = true;
                 }
             }
         }
