@@ -173,16 +173,20 @@ When using a model with many files, the wildcards are used to replace some core 
 
 ### Queue options
 
-![image](https://user-images.githubusercontent.com/7345587/154702045-c1542768-1d39-4b55-b089-3417b860e275.png)
-
+![image](https://user-images.githubusercontent.com/7345587/154927484-d12424b5-731d-4c02-88ec-14efebd3db10.png)
+  
 - Move Ok files to: when a job ends with a exit code 0 (Ok), the output file will be moved in a destination folder according to this options. Default: ||originalFolder|| -> no move
 - Move Warning files to: when a job ends with a exit code 1 (Warning), the output file will be moved in a destination folder according to this options. Default: ||originalFolder|| -> no move
+- Output file format: You can specify some pattern to the generated output file name. For example using "before_||originalInputFile||_after" every output file is generated with the format "before_file_after.mkv". if the file exists "before_file_after (1).mkv" and so on
 - Replace destination file (when moving): If this option is activated, when moving a file (check "Move Ok files to" and "Move Warning files to"), if the file is already in destination directory
   - The current destination file is renamed appending "_backup" to the file name
   - The output file is then moved to the destination folder
 - Delete incomplete files when stopping queue: If this option is activated, when manually stopping the queue, the not completed output file is deleted
 - Automatically remove Ok Jobs: If this option is activated, when the queue is not running, the jobs in status "Ok" are automatically removed. Can be changed even in [queue context menu](README.md#jobs-section)
 - Automatically remove Warning Jobs: If this option is activated, when the queue is not running, the jobs in status "Warning" are automatically removed. Can be changed even in [queue context menu](README.md#jobs-section)
+- Show queue window when adding a job?: If this option is activated, after adding a job the queue windows is shown. Otherwise not. Default: activated
+- Show summary when the queue work end?: If this option is activated, when all jobs in the queue are ended, a Summary is shown. Otherwise not. Default: activated
+- Only show summary when Warnings/Errors occurs?: If this option is activated, when all jobs in the queue are ended, a Summary is shown only if some Warnings or Errors occurred. Otherwise the summary is showed in every situation according to the "Show summary when the queue work end?" checkbox. Default: disabled
 
 ### App version options
 
