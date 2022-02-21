@@ -351,6 +351,12 @@ namespace MKVmergeBatcher.src.options
             }
         }
 
-
+        private void OptionsForm_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Escape)
+            {
+                this.Close();
+            }
+        }
     }
 }

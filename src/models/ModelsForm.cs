@@ -240,5 +240,13 @@ namespace MKVmergeBatcher.src.models
                 }
             }
         }
+
+        private void ModelsForm_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Escape)
+            {
+                this.Close();
+            }
+        }
     }
 }

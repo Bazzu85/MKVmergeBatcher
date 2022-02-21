@@ -430,9 +430,11 @@ namespace MKVmergeBatcher.src.options
             resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.optionsTabControl);
+            this.KeyPreview = true;
             this.Name = "OptionsForm";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.OptionsForm_FormClosing);
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.OptionsForm_FormClosed);
+            this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.OptionsForm_KeyDown);
             ((System.ComponentModel.ISupportInitialize)(this.optionsDataBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.logLevelBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.localeBindingSource)).EndInit();
