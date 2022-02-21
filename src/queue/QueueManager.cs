@@ -121,6 +121,11 @@ namespace MKVmergeBatcher.src.queue
                 {
                     QueueData.Job job = GenerateJob(item);
                     MainForm.queueData.jobList.Add(job);
+                    // if the queue is currently running, add the jobs on the fly
+                    if (MainForm.queueData.running)
+                    {
+                        MainForm.queueData.totalJobsToExec += 1;
+                    }
                 }
             }
         }

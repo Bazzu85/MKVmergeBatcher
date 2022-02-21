@@ -435,8 +435,12 @@ namespace MKVmergeBatcher.src.queue
                 MainForm.queueData.jobList.RemoveAt(jobsDataGridView.SelectedRows[0].Index);
                 if (jobsDataGridView.Rows.Count > 0)
                 {
-                    int newSelectedIndex = previuslySelectedindex - 1;
-                    if (previuslySelectedindex - 1 < 0)
+                    int newSelectedIndex = previuslySelectedindex;
+                    if (newSelectedIndex > jobsDataGridView.Rows.Count - 1)
+                    {
+                        newSelectedIndex = previuslySelectedindex - 1;
+                    }
+                    if (newSelectedIndex < 0)
                     {
                         newSelectedIndex = 0;
                     }
