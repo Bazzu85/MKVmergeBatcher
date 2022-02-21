@@ -16,10 +16,12 @@ namespace MKVmergeBatcher.src.queue
             Logger.Trace(System.Reflection.MethodBase.GetCurrentMethod().Name);
 
             InitializeComponent();
-
-            refreshTimer.Enabled = true;
-
             this.jobIndex = inputJobIndex;
+            // if the current job is not executed activate the refresh timer
+            if (!MainForm.queueData.jobList[jobIndex].jobExecuted)
+            {
+                refreshTimer.Enabled = true;
+            }
             localeManager.SetLocale(this);
             RestoreWindowPositionAndSize();
             SetDataSource();
@@ -64,12 +66,6 @@ namespace MKVmergeBatcher.src.queue
                 {
                     outputTextBox.Text = "";
                     outputTextBox.AppendText(MainForm.queueData.jobList[jobIndex].output);
-                } else
-                {
-                    if (MainForm.queueData.jobList[jobIndex].jobExecuted)
-                    {
-                        refreshTimer.Enabled = false;
-                    }
                 }
             }
             else
@@ -133,8 +129,11 @@ namespace MKVmergeBatcher.src.queue
                 this.Close();
                 return;
             }
-            refreshTimer.Enabled = true;
-
+            // if the job is not marked as executed, re-enable the timer
+            if (!MainForm.queueData.jobList[jobIndex].jobExecuted)
+            {
+                refreshTimer.Enabled = true;
+            }
         }
     }
 }
