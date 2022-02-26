@@ -58,33 +58,19 @@ namespace MKVmergeBatcher.src.queue
         {
             Logger.Trace(System.Reflection.MethodBase.GetCurrentMethod().Name);
 
-            if (MainForm.queueData.running)
+            if (jobIndex > MainForm.queueData.jobList.Count - 1)
             {
-                // if the queue is running and we are watching the running job, update the output
-                // otherwise, if the current job is already executed disable the timer
-                if (MainForm.queueData.currentRunningJobIndex == jobIndex)
+                jobNoLongerAvailable = true;
+                return;
+            }
+            else
+            {
+                if (outputTextBox.Text != MainForm.queueData.jobList[jobIndex].output)
                 {
                     outputTextBox.Text = "";
                     outputTextBox.AppendText(MainForm.queueData.jobList[jobIndex].output);
                 }
             }
-            else
-            {
-                if (jobIndex > MainForm.queueData.jobList.Count - 1)
-                {
-                    jobNoLongerAvailable = true;
-                    return;
-                }
-                else
-                {
-                    if (outputTextBox.Text != MainForm.queueData.jobList[jobIndex].output)
-                    {
-                        outputTextBox.Text = "";
-                        outputTextBox.AppendText(MainForm.queueData.jobList[jobIndex].output);
-                    }
-                }
-            }
-
         }
         private void ResetFormBindings()
         {
