@@ -163,7 +163,8 @@ namespace MKVmergeBatcher.src.queue
             {
                 outputFileFullPath = job.fileFolder + "\\" + MainForm.optionsData.outputFileFormat + ".mkv";
                 outputFileFullPath = outputFileFullPath.Replace("||originalInputFile||", job.fileNameWithoutExtension);
-                while (File.Exists(outputFileFullPath))
+                
+                while (File.Exists(@"\\?\" + outputFileFullPath))
                 {
                     i++;
                     outputFileFullPath = job.fileFolder + "\\" + MainForm.optionsData.outputFileFormat + " (" + i + ")" + ".mkv";
@@ -524,6 +525,10 @@ namespace MKVmergeBatcher.src.queue
             string destinationFile = destinationPath + "\\" + Path.GetFileName(fileName);
 
             // Prepend long file path support
+            if (!fileName.StartsWith(@"\\?\"))
+            {
+                fileName = @"\\?\" + fileName;
+            }
             if (!destinationFile.StartsWith(@"\\?\"))
             {
                 destinationFile = @"\\?\" + destinationFile;
