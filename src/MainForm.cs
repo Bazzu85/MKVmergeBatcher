@@ -337,14 +337,16 @@ namespace MKVmergeBatcher.src
             string[] fileList = (string[])e.Data.GetData(DataFormats.FileDrop);
             if (fileList != null && fileList.Length != 0)
             {
-                foreach (string file in fileList)
+                foreach (string item in fileList)
                 {
+                    string file = Path.GetFullPath(item);
                     if (Directory.Exists(file))
                     {
                         GetVideoFileListFromDirectory(file);
                     }
                     else
                     {
+                        Logger.Debug(file + " is not a directory");
                         Boolean acceptableFile = CheckIfFileIsAcceptable(file);
                         if (acceptableFile)
                         {
@@ -385,7 +387,7 @@ namespace MKVmergeBatcher.src
             Boolean extensionOk = false;
             foreach (options.OptionsData.Extension ext in optionsData.extensionList)
             {
-                if (ext.extension == Path.GetExtension(item).Remove(0, 1))
+                if (ext.extension == Path.GetExtension(item).Remove(0, 1).ToLower())
                 {
                     extensionOk = true;
                 }
