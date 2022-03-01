@@ -1,4 +1,5 @@
-﻿using System.ComponentModel;
+﻿using System;
+using System.ComponentModel;
 
 namespace MKVmergeBatcher.src.queue
 {
@@ -9,6 +10,7 @@ namespace MKVmergeBatcher.src.queue
 
         public class Job
         {
+            public int id { get; set; } = 0;
             public string fileName { get; set; } = "";
             public string fileNameWithoutExtension { get; set; } = "";
             public string fileFolder { get; set; } = "";
@@ -30,6 +32,50 @@ namespace MKVmergeBatcher.src.queue
         public int warnings { get; set; } = 0;
         public int errors { get; set; } = 0;
 
+        public void GenerateMissingIds()
+        {
+            Random random = new Random();
+            
+            foreach (Job job in MainForm.queueData.jobList)
+            {
+                if (job.id <= 0)
+                {
+                    int id = random.Next(1, int.MaxValue);
+                    bool idOk = CheckId(id);
+                    if (idOk)
+                    {
+                        job.id = id;
+                    }
+                }
+            }
+        }
 
+        public bool CheckId(int id)
+        {
+            for (int i=0; i < jobList.Count; i++)
+            {
+                if (MainForm.queueData.jobList[i].id == id)
+                {
+                    return false;
+                }
+            }
+            return true;
+        }
+        public int GenerateNewUniqueId()
+        {
+            Random random = new Random();
+            int id = 0;
+            bool done = false;
+            while (!done)
+            {
+                id = random.Next(1, int.MaxValue);
+                bool idOk = CheckId(id);
+                if (idOk)
+                {
+                    done = true;
+                }
+            }
+            return id;
+        }
     }
 }

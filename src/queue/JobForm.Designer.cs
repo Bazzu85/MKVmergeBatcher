@@ -34,7 +34,6 @@ namespace MKVmergeBatcher.src.queue
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.fileFolderTextBox = new System.Windows.Forms.TextBox();
-            this.jobBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.fileNameTextBox = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.fileFullPathTextBox = new System.Windows.Forms.TextBox();
@@ -49,6 +48,8 @@ namespace MKVmergeBatcher.src.queue
             this.outputTextBox = new System.Windows.Forms.TextBox();
             this.label8 = new System.Windows.Forms.Label();
             this.refreshTimer = new System.Windows.Forms.Timer(this.components);
+            this.jobBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.jobStillAvailableTimer = new System.Windows.Forms.Timer(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.jobBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
@@ -68,10 +69,6 @@ namespace MKVmergeBatcher.src.queue
             this.fileFolderTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.jobBindingSource, "fileFolder", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
             this.fileFolderTextBox.Name = "fileFolderTextBox";
             this.fileFolderTextBox.ReadOnly = true;
-            // 
-            // jobBindingSource
-            // 
-            this.jobBindingSource.DataSource = typeof(MKVmergeBatcher.src.queue.QueueData.Job);
             // 
             // fileNameTextBox
             // 
@@ -99,8 +96,8 @@ namespace MKVmergeBatcher.src.queue
             // 
             // percentageTextBox
             // 
-            resources.ApplyResources(this.percentageTextBox, "percentageTextBox");
             this.percentageTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.jobBindingSource, "percentage", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
+            resources.ApplyResources(this.percentageTextBox, "percentageTextBox");
             this.percentageTextBox.Name = "percentageTextBox";
             this.percentageTextBox.ReadOnly = true;
             // 
@@ -111,8 +108,8 @@ namespace MKVmergeBatcher.src.queue
             // 
             // jobStatusTextBox
             // 
-            resources.ApplyResources(this.jobStatusTextBox, "jobStatusTextBox");
             this.jobStatusTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.jobBindingSource, "jobStatus", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
+            resources.ApplyResources(this.jobStatusTextBox, "jobStatusTextBox");
             this.jobStatusTextBox.Name = "jobStatusTextBox";
             this.jobStatusTextBox.ReadOnly = true;
             // 
@@ -154,6 +151,14 @@ namespace MKVmergeBatcher.src.queue
             // refreshTimer
             // 
             this.refreshTimer.Tick += new System.EventHandler(this.refreshTimer_Tick);
+            // 
+            // jobBindingSource
+            // 
+            this.jobBindingSource.DataSource = typeof(MKVmergeBatcher.src.queue.QueueData.Job);
+            // 
+            // jobStillAvailableTimer
+            // 
+            this.jobStillAvailableTimer.Tick += new System.EventHandler(this.jobStillAvailableTimer_Tick);
             // 
             // JobForm
             // 
@@ -203,5 +208,6 @@ namespace MKVmergeBatcher.src.queue
         private System.Windows.Forms.TextBox outputTextBox;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Timer refreshTimer;
+        private System.Windows.Forms.Timer jobStillAvailableTimer;
     }
 }

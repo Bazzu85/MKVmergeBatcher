@@ -73,6 +73,7 @@ namespace MKVmergeBatcher.src
             modelsJson.ReadModelsJson();
             windowsJson.ReadWindowsJson();
             queueJson.ReadQueueJson();
+            
         }
         private async Task CheckNewVersionAsync()
         {

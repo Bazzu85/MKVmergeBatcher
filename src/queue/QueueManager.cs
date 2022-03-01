@@ -135,6 +135,7 @@ namespace MKVmergeBatcher.src.queue
             Logger.Trace(System.Reflection.MethodBase.GetCurrentMethod().Name);
 
             QueueData.Job job = new QueueData.Job();
+            job.id = MainForm.queueData.GenerateNewUniqueId();
             job.fileFullPath = file;
             job.fileFolder = Path.GetDirectoryName(file);
             job.fileName = Path.GetFileName(file);

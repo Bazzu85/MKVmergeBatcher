@@ -31,6 +31,7 @@ namespace MKVmergeBatcher.src.queue
             {
                 WriteQueueJson();
             }
+            MainForm.queueData.GenerateMissingIds();
         }
     }
 }

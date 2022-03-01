@@ -496,9 +496,11 @@ namespace MKVmergeBatcher.src.queue
         private void jobsDataGridView_DoubleClick(object sender, EventArgs e)
         {
             Logger.Trace(System.Reflection.MethodBase.GetCurrentMethod().Name);
-            if (jobsDataGridView.SelectedRows.Count == 1)
+            if (jobsDataGridView.SelectedRows.Count == 1 && MainForm.queueData.jobList.Count > 0)
             {
-                JobForm jobForm = new JobForm(jobsDataGridView.SelectedRows[0].Index);
+                int index = jobsDataGridView.SelectedRows[0].Index;
+                int id = MainForm.queueData.jobList[index].id;
+                JobForm jobForm = new JobForm(index, id);
                 jobForm.ShowDialog();
             }
         }

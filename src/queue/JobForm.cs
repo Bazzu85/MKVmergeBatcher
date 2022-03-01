@@ -10,18 +10,21 @@ namespace MKVmergeBatcher.src.queue
         public LocaleManager localeManager = new LocaleManager();
 
         public int jobIndex;
+        public int jobId;
         public bool jobNoLongerAvailable = false;
-        public JobForm(int inputJobIndex)
+        public JobForm(int inputJobIndex, int inputJobId)
         {
             Logger.Trace(System.Reflection.MethodBase.GetCurrentMethod().Name);
 
             InitializeComponent();
             this.jobIndex = inputJobIndex;
+            this.jobId = inputJobId;
             // if the current job is not executed activate the refresh timer
-            if (!MainForm.queueData.jobList[jobIndex].jobExecuted)
+            if (MainForm.queueData.jobList[jobIndex].id == jobId && !MainForm.queueData.jobList[jobIndex].jobExecuted)
             {
                 refreshTimer.Enabled = true;
             }
+            jobStillAvailableTimer.Enabled = true;
             localeManager.SetLocale(this);
             RestoreWindowPositionAndSize();
             SetDataSource();
@@ -58,12 +61,7 @@ namespace MKVmergeBatcher.src.queue
         {
             Logger.Trace(System.Reflection.MethodBase.GetCurrentMethod().Name);
 
-            if (jobIndex > MainForm.queueData.jobList.Count - 1)
-            {
-                jobNoLongerAvailable = true;
-                return;
-            }
-            else
+            if (MainForm.queueData.jobList.Count > 0 && jobIndex < MainForm.queueData.jobList.Count && MainForm.queueData.jobList[jobIndex].id == jobId)
             {
                 if (outputTextBox.Text != MainForm.queueData.jobList[jobIndex].output)
                 {
@@ -107,18 +105,40 @@ namespace MKVmergeBatcher.src.queue
         private void refreshTimer_Tick(object sender, EventArgs e)
         {
             refreshTimer.Enabled = false;
-
-            SetControlsContent();
-            ResetFormBindings();
+            CheckIfJobIsAvailable();
             if (jobNoLongerAvailable)
             {
-                this.Close();
                 return;
             }
+            SetControlsContent();
+            ResetFormBindings();
             // if the job is not marked as executed, re-enable the timer
             if (!MainForm.queueData.jobList[jobIndex].jobExecuted)
             {
                 refreshTimer.Enabled = true;
+            }
+        }
+
+        private void CheckIfJobIsAvailable()
+        {
+            if (MainForm.queueData.jobList.Count > 0 && jobIndex < MainForm.queueData.jobList.Count && MainForm.queueData.jobList[jobIndex].id == jobId)
+            {
+
+            }
+            else
+            {
+                jobNoLongerAvailable = true;
+                this.Close();
+                return;
+            }
+        }
+
+        private void jobStillAvailableTimer_Tick(object sender, EventArgs e)
+        {
+            CheckIfJobIsAvailable();
+            if (jobNoLongerAvailable)
+            {
+                return;
             }
         }
     }

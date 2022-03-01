@@ -643,7 +643,7 @@
     <value>NoControl</value>
   </data>
   <data name="errorLabel.Location" type="System.Drawing.Point, System.Drawing">
-    <value>511, 13</value>
+    <value>526, 13</value>
   </data>
   <data name="errorLabel.Size" type="System.Drawing.Size, System.Drawing">
     <value>46, 13</value>
@@ -673,7 +673,7 @@
     <value>NoControl</value>
   </data>
   <data name="warningLabel.Location" type="System.Drawing.Point, System.Drawing">
-    <value>438, 13</value>
+    <value>453, 13</value>
   </data>
   <data name="warningLabel.Size" type="System.Drawing.Size, System.Drawing">
     <value>59, 13</value>
@@ -700,7 +700,7 @@
     <value>NoControl</value>
   </data>
   <data name="totalProgressBar.Location" type="System.Drawing.Point, System.Drawing">
-    <value>282, 13</value>
+    <value>297, 13</value>
   </data>
   <data name="totalProgressBar.Size" type="System.Drawing.Size, System.Drawing">
     <value>150, 13</value>
@@ -724,7 +724,7 @@
     <value>NoControl</value>
   </data>
   <data name="jobProgressBar.Location" type="System.Drawing.Point, System.Drawing">
-    <value>126, 13</value>
+    <value>141, 13</value>
   </data>
   <data name="jobProgressBar.Size" type="System.Drawing.Size, System.Drawing">
     <value>150, 13</value>
@@ -810,6 +810,9 @@
   </data>
   <data name="startButton.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
     <value>MiddleRight</value>
+  </data>
+  <data name="startButton.ToolTip" xml:space="preserve">
+    <value>Start to work on the queue</value>
   </data>
   <data name="&gt;&gt;startButton.Name" xml:space="preserve">
     <value>startButton</value>
@@ -2448,59 +2451,14 @@
         /AA=
 </value>
   </data>
+  <data name="$this.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
   <data name="$this.MinimumSize" type="System.Drawing.Size, System.Drawing">
     <value>950, 520</value>
   </data>
   <data name="$this.Text" xml:space="preserve">
     <value>Queue</value>
-  </data>
-  <data name="&gt;&gt;fileNameDataGridViewTextBoxColumn.Name" xml:space="preserve">
-    <value>fileNameDataGridViewTextBoxColumn</value>
-  </data>
-  <data name="&gt;&gt;fileNameDataGridViewTextBoxColumn.Type" xml:space="preserve">
-    <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;fileNameWithoutExtensionDataGridViewTextBoxColumn.Name" xml:space="preserve">
-    <value>fileNameWithoutExtensionDataGridViewTextBoxColumn</value>
-  </data>
-  <data name="&gt;&gt;fileNameWithoutExtensionDataGridViewTextBoxColumn.Type" xml:space="preserve">
-    <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;fileFolderDataGridViewTextBoxColumn.Name" xml:space="preserve">
-    <value>fileFolderDataGridViewTextBoxColumn</value>
-  </data>
-  <data name="&gt;&gt;fileFolderDataGridViewTextBoxColumn.Type" xml:space="preserve">
-    <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;fileFullPathDataGridViewTextBoxColumn.Name" xml:space="preserve">
-    <value>fileFullPathDataGridViewTextBoxColumn</value>
-  </data>
-  <data name="&gt;&gt;fileFullPathDataGridViewTextBoxColumn.Type" xml:space="preserve">
-    <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;percentageDataGridViewTextBoxColumn.Name" xml:space="preserve">
-    <value>percentageDataGridViewTextBoxColumn</value>
-  </data>
-  <data name="&gt;&gt;percentageDataGridViewTextBoxColumn.Type" xml:space="preserve">
-    <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;jobStatusDataGridViewTextBoxColumn.Name" xml:space="preserve">
-    <value>jobStatusDataGridViewTextBoxColumn</value>
-  </data>
-  <data name="&gt;&gt;jobStatusDataGridViewTextBoxColumn.Type" xml:space="preserve">
-    <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;commandDataGridViewTextBoxColumn.Name" xml:space="preserve">
-    <value>commandDataGridViewTextBoxColumn</value>
-  </data>
-  <data name="&gt;&gt;commandDataGridViewTextBoxColumn.Type" xml:space="preserve">
-    <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;outputDataGridViewTextBoxColumn.Name" xml:space="preserve">
-    <value>outputDataGridViewTextBoxColumn</value>
-  </data>
-  <data name="&gt;&gt;outputDataGridViewTextBoxColumn.Type" xml:space="preserve">
-    <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;clearQueueToolStripMenuItem.Name" xml:space="preserve">
     <value>clearQueueToolStripMenuItem</value>
@@ -2568,12 +2526,6 @@
   <data name="&gt;&gt;autoClearErrorJobsToolStripMenuItem.Type" xml:space="preserve">
     <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;jobBindingSource.Name" xml:space="preserve">
-    <value>jobBindingSource</value>
-  </data>
-  <data name="&gt;&gt;jobBindingSource.Type" xml:space="preserve">
-    <value>System.Windows.Forms.BindingSource, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
   <data name="&gt;&gt;queueToolTip.Name" xml:space="preserve">
     <value>queueToolTip</value>
   </data>
@@ -2586,6 +2538,60 @@
   <data name="&gt;&gt;queueTimer.Type" xml:space="preserve">
     <value>System.Windows.Forms.Timer, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
+  <data name="&gt;&gt;fileNameDataGridViewTextBoxColumn.Name" xml:space="preserve">
+    <value>fileNameDataGridViewTextBoxColumn</value>
+  </data>
+  <data name="&gt;&gt;fileNameDataGridViewTextBoxColumn.Type" xml:space="preserve">
+    <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;fileNameWithoutExtensionDataGridViewTextBoxColumn.Name" xml:space="preserve">
+    <value>fileNameWithoutExtensionDataGridViewTextBoxColumn</value>
+  </data>
+  <data name="&gt;&gt;fileNameWithoutExtensionDataGridViewTextBoxColumn.Type" xml:space="preserve">
+    <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;fileFolderDataGridViewTextBoxColumn.Name" xml:space="preserve">
+    <value>fileFolderDataGridViewTextBoxColumn</value>
+  </data>
+  <data name="&gt;&gt;fileFolderDataGridViewTextBoxColumn.Type" xml:space="preserve">
+    <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;fileFullPathDataGridViewTextBoxColumn.Name" xml:space="preserve">
+    <value>fileFullPathDataGridViewTextBoxColumn</value>
+  </data>
+  <data name="&gt;&gt;fileFullPathDataGridViewTextBoxColumn.Type" xml:space="preserve">
+    <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;percentageDataGridViewTextBoxColumn.Name" xml:space="preserve">
+    <value>percentageDataGridViewTextBoxColumn</value>
+  </data>
+  <data name="&gt;&gt;percentageDataGridViewTextBoxColumn.Type" xml:space="preserve">
+    <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;jobStatusDataGridViewTextBoxColumn.Name" xml:space="preserve">
+    <value>jobStatusDataGridViewTextBoxColumn</value>
+  </data>
+  <data name="&gt;&gt;jobStatusDataGridViewTextBoxColumn.Type" xml:space="preserve">
+    <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;commandDataGridViewTextBoxColumn.Name" xml:space="preserve">
+    <value>commandDataGridViewTextBoxColumn</value>
+  </data>
+  <data name="&gt;&gt;commandDataGridViewTextBoxColumn.Type" xml:space="preserve">
+    <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;outputDataGridViewTextBoxColumn.Name" xml:space="preserve">
+    <value>outputDataGridViewTextBoxColumn</value>
+  </data>
+  <data name="&gt;&gt;outputDataGridViewTextBoxColumn.Type" xml:space="preserve">
+    <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;jobBindingSource.Name" xml:space="preserve">
+    <value>jobBindingSource</value>
+  </data>
+  <data name="&gt;&gt;jobBindingSource.Type" xml:space="preserve">
+    <value>System.Windows.Forms.BindingSource, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
   <data name="&gt;&gt;queueDataBindingSource.Name" xml:space="preserve">
     <value>queueDataBindingSource</value>
   </data>
@@ -2597,8 +2603,5 @@
   </data>
   <data name="&gt;&gt;$this.Type" xml:space="preserve">
     <value>System.Windows.Forms.Form, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="startButton.ToolTip" xml:space="preserve">
-    <value>Start to work on the queue</value>
   </data>
 </root>
