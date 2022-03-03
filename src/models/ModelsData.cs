@@ -53,8 +53,20 @@ namespace MKVmergeBatcher.src.models
             public string command { get; set; } = "";
 
         }
-        public int lastModelUsed { get; set; } = 0;
 
+        public int lastModelUsed { get; set; } = 0;
+        internal void MigrateModelCommands()
+        {
+            foreach(Model model in MainForm.modelsData.modelList)
+            {
+                if (!model.customCommand)
+                {
+                    model.command = model.command.Replace("^\"", "\"");
+                    model.command = model.command.Replace("\"^(\" ", "");
+                    model.command = model.command.Replace(" \"^)\"", "");
+                }
+            }
+        }
     }
     public class TrackSummary
     {

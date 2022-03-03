@@ -178,7 +178,7 @@ namespace MKVmergeBatcher.src.models
             command += "\"||mkvmergePath||\" ";
 
             // --output
-            command += "--output ^\"||outputFileFullPath||^\" ";
+            command += "--output \"||outputFileFullPath||\" ";
 
             // work on track0 tracks
             command += GenerateTrackString(0);
@@ -211,7 +211,7 @@ namespace MKVmergeBatcher.src.models
             // --title
             if (model.customOutputFileArguments.emptyTitle)
             {
-                command += "--title ^\"^\"" + " ";
+                command += "--title \"\" ";
             }
 
             // Add attachments
@@ -314,29 +314,29 @@ namespace MKVmergeBatcher.src.models
                         subtitleTracksFound = true;
                     }
 
-                    singleTrackString += "--language ^\"" + track.originalFileTrackPosition + ":" + track.language + "^\" ";
-                    singleTrackString += "--track-name ^\"" + track.originalFileTrackPosition + ":" + track.name + "^\" ";
-                    singleTrackString += "--default-track ^\"" + track.originalFileTrackPosition + ":";
+                    singleTrackString += "--language \"" + track.originalFileTrackPosition + ":" + track.language + "\" ";
+                    singleTrackString += "--track-name \"" + track.originalFileTrackPosition + ":" + track.name + "\" ";
+                    singleTrackString += "--default-track \"" + track.originalFileTrackPosition + ":";
                     if (track.DefaultFlag)
                     {
-                        singleTrackString += "yes" + "^\" ";
+                        singleTrackString += "yes" + "\" ";
                     }
                     else
                     {
-                        singleTrackString += "no" + "^\" ";
+                        singleTrackString += "no" + "\" ";
                     }
-                    singleTrackString += "--forced-track ^\"" + track.originalFileTrackPosition + ":";
+                    singleTrackString += "--forced-track \"" + track.originalFileTrackPosition + ":";
                     if (track.ForcedFlag)
                     {
-                        singleTrackString += "yes" + "^\" ";
+                        singleTrackString += "yes" + "\" ";
                     }
                     else
                     {
-                        singleTrackString += "no" + "^\" ";
+                        singleTrackString += "no" + "\" ";
                     }
                     if (model.customInputFileArguments.noCompression)
                     {
-                        singleTrackString += "--compression ^\"" + track.originalFileTrackPosition + ":none" + "^\" ";
+                        singleTrackString += "--compression \"" + track.originalFileTrackPosition + ":none" + "\" ";
                     }
                     tracksStringList.Add(singleTrackString);
                 }
@@ -403,11 +403,11 @@ namespace MKVmergeBatcher.src.models
             //for external tracks use the file name without extension and append the choosen suffix/extension/both
             if (fileNumber == 0)
             {
-                completeTrackString += "^\"^(^\" ^\"||inputFileFolder||\\||inputFileName||^\" ^\"^)^\"" + " ";
+                completeTrackString += "\"||inputFileFolder||\\||inputFileName||\" ";
             }
             else
             {
-                completeTrackString += "^\"^(^\" ^\"||inputFileFolder||\\||inputFileNameWithoutExtension||";
+                completeTrackString += "\"||inputFileFolder||\\||inputFileNameWithoutExtension||";
                 if (!string.IsNullOrEmpty(suffix))
                 {
                     completeTrackString += suffix;
@@ -423,7 +423,7 @@ namespace MKVmergeBatcher.src.models
                         completeTrackString += "." + extension;
                     }
                 }
-                completeTrackString += "^\" ^\"^)^\"" + " ";
+                completeTrackString += "\" ";
             }
             return completeTrackString;
         }

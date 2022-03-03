@@ -31,6 +31,7 @@ namespace MKVmergeBatcher.src.models
             {
                 WriteModelsJson();
             }
+            MainForm.modelsData.MigrateModelCommands();
         }
 
     }
