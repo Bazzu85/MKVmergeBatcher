@@ -1,4 +1,5 @@
-﻿using NLog;
+﻿using Microsoft.WindowsAPICodePack.Taskbar;
+using NLog;
 using System;
 using System.IO;
 using System.Threading;
@@ -22,6 +23,8 @@ namespace MKVmergeBatcher.src.queue
             Logger.Trace(System.Reflection.MethodBase.GetCurrentMethod().Name);
             loadingForm = true;
             InitializeComponent();
+            TaskbarManager.Instance.SetProgressState(TaskbarProgressBarState.Normal);
+
             mainForm = inputMainForm;
             queueTimer.Enabled = true;
             RestoreWindowPositionAndSize();
@@ -146,6 +149,22 @@ namespace MKVmergeBatcher.src.queue
 
                         jobProgressBar.Value = MainForm.queueData.jobList[MainForm.queueData.currentRunningJobIndex].percentage;
 
+                        //update the taskbar progress bar
+                        int taskbarProgressMax = totalProgressBar.Maximum * 100;
+                        int taskbarProgressValue = 0;
+                        if (MainForm.queueData.currentRunningJob > 1)
+                        {
+                            taskbarProgressValue = ((MainForm.queueData.currentRunningJob - 1) * 100) + jobProgressBar.Value;
+                        }
+                        else
+                        {
+                            taskbarProgressValue = jobProgressBar.Value;
+                        }
+                        Console.WriteLine("currentRunningJob : " + MainForm.queueData.currentRunningJob.ToString());
+                        Console.WriteLine("jobProgressBar : " + jobProgressBar.Value.ToString());
+                        Console.WriteLine("update taskbar progress : " + taskbarProgressValue.ToString() + " to " + taskbarProgressMax.ToString());
+                        TaskbarManager.Instance.SetProgressValue(taskbarProgressValue, taskbarProgressMax);
+
                         if (MainForm.queueData.currentRunningJobIndex == lastSelectedRow)
                         {
                             outputTextBox.Text = "";
@@ -176,6 +195,9 @@ namespace MKVmergeBatcher.src.queue
                     //Console.WriteLine("processEnded");
 
                     totalProgressBar.Value = MainForm.queueData.currentRunningJob;
+
+                    TaskbarManager.Instance.SetProgressState(TaskbarProgressBarState.NoProgress);
+
                     jobProgressBar.Value = jobProgressBar.Maximum;
                     ShowSummary();
                     MainForm.queueData.processEnded = false;
