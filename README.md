@@ -1,6 +1,6 @@
 # MKVmergeBatcher
 
-Create/execute custom created models to batch you Mkvmerge work.
+Create/execute custom created models to batch your Mkvmerge work.
 
 If you like my work please consider to buy me a coffee, thanks!
 
