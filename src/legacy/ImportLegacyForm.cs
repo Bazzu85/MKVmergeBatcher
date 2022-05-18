@@ -29,7 +29,7 @@ namespace MKVmergeBatcher.src.legacy
         private void RestoreWindowPositionAndSize()
         {
             Logger.Trace(System.Reflection.MethodBase.GetCurrentMethod().Name);
-            if (MainForm.windowsData.importLegacyWindow.width > 0 && MainForm.windowsData.importLegacyWindow.height > 0)
+            if (MainForm.windowsData.importLegacyWindow.width > 0 && MainForm.windowsData.importLegacyWindow.height > 0 && MainForm.windowsData.importLegacyWindow.top > 0 && MainForm.windowsData.importLegacyWindow.left > 0)
             {
                 //this is mandatory to make the position modification working
                 this.StartPosition = FormStartPosition.Manual;

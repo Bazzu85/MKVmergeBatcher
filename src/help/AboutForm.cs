@@ -21,7 +21,7 @@ namespace MKVmergeBatcher.src.help
         private void RestoreWindowPositionAndSize()
         {
             Logger.Trace(System.Reflection.MethodBase.GetCurrentMethod().Name);
-            if (MainForm.windowsData.manageTrackWindow.width > 0 && MainForm.windowsData.manageTrackWindow.height > 0)
+            if (MainForm.windowsData.aboutWindow.width > 0 && MainForm.windowsData.aboutWindow.height > 0 && MainForm.windowsData.aboutWindow.top > 0 && MainForm.windowsData.aboutWindow.left > 0)
             {
                 //this is mandatory to make the position modification working
                 this.StartPosition = FormStartPosition.Manual;
