@@ -358,6 +358,7 @@
     <Compile Include="src\queue\QueueManager.cs" />
     <Compile Include="src\windows\WindowsData.cs" />
     <Compile Include="src\windows\WindowsJson.cs" />
+    <EmbeddedResource Include="Properties\Resources.de-DE.resx" />
     <EmbeddedResource Include="Properties\Resources.es-ES.resx" />
     <EmbeddedResource Include="Properties\Resources.it-IT.resx">
       <Generator>ResXFileCodeGenerator</Generator>

@@ -304,6 +304,15 @@ namespace MKVmergeBatcher.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to German.
+        /// </summary>
+        internal static string GermanLanguageName {
+            get {
+                return ResourceManager.GetString("GermanLanguageName", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to ?.
         /// </summary>
         internal static string Help {

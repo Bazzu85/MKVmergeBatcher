@@ -90,7 +90,11 @@ namespace MKVmergeBatcher.src.options
                 localeName = Properties.Resources.SpanishLanguageName,
                 localeCode = "es-ES"
             }); ;
-
+            MainForm.optionsData.localeList.Add(new Locale()
+            {
+                localeName = Properties.Resources.GermanLanguageName,
+                localeCode = "de-De"
+            }); ;
             if (MainForm.optionsData.extensionList.Count() == 0)
             {
                 MainForm.optionsData.extensionList.Add(new Extension() { extension = "mkv" });

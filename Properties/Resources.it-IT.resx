@@ -330,4 +330,7 @@
   <data name="SaveCurrentOptions" xml:space="preserve">
     <value>Vuoi salvare le opzioni?</value>
   </data>
+  <data name="GermanLanguageName" xml:space="preserve">
+    <value>Tedesco</value>
+  </data>
 </root>
