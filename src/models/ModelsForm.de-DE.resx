@@ -341,7 +341,7 @@
 </value>
   </data>
   <data name="moveModelTopButton.ToolTip" xml:space="preserve">
-    <value>Ausgewählte Vorlage an den Anfang oben verschieben</value>
+    <value>Ausgewählte Vorlage an den Anfang verschieben</value>
   </data>
   <data name="$this.Icon" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
@@ -1901,5 +1901,20 @@
   </data>
   <data name="$this.Text" xml:space="preserve">
     <value>Vorlagen</value>
+  </data>
+  <data name="emptyTitleCheckBox.Text" xml:space="preserve">
+    <value>--title empty</value>
+  </data>
+  <data name="noTrackTagsCheckBox.Text" xml:space="preserve">
+    <value>--no-track-tags</value>
+  </data>
+  <data name="noGlobalTagsCheckBox.Text" xml:space="preserve">
+    <value>--no-global-tags</value>
+  </data>
+  <data name="noAttachmentsCheckBox.Text" xml:space="preserve">
+    <value>--no-attachments</value>
+  </data>
+  <data name="modelNameLabel.Text" xml:space="preserve">
+    <value>Name:</value>
   </data>
 </root>

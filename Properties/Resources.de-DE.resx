@@ -154,7 +154,7 @@
     <value>Spur bearbeiten</value>
   </data>
   <data name="EmptyModelList" xml:space="preserve">
-    <value>Es wurden noch keine Vorlagen erstellt</value>
+    <value>Es wurden noch keine Vorlagen erstellt.</value>
   </data>
   <data name="ErrorLabel" xml:space="preserve">
     <value>Fehler</value>
@@ -205,16 +205,16 @@
     <value>Die Optionen "--no-attachments" und "Anhänge hinzufügen" können nicht gleichzeitig aktiviert werden.</value>
   </data>
   <data name="WarningLabel" xml:space="preserve">
-    <value>Korrupt</value>
+    <value>Warnung</value>
   </data>
   <data name="ErrorJobLabel" xml:space="preserve">
     <value>Fehlgeschlagen</value>
   </data>
   <data name="WarningJobLabel" xml:space="preserve">
-    <value>Warnung</value>
+    <value>Korrupt</value>
   </data>
   <data name="OkJobLabel" xml:space="preserve">
-    <value>Ok</value>
+    <value>Erfolgreich</value>
   </data>
   <data name="AreYouSure" xml:space="preserve">
     <value>Bist du sicher?</value>

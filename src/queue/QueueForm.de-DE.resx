@@ -352,7 +352,7 @@
     <value>48, 13</value>
   </data>
   <data name="errorLabel.Text" xml:space="preserve">
-    <value>Fehler: 0</value>
+    <value>Fehlgeschlagen: 0</value>
   </data>
   <data name="warningLabel.Size" type="System.Drawing.Size, System.Drawing">
     <value>53, 13</value>
@@ -1924,5 +1924,11 @@
   </data>
   <data name="$this.Text" xml:space="preserve">
     <value>Warteschlange</value>
+  </data>
+  <data name="jobStatusDataGridViewTextBoxColumn.HeaderText" xml:space="preserve">
+    <value>Status</value>
+  </data>
+  <data name="startButton.Text" xml:space="preserve">
+    <value>Start</value>
   </data>
 </root>

@@ -1773,4 +1773,7 @@
   <data name="$this.Text" xml:space="preserve">
     <value>Über</value>
   </data>
+  <data name="appVersionLabel.Text" xml:space="preserve">
+    <value>MkvMerge Batcher v.x.x.x.xxx</value>
+  </data>
 </root>

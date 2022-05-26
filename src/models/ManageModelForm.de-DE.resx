@@ -1904,4 +1904,19 @@
   <data name="$this.Text" xml:space="preserve">
     <value>Vorlage</value>
   </data>
+  <data name="noGlobalTagsCheckBox.Text" xml:space="preserve">
+    <value>--no-global-tags</value>
+  </data>
+  <data name="noAttachmentsCheckBox.Text" xml:space="preserve">
+    <value>--no-attachments</value>
+  </data>
+  <data name="emptyTitleCheckBox.Text" xml:space="preserve">
+    <value>--title empty</value>
+  </data>
+  <data name="noTrackTagsCheckBox.Text" xml:space="preserve">
+    <value>--no-track-tags</value>
+  </data>
+  <data name="modelNameLabel.Text" xml:space="preserve">
+    <value>Name:</value>
+  </data>
 </root>

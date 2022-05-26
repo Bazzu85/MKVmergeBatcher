@@ -173,7 +173,13 @@
     <value>108, 32</value>
   </data>
   <data name="VideoFilesPathTextBox.Size" type="System.Drawing.Size, System.Drawing">
-    <value>583, 20</value>
+    <value>574, 20</value>
+  </data>
+  <data name="BrowseVideoFilesButton.Location" type="System.Drawing.Point, System.Drawing">
+    <value>688, 32</value>
+  </data>
+  <data name="BrowseVideoFilesButton.Size" type="System.Drawing.Size, System.Drawing">
+    <value>84, 20</value>
   </data>
   <data name="BrowseVideoFilesButton.Text" xml:space="preserve">
     <value>Durchsuchen</value>

@@ -124,6 +124,12 @@
   <data name="label1.Text" xml:space="preserve">
     <value>MKVmerge-Pfad:</value>
   </data>
+  <data name="browseMkvMergeLocationButton.Location" type="System.Drawing.Point, System.Drawing">
+    <value>312, 39</value>
+  </data>
+  <data name="browseMkvMergeLocationButton.Size" type="System.Drawing.Size, System.Drawing">
+    <value>84, 21</value>
+  </data>
   <data name="browseMkvMergeLocationButton.Text" xml:space="preserve">
     <value>Durchsuchen</value>
   </data>
@@ -131,7 +137,7 @@
     <value>97, 39</value>
   </data>
   <data name="mkvMergeLocationTextBox.Size" type="System.Drawing.Size, System.Drawing">
-    <value>218, 20</value>
+    <value>209, 20</value>
   </data>
   <data name="logLevelLabel.Size" type="System.Drawing.Size, System.Drawing">
     <value>88, 13</value>
@@ -304,6 +310,9 @@
   </data>
   <data name="label3.Text" xml:space="preserve">
     <value>Aktuelle Version:</value>
+  </data>
+  <data name="label2.Location" type="System.Drawing.Point, System.Drawing">
+    <value>8, 32</value>
   </data>
   <data name="label2.Size" type="System.Drawing.Size, System.Drawing">
     <value>95, 13</value>

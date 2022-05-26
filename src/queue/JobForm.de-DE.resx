@@ -1744,4 +1744,7 @@
   <data name="$this.Text" xml:space="preserve">
     <value>Aufgabe</value>
   </data>
+  <data name="label5.Text" xml:space="preserve">
+    <value>Status:</value>
+  </data>
 </root>
