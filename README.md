@@ -8,6 +8,8 @@ If you like my work please consider to buy me a coffee, thanks!
 
 Join the MkvMergeBather Discord server to chat and support: https://discord.gg/Eztf8tQWdt
 
+If you want to help translate please open a new issue here on GitHub!
+
 ## How the app works
 
 - Fill all options in View-Options (only the first time)
