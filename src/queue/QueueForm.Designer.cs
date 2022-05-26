@@ -32,6 +32,14 @@ namespace MKVmergeBatcher.src.queue
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(QueueForm));
             this.jobsDataGridView = new System.Windows.Forms.DataGridView();
+            this.fileNameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.fileNameWithoutExtensionDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.fileFolderDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.fileFullPathDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.percentageDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.jobStatusDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.commandDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.outputDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.queueContextMenuStrip = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.clearQueueToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.resetAllOkJobsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -44,6 +52,7 @@ namespace MKVmergeBatcher.src.queue
             this.autoClearOkJobsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.autoClearWarningJobsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.autoClearErrorJobsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.jobBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.modelsListButtonsPanel = new System.Windows.Forms.Panel();
             this.moveJobDownButton = new System.Windows.Forms.Button();
             this.moveJobUpButton = new System.Windows.Forms.Button();
@@ -54,38 +63,29 @@ namespace MKVmergeBatcher.src.queue
             this.queueToolTip = new System.Windows.Forms.ToolTip(this.components);
             this.stopButton = new System.Windows.Forms.Button();
             this.createBatButton = new System.Windows.Forms.Button();
+            this.startButton = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
             this.errorLabel = new System.Windows.Forms.Label();
             this.warningLabel = new System.Windows.Forms.Label();
             this.totalProgressBar = new System.Windows.Forms.ProgressBar();
             this.jobProgressBar = new System.Windows.Forms.ProgressBar();
             this.workingOnLabel = new System.Windows.Forms.Label();
-            this.startButton = new System.Windows.Forms.Button();
             this.outputTextBox = new System.Windows.Forms.TextBox();
             this.queueTimer = new System.Windows.Forms.Timer(this.components);
-            this.fileNameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.fileNameWithoutExtensionDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.fileFolderDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.fileFullPathDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.percentageDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.jobStatusDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.commandDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.outputDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.jobBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.queueDataBindingSource = new System.Windows.Forms.BindingSource(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.jobsDataGridView)).BeginInit();
             this.queueContextMenuStrip.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.jobBindingSource)).BeginInit();
             this.modelsListButtonsPanel.SuspendLayout();
             this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.jobBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.queueDataBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // jobsDataGridView
             // 
+            resources.ApplyResources(this.jobsDataGridView, "jobsDataGridView");
             this.jobsDataGridView.AllowUserToAddRows = false;
             this.jobsDataGridView.AllowUserToDeleteRows = false;
-            resources.ApplyResources(this.jobsDataGridView, "jobsDataGridView");
             this.jobsDataGridView.AutoGenerateColumns = false;
             this.jobsDataGridView.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.jobsDataGridView.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
@@ -108,11 +108,72 @@ namespace MKVmergeBatcher.src.queue
             this.jobsDataGridView.ReadOnly = true;
             this.jobsDataGridView.RowHeadersVisible = false;
             this.jobsDataGridView.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.queueToolTip.SetToolTip(this.jobsDataGridView, resources.GetString("jobsDataGridView.ToolTip"));
             this.jobsDataGridView.SelectionChanged += new System.EventHandler(this.jobsDataGridView_SelectionChanged);
             this.jobsDataGridView.DoubleClick += new System.EventHandler(this.jobsDataGridView_DoubleClick);
             // 
+            // fileNameDataGridViewTextBoxColumn
+            // 
+            this.fileNameDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.fileNameDataGridViewTextBoxColumn.DataPropertyName = "fileName";
+            resources.ApplyResources(this.fileNameDataGridViewTextBoxColumn, "fileNameDataGridViewTextBoxColumn");
+            this.fileNameDataGridViewTextBoxColumn.Name = "fileNameDataGridViewTextBoxColumn";
+            this.fileNameDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // fileNameWithoutExtensionDataGridViewTextBoxColumn
+            // 
+            this.fileNameWithoutExtensionDataGridViewTextBoxColumn.DataPropertyName = "fileNameWithoutExtension";
+            resources.ApplyResources(this.fileNameWithoutExtensionDataGridViewTextBoxColumn, "fileNameWithoutExtensionDataGridViewTextBoxColumn");
+            this.fileNameWithoutExtensionDataGridViewTextBoxColumn.Name = "fileNameWithoutExtensionDataGridViewTextBoxColumn";
+            this.fileNameWithoutExtensionDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // fileFolderDataGridViewTextBoxColumn
+            // 
+            this.fileFolderDataGridViewTextBoxColumn.DataPropertyName = "fileFolder";
+            resources.ApplyResources(this.fileFolderDataGridViewTextBoxColumn, "fileFolderDataGridViewTextBoxColumn");
+            this.fileFolderDataGridViewTextBoxColumn.Name = "fileFolderDataGridViewTextBoxColumn";
+            this.fileFolderDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // fileFullPathDataGridViewTextBoxColumn
+            // 
+            this.fileFullPathDataGridViewTextBoxColumn.DataPropertyName = "fileFullPath";
+            resources.ApplyResources(this.fileFullPathDataGridViewTextBoxColumn, "fileFullPathDataGridViewTextBoxColumn");
+            this.fileFullPathDataGridViewTextBoxColumn.Name = "fileFullPathDataGridViewTextBoxColumn";
+            this.fileFullPathDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // percentageDataGridViewTextBoxColumn
+            // 
+            this.percentageDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.percentageDataGridViewTextBoxColumn.DataPropertyName = "percentage";
+            resources.ApplyResources(this.percentageDataGridViewTextBoxColumn, "percentageDataGridViewTextBoxColumn");
+            this.percentageDataGridViewTextBoxColumn.Name = "percentageDataGridViewTextBoxColumn";
+            this.percentageDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // jobStatusDataGridViewTextBoxColumn
+            // 
+            this.jobStatusDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.jobStatusDataGridViewTextBoxColumn.DataPropertyName = "jobStatus";
+            resources.ApplyResources(this.jobStatusDataGridViewTextBoxColumn, "jobStatusDataGridViewTextBoxColumn");
+            this.jobStatusDataGridViewTextBoxColumn.Name = "jobStatusDataGridViewTextBoxColumn";
+            this.jobStatusDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // commandDataGridViewTextBoxColumn
+            // 
+            this.commandDataGridViewTextBoxColumn.DataPropertyName = "command";
+            resources.ApplyResources(this.commandDataGridViewTextBoxColumn, "commandDataGridViewTextBoxColumn");
+            this.commandDataGridViewTextBoxColumn.Name = "commandDataGridViewTextBoxColumn";
+            this.commandDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // outputDataGridViewTextBoxColumn
+            // 
+            this.outputDataGridViewTextBoxColumn.DataPropertyName = "output";
+            resources.ApplyResources(this.outputDataGridViewTextBoxColumn, "outputDataGridViewTextBoxColumn");
+            this.outputDataGridViewTextBoxColumn.Name = "outputDataGridViewTextBoxColumn";
+            this.outputDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
             // queueContextMenuStrip
             // 
+            resources.ApplyResources(this.queueContextMenuStrip, "queueContextMenuStrip");
             this.queueContextMenuStrip.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.clearQueueToolStripMenuItem,
             this.resetAllOkJobsToolStripMenuItem,
@@ -126,76 +187,80 @@ namespace MKVmergeBatcher.src.queue
             this.autoClearWarningJobsToolStripMenuItem,
             this.autoClearErrorJobsToolStripMenuItem});
             this.queueContextMenuStrip.Name = "queueContextMenuStrip";
-            resources.ApplyResources(this.queueContextMenuStrip, "queueContextMenuStrip");
+            this.queueToolTip.SetToolTip(this.queueContextMenuStrip, resources.GetString("queueContextMenuStrip.ToolTip"));
             // 
             // clearQueueToolStripMenuItem
             // 
-            this.clearQueueToolStripMenuItem.Name = "clearQueueToolStripMenuItem";
             resources.ApplyResources(this.clearQueueToolStripMenuItem, "clearQueueToolStripMenuItem");
+            this.clearQueueToolStripMenuItem.Name = "clearQueueToolStripMenuItem";
             this.clearQueueToolStripMenuItem.Click += new System.EventHandler(this.clearQueueToolStripMenuItem_Click_1);
             // 
             // resetAllOkJobsToolStripMenuItem
             // 
-            this.resetAllOkJobsToolStripMenuItem.Name = "resetAllOkJobsToolStripMenuItem";
             resources.ApplyResources(this.resetAllOkJobsToolStripMenuItem, "resetAllOkJobsToolStripMenuItem");
+            this.resetAllOkJobsToolStripMenuItem.Name = "resetAllOkJobsToolStripMenuItem";
             this.resetAllOkJobsToolStripMenuItem.Click += new System.EventHandler(this.resetAllOkJobsToolStripMenuItem_Click);
             // 
             // resetAllWarningJobsToolStripMenuItem
             // 
-            this.resetAllWarningJobsToolStripMenuItem.Name = "resetAllWarningJobsToolStripMenuItem";
             resources.ApplyResources(this.resetAllWarningJobsToolStripMenuItem, "resetAllWarningJobsToolStripMenuItem");
+            this.resetAllWarningJobsToolStripMenuItem.Name = "resetAllWarningJobsToolStripMenuItem";
             this.resetAllWarningJobsToolStripMenuItem.Click += new System.EventHandler(this.resetAllWarningJobsToolStripMenuItem_Click);
             // 
             // resetAllErrorJobsToolStripMenuItem
             // 
-            this.resetAllErrorJobsToolStripMenuItem.Name = "resetAllErrorJobsToolStripMenuItem";
             resources.ApplyResources(this.resetAllErrorJobsToolStripMenuItem, "resetAllErrorJobsToolStripMenuItem");
+            this.resetAllErrorJobsToolStripMenuItem.Name = "resetAllErrorJobsToolStripMenuItem";
             this.resetAllErrorJobsToolStripMenuItem.Click += new System.EventHandler(this.resetAllErrorJobsToolStripMenuItem_Click);
             // 
             // clearAllPendingJobsToolStripMenuItem
             // 
-            this.clearAllPendingJobsToolStripMenuItem.Name = "clearAllPendingJobsToolStripMenuItem";
             resources.ApplyResources(this.clearAllPendingJobsToolStripMenuItem, "clearAllPendingJobsToolStripMenuItem");
+            this.clearAllPendingJobsToolStripMenuItem.Name = "clearAllPendingJobsToolStripMenuItem";
             this.clearAllPendingJobsToolStripMenuItem.Click += new System.EventHandler(this.clearAllPendingJobsToolStripMenuItem_Click);
             // 
             // clearAllOkJobsToolStripMenuItem
             // 
-            this.clearAllOkJobsToolStripMenuItem.Name = "clearAllOkJobsToolStripMenuItem";
             resources.ApplyResources(this.clearAllOkJobsToolStripMenuItem, "clearAllOkJobsToolStripMenuItem");
+            this.clearAllOkJobsToolStripMenuItem.Name = "clearAllOkJobsToolStripMenuItem";
             this.clearAllOkJobsToolStripMenuItem.Click += new System.EventHandler(this.clearAllOkJobsToolStripMenuItem_Click);
             // 
             // clearAllWarningJobsToolStripMenuItem
             // 
-            this.clearAllWarningJobsToolStripMenuItem.Name = "clearAllWarningJobsToolStripMenuItem";
             resources.ApplyResources(this.clearAllWarningJobsToolStripMenuItem, "clearAllWarningJobsToolStripMenuItem");
+            this.clearAllWarningJobsToolStripMenuItem.Name = "clearAllWarningJobsToolStripMenuItem";
             this.clearAllWarningJobsToolStripMenuItem.Click += new System.EventHandler(this.clearAllWarningJobsToolStripMenuItem_Click);
             // 
             // clearAllErrorJobsToolStripMenuItem
             // 
-            this.clearAllErrorJobsToolStripMenuItem.Name = "clearAllErrorJobsToolStripMenuItem";
             resources.ApplyResources(this.clearAllErrorJobsToolStripMenuItem, "clearAllErrorJobsToolStripMenuItem");
+            this.clearAllErrorJobsToolStripMenuItem.Name = "clearAllErrorJobsToolStripMenuItem";
             this.clearAllErrorJobsToolStripMenuItem.Click += new System.EventHandler(this.clearAllErrorJobsToolStripMenuItem_Click);
             // 
             // autoClearOkJobsToolStripMenuItem
             // 
+            resources.ApplyResources(this.autoClearOkJobsToolStripMenuItem, "autoClearOkJobsToolStripMenuItem");
             this.autoClearOkJobsToolStripMenuItem.CheckOnClick = true;
             this.autoClearOkJobsToolStripMenuItem.Name = "autoClearOkJobsToolStripMenuItem";
-            resources.ApplyResources(this.autoClearOkJobsToolStripMenuItem, "autoClearOkJobsToolStripMenuItem");
             this.autoClearOkJobsToolStripMenuItem.Click += new System.EventHandler(this.autoClearOkJobsToolStripMenuItem_Click);
             // 
             // autoClearWarningJobsToolStripMenuItem
             // 
+            resources.ApplyResources(this.autoClearWarningJobsToolStripMenuItem, "autoClearWarningJobsToolStripMenuItem");
             this.autoClearWarningJobsToolStripMenuItem.CheckOnClick = true;
             this.autoClearWarningJobsToolStripMenuItem.Name = "autoClearWarningJobsToolStripMenuItem";
-            resources.ApplyResources(this.autoClearWarningJobsToolStripMenuItem, "autoClearWarningJobsToolStripMenuItem");
             this.autoClearWarningJobsToolStripMenuItem.Click += new System.EventHandler(this.autoClearWarningJobsToolStripMenuItem_Click);
             // 
             // autoClearErrorJobsToolStripMenuItem
             // 
+            resources.ApplyResources(this.autoClearErrorJobsToolStripMenuItem, "autoClearErrorJobsToolStripMenuItem");
             this.autoClearErrorJobsToolStripMenuItem.CheckOnClick = true;
             this.autoClearErrorJobsToolStripMenuItem.Name = "autoClearErrorJobsToolStripMenuItem";
-            resources.ApplyResources(this.autoClearErrorJobsToolStripMenuItem, "autoClearErrorJobsToolStripMenuItem");
             this.autoClearErrorJobsToolStripMenuItem.Click += new System.EventHandler(this.autoClearErrorJobsToolStripMenuItem_Click);
+            // 
+            // jobBindingSource
+            // 
+            this.jobBindingSource.DataSource = typeof(MKVmergeBatcher.src.queue.QueueData.Job);
             // 
             // modelsListButtonsPanel
             // 
@@ -207,6 +272,7 @@ namespace MKVmergeBatcher.src.queue
             this.modelsListButtonsPanel.Controls.Add(this.moveJobBottomButton);
             this.modelsListButtonsPanel.Controls.Add(this.moveJobTopButton);
             this.modelsListButtonsPanel.Name = "modelsListButtonsPanel";
+            this.queueToolTip.SetToolTip(this.modelsListButtonsPanel, resources.GetString("modelsListButtonsPanel.ToolTip"));
             // 
             // moveJobDownButton
             // 
@@ -272,6 +338,14 @@ namespace MKVmergeBatcher.src.queue
             this.createBatButton.UseVisualStyleBackColor = true;
             this.createBatButton.Click += new System.EventHandler(this.createBatButton_Click);
             // 
+            // startButton
+            // 
+            resources.ApplyResources(this.startButton, "startButton");
+            this.startButton.Name = "startButton";
+            this.queueToolTip.SetToolTip(this.startButton, resources.GetString("startButton.ToolTip"));
+            this.startButton.UseVisualStyleBackColor = true;
+            this.startButton.Click += new System.EventHandler(this.startButton_Click);
+            // 
             // panel1
             // 
             resources.ApplyResources(this.panel1, "panel1");
@@ -284,112 +358,48 @@ namespace MKVmergeBatcher.src.queue
             this.panel1.Controls.Add(this.createBatButton);
             this.panel1.Controls.Add(this.startButton);
             this.panel1.Name = "panel1";
+            this.queueToolTip.SetToolTip(this.panel1, resources.GetString("panel1.ToolTip"));
             // 
             // errorLabel
             // 
             resources.ApplyResources(this.errorLabel, "errorLabel");
             this.errorLabel.Name = "errorLabel";
+            this.queueToolTip.SetToolTip(this.errorLabel, resources.GetString("errorLabel.ToolTip"));
             // 
             // warningLabel
             // 
             resources.ApplyResources(this.warningLabel, "warningLabel");
             this.warningLabel.Name = "warningLabel";
+            this.queueToolTip.SetToolTip(this.warningLabel, resources.GetString("warningLabel.ToolTip"));
             // 
             // totalProgressBar
             // 
             resources.ApplyResources(this.totalProgressBar, "totalProgressBar");
             this.totalProgressBar.Name = "totalProgressBar";
+            this.queueToolTip.SetToolTip(this.totalProgressBar, resources.GetString("totalProgressBar.ToolTip"));
             // 
             // jobProgressBar
             // 
             resources.ApplyResources(this.jobProgressBar, "jobProgressBar");
             this.jobProgressBar.Name = "jobProgressBar";
+            this.queueToolTip.SetToolTip(this.jobProgressBar, resources.GetString("jobProgressBar.ToolTip"));
             // 
             // workingOnLabel
             // 
             resources.ApplyResources(this.workingOnLabel, "workingOnLabel");
             this.workingOnLabel.Name = "workingOnLabel";
-            // 
-            // startButton
-            // 
-            resources.ApplyResources(this.startButton, "startButton");
-            this.startButton.Name = "startButton";
-            this.queueToolTip.SetToolTip(this.startButton, resources.GetString("startButton.ToolTip"));
-            this.startButton.UseVisualStyleBackColor = true;
-            this.startButton.Click += new System.EventHandler(this.startButton_Click);
+            this.queueToolTip.SetToolTip(this.workingOnLabel, resources.GetString("workingOnLabel.ToolTip"));
             // 
             // outputTextBox
             // 
             resources.ApplyResources(this.outputTextBox, "outputTextBox");
             this.outputTextBox.Name = "outputTextBox";
             this.outputTextBox.ReadOnly = true;
+            this.queueToolTip.SetToolTip(this.outputTextBox, resources.GetString("outputTextBox.ToolTip"));
             // 
             // queueTimer
             // 
             this.queueTimer.Tick += new System.EventHandler(this.queueTimer_Tick);
-            // 
-            // fileNameDataGridViewTextBoxColumn
-            // 
-            this.fileNameDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-            this.fileNameDataGridViewTextBoxColumn.DataPropertyName = "fileName";
-            resources.ApplyResources(this.fileNameDataGridViewTextBoxColumn, "fileNameDataGridViewTextBoxColumn");
-            this.fileNameDataGridViewTextBoxColumn.Name = "fileNameDataGridViewTextBoxColumn";
-            this.fileNameDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // fileNameWithoutExtensionDataGridViewTextBoxColumn
-            // 
-            this.fileNameWithoutExtensionDataGridViewTextBoxColumn.DataPropertyName = "fileNameWithoutExtension";
-            resources.ApplyResources(this.fileNameWithoutExtensionDataGridViewTextBoxColumn, "fileNameWithoutExtensionDataGridViewTextBoxColumn");
-            this.fileNameWithoutExtensionDataGridViewTextBoxColumn.Name = "fileNameWithoutExtensionDataGridViewTextBoxColumn";
-            this.fileNameWithoutExtensionDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // fileFolderDataGridViewTextBoxColumn
-            // 
-            this.fileFolderDataGridViewTextBoxColumn.DataPropertyName = "fileFolder";
-            resources.ApplyResources(this.fileFolderDataGridViewTextBoxColumn, "fileFolderDataGridViewTextBoxColumn");
-            this.fileFolderDataGridViewTextBoxColumn.Name = "fileFolderDataGridViewTextBoxColumn";
-            this.fileFolderDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // fileFullPathDataGridViewTextBoxColumn
-            // 
-            this.fileFullPathDataGridViewTextBoxColumn.DataPropertyName = "fileFullPath";
-            resources.ApplyResources(this.fileFullPathDataGridViewTextBoxColumn, "fileFullPathDataGridViewTextBoxColumn");
-            this.fileFullPathDataGridViewTextBoxColumn.Name = "fileFullPathDataGridViewTextBoxColumn";
-            this.fileFullPathDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // percentageDataGridViewTextBoxColumn
-            // 
-            this.percentageDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-            this.percentageDataGridViewTextBoxColumn.DataPropertyName = "percentage";
-            resources.ApplyResources(this.percentageDataGridViewTextBoxColumn, "percentageDataGridViewTextBoxColumn");
-            this.percentageDataGridViewTextBoxColumn.Name = "percentageDataGridViewTextBoxColumn";
-            this.percentageDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // jobStatusDataGridViewTextBoxColumn
-            // 
-            this.jobStatusDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-            this.jobStatusDataGridViewTextBoxColumn.DataPropertyName = "jobStatus";
-            resources.ApplyResources(this.jobStatusDataGridViewTextBoxColumn, "jobStatusDataGridViewTextBoxColumn");
-            this.jobStatusDataGridViewTextBoxColumn.Name = "jobStatusDataGridViewTextBoxColumn";
-            this.jobStatusDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // commandDataGridViewTextBoxColumn
-            // 
-            this.commandDataGridViewTextBoxColumn.DataPropertyName = "command";
-            resources.ApplyResources(this.commandDataGridViewTextBoxColumn, "commandDataGridViewTextBoxColumn");
-            this.commandDataGridViewTextBoxColumn.Name = "commandDataGridViewTextBoxColumn";
-            this.commandDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // outputDataGridViewTextBoxColumn
-            // 
-            this.outputDataGridViewTextBoxColumn.DataPropertyName = "output";
-            resources.ApplyResources(this.outputDataGridViewTextBoxColumn, "outputDataGridViewTextBoxColumn");
-            this.outputDataGridViewTextBoxColumn.Name = "outputDataGridViewTextBoxColumn";
-            this.outputDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // jobBindingSource
-            // 
-            this.jobBindingSource.DataSource = typeof(MKVmergeBatcher.src.queue.QueueData.Job);
             // 
             // queueDataBindingSource
             // 
@@ -404,15 +414,16 @@ namespace MKVmergeBatcher.src.queue
             this.Controls.Add(this.modelsListButtonsPanel);
             this.Controls.Add(this.jobsDataGridView);
             this.Name = "QueueForm";
+            this.queueToolTip.SetToolTip(this, resources.GetString("$this.ToolTip"));
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.QueueForm_FormClosing);
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.QueueForm_FormClosed);
             this.Resize += new System.EventHandler(this.QueueForm_Resize);
             ((System.ComponentModel.ISupportInitialize)(this.jobsDataGridView)).EndInit();
             this.queueContextMenuStrip.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.jobBindingSource)).EndInit();
             this.modelsListButtonsPanel.ResumeLayout(false);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.jobBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.queueDataBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

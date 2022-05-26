@@ -118,6 +118,219 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <data name="AddFileNumberNotGreaterThan" xml:space="preserve">
-    <value>Test</value>
+    <value>Datei-Nr. darf nicht größer sein als </value>
+  </data>
+  <data name="AddLabel" xml:space="preserve">
+    <value>Hinzufügen</value>
+  </data>
+  <data name="AddModel" xml:space="preserve">
+    <value>Vorlage erstellen</value>
+  </data>
+  <data name="AddTrack" xml:space="preserve">
+    <value>Spur hinzufügen</value>
+  </data>
+  <data name="AddTrackFromFileNumber0" xml:space="preserve">
+    <value>Es muss mindestens eine Spur von Datei-Nr. 0 (Basisdatei) verwendet werden.</value>
+  </data>
+  <data name="AddTrackOrUseCustomModel" xml:space="preserve">
+    <value>Füge mindestens eine Spur hinzu oder gebe unten benutzerdefinierte Argumente an.</value>
+  </data>
+  <data name="CallTypeNotPassed" xml:space="preserve">
+    <value>Ungültiger Aufruf</value>
+  </data>
+  <data name="CannotStopQueue" xml:space="preserve">
+    <value>Die Warteschlange kann nicht gestoppt werden.</value>
+  </data>
+  <data name="DigitModelName" xml:space="preserve">
+    <value>Gebe bitte einen Namen für diese Vorlage an.</value>
+  </data>
+  <data name="DoYouWantStopCurrentJob" xml:space="preserve">
+    <value>Die Warteschlange läuft. Möchtest du die aktuelle Aufgabe abbrechen?</value>
+  </data>
+  <data name="EditModel" xml:space="preserve">
+    <value>Vorlage bearbeiten</value>
+  </data>
+  <data name="EditTrack" xml:space="preserve">
+    <value>Spur bearbeiten</value>
+  </data>
+  <data name="EmptyModelList" xml:space="preserve">
+    <value>Es wurden noch keine Vorlagen erstellt</value>
+  </data>
+  <data name="ErrorLabel" xml:space="preserve">
+    <value>Fehler</value>
+  </data>
+  <data name="ExtensionNotRequired" xml:space="preserve">
+    <value>Die Dateiendung muss nur für zusätzliche Dateien bestimmt werden (Eingabedatei-Nr. &gt; 0).</value>
+  </data>
+  <data name="FileAlreadyInQueue" xml:space="preserve">
+    <value>Bereits in der Warteschlange</value>
+  </data>
+  <data name="InsertLanguageCode" xml:space="preserve">
+    <value>Gebe bitte einen Sprachcode an.</value>
+  </data>
+  <data name="NoFilesToAddToQueue" xml:space="preserve">
+    <value>Die Dateiliste ist leer.</value>
+  </data>
+  <data name="NothingToStart" xml:space="preserve">
+    <value>Die Warteschlange ist leer.</value>
+  </data>
+  <data name="OriginalFileNumberPositionAlreadyInTrackList" xml:space="preserve">
+    <value>Die Kombination aus Eingabedatei-Nr. und Position befindet sich bereits in der Spurliste.</value>
+  </data>
+  <data name="SaveCurrentCompiledModel" xml:space="preserve">
+    <value>Möchtest du die Vorlage im jetzigen Zustand speichern?</value>
+  </data>
+  <data name="SaveCurrentTrack" xml:space="preserve">
+    <value>Möchtest du die aktuelle Spur speichern?</value>
+  </data>
+  <data name="SaveLabel" xml:space="preserve">
+    <value>Speichern</value>
+  </data>
+  <data name="SelectTrackType" xml:space="preserve">
+    <value>Wähle bitte den Typ der Spur aus.</value>
+  </data>
+  <data name="SpecifySuffixOrExtension" xml:space="preserve">
+    <value>Für zusätzliche Dateien (Eingabedatei-Nr. &gt; 0) muss ein Suffix und/oder eine Dateiendung angeben werden.</value>
+  </data>
+  <data name="SuffixNotRequired" xml:space="preserve">
+    <value>Ein Eingabedatei-Suffix kann nur für zusätzliche Dateien angegeben werden (Eingabedateinummer &gt; 0).</value>
+  </data>
+  <data name="SummaryLabel" xml:space="preserve">
+    <value>Zusammenfassung</value>
+  </data>
+  <data name="UseDifferentModelName" xml:space="preserve">
+    <value>Eine Vorlage mit diesem Namen existiert bereits. Wähle bitte einen anderen Namen.</value>
+  </data>
+  <data name="UseOneAttachmentFlag" xml:space="preserve">
+    <value>Die Optionen "--no-attachments" und "Anhänge hinzufügen" können nicht gleichzeitig aktiviert werden.</value>
+  </data>
+  <data name="WarningLabel" xml:space="preserve">
+    <value>Korrupt</value>
+  </data>
+  <data name="ErrorJobLabel" xml:space="preserve">
+    <value>Fehlgeschlagen</value>
+  </data>
+  <data name="WarningJobLabel" xml:space="preserve">
+    <value>Warnung</value>
+  </data>
+  <data name="OkJobLabel" xml:space="preserve">
+    <value>Ok</value>
+  </data>
+  <data name="AreYouSure" xml:space="preserve">
+    <value>Bist du sicher?</value>
+  </data>
+  <data name="ElaboratedFiles" xml:space="preserve">
+    <value>Verarbeitete Dateien</value>
+  </data>
+  <data name="Summary" xml:space="preserve">
+    <value>Zusammenfassung</value>
+  </data>
+  <data name="WorkingOnJob" xml:space="preserve">
+    <value>Arbeite an Aufgabe</value>
+  </data>
+  <data name="Of" xml:space="preserve">
+    <value>von</value>
+  </data>
+  <data name="File" xml:space="preserve">
+    <value>Datei</value>
+  </data>
+  <data name="PendingJobLabel" xml:space="preserve">
+    <value>Ausstehend</value>
+  </data>
+  <data name="RunningJobLabel" xml:space="preserve">
+    <value>Läuft</value>
+  </data>
+  <data name="ProcessStarted" xml:space="preserve">
+    <value>Verarbeitung begonnen</value>
+  </data>
+  <data name="ExitCode" xml:space="preserve">
+    <value>Fehlercode</value>
+  </data>
+  <data name="Process" xml:space="preserve">
+    <value>Prozess</value>
+  </data>
+  <data name="Moved" xml:space="preserve">
+    <value>Verschoben</value>
+  </data>
+  <data name="To" xml:space="preserve">
+    <value>nach</value>
+  </data>
+  <data name="MakingBackup" xml:space="preserve">
+    <value>sichere Daten</value>
+  </data>
+  <data name="AreYouSurePleaseMakeBackup" xml:space="preserve">
+    <value>Bist du sicher? Die aktuellen Einstellungen werden überschrieben. Sichere bitte den Konfigurationsordner.</value>
+  </data>
+  <data name="UserDataImported" xml:space="preserve">
+    <value>UserData importiert.</value>
+  </data>
+  <data name="InfoLabel" xml:space="preserve">
+    <value>Hinweis</value>
+  </data>
+  <data name="WorkingOnModel" xml:space="preserve">
+    <value>Arbeite nach Vorlage</value>
+  </data>
+  <data name="View" xml:space="preserve">
+    <value>Ansicht</value>
+  </data>
+  <data name="Help" xml:space="preserve">
+    <value>?</value>
+  </data>
+  <data name="ImportV1UserDatajson" xml:space="preserve">
+    <value>V1 userdata.json importieren</value>
+  </data>
+  <data name="Models" xml:space="preserve">
+    <value>Vorlagen</value>
+  </data>
+  <data name="Options" xml:space="preserve">
+    <value>Einstellungen</value>
+  </data>
+  <data name="About" xml:space="preserve">
+    <value>Über</value>
+  </data>
+  <data name="Subtitle" xml:space="preserve">
+    <value>Untertitel</value>
+  </data>
+  <data name="Video" xml:space="preserve">
+    <value>Video</value>
+  </data>
+  <data name="Audio" xml:space="preserve">
+    <value>Audio</value>
+  </data>
+  <data name="NoMkvMergeLocation" xml:space="preserve">
+    <value>Der Speicherort von MKVmerge wurde in den Einstellungen nicht konfiguriert.</value>
+  </data>
+  <data name="SelectCorrectMkvmerge" xml:space="preserve">
+    <value>Die gewählte Datei ist keine gültige Version von mkvmerge.exe.</value>
+  </data>
+  <data name="BatCreatedClearQueue" xml:space="preserve">
+    <value>Batch-Datei wurde erstellt. Möchtest du die Warteschlange jetzt leeren?</value>
+  </data>
+  <data name="JobNoLongerAvailable" xml:space="preserve">
+    <value>Die Aufgabe ist ungültig. Wird beendet.</value>
+  </data>
+  <data name="NothingToPutInBat" xml:space="preserve">
+    <value>Es befinden sich keine Aufgaben in der Warteschlage, die in die Batch-Datei geschrieben werden können.</value>
+  </data>
+  <data name="AnotherInstanceIsCurrentlyRunning" xml:space="preserve">
+    <value>Eine andere Instanz der Software läuft bereits. Diese Instanz wird beendet.</value>
+  </data>
+  <data name="NewVersionFound" xml:space="preserve">
+    <value>Update verfügbar! Möchtest du die Downloadseite jetzt öffnen? Du kannst die Updateüberprüfung in den Einstellungen deaktivieren.</value>
+  </data>
+  <data name="EnglishLanguageName" xml:space="preserve">
+    <value>Englisch</value>
+  </data>
+  <data name="ItalianLanguageName" xml:space="preserve">
+    <value>Italienisch</value>
+  </data>
+  <data name="SpanishLanguageName" xml:space="preserve">
+    <value>Spanisch</value>
+  </data>
+  <data name="SaveCurrentOptions" xml:space="preserve">
+    <value>Möchtest du die Einstellungen speichern?</value>
+  </data>
+  <data name="GermanLanguageName" xml:space="preserve">
+    <value>Deutsch</value>
   </data>
 </root>

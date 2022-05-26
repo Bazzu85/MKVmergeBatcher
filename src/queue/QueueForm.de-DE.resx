@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <root>
   <!-- 
     Microsoft ResX Schema 
@@ -117,137 +117,254 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
-  <data name="languageCodeLabel.Size" type="System.Drawing.Size, System.Drawing">
-    <value>86, 13</value>
-  </data>
-  <data name="&gt;&gt;trackBindingSource.Name" xml:space="preserve">
-    <value>trackBindingSource</value>
-  </data>
-  <data name="&gt;&gt;typeLabel.Name" xml:space="preserve">
-    <value>typeLabel</value>
-  </data>
-  <data name="&gt;&gt;originalFileExtensionLabel.Name" xml:space="preserve">
-    <value>originalFileExtensionLabel</value>
-  </data>
-  <data name="okButton.Location" type="System.Drawing.Point, System.Drawing">
-    <value>186, 196</value>
+  <data name="fileNameDataGridViewTextBoxColumn.HeaderText" xml:space="preserve">
+    <value>Datei</value>
   </data>
   <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="trackNameLabel.TabIndex" type="System.Int32, mscorlib">
-    <value>0</value>
+  <data name="fileNameDataGridViewTextBoxColumn.Width" type="System.Int32, mscorlib">
+    <value>57</value>
   </data>
-  <data name="okButton.Size" type="System.Drawing.Size, System.Drawing">
-    <value>75, 23</value>
+  <data name="fileFolderDataGridViewTextBoxColumn.HeaderText" xml:space="preserve">
+    <value>Ordner</value>
   </data>
-  <data name="typeComboBox.Items2" xml:space="preserve">
-    <value>Subtitle</value>
+  <data name="percentageDataGridViewTextBoxColumn.HeaderText" xml:space="preserve">
+    <value>Fortschritt</value>
   </data>
-  <data name="&gt;&gt;OriginalFilePositionNumericUpDown.Parent" xml:space="preserve">
-    <value>$this</value>
+  <data name="percentageDataGridViewTextBoxColumn.Width" type="System.Int32, mscorlib">
+    <value>78</value>
   </data>
-  <data name="trackNameTextBox.Size" type="System.Drawing.Size, System.Drawing">
-    <value>238, 20</value>
+  <data name="commandDataGridViewTextBoxColumn.HeaderText" xml:space="preserve">
+    <value>Befehl</value>
   </data>
-  <data name="&gt;&gt;typeComboBox.Parent" xml:space="preserve">
-    <value>$this</value>
+  <data name="outputDataGridViewTextBoxColumn.HeaderText" xml:space="preserve">
+    <value>Ausgabe</value>
   </data>
-  <data name="&gt;&gt;originalFileExtensionTextBox.Parent" xml:space="preserve">
-    <value>$this</value>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="queueContextMenuStrip.Size" type="System.Drawing.Size, System.Drawing">
+    <value>399, 246</value>
   </data>
-  <data name="&gt;&gt;typeLabel.ZOrder" xml:space="preserve">
-    <value>17</value>
+  <data name="clearQueueToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>398, 22</value>
   </data>
-  <data name="&gt;&gt;cancelButton.Parent" xml:space="preserve">
-    <value>$this</value>
+  <data name="clearQueueToolStripMenuItem.Text" xml:space="preserve">
+    <value>Warteschlange leeren</value>
   </data>
-  <data name="&gt;&gt;cancelButton.ZOrder" xml:space="preserve">
-    <value>1</value>
+  <data name="resetAllOkJobsToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>398, 22</value>
   </data>
-  <data name="OriginalFileNumberNumericUpDown.TabIndex" type="System.Int32, mscorlib">
-    <value>2</value>
+  <data name="resetAllOkJobsToolStripMenuItem.Text" xml:space="preserve">
+    <value>Alle Aufgaben mit Status "erfolgreich" zurücksetzen</value>
   </data>
-  <data name="&gt;&gt;OriginalFilePositionNumericUpDown.Name" xml:space="preserve">
-    <value>OriginalFilePositionNumericUpDown</value>
+  <data name="resetAllWarningJobsToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>398, 22</value>
   </data>
-  <data name="typeComboBox.Items1" xml:space="preserve">
-    <value>Audio</value>
+  <data name="resetAllWarningJobsToolStripMenuItem.Text" xml:space="preserve">
+    <value>Alle Aufgaben mit Status "korrupt" zurücksetzen</value>
   </data>
-  <data name="OriginalFilePositionNumericUpDown.Location" type="System.Drawing.Point, System.Drawing">
-    <value>289, 39</value>
+  <data name="resetAllErrorJobsToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>398, 22</value>
   </data>
-  <data name="&gt;&gt;forcedCheckBox.ZOrder" xml:space="preserve">
-    <value>2</value>
+  <data name="resetAllErrorJobsToolStripMenuItem.Text" xml:space="preserve">
+    <value>Alle Aufgaben mit Status "fehlgeschlagen" zurücksetzen</value>
   </data>
-  <data name="originalFileNumberLabel.Size" type="System.Drawing.Size, System.Drawing">
-    <value>104, 13</value>
+  <data name="clearAllPendingJobsToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>398, 22</value>
   </data>
-  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="originalFileNameSuffixTextBox.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
-    <value>Top, Left, Right</value>
+  <data name="clearAllPendingJobsToolStripMenuItem.Text" xml:space="preserve">
+    <value>Alle Aufgaben mit Status "ausstehend" entfernen</value>
   </data>
-  <data name="okButton.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
+  <data name="clearAllOkJobsToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>398, 22</value>
   </data>
-  <data name="typeComboBox.Location" type="System.Drawing.Point, System.Drawing">
-    <value>52, 6</value>
+  <data name="clearAllOkJobsToolStripMenuItem.Text" xml:space="preserve">
+    <value>Alle Aufgaben mit Status "erfolgreich" entfernen</value>
   </data>
-  <data name="&gt;&gt;trackNameLabel.Parent" xml:space="preserve">
-    <value>$this</value>
+  <data name="clearAllWarningJobsToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>398, 22</value>
   </data>
-  <data name="originalFileNumberLabel.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
+  <data name="clearAllWarningJobsToolStripMenuItem.Text" xml:space="preserve">
+    <value>Alle Aufgaben mit Status "korrupt" entfernen</value>
   </data>
-  <data name="&gt;&gt;originalFileNameSuffixTextBox.ZOrder" xml:space="preserve">
-    <value>5</value>
+  <data name="clearAllErrorJobsToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>398, 22</value>
   </data>
-  <data name="originalFileExtensionTextBox.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
-    <value>Top, Left, Right</value>
+  <data name="clearAllErrorJobsToolStripMenuItem.Text" xml:space="preserve">
+    <value>Alle Aufgaben mit Status "fehlgeschlagen" entfernen</value>
   </data>
-  <data name="&gt;&gt;defaultCheckBox.Type" xml:space="preserve">
-    <value>System.Windows.Forms.CheckBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  <data name="autoClearOkJobsToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>398, 22</value>
   </data>
-  <data name="&gt;&gt;OriginalFileNumberNumericUpDown.Type" xml:space="preserve">
-    <value>System.Windows.Forms.NumericUpDown, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  <data name="autoClearOkJobsToolStripMenuItem.Text" xml:space="preserve">
+    <value>Aufgaben mit Status "erfolgreich" automatisch entfernen</value>
   </data>
-  <data name="&gt;&gt;languageCodeLabel.ZOrder" xml:space="preserve">
-    <value>15</value>
+  <data name="autoClearWarningJobsToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>398, 22</value>
   </data>
-  <data name="&gt;&gt;OriginalFileNumberNumericUpDown.Parent" xml:space="preserve">
-    <value>$this</value>
+  <data name="autoClearWarningJobsToolStripMenuItem.Text" xml:space="preserve">
+    <value>Aufgaben mit Status "korrupt" automatisch entfernen</value>
   </data>
-  <data name="okButton.TabIndex" type="System.Int32, mscorlib">
-    <value>10</value>
+  <data name="autoClearErrorJobsToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>398, 22</value>
   </data>
-  <data name="$this.Text" xml:space="preserve">
-    <value>ManageTrack</value>
+  <data name="autoClearErrorJobsToolStripMenuItem.Text" xml:space="preserve">
+    <value>Aufgaben mit Status "fehlgeschlagen" automatisch entfernen</value>
   </data>
-  <data name="languageCodeLabel.TabIndex" type="System.Int32, mscorlib">
-    <value>0</value>
+  <data name="moveJobDownButton.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6
+        JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAACXBIWXMAATr2AAE69gE6sVc6AAAAiUlE
+        QVRYR+3OzQnCQBRF4dlnZdb+dBCCVWgdgWgjVpAuskkJIliBCzuwAlNAzg3jRlyagYF74IOXxyNJcM45
+        53Jqjwu289PvdtCNbv9ehQduqLX4Srs7dKPbRdKL9QNPHLSIHaHdFYt9/NMGA15o0Ma5xxpJKtHhjTHO
+        KyStwAnnODvnnHM5FsIEs1ER5Pj1ZLgAAAAASUVORK5CYII=
+</value>
   </data>
-  <data name="forcedCheckBox.Size" type="System.Drawing.Size, System.Drawing">
-    <value>59, 17</value>
+  <data name="moveJobDownButton.ToolTip" xml:space="preserve">
+    <value>Ausgewählte Aufgabe nach unten verschieben</value>
   </data>
-  <data name="&gt;&gt;trackNameTextBox.Type" xml:space="preserve">
-    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  <data name="moveJobUpButton.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6
+        JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAACXBIWXMAATr2AAE69gE6sVc6AAAAh0lE
+        QVRYR+3OsQmDUBSF4ddbaW3MBhKcwTUCKS3cIUNkjTSZIETcILhBNnAB/yOvCpZRIpwPfrheLviCmZnZ
+        niXUUhPnTWV0ozGmOaVNFPSgD53pEuc75bSqE/X0plqLSLN2HelmFRUN9KRSiy/avUg3uv05/eBKh/lr
+        2ZF0s/RAMzOzfxTCBP6BEcrvyDZGAAAAAElFTkSuQmCC
+</value>
   </data>
-  <data name="&gt;&gt;okButton.Parent" xml:space="preserve">
-    <value>$this</value>
+  <data name="moveJobUpButton.ToolTip" xml:space="preserve">
+    <value>Ausgewählte Aufgabe nach oben verschieben</value>
   </data>
-  <data name="typeComboBox.TabIndex" type="System.Int32, mscorlib">
-    <value>1</value>
+  <data name="clearQueueButton.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6
+        JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAACXBIWXMAATr2AAE69gE6sVc6AAAAu0lE
+        QVRYR+2VQQrCMBBFA9obunCti25V0DNbd3oC/ysZCEVDwWRAmAefJtMhf8KEJAVBEPwLe+koDfOsDjmj
+        tJtnjcD8IZ2kLYEv8O8qkXsg0AoWxnzK309FmHkt5ydqRXQ3N5ZFbHLMxdywIu7SRbpJbuYGOz9LzyzG
+        xNzAjJ2/JPcCyp7TAkQ73PpfHjh2jRh3PwdL89KIcdciauZG1yK429dexeQ0v4p5WFhw7WNEbtPHKAiC
+        oBMpvQH59yzGqAfmKAAAAABJRU5ErkJggg==
+</value>
   </data>
-  <data name="&gt;&gt;forcedCheckBox.Type" xml:space="preserve">
-    <value>System.Windows.Forms.CheckBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  <data name="clearQueueButton.ToolTip" xml:space="preserve">
+    <value>Warteschlange leeren</value>
   </data>
-  <data name="typeLabel.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
+  <data name="deleteJobButton.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6
+        JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAACXBIWXMAATr2AAE69gE6sVc6AAABU0lE
+        QVRYR+2XO0rGQBhFI2ihoCBY2Kg7sLFyA1ZiK1iLoPY26i5cgzYiFu7DR6VYqWBhIWht4TkxgfmDmEwe
+        ECEXDszju5cvISGTZNB/1BjMwRIsZjh2zb3OtQV38ALPGY5vYRM6lVd5A+ewDTsZji/hGqxprBXYg13Y
+        z3B+BO9wCsUGzsA9a6zNfWY4X4bKOoRP+IJXyG+1PBXmIcU9vWZ8wAFU1hQcgwGrsAD5A1cVPXrNMGsS
+        ouTt8yoMqyu9ZpgVrd42MAsTP8MRueZeqNYb8BW7go10NirX3Atfw9Yb+Cswtr5UQwNDA0MDvW7Az2tR
+        rnXewDT4Wf3t2+6ae9bkar2BWDVqwJOMZg+cdaXXDLOitQZvsJ7O6kmvGWZFawY8aN6DR7TwnFeGtXoe
+        4ALMqiVv4Qk8QngML8NaPXqbPEOpxmEewh+RMqzVo3dQn5Uk39Bek2MPgGFKAAAAAElFTkSuQmCC
+</value>
   </data>
-  <data name="&gt;&gt;okButton.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  <data name="deleteJobButton.ToolTip" xml:space="preserve">
+    <value>Ausgewählte Aufgabe entfernen</value>
   </data>
-  <data name="$this.AutoScaleDimensions" type="System.Drawing.SizeF, System.Drawing">
-    <value>6, 13</value>
+  <data name="moveJobBottomButton.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6
+        JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAACXBIWXMAATr2AAE69gE6sVc6AAAA8klE
+        QVRYR+3TMUoDQRhA4VFULDRgp1hLqlRKcgAxhdhYeATBykMEQop4B0MQUnsBWwvBWkwp2ngJ31snIJJG
+        md3qf/DB7MwPS8JsiqIoiv7QHk6wWT0tz7M+nC3eMT5wg203ftWCZ844W7w1XOIdd9jHItczeOaMs7V1
+        ijke0Mlcv8KzRuriGS/ZEw5Ra+vYwUr1lFIb99mBG+SZM84Wzy/gEWfV03dePC3yzBlni7eLKbzlV/h5
+        0Vy75yW8hbO15K8d4xMDbGXDvDfCsk+0aBu4hi+cZK7d86yRVnEB//I3nOe9RvPG93CU11EURdE/SukL
+        Kawj/PvhTCYAAAAASUVORK5CYII=
+</value>
+  </data>
+  <data name="moveJobBottomButton.ToolTip" xml:space="preserve">
+    <value>Ausgewählte Aufgabe ans Ende verschieben</value>
+  </data>
+  <data name="moveJobTopButton.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6
+        JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAACXBIWXMAATr2AAE69gE6sVc6AAAA80lE
+        QVRYR+3TP2oCQRiH4VWiCP4BS9MHwVbRC2gauxS5gZDKGwTsbLyCgkUgdUovYCFYi9hJLMwl8v7WGbDY
+        LjNbhO+FB2ZnBhfGncSyLMv6QwUM0HPjXCviFd8448XN5VIZU/xg6VzdnNai1sACevk7qqhh5ua0VkeU
+        HvEJHfsED/BprDmtfaCF4A2xxTh9uqUTEZ/WtEd7g1dCE/6Lb+PLedIEaU17tDdqfexxcHboIpd0zCds
+        0HE0PuL+7wmejvUN+tBW0Efp03iNC7Qnyl8wgl4wR9ZV81dUe7Q3eLpa+uFK+pSd1p4R5RpalmX9x5Lk
+        F0L8I+csr3KaAAAAAElFTkSuQmCC
+</value>
+  </data>
+  <data name="moveJobTopButton.ToolTip" xml:space="preserve">
+    <value>Ausgewählte Aufgabe an den Anfang verschieben</value>
+  </data>
+  <data name="stopButton.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6
+        JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAACXBIWXMAAOw4AADsOAFxK8o4AAAA6ElE
+        QVRYR+2XTwpBURxG3wxrUJQRNkTsguxB2QxZjigMyAYY4ZzBK+X6l6s3cL86k1f3vO/ddwe/m6UEUoIq
+        1L5Eh663U4E+zGEF2y/RoUun7qcpwwSOcIYDbCAkfgfX6tClU7fveBhbnmAHQ2hBaFs/oQkD0Km7C8HY
+        bAYXcEHsjED3FIJnog4LcMvaPogcnbqX4MG8SwPW4L9z62JHZ342gv5UIBVIBVKBVCAVSAUKL1D4QFL4
+        SGZ6kA+lLog1lOrag5NxBx7m12P5GJ6O5cbLg6OzvyPWxUSXX/7yYnKbwq5m/5gsuwJ2xrLiNNHCnwAA
+        AABJRU5ErkJggg==
+</value>
+  </data>
+  <data name="stopButton.Text" xml:space="preserve">
+    <value>Stopp</value>
+  </data>
+  <data name="stopButton.ToolTip" xml:space="preserve">
+    <value>Stoppt alle Aufgaben in der Warteschlange</value>
+  </data>
+  <data name="createBatButton.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6
+        JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAACXBIWXMAAB2HAAAdhwGP5fFlAAAByUlE
+        QVRYR+3XTStFQRzH8WvBhpSnWHhKeQs2tlbKWsnDRinlYYGywMJC8gIs7BTK1lohvAVZeH4sQslCHr+/
+        mqnp5nJm7uhu7r8+nXvObeb8zjkzczqpX6oANWiOoBrqz6u6sB3JFjqRuKqghj2oR2MW1L4XCqF+E5Ua
+        7phtjPLuLx8gHyAfIOcBarFutjHKO0A5WtAErWQhGlAKlVcANVrDOU5xZn5fmK327TG7r//S/9f+Kkqg
+        MIkDKL06+HI84BhXeDfHHvGMFyioXOMTtp360WNUn1kFmMYQBrBhjg1Cxw8xig6s4A22XbQAwxhHH5Zx
+        gG7ola0r38UE3DYSLcAI5jGDKSxAV9yGJezjXwPoVuuK+7GIMajDTUya33Nw20i0ABqEJ7jBK+7xAQ3I
+        O2ggPsFtI0EBNA01fTSlMk1Dd7r9dEzsNCyG1zRU5XQhUum25XQp9m7gVBHsc5c6tEIz5d8DFGIWGrB2
+        LGgc3UL9lSFRhQbQlR8hfTZoCW9H4goNoFuuq3ZPfgktWl4VK0DQyVUxAgSfXFUJfUrpk0qdKshfNO81
+        2vVK1jMPPrktfUwqhO5E+sdmJntm6zXgMlXo53kFElYq9Q1xqujU2mssywAAAABJRU5ErkJggg==
+</value>
+  </data>
+  <data name="createBatButton.Location" type="System.Drawing.Point, System.Drawing">
+    <value>646, 0</value>
+  </data>
+  <data name="createBatButton.Size" type="System.Drawing.Size, System.Drawing">
+    <value>116, 39</value>
+  </data>
+  <data name="createBatButton.Text" xml:space="preserve">
+    <value>Batch erstellen</value>
+  </data>
+  <data name="createBatButton.ToolTip" xml:space="preserve">
+    <value>Erstellt eine Batch-Datei mit allen ausstehenden Aufgaben</value>
+  </data>
+  <data name="startButton.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6
+        JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAACXBIWXMAATr2AAE69gE6sVc6AAABhUlE
+        QVRYR+3XvStFcRzH8RORpEieolBSDAzKH6DEQiQUkpiESQaThclCFnUpyWBjMPgHKErJQEgGBs//g/fn
+        cBa5ub9zfud3Dfddr+EMt773nqfv9TL997JQhiL/yHG5mMc1TjGGPDirDc9YwSY+sI16OGkKj6hBDoZw
+        +W0Q+oVibRoPqPaPvqrDBvRrJFCL2PptAKXrYBQ3uEAv9AtZL9kAQQ3YwTvWUAWr/TWAyscE7nCGLmTD
+        SqkMENSEPbxhGRWInMkAqgC6c/SZY3RAD7LQmQ4Q1IIDvGIRpQhV2AFUIWbxBJ2aYhgXZYCgbui66PeP
+        DLMxQA90m/b5R4ZFPQVzSMspaMUhXrCAEoTKdADdhjPQZ47QjkgPJZMBmrEP3XpLKEfkUhlAj+JJ3OME
+        nXD2KG7ELnSVr6ISVks2gF7H47jFOXSvO3sdax3TWqaFZB3almLr50o2jCtoJRtA7CtZsJTq/G5B31rr
+        mNYyJ+kb6oWitVxX+AicruUqrX9MMjnI8z4BvpNXdT9+hOAAAAAASUVORK5CYII=
+</value>
+  </data>
+  <data name="startButton.ToolTip" xml:space="preserve">
+    <value>Beginnt mit dem Abarbeiten der Warteschlange</value>
+  </data>
+  <data name="errorLabel.Size" type="System.Drawing.Size, System.Drawing">
+    <value>48, 13</value>
+  </data>
+  <data name="errorLabel.Text" xml:space="preserve">
+    <value>Fehler: 0</value>
+  </data>
+  <data name="warningLabel.Size" type="System.Drawing.Size, System.Drawing">
+    <value>53, 13</value>
+  </data>
+  <data name="warningLabel.Text" xml:space="preserve">
+    <value>Korrupt: 0</value>
+  </data>
+  <data name="workingOnLabel.Size" type="System.Drawing.Size, System.Drawing">
+    <value>137, 13</value>
+  </data>
+  <data name="workingOnLabel.Text" xml:space="preserve">
+    <value>Arbeite an Aufgabe 0 von 0</value>
   </data>
   <data name="$this.Icon" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
@@ -1805,394 +1922,7 @@
         /AA=
 </value>
   </data>
-  <data name="OriginalFilePositionNumericUpDown.TabIndex" type="System.Int32, mscorlib">
-    <value>3</value>
+  <data name="$this.Text" xml:space="preserve">
+    <value>Warteschlange</value>
   </data>
-  <data name="&gt;&gt;languageCodeLabel.Name" xml:space="preserve">
-    <value>languageCodeLabel</value>
-  </data>
-  <data name="trackNameTextBox.Location" type="System.Drawing.Point, System.Drawing">
-    <value>104, 93</value>
-  </data>
-  <data name="forcedCheckBox.Location" type="System.Drawing.Point, System.Drawing">
-    <value>170, 119</value>
-  </data>
-  <data name="okButton.Text" xml:space="preserve">
-    <value>Ok</value>
-  </data>
-  <data name="&gt;&gt;trackNameLabel.Name" xml:space="preserve">
-    <value>trackNameLabel</value>
-  </data>
-  <data name="languageCodeTextBox.Location" type="System.Drawing.Point, System.Drawing">
-    <value>104, 67</value>
-  </data>
-  <data name="&gt;&gt;typeLabel.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;languageCodeTextBox.Name" xml:space="preserve">
-    <value>languageCodeTextBox</value>
-  </data>
-  <data name="&gt;&gt;defaultCheckBox.Name" xml:space="preserve">
-    <value>defaultCheckBox</value>
-  </data>
-  <data name="OriginalFilePositionNumericUpDown.Size" type="System.Drawing.Size, System.Drawing">
-    <value>51, 20</value>
-  </data>
-  <data name="&gt;&gt;originalFileExtensionTextBox.Type" xml:space="preserve">
-    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="forcedCheckBox.Text" xml:space="preserve">
-    <value>Forced</value>
-  </data>
-  <data name="originalFileExtensionLabel.TabIndex" type="System.Int32, mscorlib">
-    <value>0</value>
-  </data>
-  <data name="originalFileSuffixLabel.TabIndex" type="System.Int32, mscorlib">
-    <value>0</value>
-  </data>
-  <data name="originalFilePositionLabel.TabIndex" type="System.Int32, mscorlib">
-    <value>0</value>
-  </data>
-  <data name="&gt;&gt;trackNameLabel.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="defaultCheckBox.Size" type="System.Drawing.Size, System.Drawing">
-    <value>60, 17</value>
-  </data>
-  <data name="OriginalFileNumberNumericUpDown.Location" type="System.Drawing.Point, System.Drawing">
-    <value>122, 39</value>
-  </data>
-  <data name="originalFileSuffixLabel.Location" type="System.Drawing.Point, System.Drawing">
-    <value>32, 145</value>
-  </data>
-  <data name="cancelButton.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
-    <value>Bottom, Right</value>
-  </data>
-  <data name="&gt;&gt;forcedCheckBox.Name" xml:space="preserve">
-    <value>forcedCheckBox</value>
-  </data>
-  <data name="defaultCheckBox.Text" xml:space="preserve">
-    <value>Default</value>
-  </data>
-  <data name="&gt;&gt;trackNameTextBox.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;languageCodeLabel.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="trackNameLabel.Size" type="System.Drawing.Size, System.Drawing">
-    <value>69, 13</value>
-  </data>
-  <data name="&gt;&gt;originalFileExtensionLabel.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;typeLabel.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="typeComboBox.Items" xml:space="preserve">
-    <value>Video</value>
-  </data>
-  <data name="&gt;&gt;typeComboBox.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ComboBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="cancelButton.TabIndex" type="System.Int32, mscorlib">
-    <value>11</value>
-  </data>
-  <data name="&gt;&gt;originalFilePositionLabel.Name" xml:space="preserve">
-    <value>originalFilePositionLabel</value>
-  </data>
-  <data name="$this.MinimumSize" type="System.Drawing.Size, System.Drawing">
-    <value>370, 270</value>
-  </data>
-  <data name="&gt;&gt;originalFileExtensionTextBox.Name" xml:space="preserve">
-    <value>originalFileExtensionTextBox</value>
-  </data>
-  <data name="&gt;&gt;okButton.Name" xml:space="preserve">
-    <value>okButton</value>
-  </data>
-  <data name="&gt;&gt;OriginalFilePositionNumericUpDown.Type" xml:space="preserve">
-    <value>System.Windows.Forms.NumericUpDown, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="originalFileExtensionLabel.Location" type="System.Drawing.Point, System.Drawing">
-    <value>12, 172</value>
-  </data>
-  <data name="cancelButton.Text" xml:space="preserve">
-    <value>Cancel</value>
-  </data>
-  <data name="&gt;&gt;originalFileSuffixLabel.Name" xml:space="preserve">
-    <value>originalFileSuffixLabel</value>
-  </data>
-  <data name="&gt;&gt;languageCodeTextBox.ZOrder" xml:space="preserve">
-    <value>7</value>
-  </data>
-  <data name="&gt;&gt;languageCodeLabel.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;originalFileExtensionLabel.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;originalFilePositionLabel.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;trackNameTextBox.Name" xml:space="preserve">
-    <value>trackNameTextBox</value>
-  </data>
-  <data name="languageCodeLabel.Location" type="System.Drawing.Point, System.Drawing">
-    <value>12, 70</value>
-  </data>
-  <data name="&gt;&gt;originalFileExtensionLabel.ZOrder" xml:space="preserve">
-    <value>12</value>
-  </data>
-  <data name="trackNameLabel.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="&gt;&gt;forcedCheckBox.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;originalFileNameSuffixTextBox.Type" xml:space="preserve">
-    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="originalFileNameSuffixTextBox.Size" type="System.Drawing.Size, System.Drawing">
-    <value>211, 20</value>
-  </data>
-  <data name="&gt;&gt;okButton.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <data name="defaultCheckBox.TabIndex" type="System.Int32, mscorlib">
-    <value>6</value>
-  </data>
-  <data name="typeLabel.Size" type="System.Drawing.Size, System.Drawing">
-    <value>34, 13</value>
-  </data>
-  <data name="trackNameLabel.Location" type="System.Drawing.Point, System.Drawing">
-    <value>29, 96</value>
-  </data>
-  <data name="forcedCheckBox.TabIndex" type="System.Int32, mscorlib">
-    <value>7</value>
-  </data>
-  <data name="&gt;&gt;originalFileNumberLabel.Name" xml:space="preserve">
-    <value>originalFileNumberLabel</value>
-  </data>
-  <data name="&gt;&gt;defaultCheckBox.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;originalFilePositionLabel.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="okButton.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
-    <value>Bottom, Right</value>
-  </data>
-  <data name="typeComboBox.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="originalFileSuffixLabel.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="&gt;&gt;defaultCheckBox.ZOrder" xml:space="preserve">
-    <value>3</value>
-  </data>
-  <data name="typeComboBox.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
-    <value>Top, Bottom, Left, Right</value>
-  </data>
-  <data name="originalFileNumberLabel.Location" type="System.Drawing.Point, System.Drawing">
-    <value>12, 41</value>
-  </data>
-  <data name="trackNameLabel.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="originalFileExtensionTextBox.TabIndex" type="System.Int32, mscorlib">
-    <value>9</value>
-  </data>
-  <data name="&gt;&gt;originalFileNameSuffixTextBox.Name" xml:space="preserve">
-    <value>originalFileNameSuffixTextBox</value>
-  </data>
-  <data name="typeLabel.Text" xml:space="preserve">
-    <value>Type:</value>
-  </data>
-  <data name="languageCodeTextBox.TabIndex" type="System.Int32, mscorlib">
-    <value>4</value>
-  </data>
-  <data name="originalFileSuffixLabel.Size" type="System.Drawing.Size, System.Drawing">
-    <value>93, 13</value>
-  </data>
-  <data name="forcedCheckBox.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="&gt;&gt;originalFilePositionLabel.ZOrder" xml:space="preserve">
-    <value>11</value>
-  </data>
-  <data name="defaultCheckBox.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="&gt;&gt;$this.Name" xml:space="preserve">
-    <value>ManageTrackForm</value>
-  </data>
-  <data name="cancelButton.Location" type="System.Drawing.Point, System.Drawing">
-    <value>267, 196</value>
-  </data>
-  <data name="languageCodeTextBox.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
-    <value>Top, Left, Right</value>
-  </data>
-  <data name="&gt;&gt;originalFileSuffixLabel.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="originalFilePositionLabel.Location" type="System.Drawing.Point, System.Drawing">
-    <value>179, 41</value>
-  </data>
-  <data name="&gt;&gt;trackBindingSource.Type" xml:space="preserve">
-    <value>System.Windows.Forms.BindingSource, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="originalFilePositionLabel.Size" type="System.Drawing.Size, System.Drawing">
-    <value>104, 13</value>
-  </data>
-  <data name="&gt;&gt;languageCodeTextBox.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="originalFileNumberLabel.Text" xml:space="preserve">
-    <value>Original File Number:</value>
-  </data>
-  <data name="&gt;&gt;OriginalFileNumberNumericUpDown.ZOrder" xml:space="preserve">
-    <value>9</value>
-  </data>
-  <data name="&gt;&gt;$this.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Form, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="originalFileExtensionLabel.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="originalFileNumberLabel.TabIndex" type="System.Int32, mscorlib">
-    <value>0</value>
-  </data>
-  <data name="typeLabel.Location" type="System.Drawing.Point, System.Drawing">
-    <value>12, 9</value>
-  </data>
-  <data name="cancelButton.Size" type="System.Drawing.Size, System.Drawing">
-    <value>75, 23</value>
-  </data>
-  <data name="originalFilePositionLabel.Text" xml:space="preserve">
-    <value>Original File Position:</value>
-  </data>
-  <data name="&gt;&gt;originalFileExtensionTextBox.ZOrder" xml:space="preserve">
-    <value>4</value>
-  </data>
-  <data name="&gt;&gt;trackNameLabel.ZOrder" xml:space="preserve">
-    <value>14</value>
-  </data>
-  <data name="&gt;&gt;originalFileNumberLabel.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="forcedCheckBox.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="$this.MaximumSize" type="System.Drawing.Size, System.Drawing">
-    <value>370, 270</value>
-  </data>
-  <data name="&gt;&gt;originalFileNumberLabel.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="trackNameTextBox.TabIndex" type="System.Int32, mscorlib">
-    <value>5</value>
-  </data>
-  <data name="trackNameLabel.Text" xml:space="preserve">
-    <value>Track Name:</value>
-  </data>
-  <data name="&gt;&gt;originalFileSuffixLabel.ZOrder" xml:space="preserve">
-    <value>13</value>
-  </data>
-  <data name="languageCodeLabel.Text" xml:space="preserve">
-    <value>Language Code:</value>
-  </data>
-  <data name="originalFileSuffixLabel.Text" xml:space="preserve">
-    <value>Original File Suffix:</value>
-  </data>
-  <data name="defaultCheckBox.Location" type="System.Drawing.Point, System.Drawing">
-    <value>104, 119</value>
-  </data>
-  <data name="originalFileExtensionLabel.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="&gt;&gt;typeComboBox.ZOrder" xml:space="preserve">
-    <value>10</value>
-  </data>
-  <data name="languageCodeLabel.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="&gt;&gt;typeComboBox.Name" xml:space="preserve">
-    <value>typeComboBox</value>
-  </data>
-  <data name="typeComboBox.Size" type="System.Drawing.Size, System.Drawing">
-    <value>290, 21</value>
-  </data>
-  <data name="originalFilePositionLabel.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
-    <value>354, 231</value>
-  </data>
-  <data name="&gt;&gt;OriginalFileNumberNumericUpDown.Name" xml:space="preserve">
-    <value>OriginalFileNumberNumericUpDown</value>
-  </data>
-  <data name="&gt;&gt;cancelButton.Name" xml:space="preserve">
-    <value>cancelButton</value>
-  </data>
-  <data name="originalFileNameSuffixTextBox.TabIndex" type="System.Int32, mscorlib">
-    <value>8</value>
-  </data>
-  <data name="originalFileExtensionTextBox.Size" type="System.Drawing.Size, System.Drawing">
-    <value>211, 20</value>
-  </data>
-  <data name="&gt;&gt;trackNameTextBox.ZOrder" xml:space="preserve">
-    <value>6</value>
-  </data>
-  <data name="originalFileExtensionLabel.Text" xml:space="preserve">
-    <value>Original File Extension:</value>
-  </data>
-  <data name="&gt;&gt;originalFileSuffixLabel.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="OriginalFileNumberNumericUpDown.Size" type="System.Drawing.Size, System.Drawing">
-    <value>51, 20</value>
-  </data>
-  <data name="languageCodeTextBox.Size" type="System.Drawing.Size, System.Drawing">
-    <value>238, 20</value>
-  </data>
-  <data name="&gt;&gt;OriginalFilePositionNumericUpDown.ZOrder" xml:space="preserve">
-    <value>8</value>
-  </data>
-  <data name="originalFileNameSuffixTextBox.Location" type="System.Drawing.Point, System.Drawing">
-    <value>131, 142</value>
-  </data>
-  <data name="&gt;&gt;originalFileNumberLabel.ZOrder" xml:space="preserve">
-    <value>16</value>
-  </data>
-  <data name="typeLabel.TabIndex" type="System.Int32, mscorlib">
-    <value>0</value>
-  </data>
-  <data name="&gt;&gt;originalFileNameSuffixTextBox.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;cancelButton.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="originalFileExtensionTextBox.Location" type="System.Drawing.Point, System.Drawing">
-    <value>131, 168</value>
-  </data>
-  <data name="originalFileExtensionLabel.Size" type="System.Drawing.Size, System.Drawing">
-    <value>113, 13</value>
-  </data>
-  <data name="&gt;&gt;languageCodeTextBox.Type" xml:space="preserve">
-    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="originalFileSuffixLabel.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="trackNameTextBox.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
-    <value>Top, Left, Right</value>
-  </data>
-  <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <metadata name="trackBindingSource.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>17, 17</value>
-  </metadata>
 </root>

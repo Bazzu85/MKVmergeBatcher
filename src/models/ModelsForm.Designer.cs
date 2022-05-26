@@ -96,6 +96,7 @@ namespace MKVmergeBatcher.src.models
             this.modelsListBox.DisplayMember = "modelName";
             this.modelsListBox.FormattingEnabled = true;
             this.modelsListBox.Name = "modelsListBox";
+            this.modelsToolTip.SetToolTip(this.modelsListBox, resources.GetString("modelsListBox.ToolTip"));
             this.modelsListBox.SelectedIndexChanged += new System.EventHandler(this.modelsListBox_SelectedIndexChanged);
             this.modelsListBox.DoubleClick += new System.EventHandler(this.modelsListBox_DoubleClick);
             // 
@@ -120,11 +121,13 @@ namespace MKVmergeBatcher.src.models
             this.modelGroupBox.Controls.Add(this.modelNameLabel);
             this.modelGroupBox.Name = "modelGroupBox";
             this.modelGroupBox.TabStop = false;
+            this.modelsToolTip.SetToolTip(this.modelGroupBox, resources.GetString("modelGroupBox.ToolTip"));
             // 
             // editModelButton
             // 
             resources.ApplyResources(this.editModelButton, "editModelButton");
             this.editModelButton.Name = "editModelButton";
+            this.modelsToolTip.SetToolTip(this.editModelButton, resources.GetString("editModelButton.ToolTip"));
             this.editModelButton.UseVisualStyleBackColor = true;
             this.editModelButton.Click += new System.EventHandler(this.editModelButton_Click);
             // 
@@ -134,6 +137,7 @@ namespace MKVmergeBatcher.src.models
             this.modelNameTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.modelBindingSource, "modelName", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
             this.modelNameTextBox.Name = "modelNameTextBox";
             this.modelNameTextBox.ReadOnly = true;
+            this.modelsToolTip.SetToolTip(this.modelNameTextBox, resources.GetString("modelNameTextBox.ToolTip"));
             // 
             // commandTextBox
             // 
@@ -141,12 +145,14 @@ namespace MKVmergeBatcher.src.models
             this.commandTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.modelBindingSource, "command", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
             this.commandTextBox.Name = "commandTextBox";
             this.commandTextBox.ReadOnly = true;
+            this.modelsToolTip.SetToolTip(this.commandTextBox, resources.GetString("commandTextBox.ToolTip"));
             // 
             // customCommandCheckBox
             // 
             resources.ApplyResources(this.customCommandCheckBox, "customCommandCheckBox");
             this.customCommandCheckBox.DataBindings.Add(new System.Windows.Forms.Binding("CheckState", this.modelBindingSource, "customCommand", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
             this.customCommandCheckBox.Name = "customCommandCheckBox";
+            this.modelsToolTip.SetToolTip(this.customCommandCheckBox, resources.GetString("customCommandCheckBox.ToolTip"));
             this.customCommandCheckBox.UseVisualStyleBackColor = true;
             // 
             // customOutputFilesArgumentsGroupBox
@@ -158,6 +164,7 @@ namespace MKVmergeBatcher.src.models
             this.customOutputFilesArgumentsGroupBox.Controls.Add(this.emptyTitleCheckBox);
             this.customOutputFilesArgumentsGroupBox.Name = "customOutputFilesArgumentsGroupBox";
             this.customOutputFilesArgumentsGroupBox.TabStop = false;
+            this.modelsToolTip.SetToolTip(this.customOutputFilesArgumentsGroupBox, resources.GetString("customOutputFilesArgumentsGroupBox.ToolTip"));
             // 
             // customOutputFileArgumentsTextBox
             // 
@@ -165,6 +172,7 @@ namespace MKVmergeBatcher.src.models
             this.customOutputFileArgumentsTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.customOutputFileArgumentsBindingSource, "text", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
             this.customOutputFileArgumentsTextBox.Name = "customOutputFileArgumentsTextBox";
             this.customOutputFileArgumentsTextBox.ReadOnly = true;
+            this.modelsToolTip.SetToolTip(this.customOutputFileArgumentsTextBox, resources.GetString("customOutputFileArgumentsTextBox.ToolTip"));
             // 
             // customOutputFileArgumentsBindingSource
             // 
@@ -175,6 +183,7 @@ namespace MKVmergeBatcher.src.models
             resources.ApplyResources(this.addChaptersCheckBox, "addChaptersCheckBox");
             this.addChaptersCheckBox.DataBindings.Add(new System.Windows.Forms.Binding("CheckState", this.customOutputFileArgumentsBindingSource, "addChapters", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
             this.addChaptersCheckBox.Name = "addChaptersCheckBox";
+            this.modelsToolTip.SetToolTip(this.addChaptersCheckBox, resources.GetString("addChaptersCheckBox.ToolTip"));
             this.addChaptersCheckBox.UseVisualStyleBackColor = true;
             // 
             // addAttachmentsCheckBox
@@ -182,6 +191,7 @@ namespace MKVmergeBatcher.src.models
             resources.ApplyResources(this.addAttachmentsCheckBox, "addAttachmentsCheckBox");
             this.addAttachmentsCheckBox.DataBindings.Add(new System.Windows.Forms.Binding("CheckState", this.customOutputFileArgumentsBindingSource, "addAttachments", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
             this.addAttachmentsCheckBox.Name = "addAttachmentsCheckBox";
+            this.modelsToolTip.SetToolTip(this.addAttachmentsCheckBox, resources.GetString("addAttachmentsCheckBox.ToolTip"));
             this.addAttachmentsCheckBox.UseVisualStyleBackColor = true;
             // 
             // emptyTitleCheckBox
@@ -189,6 +199,7 @@ namespace MKVmergeBatcher.src.models
             resources.ApplyResources(this.emptyTitleCheckBox, "emptyTitleCheckBox");
             this.emptyTitleCheckBox.DataBindings.Add(new System.Windows.Forms.Binding("CheckState", this.customOutputFileArgumentsBindingSource, "emptyTitle", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
             this.emptyTitleCheckBox.Name = "emptyTitleCheckBox";
+            this.modelsToolTip.SetToolTip(this.emptyTitleCheckBox, resources.GetString("emptyTitleCheckBox.ToolTip"));
             this.emptyTitleCheckBox.UseVisualStyleBackColor = true;
             // 
             // customInputFilesArgumentsGroupBox
@@ -201,6 +212,7 @@ namespace MKVmergeBatcher.src.models
             this.customInputFilesArgumentsGroupBox.Controls.Add(this.noAttachmentsCheckBox);
             this.customInputFilesArgumentsGroupBox.Name = "customInputFilesArgumentsGroupBox";
             this.customInputFilesArgumentsGroupBox.TabStop = false;
+            this.modelsToolTip.SetToolTip(this.customInputFilesArgumentsGroupBox, resources.GetString("customInputFilesArgumentsGroupBox.ToolTip"));
             // 
             // customInputFileArgumentsTextBox
             // 
@@ -208,6 +220,7 @@ namespace MKVmergeBatcher.src.models
             this.customInputFileArgumentsTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.customInputFileArgumentsBindingSource, "text", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
             this.customInputFileArgumentsTextBox.Name = "customInputFileArgumentsTextBox";
             this.customInputFileArgumentsTextBox.ReadOnly = true;
+            this.modelsToolTip.SetToolTip(this.customInputFileArgumentsTextBox, resources.GetString("customInputFileArgumentsTextBox.ToolTip"));
             // 
             // customInputFileArgumentsBindingSource
             // 
@@ -234,6 +247,7 @@ namespace MKVmergeBatcher.src.models
             resources.ApplyResources(this.noCompressionCheckBox, "noCompressionCheckBox");
             this.noCompressionCheckBox.DataBindings.Add(new System.Windows.Forms.Binding("CheckState", this.customInputFileArgumentsBindingSource, "noCompression", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
             this.noCompressionCheckBox.Name = "noCompressionCheckBox";
+            this.modelsToolTip.SetToolTip(this.noCompressionCheckBox, resources.GetString("noCompressionCheckBox.ToolTip"));
             this.noCompressionCheckBox.UseVisualStyleBackColor = true;
             // 
             // noAttachmentsCheckBox
@@ -241,13 +255,14 @@ namespace MKVmergeBatcher.src.models
             resources.ApplyResources(this.noAttachmentsCheckBox, "noAttachmentsCheckBox");
             this.noAttachmentsCheckBox.DataBindings.Add(new System.Windows.Forms.Binding("CheckState", this.customInputFileArgumentsBindingSource, "noAttachments", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
             this.noAttachmentsCheckBox.Name = "noAttachmentsCheckBox";
+            this.modelsToolTip.SetToolTip(this.noAttachmentsCheckBox, resources.GetString("noAttachmentsCheckBox.ToolTip"));
             this.noAttachmentsCheckBox.UseVisualStyleBackColor = true;
             // 
             // tracksDataGridView
             // 
+            resources.ApplyResources(this.tracksDataGridView, "tracksDataGridView");
             this.tracksDataGridView.AllowUserToAddRows = false;
             this.tracksDataGridView.AllowUserToDeleteRows = false;
-            resources.ApplyResources(this.tracksDataGridView, "tracksDataGridView");
             this.tracksDataGridView.AutoGenerateColumns = false;
             this.tracksDataGridView.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
             this.tracksDataGridView.BackgroundColor = System.Drawing.SystemColors.Control;
@@ -302,6 +317,7 @@ namespace MKVmergeBatcher.src.models
             this.tracksDataGridView.RowTemplate.DefaultCellStyle.SelectionBackColor = System.Drawing.Color.White;
             this.tracksDataGridView.RowTemplate.DefaultCellStyle.SelectionForeColor = System.Drawing.Color.Black;
             this.tracksDataGridView.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.modelsToolTip.SetToolTip(this.tracksDataGridView, resources.GetString("tracksDataGridView.ToolTip"));
             // 
             // typeDataGridViewTextBoxColumn
             // 
@@ -374,9 +390,11 @@ namespace MKVmergeBatcher.src.models
             // 
             resources.ApplyResources(this.modelNameLabel, "modelNameLabel");
             this.modelNameLabel.Name = "modelNameLabel";
+            this.modelsToolTip.SetToolTip(this.modelNameLabel, resources.GetString("modelNameLabel.ToolTip"));
             // 
             // modelsListButtonsPanel
             // 
+            resources.ApplyResources(this.modelsListButtonsPanel, "modelsListButtonsPanel");
             this.modelsListButtonsPanel.Controls.Add(this.moveModelDownButton);
             this.modelsListButtonsPanel.Controls.Add(this.moveModelUpButton);
             this.modelsListButtonsPanel.Controls.Add(this.addModelButton);
@@ -384,8 +402,8 @@ namespace MKVmergeBatcher.src.models
             this.modelsListButtonsPanel.Controls.Add(this.sortModelByNameButton);
             this.modelsListButtonsPanel.Controls.Add(this.moveModelBottomButton);
             this.modelsListButtonsPanel.Controls.Add(this.moveModelTopButton);
-            resources.ApplyResources(this.modelsListButtonsPanel, "modelsListButtonsPanel");
             this.modelsListButtonsPanel.Name = "modelsListButtonsPanel";
+            this.modelsToolTip.SetToolTip(this.modelsListButtonsPanel, resources.GetString("modelsListButtonsPanel.ToolTip"));
             // 
             // moveModelDownButton
             // 
@@ -456,6 +474,7 @@ namespace MKVmergeBatcher.src.models
             this.Controls.Add(this.modelsListBox);
             this.KeyPreview = true;
             this.Name = "ModelsForm";
+            this.modelsToolTip.SetToolTip(this, resources.GetString("$this.ToolTip"));
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.ModelsForm_FormClosed);
             this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.ModelsForm_KeyDown);
             ((System.ComponentModel.ISupportInitialize)(this.modelBindingSource)).EndInit();
