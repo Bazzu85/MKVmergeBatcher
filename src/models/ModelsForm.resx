@@ -784,6 +784,9 @@
   <data name="copyModelButton.TabIndex" type="System.Int32, mscorlib">
     <value>20</value>
   </data>
+  <data name="copyModelButton.ToolTip" xml:space="preserve">
+    <value>Copy Model</value>
+  </data>
   <data name="&gt;&gt;copyModelButton.Name" xml:space="preserve">
     <value>copyModelButton</value>
   </data>

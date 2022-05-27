@@ -69,6 +69,7 @@ namespace MKVmergeBatcher.src.models
             this.trackBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.modelNameLabel = new System.Windows.Forms.Label();
             this.modelsListButtonsPanel = new System.Windows.Forms.Panel();
+            this.copyModelButton = new System.Windows.Forms.Button();
             this.moveModelDownButton = new System.Windows.Forms.Button();
             this.moveModelUpButton = new System.Windows.Forms.Button();
             this.addModelButton = new System.Windows.Forms.Button();
@@ -77,7 +78,6 @@ namespace MKVmergeBatcher.src.models
             this.moveModelBottomButton = new System.Windows.Forms.Button();
             this.moveModelTopButton = new System.Windows.Forms.Button();
             this.modelsToolTip = new System.Windows.Forms.ToolTip(this.components);
-            this.copyModelButton = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.modelBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.modelsDataBindingSource)).BeginInit();
             this.modelGroupBox.SuspendLayout();
@@ -389,6 +389,14 @@ namespace MKVmergeBatcher.src.models
             resources.ApplyResources(this.modelsListButtonsPanel, "modelsListButtonsPanel");
             this.modelsListButtonsPanel.Name = "modelsListButtonsPanel";
             // 
+            // copyModelButton
+            // 
+            resources.ApplyResources(this.copyModelButton, "copyModelButton");
+            this.copyModelButton.Name = "copyModelButton";
+            this.modelsToolTip.SetToolTip(this.copyModelButton, resources.GetString("copyModelButton.ToolTip"));
+            this.copyModelButton.UseVisualStyleBackColor = true;
+            this.copyModelButton.Click += new System.EventHandler(this.copyModelButton_Click);
+            // 
             // moveModelDownButton
             // 
             resources.ApplyResources(this.moveModelDownButton, "moveModelDownButton");
@@ -444,13 +452,6 @@ namespace MKVmergeBatcher.src.models
             this.modelsToolTip.SetToolTip(this.moveModelTopButton, resources.GetString("moveModelTopButton.ToolTip"));
             this.moveModelTopButton.UseVisualStyleBackColor = true;
             this.moveModelTopButton.Click += new System.EventHandler(this.moveModelTopButton_Click);
-            // 
-            // copyModelButton
-            // 
-            resources.ApplyResources(this.copyModelButton, "copyModelButton");
-            this.copyModelButton.Name = "copyModelButton";
-            this.copyModelButton.UseVisualStyleBackColor = true;
-            this.copyModelButton.Click += new System.EventHandler(this.copyModelButton_Click);
             // 
             // ModelsForm
             // 

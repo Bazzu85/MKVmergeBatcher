@@ -1935,4 +1935,7 @@
   <data name="$this.ToolTip" xml:space="preserve">
     <value />
   </data>
+  <data name="copyModelButton.ToolTip" xml:space="preserve">
+    <value>Copia Modello</value>
+  </data>
 </root>
