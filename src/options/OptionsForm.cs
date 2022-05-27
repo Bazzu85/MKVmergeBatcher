@@ -10,7 +10,15 @@ namespace MKVmergeBatcher.src.options
     public partial class OptionsForm : Form
     {
         public static readonly Logger Logger = NLog.LogManager.GetCurrentClassLogger();
-        Boolean loadingForm = false;
+
+        // this boolean is static because during the form load and local change this bool kept reverting to false in some situation
+        // Bug case
+        // - open options form and change locale
+        // - close options form
+        // - open again options and change locale again
+        // - setting the new locale the localeComboBox_SelectedIndexChanged method is called many times but the boolean keep resetting probably cause multiple instances
+        // setting the bool as static mantain the same value across instances
+        public static Boolean loadingForm = false;
         public LocaleManager localeManager = new LocaleManager();
         public VersionManager versionManager = new VersionManager();
 
