@@ -751,6 +751,51 @@
   <data name="&gt;&gt;modelGroupBox.ZOrder" xml:space="preserve">
     <value>1</value>
   </data>
+  <data name="copyModelButton.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Right</value>
+  </data>
+  <data name="copyModelButton.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6
+        JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAACXBIWXMAATr2AAE69gE6sVc6AAACCElE
+        QVRYR+3WzUsVURyH8auGIGTrMkoEl725cKM7g1atzL0LN2ZgrixwVWt3iS+9uJOgRWChf0Bgy7aigWAp
+        SNAucVnPc+3AcJi5d8Y7d3HhfuGDzlzmnN/MOWfmVNppxVzCVfTjZg29KD0DeI3v+IkfGfztA66jtFzB
+        JnYxjxk8SeH5L/iLTyitiAf4hYfVo9pZxTdY7GeUUsRj+Hgd+3pxmDYwiROU8iR8vBbgBKuXJZzhEKdw
+        OF6iUK7hGd5iDV9hg3kKuItpWLR/vdY2csfOt+Bsfg/HNC7ApTiF5AQM7PQWQt78lzveuZ2NoMMTxIaT
+        QzCGfaQtx2O4UkIKF+Ak8s47q0fniQvwhdSHGxkuI6RwAWkXxAUMYRmObcxrxxHSlAJu4xVCpz61cN07
+        PEJIWns1k3ZBvSFIPvI4TSngPsI3IZ50cZpSQLwM7yArTSmgSEopwLs9wmD1KH9cyi5pJ2nupBVwDxbw
+        HN2eyBFfYqPwpfbUE3mTVkAXXuA3tpFcdoHnVhCWpXfuJPVr6JzJndBgnB5MwK9dsmOFDv9gB6GIORTq
+        3IRGi8YJ6kR1wjYUO18//7dQ3KxYgJuXhrIIt1RFH53bNbdtbt8ayjAO4J5gFuFlk8WN6AL28BFuYBuO
+        33sLcAmlffOT/N3XspPzIi+qzDjr/dDYaC2OvcPlB6qdVkql8g926p//V1xQ9gAAAABJRU5ErkJggg==
+</value>
+  </data>
+  <data name="copyModelButton.BackgroundImageLayout" type="System.Windows.Forms.ImageLayout, System.Windows.Forms">
+    <value>Stretch</value>
+  </data>
+  <data name="copyModelButton.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="copyModelButton.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 217</value>
+  </data>
+  <data name="copyModelButton.Size" type="System.Drawing.Size, System.Drawing">
+    <value>25, 25</value>
+  </data>
+  <data name="copyModelButton.TabIndex" type="System.Int32, mscorlib">
+    <value>20</value>
+  </data>
+  <data name="&gt;&gt;copyModelButton.Name" xml:space="preserve">
+    <value>copyModelButton</value>
+  </data>
+  <data name="&gt;&gt;copyModelButton.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;copyModelButton.Parent" xml:space="preserve">
+    <value>modelsListButtonsPanel</value>
+  </data>
+  <data name="&gt;&gt;copyModelButton.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
   <data name="moveModelDownButton.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6
@@ -782,7 +827,7 @@
     <value>modelsListButtonsPanel</value>
   </data>
   <data name="&gt;&gt;moveModelDownButton.ZOrder" xml:space="preserve">
-    <value>0</value>
+    <value>1</value>
   </data>
   <data name="moveModelUpButton.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
@@ -815,7 +860,7 @@
     <value>modelsListButtonsPanel</value>
   </data>
   <data name="&gt;&gt;moveModelUpButton.ZOrder" xml:space="preserve">
-    <value>1</value>
+    <value>2</value>
   </data>
   <data name="addModelButton.BackgroundImageLayout" type="System.Windows.Forms.ImageLayout, System.Windows.Forms">
     <value>Stretch</value>
@@ -850,7 +895,7 @@
     <value>modelsListButtonsPanel</value>
   </data>
   <data name="&gt;&gt;addModelButton.ZOrder" xml:space="preserve">
-    <value>2</value>
+    <value>3</value>
   </data>
   <data name="deleteModelButton.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
@@ -889,7 +934,7 @@
     <value>modelsListButtonsPanel</value>
   </data>
   <data name="&gt;&gt;deleteModelButton.ZOrder" xml:space="preserve">
-    <value>3</value>
+    <value>4</value>
   </data>
   <data name="sortModelByNameButton.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
@@ -929,7 +974,7 @@
     <value>modelsListButtonsPanel</value>
   </data>
   <data name="&gt;&gt;sortModelByNameButton.ZOrder" xml:space="preserve">
-    <value>4</value>
+    <value>5</value>
   </data>
   <data name="moveModelBottomButton.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
@@ -964,7 +1009,7 @@
     <value>modelsListButtonsPanel</value>
   </data>
   <data name="&gt;&gt;moveModelBottomButton.ZOrder" xml:space="preserve">
-    <value>5</value>
+    <value>6</value>
   </data>
   <data name="moveModelTopButton.BackgroundImageLayout" type="System.Windows.Forms.ImageLayout, System.Windows.Forms">
     <value>Stretch</value>
@@ -1002,7 +1047,7 @@
     <value>modelsListButtonsPanel</value>
   </data>
   <data name="&gt;&gt;moveModelTopButton.ZOrder" xml:space="preserve">
-    <value>6</value>
+    <value>7</value>
   </data>
   <data name="modelsListButtonsPanel.Location" type="System.Drawing.Point, System.Drawing">
     <value>568, 12</value>

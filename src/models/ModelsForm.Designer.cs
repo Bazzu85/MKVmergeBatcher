@@ -77,6 +77,7 @@ namespace MKVmergeBatcher.src.models
             this.moveModelBottomButton = new System.Windows.Forms.Button();
             this.moveModelTopButton = new System.Windows.Forms.Button();
             this.modelsToolTip = new System.Windows.Forms.ToolTip(this.components);
+            this.copyModelButton = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.modelBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.modelsDataBindingSource)).BeginInit();
             this.modelGroupBox.SuspendLayout();
@@ -377,6 +378,7 @@ namespace MKVmergeBatcher.src.models
             // 
             // modelsListButtonsPanel
             // 
+            this.modelsListButtonsPanel.Controls.Add(this.copyModelButton);
             this.modelsListButtonsPanel.Controls.Add(this.moveModelDownButton);
             this.modelsListButtonsPanel.Controls.Add(this.moveModelUpButton);
             this.modelsListButtonsPanel.Controls.Add(this.addModelButton);
@@ -442,6 +444,13 @@ namespace MKVmergeBatcher.src.models
             this.modelsToolTip.SetToolTip(this.moveModelTopButton, resources.GetString("moveModelTopButton.ToolTip"));
             this.moveModelTopButton.UseVisualStyleBackColor = true;
             this.moveModelTopButton.Click += new System.EventHandler(this.moveModelTopButton_Click);
+            // 
+            // copyModelButton
+            // 
+            resources.ApplyResources(this.copyModelButton, "copyModelButton");
+            this.copyModelButton.Name = "copyModelButton";
+            this.copyModelButton.UseVisualStyleBackColor = true;
+            this.copyModelButton.Click += new System.EventHandler(this.copyModelButton_Click);
             // 
             // ModelsForm
             // 
@@ -515,5 +524,6 @@ namespace MKVmergeBatcher.src.models
         private System.Windows.Forms.Button editModelButton;
         private System.Windows.Forms.CheckBox noTrackTagsCheckBox;
         private System.Windows.Forms.ToolTip modelsToolTip;
+        private System.Windows.Forms.Button copyModelButton;
     }
 }

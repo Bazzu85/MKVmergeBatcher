@@ -23,7 +23,8 @@ namespace MKVmergeBatcher.src.models
         public enum CallType
         {
             Add,
-            Edit
+            Edit,
+            Copy
         }
 
         public CallType callType;
@@ -113,6 +114,10 @@ namespace MKVmergeBatcher.src.models
                     case CallType.Edit:
                         this.Text = Properties.Resources.EditModel;
                         okButton.Text = Properties.Resources.SaveLabel;
+                        break;
+                    case CallType.Copy:
+                        this.Text = Properties.Resources.AddModel;
+                        okButton.Text = Properties.Resources.AddLabel;
                         break;
                     default:
                         this.Text = Properties.Resources.AddModel;

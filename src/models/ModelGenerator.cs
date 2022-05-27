@@ -15,6 +15,7 @@ namespace MKVmergeBatcher.src.models
             Logger.Trace(System.Reflection.MethodBase.GetCurrentMethod().Name);
 
             ModelsData.Model model = manageModelForm.GetModel();
+            int currentModelIndex = manageModelForm.currentModelIndex;
             Boolean result = true;
             errorList = "";
             int errorIndex = 0;

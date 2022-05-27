@@ -195,11 +195,11 @@ namespace MKVmergeBatcher.src.models
         {
             ModelsData.Model newModel = new ModelsData.Model();
 
-            ManageModelForm addEditModelForm = new ManageModelForm(newModel, ManageModelForm.CallType.Add, -1);
-            addEditModelForm.ShowDialog();
-            if (addEditModelForm.DialogResult == DialogResult.OK)
+            ManageModelForm manageModelForm = new ManageModelForm(newModel, ManageModelForm.CallType.Add, -1);
+            manageModelForm.ShowDialog();
+            if (manageModelForm.DialogResult == DialogResult.OK)
             {
-                MainForm.modelsData.modelList.Add(addEditModelForm.GetModel());
+                MainForm.modelsData.modelList.Add(manageModelForm.GetModel());
                 MainForm.modelsJson.WriteModelsJson();
             }
         }
@@ -246,6 +246,24 @@ namespace MKVmergeBatcher.src.models
             if (e.KeyCode == Keys.Escape)
             {
                 this.Close();
+            }
+        }
+
+        private void copyModelButton_Click(object sender, EventArgs e)
+        {
+            if (modelsListBox.SelectedIndex >= 0)
+            {
+                //convert to json e deserialize to create a new fresh object
+                string json = Newtonsoft.Json.JsonConvert.SerializeObject(MainForm.modelsData.modelList[modelsListBox.SelectedIndex]);
+                ModelsData.Model model = Newtonsoft.Json.JsonConvert.DeserializeObject<ModelsData.Model>(json);
+
+                ManageModelForm manageModelForm = new ManageModelForm(model, ManageModelForm.CallType.Copy, -1);
+                manageModelForm.ShowDialog();
+                if (manageModelForm.DialogResult == DialogResult.OK)
+                {
+                    MainForm.modelsData.modelList.Add(manageModelForm.GetModel());
+                    MainForm.modelsJson.WriteModelsJson();
+                }
             }
         }
     }
