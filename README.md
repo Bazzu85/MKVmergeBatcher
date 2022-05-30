@@ -84,13 +84,14 @@ All you previous model are imported
 
 In this section you can organize your models. Selecting a model the right part of the window is updated with the model details
 
-![image](https://user-images.githubusercontent.com/7345587/153686795-34bc4be2-2cb6-44a4-8ad0-5a3ea3088bf6.png)
+![image](https://user-images.githubusercontent.com/7345587/171029444-c0640c8c-cf2f-4322-8570-0de85f4e3439.png)
 
 - Move buttons: you can move to Top-Bottom-Up-Down the selected model
 - Sort button: you can sort the models by his name
 - Add model (+): Open the model creation window
 - Delete model: delete the currently selected model
 - Edit model: Open the model edit window
+- Copy model: Take the current selected model and open the model creation window with all info already populated
 
 Double clicking on a model automatically opens the edit window.
 
