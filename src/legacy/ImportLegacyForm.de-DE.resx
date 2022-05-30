@@ -128,7 +128,13 @@
     <value>144, 6</value>
   </data>
   <data name="oldUserDataTextBox.Size" type="System.Drawing.Size, System.Drawing">
-    <value>197, 20</value>
+    <value>189, 20</value>
+  </data>
+  <data name="browseButton.Location" type="System.Drawing.Point, System.Drawing">
+    <value>339, 6</value>
+  </data>
+  <data name="browseButton.Size" type="System.Drawing.Size, System.Drawing">
+    <value>83, 20</value>
   </data>
   <data name="browseButton.Text" xml:space="preserve">
     <value>Durchsuchen</value>

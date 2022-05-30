@@ -349,7 +349,7 @@
     <value>Beginnt mit dem Abarbeiten der Warteschlange</value>
   </data>
   <data name="errorLabel.Size" type="System.Drawing.Size, System.Drawing">
-    <value>48, 13</value>
+    <value>94, 13</value>
   </data>
   <data name="errorLabel.Text" xml:space="preserve">
     <value>Fehlgeschlagen: 0</value>
@@ -359,6 +359,18 @@
   </data>
   <data name="warningLabel.Text" xml:space="preserve">
     <value>Korrupt: 0</value>
+  </data>
+  <data name="totalProgressBar.Location" type="System.Drawing.Point, System.Drawing">
+    <value>312, 13</value>
+  </data>
+  <data name="totalProgressBar.Size" type="System.Drawing.Size, System.Drawing">
+    <value>135, 13</value>
+  </data>
+  <data name="jobProgressBar.Location" type="System.Drawing.Point, System.Drawing">
+    <value>171, 13</value>
+  </data>
+  <data name="jobProgressBar.Size" type="System.Drawing.Size, System.Drawing">
+    <value>135, 13</value>
   </data>
   <data name="workingOnLabel.Size" type="System.Drawing.Size, System.Drawing">
     <value>137, 13</value>
@@ -1924,11 +1936,5 @@
   </data>
   <data name="$this.Text" xml:space="preserve">
     <value>Warteschlange</value>
-  </data>
-  <data name="jobStatusDataGridViewTextBoxColumn.HeaderText" xml:space="preserve">
-    <value>Status</value>
-  </data>
-  <data name="startButton.Text" xml:space="preserve">
-    <value>Start</value>
   </data>
 </root>

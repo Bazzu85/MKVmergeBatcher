@@ -124,9 +124,6 @@
   <data name="customCommandCheckBox.Text" xml:space="preserve">
     <value>Nach benutzerdefiniertem Befehl verarbeiten (obige Einstellungen werden ignoriert)</value>
   </data>
-  <data name="customOutputFilesArgumentsGroupBox.Text" xml:space="preserve">
-    <value>Benutzerdefinierte Argumente für Zieldatei</value>
-  </data>
   <data name="addChaptersCheckBox.Location" type="System.Drawing.Point, System.Drawing">
     <value>247, 19</value>
   </data>
@@ -142,8 +139,8 @@
   <data name="addAttachmentsCheckBox.Text" xml:space="preserve">
     <value>Anhänge hinzufügen</value>
   </data>
-  <data name="customInputFilesArgumentsGroupBox.Text" xml:space="preserve">
-    <value>Benutzerdefinierte Argumente für Eingabedatei</value>
+  <data name="customOutputFilesArgumentsGroupBox.Text" xml:space="preserve">
+    <value>Benutzerdefinierte Argumente für Zieldatei</value>
   </data>
   <data name="noTrackTagsCheckBox.Location" type="System.Drawing.Point, System.Drawing">
     <value>472, 19</value>
@@ -156,6 +153,9 @@
   </data>
   <data name="noCompressionCheckBox.Text" xml:space="preserve">
     <value>--compression none auf alle Spuren anwenden</value>
+  </data>
+  <data name="customInputFilesArgumentsGroupBox.Text" xml:space="preserve">
+    <value>Benutzerdefinierte Argumente für Eingabedatei</value>
   </data>
   <data name="typeDataGridViewTextBoxColumn.HeaderText" xml:space="preserve">
     <value>Typ</value>
@@ -322,7 +322,7 @@
 </value>
   </data>
   <data name="saveModelButton.Size" type="System.Drawing.Size, System.Drawing">
-    <value>70, 23</value>
+    <value>118, 23</value>
   </data>
   <data name="saveModelButton.Text" xml:space="preserve">
     <value>Vorlage speichern</value>
@@ -337,10 +337,10 @@
 </value>
   </data>
   <data name="loadSavedModelButton.Location" type="System.Drawing.Point, System.Drawing">
-    <value>88, 676</value>
+    <value>136, 676</value>
   </data>
   <data name="loadSavedModelButton.Size" type="System.Drawing.Size, System.Drawing">
-    <value>136, 23</value>
+    <value>164, 23</value>
   </data>
   <data name="loadSavedModelButton.Text" xml:space="preserve">
     <value>Gespeicherte Vorlage laden</value>
@@ -1903,20 +1903,5 @@
   </data>
   <data name="$this.Text" xml:space="preserve">
     <value>Vorlage</value>
-  </data>
-  <data name="noGlobalTagsCheckBox.Text" xml:space="preserve">
-    <value>--no-global-tags</value>
-  </data>
-  <data name="noAttachmentsCheckBox.Text" xml:space="preserve">
-    <value>--no-attachments</value>
-  </data>
-  <data name="emptyTitleCheckBox.Text" xml:space="preserve">
-    <value>--title empty</value>
-  </data>
-  <data name="noTrackTagsCheckBox.Text" xml:space="preserve">
-    <value>--no-track-tags</value>
-  </data>
-  <data name="modelNameLabel.Text" xml:space="preserve">
-    <value>Name:</value>
   </data>
 </root>
