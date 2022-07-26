@@ -333,4 +333,7 @@
   <data name="GermanLanguageName" xml:space="preserve">
     <value>German</value>
   </data>
+  <data name="RussianLanguageName" xml:space="preserve">
+    <value>Russian</value>
+  </data>
 </root>

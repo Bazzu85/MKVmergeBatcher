@@ -462,6 +462,9 @@
     <Content Include="NLog.config">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
+    <EmbeddedResource Include="src\options\OptionsForm.ru-RU.resx">
+      <DependentUpon>OptionsForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="src\queue\JobForm.de-DE.resx">
       <DependentUpon>JobForm.cs</DependentUpon>
     </EmbeddedResource>

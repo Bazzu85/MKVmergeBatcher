@@ -511,6 +511,15 @@ namespace MKVmergeBatcher.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Russian.
+        /// </summary>
+        internal static string RussianLanguageName {
+            get {
+                return ResourceManager.GetString("RussianLanguageName", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Do you want to save current compiled model?.
         /// </summary>
         internal static string SaveCurrentCompiledModel {
