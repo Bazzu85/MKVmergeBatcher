@@ -69,6 +69,7 @@ namespace MKVmergeBatcher.src
             localeManager.SetLocale(this);
             optionsData.SetDefault();
             SetTopMenuTexts();
+            SetContextMenuTexts();
             mainJson.ReadMainJson();
             modelsJson.ReadModelsJson();
             windowsJson.ReadWindowsJson();
@@ -160,6 +161,7 @@ namespace MKVmergeBatcher.src
             {
                 localeManager.SetLocale(this);
                 SetTopMenuTexts();
+                SetContextMenuTexts();
                 SetWindowTitle();
             }
         }
@@ -175,6 +177,7 @@ namespace MKVmergeBatcher.src
             // localization not working automatically for the top menu so need to be setted manually
             fileToolStripMenuItem.Text = Properties.Resources.File;
             importV1UserDatajsonToolStripMenuItem.Text = Properties.Resources.ImportV1UserDatajson;
+            exitToolStripMenuItem.Text = Properties.Resources.Exit;
 
             viewToolStripMenuItem.Text = Properties.Resources.View;
             modelsToolStripMenuItem.Text = Properties.Resources.Models;
@@ -183,6 +186,12 @@ namespace MKVmergeBatcher.src
             helpToolStripMenuItem.Text = Properties.Resources.Help;
             aboutToolStripMenuItem.Text = Properties.Resources.About;
 
+        }
+        private void SetContextMenuTexts()
+        {
+            // localization not working automatically for the context menus in main form so need to be setted manually
+            reverseSelectionToolStripMenuItem.Text = Properties.Resources.ReverseSelection;
+            clearSelectionToolStripMenuItem.Text = Properties.Resources.ClearSelection;
         }
 
         private void exitToolStripMenuItem_Click(object sender, EventArgs e)

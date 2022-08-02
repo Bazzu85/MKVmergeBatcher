@@ -327,4 +327,13 @@
   <data name="SpanishLanguageName" xml:space="preserve">
     <value>Español</value>
   </data>
+  <data name="Exit" xml:space="preserve">
+    <value>Salir</value>
+  </data>
+  <data name="ReverseSelection" xml:space="preserve">
+    <value>Invertir la selección</value>
+  </data>
+  <data name="ClearSelection" xml:space="preserve">
+    <value>Borrar selección</value>
+  </data>
 </root>

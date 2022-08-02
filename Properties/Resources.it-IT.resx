@@ -336,4 +336,13 @@
   <data name="RussianLanguageName" xml:space="preserve">
     <value>Russo</value>
   </data>
+  <data name="Exit" xml:space="preserve">
+    <value>Esci</value>
+  </data>
+  <data name="ReverseSelection" xml:space="preserve">
+    <value>Inverti selezione</value>
+  </data>
+  <data name="ClearSelection" xml:space="preserve">
+    <value>Rimuovi selezione</value>
+  </data>
 </root>

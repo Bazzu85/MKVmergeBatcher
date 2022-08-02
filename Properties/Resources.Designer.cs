@@ -187,6 +187,15 @@ namespace MKVmergeBatcher.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Clear Selection.
+        /// </summary>
+        internal static string ClearSelection {
+            get {
+                return ResourceManager.GetString("ClearSelection", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Please digit model name.
         /// </summary>
         internal static string DigitModelName {
@@ -264,6 +273,15 @@ namespace MKVmergeBatcher.Properties {
         internal static string ErrorLabel {
             get {
                 return ResourceManager.GetString("ErrorLabel", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Exit.
+        /// </summary>
+        internal static string Exit {
+            get {
+                return ResourceManager.GetString("Exit", resourceCulture);
             }
         }
         
@@ -498,6 +516,15 @@ namespace MKVmergeBatcher.Properties {
         internal static string ProcessStarted {
             get {
                 return ResourceManager.GetString("ProcessStarted", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Reverse Selection.
+        /// </summary>
+        internal static string ReverseSelection {
+            get {
+                return ResourceManager.GetString("ReverseSelection", resourceCulture);
             }
         }
         

@@ -365,6 +365,7 @@
       <LastGenOutput>Resources.it-IT.Designer.cs</LastGenOutput>
       <SubType>Designer</SubType>
     </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.ru-RU.resx" />
     <EmbeddedResource Include="src\help\AboutForm.de-DE.resx">
       <DependentUpon>AboutForm.cs</DependentUpon>
     </EmbeddedResource>
@@ -377,6 +378,9 @@
     <EmbeddedResource Include="src\help\AboutForm.resx">
       <DependentUpon>AboutForm.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="src\help\AboutForm.ru-RU.resx">
+      <DependentUpon>AboutForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="src\legacy\ImportLegacyForm.de-DE.resx">
       <DependentUpon>ImportLegacyForm.cs</DependentUpon>
     </EmbeddedResource>
@@ -387,6 +391,9 @@
       <DependentUpon>ImportLegacyForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="src\legacy\ImportLegacyForm.resx">
+      <DependentUpon>ImportLegacyForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="src\legacy\ImportLegacyForm.ru-RU.resx">
       <DependentUpon>ImportLegacyForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="src\MainForm.de-DE.resx">
@@ -408,6 +415,9 @@
       <SubType>Designer</SubType>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
+    <EmbeddedResource Include="src\MainForm.ru-RU.resx">
+      <DependentUpon>MainForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="src\models\ManageModelForm.de-DE.resx">
       <DependentUpon>ManageModelForm.cs</DependentUpon>
     </EmbeddedResource>
@@ -418,6 +428,9 @@
       <DependentUpon>ManageModelForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="src\models\ManageModelForm.resx">
+      <DependentUpon>ManageModelForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="src\models\ManageModelForm.ru-RU.resx">
       <DependentUpon>ManageModelForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="src\models\ManageTrackForm.de-DE.resx">
@@ -432,6 +445,9 @@
     <EmbeddedResource Include="src\models\ManageTrackForm.resx">
       <DependentUpon>ManageTrackForm.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="src\models\ManageTrackForm.ru-RU.resx">
+      <DependentUpon>ManageTrackForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="src\models\ModelsForm.de-DE.resx">
       <DependentUpon>ModelsForm.cs</DependentUpon>
     </EmbeddedResource>
@@ -442,6 +458,9 @@
       <DependentUpon>ModelsForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="src\models\ModelsForm.resx">
+      <DependentUpon>ModelsForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="src\models\ModelsForm.ru-RU.resx">
       <DependentUpon>ModelsForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="src\options\OptionsForm.de-DE.resx">
@@ -477,6 +496,9 @@
     <EmbeddedResource Include="src\queue\JobForm.resx">
       <DependentUpon>JobForm.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="src\queue\JobForm.ru-RU.resx">
+      <DependentUpon>JobForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="src\queue\QueueForm.de-DE.resx">
       <DependentUpon>QueueForm.cs</DependentUpon>
     </EmbeddedResource>
@@ -487,6 +509,9 @@
       <DependentUpon>QueueForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="src\queue\QueueForm.resx">
+      <DependentUpon>QueueForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="src\queue\QueueForm.ru-RU.resx">
       <DependentUpon>QueueForm.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="NLog.xsd">

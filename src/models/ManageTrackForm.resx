@@ -137,9 +137,6 @@
   <data name="trackNameLabel.TabIndex" type="System.Int32, mscorlib">
     <value>0</value>
   </data>
-  <data name="okButton.Size" type="System.Drawing.Size, System.Drawing">
-    <value>75, 23</value>
-  </data>
   <data name="typeComboBox.Items2" xml:space="preserve">
     <value>Subtitle</value>
   </data>
@@ -179,9 +176,6 @@
   <data name="&gt;&gt;forcedCheckBox.ZOrder" xml:space="preserve">
     <value>2</value>
   </data>
-  <data name="originalFileNumberLabel.Size" type="System.Drawing.Size, System.Drawing">
-    <value>104, 13</value>
-  </data>
   <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
   <data name="originalFileNameSuffixTextBox.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Top, Left, Right</value>
@@ -210,8 +204,8 @@
   <data name="&gt;&gt;OriginalFileNumberNumericUpDown.Type" xml:space="preserve">
     <value>System.Windows.Forms.NumericUpDown, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;languageCodeLabel.ZOrder" xml:space="preserve">
-    <value>15</value>
+  <data name="&gt;&gt;originalFileExtensionTextBox.ZOrder" xml:space="preserve">
+    <value>4</value>
   </data>
   <data name="&gt;&gt;OriginalFileNumberNumericUpDown.Parent" xml:space="preserve">
     <value>$this</value>
@@ -228,14 +222,17 @@
   <data name="forcedCheckBox.Size" type="System.Drawing.Size, System.Drawing">
     <value>59, 17</value>
   </data>
+  <data name="originalFileExtensionLabel.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
   <data name="&gt;&gt;trackNameTextBox.Type" xml:space="preserve">
     <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;okButton.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
   <data name="typeComboBox.TabIndex" type="System.Int32, mscorlib">
     <value>1</value>
+  </data>
+  <data name="originalFilePositionLabel.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
   </data>
   <data name="&gt;&gt;forcedCheckBox.Type" xml:space="preserve">
     <value>System.Windows.Forms.CheckBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
@@ -1805,8 +1802,8 @@
         /AA=
 </value>
   </data>
-  <data name="OriginalFilePositionNumericUpDown.TabIndex" type="System.Int32, mscorlib">
-    <value>3</value>
+  <data name="&gt;&gt;trackNameTextBox.Parent" xml:space="preserve">
+    <value>$this</value>
   </data>
   <data name="&gt;&gt;languageCodeLabel.Name" xml:space="preserve">
     <value>languageCodeLabel</value>
@@ -1844,14 +1841,14 @@
   <data name="forcedCheckBox.Text" xml:space="preserve">
     <value>Forced</value>
   </data>
-  <data name="originalFileExtensionLabel.TabIndex" type="System.Int32, mscorlib">
-    <value>0</value>
+  <data name="$this.MaximumSize" type="System.Drawing.Size, System.Drawing">
+    <value>370, 270</value>
   </data>
   <data name="originalFileSuffixLabel.TabIndex" type="System.Int32, mscorlib">
     <value>0</value>
   </data>
-  <data name="originalFilePositionLabel.TabIndex" type="System.Int32, mscorlib">
-    <value>0</value>
+  <data name="&gt;&gt;okButton.Name" xml:space="preserve">
+    <value>okButton</value>
   </data>
   <data name="&gt;&gt;trackNameLabel.Type" xml:space="preserve">
     <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
@@ -1871,11 +1868,11 @@
   <data name="&gt;&gt;forcedCheckBox.Name" xml:space="preserve">
     <value>forcedCheckBox</value>
   </data>
+  <data name="originalFileExtensionTextBox.TabIndex" type="System.Int32, mscorlib">
+    <value>9</value>
+  </data>
   <data name="defaultCheckBox.Text" xml:space="preserve">
     <value>Default</value>
-  </data>
-  <data name="&gt;&gt;trackNameTextBox.Parent" xml:space="preserve">
-    <value>$this</value>
   </data>
   <data name="&gt;&gt;languageCodeLabel.Parent" xml:space="preserve">
     <value>$this</value>
@@ -1907,9 +1904,6 @@
   <data name="&gt;&gt;originalFileExtensionTextBox.Name" xml:space="preserve">
     <value>originalFileExtensionTextBox</value>
   </data>
-  <data name="&gt;&gt;okButton.Name" xml:space="preserve">
-    <value>okButton</value>
-  </data>
   <data name="&gt;&gt;OriginalFilePositionNumericUpDown.Type" xml:space="preserve">
     <value>System.Windows.Forms.NumericUpDown, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
@@ -1940,8 +1934,8 @@
   <data name="languageCodeLabel.Location" type="System.Drawing.Point, System.Drawing">
     <value>12, 70</value>
   </data>
-  <data name="&gt;&gt;originalFileExtensionLabel.ZOrder" xml:space="preserve">
-    <value>12</value>
+  <data name="&gt;&gt;okButton.Parent" xml:space="preserve">
+    <value>$this</value>
   </data>
   <data name="trackNameLabel.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -1958,8 +1952,8 @@
   <data name="&gt;&gt;okButton.ZOrder" xml:space="preserve">
     <value>0</value>
   </data>
-  <data name="defaultCheckBox.TabIndex" type="System.Int32, mscorlib">
-    <value>6</value>
+  <data name="okButton.Size" type="System.Drawing.Size, System.Drawing">
+    <value>75, 23</value>
   </data>
   <data name="typeLabel.Size" type="System.Drawing.Size, System.Drawing">
     <value>34, 13</value>
@@ -1972,6 +1966,9 @@
   </data>
   <data name="&gt;&gt;originalFileNumberLabel.Name" xml:space="preserve">
     <value>originalFileNumberLabel</value>
+  </data>
+  <data name="typeLabel.Location" type="System.Drawing.Point, System.Drawing">
+    <value>12, 9</value>
   </data>
   <data name="&gt;&gt;defaultCheckBox.Parent" xml:space="preserve">
     <value>$this</value>
@@ -2000,8 +1997,8 @@
   <data name="trackNameLabel.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
   </data>
-  <data name="originalFileExtensionTextBox.TabIndex" type="System.Int32, mscorlib">
-    <value>9</value>
+  <data name="originalFileNumberLabel.Size" type="System.Drawing.Size, System.Drawing">
+    <value>104, 13</value>
   </data>
   <data name="&gt;&gt;originalFileNameSuffixTextBox.Name" xml:space="preserve">
     <value>originalFileNameSuffixTextBox</value>
@@ -2020,6 +2017,9 @@
   </data>
   <data name="&gt;&gt;originalFilePositionLabel.ZOrder" xml:space="preserve">
     <value>11</value>
+  </data>
+  <data name="&gt;&gt;originalFileExtensionLabel.ZOrder" xml:space="preserve">
+    <value>12</value>
   </data>
   <data name="defaultCheckBox.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -2054,26 +2054,20 @@
   <data name="&gt;&gt;OriginalFileNumberNumericUpDown.ZOrder" xml:space="preserve">
     <value>9</value>
   </data>
-  <data name="&gt;&gt;$this.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Form, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
   <data name="originalFileExtensionLabel.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
   <data name="originalFileNumberLabel.TabIndex" type="System.Int32, mscorlib">
     <value>0</value>
   </data>
-  <data name="typeLabel.Location" type="System.Drawing.Point, System.Drawing">
-    <value>12, 9</value>
+  <data name="&gt;&gt;$this.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Form, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="cancelButton.Size" type="System.Drawing.Size, System.Drawing">
     <value>75, 23</value>
   </data>
   <data name="originalFilePositionLabel.Text" xml:space="preserve">
     <value>Original File Position:</value>
-  </data>
-  <data name="&gt;&gt;originalFileExtensionTextBox.ZOrder" xml:space="preserve">
-    <value>4</value>
   </data>
   <data name="&gt;&gt;trackNameLabel.ZOrder" xml:space="preserve">
     <value>14</value>
@@ -2083,9 +2077,6 @@
   </data>
   <data name="forcedCheckBox.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
-  </data>
-  <data name="$this.MaximumSize" type="System.Drawing.Size, System.Drawing">
-    <value>370, 270</value>
   </data>
   <data name="&gt;&gt;originalFileNumberLabel.Type" xml:space="preserve">
     <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
@@ -2102,8 +2093,8 @@
   <data name="languageCodeLabel.Text" xml:space="preserve">
     <value>Language Code:</value>
   </data>
-  <data name="originalFileSuffixLabel.Text" xml:space="preserve">
-    <value>Original File Suffix:</value>
+  <data name="OriginalFilePositionNumericUpDown.TabIndex" type="System.Int32, mscorlib">
+    <value>3</value>
   </data>
   <data name="defaultCheckBox.Location" type="System.Drawing.Point, System.Drawing">
     <value>104, 119</value>
@@ -2113,6 +2104,9 @@
   </data>
   <data name="&gt;&gt;typeComboBox.ZOrder" xml:space="preserve">
     <value>10</value>
+  </data>
+  <data name="defaultCheckBox.TabIndex" type="System.Int32, mscorlib">
+    <value>6</value>
   </data>
   <data name="languageCodeLabel.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -2144,14 +2138,20 @@
   <data name="&gt;&gt;trackNameTextBox.ZOrder" xml:space="preserve">
     <value>6</value>
   </data>
+  <data name="OriginalFileNumberNumericUpDown.Size" type="System.Drawing.Size, System.Drawing">
+    <value>51, 20</value>
+  </data>
   <data name="originalFileExtensionLabel.Text" xml:space="preserve">
     <value>Original File Extension:</value>
+  </data>
+  <data name="originalFileSuffixLabel.Text" xml:space="preserve">
+    <value>Original File Suffix:</value>
   </data>
   <data name="&gt;&gt;originalFileSuffixLabel.Type" xml:space="preserve">
     <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="OriginalFileNumberNumericUpDown.Size" type="System.Drawing.Size, System.Drawing">
-    <value>51, 20</value>
+  <data name="&gt;&gt;languageCodeLabel.ZOrder" xml:space="preserve">
+    <value>15</value>
   </data>
   <data name="languageCodeTextBox.Size" type="System.Drawing.Size, System.Drawing">
     <value>238, 20</value>
