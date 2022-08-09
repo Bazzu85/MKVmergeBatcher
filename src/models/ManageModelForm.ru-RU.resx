@@ -125,7 +125,7 @@
     <value>775, 20</value>
   </data>
   <data name="customCommandCheckBox.Size" type="System.Drawing.Size, System.Drawing">
-    <value>459, 17</value>
+    <value>481, 17</value>
   </data>
   <data name="customCommandCheckBox.Text" xml:space="preserve">
     <value>Хотите указать пользовательскую команду? (все настройки выше не будут учитываться)</value>
@@ -151,20 +151,23 @@
   <data name="addAttachmentsCheckBox.Text" xml:space="preserve">
     <value>Добавить вложения</value>
   </data>
-  <data name="customInputFilesArgumentsGroupBox.Text" xml:space="preserve">
-    <value>Пользовательские настройки для входных файлов</value>
+  <data name="emptyTitleCheckBox.Text" xml:space="preserve">
+    <value>--title пусто</value>
   </data>
   <data name="noTrackTagsCheckBox.Location" type="System.Drawing.Point, System.Drawing">
-    <value>412, 19</value>
+    <value>439, 19</value>
   </data>
   <data name="noGlobalTagsCheckBox.Location" type="System.Drawing.Point, System.Drawing">
-    <value>308, 19</value>
+    <value>335, 19</value>
   </data>
   <data name="noCompressionCheckBox.Size" type="System.Drawing.Size, System.Drawing">
-    <value>185, 17</value>
+    <value>212, 17</value>
   </data>
   <data name="noCompressionCheckBox.Text" xml:space="preserve">
     <value>--compression none для всех дорожек</value>
+  </data>
+  <data name="customInputFilesArgumentsGroupBox.Text" xml:space="preserve">
+    <value>Пользовательские настройки для входных файлов</value>
   </data>
   <data name="typeDataGridViewTextBoxColumn.HeaderText" xml:space="preserve">
     <value>Тип</value>
@@ -1918,17 +1921,5 @@
   </data>
   <data name="$this.Text" xml:space="preserve">
     <value>Модель</value>
-  </data>
-  <data name="noGlobalTagsCheckBox.Text" xml:space="preserve">
-    <value>--no-global-tags</value>
-  </data>
-  <data name="noAttachmentsCheckBox.Text" xml:space="preserve">
-    <value>--no-attachments</value>
-  </data>
-  <data name="emptyTitleCheckBox.Text" xml:space="preserve">
-    <value>--title пусто</value>
-  </data>
-  <data name="noTrackTagsCheckBox.Text" xml:space="preserve">
-    <value>--no-track-tags</value>
   </data>
 </root>

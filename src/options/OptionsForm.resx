@@ -123,17 +123,21 @@
   <data name="&gt;&gt;lastVersionFoundLabel.Parent" xml:space="preserve">
     <value>versionTabPage</value>
   </data>
+  <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="autoClearWarningJobsCheckBox.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
   <data name="&gt;&gt;moveWarningFilesToTextBox.Type" xml:space="preserve">
     <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;label3.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  <data name="allowMultipleInstacesCheckBox.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
   </data>
   <data name="&gt;&gt;moveOkFilesToTextBox.Parent" xml:space="preserve">
     <value>queueTabPage</value>
   </data>
-  <data name="&gt;&gt;excludeFileNameContiningGroupBox.Parent" xml:space="preserve">
-    <value>generalTabPage</value>
+  <data name="&gt;&gt;outputFileFormatLabel.Parent" xml:space="preserve">
+    <value>queueTabPage</value>
   </data>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
   <data name="checkVersionButton.Location" type="System.Drawing.Point, System.Drawing">
@@ -145,11 +149,17 @@
   <data name="&gt;&gt;logLevelsComboBox.ZOrder" xml:space="preserve">
     <value>8</value>
   </data>
+  <data name="moveOkFilesToTextBox.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
   <data name="&gt;&gt;label3.Parent" xml:space="preserve">
     <value>versionTabPage</value>
   </data>
   <data name="showSummaryWhenQueueEndsCheckBox.Location" type="System.Drawing.Point, System.Drawing">
     <value>9, 223</value>
+  </data>
+  <data name="moveOkFilesToTextBox.Location" type="System.Drawing.Point, System.Drawing">
+    <value>128, 6</value>
   </data>
   <data name="$this.AutoScaleDimensions" type="System.Drawing.SizeF, System.Drawing">
     <value>6, 13</value>
@@ -159,9 +169,6 @@
   </data>
   <data name="&gt;&gt;excludeFileNameContiningGroupBox.ZOrder" xml:space="preserve">
     <value>1</value>
-  </data>
-  <data name="autoClearWarningJobsCheckBox.Size" type="System.Drawing.Size, System.Drawing">
-    <value>197, 17</value>
   </data>
   <data name="&gt;&gt;removeExcludeFileNameContainingButton.ZOrder" xml:space="preserve">
     <value>1</value>
@@ -187,10 +194,16 @@
   <data name="&gt;&gt;outputFileFormatLabel.ZOrder" xml:space="preserve">
     <value>11</value>
   </data>
-  <data name="&gt;&gt;moveWarningFilesToLabel.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="removeExtensionButton.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
   </data>
-  <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="&gt;&gt;showQueueWhenAddingCheckBox.Parent" xml:space="preserve">
+    <value>queueTabPage</value>
+  </data>
+  <data name="&gt;&gt;extensionsGroupBox.Type" xml:space="preserve">
+    <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
   <data name="localeComboBox.TabIndex" type="System.Int32, mscorlib">
     <value>2</value>
   </data>
@@ -206,7 +219,6 @@
   <data name="mkvMergeLocationTextBox.Size" type="System.Drawing.Size, System.Drawing">
     <value>199, 20</value>
   </data>
-  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
   <data name="removeExcludeFileNameContainingButton.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
   </data>
@@ -277,17 +289,14 @@
   <data name="extensionsGroupBox.Text" xml:space="preserve">
     <value>Extensions</value>
   </data>
-  <data name="&gt;&gt;lastVersionFoundLabel.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  <data name="&gt;&gt;deleteIncompleteFilesCheckBox.Type" xml:space="preserve">
+    <value>System.Windows.Forms.CheckBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="showQueueWhenAddingCheckBox.Size" type="System.Drawing.Size, System.Drawing">
     <value>223, 17</value>
   </data>
   <data name="label2.TabIndex" type="System.Int32, mscorlib">
     <value>1</value>
-  </data>
-  <data name="&gt;&gt;currentVersionLabel.Name" xml:space="preserve">
-    <value>currentVersionLabel</value>
   </data>
   <data name="showSummaryOnlyWarningsErrorsCheckBox.Size" type="System.Drawing.Size, System.Drawing">
     <value>260, 17</value>
@@ -301,9 +310,6 @@
   <data name="deleteIncompleteFilesCheckBox.Size" type="System.Drawing.Size, System.Drawing">
     <value>243, 17</value>
   </data>
-  <data name="deleteIncompleteFilesCheckBox.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
   <data name="showSummaryOnlyWarningsErrorsCheckBox.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
   </data>
@@ -312,6 +318,165 @@
   </data>
   <data name="newExtensionTextBox.TabIndex" type="System.Int32, mscorlib">
     <value>5</value>
+  </data>
+  <data name="autoClearOkJobsCheckBox.Location" type="System.Drawing.Point, System.Drawing">
+    <value>9, 131</value>
+  </data>
+  <data name="extensionsGroupBox.Size" type="System.Drawing.Size, System.Drawing">
+    <value>389, 125</value>
+  </data>
+  <data name="showSummaryWhenQueueEndsCheckBox.Size" type="System.Drawing.Size, System.Drawing">
+    <value>232, 17</value>
+  </data>
+  <data name="moveWarningFilesToLabel.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="&gt;&gt;removeExtensionButton.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;mkvMergeLocationTextBox.ZOrder" xml:space="preserve">
+    <value>9</value>
+  </data>
+  <data name="excludeFileNameContiningGroupBox.TabIndex" type="System.Int32, mscorlib">
+    <value>7</value>
+  </data>
+  <data name="&gt;&gt;extensionsListBox.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ListBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="excludeFileNameContainingListBox.TabIndex" type="System.Int32, mscorlib">
+    <value>12</value>
+  </data>
+  <data name="replaceExistingDestinationFilesCheckBox.Size" type="System.Drawing.Size, System.Drawing">
+    <value>219, 17</value>
+  </data>
+  <data name="&gt;&gt;removeExcludeFileNameContainingButton.Parent" xml:space="preserve">
+    <value>excludeFileNameContiningGroupBox</value>
+  </data>
+  <data name="moveWarningFilesToTextBox.TabIndex" type="System.Int32, mscorlib">
+    <value>2</value>
+  </data>
+  <data name="newExcludeFileNameContainingTextBox.Location" type="System.Drawing.Point, System.Drawing">
+    <value>7, 19</value>
+  </data>
+  <data name="&gt;&gt;versionTabPage.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TabPage, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;autoClearErrorJobsCheckBox.Name" xml:space="preserve">
+    <value>autoClearErrorJobsCheckBox</value>
+  </data>
+  <data name="&gt;&gt;logLevelsComboBox.Name" xml:space="preserve">
+    <value>logLevelsComboBox</value>
+  </data>
+  <data name="&gt;&gt;showQueueWhenAddingCheckBox.Name" xml:space="preserve">
+    <value>showQueueWhenAddingCheckBox</value>
+  </data>
+  <data name="&gt;&gt;showQueueWhenAddingCheckBox.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="label1.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="deleteIncompleteFilesCheckBox.Text" xml:space="preserve">
+    <value>Delete incomplete files when stopping queue?</value>
+  </data>
+  <data name="&gt;&gt;checkVersionButton.Name" xml:space="preserve">
+    <value>checkVersionButton</value>
+  </data>
+  <data name="currentVersionLabel.Size" type="System.Drawing.Size, System.Drawing">
+    <value>29, 13</value>
+  </data>
+  <data name="autoClearErrorJobsCheckBox.TabIndex" type="System.Int32, mscorlib">
+    <value>4</value>
+  </data>
+  <data name="queueTabPage.Location" type="System.Drawing.Point, System.Drawing">
+    <value>4, 22</value>
+  </data>
+  <data name="label2.Size" type="System.Drawing.Size, System.Drawing">
+    <value>81, 13</value>
+  </data>
+  <data name="&gt;&gt;logLevelLabel.Name" xml:space="preserve">
+    <value>logLevelLabel</value>
+  </data>
+  <data name="&gt;&gt;label2.ZOrder" xml:space="preserve">
+    <value>4</value>
+  </data>
+  <data name="&gt;&gt;newExtensionTextBox.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;label1.ZOrder" xml:space="preserve">
+    <value>5</value>
+  </data>
+  <data name="removeExcludeFileNameContainingButton.Size" type="System.Drawing.Size, System.Drawing">
+    <value>25, 25</value>
+  </data>
+  <data name="moveWarningFilesToTextBox.Size" type="System.Drawing.Size, System.Drawing">
+    <value>268, 20</value>
+  </data>
+  <data name="&gt;&gt;removeExtensionButton.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="&gt;&gt;mkvMergeLocationTextBox.Parent" xml:space="preserve">
+    <value>generalTabPage</value>
+  </data>
+  <data name="autoClearOkJobsCheckBox.TabIndex" type="System.Int32, mscorlib">
+    <value>4</value>
+  </data>
+  <data name="&gt;&gt;logLevelLabel.Parent" xml:space="preserve">
+    <value>generalTabPage</value>
+  </data>
+  <data name="localeLabel.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="outputFileFormatTextBox.Size" type="System.Drawing.Size, System.Drawing">
+    <value>268, 20</value>
+  </data>
+  <data name="&gt;&gt;moveOkFilesToLabel.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;moveOkFilesToLabel.Name" xml:space="preserve">
+    <value>moveOkFilesToLabel</value>
+  </data>
+  <data name="&gt;&gt;moveWarningFilesToTextBox.ZOrder" xml:space="preserve">
+    <value>8</value>
+  </data>
+  <data name="addExtensionButton.Location" type="System.Drawing.Point, System.Drawing">
+    <value>113, 19</value>
+  </data>
+  <data name="&gt;&gt;replaceExistingDestinationFilesCheckBox.Name" xml:space="preserve">
+    <value>replaceExistingDestinationFilesCheckBox</value>
+  </data>
+  <data name="localeLabel.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="&gt;&gt;autoClearErrorJobsCheckBox.Parent" xml:space="preserve">
+    <value>queueTabPage</value>
+  </data>
+  <data name="extensionsGroupBox.Location" type="System.Drawing.Point, System.Drawing">
+    <value>7, 65</value>
+  </data>
+  <data name="&gt;&gt;localeLabel.Name" xml:space="preserve">
+    <value>localeLabel</value>
+  </data>
+  <data name="checkVersionButton.Size" type="System.Drawing.Size, System.Drawing">
+    <value>75, 27</value>
+  </data>
+  <data name="label2.Location" type="System.Drawing.Point, System.Drawing">
+    <value>22, 32</value>
+  </data>
+  <data name="&gt;&gt;extensionsListBox.Parent" xml:space="preserve">
+    <value>extensionsGroupBox</value>
+  </data>
+  <data name="extensionsGroupBox.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Left, Right</value>
+  </data>
+  <data name="&gt;&gt;lastVersionFoundLabel.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="mkvMergeLocationTextBox.TabIndex" type="System.Int32, mscorlib">
+    <value>3</value>
+  </data>
+  <data name="autoClearErrorJobsCheckBox.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
   </data>
   <data name="$this.Icon" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
@@ -1869,179 +2034,8 @@
         /AA=
 </value>
   </data>
-  <data name="autoClearOkJobsCheckBox.Location" type="System.Drawing.Point, System.Drawing">
-    <value>9, 131</value>
-  </data>
-  <data name="extensionsGroupBox.Size" type="System.Drawing.Size, System.Drawing">
-    <value>389, 125</value>
-  </data>
-  <data name="showSummaryWhenQueueEndsCheckBox.Size" type="System.Drawing.Size, System.Drawing">
-    <value>232, 17</value>
-  </data>
-  <data name="moveWarningFilesToLabel.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="&gt;&gt;removeExtensionButton.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;mkvMergeLocationTextBox.ZOrder" xml:space="preserve">
-    <value>9</value>
-  </data>
-  <data name="&gt;&gt;optionsTabControl.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <data name="excludeFileNameContiningGroupBox.TabIndex" type="System.Int32, mscorlib">
-    <value>7</value>
-  </data>
-  <data name="&gt;&gt;mkvMergeLocationTextBox.Type" xml:space="preserve">
-    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;extensionsListBox.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ListBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="excludeFileNameContainingListBox.TabIndex" type="System.Int32, mscorlib">
-    <value>12</value>
-  </data>
-  <data name="replaceExistingDestinationFilesCheckBox.Size" type="System.Drawing.Size, System.Drawing">
-    <value>219, 17</value>
-  </data>
-  <data name="&gt;&gt;removeExcludeFileNameContainingButton.Parent" xml:space="preserve">
-    <value>excludeFileNameContiningGroupBox</value>
-  </data>
-  <data name="moveWarningFilesToTextBox.TabIndex" type="System.Int32, mscorlib">
-    <value>2</value>
-  </data>
-  <data name="newExcludeFileNameContainingTextBox.Location" type="System.Drawing.Point, System.Drawing">
-    <value>7, 19</value>
-  </data>
-  <data name="&gt;&gt;versionTabPage.Type" xml:space="preserve">
-    <value>System.Windows.Forms.TabPage, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;autoClearErrorJobsCheckBox.Name" xml:space="preserve">
-    <value>autoClearErrorJobsCheckBox</value>
-  </data>
-  <data name="&gt;&gt;logLevelsComboBox.Name" xml:space="preserve">
-    <value>logLevelsComboBox</value>
-  </data>
-  <data name="&gt;&gt;showQueueWhenAddingCheckBox.Name" xml:space="preserve">
-    <value>showQueueWhenAddingCheckBox</value>
-  </data>
-  <data name="&gt;&gt;showQueueWhenAddingCheckBox.ZOrder" xml:space="preserve">
-    <value>3</value>
-  </data>
-  <data name="label1.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="deleteIncompleteFilesCheckBox.Text" xml:space="preserve">
-    <value>Delete incomplete files when stopping queue?</value>
-  </data>
-  <data name="&gt;&gt;checkVersionButton.Name" xml:space="preserve">
-    <value>checkVersionButton</value>
-  </data>
-  <data name="currentVersionLabel.Size" type="System.Drawing.Size, System.Drawing">
-    <value>29, 13</value>
-  </data>
-  <data name="autoClearErrorJobsCheckBox.TabIndex" type="System.Int32, mscorlib">
-    <value>4</value>
-  </data>
-  <data name="queueTabPage.Location" type="System.Drawing.Point, System.Drawing">
-    <value>4, 22</value>
-  </data>
-  <data name="label2.Size" type="System.Drawing.Size, System.Drawing">
-    <value>81, 13</value>
-  </data>
-  <data name="&gt;&gt;logLevelLabel.Name" xml:space="preserve">
-    <value>logLevelLabel</value>
-  </data>
-  <data name="replaceExistingDestinationFilesCheckBox.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="&gt;&gt;label2.ZOrder" xml:space="preserve">
-    <value>4</value>
-  </data>
-  <data name="&gt;&gt;newExtensionTextBox.Type" xml:space="preserve">
-    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;label1.ZOrder" xml:space="preserve">
-    <value>5</value>
-  </data>
-  <data name="removeExcludeFileNameContainingButton.Size" type="System.Drawing.Size, System.Drawing">
-    <value>25, 25</value>
-  </data>
-  <data name="moveWarningFilesToTextBox.Size" type="System.Drawing.Size, System.Drawing">
-    <value>268, 20</value>
-  </data>
-  <data name="&gt;&gt;removeExtensionButton.ZOrder" xml:space="preserve">
-    <value>1</value>
-  </data>
-  <data name="&gt;&gt;mkvMergeLocationTextBox.Parent" xml:space="preserve">
-    <value>generalTabPage</value>
-  </data>
-  <data name="autoClearOkJobsCheckBox.TabIndex" type="System.Int32, mscorlib">
-    <value>4</value>
-  </data>
-  <data name="&gt;&gt;logLevelLabel.Parent" xml:space="preserve">
-    <value>generalTabPage</value>
-  </data>
-  <data name="localeLabel.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="outputFileFormatTextBox.Size" type="System.Drawing.Size, System.Drawing">
-    <value>268, 20</value>
-  </data>
-  <data name="&gt;&gt;moveOkFilesToLabel.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;moveOkFilesToLabel.Name" xml:space="preserve">
-    <value>moveOkFilesToLabel</value>
-  </data>
-  <data name="&gt;&gt;moveWarningFilesToTextBox.ZOrder" xml:space="preserve">
-    <value>8</value>
-  </data>
-  <data name="addExtensionButton.Location" type="System.Drawing.Point, System.Drawing">
-    <value>113, 19</value>
-  </data>
-  <data name="&gt;&gt;replaceExistingDestinationFilesCheckBox.Name" xml:space="preserve">
-    <value>replaceExistingDestinationFilesCheckBox</value>
-  </data>
-  <data name="localeLabel.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="extensionsGroupBox.Location" type="System.Drawing.Point, System.Drawing">
-    <value>7, 65</value>
-  </data>
-  <data name="&gt;&gt;localeLabel.Name" xml:space="preserve">
-    <value>localeLabel</value>
-  </data>
-  <data name="checkVersionButton.Size" type="System.Drawing.Size, System.Drawing">
-    <value>75, 27</value>
-  </data>
-  <data name="label2.Location" type="System.Drawing.Point, System.Drawing">
-    <value>22, 32</value>
-  </data>
-  <data name="&gt;&gt;extensionsListBox.Parent" xml:space="preserve">
-    <value>extensionsGroupBox</value>
-  </data>
-  <data name="label3.Size" type="System.Drawing.Size, System.Drawing">
-    <value>97, 13</value>
-  </data>
-  <data name="extensionsGroupBox.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
-    <value>Top, Left, Right</value>
-  </data>
-  <data name="&gt;&gt;lastVersionFoundLabel.ZOrder" xml:space="preserve">
-    <value>1</value>
-  </data>
-  <data name="mkvMergeLocationTextBox.TabIndex" type="System.Int32, mscorlib">
-    <value>3</value>
-  </data>
-  <data name="autoClearErrorJobsCheckBox.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="outputFileFormatLabel.Size" type="System.Drawing.Size, System.Drawing">
-    <value>90, 13</value>
-  </data>
-  <data name="deleteIncompleteFilesCheckBox.TabIndex" type="System.Int32, mscorlib">
-    <value>4</value>
+  <data name="&gt;&gt;$this.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Form, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="autoClearErrorJobsCheckBox.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
@@ -2058,8 +2052,8 @@
   <data name="versionTabPage.Text" xml:space="preserve">
     <value>App Version</value>
   </data>
-  <data name="&gt;&gt;showQueueWhenAddingCheckBox.Parent" xml:space="preserve">
-    <value>queueTabPage</value>
+  <data name="&gt;&gt;checkVersionButton.Parent" xml:space="preserve">
+    <value>versionTabPage</value>
   </data>
   <data name="autoClearErrorJobsCheckBox.Text" xml:space="preserve">
     <value>Automatically remove Error jobs?</value>
@@ -2070,17 +2064,11 @@
   <data name="&gt;&gt;moveOkFilesToTextBox.ZOrder" xml:space="preserve">
     <value>10</value>
   </data>
-  <data name="&gt;&gt;queueTabPage.Type" xml:space="preserve">
-    <value>System.Windows.Forms.TabPage, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;$this.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Form, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  <data name="&gt;&gt;optionsDataBindingSource.Type" xml:space="preserve">
+    <value>System.Windows.Forms.BindingSource, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="newExtensionTextBox.Size" type="System.Drawing.Size, System.Drawing">
     <value>100, 20</value>
-  </data>
-  <data name="moveOkFilesToLabel.Size" type="System.Drawing.Size, System.Drawing">
-    <value>90, 13</value>
   </data>
   <data name="&gt;&gt;lastVersionFoundLabel.Name" xml:space="preserve">
     <value>lastVersionFoundLabel</value>
@@ -2091,11 +2079,11 @@
   <data name="outputFileFormatLabel.Location" type="System.Drawing.Point, System.Drawing">
     <value>32, 62</value>
   </data>
-  <data name="&gt;&gt;label1.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
   <data name="&gt;&gt;checkVersionButton.Type" xml:space="preserve">
     <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="logLevelLabel.Text" xml:space="preserve">
+    <value>Log Level:</value>
   </data>
   <data name="newExtensionTextBox.Location" type="System.Drawing.Point, System.Drawing">
     <value>7, 19</value>
@@ -2111,9 +2099,6 @@
   </data>
   <data name="&gt;&gt;allowMultipleInstacesCheckBox.ZOrder" xml:space="preserve">
     <value>0</value>
-  </data>
-  <data name="&gt;&gt;checkVersionButton.Parent" xml:space="preserve">
-    <value>versionTabPage</value>
   </data>
   <data name="&gt;&gt;removeExtensionButton.Name" xml:space="preserve">
     <value>removeExtensionButton</value>
@@ -2136,8 +2121,8 @@
   <data name="&gt;&gt;showSummaryWhenQueueEndsCheckBox.ZOrder" xml:space="preserve">
     <value>2</value>
   </data>
-  <data name="&gt;&gt;browseMkvMergeLocationButton.Parent" xml:space="preserve">
-    <value>generalTabPage</value>
+  <data name="allowMultipleInstacesCheckBox.Size" type="System.Drawing.Size, System.Drawing">
+    <value>227, 17</value>
   </data>
   <data name="&gt;&gt;localeComboBox.Name" xml:space="preserve">
     <value>localeComboBox</value>
@@ -2145,8 +2130,11 @@
   <data name="outputFileFormatLabel.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
   </data>
-  <data name="&gt;&gt;generalTabPage.ZOrder" xml:space="preserve">
-    <value>0</value>
+  <data name="$this.MinimumSize" type="System.Drawing.Size, System.Drawing">
+    <value>450, 470</value>
+  </data>
+  <data name="logLevelLabel.TabIndex" type="System.Int32, mscorlib">
+    <value>3</value>
   </data>
   <data name="label3.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
@@ -2157,14 +2145,14 @@
   <data name="extensionsListBox.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Top, Left, Right</value>
   </data>
-  <data name="outputFileFormatLabel.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
+  <data name="&gt;&gt;autoClearOkJobsCheckBox.Parent" xml:space="preserve">
+    <value>queueTabPage</value>
+  </data>
+  <data name="showSummaryOnlyWarningsErrorsCheckBox.Location" type="System.Drawing.Point, System.Drawing">
+    <value>9, 246</value>
   </data>
   <data name="queueTabPage.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>3, 3, 3, 3</value>
-  </data>
-  <data name="&gt;&gt;localeBindingSource.Type" xml:space="preserve">
-    <value>System.Windows.Forms.BindingSource, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;showSummaryOnlyWarningsErrorsCheckBox.Type" xml:space="preserve">
     <value>System.Windows.Forms.CheckBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
@@ -2187,14 +2175,14 @@
   <data name="&gt;&gt;moveOkFilesToLabel.Parent" xml:space="preserve">
     <value>queueTabPage</value>
   </data>
+  <data name="browseMkvMergeLocationButton.Text" xml:space="preserve">
+    <value>Browse</value>
+  </data>
   <data name="&gt;&gt;currentVersionLabel.Type" xml:space="preserve">
     <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;label1.Name" xml:space="preserve">
     <value>label1</value>
-  </data>
-  <data name="&gt;&gt;excludeFileNameContiningGroupBox.Type" xml:space="preserve">
-    <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="extensionsGroupBox.TabIndex" type="System.Int32, mscorlib">
     <value>6</value>
@@ -2207,9 +2195,6 @@
   </data>
   <data name="deleteIncompleteFilesCheckBox.Location" type="System.Drawing.Point, System.Drawing">
     <value>9, 108</value>
-  </data>
-  <data name="showQueueWhenAddingCheckBox.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
   </data>
   <data name="label1.Text" xml:space="preserve">
     <value>MKVmerge Location:</value>
@@ -2252,9 +2237,6 @@
   </data>
   <data name="&gt;&gt;moveOkFilesToTextBox.Type" xml:space="preserve">
     <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="label2.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
   </data>
   <data name="mkvMergeLocationTextBox.Location" type="System.Drawing.Point, System.Drawing">
     <value>116, 39</value>
@@ -2301,14 +2283,14 @@
   <data name="&gt;&gt;localeBindingSource.Name" xml:space="preserve">
     <value>localeBindingSource</value>
   </data>
-  <data name="lastVersionFoundLabel.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
+  <data name="&gt;&gt;excludeFileNameContainingBindingSource.Name" xml:space="preserve">
+    <value>excludeFileNameContainingBindingSource</value>
   </data>
   <data name="&gt;&gt;extensionsGroupBox.Parent" xml:space="preserve">
     <value>generalTabPage</value>
   </data>
-  <data name="autoClearWarningJobsCheckBox.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
+  <data name="&gt;&gt;browseMkvMergeLocationButton.Parent" xml:space="preserve">
+    <value>generalTabPage</value>
   </data>
   <data name="moveWarningFilesToLabel.Size" type="System.Drawing.Size, System.Drawing">
     <value>116, 13</value>
@@ -2316,8 +2298,8 @@
   <data name="&gt;&gt;addExtensionButton.ZOrder" xml:space="preserve">
     <value>3</value>
   </data>
-  <data name="queueTabPage.Size" type="System.Drawing.Size, System.Drawing">
-    <value>402, 381</value>
+  <data name="&gt;&gt;addExcludeFileNameContainingButton.Name" xml:space="preserve">
+    <value>addExcludeFileNameContainingButton</value>
   </data>
   <data name="&gt;&gt;logLevelBindingSource.Type" xml:space="preserve">
     <value>System.Windows.Forms.BindingSource, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
@@ -2334,20 +2316,23 @@
   <data name="&gt;&gt;logLevelsComboBox.Type" xml:space="preserve">
     <value>System.Windows.Forms.ComboBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
+  <data name="&gt;&gt;moveWarningFilesToLabel.Name" xml:space="preserve">
+    <value>moveWarningFilesToLabel</value>
+  </data>
   <data name="lastVersionFoundLabel.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
   </data>
-  <data name="&gt;&gt;outputFileFormatLabel.Parent" xml:space="preserve">
-    <value>queueTabPage</value>
+  <data name="label2.Text" xml:space="preserve">
+    <value>Current version:</value>
+  </data>
+  <data name="moveOkFilesToLabel.Text" xml:space="preserve">
+    <value>Move Ok Files to:</value>
   </data>
   <data name="currentVersionLabel.TabIndex" type="System.Int32, mscorlib">
     <value>2</value>
   </data>
   <data name="&gt;&gt;showSummaryOnlyWarningsErrorsCheckBox.ZOrder" xml:space="preserve">
     <value>1</value>
-  </data>
-  <data name="&gt;&gt;excludeFileNameContainingBindingSource.Name" xml:space="preserve">
-    <value>excludeFileNameContainingBindingSource</value>
   </data>
   <data name="showSummaryOnlyWarningsErrorsCheckBox.TabIndex" type="System.Int32, mscorlib">
     <value>4</value>
@@ -2364,23 +2349,26 @@
   <data name="moveOkFilesToTextBox.Size" type="System.Drawing.Size, System.Drawing">
     <value>268, 20</value>
   </data>
-  <data name="&gt;&gt;deleteIncompleteFilesCheckBox.Type" xml:space="preserve">
-    <value>System.Windows.Forms.CheckBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  <data name="moveOkFilesToLabel.Size" type="System.Drawing.Size, System.Drawing">
+    <value>90, 13</value>
   </data>
   <data name="&gt;&gt;autoClearOkJobsCheckBox.Name" xml:space="preserve">
     <value>autoClearOkJobsCheckBox</value>
   </data>
+  <data name="&gt;&gt;autoClearErrorJobsCheckBox.ZOrder" xml:space="preserve">
+    <value>4</value>
+  </data>
   <data name="label3.TabIndex" type="System.Int32, mscorlib">
     <value>1</value>
   </data>
-  <data name="moveWarningFilesToLabel.TabIndex" type="System.Int32, mscorlib">
-    <value>1</value>
+  <data name="&gt;&gt;lastVersionFoundLabel.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;outputFileFormatLabel.Type" xml:space="preserve">
     <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="moveOkFilesToLabel.Text" xml:space="preserve">
-    <value>Move Ok Files to:</value>
+  <data name="&gt;&gt;currentVersionLabel.Name" xml:space="preserve">
+    <value>currentVersionLabel</value>
   </data>
   <data name="&gt;&gt;localeLabel.ZOrder" xml:space="preserve">
     <value>6</value>
@@ -2406,8 +2394,8 @@
   <data name="autoClearErrorJobsCheckBox.Location" type="System.Drawing.Point, System.Drawing">
     <value>9, 177</value>
   </data>
-  <data name="&gt;&gt;deleteIncompleteFilesCheckBox.Name" xml:space="preserve">
-    <value>deleteIncompleteFilesCheckBox</value>
+  <data name="replaceExistingDestinationFilesCheckBox.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
   </data>
   <data name="browseMkvMergeLocationButton.Size" type="System.Drawing.Size, System.Drawing">
     <value>75, 21</value>
@@ -2421,8 +2409,8 @@
   <data name="logLevelLabel.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
-  <data name="excludeFileNameContainingListBox.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
-    <value>Top, Left, Right</value>
+  <data name="&gt;&gt;label1.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;allowMultipleInstacesCheckBox.Type" xml:space="preserve">
     <value>System.Windows.Forms.CheckBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
@@ -2433,23 +2421,17 @@
   <data name="&gt;&gt;autoClearOkJobsCheckBox.ZOrder" xml:space="preserve">
     <value>6</value>
   </data>
-  <data name="&gt;&gt;label2.Parent" xml:space="preserve">
-    <value>versionTabPage</value>
-  </data>
   <data name="versionTabPage.Location" type="System.Drawing.Point, System.Drawing">
     <value>4, 22</value>
   </data>
   <data name="excludeFileNameContiningGroupBox.Size" type="System.Drawing.Size, System.Drawing">
     <value>389, 125</value>
   </data>
-  <data name="$this.MinimumSize" type="System.Drawing.Size, System.Drawing">
-    <value>450, 470</value>
-  </data>
   <data name="&gt;&gt;localeLabel.Type" xml:space="preserve">
     <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;addExcludeFileNameContainingButton.Name" xml:space="preserve">
-    <value>addExcludeFileNameContainingButton</value>
+  <data name="showSummaryWhenQueueEndsCheckBox.Text" xml:space="preserve">
+    <value>Show Summary when the queue work end?</value>
   </data>
   <data name="&gt;&gt;versionTabPage.ZOrder" xml:space="preserve">
     <value>2</value>
@@ -2472,23 +2454,20 @@
   <data name="autoClearOkJobsCheckBox.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
-  <data name="browseMkvMergeLocationButton.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
-    <value>Top, Right</value>
+  <data name="lastVersionFoundLabel.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="&gt;&gt;generalTabPage.ZOrder" xml:space="preserve">
+    <value>0</value>
   </data>
   <data name="optionsTabControl.Location" type="System.Drawing.Point, System.Drawing">
     <value>12, 12</value>
-  </data>
-  <data name="&gt;&gt;optionsDataBindingSource.Type" xml:space="preserve">
-    <value>System.Windows.Forms.BindingSource, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;localeComboBox.Parent" xml:space="preserve">
     <value>generalTabPage</value>
   </data>
   <data name="queueTabPage.TabIndex" type="System.Int32, mscorlib">
     <value>1</value>
-  </data>
-  <data name="&gt;&gt;checkUpdatesCheckBox.Name" xml:space="preserve">
-    <value>checkUpdatesCheckBox</value>
   </data>
   <data name="browseMkvMergeLocationButton.Location" type="System.Drawing.Point, System.Drawing">
     <value>321, 39</value>
@@ -2505,11 +2484,14 @@
   <data name="&gt;&gt;replaceExistingDestinationFilesCheckBox.Type" xml:space="preserve">
     <value>System.Windows.Forms.CheckBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;logLevelsComboBox.Parent" xml:space="preserve">
-    <value>generalTabPage</value>
+  <data name="&gt;&gt;label2.Parent" xml:space="preserve">
+    <value>versionTabPage</value>
   </data>
   <data name="&gt;&gt;showSummaryWhenQueueEndsCheckBox.Name" xml:space="preserve">
     <value>showSummaryWhenQueueEndsCheckBox</value>
+  </data>
+  <data name="&gt;&gt;browseMkvMergeLocationButton.Name" xml:space="preserve">
+    <value>browseMkvMergeLocationButton</value>
   </data>
   <data name="&gt;&gt;deleteIncompleteFilesCheckBox.Parent" xml:space="preserve">
     <value>queueTabPage</value>
@@ -2520,14 +2502,14 @@
   <data name="moveWarningFilesToTextBox.Location" type="System.Drawing.Point, System.Drawing">
     <value>128, 32</value>
   </data>
-  <data name="checkUpdatesCheckBox.Size" type="System.Drawing.Size, System.Drawing">
-    <value>183, 17</value>
-  </data>
   <data name="logLevelsComboBox.Size" type="System.Drawing.Size, System.Drawing">
     <value>121, 21</value>
   </data>
   <data name="&gt;&gt;addExtensionButton.Type" xml:space="preserve">
     <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="autoClearWarningJobsCheckBox.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
   </data>
   <data name="&gt;&gt;extensionBindingSource.Type" xml:space="preserve">
     <value>System.Windows.Forms.BindingSource, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
@@ -2538,11 +2520,14 @@
   <data name="localeLabel.TabIndex" type="System.Int32, mscorlib">
     <value>4</value>
   </data>
+  <data name="&gt;&gt;addExcludeFileNameContainingButton.Parent" xml:space="preserve">
+    <value>excludeFileNameContiningGroupBox</value>
+  </data>
   <data name="allowMultipleInstacesCheckBox.TabIndex" type="System.Int32, mscorlib">
     <value>8</value>
   </data>
-  <data name="moveOkFilesToTextBox.Location" type="System.Drawing.Point, System.Drawing">
-    <value>128, 6</value>
+  <data name="&gt;&gt;checkUpdatesCheckBox.Name" xml:space="preserve">
+    <value>checkUpdatesCheckBox</value>
   </data>
   <data name="showQueueWhenAddingCheckBox.TabIndex" type="System.Int32, mscorlib">
     <value>4</value>
@@ -2550,14 +2535,14 @@
   <data name="addExcludeFileNameContainingButton.Location" type="System.Drawing.Point, System.Drawing">
     <value>113, 19</value>
   </data>
-  <data name="removeExtensionButton.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
   <data name="mkvMergeLocationTextBox.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Top, Bottom, Left, Right</value>
   </data>
   <data name="excludeFileNameContiningGroupBox.Text" xml:space="preserve">
     <value>Exclude file name containing</value>
+  </data>
+  <data name="&gt;&gt;excludeFileNameContiningGroupBox.Parent" xml:space="preserve">
+    <value>generalTabPage</value>
   </data>
   <data name="addExcludeFileNameContainingButton.TabIndex" type="System.Int32, mscorlib">
     <value>10</value>
@@ -2571,14 +2556,8 @@
   <data name="moveWarningFilesToLabel.Text" xml:space="preserve">
     <value>Move Warning Files to:</value>
   </data>
-  <data name="logLevelsComboBox.TabIndex" type="System.Int32, mscorlib">
-    <value>1</value>
-  </data>
-  <data name="showSummaryWhenQueueEndsCheckBox.Text" xml:space="preserve">
-    <value>Show Summary when the queue work end?</value>
-  </data>
-  <data name="autoClearOkJobsCheckBox.Size" type="System.Drawing.Size, System.Drawing">
-    <value>171, 17</value>
+  <data name="&gt;&gt;logLevelsComboBox.Parent" xml:space="preserve">
+    <value>generalTabPage</value>
   </data>
   <data name="excludeFileNameContiningGroupBox.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Top, Left, Right</value>
@@ -2586,8 +2565,8 @@
   <data name="&gt;&gt;currentVersionLabel.ZOrder" xml:space="preserve">
     <value>2</value>
   </data>
-  <data name="label2.Text" xml:space="preserve">
-    <value>Current version:</value>
+  <data name="queueTabPage.Text" xml:space="preserve">
+    <value>Queue</value>
   </data>
   <data name="&gt;&gt;queueTabPage.ZOrder" xml:space="preserve">
     <value>1</value>
@@ -2628,8 +2607,8 @@
   <data name="outputFileFormatTextBox.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Top, Bottom, Left, Right</value>
   </data>
-  <data name="&gt;&gt;moveWarningFilesToLabel.Name" xml:space="preserve">
-    <value>moveWarningFilesToLabel</value>
+  <data name="outputFileFormatLabel.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
   </data>
   <data name="&gt;&gt;moveWarningFilesToLabel.Parent" xml:space="preserve">
     <value>queueTabPage</value>
@@ -2646,14 +2625,14 @@
   <data name="autoClearWarningJobsCheckBox.Location" type="System.Drawing.Point, System.Drawing">
     <value>9, 154</value>
   </data>
-  <data name="queueTabPage.Text" xml:space="preserve">
-    <value>Queue</value>
+  <data name="label2.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
   </data>
   <data name="&gt;&gt;checkUpdatesCheckBox.ZOrder" xml:space="preserve">
     <value>5</value>
   </data>
-  <data name="&gt;&gt;addExcludeFileNameContainingButton.Parent" xml:space="preserve">
-    <value>excludeFileNameContiningGroupBox</value>
+  <data name="logLevelsComboBox.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
   </data>
   <data name="label1.TabIndex" type="System.Int32, mscorlib">
     <value>0</value>
@@ -2670,6 +2649,9 @@
   <data name="&gt;&gt;excludeFileNameContainingListBox.Name" xml:space="preserve">
     <value>excludeFileNameContainingListBox</value>
   </data>
+  <data name="&gt;&gt;excludeFileNameContiningGroupBox.Type" xml:space="preserve">
+    <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
   <data name="autoClearWarningJobsCheckBox.TabIndex" type="System.Int32, mscorlib">
     <value>4</value>
   </data>
@@ -2685,8 +2667,8 @@
   <data name="generalTabPage.Location" type="System.Drawing.Point, System.Drawing">
     <value>4, 22</value>
   </data>
-  <data name="generalTabPage.TabIndex" type="System.Int32, mscorlib">
-    <value>0</value>
+  <data name="showQueueWhenAddingCheckBox.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
   </data>
   <data name="showQueueWhenAddingCheckBox.Location" type="System.Drawing.Point, System.Drawing">
     <value>9, 200</value>
@@ -2706,11 +2688,8 @@
   <data name="autoClearOkJobsCheckBox.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
   </data>
-  <data name="localeLabel.Size" type="System.Drawing.Size, System.Drawing">
-    <value>58, 13</value>
-  </data>
-  <data name="currentVersionLabel.Location" type="System.Drawing.Point, System.Drawing">
-    <value>109, 32</value>
+  <data name="excludeFileNameContainingListBox.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Left, Right</value>
   </data>
   <data name="removeExcludeFileNameContainingButton.TabIndex" type="System.Int32, mscorlib">
     <value>11</value>
@@ -2718,17 +2697,26 @@
   <data name="&gt;&gt;excludeFileNameContainingBindingSource.Type" xml:space="preserve">
     <value>System.Windows.Forms.BindingSource, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="moveOkFilesToTextBox.TabIndex" type="System.Int32, mscorlib">
-    <value>1</value>
+  <data name="localeLabel.Size" type="System.Drawing.Size, System.Drawing">
+    <value>58, 13</value>
   </data>
-  <data name="&gt;&gt;autoClearErrorJobsCheckBox.ZOrder" xml:space="preserve">
-    <value>4</value>
+  <data name="&gt;&gt;mkvMergeLocationTextBox.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="logLevelLabel.TabIndex" type="System.Int32, mscorlib">
-    <value>3</value>
+  <data name="deleteIncompleteFilesCheckBox.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="&gt;&gt;localeBindingSource.Type" xml:space="preserve">
+    <value>System.Windows.Forms.BindingSource, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="lastVersionFoundLabel.Location" type="System.Drawing.Point, System.Drawing">
+    <value>109, 55</value>
   </data>
   <data name="&gt;&gt;queueTabPage.Name" xml:space="preserve">
     <value>queueTabPage</value>
+  </data>
+  <data name="&gt;&gt;extensionsListBox.Name" xml:space="preserve">
+    <value>extensionsListBox</value>
   </data>
   <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
     <value>434, 431</value>
@@ -2736,17 +2724,17 @@
   <data name="showSummaryOnlyWarningsErrorsCheckBox.Text" xml:space="preserve">
     <value>Only show Summary when Warning/Errors occurs</value>
   </data>
-  <data name="logLevelLabel.Text" xml:space="preserve">
-    <value>Log Level:</value>
+  <data name="browseMkvMergeLocationButton.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Right</value>
   </data>
   <data name="optionsTabControl.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Top, Bottom, Left, Right</value>
   </data>
-  <data name="&gt;&gt;browseMkvMergeLocationButton.Name" xml:space="preserve">
-    <value>browseMkvMergeLocationButton</value>
+  <data name="&gt;&gt;queueTabPage.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TabPage, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="lastVersionFoundLabel.Location" type="System.Drawing.Point, System.Drawing">
-    <value>109, 55</value>
+  <data name="currentVersionLabel.Location" type="System.Drawing.Point, System.Drawing">
+    <value>109, 32</value>
   </data>
   <data name="&gt;&gt;browseMkvMergeLocationButton.Type" xml:space="preserve">
     <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
@@ -2754,20 +2742,26 @@
   <data name="logLevelsComboBox.Location" type="System.Drawing.Point, System.Drawing">
     <value>66, 6</value>
   </data>
-  <data name="&gt;&gt;extensionsListBox.Name" xml:space="preserve">
-    <value>extensionsListBox</value>
+  <data name="autoClearOkJobsCheckBox.Size" type="System.Drawing.Size, System.Drawing">
+    <value>171, 17</value>
   </data>
   <data name="showSummaryWhenQueueEndsCheckBox.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
+  <data name="outputFileFormatTextBox.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
   <data name="&gt;&gt;autoClearOkJobsCheckBox.Type" xml:space="preserve">
     <value>System.Windows.Forms.CheckBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;excludeFileNameContainingListBox.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ListBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  <data name="checkUpdatesCheckBox.Size" type="System.Drawing.Size, System.Drawing">
+    <value>183, 17</value>
   </data>
   <data name="addExtensionButton.Size" type="System.Drawing.Size, System.Drawing">
     <value>25, 25</value>
+  </data>
+  <data name="generalTabPage.Text" xml:space="preserve">
+    <value>General Options</value>
   </data>
   <data name="newExcludeFileNameContainingTextBox.TabIndex" type="System.Int32, mscorlib">
     <value>9</value>
@@ -2781,10 +2775,10 @@
   <data name="versionTabPage.Size" type="System.Drawing.Size, System.Drawing">
     <value>402, 381</value>
   </data>
-  <data name="browseMkvMergeLocationButton.Text" xml:space="preserve">
-    <value>Browse</value>
+  <data name="&gt;&gt;optionsTabControl.ZOrder" xml:space="preserve">
+    <value>0</value>
   </data>
-  <data name="outputFileFormatTextBox.TabIndex" type="System.Int32, mscorlib">
+  <data name="moveWarningFilesToLabel.TabIndex" type="System.Int32, mscorlib">
     <value>1</value>
   </data>
   <data name="extensionsListBox.Size" type="System.Drawing.Size, System.Drawing">
@@ -2793,17 +2787,20 @@
   <data name="&gt;&gt;checkUpdatesCheckBox.Type" xml:space="preserve">
     <value>System.Windows.Forms.CheckBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="showSummaryOnlyWarningsErrorsCheckBox.Location" type="System.Drawing.Point, System.Drawing">
-    <value>9, 246</value>
+  <data name="deleteIncompleteFilesCheckBox.TabIndex" type="System.Int32, mscorlib">
+    <value>4</value>
+  </data>
+  <data name="&gt;&gt;excludeFileNameContainingListBox.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ListBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;moveWarningFilesToTextBox.Parent" xml:space="preserve">
     <value>queueTabPage</value>
   </data>
-  <data name="generalTabPage.Text" xml:space="preserve">
-    <value>General Options</value>
+  <data name="&gt;&gt;deleteIncompleteFilesCheckBox.Name" xml:space="preserve">
+    <value>deleteIncompleteFilesCheckBox</value>
   </data>
-  <data name="&gt;&gt;autoClearOkJobsCheckBox.Parent" xml:space="preserve">
-    <value>queueTabPage</value>
+  <data name="queueTabPage.Size" type="System.Drawing.Size, System.Drawing">
+    <value>402, 381</value>
   </data>
   <data name="localeComboBox.Location" type="System.Drawing.Point, System.Drawing">
     <value>257, 6</value>
@@ -2814,11 +2811,14 @@
   <data name="checkUpdatesCheckBox.TabIndex" type="System.Int32, mscorlib">
     <value>0</value>
   </data>
-  <data name="allowMultipleInstacesCheckBox.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
+  <data name="&gt;&gt;label3.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="moveOkFilesToLabel.TabIndex" type="System.Int32, mscorlib">
     <value>0</value>
+  </data>
+  <data name="&gt;&gt;moveWarningFilesToLabel.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="removeExcludeFileNameContainingButton.Location" type="System.Drawing.Point, System.Drawing">
     <value>113, 50</value>
@@ -2835,8 +2835,8 @@
   <data name="&gt;&gt;label3.ZOrder" xml:space="preserve">
     <value>3</value>
   </data>
-  <data name="allowMultipleInstacesCheckBox.Size" type="System.Drawing.Size, System.Drawing">
-    <value>227, 17</value>
+  <data name="autoClearWarningJobsCheckBox.Size" type="System.Drawing.Size, System.Drawing">
+    <value>197, 17</value>
   </data>
   <data name="replaceExistingDestinationFilesCheckBox.Location" type="System.Drawing.Point, System.Drawing">
     <value>9, 85</value>
@@ -2853,8 +2853,8 @@
   <data name="outputFileFormatLabel.TabIndex" type="System.Int32, mscorlib">
     <value>1</value>
   </data>
-  <data name="autoClearWarningJobsCheckBox.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
+  <data name="outputFileFormatLabel.Size" type="System.Drawing.Size, System.Drawing">
+    <value>90, 13</value>
   </data>
   <data name="&gt;&gt;localeLabel.Parent" xml:space="preserve">
     <value>generalTabPage</value>
@@ -2865,20 +2865,20 @@
   <data name="&gt;&gt;outputFileFormatTextBox.Parent" xml:space="preserve">
     <value>queueTabPage</value>
   </data>
-  <data name="&gt;&gt;autoClearErrorJobsCheckBox.Parent" xml:space="preserve">
-    <value>queueTabPage</value>
+  <data name="generalTabPage.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
   </data>
-  <data name="&gt;&gt;extensionsGroupBox.Type" xml:space="preserve">
-    <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  <data name="label3.Size" type="System.Drawing.Size, System.Drawing">
+    <value>97, 13</value>
   </data>
   <metadata name="extensionBindingSource.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>552, 17</value>
   </metadata>
-  <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
   <metadata name="localeBindingSource.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>390, 17</value>
+  </metadata>
+  <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
   </metadata>
   <metadata name="excludeFileNameContainingBindingSource.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>735, 17</value>

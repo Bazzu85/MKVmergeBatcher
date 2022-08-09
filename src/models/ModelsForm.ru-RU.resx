@@ -1929,4 +1929,13 @@
   <data name="$this.Text" xml:space="preserve">
     <value>Модели</value>
   </data>
+  <data name="noAttachmentsCheckBox.Text" xml:space="preserve">
+    <value>--no-attachments</value>
+  </data>
+  <data name="noGlobalTagsCheckBox.Text" xml:space="preserve">
+    <value>--no-global-tags</value>
+  </data>
+  <data name="noTrackTagsCheckBox.Text" xml:space="preserve">
+    <value>--no-track-tags</value>
+  </data>
 </root>
