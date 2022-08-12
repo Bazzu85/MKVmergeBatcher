@@ -76,7 +76,7 @@ namespace MKVmergeBatcher.src.help
 
         private void discordLinkLabel_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
-            System.Diagnostics.Process.Start("https://discord.gg/ptZSVtAq");
+            System.Diagnostics.Process.Start("https://discord.gg/Eztf8tQWdt");
         }
     }
 }
