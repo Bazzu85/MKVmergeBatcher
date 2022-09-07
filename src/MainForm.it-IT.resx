@@ -143,13 +143,13 @@
     <value>Visualizza</value>
   </data>
   <data name="aboutToolStripMenuItem.Text" xml:space="preserve">
-    <value>About</value>
+    <value>Info programma</value>
   </data>
   <data name="videoFilePathLabel.Size" type="System.Drawing.Size, System.Drawing">
     <value>94, 13</value>
   </data>
   <data name="videoFilePathLabel.Text" xml:space="preserve">
-    <value>Indirizzo file Video:</value>
+    <value>Indirizzo file video:</value>
   </data>
   <data name="VideoFilesPathTextBox.Location" type="System.Drawing.Point, System.Drawing">
     <value>106, 32</value>
@@ -207,13 +207,13 @@
     <value>520, 418</value>
   </data>
   <data name="showQueueButton.Text" xml:space="preserve">
-    <value>Mostra coda</value>
+    <value>Visualizza coda</value>
   </data>
   <data name="subfolderSearchCheckBox.Size" type="System.Drawing.Size, System.Drawing">
     <value>145, 17</value>
   </data>
   <data name="subfolderSearchCheckBox.Text" xml:space="preserve">
-    <value>Cerca nelle sottocartelle?</value>
+    <value>Vuoi cercare nelle sottocartelle?</value>
   </data>
   <data name="applyFileNameExclusionCheckBox.Location" type="System.Drawing.Point, System.Drawing">
     <value>164, 58</value>
@@ -222,13 +222,13 @@
     <value>153, 17</value>
   </data>
   <data name="applyFileNameExclusionCheckBox.Text" xml:space="preserve">
-    <value>Applica il filtro sui nomi file?</value>
+    <value>Vuoi applicare il filtro ai nomi file?</value>
   </data>
   <data name="addTestModelButton.Size" type="System.Drawing.Size, System.Drawing">
     <value>148, 23</value>
   </data>
   <data name="addTestModelButton.Text" xml:space="preserve">
-    <value>Aggiungi un modello di test</value>
+    <value>Aggiungi modello test</value>
   </data>
   <data name="$this.Icon" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>

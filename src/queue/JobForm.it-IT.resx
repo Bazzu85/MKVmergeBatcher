@@ -125,7 +125,7 @@
     <value>82, 13</value>
   </data>
   <data name="label1.Text" xml:space="preserve">
-    <value>Cartella di input:</value>
+    <value>Cartella file sorgenti:</value>
   </data>
   <data name="label2.Location" type="System.Drawing.Point, System.Drawing">
     <value>45, 53</value>
@@ -134,7 +134,7 @@
     <value>63, 13</value>
   </data>
   <data name="label2.Text" xml:space="preserve">
-    <value>File di input:</value>
+    <value>Nome file sorgente:</value>
   </data>
   <data name="fileFolderTextBox.Location" type="System.Drawing.Point, System.Drawing">
     <value>114, 9</value>
@@ -155,7 +155,7 @@
     <value>135, 13</value>
   </data>
   <data name="label3.Text" xml:space="preserve">
-    <value>Percorso di input completo:</value>
+    <value>Percorso completo sorgente:</value>
   </data>
   <data name="fileFullPathTextBox.Location" type="System.Drawing.Point, System.Drawing">
     <value>150, 91</value>
@@ -194,7 +194,7 @@
     <value>70, 13</value>
   </data>
   <data name="label6.Text" xml:space="preserve">
-    <value>File di output:</value>
+    <value>File destinazione:</value>
   </data>
   <data name="outputFileNameTextBox.Location" type="System.Drawing.Point, System.Drawing">
     <value>114, 173</value>
@@ -1786,6 +1786,6 @@
 </value>
   </data>
   <data name="$this.Text" xml:space="preserve">
-    <value>Job</value>
+    <value>Attività</value>
   </data>
 </root>

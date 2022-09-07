@@ -122,7 +122,7 @@
     <value>366, 17</value>
   </data>
   <data name="customCommandCheckBox.Text" xml:space="preserve">
-    <value>Fornire un comando personalizzato? (esclude le impostazioni precedenti)</value>
+    <value>Vuoi inserire un comando personalizzato (esclude le impostazioni precedenti)?</value>
   </data>
   <data name="addChaptersCheckBox.Size" type="System.Drawing.Size, System.Drawing">
     <value>103, 17</value>
@@ -143,7 +143,7 @@
     <value>--title vuoto</value>
   </data>
   <data name="customOutputFilesArgumentsGroupBox.Text" xml:space="preserve">
-    <value>Argomenti personalizzati del file di output</value>
+    <value>Argomenti personalizzati file destinazione</value>
   </data>
   <data name="noTrackTagsCheckBox.Location" type="System.Drawing.Point, System.Drawing">
     <value>433, 19</value>
@@ -158,7 +158,7 @@
     <value>--compression none per tutte le traccie</value>
   </data>
   <data name="customInputFilesArgumentsGroupBox.Text" xml:space="preserve">
-    <value>Argomenti personalizzati dei file di input</value>
+    <value>Argomenti personalizzati file sorgente</value>
   </data>
   <data name="typeDataGridViewTextBoxColumn.HeaderText" xml:space="preserve">
     <value>Tipo</value>
@@ -174,7 +174,7 @@
     <value>115</value>
   </data>
   <data name="originalFileTrackPositionDataGridViewTextBoxColumn.HeaderText" xml:space="preserve">
-    <value>Posizione della traccia nel file originale</value>
+    <value>Posizione traccia file originale</value>
   </data>
   <data name="originalFileTrackPositionDataGridViewTextBoxColumn.Width" type="System.Int32, mscorlib">
     <value>142</value>
@@ -186,7 +186,7 @@
     <value>86</value>
   </data>
   <data name="originalFileSuffixDataGridViewTextBoxColumn.HeaderText" xml:space="preserve">
-    <value>Suffisso del file originale</value>
+    <value>Suffisso file originale</value>
   </data>
   <data name="originalFileSuffixDataGridViewTextBoxColumn.Width" type="System.Int32, mscorlib">
     <value>95</value>
@@ -261,7 +261,7 @@
 </value>
   </data>
   <data name="cancelButton.Text" xml:space="preserve">
-    <value>Cancella</value>
+    <value>Annulla</value>
   </data>
   <data name="okButton.Location" type="System.Drawing.Point, System.Drawing">
     <value>635, 676</value>
@@ -270,7 +270,7 @@
     <value>106, 23</value>
   </data>
   <data name="okButton.Text" xml:space="preserve">
-    <value>Aggiungi/Modifica</value>
+    <value>Aggiungi/modifica</value>
   </data>
   <data name="copyTrackButton.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
@@ -313,7 +313,7 @@
     <value>105, 23</value>
   </data>
   <data name="saveModelButton.Text" xml:space="preserve">
-    <value>Salva il modello</value>
+    <value>Salva modello</value>
   </data>
   <data name="loadSavedModelButton.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
@@ -331,7 +331,7 @@
     <value>110, 23</value>
   </data>
   <data name="loadSavedModelButton.Text" xml:space="preserve">
-    <value>Carica il modello salvato</value>
+    <value>Carica modello salvato</value>
   </data>
   <data name="$this.Icon" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
@@ -1893,13 +1893,13 @@
     <value>Modello</value>
   </data>
   <data name="defaultFlagDataGridViewCheckBoxColumn.HeaderText" xml:space="preserve">
-    <value>Default</value>
+    <value>Predefinito</value>
   </data>
   <data name="forcedFlagDataGridViewCheckBoxColumn.HeaderText" xml:space="preserve">
-    <value>Forced</value>
+    <value>Forzato</value>
   </data>
   <data name="languageDataGridViewTextBoxColumn.HeaderText" xml:space="preserve">
-    <value>Language Code</value>
+    <value>Codice lingua</value>
   </data>
   <data name="noAttachmentsCheckBox.Text" xml:space="preserve">
     <value>--no-attachments</value>

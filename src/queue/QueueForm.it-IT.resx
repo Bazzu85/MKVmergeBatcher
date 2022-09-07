@@ -141,76 +141,70 @@
     <value>346, 22</value>
   </data>
   <data name="clearQueueToolStripMenuItem.Text" xml:space="preserve">
-    <value>Pulisci la coda</value>
+    <value>Svuota coda</value>
   </data>
   <data name="resetAllOkJobsToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
     <value>346, 22</value>
   </data>
   <data name="resetAllOkJobsToolStripMenuItem.Text" xml:space="preserve">
-    <value>Resetta tutti i job Ok</value>
+    <value>Ripristina tutte le attività "OK"</value>
   </data>
   <data name="resetAllWarningJobsToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
     <value>346, 22</value>
   </data>
   <data name="resetAllWarningJobsToolStripMenuItem.Text" xml:space="preserve">
-    <value>Resetta tutti i job in Warning</value>
+    <value>Ripristina tutte le attività in stato "Avviso"</value>
   </data>
   <data name="resetAllErrorJobsToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
     <value>346, 22</value>
   </data>
   <data name="resetAllErrorJobsToolStripMenuItem.Text" xml:space="preserve">
-    <value>Resetta tutti i job in errore</value>
+    <value>Ripristina tutte le attività in stato "Errore"</value>
   </data>
   <data name="clearAllPendingJobsToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
     <value>346, 22</value>
   </data>
   <data name="clearAllPendingJobsToolStripMenuItem.Text" xml:space="preserve">
-    <value>Elimina tutti i job in sospeso</value>
+    <value>Ripristina tutte le attività in stato "In sospeso"</value>
   </data>
   <data name="clearAllOkJobsToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
     <value>346, 22</value>
   </data>
   <data name="clearAllOkJobsToolStripMenuItem.Text" xml:space="preserve">
-    <value>Elimina tutti i job Ok</value>
+    <value>Elimina tutte le attività in stato "OK"</value>
   </data>
   <data name="clearAllWarningJobsToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
     <value>346, 22</value>
   </data>
   <data name="clearAllWarningJobsToolStripMenuItem.Text" xml:space="preserve">
-    <value>Elimina tutti i job in Warning</value>
+    <value>Ripristina tutte le attività in stato "Avviso"</value>
   </data>
   <data name="clearAllErrorJobsToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
     <value>346, 22</value>
   </data>
   <data name="clearAllErrorJobsToolStripMenuItem.Text" xml:space="preserve">
-    <value>Elimina tutti i job in Errore</value>
+    <value>Elimina tutti le attività in stato "Errore"</value>
   </data>
   <data name="autoClearOkJobsToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
     <value>346, 22</value>
   </data>
   <data name="autoClearOkJobsToolStripMenuItem.Text" xml:space="preserve">
-    <value>Rimuovi automaticamente i job Ok?</value>
+    <value>Vuoi rimuovere automaticamente le attività in stato "OK"?</value>
   </data>
   <data name="autoClearWarningJobsToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
     <value>346, 22</value>
   </data>
   <data name="autoClearWarningJobsToolStripMenuItem.Text" xml:space="preserve">
-    <value>Rimuovi automaticamente i job in stato "Warning"?</value>
+    <value>Vuoi rimuovere automaticamente le attività in stato "Avviso"?</value>
   </data>
   <data name="autoClearErrorJobsToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
     <value>346, 22</value>
   </data>
   <data name="autoClearErrorJobsToolStripMenuItem.Text" xml:space="preserve">
-    <value>Rimuovi automaticamente i job in stato "Errore"?</value>
+    <value>Vuoi rimuovere automaticamente le attività in stato "Errore"?</value>
   </data>
   <data name="queueContextMenuStrip.Size" type="System.Drawing.Size, System.Drawing">
     <value>347, 246</value>
-  </data>
-  <data name="queueContextMenuStrip.ToolTip" xml:space="preserve">
-    <value />
-  </data>
-  <data name="jobsDataGridView.ToolTip" xml:space="preserve">
-    <value />
   </data>
   <data name="moveJobDownButton.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
@@ -222,7 +216,7 @@
 </value>
   </data>
   <data name="moveJobDownButton.ToolTip" xml:space="preserve">
-    <value>Muovi il job selezionato giù</value>
+    <value>Sposta l'attività selezionata in giù</value>
   </data>
   <data name="moveJobUpButton.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
@@ -234,7 +228,7 @@
 </value>
   </data>
   <data name="moveJobUpButton.ToolTip" xml:space="preserve">
-    <value>Muovi il job selezionato in alto</value>
+    <value>Sposta l'attività selezionata in alto</value>
   </data>
   <data name="clearQueueButton.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
@@ -247,7 +241,7 @@
 </value>
   </data>
   <data name="clearQueueButton.ToolTip" xml:space="preserve">
-    <value>Pulisci la coda</value>
+    <value>Svuota coda attuale</value>
   </data>
   <data name="deleteJobButton.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
@@ -262,7 +256,7 @@
 </value>
   </data>
   <data name="deleteJobButton.ToolTip" xml:space="preserve">
-    <value>Cancella il job selezionato?</value>
+    <value>Vuoi eliminare l'attività selezionata?</value>
   </data>
   <data name="moveJobBottomButton.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
@@ -276,7 +270,7 @@
 </value>
   </data>
   <data name="moveJobBottomButton.ToolTip" xml:space="preserve">
-    <value>Muovi il job selezionato in fondo</value>
+    <value>Sposta l'attività selezionata in fondo</value>
   </data>
   <data name="moveJobTopButton.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
@@ -290,10 +284,7 @@
 </value>
   </data>
   <data name="moveJobTopButton.ToolTip" xml:space="preserve">
-    <value>Muovi il job selezionato su</value>
-  </data>
-  <data name="modelsListButtonsPanel.ToolTip" xml:space="preserve">
-    <value />
+    <value>Sposta attività selezionata in su</value>
   </data>
   <data name="stopButton.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
@@ -307,7 +298,7 @@
 </value>
   </data>
   <data name="stopButton.ToolTip" xml:space="preserve">
-    <value>Ferma l'esecuzione</value>
+    <value>Ferma esecuzione coda</value>
   </data>
   <data name="createBatButton.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
@@ -333,7 +324,7 @@
     <value>Crea file Bat</value>
   </data>
   <data name="createBatButton.ToolTip" xml:space="preserve">
-    <value>Crea un file Bat con il job in stato "In sospeso"</value>
+    <value>Crea un file bat con l'attività in stato "In sospeso"</value>
   </data>
   <data name="errorLabel.Location" type="System.Drawing.Point, System.Drawing">
     <value>516, 13</value>
@@ -344,35 +335,20 @@
   <data name="errorLabel.Text" xml:space="preserve">
     <value>Errori: 0</value>
   </data>
-  <data name="errorLabel.ToolTip" xml:space="preserve">
-    <value />
-  </data>
   <data name="warningLabel.Location" type="System.Drawing.Point, System.Drawing">
     <value>441, 13</value>
-  </data>
-  <data name="warningLabel.ToolTip" xml:space="preserve">
-    <value />
   </data>
   <data name="totalProgressBar.Location" type="System.Drawing.Point, System.Drawing">
     <value>285, 13</value>
   </data>
-  <data name="totalProgressBar.ToolTip" xml:space="preserve">
-    <value />
-  </data>
   <data name="jobProgressBar.Location" type="System.Drawing.Point, System.Drawing">
     <value>129, 13</value>
-  </data>
-  <data name="jobProgressBar.ToolTip" xml:space="preserve">
-    <value />
   </data>
   <data name="workingOnLabel.Size" type="System.Drawing.Size, System.Drawing">
     <value>120, 13</value>
   </data>
   <data name="workingOnLabel.Text" xml:space="preserve">
-    <value>Lavorando sul job 0 di 0</value>
-  </data>
-  <data name="workingOnLabel.ToolTip" xml:space="preserve">
-    <value />
+    <value>Elaborazione attività 0 di 0</value>
   </data>
   <data name="startButton.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
@@ -388,13 +364,7 @@
 </value>
   </data>
   <data name="startButton.ToolTip" xml:space="preserve">
-    <value>Inizia a lavorare la coda</value>
-  </data>
-  <data name="panel1.ToolTip" xml:space="preserve">
-    <value />
-  </data>
-  <data name="outputTextBox.ToolTip" xml:space="preserve">
-    <value />
+    <value>Avvia elaborazione coda</value>
   </data>
   <data name="$this.Icon" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
@@ -1961,5 +1931,20 @@
   </data>
   <data name="$this.ToolTip" xml:space="preserve">
     <value />
+  </data>
+  <data name="outputDataGridViewTextBoxColumn.HeaderText" xml:space="preserve">
+    <value>destinazione</value>
+  </data>
+  <data name="stopButton.Text" xml:space="preserve">
+    <value>Stop</value>
+  </data>
+  <data name="fileNameDataGridViewTextBoxColumn.HeaderText" xml:space="preserve">
+    <value>File</value>
+  </data>
+  <data name="warningLabel.Text" xml:space="preserve">
+    <value>Avviso: 0</value>
+  </data>
+  <data name="startButton.Text" xml:space="preserve">
+    <value>Avvia</value>
   </data>
 </root>

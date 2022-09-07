@@ -117,9 +117,6 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="modelsListBox.ToolTip" xml:space="preserve">
-    <value />
-  </data>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
   <data name="editModelButton.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
@@ -137,26 +134,11 @@
   <data name="editModelButton.Text" xml:space="preserve">
     <value>Modifica</value>
   </data>
-  <data name="editModelButton.ToolTip" xml:space="preserve">
-    <value />
-  </data>
-  <data name="modelNameTextBox.ToolTip" xml:space="preserve">
-    <value />
-  </data>
-  <data name="commandTextBox.ToolTip" xml:space="preserve">
-    <value />
-  </data>
   <data name="customCommandCheckBox.Size" type="System.Drawing.Size, System.Drawing">
     <value>366, 17</value>
   </data>
   <data name="customCommandCheckBox.Text" xml:space="preserve">
-    <value>Fornire un comando personalizzato? (esclude le impostazioni precedenti)</value>
-  </data>
-  <data name="customCommandCheckBox.ToolTip" xml:space="preserve">
-    <value />
-  </data>
-  <data name="customOutputFileArgumentsTextBox.ToolTip" xml:space="preserve">
-    <value />
+    <value>Vuoi inserire un comando personalizzato (esclude le impostazioni precedenti)?</value>
   </data>
   <data name="addChaptersCheckBox.Size" type="System.Drawing.Size, System.Drawing">
     <value>103, 17</value>
@@ -164,17 +146,11 @@
   <data name="addChaptersCheckBox.Text" xml:space="preserve">
     <value>Aggiungi capitoli</value>
   </data>
-  <data name="addChaptersCheckBox.ToolTip" xml:space="preserve">
-    <value />
-  </data>
   <data name="addAttachmentsCheckBox.Size" type="System.Drawing.Size, System.Drawing">
     <value>100, 17</value>
   </data>
   <data name="addAttachmentsCheckBox.Text" xml:space="preserve">
     <value>Aggiunti allegati</value>
-  </data>
-  <data name="addAttachmentsCheckBox.ToolTip" xml:space="preserve">
-    <value />
   </data>
   <data name="emptyTitleCheckBox.Size" type="System.Drawing.Size, System.Drawing">
     <value>78, 17</value>
@@ -182,47 +158,29 @@
   <data name="emptyTitleCheckBox.Text" xml:space="preserve">
     <value>--title vuoto</value>
   </data>
-  <data name="emptyTitleCheckBox.ToolTip" xml:space="preserve">
-    <value />
-  </data>
   <data name="customOutputFilesArgumentsGroupBox.Text" xml:space="preserve">
-    <value>Argomenti personalizzati del file di output</value>
-  </data>
-  <data name="customOutputFilesArgumentsGroupBox.ToolTip" xml:space="preserve">
-    <value />
-  </data>
-  <data name="customInputFileArgumentsTextBox.ToolTip" xml:space="preserve">
-    <value />
+    <value>Argomenti personalizzati file destinazione</value>
   </data>
   <data name="noTrackTagsCheckBox.Location" type="System.Drawing.Point, System.Drawing">
     <value>433, 19</value>
   </data>
   <data name="noTrackTagsCheckBox.ToolTip" xml:space="preserve">
-    <value>Aggiunge l'argomento --no-track-tags a tutti i file di input</value>
+    <value>Aggiunge l'argomento '--no-track-tags' a tutti i file sorgente</value>
   </data>
   <data name="noGlobalTagsCheckBox.Location" type="System.Drawing.Point, System.Drawing">
     <value>329, 19</value>
   </data>
   <data name="noGlobalTagsCheckBox.ToolTip" xml:space="preserve">
-    <value>Aggiunge l'argomento --no-global-tags a tutti i file di input</value>
+    <value>Aggiunge l'argomento '--no-global-tags' a tutti i file sorgente</value>
   </data>
   <data name="noCompressionCheckBox.Size" type="System.Drawing.Size, System.Drawing">
     <value>206, 17</value>
   </data>
   <data name="noCompressionCheckBox.Text" xml:space="preserve">
-    <value>--compression none per tutte le traccie</value>
-  </data>
-  <data name="noCompressionCheckBox.ToolTip" xml:space="preserve">
-    <value />
-  </data>
-  <data name="noAttachmentsCheckBox.ToolTip" xml:space="preserve">
-    <value />
+    <value>'--compression none' per tutte le traccie</value>
   </data>
   <data name="customInputFilesArgumentsGroupBox.Text" xml:space="preserve">
-    <value>Argomenti personalizzati dei file di input</value>
-  </data>
-  <data name="customInputFilesArgumentsGroupBox.ToolTip" xml:space="preserve">
-    <value />
+    <value>Argomenti personalizzati file sorgenti</value>
   </data>
   <data name="typeDataGridViewTextBoxColumn.HeaderText" xml:space="preserve">
     <value>Tipo</value>
@@ -238,7 +196,7 @@
     <value>115</value>
   </data>
   <data name="originalFileTrackPositionDataGridViewTextBoxColumn.HeaderText" xml:space="preserve">
-    <value>Posizione della traccia nel file originale</value>
+    <value>Posizione traccia file originale</value>
   </data>
   <data name="originalFileTrackPositionDataGridViewTextBoxColumn.Width" type="System.Int32, mscorlib">
     <value>142</value>
@@ -250,7 +208,7 @@
     <value>86</value>
   </data>
   <data name="originalFileSuffixDataGridViewTextBoxColumn.HeaderText" xml:space="preserve">
-    <value>Suffisso del file originale</value>
+    <value>Suffisso file originale</value>
   </data>
   <data name="originalFileSuffixDataGridViewTextBoxColumn.Width" type="System.Int32, mscorlib">
     <value>95</value>
@@ -261,20 +219,11 @@
   <data name="originalFileExtensionDataGridViewTextBoxColumn.Width" type="System.Int32, mscorlib">
     <value>94</value>
   </data>
-  <data name="tracksDataGridView.ToolTip" xml:space="preserve">
-    <value />
-  </data>
   <data name="modelNameLabel.Text" xml:space="preserve">
     <value>Nome:</value>
   </data>
-  <data name="modelNameLabel.ToolTip" xml:space="preserve">
-    <value />
-  </data>
   <data name="modelGroupBox.Text" xml:space="preserve">
-    <value>Dettagi modello</value>
-  </data>
-  <data name="modelGroupBox.ToolTip" xml:space="preserve">
-    <value />
+    <value>Dettagli modello</value>
   </data>
   <data name="moveModelDownButton.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
@@ -286,7 +235,7 @@
 </value>
   </data>
   <data name="moveModelDownButton.ToolTip" xml:space="preserve">
-    <value>Muovi il modello selezionato giù</value>
+    <value>Sposta modello selezionato in giù</value>
   </data>
   <data name="moveModelUpButton.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
@@ -298,7 +247,7 @@
 </value>
   </data>
   <data name="moveModelUpButton.ToolTip" xml:space="preserve">
-    <value>Muovi il modello selezionato su</value>
+    <value>Sposta modello selezionato in su</value>
   </data>
   <data name="addModelButton.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
@@ -324,7 +273,7 @@
 </value>
   </data>
   <data name="deleteModelButton.ToolTip" xml:space="preserve">
-    <value>Cancella modello</value>
+    <value>Elimina modello</value>
   </data>
   <data name="sortModelByNameButton.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
@@ -340,7 +289,7 @@
 </value>
   </data>
   <data name="sortModelByNameButton.ToolTip" xml:space="preserve">
-    <value>Ordina i modelli per Nome</value>
+    <value>Ordina modelli per nome</value>
   </data>
   <data name="moveModelBottomButton.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
@@ -354,7 +303,7 @@
 </value>
   </data>
   <data name="moveModelBottomButton.ToolTip" xml:space="preserve">
-    <value>Muovi il modello selezionato in fondo</value>
+    <value>Sposta il modello selezionato in fondo</value>
   </data>
   <data name="moveModelTopButton.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
@@ -368,10 +317,7 @@
 </value>
   </data>
   <data name="moveModelTopButton.ToolTip" xml:space="preserve">
-    <value>Muovi il modello selezionato in alto</value>
-  </data>
-  <data name="modelsListButtonsPanel.ToolTip" xml:space="preserve">
-    <value />
+    <value>Sposta modello selezionato in alto</value>
   </data>
   <data name="$this.Icon" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
@@ -1936,6 +1882,21 @@
     <value />
   </data>
   <data name="copyModelButton.ToolTip" xml:space="preserve">
-    <value>Copia Modello</value>
+    <value>Copia modello</value>
+  </data>
+  <data name="languageDataGridViewTextBoxColumn.HeaderText" xml:space="preserve">
+    <value>Codice lingua</value>
+  </data>
+  <data name="forcedFlagDataGridViewCheckBoxColumn.HeaderText" xml:space="preserve">
+    <value>Forzato</value>
+  </data>
+  <data name="defaultFlagDataGridViewCheckBoxColumn.HeaderText" xml:space="preserve">
+    <value>Predefinito</value>
+  </data>
+  <data name="noGlobalTagsCheckBox.Text" xml:space="preserve">
+    <value>--no-global-tags</value>
+  </data>
+  <data name="noTrackTagsCheckBox.Text" xml:space="preserve">
+    <value>--no-track-tags</value>
   </data>
 </root>

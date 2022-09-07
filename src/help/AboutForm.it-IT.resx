@@ -118,13 +118,13 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <data name="githubLinkLabel.Text" xml:space="preserve">
-    <value>Pagina del progetto su Github</value>
+    <value>Pagina progetto su Github</value>
   </data>
   <data name="discordLinkLabel.Text" xml:space="preserve">
     <value>Server Discord</value>
   </data>
   <data name="$this.Text" xml:space="preserve">
-    <value>About</value>
+    <value>Info programma</value>
   </data>
   <data name="appVersionLabel.Text" xml:space="preserve">
     <value>MkvMerge Batcher v.x.x.x.xxx</value>

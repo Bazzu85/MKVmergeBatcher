@@ -140,7 +140,7 @@
     <value>130, 13</value>
   </data>
   <data name="originalFilePositionLabel.Text" xml:space="preserve">
-    <value>Posizione nel file originale:</value>
+    <value>Posizione file originale:</value>
   </data>
   <data name="OriginalFilePositionNumericUpDown.Location" type="System.Drawing.Point, System.Drawing">
     <value>315, 39</value>
@@ -167,7 +167,7 @@
     <value>122, 13</value>
   </data>
   <data name="originalFileSuffixLabel.Text" xml:space="preserve">
-    <value>Suffisso del file originale:</value>
+    <value>Suffisso file originale:</value>
   </data>
   <data name="originalFileNameSuffixTextBox.Location" type="System.Drawing.Point, System.Drawing">
     <value>140, 142</value>
@@ -191,7 +191,7 @@
     <value>232, 20</value>
   </data>
   <data name="cancelButton.Text" xml:space="preserve">
-    <value>Cancella</value>
+    <value>Annulla</value>
   </data>
   <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
     <value>384, 231</value>
@@ -1759,7 +1759,7 @@
     <value>400, 270</value>
   </data>
   <data name="$this.Text" xml:space="preserve">
-    <value>Gestisci Traccia</value>
+    <value>Gestisci traccia</value>
   </data>
   <data name="typeComboBox.Items" xml:space="preserve">
     <value>Video</value>
@@ -1768,15 +1768,15 @@
     <value>Audio</value>
   </data>
   <data name="okButton.Text" xml:space="preserve">
-    <value>Ok</value>
+    <value>OK</value>
   </data>
   <data name="languageCodeLabel.Text" xml:space="preserve">
-    <value>Language Code:</value>
+    <value>Codice lingua:</value>
   </data>
   <data name="forcedCheckBox.Text" xml:space="preserve">
-    <value>Forced</value>
+    <value>Forzato</value>
   </data>
   <data name="defaultCheckBox.Text" xml:space="preserve">
-    <value>Default</value>
+    <value>Predefinito</value>
   </data>
 </root>
