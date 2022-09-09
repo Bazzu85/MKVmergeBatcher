@@ -482,6 +482,7 @@ namespace MKVmergeBatcher.src.models
             this.Name = "ModelsForm";
             this.modelsToolTip.SetToolTip(this, resources.GetString("$this.ToolTip"));
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.ModelsForm_FormClosed);
+            this.Load += new System.EventHandler(this.ModelsForm_Load);
             this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.ModelsForm_KeyDown);
             ((System.ComponentModel.ISupportInitialize)(this.modelBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.modelsDataBindingSource)).EndInit();

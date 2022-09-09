@@ -266,5 +266,10 @@ namespace MKVmergeBatcher.src.models
                 }
             }
         }
+
+        private void ModelsForm_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

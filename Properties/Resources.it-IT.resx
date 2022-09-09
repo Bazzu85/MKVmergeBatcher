@@ -211,7 +211,7 @@
     <value>Errore</value>
   </data>
   <data name="WarningJobLabel" xml:space="preserve">
-    <value>Warning</value>
+    <value>Attenzione</value>
   </data>
   <data name="OkJobLabel" xml:space="preserve">
     <value>Ok</value>

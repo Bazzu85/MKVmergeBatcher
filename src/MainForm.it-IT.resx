@@ -118,6 +118,12 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="viewToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>69, 20</value>
+  </data>
+  <data name="viewToolStripMenuItem.Text" xml:space="preserve">
+    <value>Visualizza</value>
+  </data>
   <data name="importV1UserDatajsonToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
     <value>163, 22</value>
   </data>
@@ -130,23 +136,26 @@
   <data name="exitToolStripMenuItem.Text" xml:space="preserve">
     <value>Esci</value>
   </data>
+  <data name="modelsToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>115, 22</value>
+  </data>
   <data name="modelsToolStripMenuItem.Text" xml:space="preserve">
     <value>Modelli</value>
+  </data>
+  <data name="optionsToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>115, 22</value>
   </data>
   <data name="optionsToolStripMenuItem.Text" xml:space="preserve">
     <value>Opzioni</value>
   </data>
-  <data name="viewToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>69, 20</value>
-  </data>
-  <data name="viewToolStripMenuItem.Text" xml:space="preserve">
-    <value>Visualizza</value>
+  <data name="aboutToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>161, 22</value>
   </data>
   <data name="aboutToolStripMenuItem.Text" xml:space="preserve">
     <value>Info programma</value>
   </data>
   <data name="videoFilePathLabel.Size" type="System.Drawing.Size, System.Drawing">
-    <value>94, 13</value>
+    <value>93, 13</value>
   </data>
   <data name="videoFilePathLabel.Text" xml:space="preserve">
     <value>Indirizzo file video:</value>
@@ -160,6 +169,9 @@
   <data name="BrowseVideoFilesButton.Text" xml:space="preserve">
     <value>Sfoglia</value>
   </data>
+  <data name="videoFileListContextMenuStrip.Size" type="System.Drawing.Size, System.Drawing">
+    <value>170, 48</value>
+  </data>
   <data name="reverseSelectionToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
     <value>169, 22</value>
   </data>
@@ -171,9 +183,6 @@
   </data>
   <data name="clearSelectionToolStripMenuItem.Text" xml:space="preserve">
     <value>Rimuovi selezione</value>
-  </data>
-  <data name="videoFileListContextMenuStrip.Size" type="System.Drawing.Size, System.Drawing">
-    <value>170, 48</value>
   </data>
   <data name="addToQueueButton.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
@@ -204,22 +213,25 @@
 </value>
   </data>
   <data name="showQueueButton.Location" type="System.Drawing.Point, System.Drawing">
-    <value>520, 418</value>
+    <value>509, 418</value>
+  </data>
+  <data name="showQueueButton.Size" type="System.Drawing.Size, System.Drawing">
+    <value>120, 31</value>
   </data>
   <data name="showQueueButton.Text" xml:space="preserve">
     <value>Visualizza coda</value>
   </data>
   <data name="subfolderSearchCheckBox.Size" type="System.Drawing.Size, System.Drawing">
-    <value>145, 17</value>
+    <value>177, 17</value>
   </data>
   <data name="subfolderSearchCheckBox.Text" xml:space="preserve">
     <value>Vuoi cercare nelle sottocartelle?</value>
   </data>
   <data name="applyFileNameExclusionCheckBox.Location" type="System.Drawing.Point, System.Drawing">
-    <value>164, 58</value>
+    <value>198, 58</value>
   </data>
   <data name="applyFileNameExclusionCheckBox.Size" type="System.Drawing.Size, System.Drawing">
-    <value>153, 17</value>
+    <value>180, 17</value>
   </data>
   <data name="applyFileNameExclusionCheckBox.Text" xml:space="preserve">
     <value>Vuoi applicare il filtro ai nomi file?</value>
@@ -1785,17 +1797,5 @@
         /AD////////////////////////8AP////////////////////////wA////////////////////////
         /AA=
 </value>
-  </data>
-  <data name="$this.Text" xml:space="preserve">
-    <value>MKVmerge Batcher</value>
-  </data>
-  <data name="fileToolStripMenuItem.Text" xml:space="preserve">
-    <value>File</value>
-  </data>
-  <data name="helpToolStripMenuItem.Text" xml:space="preserve">
-    <value>?</value>
-  </data>
-  <data name="menuStrip.Text" xml:space="preserve">
-    <value>Menu</value>
   </data>
 </root>

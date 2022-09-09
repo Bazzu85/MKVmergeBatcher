@@ -118,9 +118,6 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
-  <data name="loadSavedModelButton.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
-    <value>MiddleRight</value>
-  </data>
   <data name="customCommandCheckBox.Size" type="System.Drawing.Size, System.Drawing">
     <value>299, 17</value>
   </data>
@@ -131,9 +128,6 @@
   <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
   <data name="noGlobalTagsCheckBox.TabIndex" type="System.Int32, mscorlib">
     <value>0</value>
-  </data>
-  <data name="moveTrackUpButton.Location" type="System.Drawing.Point, System.Drawing">
-    <value>797, 63</value>
   </data>
   <data name="&gt;&gt;customInputFileArgumentsTextBox.Name" xml:space="preserve">
     <value>customInputFileArgumentsTextBox</value>
@@ -169,6 +163,9 @@
         0HE0PuL+7wmejvUN+tBW0Efp03iNC7Qnyl8wgl4wR9ZV81dUe7Q3eLpa+uFK+pSd1p4R5RpalmX9x5Lk
         F0L8I+csr3KaAAAAAElFTkSuQmCC
 </value>
+  </data>
+  <data name="languageDataGridViewTextBoxColumn.Width" type="System.Int32, mscorlib">
+    <value>98</value>
   </data>
   <data name="moveTrackDownButton.Size" type="System.Drawing.Size, System.Drawing">
     <value>25, 25</value>
@@ -221,8 +218,8 @@
   <data name="customOutputFilesArgumentsGroupBox.TabIndex" type="System.Int32, mscorlib">
     <value>11</value>
   </data>
-  <data name="&gt;&gt;loadSavedModelButton.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  <data name="loadSavedModelButton.Text" xml:space="preserve">
+    <value>Load Saved Model</value>
   </data>
   <data name="&gt;&gt;moveTrackBottomButton.Type" xml:space="preserve">
     <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
@@ -316,8 +313,8 @@
   <data name="&gt;&gt;noTrackTagsCheckBox.Name" xml:space="preserve">
     <value>noTrackTagsCheckBox</value>
   </data>
-  <data name="copyTrackButton.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
-    <value>Top, Right</value>
+  <data name="loadSavedModelButton.Location" type="System.Drawing.Point, System.Drawing">
+    <value>109, 676</value>
   </data>
   <data name="&gt;&gt;addTrackButton.Parent" xml:space="preserve">
     <value>$this</value>
@@ -327,9 +324,6 @@
   </data>
   <data name="customCommandCheckBox.TabIndex" type="System.Int32, mscorlib">
     <value>9</value>
-  </data>
-  <data name="loadSavedModelButton.Size" type="System.Drawing.Size, System.Drawing">
-    <value>127, 23</value>
   </data>
   <data name="&gt;&gt;trackBindingSource.Type" xml:space="preserve">
     <value>System.Windows.Forms.BindingSource, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
@@ -379,6 +373,9 @@
   <data name="noAttachmentsCheckBox.TabIndex" type="System.Int32, mscorlib">
     <value>0</value>
   </data>
+  <data name="copyTrackButton.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Right</value>
+  </data>
   <data name="$this.AutoScaleDimensions" type="System.Drawing.SizeF, System.Drawing">
     <value>6, 13</value>
   </data>
@@ -388,14 +385,25 @@
   <data name="&gt;&gt;tracksDataGridView.ZOrder" xml:space="preserve">
     <value>17</value>
   </data>
-  <data name="noCompressionCheckBox.Text" xml:space="preserve">
-    <value>--compression none for all tracks</value>
+  <data name="copyTrackButton.Location" type="System.Drawing.Point, System.Drawing">
+    <value>797, 217</value>
   </data>
   <data name="originalFileNumberDataGridViewTextBoxColumn.Width" type="System.Int32, mscorlib">
     <value>114</value>
   </data>
   <data name="&gt;&gt;modelBindingSource.Type" xml:space="preserve">
     <value>System.Windows.Forms.BindingSource, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="moveTrackBottomButton.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6
+        JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAACXBIWXMAATr2AAE69gE6sVc6AAAA8klE
+        QVRYR+3TMUoDQRhA4VFULDRgp1hLqlRKcgAxhdhYeATBykMEQop4B0MQUnsBWwvBWkwp2ngJ31snIJJG
+        md3qf/DB7MwPS8JsiqIoiv7QHk6wWT0tz7M+nC3eMT5wg203ftWCZ844W7w1XOIdd9jHItczeOaMs7V1
+        ijke0Mlcv8KzRuriGS/ZEw5Ra+vYwUr1lFIb99mBG+SZM84Wzy/gEWfV03dePC3yzBlni7eLKbzlV/h5
+        0Vy75yW8hbO15K8d4xMDbGXDvDfCsk+0aBu4hi+cZK7d86yRVnEB//I3nOe9RvPG93CU11EURdE/SukL
+        Kawj/PvhTCYAAAAASUVORK5CYII=
+</value>
   </data>
   <data name="&gt;&gt;customCommandCheckBox.Name" xml:space="preserve">
     <value>customCommandCheckBox</value>
@@ -469,9 +477,6 @@
   <data name="&gt;&gt;modelNameTextBox.Name" xml:space="preserve">
     <value>modelNameTextBox</value>
   </data>
-  <data name="&gt;&gt;modelBindingSource.Name" xml:space="preserve">
-    <value>modelBindingSource</value>
-  </data>
   <data name="&gt;&gt;addTrackButton.Type" xml:space="preserve">
     <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
@@ -500,14 +505,14 @@
   <data name="addChaptersCheckBox.TabIndex" type="System.Int32, mscorlib">
     <value>0</value>
   </data>
-  <data name="&gt;&gt;customInputFileArgumentsTextBox.Parent" xml:space="preserve">
-    <value>customInputFilesArgumentsGroupBox</value>
+  <data name="loadSavedModelButton.ImageAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>MiddleLeft</value>
   </data>
   <data name="&gt;&gt;deleteTrackButton.Type" xml:space="preserve">
     <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;saveModelButton.Name" xml:space="preserve">
-    <value>saveModelButton</value>
+  <data name="moveTrackUpButton.Location" type="System.Drawing.Point, System.Drawing">
+    <value>797, 63</value>
   </data>
   <data name="&gt;&gt;copyTrackButton.Name" xml:space="preserve">
     <value>copyTrackButton</value>
@@ -578,9 +583,6 @@
   <data name="&gt;&gt;editTrackButton.ZOrder" xml:space="preserve">
     <value>2</value>
   </data>
-  <data name="loadSavedModelButton.ImageAlign" type="System.Drawing.ContentAlignment, System.Drawing">
-    <value>MiddleLeft</value>
-  </data>
   <data name="moveTrackUpButton.Size" type="System.Drawing.Size, System.Drawing">
     <value>25, 25</value>
   </data>
@@ -620,8 +622,8 @@
   <data name="&gt;&gt;noCompressionCheckBox.Type" xml:space="preserve">
     <value>System.Windows.Forms.CheckBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="originalFileSuffixDataGridViewTextBoxColumn.HeaderText" xml:space="preserve">
-    <value>Original File Suffix</value>
+  <data name="&gt;&gt;okButton.Name" xml:space="preserve">
+    <value>okButton</value>
   </data>
   <data name="okButton.TabIndex" type="System.Int32, mscorlib">
     <value>18</value>
@@ -635,11 +637,14 @@
   <data name="deleteTrackButton.BackgroundImageLayout" type="System.Windows.Forms.ImageLayout, System.Windows.Forms">
     <value>Stretch</value>
   </data>
+  <data name="&gt;&gt;customInputFileArgumentsTextBox.Parent" xml:space="preserve">
+    <value>customInputFilesArgumentsGroupBox</value>
+  </data>
   <data name="&gt;&gt;copyTrackButton.Type" xml:space="preserve">
     <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="loadSavedModelButton.Location" type="System.Drawing.Point, System.Drawing">
-    <value>109, 676</value>
+  <data name="loadSavedModelButton.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>MiddleRight</value>
   </data>
   <data name="&gt;&gt;noAttachmentsCheckBox.Type" xml:space="preserve">
     <value>System.Windows.Forms.CheckBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
@@ -655,6 +660,9 @@
   </data>
   <data name="addTrackButton.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Top, Right</value>
+  </data>
+  <data name="&gt;&gt;saveModelButton.Name" xml:space="preserve">
+    <value>saveModelButton</value>
   </data>
   <data name="&gt;&gt;addTrackButton.ZOrder" xml:space="preserve">
     <value>8</value>
@@ -2272,6 +2280,9 @@
   <data name="modelNameLabel.Size" type="System.Drawing.Size, System.Drawing">
     <value>38, 13</value>
   </data>
+  <data name="originalFileSuffixDataGridViewTextBoxColumn.HeaderText" xml:space="preserve">
+    <value>Original File Suffix</value>
+  </data>
   <data name="okButton.Location" type="System.Drawing.Point, System.Drawing">
     <value>666, 676</value>
   </data>
@@ -2281,8 +2292,8 @@
   <data name="emptyTitleCheckBox.TabIndex" type="System.Int32, mscorlib">
     <value>0</value>
   </data>
-  <data name="originalFileTrackPositionDataGridViewTextBoxColumn.Width" type="System.Int32, mscorlib">
-    <value>109</value>
+  <data name="&gt;&gt;languageDataGridViewTextBoxColumn.Type" xml:space="preserve">
+    <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="editTrackButton.BackgroundImageLayout" type="System.Windows.Forms.ImageLayout, System.Windows.Forms">
     <value>Stretch</value>
@@ -2296,8 +2307,8 @@
   <data name="&gt;&gt;languageDataGridViewTextBoxColumn.Name" xml:space="preserve">
     <value>languageDataGridViewTextBoxColumn</value>
   </data>
-  <data name="copyTrackButton.Location" type="System.Drawing.Point, System.Drawing">
-    <value>797, 217</value>
+  <data name="originalFileTrackPositionDataGridViewTextBoxColumn.Width" type="System.Int32, mscorlib">
+    <value>109</value>
   </data>
   <data name="&gt;&gt;addChaptersCheckBox.ZOrder" xml:space="preserve">
     <value>1</value>
@@ -2332,8 +2343,8 @@
   <data name="originalFileExtensionDataGridViewTextBoxColumn.HeaderText" xml:space="preserve">
     <value>Original File Extension</value>
   </data>
-  <data name="&gt;&gt;customOutputFilesArgumentsGroupBox.ZOrder" xml:space="preserve">
-    <value>15</value>
+  <data name="loadSavedModelButton.Size" type="System.Drawing.Size, System.Drawing">
+    <value>127, 23</value>
   </data>
   <data name="emptyTitleCheckBox.Text" xml:space="preserve">
     <value>--title empty</value>
@@ -2392,8 +2403,8 @@
   <data name="&gt;&gt;nameDataGridViewTextBoxColumn.Type" xml:space="preserve">
     <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="addTrackButton.TabIndex" type="System.Int32, mscorlib">
-    <value>14</value>
+  <data name="&gt;&gt;customOutputFileArgumentsBindingSource.Type" xml:space="preserve">
+    <value>System.Windows.Forms.BindingSource, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="customInputFileArgumentsTextBox.Location" type="System.Drawing.Point, System.Drawing">
     <value>6, 42</value>
@@ -2413,8 +2424,8 @@
         2ItLhJQU95lhtlFdPxNkyV8ohCeBci+m0F2eLwAAAABJRU5ErkJggg==
 </value>
   </data>
-  <data name="&gt;&gt;forcedFlagDataGridViewCheckBoxColumn.Name" xml:space="preserve">
-    <value>forcedFlagDataGridViewCheckBoxColumn</value>
+  <data name="moveTrackTopButton.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Right</value>
   </data>
   <data name="&gt;&gt;addAttachmentsCheckBox.Parent" xml:space="preserve">
     <value>customOutputFilesArgumentsGroupBox</value>
@@ -2425,21 +2436,10 @@
   <data name="&gt;&gt;loadSavedModelButton.ZOrder" xml:space="preserve">
     <value>0</value>
   </data>
-  <data name="moveTrackBottomButton.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-    <value>
-        iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6
-        JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAACXBIWXMAATr2AAE69gE6sVc6AAAA8klE
-        QVRYR+3TMUoDQRhA4VFULDRgp1hLqlRKcgAxhdhYeATBykMEQop4B0MQUnsBWwvBWkwp2ngJ31snIJJG
-        md3qf/DB7MwPS8JsiqIoiv7QHk6wWT0tz7M+nC3eMT5wg203ftWCZ844W7w1XOIdd9jHItczeOaMs7V1
-        ijke0Mlcv8KzRuriGS/ZEw5Ra+vYwUr1lFIb99mBG+SZM84Wzy/gEWfV03dePC3yzBlni7eLKbzlV/h5
-        0Vy75yW8hbO15K8d4xMDbGXDvDfCsk+0aBu4hi+cZK7d86yRVnEB//I3nOe9RvPG93CU11EURdE/SukL
-        Kawj/PvhTCYAAAAASUVORK5CYII=
-</value>
+  <data name="&gt;&gt;modelBindingSource.Name" xml:space="preserve">
+    <value>modelBindingSource</value>
   </data>
   <data name="&gt;&gt;originalFileExtensionDataGridViewTextBoxColumn.Type" xml:space="preserve">
-    <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;languageDataGridViewTextBoxColumn.Type" xml:space="preserve">
     <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="noCompressionCheckBox.TabIndex" type="System.Int32, mscorlib">
@@ -2478,8 +2478,8 @@
   <data name="&gt;&gt;tracksDataGridView.Parent" xml:space="preserve">
     <value>$this</value>
   </data>
-  <data name="loadSavedModelButton.Text" xml:space="preserve">
-    <value>Load Saved Model</value>
+  <data name="&gt;&gt;customOutputFilesArgumentsGroupBox.ZOrder" xml:space="preserve">
+    <value>15</value>
   </data>
   <data name="originalFileSuffixDataGridViewTextBoxColumn.Width" type="System.Int32, mscorlib">
     <value>81</value>
@@ -2511,8 +2511,8 @@
   <data name="moveTrackUpButton.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Top, Right</value>
   </data>
-  <data name="saveModelButton.Size" type="System.Drawing.Size, System.Drawing">
-    <value>91, 23</value>
+  <data name="noCompressionCheckBox.Text" xml:space="preserve">
+    <value>--compression none for all tracks</value>
   </data>
   <data name="&gt;&gt;moveTrackTopButton.Type" xml:space="preserve">
     <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
@@ -2522,9 +2522,6 @@
   </data>
   <data name="modelNameLabel.Text" xml:space="preserve">
     <value>Name:</value>
-  </data>
-  <data name="moveTrackTopButton.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
-    <value>Top, Right</value>
   </data>
   <data name="&gt;&gt;customOutputFileArgumentsBindingSource.Name" xml:space="preserve">
     <value>customOutputFileArgumentsBindingSource</value>
@@ -2589,8 +2586,8 @@
   <data name="&gt;&gt;customOutputFileArgumentsTextBox.Type" xml:space="preserve">
     <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="languageDataGridViewTextBoxColumn.Width" type="System.Int32, mscorlib">
-    <value>98</value>
+  <data name="addTrackButton.TabIndex" type="System.Int32, mscorlib">
+    <value>14</value>
   </data>
   <data name="modelNameLabel.Location" type="System.Drawing.Point, System.Drawing">
     <value>9, 9</value>
@@ -2661,11 +2658,17 @@
   <data name="&gt;&gt;noAttachmentsCheckBox.Name" xml:space="preserve">
     <value>noAttachmentsCheckBox</value>
   </data>
-  <data name="&gt;&gt;customOutputFileArgumentsBindingSource.Type" xml:space="preserve">
-    <value>System.Windows.Forms.BindingSource, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  <data name="saveModelButton.Size" type="System.Drawing.Size, System.Drawing">
+    <value>91, 23</value>
+  </data>
+  <data name="&gt;&gt;loadSavedModelButton.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="modelNameTextBox.Size" type="System.Drawing.Size, System.Drawing">
     <value>768, 20</value>
+  </data>
+  <data name="&gt;&gt;forcedFlagDataGridViewCheckBoxColumn.Name" xml:space="preserve">
+    <value>forcedFlagDataGridViewCheckBoxColumn</value>
   </data>
   <data name="customCommandCheckBox.Location" type="System.Drawing.Point, System.Drawing">
     <value>12, 505</value>
@@ -2688,11 +2691,8 @@
   <data name="commandTextBox.Location" type="System.Drawing.Point, System.Drawing">
     <value>12, 528</value>
   </data>
-  <data name="&gt;&gt;okButton.Name" xml:space="preserve">
-    <value>okButton</value>
-  </data>
-  <metadata name="trackBindingSource.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>182, 17</value>
+  <metadata name="customOutputFileArgumentsBindingSource.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>617, 17</value>
   </metadata>
   <metadata name="modelBindingSource.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>17, 17</value>
@@ -2703,7 +2703,7 @@
   <metadata name="customInputFileArgumentsBindingSource.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>339, 17</value>
   </metadata>
-  <metadata name="customOutputFileArgumentsBindingSource.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>617, 17</value>
+  <metadata name="trackBindingSource.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>182, 17</value>
   </metadata>
 </root>

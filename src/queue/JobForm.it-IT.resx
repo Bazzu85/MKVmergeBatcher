@@ -119,64 +119,65 @@
   </resheader>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
   <data name="label1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>26, 9</value>
+    <value>12, 9</value>
   </data>
   <data name="label1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>82, 13</value>
+    <value>101, 35</value>
   </data>
   <data name="label1.Text" xml:space="preserve">
     <value>Cartella file sorgenti:</value>
   </data>
   <data name="label2.Location" type="System.Drawing.Point, System.Drawing">
-    <value>45, 53</value>
+    <value>12, 50</value>
   </data>
   <data name="label2.Size" type="System.Drawing.Size, System.Drawing">
-    <value>63, 13</value>
+    <value>101, 35</value>
   </data>
   <data name="label2.Text" xml:space="preserve">
     <value>Nome file sorgente:</value>
   </data>
   <data name="fileFolderTextBox.Location" type="System.Drawing.Point, System.Drawing">
-    <value>114, 9</value>
+    <value>119, 9</value>
   </data>
   <data name="fileFolderTextBox.Size" type="System.Drawing.Size, System.Drawing">
-    <value>554, 35</value>
+    <value>549, 35</value>
   </data>
   <data name="fileNameTextBox.Location" type="System.Drawing.Point, System.Drawing">
-    <value>114, 50</value>
+    <value>119, 50</value>
   </data>
   <data name="fileNameTextBox.Size" type="System.Drawing.Size, System.Drawing">
-    <value>554, 35</value>
-  </data>
-  <data name="label3.Location" type="System.Drawing.Point, System.Drawing">
-    <value>9, 91</value>
+    <value>549, 35</value>
   </data>
   <data name="label3.Size" type="System.Drawing.Size, System.Drawing">
-    <value>135, 13</value>
+    <value>101, 50</value>
   </data>
   <data name="label3.Text" xml:space="preserve">
     <value>Percorso completo sorgente:</value>
   </data>
   <data name="fileFullPathTextBox.Location" type="System.Drawing.Point, System.Drawing">
-    <value>150, 91</value>
+    <value>119, 91</value>
   </data>
   <data name="fileFullPathTextBox.Size" type="System.Drawing.Size, System.Drawing">
-    <value>517, 50</value>
-  </data>
-  <data name="label4.Location" type="System.Drawing.Point, System.Drawing">
-    <value>51, 148</value>
+    <value>548, 50</value>
   </data>
   <data name="label4.Size" type="System.Drawing.Size, System.Drawing">
-    <value>57, 13</value>
+    <value>101, 15</value>
   </data>
   <data name="label4.Text" xml:space="preserve">
     <value>Progresso:</value>
   </data>
+  <data name="label4.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>TopRight</value>
+  </data>
   <data name="percentageTextBox.Location" type="System.Drawing.Point, System.Drawing">
-    <value>114, 148</value>
+    <value>119, 147</value>
+  </data>
+  <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="label5.AutoSize" type="System.Boolean, mscorlib">
+    <value>False</value>
   </data>
   <data name="label5.Location" type="System.Drawing.Point, System.Drawing">
-    <value>183, 151</value>
+    <value>188, 150</value>
   </data>
   <data name="label5.Size" type="System.Drawing.Size, System.Drawing">
     <value>35, 13</value>
@@ -184,47 +185,50 @@
   <data name="label5.Text" xml:space="preserve">
     <value>Stato:</value>
   </data>
-  <data name="jobStatusTextBox.Location" type="System.Drawing.Point, System.Drawing">
-    <value>229, 148</value>
+  <data name="label5.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>TopRight</value>
   </data>
-  <data name="label6.Location" type="System.Drawing.Point, System.Drawing">
-    <value>38, 173</value>
+  <data name="jobStatusTextBox.Location" type="System.Drawing.Point, System.Drawing">
+    <value>234, 147</value>
   </data>
   <data name="label6.Size" type="System.Drawing.Size, System.Drawing">
-    <value>70, 13</value>
+    <value>101, 50</value>
   </data>
   <data name="label6.Text" xml:space="preserve">
     <value>File destinazione:</value>
   </data>
   <data name="outputFileNameTextBox.Location" type="System.Drawing.Point, System.Drawing">
-    <value>114, 173</value>
+    <value>119, 173</value>
   </data>
   <data name="outputFileNameTextBox.Size" type="System.Drawing.Size, System.Drawing">
-    <value>553, 50</value>
+    <value>548, 50</value>
   </data>
   <data name="label7.Location" type="System.Drawing.Point, System.Drawing">
-    <value>53, 229</value>
+    <value>14, 229</value>
   </data>
   <data name="label7.Size" type="System.Drawing.Size, System.Drawing">
-    <value>55, 13</value>
+    <value>99, 137</value>
   </data>
   <data name="label7.Text" xml:space="preserve">
     <value>Comando:</value>
   </data>
   <data name="commandTextBox.Location" type="System.Drawing.Point, System.Drawing">
-    <value>114, 229</value>
+    <value>119, 229</value>
   </data>
   <data name="commandTextBox.Size" type="System.Drawing.Size, System.Drawing">
-    <value>553, 137</value>
+    <value>548, 137</value>
   </data>
   <data name="outputTextBox.Location" type="System.Drawing.Point, System.Drawing">
-    <value>114, 372</value>
+    <value>119, 372</value>
   </data>
   <data name="outputTextBox.Size" type="System.Drawing.Size, System.Drawing">
-    <value>553, 149</value>
+    <value>548, 149</value>
+  </data>
+  <data name="label8.Location" type="System.Drawing.Point, System.Drawing">
+    <value>14, 369</value>
   </data>
   <data name="label8.Size" type="System.Drawing.Size, System.Drawing">
-    <value>99, 13</value>
+    <value>99, 152</value>
   </data>
   <data name="label8.Text" xml:space="preserve">
     <value>Output esecuzione:</value>
