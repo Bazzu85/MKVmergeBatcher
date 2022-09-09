@@ -83,8 +83,8 @@ namespace MKVmergeBatcher.src.models
             // 
             // OriginalFileNumberNumericUpDown
             // 
-            this.OriginalFileNumberNumericUpDown.DataBindings.Add(new System.Windows.Forms.Binding("Value", this.trackBindingSource, "originalFileNumber", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
             resources.ApplyResources(this.OriginalFileNumberNumericUpDown, "OriginalFileNumberNumericUpDown");
+            this.OriginalFileNumberNumericUpDown.DataBindings.Add(new System.Windows.Forms.Binding("Value", this.trackBindingSource, "originalFileNumber", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
             this.OriginalFileNumberNumericUpDown.Name = "OriginalFileNumberNumericUpDown";
             // 
             // originalFilePositionLabel
@@ -94,8 +94,8 @@ namespace MKVmergeBatcher.src.models
             // 
             // OriginalFilePositionNumericUpDown
             // 
-            this.OriginalFilePositionNumericUpDown.DataBindings.Add(new System.Windows.Forms.Binding("Value", this.trackBindingSource, "originalFileTrackPosition", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
             resources.ApplyResources(this.OriginalFilePositionNumericUpDown, "OriginalFilePositionNumericUpDown");
+            this.OriginalFilePositionNumericUpDown.DataBindings.Add(new System.Windows.Forms.Binding("Value", this.trackBindingSource, "originalFileTrackPosition", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
             this.OriginalFilePositionNumericUpDown.Name = "OriginalFilePositionNumericUpDown";
             // 
             // languageCodeLabel

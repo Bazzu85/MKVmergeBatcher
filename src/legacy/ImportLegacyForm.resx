@@ -121,8 +121,8 @@
   <data name="$this.MinimumSize" type="System.Drawing.Size, System.Drawing">
     <value>450, 130</value>
   </data>
-  <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
-    <value>434, 91</value>
+  <data name="importProgressBar.Size" type="System.Drawing.Size, System.Drawing">
+    <value>269, 13</value>
   </data>
   <data name="&gt;&gt;oldUserDataLabel.Type" xml:space="preserve">
     <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
@@ -148,6 +148,9 @@
   </data>
   <data name="&gt;&gt;$this.Name" xml:space="preserve">
     <value>ImportLegacyForm</value>
+  </data>
+  <data name="oldUserDataTextBox.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
   </data>
   <data name="&gt;&gt;browseButton.Name" xml:space="preserve">
     <value>browseButton</value>
@@ -175,9 +178,6 @@
   </data>
   <data name="&gt;&gt;importProgressBar.ZOrder" xml:space="preserve">
     <value>1</value>
-  </data>
-  <data name="&gt;&gt;browseButton.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="browseButton.Location" type="System.Drawing.Point, System.Drawing">
     <value>347, 6</value>
@@ -274,8 +274,8 @@
   <data name="&gt;&gt;browseButton.Parent" xml:space="preserve">
     <value>$this</value>
   </data>
-  <data name="importProgressBar.Size" type="System.Drawing.Size, System.Drawing">
-    <value>269, 13</value>
+  <data name="&gt;&gt;browseButton.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="importLabel.Text" xml:space="preserve">
     <value>Working on model 0 of 0</value>
@@ -1866,8 +1866,8 @@
   <data name="oldUserDataLabel.Size" type="System.Drawing.Size, System.Drawing">
     <value>112, 13</value>
   </data>
-  <data name="oldUserDataTextBox.TabIndex" type="System.Int32, mscorlib">
-    <value>1</value>
+  <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
+    <value>434, 91</value>
   </data>
   <data name="&gt;&gt;$this.Type" xml:space="preserve">
     <value>System.Windows.Forms.Form, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>

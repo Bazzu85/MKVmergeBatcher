@@ -119,7 +119,7 @@
   </resheader>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
   <data name="customCommandCheckBox.Size" type="System.Drawing.Size, System.Drawing">
-    <value>366, 17</value>
+    <value>351, 17</value>
   </data>
   <data name="customCommandCheckBox.Text" xml:space="preserve">
     <value>Inserisci comando personalizzato (esclude le impostazioni precedenti)</value>
@@ -177,7 +177,13 @@
     <value>Posizione traccia file originale</value>
   </data>
   <data name="originalFileTrackPositionDataGridViewTextBoxColumn.Width" type="System.Int32, mscorlib">
-    <value>142</value>
+    <value>119</value>
+  </data>
+  <data name="languageDataGridViewTextBoxColumn.HeaderText" xml:space="preserve">
+    <value>Codice lingua</value>
+  </data>
+  <data name="languageDataGridViewTextBoxColumn.Width" type="System.Int32, mscorlib">
+    <value>87</value>
   </data>
   <data name="nameDataGridViewTextBoxColumn.HeaderText" xml:space="preserve">
     <value>Nome traccia</value>
@@ -185,11 +191,23 @@
   <data name="nameDataGridViewTextBoxColumn.Width" type="System.Int32, mscorlib">
     <value>86</value>
   </data>
+  <data name="defaultFlagDataGridViewCheckBoxColumn.HeaderText" xml:space="preserve">
+    <value>Predefinito</value>
+  </data>
+  <data name="defaultFlagDataGridViewCheckBoxColumn.Width" type="System.Int32, mscorlib">
+    <value>62</value>
+  </data>
+  <data name="forcedFlagDataGridViewCheckBoxColumn.HeaderText" xml:space="preserve">
+    <value>Forzato</value>
+  </data>
+  <data name="forcedFlagDataGridViewCheckBoxColumn.Width" type="System.Int32, mscorlib">
+    <value>47</value>
+  </data>
   <data name="originalFileSuffixDataGridViewTextBoxColumn.HeaderText" xml:space="preserve">
     <value>Suffisso file originale</value>
   </data>
   <data name="originalFileSuffixDataGridViewTextBoxColumn.Width" type="System.Int32, mscorlib">
-    <value>95</value>
+    <value>115</value>
   </data>
   <data name="originalFileExtensionDataGridViewTextBoxColumn.HeaderText" xml:space="preserve">
     <value>Estensione file originale</value>
@@ -1891,23 +1909,5 @@
   </data>
   <data name="$this.Text" xml:space="preserve">
     <value>Modello</value>
-  </data>
-  <data name="defaultFlagDataGridViewCheckBoxColumn.HeaderText" xml:space="preserve">
-    <value>Predefinito</value>
-  </data>
-  <data name="forcedFlagDataGridViewCheckBoxColumn.HeaderText" xml:space="preserve">
-    <value>Forzato</value>
-  </data>
-  <data name="languageDataGridViewTextBoxColumn.HeaderText" xml:space="preserve">
-    <value>Codice lingua</value>
-  </data>
-  <data name="noAttachmentsCheckBox.Text" xml:space="preserve">
-    <value>--no-attachments</value>
-  </data>
-  <data name="noGlobalTagsCheckBox.Text" xml:space="preserve">
-    <value>--no-global-tags</value>
-  </data>
-  <data name="noTrackTagsCheckBox.Text" xml:space="preserve">
-    <value>--no-track-tags</value>
   </data>
 </root>

@@ -145,20 +145,41 @@
   <data name="OriginalFilePositionNumericUpDown.Location" type="System.Drawing.Point, System.Drawing">
     <value>315, 39</value>
   </data>
+  <data name="languageCodeLabel.Location" type="System.Drawing.Point, System.Drawing">
+    <value>15, 70</value>
+  </data>
+  <data name="languageCodeLabel.Size" type="System.Drawing.Size, System.Drawing">
+    <value>83, 17</value>
+  </data>
+  <data name="languageCodeLabel.Text" xml:space="preserve">
+    <value>Codice lingua:</value>
+  </data>
   <data name="languageCodeTextBox.Size" type="System.Drawing.Size, System.Drawing">
     <value>268, 20</value>
   </data>
   <data name="trackNameLabel.Location" type="System.Drawing.Point, System.Drawing">
-    <value>25, 96</value>
+    <value>15, 96</value>
   </data>
   <data name="trackNameLabel.Size" type="System.Drawing.Size, System.Drawing">
-    <value>73, 13</value>
+    <value>83, 17</value>
   </data>
   <data name="trackNameLabel.Text" xml:space="preserve">
     <value>Nome traccia:</value>
   </data>
   <data name="trackNameTextBox.Size" type="System.Drawing.Size, System.Drawing">
     <value>268, 20</value>
+  </data>
+  <data name="defaultCheckBox.Size" type="System.Drawing.Size, System.Drawing">
+    <value>76, 17</value>
+  </data>
+  <data name="defaultCheckBox.Text" xml:space="preserve">
+    <value>Predefinito</value>
+  </data>
+  <data name="forcedCheckBox.Size" type="System.Drawing.Size, System.Drawing">
+    <value>61, 17</value>
+  </data>
+  <data name="forcedCheckBox.Text" xml:space="preserve">
+    <value>Forzato</value>
   </data>
   <data name="originalFileSuffixLabel.Location" type="System.Drawing.Point, System.Drawing">
     <value>12, 145</value>
@@ -192,6 +213,9 @@
   </data>
   <data name="cancelButton.Text" xml:space="preserve">
     <value>Annulla</value>
+  </data>
+  <data name="okButton.Text" xml:space="preserve">
+    <value>OK</value>
   </data>
   <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
     <value>384, 231</value>
@@ -1760,23 +1784,5 @@
   </data>
   <data name="$this.Text" xml:space="preserve">
     <value>Gestisci traccia</value>
-  </data>
-  <data name="typeComboBox.Items" xml:space="preserve">
-    <value>Video</value>
-  </data>
-  <data name="typeComboBox.Items1" xml:space="preserve">
-    <value>Audio</value>
-  </data>
-  <data name="okButton.Text" xml:space="preserve">
-    <value>OK</value>
-  </data>
-  <data name="languageCodeLabel.Text" xml:space="preserve">
-    <value>Codice lingua:</value>
-  </data>
-  <data name="forcedCheckBox.Text" xml:space="preserve">
-    <value>Forzato</value>
-  </data>
-  <data name="defaultCheckBox.Text" xml:space="preserve">
-    <value>Predefinito</value>
   </data>
 </root>

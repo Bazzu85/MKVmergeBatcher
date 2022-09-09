@@ -121,14 +121,21 @@
   <data name="$this.MinimumSize" type="System.Drawing.Size, System.Drawing">
     <value>220, 220</value>
   </data>
+  <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
+    <value>204, 181</value>
+  </data>
   <data name="githubLinkLabel.ImageAlign" type="System.Drawing.ContentAlignment, System.Drawing">
     <value>MiddleLeft</value>
   </data>
   <data name="discordLinkLabel.Size" type="System.Drawing.Size, System.Drawing">
     <value>75, 13</value>
   </data>
-  <data name="&gt;&gt;githubLinkLabel.ZOrder" xml:space="preserve">
-    <value>2</value>
+  <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="discordPictureBox.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="discordLinkLabel.Text" xml:space="preserve">
+    <value>Discord server</value>
   </data>
   <data name="buyMeCoffeePictureBox.Location" type="System.Drawing.Point, System.Drawing">
     <value>12, 124</value>
@@ -162,11 +169,11 @@
         RU5ErkJggg==
 </value>
   </data>
-  <data name="appVersionLabel.Text" xml:space="preserve">
-    <value>MkvMerge Batcher v.x.x.x.xxx</value>
-  </data>
   <data name="&gt;&gt;$this.Name" xml:space="preserve">
     <value>AboutForm</value>
+  </data>
+  <data name="appVersionLabel.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
   </data>
   <data name="&gt;&gt;buyMeCoffeePictureBox.ZOrder" xml:space="preserve">
     <value>0</value>
@@ -225,15 +232,11 @@
   <data name="discordLinkLabel.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
   </data>
-  <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="appVersionLabel.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
+  <data name="discordPictureBox.SizeMode" type="System.Windows.Forms.PictureBoxSizeMode, System.Windows.Forms">
+    <value>CenterImage</value>
   </data>
   <data name="githubLinkLabel.TabIndex" type="System.Int32, mscorlib">
     <value>2</value>
-  </data>
-  <data name="discordPictureBox.SizeMode" type="System.Windows.Forms.PictureBoxSizeMode, System.Windows.Forms">
-    <value>CenterImage</value>
   </data>
   <data name="&gt;&gt;discordLinkLabel.Type" xml:space="preserve">
     <value>System.Windows.Forms.LinkLabel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
@@ -244,8 +247,8 @@
   <data name="githubLinkLabel.Size" type="System.Drawing.Size, System.Drawing">
     <value>100, 13</value>
   </data>
-  <data name="discordLinkLabel.Location" type="System.Drawing.Point, System.Drawing">
-    <value>54, 93</value>
+  <data name="appVersionLabel.Size" type="System.Drawing.Size, System.Drawing">
+    <value>149, 13</value>
   </data>
   <data name="&gt;&gt;githubPictureBox.Type" xml:space="preserve">
     <value>System.Windows.Forms.PictureBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
@@ -283,9 +286,6 @@
   <data name="buyMeCoffeePictureBox.SizeMode" type="System.Windows.Forms.PictureBoxSizeMode, System.Windows.Forms">
     <value>CenterImage</value>
   </data>
-  <data name="&gt;&gt;appVersionLabel.ZOrder" xml:space="preserve">
-    <value>5</value>
-  </data>
   <data name="discordPictureBox.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6
@@ -306,8 +306,8 @@
   <data name="githubLinkLabel.Text" xml:space="preserve">
     <value>Github project page</value>
   </data>
-  <data name="appVersionLabel.TabIndex" type="System.Int32, mscorlib">
-    <value>0</value>
+  <data name="appVersionLabel.Text" xml:space="preserve">
+    <value>MkvMerge Batcher v.x.x.x.xxx</value>
   </data>
   <data name="&gt;&gt;discordLinkLabel.Parent" xml:space="preserve">
     <value>$this</value>
@@ -321,11 +321,11 @@
   <data name="$this.MaximumSize" type="System.Drawing.Size, System.Drawing">
     <value>220, 220</value>
   </data>
-  <data name="appVersionLabel.Size" type="System.Drawing.Size, System.Drawing">
-    <value>149, 13</value>
-  </data>
   <data name="discordLinkLabel.ImageAlign" type="System.Drawing.ContentAlignment, System.Drawing">
     <value>MiddleLeft</value>
+  </data>
+  <data name="appVersionLabel.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
   </data>
   <data name="discordPictureBox.Location" type="System.Drawing.Point, System.Drawing">
     <value>12, 79</value>
@@ -1886,11 +1886,11 @@
         /AA=
 </value>
   </data>
-  <data name="discordPictureBox.TabIndex" type="System.Int32, mscorlib">
-    <value>1</value>
-  </data>
   <data name="&gt;&gt;githubPictureBox.ZOrder" xml:space="preserve">
     <value>4</value>
+  </data>
+  <data name="&gt;&gt;githubLinkLabel.ZOrder" xml:space="preserve">
+    <value>2</value>
   </data>
   <data name="$this.Text" xml:space="preserve">
     <value>About</value>
@@ -1904,8 +1904,8 @@
   <data name="&gt;&gt;githubLinkLabel.Name" xml:space="preserve">
     <value>githubLinkLabel</value>
   </data>
-  <data name="discordLinkLabel.Text" xml:space="preserve">
-    <value>Discord server</value>
+  <data name="discordLinkLabel.Location" type="System.Drawing.Point, System.Drawing">
+    <value>54, 93</value>
   </data>
   <data name="githubPictureBox.Location" type="System.Drawing.Point, System.Drawing">
     <value>12, 34</value>
@@ -1928,8 +1928,8 @@
   <data name="&gt;&gt;githubLinkLabel.Parent" xml:space="preserve">
     <value>$this</value>
   </data>
-  <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
-    <value>204, 181</value>
+  <data name="&gt;&gt;appVersionLabel.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;$this.Type" xml:space="preserve">
     <value>System.Windows.Forms.Form, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
@@ -1943,8 +1943,8 @@
   <data name="&gt;&gt;buyMeCoffeePictureBox.Parent" xml:space="preserve">
     <value>$this</value>
   </data>
-  <data name="&gt;&gt;appVersionLabel.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  <data name="&gt;&gt;appVersionLabel.ZOrder" xml:space="preserve">
+    <value>5</value>
   </data>
   <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>

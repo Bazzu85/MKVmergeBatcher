@@ -120,10 +120,10 @@
   <data name="&gt;&gt;customInputFileArgumentsTextBox.Type" xml:space="preserve">
     <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="editModelButton.ToolTip" xml:space="preserve">
-    <value />
-  </data>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="moveModelDownButton.Size" type="System.Drawing.Size, System.Drawing">
+    <value>25, 25</value>
+  </data>
   <data name="customCommandCheckBox.Size" type="System.Drawing.Size, System.Drawing">
     <value>299, 17</value>
   </data>
@@ -138,17 +138,17 @@
   <data name="&gt;&gt;customInputFileArgumentsTextBox.Name" xml:space="preserve">
     <value>customInputFileArgumentsTextBox</value>
   </data>
+  <data name="commandTextBox.Size" type="System.Drawing.Size, System.Drawing">
+    <value>735, 161</value>
+  </data>
   <data name="addAttachmentsCheckBox.ToolTip" xml:space="preserve">
     <value />
   </data>
   <data name="$this.ToolTip" xml:space="preserve">
     <value />
   </data>
-  <data name="copyModelButton.Location" type="System.Drawing.Point, System.Drawing">
-    <value>0, 217</value>
-  </data>
-  <data name="$this.AutoScaleDimensions" type="System.Drawing.SizeF, System.Drawing">
-    <value>6, 13</value>
+  <data name="&gt;&gt;addAttachmentsCheckBox.Type" xml:space="preserve">
+    <value>System.Windows.Forms.CheckBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;addAttachmentsCheckBox.Name" xml:space="preserve">
     <value>addAttachmentsCheckBox</value>
@@ -159,14 +159,8 @@
   <data name="addChaptersCheckBox.Location" type="System.Drawing.Point, System.Drawing">
     <value>229, 19</value>
   </data>
-  <data name="&gt;&gt;customOutputFileArgumentsBindingSource.Name" xml:space="preserve">
-    <value>customOutputFileArgumentsBindingSource</value>
-  </data>
   <data name="customInputFileArgumentsTextBox.Size" type="System.Drawing.Size, System.Drawing">
     <value>735, 59</value>
-  </data>
-  <data name="originalFileNumberDataGridViewTextBoxColumn.HeaderText" xml:space="preserve">
-    <value>Original File Number</value>
   </data>
   <data name="customOutputFileArgumentsTextBox.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Top, Bottom, Left, Right</value>
@@ -222,6 +216,9 @@
   <data name="&gt;&gt;commandTextBox.ZOrder" xml:space="preserve">
     <value>2</value>
   </data>
+  <data name="&gt;&gt;noGlobalTagsCheckBox.Name" xml:space="preserve">
+    <value>noGlobalTagsCheckBox</value>
+  </data>
   <data name="customOutputFileArgumentsTextBox.Size" type="System.Drawing.Size, System.Drawing">
     <value>735, 59</value>
   </data>
@@ -230,6 +227,12 @@
   </data>
   <data name="&gt;&gt;modelNameLabel.ZOrder" xml:space="preserve">
     <value>7</value>
+  </data>
+  <data name="moveModelTopButton.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 0</value>
+  </data>
+  <data name="emptyTitleCheckBox.Location" type="System.Drawing.Point, System.Drawing">
+    <value>6, 19</value>
   </data>
   <data name="&gt;&gt;noTrackTagsCheckBox.Parent" xml:space="preserve">
     <value>customInputFilesArgumentsGroupBox</value>
@@ -267,6 +270,9 @@
   <data name="noGlobalTagsCheckBox.Location" type="System.Drawing.Point, System.Drawing">
     <value>301, 19</value>
   </data>
+  <data name="forcedFlagDataGridViewCheckBoxColumn.Width" type="System.Int32, mscorlib">
+    <value>45</value>
+  </data>
   <data name="customInputFilesArgumentsGroupBox.ToolTip" xml:space="preserve">
     <value />
   </data>
@@ -292,9 +298,6 @@
   <data name="deleteModelButton.ToolTip" xml:space="preserve">
     <value>Delete model</value>
   </data>
-  <data name="editModelButton.ImageAlign" type="System.Drawing.ContentAlignment, System.Drawing">
-    <value>TopCenter</value>
-  </data>
   <data name="moveModelDownButton.TabIndex" type="System.Int32, mscorlib">
     <value>0</value>
   </data>
@@ -313,11 +316,8 @@
   <data name="modelsListBox.ToolTip" xml:space="preserve">
     <value />
   </data>
-  <data name="&gt;&gt;noGlobalTagsCheckBox.Name" xml:space="preserve">
-    <value>noGlobalTagsCheckBox</value>
-  </data>
-  <data name="moveModelUpButton.Size" type="System.Drawing.Size, System.Drawing">
-    <value>25, 25</value>
+  <data name="tracksDataGridView.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
   </data>
   <data name="addModelButton.BackgroundImageLayout" type="System.Windows.Forms.ImageLayout, System.Windows.Forms">
     <value>Stretch</value>
@@ -325,8 +325,8 @@
   <data name="moveModelUpButton.TabIndex" type="System.Int32, mscorlib">
     <value>0</value>
   </data>
-  <data name="commandTextBox.Size" type="System.Drawing.Size, System.Drawing">
-    <value>735, 161</value>
+  <data name="&gt;&gt;noAttachmentsCheckBox.ZOrder" xml:space="preserve">
+    <value>4</value>
   </data>
   <data name="&gt;&gt;emptyTitleCheckBox.Parent" xml:space="preserve">
     <value>customOutputFilesArgumentsGroupBox</value>
@@ -337,14 +337,17 @@
   <data name="&gt;&gt;commandTextBox.Name" xml:space="preserve">
     <value>commandTextBox</value>
   </data>
+  <data name="modelNameLabel.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
   <data name="noCompressionCheckBox.Location" type="System.Drawing.Point, System.Drawing">
     <value>117, 19</value>
   </data>
   <data name="sortModelByNameButton.TabIndex" type="System.Int32, mscorlib">
     <value>0</value>
   </data>
-  <data name="tracksDataGridView.TabIndex" type="System.Int32, mscorlib">
-    <value>1</value>
+  <data name="moveModelTopButton.ToolTip" xml:space="preserve">
+    <value>Move selected model to Top</value>
   </data>
   <data name="copyModelButton.TabIndex" type="System.Int32, mscorlib">
     <value>20</value>
@@ -373,17 +376,17 @@
   <data name="noAttachmentsCheckBox.TabIndex" type="System.Int32, mscorlib">
     <value>0</value>
   </data>
-  <data name="emptyTitleCheckBox.Enabled" type="System.Boolean, mscorlib">
-    <value>False</value>
-  </data>
-  <data name="nameDataGridViewTextBoxColumn.HeaderText" xml:space="preserve">
-    <value>Track Name</value>
+  <data name="$this.AutoScaleDimensions" type="System.Drawing.SizeF, System.Drawing">
+    <value>6, 13</value>
   </data>
   <data name="noGlobalTagsCheckBox.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
   <data name="&gt;&gt;tracksDataGridView.ZOrder" xml:space="preserve">
     <value>6</value>
+  </data>
+  <data name="moveModelBottomButton.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
   </data>
   <data name="noCompressionCheckBox.Text" xml:space="preserve">
     <value>--compression none for all tracks</value>
@@ -394,9 +397,6 @@
   <data name="&gt;&gt;modelBindingSource.Type" xml:space="preserve">
     <value>System.Windows.Forms.BindingSource, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;editModelButton.Name" xml:space="preserve">
-    <value>editModelButton</value>
-  </data>
   <data name="noTrackTagsCheckBox.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
@@ -406,17 +406,14 @@
   <data name="&gt;&gt;modelsDataBindingSource.Type" xml:space="preserve">
     <value>System.Windows.Forms.BindingSource, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;emptyTitleCheckBox.Type" xml:space="preserve">
-    <value>System.Windows.Forms.CheckBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
   <data name="&gt;&gt;customOutputFilesArgumentsGroupBox.Type" xml:space="preserve">
     <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;originalFileNumberDataGridViewTextBoxColumn.Name" xml:space="preserve">
     <value>originalFileNumberDataGridViewTextBoxColumn</value>
   </data>
-  <data name="&gt;&gt;$this.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Form, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  <data name="emptyTitleCheckBox.Enabled" type="System.Boolean, mscorlib">
+    <value>False</value>
   </data>
   <data name="&gt;&gt;deleteModelButton.Name" xml:space="preserve">
     <value>deleteModelButton</value>
@@ -427,8 +424,11 @@
   <data name="moveModelUpButton.ToolTip" xml:space="preserve">
     <value>Move selected model Up</value>
   </data>
-  <data name="noCompressionCheckBox.ToolTip" xml:space="preserve">
-    <value />
+  <data name="&gt;&gt;trackBindingSource.Type" xml:space="preserve">
+    <value>System.Windows.Forms.BindingSource, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;editModelButton.Name" xml:space="preserve">
+    <value>editModelButton</value>
   </data>
   <data name="&gt;&gt;modelNameLabel.Type" xml:space="preserve">
     <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
@@ -444,6 +444,9 @@
   </data>
   <data name="customOutputFilesArgumentsGroupBox.Text" xml:space="preserve">
     <value>Custom output files arguments</value>
+  </data>
+  <data name="modelGroupBox.ToolTip" xml:space="preserve">
+    <value />
   </data>
   <data name="modelGroupBox.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Top, Bottom, Left, Right</value>
@@ -463,8 +466,8 @@
   <data name="&gt;&gt;sortModelByNameButton.Name" xml:space="preserve">
     <value>sortModelByNameButton</value>
   </data>
-  <data name="moveModelDownButton.Size" type="System.Drawing.Size, System.Drawing">
-    <value>25, 25</value>
+  <data name="&gt;&gt;addModelButton.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;modelNameTextBox.Name" xml:space="preserve">
     <value>modelNameTextBox</value>
@@ -475,8 +478,8 @@
   <data name="&gt;&gt;modelsToolTip.Type" xml:space="preserve">
     <value>System.Windows.Forms.ToolTip, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="modelGroupBox.ToolTip" xml:space="preserve">
-    <value />
+  <data name="moveModelTopButton.Size" type="System.Drawing.Size, System.Drawing">
+    <value>25, 25</value>
   </data>
   <data name="&gt;&gt;addChaptersCheckBox.Name" xml:space="preserve">
     <value>addChaptersCheckBox</value>
@@ -517,6 +520,9 @@
   <data name="moveModelTopButton.TabIndex" type="System.Int32, mscorlib">
     <value>0</value>
   </data>
+  <data name="addModelButton.ToolTip" xml:space="preserve">
+    <value>Add model</value>
+  </data>
   <data name="emptyTitleCheckBox.Size" type="System.Drawing.Size, System.Drawing">
     <value>79, 17</value>
   </data>
@@ -526,11 +532,11 @@
   <data name="&gt;&gt;customInputFileArgumentsTextBox.ZOrder" xml:space="preserve">
     <value>0</value>
   </data>
+  <data name="&gt;&gt;$this.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Form, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
   <data name="&gt;&gt;originalFileTrackPositionDataGridViewTextBoxColumn.Type" xml:space="preserve">
     <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="commandTextBox.ToolTip" xml:space="preserve">
-    <value />
   </data>
   <data name="&gt;&gt;customInputFilesArgumentsGroupBox.Type" xml:space="preserve">
     <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
@@ -544,9 +550,6 @@
   <data name="&gt;&gt;modelsDataBindingSource.Name" xml:space="preserve">
     <value>modelsDataBindingSource</value>
   </data>
-  <data name="moveModelTopButton.Size" type="System.Drawing.Size, System.Drawing">
-    <value>25, 25</value>
-  </data>
   <data name="&gt;&gt;addChaptersCheckBox.Parent" xml:space="preserve">
     <value>customOutputFilesArgumentsGroupBox</value>
   </data>
@@ -555,6 +558,9 @@
   </data>
   <data name="&gt;&gt;modelsListButtonsPanel.Parent" xml:space="preserve">
     <value>$this</value>
+  </data>
+  <data name="&gt;&gt;noGlobalTagsCheckBox.ZOrder" xml:space="preserve">
+    <value>2</value>
   </data>
   <data name="&gt;&gt;emptyTitleCheckBox.ZOrder" xml:space="preserve">
     <value>3</value>
@@ -592,6 +598,9 @@
   <data name="customCommandCheckBox.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
+  <data name="commandTextBox.ToolTip" xml:space="preserve">
+    <value />
+  </data>
   <data name="&gt;&gt;noCompressionCheckBox.Type" xml:space="preserve">
     <value>System.Windows.Forms.CheckBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
@@ -610,14 +619,11 @@
   <data name="moveModelUpButton.Location" type="System.Drawing.Point, System.Drawing">
     <value>0, 31</value>
   </data>
-  <data name="&gt;&gt;customInputFileArgumentsTextBox.Parent" xml:space="preserve">
-    <value>customInputFilesArgumentsGroupBox</value>
+  <data name="editModelButton.ImageAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>TopCenter</value>
   </data>
   <data name="typeDataGridViewTextBoxColumn.Width" type="System.Int32, mscorlib">
     <value>55</value>
-  </data>
-  <data name="&gt;&gt;modelNameTextBox.ZOrder" xml:space="preserve">
-    <value>1</value>
   </data>
   <data name="&gt;&gt;noAttachmentsCheckBox.Type" xml:space="preserve">
     <value>System.Windows.Forms.CheckBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
@@ -638,9 +644,6 @@
   </data>
   <data name="customInputFilesArgumentsGroupBox.Size" type="System.Drawing.Size, System.Drawing">
     <value>747, 107</value>
-  </data>
-  <data name="addChaptersCheckBox.Enabled" type="System.Boolean, mscorlib">
-    <value>False</value>
   </data>
   <data name="emptyTitleCheckBox.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -2228,14 +2231,20 @@
   <data name="&gt;&gt;addAttachmentsCheckBox.ZOrder" xml:space="preserve">
     <value>2</value>
   </data>
-  <data name="&gt;&gt;addModelButton.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  <data name="deleteModelButton.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6
+        JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAACXBIWXMAATr2AAE69gE6sVc6AAABU0lE
+        QVRYR+2XO0rGQBhFI2ihoCBY2Kg7sLFyA1ZiK1iLoPY26i5cgzYiFu7DR6VYqWBhIWht4TkxgfmDmEwe
+        ECEXDszju5cvISGTZNB/1BjMwRIsZjh2zb3OtQV38ALPGY5vYRM6lVd5A+ewDTsZji/hGqxprBXYg13Y
+        z3B+BO9wCsUGzsA9a6zNfWY4X4bKOoRP+IJXyG+1PBXmIcU9vWZ8wAFU1hQcgwGrsAD5A1cVPXrNMGsS
+        ouTt8yoMqyu9ZpgVrd42MAsTP8MRueZeqNYb8BW7go10NirX3Atfw9Yb+Cswtr5UQwNDA0MDvW7Az2tR
+        rnXewDT4Wf3t2+6ae9bkar2BWDVqwJOMZg+cdaXXDLOitQZvsJ7O6kmvGWZFawY8aN6DR7TwnFeGtXoe
+        4ALMqiVv4Qk8QngML8NaPXqbPEOpxmEewh+RMqzVo3dQn5Uk39Bek2MPgGFKAAAAAElFTkSuQmCC
+</value>
   </data>
   <data name="&gt;&gt;copyModelButton.ZOrder" xml:space="preserve">
     <value>0</value>
-  </data>
-  <data name="&gt;&gt;originalFileNumberDataGridViewTextBoxColumn.Type" xml:space="preserve">
-    <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="noCompressionCheckBox.Size" type="System.Drawing.Size, System.Drawing">
     <value>178, 17</value>
@@ -2249,6 +2258,9 @@
   <data name="noAttachmentsCheckBox.Location" type="System.Drawing.Point, System.Drawing">
     <value>6, 19</value>
   </data>
+  <data name="nameDataGridViewTextBoxColumn.HeaderText" xml:space="preserve">
+    <value>Track Name</value>
+  </data>
   <data name="customOutputFilesArgumentsGroupBox.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Top, Left, Right</value>
   </data>
@@ -2260,23 +2272,17 @@
         YII=
 </value>
   </data>
-  <data name="&gt;&gt;trackBindingSource.Type" xml:space="preserve">
-    <value>System.Windows.Forms.BindingSource, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;noAttachmentsCheckBox.Name" xml:space="preserve">
-    <value>noAttachmentsCheckBox</value>
+  <data name="&gt;&gt;originalFileNumberDataGridViewTextBoxColumn.Type" xml:space="preserve">
+    <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="customOutputFileArgumentsTextBox.Multiline" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
-  <data name="addChaptersCheckBox.ToolTip" xml:space="preserve">
-    <value />
+  <data name="customInputFileArgumentsTextBox.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
   </data>
   <data name="&gt;&gt;moveModelBottomButton.ZOrder" xml:space="preserve">
     <value>6</value>
-  </data>
-  <data name="customInputFileArgumentsTextBox.TabIndex" type="System.Int32, mscorlib">
-    <value>1</value>
   </data>
   <data name="&gt;&gt;commandTextBox.Type" xml:space="preserve">
     <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
@@ -2287,8 +2293,11 @@
   <data name="&gt;&gt;addModelButton.ZOrder" xml:space="preserve">
     <value>3</value>
   </data>
-  <data name="moveModelTopButton.Location" type="System.Drawing.Point, System.Drawing">
-    <value>0, 0</value>
+  <data name="&gt;&gt;editModelButton.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;editModelButton.ZOrder" xml:space="preserve">
+    <value>0</value>
   </data>
   <data name="&gt;&gt;commandTextBox.Parent" xml:space="preserve">
     <value>modelGroupBox</value>
@@ -2317,9 +2326,6 @@
   <data name="customCommandCheckBox.Enabled" type="System.Boolean, mscorlib">
     <value>False</value>
   </data>
-  <data name="noTrackTagsCheckBox.Enabled" type="System.Boolean, mscorlib">
-    <value>False</value>
-  </data>
   <data name="noGlobalTagsCheckBox.Text" xml:space="preserve">
     <value>--no-global-tags</value>
   </data>
@@ -2340,6 +2346,9 @@
   </data>
   <data name="modelsListButtonsPanel.Location" type="System.Drawing.Point, System.Drawing">
     <value>568, 12</value>
+  </data>
+  <data name="noCompressionCheckBox.ToolTip" xml:space="preserve">
+    <value />
   </data>
   <data name="copyModelButton.ToolTip" xml:space="preserve">
     <value>Copy Model</value>
@@ -2371,9 +2380,6 @@
   <data name="&gt;&gt;nameDataGridViewTextBoxColumn.Name" xml:space="preserve">
     <value>nameDataGridViewTextBoxColumn</value>
   </data>
-  <data name="&gt;&gt;modelsListButtonsPanel.Name" xml:space="preserve">
-    <value>modelsListButtonsPanel</value>
-  </data>
   <data name="addAttachmentsCheckBox.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
@@ -2404,14 +2410,17 @@
   <data name="&gt;&gt;noCompressionCheckBox.ZOrder" xml:space="preserve">
     <value>3</value>
   </data>
+  <data name="editModelButton.ToolTip" xml:space="preserve">
+    <value />
+  </data>
   <data name="&gt;&gt;forcedFlagDataGridViewCheckBoxColumn.Name" xml:space="preserve">
     <value>forcedFlagDataGridViewCheckBoxColumn</value>
   </data>
   <data name="&gt;&gt;addAttachmentsCheckBox.Parent" xml:space="preserve">
     <value>customOutputFilesArgumentsGroupBox</value>
   </data>
-  <data name="originalFileSuffixDataGridViewTextBoxColumn.Width" type="System.Int32, mscorlib">
-    <value>81</value>
+  <data name="originalFileNumberDataGridViewTextBoxColumn.HeaderText" xml:space="preserve">
+    <value>Original File Number</value>
   </data>
   <data name="&gt;&gt;moveModelUpButton.ZOrder" xml:space="preserve">
     <value>2</value>
@@ -2434,6 +2443,9 @@
   <data name="customInputFileArgumentsTextBox.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Top, Bottom, Left, Right</value>
   </data>
+  <data name="&gt;&gt;customInputFileArgumentsTextBox.Parent" xml:space="preserve">
+    <value>customInputFilesArgumentsGroupBox</value>
+  </data>
   <data name="addAttachmentsCheckBox.Text" xml:space="preserve">
     <value>Add Attachments</value>
   </data>
@@ -2452,8 +2464,8 @@
   <data name="moveModelDownButton.ToolTip" xml:space="preserve">
     <value>Move selected model to Down</value>
   </data>
-  <data name="emptyTitleCheckBox.Location" type="System.Drawing.Point, System.Drawing">
-    <value>6, 19</value>
+  <data name="languageDataGridViewTextBoxColumn.Width" type="System.Int32, mscorlib">
+    <value>98</value>
   </data>
   <data name="&gt;&gt;tracksDataGridView.Parent" xml:space="preserve">
     <value>modelGroupBox</value>
@@ -2474,8 +2486,8 @@
   <data name="&gt;&gt;customOutputFilesArgumentsGroupBox.ZOrder" xml:space="preserve">
     <value>4</value>
   </data>
-  <data name="moveModelBottomButton.TabIndex" type="System.Int32, mscorlib">
-    <value>0</value>
+  <data name="originalFileSuffixDataGridViewTextBoxColumn.Width" type="System.Int32, mscorlib">
+    <value>81</value>
   </data>
   <data name="copyModelButton.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
@@ -2519,23 +2531,29 @@
   <data name="&gt;&gt;modelGroupBox.Name" xml:space="preserve">
     <value>modelGroupBox</value>
   </data>
+  <data name="addChaptersCheckBox.ToolTip" xml:space="preserve">
+    <value />
+  </data>
   <data name="modelNameLabel.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
   <data name="customOutputFileArgumentsTextBox.TabIndex" type="System.Int32, mscorlib">
     <value>1</value>
   </data>
-  <data name="addModelButton.ToolTip" xml:space="preserve">
-    <value>Add model</value>
+  <data name="copyModelButton.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 217</value>
   </data>
   <data name="noAttachmentsCheckBox.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
+  <data name="&gt;&gt;modelsToolTip.Name" xml:space="preserve">
+    <value>modelsToolTip</value>
+  </data>
   <data name="modelNameLabel.Text" xml:space="preserve">
     <value>Name:</value>
   </data>
-  <data name="&gt;&gt;addAttachmentsCheckBox.Type" xml:space="preserve">
-    <value>System.Windows.Forms.CheckBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  <data name="&gt;&gt;customOutputFileArgumentsBindingSource.Name" xml:space="preserve">
+    <value>customOutputFileArgumentsBindingSource</value>
   </data>
   <data name="&gt;&gt;originalFileSuffixDataGridViewTextBoxColumn.Type" xml:space="preserve">
     <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
@@ -2620,9 +2638,6 @@
   <data name="&gt;&gt;customOutputFileArgumentsTextBox.Type" xml:space="preserve">
     <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="languageDataGridViewTextBoxColumn.Width" type="System.Int32, mscorlib">
-    <value>98</value>
-  </data>
   <data name="modelNameLabel.Location" type="System.Drawing.Point, System.Drawing">
     <value>6, 23</value>
   </data>
@@ -2638,8 +2653,8 @@
   <data name="&gt;&gt;modelNameLabel.Name" xml:space="preserve">
     <value>modelNameLabel</value>
   </data>
-  <data name="&gt;&gt;modelsToolTip.Name" xml:space="preserve">
-    <value>modelsToolTip</value>
+  <data name="addChaptersCheckBox.Enabled" type="System.Boolean, mscorlib">
+    <value>False</value>
   </data>
   <data name="&gt;&gt;noGlobalTagsCheckBox.Type" xml:space="preserve">
     <value>System.Windows.Forms.CheckBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
@@ -2653,8 +2668,8 @@
   <data name="&gt;&gt;noAttachmentsCheckBox.Parent" xml:space="preserve">
     <value>customInputFilesArgumentsGroupBox</value>
   </data>
-  <data name="&gt;&gt;editModelButton.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  <data name="noTrackTagsCheckBox.Enabled" type="System.Boolean, mscorlib">
+    <value>False</value>
   </data>
   <data name="&gt;&gt;moveModelTopButton.Parent" xml:space="preserve">
     <value>modelsListButtonsPanel</value>
@@ -2680,18 +2695,6 @@
   <data name="addAttachmentsCheckBox.TabIndex" type="System.Int32, mscorlib">
     <value>0</value>
   </data>
-  <data name="deleteModelButton.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-    <value>
-        iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6
-        JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAACXBIWXMAATr2AAE69gE6sVc6AAABU0lE
-        QVRYR+2XO0rGQBhFI2ihoCBY2Kg7sLFyA1ZiK1iLoPY26i5cgzYiFu7DR6VYqWBhIWht4TkxgfmDmEwe
-        ECEXDszju5cvISGTZNB/1BjMwRIsZjh2zb3OtQV38ALPGY5vYRM6lVd5A+ewDTsZji/hGqxprBXYg13Y
-        z3B+BO9wCsUGzsA9a6zNfWY4X4bKOoRP+IJXyG+1PBXmIcU9vWZ8wAFU1hQcgwGrsAD5A1cVPXrNMGsS
-        ouTt8yoMqyu9ZpgVrd42MAsTP8MRueZeqNYb8BW7go10NirX3Atfw9Yb+Cswtr5UQwNDA0MDvW7Az2tR
-        rnXewDT4Wf3t2+6ae9bkar2BWDVqwJOMZg+cdaXXDLOitQZvsJ7O6kmvGWZFawY8aN6DR7TwnFeGtXoe
-        4ALMqiVv4Qk8QngML8NaPXqbPEOpxmEewh+RMqzVo3dQn5Uk39Bek2MPgGFKAAAAAElFTkSuQmCC
-</value>
-  </data>
   <data name="&gt;&gt;deleteModelButton.ZOrder" xml:space="preserve">
     <value>4</value>
   </data>
@@ -2713,8 +2716,8 @@
         2ZF0s/RAMzOzfxTCBP6BEcrvyDZGAAAAAElFTkSuQmCC
 </value>
   </data>
-  <data name="&gt;&gt;editModelButton.ZOrder" xml:space="preserve">
-    <value>0</value>
+  <data name="&gt;&gt;emptyTitleCheckBox.Type" xml:space="preserve">
+    <value>System.Windows.Forms.CheckBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;trackBindingSource.Name" xml:space="preserve">
     <value>trackBindingSource</value>
@@ -2731,11 +2734,11 @@
   <data name="tracksDataGridView.ToolTip" xml:space="preserve">
     <value />
   </data>
-  <data name="forcedFlagDataGridViewCheckBoxColumn.Width" type="System.Int32, mscorlib">
-    <value>45</value>
+  <data name="&gt;&gt;noAttachmentsCheckBox.Name" xml:space="preserve">
+    <value>noAttachmentsCheckBox</value>
   </data>
-  <data name="modelNameLabel.TabIndex" type="System.Int32, mscorlib">
-    <value>0</value>
+  <data name="moveModelUpButton.Size" type="System.Drawing.Size, System.Drawing">
+    <value>25, 25</value>
   </data>
   <data name="&gt;&gt;moveModelBottomButton.Parent" xml:space="preserve">
     <value>modelsListButtonsPanel</value>
@@ -2746,17 +2749,14 @@
   <data name="customCommandCheckBox.Location" type="System.Drawing.Point, System.Drawing">
     <value>12, 446</value>
   </data>
-  <data name="moveModelTopButton.ToolTip" xml:space="preserve">
-    <value>Move selected model to Top</value>
+  <data name="&gt;&gt;modelsListButtonsPanel.Name" xml:space="preserve">
+    <value>modelsListButtonsPanel</value>
   </data>
   <data name="customCommandCheckBox.TabIndex" type="System.Int32, mscorlib">
     <value>2</value>
   </data>
-  <data name="&gt;&gt;noAttachmentsCheckBox.ZOrder" xml:space="preserve">
-    <value>4</value>
-  </data>
-  <data name="&gt;&gt;noGlobalTagsCheckBox.ZOrder" xml:space="preserve">
-    <value>2</value>
+  <data name="&gt;&gt;modelNameTextBox.ZOrder" xml:space="preserve">
+    <value>1</value>
   </data>
   <data name="&gt;&gt;customInputFileArgumentsBindingSource.Type" xml:space="preserve">
     <value>System.Windows.Forms.BindingSource, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
@@ -2776,8 +2776,8 @@
   <data name="emptyTitleCheckBox.ToolTip" xml:space="preserve">
     <value />
   </data>
-  <metadata name="customOutputFileArgumentsBindingSource.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>813, 17</value>
+  <metadata name="trackBindingSource.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>378, 17</value>
   </metadata>
   <metadata name="modelBindingSource.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>213, 17</value>
@@ -2794,8 +2794,8 @@
   <metadata name="modelsDataBindingSource.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>17, 17</value>
   </metadata>
-  <metadata name="trackBindingSource.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>378, 17</value>
+  <metadata name="customOutputFileArgumentsBindingSource.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>813, 17</value>
   </metadata>
   <metadata name="$this.TrayHeight" type="System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>69</value>

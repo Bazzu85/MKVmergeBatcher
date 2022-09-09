@@ -130,8 +130,14 @@
   <data name="exitToolStripMenuItem.Text" xml:space="preserve">
     <value>Esci</value>
   </data>
+  <data name="modelsToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>115, 22</value>
+  </data>
   <data name="modelsToolStripMenuItem.Text" xml:space="preserve">
     <value>Modelli</value>
+  </data>
+  <data name="optionsToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>115, 22</value>
   </data>
   <data name="optionsToolStripMenuItem.Text" xml:space="preserve">
     <value>Opzioni</value>
@@ -146,7 +152,7 @@
     <value>Info programma</value>
   </data>
   <data name="videoFilePathLabel.Size" type="System.Drawing.Size, System.Drawing">
-    <value>94, 13</value>
+    <value>93, 13</value>
   </data>
   <data name="videoFilePathLabel.Text" xml:space="preserve">
     <value>Indirizzo file video:</value>
@@ -210,7 +216,7 @@
     <value>Visualizza coda</value>
   </data>
   <data name="subfolderSearchCheckBox.Size" type="System.Drawing.Size, System.Drawing">
-    <value>145, 17</value>
+    <value>139, 17</value>
   </data>
   <data name="subfolderSearchCheckBox.Text" xml:space="preserve">
     <value>Cerca nelle sottocartelle</value>
@@ -219,7 +225,7 @@
     <value>164, 58</value>
   </data>
   <data name="applyFileNameExclusionCheckBox.Size" type="System.Drawing.Size, System.Drawing">
-    <value>153, 17</value>
+    <value>135, 17</value>
   </data>
   <data name="applyFileNameExclusionCheckBox.Text" xml:space="preserve">
     <value>Applica filtro ai nomi file</value>
@@ -1785,17 +1791,5 @@
         /AD////////////////////////8AP////////////////////////wA////////////////////////
         /AA=
 </value>
-  </data>
-  <data name="$this.Text" xml:space="preserve">
-    <value>MKVmerge Batcher</value>
-  </data>
-  <data name="fileToolStripMenuItem.Text" xml:space="preserve">
-    <value>File</value>
-  </data>
-  <data name="helpToolStripMenuItem.Text" xml:space="preserve">
-    <value>?</value>
-  </data>
-  <data name="menuStrip.Text" xml:space="preserve">
-    <value>Menu</value>
   </data>
 </root>

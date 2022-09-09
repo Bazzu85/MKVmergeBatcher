@@ -117,6 +117,9 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="modelsListBox.ToolTip" xml:space="preserve">
+    <value />
+  </data>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
   <data name="editModelButton.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
@@ -134,11 +137,26 @@
   <data name="editModelButton.Text" xml:space="preserve">
     <value>Modifica</value>
   </data>
+  <data name="editModelButton.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="modelNameTextBox.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="commandTextBox.ToolTip" xml:space="preserve">
+    <value />
+  </data>
   <data name="customCommandCheckBox.Size" type="System.Drawing.Size, System.Drawing">
-    <value>366, 17</value>
+    <value>351, 17</value>
   </data>
   <data name="customCommandCheckBox.Text" xml:space="preserve">
     <value>Inserisci comando personalizzato (esclude le impostazioni precedenti)</value>
+  </data>
+  <data name="customCommandCheckBox.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="customOutputFileArgumentsTextBox.ToolTip" xml:space="preserve">
+    <value />
   </data>
   <data name="addChaptersCheckBox.Size" type="System.Drawing.Size, System.Drawing">
     <value>103, 17</value>
@@ -146,11 +164,17 @@
   <data name="addChaptersCheckBox.Text" xml:space="preserve">
     <value>Aggiungi capitoli</value>
   </data>
+  <data name="addChaptersCheckBox.ToolTip" xml:space="preserve">
+    <value />
+  </data>
   <data name="addAttachmentsCheckBox.Size" type="System.Drawing.Size, System.Drawing">
     <value>100, 17</value>
   </data>
   <data name="addAttachmentsCheckBox.Text" xml:space="preserve">
     <value>Aggiunti allegati</value>
+  </data>
+  <data name="addAttachmentsCheckBox.ToolTip" xml:space="preserve">
+    <value />
   </data>
   <data name="emptyTitleCheckBox.Size" type="System.Drawing.Size, System.Drawing">
     <value>78, 17</value>
@@ -158,8 +182,17 @@
   <data name="emptyTitleCheckBox.Text" xml:space="preserve">
     <value>--title vuoto</value>
   </data>
+  <data name="emptyTitleCheckBox.ToolTip" xml:space="preserve">
+    <value />
+  </data>
   <data name="customOutputFilesArgumentsGroupBox.Text" xml:space="preserve">
     <value>Argomenti personalizzati file destinazione</value>
+  </data>
+  <data name="customOutputFilesArgumentsGroupBox.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="customInputFileArgumentsTextBox.ToolTip" xml:space="preserve">
+    <value />
   </data>
   <data name="noTrackTagsCheckBox.Location" type="System.Drawing.Point, System.Drawing">
     <value>433, 19</value>
@@ -174,13 +207,22 @@
     <value>Aggiunge l'argomento '--no-global-tags' a tutti i file sorgente</value>
   </data>
   <data name="noCompressionCheckBox.Size" type="System.Drawing.Size, System.Drawing">
-    <value>206, 17</value>
+    <value>210, 17</value>
   </data>
   <data name="noCompressionCheckBox.Text" xml:space="preserve">
     <value>'--compression none' per tutte le traccie</value>
   </data>
+  <data name="noCompressionCheckBox.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="noAttachmentsCheckBox.ToolTip" xml:space="preserve">
+    <value />
+  </data>
   <data name="customInputFilesArgumentsGroupBox.Text" xml:space="preserve">
     <value>Argomenti personalizzati file sorgenti</value>
+  </data>
+  <data name="customInputFilesArgumentsGroupBox.ToolTip" xml:space="preserve">
+    <value />
   </data>
   <data name="typeDataGridViewTextBoxColumn.HeaderText" xml:space="preserve">
     <value>Tipo</value>
@@ -199,7 +241,13 @@
     <value>Posizione traccia file originale</value>
   </data>
   <data name="originalFileTrackPositionDataGridViewTextBoxColumn.Width" type="System.Int32, mscorlib">
-    <value>142</value>
+    <value>119</value>
+  </data>
+  <data name="languageDataGridViewTextBoxColumn.HeaderText" xml:space="preserve">
+    <value>Codice lingua</value>
+  </data>
+  <data name="languageDataGridViewTextBoxColumn.Width" type="System.Int32, mscorlib">
+    <value>87</value>
   </data>
   <data name="nameDataGridViewTextBoxColumn.HeaderText" xml:space="preserve">
     <value>Nome traccia</value>
@@ -207,11 +255,23 @@
   <data name="nameDataGridViewTextBoxColumn.Width" type="System.Int32, mscorlib">
     <value>86</value>
   </data>
+  <data name="defaultFlagDataGridViewCheckBoxColumn.HeaderText" xml:space="preserve">
+    <value>Predefinito</value>
+  </data>
+  <data name="defaultFlagDataGridViewCheckBoxColumn.Width" type="System.Int32, mscorlib">
+    <value>62</value>
+  </data>
+  <data name="forcedFlagDataGridViewCheckBoxColumn.HeaderText" xml:space="preserve">
+    <value>Forzato</value>
+  </data>
+  <data name="forcedFlagDataGridViewCheckBoxColumn.Width" type="System.Int32, mscorlib">
+    <value>47</value>
+  </data>
   <data name="originalFileSuffixDataGridViewTextBoxColumn.HeaderText" xml:space="preserve">
     <value>Suffisso file originale</value>
   </data>
   <data name="originalFileSuffixDataGridViewTextBoxColumn.Width" type="System.Int32, mscorlib">
-    <value>95</value>
+    <value>115</value>
   </data>
   <data name="originalFileExtensionDataGridViewTextBoxColumn.HeaderText" xml:space="preserve">
     <value>Estensione file originale</value>
@@ -219,11 +279,38 @@
   <data name="originalFileExtensionDataGridViewTextBoxColumn.Width" type="System.Int32, mscorlib">
     <value>94</value>
   </data>
+  <data name="tracksDataGridView.ToolTip" xml:space="preserve">
+    <value />
+  </data>
   <data name="modelNameLabel.Text" xml:space="preserve">
     <value>Nome:</value>
   </data>
+  <data name="modelNameLabel.ToolTip" xml:space="preserve">
+    <value />
+  </data>
   <data name="modelGroupBox.Text" xml:space="preserve">
     <value>Dettagli modello</value>
+  </data>
+  <data name="modelGroupBox.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="copyModelButton.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6
+        JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAACXBIWXMAATr2AAE69gE6sVc6AAACCElE
+        QVRYR+3WzUsVURyH8auGIGTrMkoEl725cKM7g1atzL0LN2ZgrixwVWt3iS+9uJOgRWChf0Bgy7aigWAp
+        SNAucVnPc+3AcJi5d8Y7d3HhfuGDzlzmnN/MOWfmVNppxVzCVfTjZg29KD0DeI3v+IkfGfztA66jtFzB
+        JnYxjxk8SeH5L/iLTyitiAf4hYfVo9pZxTdY7GeUUsRj+Hgd+3pxmDYwiROU8iR8vBbgBKuXJZzhEKdw
+        OF6iUK7hGd5iDV9hg3kKuItpWLR/vdY2csfOt+Bsfg/HNC7ApTiF5AQM7PQWQt78lzveuZ2NoMMTxIaT
+        QzCGfaQtx2O4UkIKF+Ak8s47q0fniQvwhdSHGxkuI6RwAWkXxAUMYRmObcxrxxHSlAJu4xVCpz61cN07
+        PEJIWns1k3ZBvSFIPvI4TSngPsI3IZ50cZpSQLwM7yArTSmgSEopwLs9wmD1KH9cyi5pJ2nupBVwDxbw
+        HN2eyBFfYqPwpfbUE3mTVkAXXuA3tpFcdoHnVhCWpXfuJPVr6JzJndBgnB5MwK9dsmOFDv9gB6GIORTq
+        3IRGi8YJ6kR1wjYUO18//7dQ3KxYgJuXhrIIt1RFH53bNbdtbt8ayjAO4J5gFuFlk8WN6AL28BFuYBuO
+        33sLcAmlffOT/N3XspPzIi+qzDjr/dDYaC2OvcPlB6qdVkql8g926p//V1xQ9gAAAABJRU5ErkJggg==
+</value>
+  </data>
+  <data name="copyModelButton.ToolTip" xml:space="preserve">
+    <value>Copia modello</value>
   </data>
   <data name="moveModelDownButton.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
@@ -318,6 +405,9 @@
   </data>
   <data name="moveModelTopButton.ToolTip" xml:space="preserve">
     <value>Sposta modello selezionato in alto</value>
+  </data>
+  <data name="modelsListButtonsPanel.ToolTip" xml:space="preserve">
+    <value />
   </data>
   <data name="$this.Icon" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
@@ -1880,23 +1970,5 @@
   </data>
   <data name="$this.ToolTip" xml:space="preserve">
     <value />
-  </data>
-  <data name="copyModelButton.ToolTip" xml:space="preserve">
-    <value>Copia modello</value>
-  </data>
-  <data name="languageDataGridViewTextBoxColumn.HeaderText" xml:space="preserve">
-    <value>Codice lingua</value>
-  </data>
-  <data name="forcedFlagDataGridViewCheckBoxColumn.HeaderText" xml:space="preserve">
-    <value>Forzato</value>
-  </data>
-  <data name="defaultFlagDataGridViewCheckBoxColumn.HeaderText" xml:space="preserve">
-    <value>Predefinito</value>
-  </data>
-  <data name="noGlobalTagsCheckBox.Text" xml:space="preserve">
-    <value>--no-global-tags</value>
-  </data>
-  <data name="noTrackTagsCheckBox.Text" xml:space="preserve">
-    <value>--no-track-tags</value>
   </data>
 </root>
