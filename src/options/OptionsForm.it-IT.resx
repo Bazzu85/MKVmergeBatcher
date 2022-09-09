@@ -146,7 +146,7 @@
     <value>230, 17</value>
   </data>
   <data name="allowMultipleInstacesCheckBox.Text" xml:space="preserve">
-    <value>Vuoi permettere instanze multiple dell'applicazione?</value>
+    <value>Permetti intanze multiple dell'applicazione</value>
   </data>
   <data name="removeExcludeFileNameContainingButton.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
@@ -195,31 +195,31 @@
     <value>272, 17</value>
   </data>
   <data name="replaceExistingDestinationFilesCheckBox.Text" xml:space="preserve">
-    <value>Vuoi sostituire i file destinazione (durante lo spostamento)?</value>
+    <value>Sostituisci file nella destinazione (durante lo spostamento)?</value>
   </data>
   <data name="autoClearErrorJobsCheckBox.Size" type="System.Drawing.Size, System.Drawing">
     <value>254, 17</value>
   </data>
   <data name="autoClearErrorJobsCheckBox.Text" xml:space="preserve">
-    <value>Vuoi rimuovere automaticamente le attività in stato "Errore"?</value>
+    <value>Rimuovi automaticamente le attività in stato "Errore"?</value>
   </data>
   <data name="autoClearWarningJobsCheckBox.Size" type="System.Drawing.Size, System.Drawing">
     <value>266, 17</value>
   </data>
   <data name="autoClearWarningJobsCheckBox.Text" xml:space="preserve">
-    <value>Vuoi rimuovere automaticamente le attività in stato "Attenzione"?</value>
+    <value>Rimuovi automaticamente le attività in stato "Avviso"?</value>
   </data>
   <data name="autoClearOkJobsCheckBox.Size" type="System.Drawing.Size, System.Drawing">
     <value>193, 17</value>
   </data>
   <data name="autoClearOkJobsCheckBox.Text" xml:space="preserve">
-    <value>Vuoi rimuovere automaticamente le attività in stato "OK"?</value>
+    <value>Rimuovi automaticamente le attività in stato "OK"?</value>
   </data>
   <data name="deleteIncompleteFilesCheckBox.Size" type="System.Drawing.Size, System.Drawing">
     <value>303, 17</value>
   </data>
   <data name="deleteIncompleteFilesCheckBox.Text" xml:space="preserve">
-    <value>Vuoi eliminare i file non completi quando la coda viene stoppata?</value>
+    <value>Elimina i file non completati quando la coda viene stoppata?</value>
   </data>
   <data name="moveWarningFilesToTextBox.Location" type="System.Drawing.Point, System.Drawing">
     <value>173, 32</value>
@@ -237,7 +237,7 @@
     <value>161, 13</value>
   </data>
   <data name="moveWarningFilesToLabel.Text" xml:space="preserve">
-    <value>Sposta file in stato "Attenzione" in:</value>
+    <value>Sposta file in stato "Avviso" in:</value>
   </data>
   <data name="moveOkFilesToLabel.Location" type="System.Drawing.Point, System.Drawing">
     <value>6, 9</value>
@@ -270,7 +270,7 @@
     <value>118, 13</value>
   </data>
   <data name="label3.Text" xml:space="preserve">
-    <value>Ultima versione rilevata:</value>
+    <value>Versione aggiornata:</value>
   </data>
   <data name="label2.Location" type="System.Drawing.Point, System.Drawing">
     <value>38, 32</value>
@@ -285,7 +285,7 @@
     <value>239, 17</value>
   </data>
   <data name="checkUpdatesCheckBox.Text" xml:space="preserve">
-    <value>Vuoi controllare automaticamente gli aggiornamenti?</value>
+    <value>Controlla automaticamente aggiornamenti</value>
   </data>
   <data name="versionTabPage.Text" xml:space="preserve">
     <value>Versione app</value>
@@ -1859,12 +1859,12 @@
     <value>Formato file destinazione:</value>
   </data>
   <data name="showQueueWhenAddingCheckBox.Text" xml:space="preserve">
-    <value>Vuoi visualizzare la finestra della coda quando si aggiunge una attività?</value>
+    <value>Visualizza finestra coda quando si aggiunge una attività</value>
   </data>
   <data name="showSummaryWhenQueueEndsCheckBox.Text" xml:space="preserve">
-    <value>Vuoi visualizzare il sommario quando viene completata l'elaborazione?</value>
+    <value>Visualizza sommario quando viene completata l'elaborazione</value>
   </data>
   <data name="showSummaryOnlyWarningsErrorsCheckBox.Text" xml:space="preserve">
-    <value>Visualizza il sommario quando ci sono attività in stato "Attenzione" o "Errore"</value>
+    <value>Visualizza sommario quando ci sono attività in stato "Attenzione" o "Errore"</value>
   </data>
 </root>

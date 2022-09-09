@@ -136,30 +136,14 @@
   <data name="originalFileNumberLabel.Text" xml:space="preserve">
     <value>Numero file originale:</value>
   </data>
-  <data name="originalFilePositionLabel.Location" type="System.Drawing.Point, System.Drawing">
-    <value>196, 41</value>
-  </data>
   <data name="originalFilePositionLabel.Size" type="System.Drawing.Size, System.Drawing">
-    <value>113, 13</value>
+    <value>130, 13</value>
   </data>
   <data name="originalFilePositionLabel.Text" xml:space="preserve">
     <value>Posizione file originale:</value>
   </data>
   <data name="OriginalFilePositionNumericUpDown.Location" type="System.Drawing.Point, System.Drawing">
     <value>315, 39</value>
-  </data>
-  <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="languageCodeLabel.AutoSize" type="System.Boolean, mscorlib">
-    <value>False</value>
-  </data>
-  <data name="languageCodeLabel.Size" type="System.Drawing.Size, System.Drawing">
-    <value>86, 17</value>
-  </data>
-  <data name="languageCodeLabel.Text" xml:space="preserve">
-    <value>Codice lingua:</value>
-  </data>
-  <data name="languageCodeLabel.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
-    <value>MiddleRight</value>
   </data>
   <data name="languageCodeTextBox.Size" type="System.Drawing.Size, System.Drawing">
     <value>268, 20</value>
@@ -176,26 +160,11 @@
   <data name="trackNameTextBox.Size" type="System.Drawing.Size, System.Drawing">
     <value>268, 20</value>
   </data>
-  <data name="defaultCheckBox.Size" type="System.Drawing.Size, System.Drawing">
-    <value>76, 17</value>
-  </data>
-  <data name="defaultCheckBox.Text" xml:space="preserve">
-    <value>Predefinito</value>
-  </data>
-  <data name="forcedCheckBox.Location" type="System.Drawing.Point, System.Drawing">
-    <value>186, 119</value>
-  </data>
-  <data name="forcedCheckBox.Size" type="System.Drawing.Size, System.Drawing">
-    <value>61, 17</value>
-  </data>
-  <data name="forcedCheckBox.Text" xml:space="preserve">
-    <value>Forzato</value>
-  </data>
   <data name="originalFileSuffixLabel.Location" type="System.Drawing.Point, System.Drawing">
     <value>12, 145</value>
   </data>
   <data name="originalFileSuffixLabel.Size" type="System.Drawing.Size, System.Drawing">
-    <value>105, 13</value>
+    <value>122, 13</value>
   </data>
   <data name="originalFileSuffixLabel.Text" xml:space="preserve">
     <value>Suffisso file originale:</value>
@@ -223,9 +192,6 @@
   </data>
   <data name="cancelButton.Text" xml:space="preserve">
     <value>Annulla</value>
-  </data>
-  <data name="okButton.Text" xml:space="preserve">
-    <value>OK</value>
   </data>
   <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
     <value>384, 231</value>
@@ -1794,5 +1760,23 @@
   </data>
   <data name="$this.Text" xml:space="preserve">
     <value>Gestisci traccia</value>
+  </data>
+  <data name="typeComboBox.Items" xml:space="preserve">
+    <value>Video</value>
+  </data>
+  <data name="typeComboBox.Items1" xml:space="preserve">
+    <value>Audio</value>
+  </data>
+  <data name="okButton.Text" xml:space="preserve">
+    <value>OK</value>
+  </data>
+  <data name="languageCodeLabel.Text" xml:space="preserve">
+    <value>Codice lingua:</value>
+  </data>
+  <data name="forcedCheckBox.Text" xml:space="preserve">
+    <value>Forzato</value>
+  </data>
+  <data name="defaultCheckBox.Text" xml:space="preserve">
+    <value>Predefinito</value>
   </data>
 </root>
