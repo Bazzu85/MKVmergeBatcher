@@ -118,6 +118,12 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="viewToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>69, 20</value>
+  </data>
+  <data name="viewToolStripMenuItem.Text" xml:space="preserve">
+    <value>Visualizza</value>
+  </data>
   <data name="importV1UserDatajsonToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
     <value>163, 22</value>
   </data>
@@ -142,11 +148,8 @@
   <data name="optionsToolStripMenuItem.Text" xml:space="preserve">
     <value>Opzioni</value>
   </data>
-  <data name="viewToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>69, 20</value>
-  </data>
-  <data name="viewToolStripMenuItem.Text" xml:space="preserve">
-    <value>Visualizza</value>
+  <data name="aboutToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>161, 22</value>
   </data>
   <data name="aboutToolStripMenuItem.Text" xml:space="preserve">
     <value>Info programma</value>
@@ -166,6 +169,9 @@
   <data name="BrowseVideoFilesButton.Text" xml:space="preserve">
     <value>Sfoglia</value>
   </data>
+  <data name="videoFileListContextMenuStrip.Size" type="System.Drawing.Size, System.Drawing">
+    <value>170, 48</value>
+  </data>
   <data name="reverseSelectionToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
     <value>169, 22</value>
   </data>
@@ -177,9 +183,6 @@
   </data>
   <data name="clearSelectionToolStripMenuItem.Text" xml:space="preserve">
     <value>Rimuovi selezione</value>
-  </data>
-  <data name="videoFileListContextMenuStrip.Size" type="System.Drawing.Size, System.Drawing">
-    <value>170, 48</value>
   </data>
   <data name="addToQueueButton.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
@@ -210,7 +213,10 @@
 </value>
   </data>
   <data name="showQueueButton.Location" type="System.Drawing.Point, System.Drawing">
-    <value>520, 418</value>
+    <value>507, 418</value>
+  </data>
+  <data name="showQueueButton.Size" type="System.Drawing.Size, System.Drawing">
+    <value>122, 31</value>
   </data>
   <data name="showQueueButton.Text" xml:space="preserve">
     <value>Visualizza coda</value>

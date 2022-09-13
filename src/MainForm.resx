@@ -127,14 +127,8 @@
   <data name="clearSelectionToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
     <value>165, 22</value>
   </data>
-  <data name="videoFileListBox.Size" type="System.Drawing.Size, System.Drawing">
-    <value>760, 303</value>
-  </data>
-  <data name="&gt;&gt;showQueueButton.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;optionsToolStripMenuItem.Name" xml:space="preserve">
-    <value>optionsToolStripMenuItem</value>
+  <data name="$this.Text" xml:space="preserve">
+    <value>MKVmerge Batcher</value>
   </data>
   <data name="&gt;&gt;exitToolStripMenuItem.Type" xml:space="preserve">
     <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
@@ -145,8 +139,8 @@
   <data name="showQueueButton.Size" type="System.Drawing.Size, System.Drawing">
     <value>109, 31</value>
   </data>
-  <data name="&gt;&gt;VideoFilesPathTextBox.Name" xml:space="preserve">
-    <value>VideoFilesPathTextBox</value>
+  <data name="&gt;&gt;helpToolStripMenuItem.Name" xml:space="preserve">
+    <value>helpToolStripMenuItem</value>
   </data>
   <data name="subfolderSearchCheckBox.Size" type="System.Drawing.Size, System.Drawing">
     <value>128, 17</value>
@@ -157,17 +151,11 @@
   <data name="fileToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
     <value>37, 20</value>
   </data>
-  <data name="&gt;&gt;videoFileListBox.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ListBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
   <data name="&gt;&gt;fileToolStripMenuItem.Type" xml:space="preserve">
     <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="BrowseVideoFilesButton.Size" type="System.Drawing.Size, System.Drawing">
     <value>75, 20</value>
-  </data>
-  <data name="&gt;&gt;videoFilePathLabel.Name" xml:space="preserve">
-    <value>videoFilePathLabel</value>
   </data>
   <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
   <data name="videoFilePathLabel.TabIndex" type="System.Int32, mscorlib">
@@ -175,6 +163,9 @@
   </data>
   <data name="addToQueueButton.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
     <value>MiddleRight</value>
+  </data>
+  <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
+    <value>784, 461</value>
   </data>
   <data name="clearSelectionToolStripMenuItem.Text" xml:space="preserve">
     <value>Clear Selection</value>
@@ -185,14 +176,14 @@
   <data name="BrowseVideoFilesButton.Location" type="System.Drawing.Point, System.Drawing">
     <value>697, 32</value>
   </data>
+  <data name="&gt;&gt;addTestModelButton.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
   <data name="menuStrip.Text" xml:space="preserve">
     <value>Menu</value>
   </data>
-  <data name="$this.Text" xml:space="preserve">
-    <value>MKVmerge Batcher</value>
-  </data>
-  <data name="&gt;&gt;addToQueueButton.Name" xml:space="preserve">
-    <value>addToQueueButton</value>
+  <data name="&gt;&gt;mainDataBindingSource.Type" xml:space="preserve">
+    <value>System.Windows.Forms.BindingSource, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="importV1UserDatajsonToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
     <value>198, 22</value>
@@ -1769,17 +1760,11 @@
   <data name="addTestModelButton.Text" xml:space="preserve">
     <value>Add test model</value>
   </data>
-  <data name="&gt;&gt;addTestModelButton.Name" xml:space="preserve">
-    <value>addTestModelButton</value>
-  </data>
   <data name="helpToolStripMenuItem.Text" xml:space="preserve">
     <value>?</value>
   </data>
   <data name="&gt;&gt;modelsToolStripMenuItem.Name" xml:space="preserve">
     <value>modelsToolStripMenuItem</value>
-  </data>
-  <data name="&gt;&gt;videoFileListContextMenuStrip.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ContextMenuStrip, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;subfolderSearchCheckBox.ZOrder" xml:space="preserve">
     <value>4</value>
@@ -1808,8 +1793,8 @@
   <data name="videoFilePathLabel.Location" type="System.Drawing.Point, System.Drawing">
     <value>12, 35</value>
   </data>
-  <data name="reverseSelectionToolStripMenuItem.Text" xml:space="preserve">
-    <value>Reverse Selection</value>
+  <data name="&gt;&gt;showQueueButton.Parent" xml:space="preserve">
+    <value>$this</value>
   </data>
   <data name="&gt;&gt;applyFileNameExclusionCheckBox.Name" xml:space="preserve">
     <value>applyFileNameExclusionCheckBox</value>
@@ -1817,8 +1802,8 @@
   <data name="videoFilePathLabel.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
   </data>
-  <data name="&gt;&gt;subfolderSearchCheckBox.Type" xml:space="preserve">
-    <value>System.Windows.Forms.CheckBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  <data name="&gt;&gt;addToQueueButton.Name" xml:space="preserve">
+    <value>addToQueueButton</value>
   </data>
   <data name="modelsToolStripMenuItem.Text" xml:space="preserve">
     <value>Models</value>
@@ -1881,14 +1866,17 @@
   <data name="addToQueueButton.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
     <value>Flat</value>
   </data>
+  <data name="&gt;&gt;subfolderSearchCheckBox.Name" xml:space="preserve">
+    <value>subfolderSearchCheckBox</value>
+  </data>
   <data name="&gt;&gt;$this.Name" xml:space="preserve">
     <value>MainForm</value>
   </data>
   <data name="&gt;&gt;addTestModelButton.Type" xml:space="preserve">
     <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="menuStrip.TabIndex" type="System.Int32, mscorlib">
-    <value>0</value>
+  <data name="exitToolStripMenuItem.Text" xml:space="preserve">
+    <value>Exit</value>
   </data>
   <data name="applyFileNameExclusionCheckBox.Location" type="System.Drawing.Point, System.Drawing">
     <value>149, 58</value>
@@ -1914,14 +1902,14 @@
   <data name="addToQueueButton.Text" xml:space="preserve">
     <value>Add to Queue</value>
   </data>
-  <data name="showQueueButton.TabIndex" type="System.Int32, mscorlib">
-    <value>8</value>
+  <data name="&gt;&gt;videoFileListBox.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ListBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;BrowseVideoFilesButton.Name" xml:space="preserve">
     <value>BrowseVideoFilesButton</value>
   </data>
   <data name="modelsToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>180, 22</value>
+    <value>116, 22</value>
   </data>
   <data name="BrowseVideoFilesButton.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
@@ -1932,11 +1920,8 @@
   <data name="showQueueButton.ImageAlign" type="System.Drawing.ContentAlignment, System.Drawing">
     <value>MiddleLeft</value>
   </data>
-  <data name="&gt;&gt;subfolderSearchCheckBox.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;mainDataBindingSource.Type" xml:space="preserve">
-    <value>System.Windows.Forms.BindingSource, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  <data name="&gt;&gt;optionsToolStripMenuItem.Name" xml:space="preserve">
+    <value>optionsToolStripMenuItem</value>
   </data>
   <data name="addTestModelButton.Size" type="System.Drawing.Size, System.Drawing">
     <value>94, 23</value>
@@ -1952,6 +1937,9 @@
   </data>
   <data name="videoFileListBox.Location" type="System.Drawing.Point, System.Drawing">
     <value>12, 81</value>
+  </data>
+  <data name="&gt;&gt;VideoFilesPathTextBox.Name" xml:space="preserve">
+    <value>VideoFilesPathTextBox</value>
   </data>
   <data name="&gt;&gt;videoFileListBox.Name" xml:space="preserve">
     <value>videoFileListBox</value>
@@ -1971,17 +1959,17 @@
   <data name="&gt;&gt;menuStrip.Name" xml:space="preserve">
     <value>menuStrip</value>
   </data>
-  <data name="&gt;&gt;addToQueueButton.ZOrder" xml:space="preserve">
-    <value>6</value>
+  <data name="&gt;&gt;subfolderSearchCheckBox.Type" xml:space="preserve">
+    <value>System.Windows.Forms.CheckBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="helpToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
     <value>24, 20</value>
   </data>
+  <data name="showQueueButton.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
+    <value>Flat</value>
+  </data>
   <data name="&gt;&gt;addToQueueButton.Type" xml:space="preserve">
     <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="exitToolStripMenuItem.Text" xml:space="preserve">
-    <value>Exit</value>
   </data>
   <data name="modelsComboBox.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Bottom, Left, Right</value>
@@ -1998,14 +1986,8 @@
   <data name="&gt;&gt;videoFileBindingSource.Name" xml:space="preserve">
     <value>videoFileBindingSource</value>
   </data>
-  <data name="&gt;&gt;helpToolStripMenuItem.Name" xml:space="preserve">
-    <value>helpToolStripMenuItem</value>
-  </data>
   <data name="aboutToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>180, 22</value>
-  </data>
-  <data name="&gt;&gt;importV1UserDatajsonToolStripMenuItem.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+    <value>107, 22</value>
   </data>
   <data name="videoFileListBox.HorizontalScrollbar" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -2031,8 +2013,8 @@
   <data name="&gt;&gt;VideoFilesPathTextBox.Type" xml:space="preserve">
     <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;subfolderSearchCheckBox.Name" xml:space="preserve">
-    <value>subfolderSearchCheckBox</value>
+  <data name="&gt;&gt;videoFilePathLabel.Name" xml:space="preserve">
+    <value>videoFilePathLabel</value>
   </data>
   <data name="BrowseVideoFilesButton.Text" xml:space="preserve">
     <value>Browse</value>
@@ -2047,7 +2029,7 @@
     <value>videoFileListContextMenuStrip</value>
   </data>
   <data name="optionsToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>180, 22</value>
+    <value>116, 22</value>
   </data>
   <data name="&gt;&gt;importV1UserDatajsonToolStripMenuItem.Name" xml:space="preserve">
     <value>importV1UserDatajsonToolStripMenuItem</value>
@@ -2061,11 +2043,11 @@
   <data name="viewToolStripMenuItem.Text" xml:space="preserve">
     <value>View</value>
   </data>
-  <data name="videoFilePathLabel.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
   <data name="&gt;&gt;showQueueButton.Type" xml:space="preserve">
     <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="reverseSelectionToolStripMenuItem.Text" xml:space="preserve">
+    <value>Reverse Selection</value>
   </data>
   <data name="&gt;&gt;applyFileNameExclusionCheckBox.Type" xml:space="preserve">
     <value>System.Windows.Forms.CheckBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
@@ -2073,8 +2055,17 @@
   <data name="VideoFilesPathTextBox.Size" type="System.Drawing.Size, System.Drawing">
     <value>592, 20</value>
   </data>
+  <data name="BrowseVideoFilesButton.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Right</value>
+  </data>
+  <data name="showQueueButton.TabIndex" type="System.Int32, mscorlib">
+    <value>8</value>
+  </data>
   <data name="applyFileNameExclusionCheckBox.TabIndex" type="System.Int32, mscorlib">
     <value>10</value>
+  </data>
+  <data name="&gt;&gt;reverseSelectionToolStripMenuItem.Name" xml:space="preserve">
+    <value>reverseSelectionToolStripMenuItem</value>
   </data>
   <data name="addToQueueButton.Size" type="System.Drawing.Size, System.Drawing">
     <value>111, 31</value>
@@ -2085,17 +2076,20 @@
   <data name="videoFileListBox.TabIndex" type="System.Int32, mscorlib">
     <value>6</value>
   </data>
-  <data name="&gt;&gt;showQueueButton.ZOrder" xml:space="preserve">
-    <value>5</value>
+  <data name="subfolderSearchCheckBox.Text" xml:space="preserve">
+    <value>Search in subfolders?</value>
   </data>
   <data name="fileToolStripMenuItem.Text" xml:space="preserve">
     <value>File</value>
   </data>
-  <data name="BrowseVideoFilesButton.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
-    <value>Top, Right</value>
+  <data name="&gt;&gt;addTestModelButton.Name" xml:space="preserve">
+    <value>addTestModelButton</value>
   </data>
   <data name="&gt;&gt;fileToolStripMenuItem.Name" xml:space="preserve">
     <value>fileToolStripMenuItem</value>
+  </data>
+  <data name="&gt;&gt;videoFilePathLabel.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;VideoFilesPathTextBox.ZOrder" xml:space="preserve">
     <value>9</value>
@@ -2106,23 +2100,32 @@
   <data name="&gt;&gt;applyFileNameExclusionCheckBox.Parent" xml:space="preserve">
     <value>$this</value>
   </data>
+  <data name="&gt;&gt;subfolderSearchCheckBox.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
   <data name="&gt;&gt;mainDataBindingSource.Name" xml:space="preserve">
     <value>mainDataBindingSource</value>
   </data>
-  <data name="subfolderSearchCheckBox.Text" xml:space="preserve">
-    <value>Search in subfolders?</value>
+  <data name="menuStrip.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;addToQueueButton.ZOrder" xml:space="preserve">
+    <value>6</value>
   </data>
   <data name="subfolderSearchCheckBox.Location" type="System.Drawing.Point, System.Drawing">
     <value>15, 58</value>
   </data>
-  <data name="&gt;&gt;videoFilePathLabel.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  <data name="&gt;&gt;videoFileListContextMenuStrip.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ContextMenuStrip, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="applyFileNameExclusionCheckBox.Size" type="System.Drawing.Size, System.Drawing">
     <value>150, 17</value>
   </data>
-  <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
-    <value>784, 461</value>
+  <data name="&gt;&gt;importV1UserDatajsonToolStripMenuItem.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="videoFileListBox.Size" type="System.Drawing.Size, System.Drawing">
+    <value>760, 303</value>
   </data>
   <data name="&gt;&gt;videoFilePathLabel.ZOrder" xml:space="preserve">
     <value>10</value>
@@ -2139,9 +2142,6 @@
   <data name="exitToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
     <value>198, 22</value>
   </data>
-  <data name="&gt;&gt;optionsDataBindingSource.Name" xml:space="preserve">
-    <value>optionsDataBindingSource</value>
-  </data>
   <data name="&gt;&gt;modelsComboBox.Type" xml:space="preserve">
     <value>System.Windows.Forms.ComboBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
@@ -2154,8 +2154,8 @@
   <data name="&gt;&gt;BrowseVideoFilesButton.ZOrder" xml:space="preserve">
     <value>8</value>
   </data>
-  <data name="&gt;&gt;addTestModelButton.ZOrder" xml:space="preserve">
-    <value>1</value>
+  <data name="&gt;&gt;showQueueButton.ZOrder" xml:space="preserve">
+    <value>5</value>
   </data>
   <data name="&gt;&gt;menuStrip.Type" xml:space="preserve">
     <value>System.Windows.Forms.MenuStrip, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
@@ -2166,8 +2166,8 @@
   <data name="&gt;&gt;modelBindingSource.Type" xml:space="preserve">
     <value>System.Windows.Forms.BindingSource, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="showQueueButton.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
-    <value>Flat</value>
+  <data name="videoFilePathLabel.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
   </data>
   <data name="&gt;&gt;optionsDataBindingSource.Type" xml:space="preserve">
     <value>System.Windows.Forms.BindingSource, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
@@ -2175,8 +2175,8 @@
   <data name="&gt;&gt;aboutToolStripMenuItem.Type" xml:space="preserve">
     <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;reverseSelectionToolStripMenuItem.Name" xml:space="preserve">
-    <value>reverseSelectionToolStripMenuItem</value>
+  <data name="&gt;&gt;optionsDataBindingSource.Name" xml:space="preserve">
+    <value>optionsDataBindingSource</value>
   </data>
   <data name="VideoFilesPathTextBox.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Top, Left, Right</value>
@@ -2184,8 +2184,8 @@
   <data name="aboutToolStripMenuItem.Text" xml:space="preserve">
     <value>About</value>
   </data>
-  <metadata name="mainDataBindingSource.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>329, 17</value>
+  <metadata name="modelBindingSource.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>688, 17</value>
   </metadata>
   <metadata name="videoFileListContextMenuStrip.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>853, 17</value>
@@ -2193,8 +2193,8 @@
   <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
-  <metadata name="modelBindingSource.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>688, 17</value>
+  <metadata name="mainDataBindingSource.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>329, 17</value>
   </metadata>
   <metadata name="menuStrip.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>17, 17</value>
