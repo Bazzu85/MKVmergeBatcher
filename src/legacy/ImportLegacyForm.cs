@@ -65,7 +65,7 @@ namespace MKVmergeBatcher.src.legacy
             OpenFileDialog openFileDialog = new OpenFileDialog()
             {
                 InitialDirectory = Path.GetDirectoryName(importLegacyData.oldUserDataJson),
-                Filter = "json files (*.json)|*.json"
+                Filter = Properties.Resources.JsonFiles + " (*.json)|*.json"
             }
             ;
             if (openFileDialog.ShowDialog() == DialogResult.OK && Path.GetFileName(openFileDialog.FileName).ToLower() == "userdata.json")

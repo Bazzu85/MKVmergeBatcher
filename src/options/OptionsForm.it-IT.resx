@@ -117,15 +117,34 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="label1.AutoSize" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="label1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>4, 30</value>
+  </data>
   <data name="label1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>107, 13</value>
+    <value>392, 18</value>
   </data>
   <data name="label1.Text" xml:space="preserve">
     <value>Percorso MKVmerge:</value>
   </data>
+  <data name="label1.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>MiddleLeft</value>
+  </data>
+  <data name="browseMkvMergeLocationButton.Location" type="System.Drawing.Point, System.Drawing">
+    <value>321, 51</value>
+  </data>
   <data name="browseMkvMergeLocationButton.Text" xml:space="preserve">
     <value>Sfoglia</value>
+  </data>
+  <data name="mkvMergeLocationTextBox.Location" type="System.Drawing.Point, System.Drawing">
+    <value>6, 51</value>
+  </data>
+  <data name="mkvMergeLocationTextBox.Size" type="System.Drawing.Size, System.Drawing">
+    <value>309, 20</value>
   </data>
   <data name="logLevelLabel.Size" type="System.Drawing.Size, System.Drawing">
     <value>77, 13</value>
@@ -148,17 +167,14 @@
   <data name="localeComboBox.Location" type="System.Drawing.Point, System.Drawing">
     <value>261, 6</value>
   </data>
-  <data name="generalTabPage.Text" xml:space="preserve">
-    <value>Opzioni generali</value>
+  <data name="allowMultipleInstacesCheckBox.Location" type="System.Drawing.Point, System.Drawing">
+    <value>6, 340</value>
   </data>
   <data name="allowMultipleInstacesCheckBox.Size" type="System.Drawing.Size, System.Drawing">
     <value>219, 17</value>
   </data>
   <data name="allowMultipleInstacesCheckBox.Text" xml:space="preserve">
     <value>Permetti intanze multiple dell'applicazione</value>
-  </data>
-  <data name="excludeFileNameContiningGroupBox.Text" xml:space="preserve">
-    <value>Escludi nomi file che contengono</value>
   </data>
   <data name="removeExcludeFileNameContainingButton.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
@@ -177,8 +193,11 @@
         YII=
 </value>
   </data>
-  <data name="extensionsGroupBox.Text" xml:space="preserve">
-    <value>Estensioni</value>
+  <data name="excludeFileNameContiningGroupBox.Location" type="System.Drawing.Point, System.Drawing">
+    <value>7, 209</value>
+  </data>
+  <data name="excludeFileNameContiningGroupBox.Text" xml:space="preserve">
+    <value>Escludi nomi file che contengono</value>
   </data>
   <data name="removeExtensionButton.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
@@ -197,8 +216,14 @@
         YII=
 </value>
   </data>
-  <data name="queueTabPage.Text" xml:space="preserve">
-    <value>Coda</value>
+  <data name="extensionsGroupBox.Location" type="System.Drawing.Point, System.Drawing">
+    <value>6, 78</value>
+  </data>
+  <data name="extensionsGroupBox.Text" xml:space="preserve">
+    <value>Estensioni</value>
+  </data>
+  <data name="generalTabPage.Text" xml:space="preserve">
+    <value>Opzioni generali</value>
   </data>
   <data name="replaceExistingDestinationFilesCheckBox.Size" type="System.Drawing.Size, System.Drawing">
     <value>301, 17</value>
@@ -290,8 +315,8 @@
   <data name="moveOkFilesToLabel.Text" xml:space="preserve">
     <value>Sposta file corretti in:</value>
   </data>
-  <data name="versionTabPage.Text" xml:space="preserve">
-    <value>Versione app</value>
+  <data name="queueTabPage.Text" xml:space="preserve">
+    <value>Coda</value>
   </data>
   <data name="checkVersionButton.Location" type="System.Drawing.Point, System.Drawing">
     <value>170, 48</value>
@@ -309,16 +334,16 @@
     <value>127, 32</value>
   </data>
   <data name="label3.Size" type="System.Drawing.Size, System.Drawing">
-    <value>104, 13</value>
+    <value>115, 13</value>
   </data>
   <data name="label3.Text" xml:space="preserve">
     <value>Versione aggiornata:</value>
   </data>
   <data name="label2.Location" type="System.Drawing.Point, System.Drawing">
-    <value>38, 32</value>
+    <value>9, 32</value>
   </data>
   <data name="label2.Size" type="System.Drawing.Size, System.Drawing">
-    <value>86, 13</value>
+    <value>115, 13</value>
   </data>
   <data name="label2.Text" xml:space="preserve">
     <value>Versione attuale:</value>
@@ -328,6 +353,9 @@
   </data>
   <data name="checkUpdatesCheckBox.Text" xml:space="preserve">
     <value>Controlla automaticamente aggiornamenti</value>
+  </data>
+  <data name="versionTabPage.Text" xml:space="preserve">
+    <value>Versione app</value>
   </data>
   <data name="$this.Icon" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>

@@ -385,6 +385,15 @@ namespace MKVmergeBatcher.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Json files.
+        /// </summary>
+        internal static string JsonFiles {
+            get {
+                return ResourceManager.GetString("JsonFiles", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to making a backup.
         /// </summary>
         internal static string MakingBackup {

@@ -345,4 +345,7 @@
   <data name="ClearSelection" xml:space="preserve">
     <value>Clear Selection</value>
   </data>
+  <data name="JsonFiles" xml:space="preserve">
+    <value>Json files</value>
+  </data>
 </root>

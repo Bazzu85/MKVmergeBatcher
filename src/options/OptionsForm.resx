@@ -243,6 +243,9 @@
         AAAASUVORK5CYII=
 </value>
   </data>
+  <data name="label2.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>MiddleRight</value>
+  </data>
   <data name="&gt;&gt;autoClearWarningJobsCheckBox.Type" xml:space="preserve">
     <value>System.Windows.Forms.CheckBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
@@ -2340,9 +2343,6 @@
   <data name="allowMultipleInstacesCheckBox.Text" xml:space="preserve">
     <value>Allow multiple instances of the application?</value>
   </data>
-  <data name="label3.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
   <data name="&gt;&gt;optionsTabControl.Parent" xml:space="preserve">
     <value>$this</value>
   </data>
@@ -2381,6 +2381,9 @@
   </data>
   <data name="&gt;&gt;showSummaryOnlyWarningsErrorsCheckBox.Name" xml:space="preserve">
     <value>showSummaryOnlyWarningsErrorsCheckBox</value>
+  </data>
+  <data name="label3.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>MiddleRight</value>
   </data>
   <data name="autoClearOkJobsCheckBox.Text" xml:space="preserve">
     <value>Automatically remove Ok jobs?</value>
@@ -2565,9 +2568,6 @@
   <data name="&gt;&gt;currentVersionLabel.ZOrder" xml:space="preserve">
     <value>2</value>
   </data>
-  <data name="queueTabPage.Text" xml:space="preserve">
-    <value>Queue</value>
-  </data>
   <data name="&gt;&gt;queueTabPage.ZOrder" xml:space="preserve">
     <value>1</value>
   </data>
@@ -2625,8 +2625,8 @@
   <data name="autoClearWarningJobsCheckBox.Location" type="System.Drawing.Point, System.Drawing">
     <value>9, 154</value>
   </data>
-  <data name="label2.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
+  <data name="queueTabPage.Text" xml:space="preserve">
+    <value>Queue</value>
   </data>
   <data name="&gt;&gt;checkUpdatesCheckBox.ZOrder" xml:space="preserve">
     <value>5</value>
@@ -2879,6 +2879,9 @@
   </metadata>
   <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
+  </metadata>
+  <metadata name="$this.Language" type="System.Globalization.CultureInfo, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>it-IT</value>
   </metadata>
   <metadata name="excludeFileNameContainingBindingSource.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>735, 17</value>
