@@ -582,7 +582,7 @@ namespace MKVmergeBatcher.src.queue
                     AddExtension = true,
                     DefaultExt = "bat",
                     InitialDirectory = MainForm.mainData.lastBatFilePath,
-                    Filter = "bat files (*.bat)|*.bat"
+                    Filter = Properties.Resources.BatFiles + " (*.bat)|*.bat"
                 };
                 if (saveFileDialog.ShowDialog() == DialogResult.OK)
                 {

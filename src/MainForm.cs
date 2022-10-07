@@ -302,7 +302,7 @@ namespace MKVmergeBatcher.src
             ;
             if (optionsData.extensionList.Count() > 0)
             {
-                string extensionsFilter = "Video Files |";
+                string extensionsFilter = Properties.Resources.VideoFiles + " |";
                 for (int i = 0; i < optionsData.extensionList.Count(); i++)
                 {
                     extensionsFilter += "*." + optionsData.extensionList[i].extension;

@@ -211,7 +211,7 @@ namespace MKVmergeBatcher.src.options
             OpenFileDialog openFileDialog = new OpenFileDialog()
             {
                 InitialDirectory = mkvMergeLocationTextBox.Text,
-                Filter = "exe files (*.exe)|*.exe"
+                Filter = Properties.Resources.ExeFiles + " (*.exe)|*.exe"
             }
             ;
             if (openFileDialog.ShowDialog() == DialogResult.OK)

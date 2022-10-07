@@ -348,4 +348,13 @@
   <data name="JsonFiles" xml:space="preserve">
     <value>Files json</value>
   </data>
+  <data name="VideoFiles" xml:space="preserve">
+    <value>Files Video</value>
+  </data>
+  <data name="ExeFiles" xml:space="preserve">
+    <value>File eseguibili</value>
+  </data>
+  <data name="BatFiles" xml:space="preserve">
+    <value>Files bat</value>
+  </data>
 </root>

@@ -169,6 +169,15 @@ namespace MKVmergeBatcher.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to bat files.
+        /// </summary>
+        internal static string BatFiles {
+            get {
+                return ResourceManager.GetString("BatFiles", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Call type not passed.
         /// </summary>
         internal static string CallTypeNotPassed {
@@ -273,6 +282,15 @@ namespace MKVmergeBatcher.Properties {
         internal static string ErrorLabel {
             get {
                 return ResourceManager.GetString("ErrorLabel", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to exe files.
+        /// </summary>
+        internal static string ExeFiles {
+            get {
+                return ResourceManager.GetString("ExeFiles", resourceCulture);
             }
         }
         
@@ -705,6 +723,15 @@ namespace MKVmergeBatcher.Properties {
         internal static string Video {
             get {
                 return ResourceManager.GetString("Video", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Video Files.
+        /// </summary>
+        internal static string VideoFiles {
+            get {
+                return ResourceManager.GetString("VideoFiles", resourceCulture);
             }
         }
         
