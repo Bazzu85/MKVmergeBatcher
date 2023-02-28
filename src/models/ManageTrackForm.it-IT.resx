@@ -140,7 +140,7 @@
     <value>130, 13</value>
   </data>
   <data name="originalFilePositionLabel.Text" xml:space="preserve">
-    <value>Posizione file originale:</value>
+    <value>Percorso file originale:</value>
   </data>
   <data name="OriginalFilePositionNumericUpDown.Location" type="System.Drawing.Point, System.Drawing">
     <value>315, 39</value>
@@ -1784,5 +1784,11 @@
   </data>
   <data name="$this.Text" xml:space="preserve">
     <value>Gestisci traccia</value>
+  </data>
+  <data name="typeComboBox.Items1" xml:space="preserve">
+    <value>Audio</value>
+  </data>
+  <data name="typeComboBox.Items" xml:space="preserve">
+    <value>Video</value>
   </data>
 </root>

@@ -158,7 +158,7 @@
     <value>93, 13</value>
   </data>
   <data name="videoFilePathLabel.Text" xml:space="preserve">
-    <value>Indirizzo file video:</value>
+    <value>Percorso file video:</value>
   </data>
   <data name="VideoFilesPathTextBox.Location" type="System.Drawing.Point, System.Drawing">
     <value>106, 32</value>
@@ -234,7 +234,7 @@
     <value>135, 17</value>
   </data>
   <data name="applyFileNameExclusionCheckBox.Text" xml:space="preserve">
-    <value>Applica filtro ai nomi file</value>
+    <value>Vuoi applicare un esclusione ai nomi file?</value>
   </data>
   <data name="addTestModelButton.Size" type="System.Drawing.Size, System.Drawing">
     <value>148, 23</value>
@@ -1797,5 +1797,17 @@
         /AD////////////////////////8AP////////////////////////wA////////////////////////
         /AA=
 </value>
+  </data>
+  <data name="$this.Text" xml:space="preserve">
+    <value>MKVmerge Batcher</value>
+  </data>
+  <data name="menuStrip.Text" xml:space="preserve">
+    <value>Menu</value>
+  </data>
+  <data name="helpToolStripMenuItem.Text" xml:space="preserve">
+    <value>?</value>
+  </data>
+  <data name="fileToolStripMenuItem.Text" xml:space="preserve">
+    <value>File</value>
   </data>
 </root>

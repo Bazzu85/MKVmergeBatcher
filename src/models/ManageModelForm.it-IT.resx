@@ -155,7 +155,7 @@
     <value>206, 17</value>
   </data>
   <data name="noCompressionCheckBox.Text" xml:space="preserve">
-    <value>--compression none per tutte le traccie</value>
+    <value>--compression none' per tutte le traccie</value>
   </data>
   <data name="customInputFilesArgumentsGroupBox.Text" xml:space="preserve">
     <value>Argomenti personalizzati file sorgente</value>
@@ -1909,5 +1909,14 @@
   </data>
   <data name="$this.Text" xml:space="preserve">
     <value>Modello</value>
+  </data>
+  <data name="noGlobalTagsCheckBox.Text" xml:space="preserve">
+    <value>--no-global-tags</value>
+  </data>
+  <data name="noAttachmentsCheckBox.Text" xml:space="preserve">
+    <value>--no-attachments</value>
+  </data>
+  <data name="noTrackTagsCheckBox.Text" xml:space="preserve">
+    <value>--no-track-tags</value>
   </data>
 </root>

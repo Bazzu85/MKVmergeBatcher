@@ -153,7 +153,7 @@
     <value>346, 22</value>
   </data>
   <data name="resetAllWarningJobsToolStripMenuItem.Text" xml:space="preserve">
-    <value>Ripristina tutte le attività in stato "Avviso"</value>
+    <value>Ripristina tutte le attività in stato "Attenzione"</value>
   </data>
   <data name="resetAllErrorJobsToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
     <value>346, 22</value>
@@ -177,7 +177,7 @@
     <value>346, 22</value>
   </data>
   <data name="clearAllWarningJobsToolStripMenuItem.Text" xml:space="preserve">
-    <value>Ripristina tutte le attività in stato "Avviso"</value>
+    <value>Ripristina tutte le attività in stato "Attenzione"</value>
   </data>
   <data name="clearAllErrorJobsToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
     <value>346, 22</value>
@@ -189,19 +189,19 @@
     <value>346, 22</value>
   </data>
   <data name="autoClearOkJobsToolStripMenuItem.Text" xml:space="preserve">
-    <value>Vuoi rimuovere automaticamente le attività in stato "OK"?</value>
+    <value>Rimuovi automaticamente le attività in stato "OK"</value>
   </data>
   <data name="autoClearWarningJobsToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
     <value>346, 22</value>
   </data>
   <data name="autoClearWarningJobsToolStripMenuItem.Text" xml:space="preserve">
-    <value>Vuoi rimuovere automaticamente le attività in stato "Avviso"?</value>
+    <value>Rimuovi automaticamente le attività in stato "Attenzione"</value>
   </data>
   <data name="autoClearErrorJobsToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
     <value>346, 22</value>
   </data>
   <data name="autoClearErrorJobsToolStripMenuItem.Text" xml:space="preserve">
-    <value>Vuoi rimuovere automaticamente le attività in stato "Errore"?</value>
+    <value>Rimuoviautomaticamente le attività in stato "Errore"</value>
   </data>
   <data name="queueContextMenuStrip.Size" type="System.Drawing.Size, System.Drawing">
     <value>347, 246</value>
@@ -321,7 +321,7 @@
     <value>101, 39</value>
   </data>
   <data name="createBatButton.Text" xml:space="preserve">
-    <value>Crea file Bat</value>
+    <value>Crea file bat</value>
   </data>
   <data name="createBatButton.ToolTip" xml:space="preserve">
     <value>Crea un file bat con l'attività in stato "In sospeso"</value>
@@ -1942,9 +1942,15 @@
     <value>File</value>
   </data>
   <data name="warningLabel.Text" xml:space="preserve">
-    <value>Avviso: 0</value>
+    <value>Attenzione: 0</value>
   </data>
   <data name="startButton.Text" xml:space="preserve">
     <value>Avvia</value>
+  </data>
+  <data name="fileNameWithoutExtensionDataGridViewTextBoxColumn.HeaderText" xml:space="preserve">
+    <value>NomeFileSenzaEstensione</value>
+  </data>
+  <data name="fileFullPathDataGridViewTextBoxColumn.HeaderText" xml:space="preserve">
+    <value>PercorsoCompletoFile</value>
   </data>
 </root>

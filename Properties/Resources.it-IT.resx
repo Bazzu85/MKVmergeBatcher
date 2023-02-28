@@ -124,7 +124,7 @@
     <value>Aggiungi</value>
   </data>
   <data name="AddModel" xml:space="preserve">
-    <value>Aggiungi Modello</value>
+    <value>Aggiungi modello</value>
   </data>
   <data name="AddTrack" xml:space="preserve">
     <value>Aggiungi traccia</value>
@@ -142,13 +142,14 @@
     <value>Impossibile stoppare la coda</value>
   </data>
   <data name="DigitModelName" xml:space="preserve">
-    <value>Digita il nome del modello</value>
+    <value>Inserisci il nome del modello</value>
   </data>
   <data name="DoYouWantStopCurrentJob" xml:space="preserve">
-    <value>Coda in elaborazione. Vuoi stoppare l'attuale job?</value>
+    <value>Coda in elaborazione. 
+Vuoi stoppare l'attuale job?</value>
   </data>
   <data name="EditModel" xml:space="preserve">
-    <value>Modifica Modello</value>
+    <value>Modifica modello</value>
   </data>
   <data name="EditTrack" xml:space="preserve">
     <value>Modifica traccia</value>
@@ -160,22 +161,22 @@
     <value>Errore</value>
   </data>
   <data name="ExtensionNotRequired" xml:space="preserve">
-    <value>L'estensione può essere specificata solo per file aggiuntivi (Numero file originale &gt; 0)</value>
+    <value>L'estensione può essere specificata solo per file aggiuntivi (numero file originale &gt; 0)</value>
   </data>
   <data name="FileAlreadyInQueue" xml:space="preserve">
     <value>File già nella coda</value>
   </data>
   <data name="InsertLanguageCode" xml:space="preserve">
-    <value>Inserisci il language code</value>
+    <value>Inserisci il codice lingua</value>
   </data>
   <data name="NoFilesToAddToQueue" xml:space="preserve">
     <value>Nessun file da aggiungere alla coda</value>
   </data>
   <data name="NothingToStart" xml:space="preserve">
-    <value>Niente da startare</value>
+    <value>Nessuna attività da avviare</value>
   </data>
   <data name="OriginalFileNumberPositionAlreadyInTrackList" xml:space="preserve">
-    <value>Numero e posizione del file originale già inseriti</value>
+    <value>Numero e percorso del file originale già inseriti nell'elenco tracce</value>
   </data>
   <data name="SaveCurrentCompiledModel" xml:space="preserve">
     <value>Vuoi salvare il modello?</value>
@@ -190,19 +191,19 @@
     <value>Seleziona il tipo di traccia</value>
   </data>
   <data name="SpecifySuffixOrExtension" xml:space="preserve">
-    <value>Per file aggiuntivi deve essere specificato almeno un suffisso o una estensione</value>
+    <value>Per file aggiuntivi (numero file roginale &gt;0) deve essere specificato almeno un suffisso o una estensione</value>
   </data>
   <data name="SuffixNotRequired" xml:space="preserve">
-    <value>Il suffisso può essere specificato solo per file aggiuntivi (Numero file originale &gt; 0)</value>
+    <value>Il suffisso file roiginbale può essere specificato solo per file aggiuntivi (numero file originale &gt; 0)</value>
   </data>
   <data name="SummaryLabel" xml:space="preserve">
-    <value>Summary</value>
+    <value>Riepilogo</value>
   </data>
   <data name="UseDifferentModelName" xml:space="preserve">
-    <value>Usa un nome modello diverso. L'attuale è già presente.</value>
+    <value>Usa un nome modello diverso. Il nome modello attuale è già presente.</value>
   </data>
   <data name="UseOneAttachmentFlag" xml:space="preserve">
-    <value>Usa un solo flag tra --no-attachments e Add Attachments</value>
+    <value>Usa un solo flag tra '--no-attachments' e 'Add Attachments'</value>
   </data>
   <data name="WarningLabel" xml:space="preserve">
     <value>Attenzione</value>
@@ -226,7 +227,7 @@
     <value>Riassunto</value>
   </data>
   <data name="WorkingOnJob" xml:space="preserve">
-    <value>Lavorando sul job</value>
+    <value>Lavori in elaborazione</value>
   </data>
   <data name="Of" xml:space="preserve">
     <value>di</value>
@@ -238,7 +239,7 @@
     <value>In sospeso</value>
   </data>
   <data name="RunningJobLabel" xml:space="preserve">
-    <value>In Esecuzione</value>
+    <value>In esecuzione</value>
   </data>
   <data name="ProcessStarted" xml:space="preserve">
     <value>Elaborazione iniziata</value>
@@ -256,7 +257,7 @@
     <value>verso</value>
   </data>
   <data name="MakingBackup" xml:space="preserve">
-    <value>creando un backup</value>
+    <value>creazione backup</value>
   </data>
   <data name="AreYouSurePleaseMakeBackup" xml:space="preserve">
     <value>Sei sicuro? I dati attuali verranno sovrascritti. Fai un backup della cartella di configurazione</value>
@@ -268,7 +269,7 @@
     <value>Info</value>
   </data>
   <data name="WorkingOnModel" xml:space="preserve">
-    <value>Lavorando sul modello</value>
+    <value>Elaborazione modello</value>
   </data>
   <data name="View" xml:space="preserve">
     <value>Visualizza</value>
@@ -298,25 +299,25 @@
     <value>Audio</value>
   </data>
   <data name="NoMkvMergeLocation" xml:space="preserve">
-    <value>La posizione di MkvMerge nelle opzioni non è stata impostata</value>
+    <value>Nelle opzioni non è stata impostato Il percorso  di MkvMerge</value>
   </data>
   <data name="SelectCorrectMkvmerge" xml:space="preserve">
     <value>Seleziona il file mkvmerge.exe corretto</value>
   </data>
   <data name="BatCreatedClearQueue" xml:space="preserve">
-    <value>File Bat Creato. Vuoi pulire la coda di Job?</value>
+    <value>Creato il file bat. Vuoi azzerare la coda attività?</value>
   </data>
   <data name="JobNoLongerAvailable" xml:space="preserve">
-    <value>Job non più disponibile. Chiudo la finestra.</value>
+    <value>Attivitànon più disponibile. Verrà chiusa la finestra.</value>
   </data>
   <data name="NothingToPutInBat" xml:space="preserve">
-    <value>Nessun job da mettere nel file Bat</value>
+    <value>Nessuna attività da inserire nel file bat</value>
   </data>
   <data name="AnotherInstanceIsCurrentlyRunning" xml:space="preserve">
-    <value>Un'altra istanza dell'applicazione è in esecuzione. Questa verrà chiusa.</value>
+    <value>È in esecuzione un'altra istanza dell'applicazione. Questa istanza verrà chiusa.</value>
   </data>
   <data name="NewVersionFound" xml:space="preserve">
-    <value>Trovata una nuova versione dell'app. Vuoi aprire la pagina delle release? Puoi disabilitare questo controllo dalle opzioni.</value>
+    <value>Trovata una nuova versione dell'app. Vuoi aprire la pagina relativa nel sito web? Puoi disabilitare questo controllo dalle opzioni.</value>
   </data>
   <data name="EnglishLanguageName" xml:space="preserve">
     <value>Inglese</value>
@@ -346,15 +347,15 @@
     <value>Rimuovi selezione</value>
   </data>
   <data name="JsonFiles" xml:space="preserve">
-    <value>Files json</value>
+    <value>File json</value>
   </data>
   <data name="VideoFiles" xml:space="preserve">
-    <value>Files Video</value>
+    <value>File video</value>
   </data>
   <data name="ExeFiles" xml:space="preserve">
     <value>File eseguibili</value>
   </data>
   <data name="BatFiles" xml:space="preserve">
-    <value>Files bat</value>
+    <value>File bat</value>
   </data>
 </root>
