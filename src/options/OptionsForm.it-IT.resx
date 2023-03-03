@@ -174,7 +174,7 @@
     <value>219, 17</value>
   </data>
   <data name="allowMultipleInstacesCheckBox.Text" xml:space="preserve">
-    <value>Permetti intanze multiple dell'applicazione</value>
+    <value>Permetti istanze multiple dell'applicazione</value>
   </data>
   <data name="removeExcludeFileNameContainingButton.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
@@ -235,7 +235,7 @@
     <value>379, 17</value>
   </data>
   <data name="showSummaryOnlyWarningsErrorsCheckBox.Text" xml:space="preserve">
-    <value>Visualizza sommario quando ci sono attività in stato "Attenzione" o "Errore"</value>
+    <value>Visualizza sommario quando ci sono attività in stato "Avviso" o "Errore"</value>
   </data>
   <data name="showSummaryWhenQueueEndsCheckBox.Size" type="System.Drawing.Size, System.Drawing">
     <value>309, 17</value>
@@ -259,7 +259,7 @@
     <value>281, 17</value>
   </data>
   <data name="autoClearWarningJobsCheckBox.Text" xml:space="preserve">
-    <value>Rimuovi automaticamente le attività in stato "Attenzione"</value>
+    <value>Rimuovi automaticamente le attività in stato "Avviso"</value>
   </data>
   <data name="autoClearOkJobsCheckBox.Size" type="System.Drawing.Size, System.Drawing">
     <value>264, 17</value>
@@ -304,7 +304,7 @@
     <value>152, 13</value>
   </data>
   <data name="moveWarningFilesToLabel.Text" xml:space="preserve">
-    <value>Sposta file in stato "Attenzione" in:</value>
+    <value>Sposta file in stato "Avviso" in:</value>
   </data>
   <data name="moveOkFilesToLabel.Location" type="System.Drawing.Point, System.Drawing">
     <value>6, 9</value>

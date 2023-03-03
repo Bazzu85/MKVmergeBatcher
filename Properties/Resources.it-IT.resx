@@ -145,8 +145,8 @@
     <value>Inserisci il nome del modello</value>
   </data>
   <data name="DoYouWantStopCurrentJob" xml:space="preserve">
-    <value>Coda in elaborazione. 
-Vuoi stoppare l'attuale job?</value>
+    <value>Coda in elaborazione.
+Vuoi stoppare l'attività attuale?</value>
   </data>
   <data name="EditModel" xml:space="preserve">
     <value>Modifica modello</value>
@@ -191,31 +191,32 @@ Vuoi stoppare l'attuale job?</value>
     <value>Seleziona il tipo di traccia</value>
   </data>
   <data name="SpecifySuffixOrExtension" xml:space="preserve">
-    <value>Per file aggiuntivi (numero file roginale &gt;0) deve essere specificato almeno un suffisso o una estensione</value>
+    <value>Per file aggiuntivi (numero file originale &gt;0) deve essere specificato almeno un suffisso o una estensione</value>
   </data>
   <data name="SuffixNotRequired" xml:space="preserve">
-    <value>Il suffisso file roiginbale può essere specificato solo per file aggiuntivi (numero file originale &gt; 0)</value>
+    <value>Il suffisso file originale può essere specificato solo per file aggiuntivi (numero file originale &gt; 0)</value>
   </data>
   <data name="SummaryLabel" xml:space="preserve">
     <value>Riepilogo</value>
   </data>
   <data name="UseDifferentModelName" xml:space="preserve">
-    <value>Usa un nome modello diverso. Il nome modello attuale è già presente.</value>
+    <value>Usa un nome modello diverso.
+Il nome modello attuale è già presente.</value>
   </data>
   <data name="UseOneAttachmentFlag" xml:space="preserve">
     <value>Usa un solo flag tra '--no-attachments' e 'Add Attachments'</value>
   </data>
   <data name="WarningLabel" xml:space="preserve">
-    <value>Attenzione</value>
+    <value>Avviso</value>
   </data>
   <data name="ErrorJobLabel" xml:space="preserve">
     <value>Errore</value>
   </data>
   <data name="WarningJobLabel" xml:space="preserve">
-    <value>Attenzione</value>
+    <value>Avviso</value>
   </data>
   <data name="OkJobLabel" xml:space="preserve">
-    <value>Ok</value>
+    <value>OK</value>
   </data>
   <data name="AreYouSure" xml:space="preserve">
     <value>Sei sicuro?</value>
@@ -260,7 +261,9 @@ Vuoi stoppare l'attuale job?</value>
     <value>creazione backup</value>
   </data>
   <data name="AreYouSurePleaseMakeBackup" xml:space="preserve">
-    <value>Sei sicuro? I dati attuali verranno sovrascritti. Fai un backup della cartella di configurazione</value>
+    <value>Sei sicuro?
+I dati attuali verranno sovrascritti.
+Fai un backup della cartella di configurazione</value>
   </data>
   <data name="UserDataImported" xml:space="preserve">
     <value>UserData importato</value>
@@ -305,19 +308,24 @@ Vuoi stoppare l'attuale job?</value>
     <value>Seleziona il file mkvmerge.exe corretto</value>
   </data>
   <data name="BatCreatedClearQueue" xml:space="preserve">
-    <value>Creato il file bat. Vuoi azzerare la coda attività?</value>
+    <value>Creato il file bat.
+Vuoi azzerare la coda attività?</value>
   </data>
   <data name="JobNoLongerAvailable" xml:space="preserve">
-    <value>Attivitànon più disponibile. Verrà chiusa la finestra.</value>
+    <value>Attività non più disponibile.
+Verrà chiusa la finestra.</value>
   </data>
   <data name="NothingToPutInBat" xml:space="preserve">
     <value>Nessuna attività da inserire nel file bat</value>
   </data>
   <data name="AnotherInstanceIsCurrentlyRunning" xml:space="preserve">
-    <value>È in esecuzione un'altra istanza dell'applicazione. Questa istanza verrà chiusa.</value>
+    <value>È in esecuzione un'altra istanza dell'applicazione.
+Questa istanza verrà chiusa.</value>
   </data>
   <data name="NewVersionFound" xml:space="preserve">
-    <value>Trovata una nuova versione dell'app. Vuoi aprire la pagina relativa nel sito web? Puoi disabilitare questo controllo dalle opzioni.</value>
+    <value>Trovata una nuova versione dell'app.
+Vuoi aprire la pagina relativa nel sito web?
+Puoi disabilitare questo controllo dalle opzioni.</value>
   </data>
   <data name="EnglishLanguageName" xml:space="preserve">
     <value>Inglese</value>

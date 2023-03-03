@@ -234,7 +234,7 @@
     <value>135, 17</value>
   </data>
   <data name="applyFileNameExclusionCheckBox.Text" xml:space="preserve">
-    <value>Vuoi applicare un esclusione ai nomi file?</value>
+    <value>Applica esclusione ai nomi file</value>
   </data>
   <data name="addTestModelButton.Size" type="System.Drawing.Size, System.Drawing">
     <value>148, 23</value>

@@ -390,7 +390,7 @@
 </value>
   </data>
   <data name="moveModelBottomButton.ToolTip" xml:space="preserve">
-    <value>Sposta il modello selezionato in fondo</value>
+    <value>Sposta il modello selezionato in basso</value>
   </data>
   <data name="moveModelTopButton.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
