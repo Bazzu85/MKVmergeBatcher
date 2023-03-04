@@ -160,9 +160,9 @@ namespace MKVmergeBatcher.src.queue
                         {
                             taskbarProgressValue = jobProgressBar.Value;
                         }
-                        Console.WriteLine("currentRunningJob : " + MainForm.queueData.currentRunningJob.ToString());
-                        Console.WriteLine("jobProgressBar : " + jobProgressBar.Value.ToString());
-                        Console.WriteLine("update taskbar progress : " + taskbarProgressValue.ToString() + " to " + taskbarProgressMax.ToString());
+                        // Console.WriteLine("currentRunningJob : " + MainForm.queueData.currentRunningJob.ToString());
+                        // Console.WriteLine("jobProgressBar : " + jobProgressBar.Value.ToString());
+                        // Console.WriteLine("update taskbar progress : " + taskbarProgressValue.ToString() + " to " + taskbarProgressMax.ToString());
                         TaskbarManager.Instance.SetProgressValue(taskbarProgressValue, taskbarProgressMax);
 
                         if (MainForm.queueData.currentRunningJobIndex == lastSelectedRow)
@@ -196,12 +196,14 @@ namespace MKVmergeBatcher.src.queue
 
                     totalProgressBar.Value = MainForm.queueData.currentRunningJob;
 
-                    TaskbarManager.Instance.SetProgressState(TaskbarProgressBarState.NoProgress);
+                    // Moved outside to reset the bottom windows progress bar when the queue is not running
+                    //TaskbarManager.Instance.SetProgressState(TaskbarProgressBarState.NoProgress);
 
                     jobProgressBar.Value = jobProgressBar.Maximum;
                     ShowSummary();
                     MainForm.queueData.processEnded = false;
                 }
+                TaskbarManager.Instance.SetProgressState(TaskbarProgressBarState.NoProgress);
                 EnableControls();
             }
             jobsDataGridView.Refresh();

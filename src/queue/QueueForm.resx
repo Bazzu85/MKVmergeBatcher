@@ -117,9 +117,6 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="&gt;&gt;resetAllWarningJobsToolStripMenuItem.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
   <data name="&gt;&gt;jobProgressBar.Parent" xml:space="preserve">
     <value>panel1</value>
   </data>
@@ -127,20 +124,17 @@
   <data name="moveJobTopButton.Size" type="System.Drawing.Size, System.Drawing">
     <value>25, 25</value>
   </data>
-  <data name="$this.Text" xml:space="preserve">
-    <value>Queue</value>
-  </data>
   <data name="&gt;&gt;deleteJobButton.Type" xml:space="preserve">
     <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;fileFolderDataGridViewTextBoxColumn.Type" xml:space="preserve">
-    <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;moveJobUpButton.ZOrder" xml:space="preserve">
     <value>1</value>
   </data>
   <data name="clearQueueButton.ToolTip" xml:space="preserve">
     <value>Clear current Queue</value>
+  </data>
+  <data name="createBatButton.ToolTip" xml:space="preserve">
+    <value>Create a Bat file with the pending jobs</value>
   </data>
   <data name="&gt;&gt;errorLabel.Name" xml:space="preserve">
     <value>errorLabel</value>
@@ -153,9 +147,6 @@
   </data>
   <data name="&gt;&gt;outputDataGridViewTextBoxColumn.Type" xml:space="preserve">
     <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;fileFolderDataGridViewTextBoxColumn.Name" xml:space="preserve">
-    <value>fileFolderDataGridViewTextBoxColumn</value>
   </data>
   <data name="clearQueueToolStripMenuItem.Text" xml:space="preserve">
     <value>Clear Queue</value>
@@ -175,8 +166,8 @@
   <data name="&gt;&gt;queueToolTip.Type" xml:space="preserve">
     <value>System.Windows.Forms.ToolTip, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;startButton.Name" xml:space="preserve">
-    <value>startButton</value>
+  <data name="&gt;&gt;clearAllOkJobsToolStripMenuItem.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;warningLabel.ZOrder" xml:space="preserve">
     <value>1</value>
@@ -185,12 +176,11 @@
   <data name="stopButton.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Bottom, Right</value>
   </data>
+  <data name="autoClearOkJobsToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>269, 22</value>
+  </data>
   <data name="moveJobDownButton.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
-  </data>
-  <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="panel1.TabIndex" type="System.Int32, mscorlib">
-    <value>6</value>
   </data>
   <data name="moveJobUpButton.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
@@ -201,14 +191,14 @@
   <data name="workingOnLabel.Text" xml:space="preserve">
     <value>Working on job 0 of 0</value>
   </data>
-  <data name="resetAllOkJobsToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>269, 22</value>
+  <data name="&gt;&gt;fileFolderDataGridViewTextBoxColumn.Type" xml:space="preserve">
+    <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="modelsListButtonsPanel.Size" type="System.Drawing.Size, System.Drawing">
     <value>25, 411</value>
   </data>
-  <data name="&gt;&gt;startButton.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  <data name="&gt;&gt;outputTextBox.Name" xml:space="preserve">
+    <value>outputTextBox</value>
   </data>
   <data name="&gt;&gt;moveJobBottomButton.ZOrder" xml:space="preserve">
     <value>4</value>
@@ -219,20 +209,17 @@
   <data name="&gt;&gt;moveJobUpButton.Name" xml:space="preserve">
     <value>moveJobUpButton</value>
   </data>
+  <data name="clearQueueButton.Size" type="System.Drawing.Size, System.Drawing">
+    <value>25, 25</value>
+  </data>
   <data name="jobsDataGridView.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Top, Bottom, Left, Right</value>
   </data>
   <data name="&gt;&gt;clearAllPendingJobsToolStripMenuItem.Name" xml:space="preserve">
     <value>clearAllPendingJobsToolStripMenuItem</value>
   </data>
-  <data name="moveJobUpButton.ToolTip" xml:space="preserve">
-    <value>Move selected job Up</value>
-  </data>
-  <data name="moveJobBottomButton.Size" type="System.Drawing.Size, System.Drawing">
-    <value>25, 25</value>
-  </data>
-  <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
-    <value>934, 481</value>
+  <data name="totalProgressBar.Size" type="System.Drawing.Size, System.Drawing">
+    <value>150, 13</value>
   </data>
   <data name="moveJobDownButton.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
@@ -249,11 +236,9 @@
   <data name="panel1.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Bottom, Left, Right</value>
   </data>
-  <data name="startButton.Text" xml:space="preserve">
-    <value>Start</value>
-  </data>
-  <data name="moveJobBottomButton.Location" type="System.Drawing.Point, System.Drawing">
-    <value>0, 93</value>
+  <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="outputTextBox.TabIndex" type="System.Int32, mscorlib">
+    <value>7</value>
   </data>
   <data name="&gt;&gt;fileNameWithoutExtensionDataGridViewTextBoxColumn.Name" xml:space="preserve">
     <value>fileNameWithoutExtensionDataGridViewTextBoxColumn</value>
@@ -267,26 +252,17 @@
   <data name="&gt;&gt;clearAllWarningJobsToolStripMenuItem.Name" xml:space="preserve">
     <value>clearAllWarningJobsToolStripMenuItem</value>
   </data>
-  <data name="&gt;&gt;moveJobDownButton.Name" xml:space="preserve">
-    <value>moveJobDownButton</value>
+  <data name="$this.Text" xml:space="preserve">
+    <value>Queue</value>
   </data>
   <data name="&gt;&gt;warningLabel.Type" xml:space="preserve">
     <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;totalProgressBar.ZOrder" xml:space="preserve">
-    <value>2</value>
+  <data name="&gt;&gt;queueTimer.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Timer, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="fileFolderDataGridViewTextBoxColumn.HeaderText" xml:space="preserve">
     <value>Folder</value>
-  </data>
-  <data name="&gt;&gt;jobBindingSource.Name" xml:space="preserve">
-    <value>jobBindingSource</value>
-  </data>
-  <data name="errorLabel.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="&gt;&gt;clearAllPendingJobsToolStripMenuItem.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="workingOnLabel.Location" type="System.Drawing.Point, System.Drawing">
     <value>3, 13</value>
@@ -294,8 +270,8 @@
   <data name="&gt;&gt;moveJobBottomButton.Name" xml:space="preserve">
     <value>moveJobBottomButton</value>
   </data>
-  <data name="&gt;&gt;clearQueueButton.Name" xml:space="preserve">
-    <value>clearQueueButton</value>
+  <data name="&gt;&gt;createBatButton.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="jobsDataGridView.Size" type="System.Drawing.Size, System.Drawing">
     <value>879, 213</value>
@@ -303,14 +279,14 @@
   <data name="&gt;&gt;fileNameDataGridViewTextBoxColumn.Name" xml:space="preserve">
     <value>fileNameDataGridViewTextBoxColumn</value>
   </data>
-  <data name="errorLabel.ToolTip" xml:space="preserve">
-    <value />
-  </data>
   <data name="stopButton.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
   </data>
   <data name="resetAllWarningJobsToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
     <value>269, 22</value>
+  </data>
+  <data name="jobProgressBar.Size" type="System.Drawing.Size, System.Drawing">
+    <value>150, 13</value>
   </data>
   <data name="&gt;&gt;moveJobUpButton.Parent" xml:space="preserve">
     <value>modelsListButtonsPanel</value>
@@ -1883,14 +1859,17 @@
   <data name="moveJobTopButton.Location" type="System.Drawing.Point, System.Drawing">
     <value>0, 0</value>
   </data>
+  <data name="&gt;&gt;moveJobDownButton.Name" xml:space="preserve">
+    <value>moveJobDownButton</value>
+  </data>
   <data name="clearQueueButton.TabIndex" type="System.Int32, mscorlib">
     <value>0</value>
   </data>
-  <data name="&gt;&gt;clearQueueButton.ZOrder" xml:space="preserve">
-    <value>2</value>
-  </data>
   <data name="&gt;&gt;moveJobBottomButton.Parent" xml:space="preserve">
     <value>modelsListButtonsPanel</value>
+  </data>
+  <data name="modelsListButtonsPanel.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Bottom, Right</value>
   </data>
   <data name="moveJobTopButton.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
@@ -1903,11 +1882,17 @@
         F0L8I+csr3KaAAAAAElFTkSuQmCC
 </value>
   </data>
+  <data name="stopButton.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>MiddleRight</value>
+  </data>
   <data name="totalProgressBar.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
   </data>
-  <data name="moveJobTopButton.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+  <data name="clearQueueButton.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
+  </data>
+  <data name="&gt;&gt;moveJobTopButton.Name" xml:space="preserve">
+    <value>moveJobTopButton</value>
   </data>
   <data name="&gt;&gt;resetAllWarningJobsToolStripMenuItem.Name" xml:space="preserve">
     <value>resetAllWarningJobsToolStripMenuItem</value>
@@ -1921,8 +1906,8 @@
   <data name="totalProgressBar.TabIndex" type="System.Int32, mscorlib">
     <value>3</value>
   </data>
-  <data name="startButton.Location" type="System.Drawing.Point, System.Drawing">
-    <value>768, 0</value>
+  <data name="&gt;&gt;modelsListButtonsPanel.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="deleteJobButton.Size" type="System.Drawing.Size, System.Drawing">
     <value>25, 25</value>
@@ -1930,20 +1915,20 @@
   <data name="moveJobUpButton.TabIndex" type="System.Int32, mscorlib">
     <value>0</value>
   </data>
-  <data name="$this.ToolTip" xml:space="preserve">
-    <value />
-  </data>
   <data name="jobStatusDataGridViewTextBoxColumn.HeaderText" xml:space="preserve">
     <value>Status</value>
   </data>
-  <data name="&gt;&gt;queueTimer.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Timer, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="outputTextBox.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
-    <value>Bottom, Left, Right</value>
+  <data name="startButton.Size" type="System.Drawing.Size, System.Drawing">
+    <value>68, 39</value>
   </data>
   <data name="startButton.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
     <value>MiddleRight</value>
+  </data>
+  <data name="stopButton.ImageAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>MiddleLeft</value>
+  </data>
+  <data name="createBatButton.Location" type="System.Drawing.Point, System.Drawing">
+    <value>667, 0</value>
   </data>
   <data name="outputDataGridViewTextBoxColumn.Visible" type="System.Boolean, mscorlib">
     <value>False</value>
@@ -1962,8 +1947,8 @@
         Kawj/PvhTCYAAAAASUVORK5CYII=
 </value>
   </data>
-  <data name="&gt;&gt;panel1.ZOrder" xml:space="preserve">
-    <value>2</value>
+  <data name="&gt;&gt;outputTextBox.Parent" xml:space="preserve">
+    <value>$this</value>
   </data>
   <data name="clearQueueButton.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
@@ -1984,53 +1969,41 @@
   <data name="createBatButton.ImageAlign" type="System.Drawing.ContentAlignment, System.Drawing">
     <value>MiddleLeft</value>
   </data>
-  <data name="createBatButton.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
-    <value>MiddleRight</value>
-  </data>
   <data name="&gt;&gt;queueTimer.Name" xml:space="preserve">
     <value>queueTimer</value>
   </data>
   <data name="&gt;&gt;clearQueueToolStripMenuItem.Name" xml:space="preserve">
     <value>clearQueueToolStripMenuItem</value>
   </data>
-  <data name="&gt;&gt;outputTextBox.Name" xml:space="preserve">
-    <value>outputTextBox</value>
+  <data name="&gt;&gt;panel1.ZOrder" xml:space="preserve">
+    <value>2</value>
   </data>
-  <data name="outputTextBox.Location" type="System.Drawing.Point, System.Drawing">
-    <value>12, 232</value>
+  <data name="workingOnLabel.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="&gt;&gt;clearQueueButton.Name" xml:space="preserve">
+    <value>clearQueueButton</value>
   </data>
   <data name="moveJobBottomButton.TabIndex" type="System.Int32, mscorlib">
     <value>0</value>
   </data>
-  <data name="clearQueueButton.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="outputTextBox.Size" type="System.Drawing.Size, System.Drawing">
-    <value>879, 192</value>
-  </data>
-  <data name="autoClearWarningJobsToolStripMenuItem.Text" xml:space="preserve">
-    <value>Automatically remove Warning jobs?</value>
-  </data>
-  <data name="&gt;&gt;commandDataGridViewTextBoxColumn.Type" xml:space="preserve">
-    <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  <data name="jobsDataGridView.Location" type="System.Drawing.Point, System.Drawing">
+    <value>12, 13</value>
   </data>
   <data name="panel1.Location" type="System.Drawing.Point, System.Drawing">
     <value>12, 430</value>
   </data>
-  <data name="&gt;&gt;outputTextBox.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
   <data name="moveJobBottomButton.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
+  </data>
+  <data name="&gt;&gt;queueToolTip.Name" xml:space="preserve">
+    <value>queueToolTip</value>
   </data>
   <data name="&gt;&gt;fileFullPathDataGridViewTextBoxColumn.Type" xml:space="preserve">
     <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;autoClearWarningJobsToolStripMenuItem.Name" xml:space="preserve">
-    <value>autoClearWarningJobsToolStripMenuItem</value>
-  </data>
-  <data name="clearAllOkJobsToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>269, 22</value>
+  <data name="startButton.Location" type="System.Drawing.Point, System.Drawing">
+    <value>768, 0</value>
   </data>
   <data name="stopButton.Text" xml:space="preserve">
     <value>Stop</value>
@@ -2038,11 +2011,11 @@
   <data name="percentageDataGridViewTextBoxColumn.Width" type="System.Int32, mscorlib">
     <value>73</value>
   </data>
-  <data name="startButton.ToolTip" xml:space="preserve">
-    <value>Start to work on the queue</value>
+  <data name="&gt;&gt;$this.Name" xml:space="preserve">
+    <value>QueueForm</value>
   </data>
-  <data name="&gt;&gt;createBatButton.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  <data name="fileFullPathDataGridViewTextBoxColumn.Visible" type="System.Boolean, mscorlib">
+    <value>False</value>
   </data>
   <data name="&gt;&gt;fileNameDataGridViewTextBoxColumn.Type" xml:space="preserve">
     <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
@@ -2053,11 +2026,14 @@
   <data name="moveJobTopButton.BackgroundImageLayout" type="System.Windows.Forms.ImageLayout, System.Windows.Forms">
     <value>Stretch</value>
   </data>
-  <data name="modelsListButtonsPanel.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
-    <value>Top, Bottom, Right</value>
+  <data name="outputTextBox.Size" type="System.Drawing.Size, System.Drawing">
+    <value>879, 192</value>
   </data>
-  <data name="&gt;&gt;outputTextBox.ZOrder" xml:space="preserve">
-    <value>1</value>
+  <data name="moveJobTopButton.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="deleteJobButton.BackgroundImageLayout" type="System.Windows.Forms.ImageLayout, System.Windows.Forms">
+    <value>Stretch</value>
   </data>
   <data name="&gt;&gt;moveJobTopButton.Type" xml:space="preserve">
     <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
@@ -2065,20 +2041,14 @@
   <data name="&gt;&gt;moveJobTopButton.ZOrder" xml:space="preserve">
     <value>5</value>
   </data>
-  <data name="warningLabel.ToolTip" xml:space="preserve">
-    <value />
-  </data>
   <data name="commandDataGridViewTextBoxColumn.Visible" type="System.Boolean, mscorlib">
     <value>False</value>
   </data>
   <data name="createBatButton.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
   </data>
-  <data name="startButton.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="&gt;&gt;clearAllOkJobsToolStripMenuItem.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  <data name="&gt;&gt;outputTextBox.ZOrder" xml:space="preserve">
+    <value>1</value>
   </data>
   <data name="createBatButton.TabIndex" type="System.Int32, mscorlib">
     <value>0</value>
@@ -2104,8 +2074,8 @@
   <data name="clearAllErrorJobsToolStripMenuItem.Text" xml:space="preserve">
     <value>Clear all Error Jobs</value>
   </data>
-  <data name="outputTextBox.ToolTip" xml:space="preserve">
-    <value />
+  <data name="fileNameDataGridViewTextBoxColumn.HeaderText" xml:space="preserve">
+    <value>File</value>
   </data>
   <data name="&gt;&gt;panel1.Type" xml:space="preserve">
     <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
@@ -2134,26 +2104,20 @@
   <data name="&gt;&gt;totalProgressBar.Name" xml:space="preserve">
     <value>totalProgressBar</value>
   </data>
-  <data name="&gt;&gt;autoClearOkJobsToolStripMenuItem.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  <data name="deleteJobButton.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 124</value>
   </data>
-  <data name="&gt;&gt;startButton.ZOrder" xml:space="preserve">
-    <value>7</value>
+  <data name="errorLabel.Text" xml:space="preserve">
+    <value>Errors: 0</value>
   </data>
-  <data name="&gt;&gt;queueToolTip.Name" xml:space="preserve">
-    <value>queueToolTip</value>
-  </data>
-  <data name="warningLabel.Text" xml:space="preserve">
-    <value>Warning: 0</value>
+  <data name="&gt;&gt;startButton.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="modelsListButtonsPanel.Location" type="System.Drawing.Point, System.Drawing">
     <value>897, 13</value>
   </data>
-  <data name="jobProgressBar.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="&gt;&gt;deleteJobButton.Parent" xml:space="preserve">
-    <value>modelsListButtonsPanel</value>
+  <data name="&gt;&gt;autoClearWarningJobsToolStripMenuItem.Name" xml:space="preserve">
+    <value>autoClearWarningJobsToolStripMenuItem</value>
   </data>
   <data name="moveJobUpButton.Location" type="System.Drawing.Point, System.Drawing">
     <value>0, 31</value>
@@ -2179,14 +2143,11 @@
   <data name="&gt;&gt;jobsDataGridView.Type" xml:space="preserve">
     <value>System.Windows.Forms.DataGridView, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="moveJobDownButton.ToolTip" xml:space="preserve">
-    <value>Move selected job Down</value>
+  <data name="&gt;&gt;fileNameWithoutExtensionDataGridViewTextBoxColumn.Type" xml:space="preserve">
+    <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="jobsDataGridView.ToolTip" xml:space="preserve">
     <value />
-  </data>
-  <data name="$this.MinimumSize" type="System.Drawing.Size, System.Drawing">
-    <value>950, 520</value>
   </data>
   <data name="panel1.Size" type="System.Drawing.Size, System.Drawing">
     <value>910, 39</value>
@@ -2212,14 +2173,14 @@
   <data name="startButton.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Bottom, Right</value>
   </data>
-  <data name="&gt;&gt;jobProgressBar.ZOrder" xml:space="preserve">
-    <value>3</value>
+  <data name="&gt;&gt;jobStatusDataGridViewTextBoxColumn.Type" xml:space="preserve">
+    <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="autoClearErrorJobsToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
     <value>269, 22</value>
   </data>
-  <data name="errorLabel.TabIndex" type="System.Int32, mscorlib">
-    <value>4</value>
+  <data name="resetAllOkJobsToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>269, 22</value>
   </data>
   <data name="moveJobDownButton.TabIndex" type="System.Int32, mscorlib">
     <value>0</value>
@@ -2236,6 +2197,9 @@
   <data name="modelsListButtonsPanel.TabIndex" type="System.Int32, mscorlib">
     <value>5</value>
   </data>
+  <data name="createBatButton.Size" type="System.Drawing.Size, System.Drawing">
+    <value>95, 39</value>
+  </data>
   <data name="stopButton.TabIndex" type="System.Int32, mscorlib">
     <value>0</value>
   </data>
@@ -2245,26 +2209,26 @@
   <data name="&gt;&gt;moveJobDownButton.ZOrder" xml:space="preserve">
     <value>0</value>
   </data>
-  <data name="startButton.TabIndex" type="System.Int32, mscorlib">
-    <value>0</value>
+  <data name="&gt;&gt;resetAllWarningJobsToolStripMenuItem.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="workingOnLabel.Size" type="System.Drawing.Size, System.Drawing">
     <value>109, 13</value>
   </data>
-  <data name="&gt;&gt;workingOnLabel.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  <data name="&gt;&gt;commandDataGridViewTextBoxColumn.Type" xml:space="preserve">
+    <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="outputTextBox.TabIndex" type="System.Int32, mscorlib">
-    <value>7</value>
+  <data name="startButton.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
   </data>
-  <data name="fileNameDataGridViewTextBoxColumn.HeaderText" xml:space="preserve">
-    <value>File</value>
+  <data name="autoClearWarningJobsToolStripMenuItem.Text" xml:space="preserve">
+    <value>Automatically remove Warning jobs?</value>
   </data>
   <data name="commandDataGridViewTextBoxColumn.HeaderText" xml:space="preserve">
     <value>command</value>
   </data>
-  <data name="clearQueueButton.BackgroundImageLayout" type="System.Windows.Forms.ImageLayout, System.Windows.Forms">
-    <value>Stretch</value>
+  <data name="&gt;&gt;workingOnLabel.Parent" xml:space="preserve">
+    <value>panel1</value>
   </data>
   <data name="warningLabel.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -2275,14 +2239,17 @@
   <data name="percentageDataGridViewTextBoxColumn.HeaderText" xml:space="preserve">
     <value>Progress</value>
   </data>
-  <data name="&gt;&gt;panel1.Name" xml:space="preserve">
-    <value>panel1</value>
+  <data name="outputTextBox.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Bottom, Left, Right</value>
   </data>
-  <data name="&gt;&gt;autoClearWarningJobsToolStripMenuItem.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  <data name="&gt;&gt;clearQueueButton.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;jobProgressBar.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ProgressBar, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  <data name="moveJobDownButton.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 62</value>
+  </data>
+  <data name="&gt;&gt;workingOnLabel.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;autoClearOkJobsToolStripMenuItem.Name" xml:space="preserve">
     <value>autoClearOkJobsToolStripMenuItem</value>
@@ -2293,29 +2260,29 @@
   <data name="&gt;&gt;resetAllOkJobsToolStripMenuItem.Type" xml:space="preserve">
     <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;createBatButton.Name" xml:space="preserve">
-    <value>createBatButton</value>
-  </data>
-  <data name="&gt;&gt;$this.Name" xml:space="preserve">
-    <value>QueueForm</value>
+  <data name="errorLabel.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
   </data>
   <data name="&gt;&gt;errorLabel.Type" xml:space="preserve">
     <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;clearQueueButton.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  <data name="warningLabel.Text" xml:space="preserve">
+    <value>Warning: 0</value>
   </data>
   <data name="&gt;&gt;totalProgressBar.Type" xml:space="preserve">
     <value>System.Windows.Forms.ProgressBar, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="totalProgressBar.Size" type="System.Drawing.Size, System.Drawing">
-    <value>150, 13</value>
+  <data name="&gt;&gt;clearAllErrorJobsToolStripMenuItem.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;resetAllErrorJobsToolStripMenuItem.Name" xml:space="preserve">
+    <value>resetAllErrorJobsToolStripMenuItem</value>
   </data>
   <data name="&gt;&gt;modelsListButtonsPanel.Parent" xml:space="preserve">
     <value>$this</value>
   </data>
-  <data name="resetAllWarningJobsToolStripMenuItem.Text" xml:space="preserve">
-    <value>Reset all Warning Jobs</value>
+  <data name="panel1.TabIndex" type="System.Int32, mscorlib">
+    <value>6</value>
   </data>
   <data name="createBatButton.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Bottom, Right</value>
@@ -2323,23 +2290,23 @@
   <data name="jobProgressBar.Location" type="System.Drawing.Point, System.Drawing">
     <value>141, 13</value>
   </data>
-  <data name="&gt;&gt;moveJobBottomButton.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  <data name="&gt;&gt;clearAllPendingJobsToolStripMenuItem.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="jobProgressBar.ToolTip" xml:space="preserve">
-    <value />
+  <data name="jobProgressBar.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
   </data>
   <data name="jobStatusDataGridViewTextBoxColumn.Width" type="System.Int32, mscorlib">
     <value>62</value>
   </data>
-  <data name="fileFullPathDataGridViewTextBoxColumn.Visible" type="System.Boolean, mscorlib">
-    <value>False</value>
+  <data name="&gt;&gt;clearQueueButton.ZOrder" xml:space="preserve">
+    <value>2</value>
   </data>
   <data name="clearQueueButton.Location" type="System.Drawing.Point, System.Drawing">
     <value>0, 155</value>
   </data>
-  <data name="fileNameDataGridViewTextBoxColumn.Width" type="System.Int32, mscorlib">
-    <value>48</value>
+  <data name="&gt;&gt;jobBindingSource.Name" xml:space="preserve">
+    <value>jobBindingSource</value>
   </data>
   <data name="&gt;&gt;$this.Type" xml:space="preserve">
     <value>System.Windows.Forms.Form, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
@@ -2347,17 +2314,26 @@
   <data name="fileNameWithoutExtensionDataGridViewTextBoxColumn.HeaderText" xml:space="preserve">
     <value>fileNameWithoutExtension</value>
   </data>
-  <data name="clearQueueButton.Size" type="System.Drawing.Size, System.Drawing">
-    <value>25, 25</value>
+  <data name="errorLabel.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="&gt;&gt;errorLabel.ZOrder" xml:space="preserve">
+    <value>0</value>
   </data>
   <data name="&gt;&gt;startButton.Parent" xml:space="preserve">
     <value>panel1</value>
   </data>
+  <data name="fileNameWithoutExtensionDataGridViewTextBoxColumn.Visible" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
   <data name="&gt;&gt;createBatButton.ZOrder" xml:space="preserve">
     <value>6</value>
   </data>
-  <data name="deleteJobButton.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
+  <data name="resetAllWarningJobsToolStripMenuItem.Text" xml:space="preserve">
+    <value>Reset all Warning Jobs</value>
+  </data>
+  <data name="startButton.ToolTip" xml:space="preserve">
+    <value>Start to work on the queue</value>
   </data>
   <data name="&gt;&gt;fileFullPathDataGridViewTextBoxColumn.Name" xml:space="preserve">
     <value>fileFullPathDataGridViewTextBoxColumn</value>
@@ -2365,8 +2341,25 @@
   <data name="&gt;&gt;resetAllErrorJobsToolStripMenuItem.Type" xml:space="preserve">
     <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
+  <data name="&gt;&gt;createBatButton.Name" xml:space="preserve">
+    <value>createBatButton</value>
+  </data>
   <data name="&gt;&gt;totalProgressBar.Parent" xml:space="preserve">
     <value>panel1</value>
+  </data>
+  <data name="createBatButton.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6
+        JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAACXBIWXMAAB2HAAAdhwGP5fFlAAAByUlE
+        QVRYR+3XTStFQRzH8WvBhpSnWHhKeQs2tlbKWsnDRinlYYGywMJC8gIs7BTK1lohvAVZeH4sQslCHr+/
+        mqnp5nJm7uhu7r8+nXvObeb8zjkzczqpX6oANWiOoBrqz6u6sB3JFjqRuKqghj2oR2MW1L4XCqF+E5Ua
+        7phtjPLuLx8gHyAfIOcBarFutjHKO0A5WtAErWQhGlAKlVcANVrDOU5xZn5fmK327TG7r//S/9f+Kkqg
+        MIkDKL06+HI84BhXeDfHHvGMFyioXOMTtp360WNUn1kFmMYQBrBhjg1Cxw8xig6s4A22XbQAwxhHH5Zx
+        gG7ola0r38UE3DYSLcAI5jGDKSxAV9yGJezjXwPoVuuK+7GIMajDTUya33Nw20i0ABqEJ7jBK+7xAQ3I
+        O2ggPsFtI0EBNA01fTSlMk1Dd7r9dEzsNCyG1zRU5XQhUum25XQp9m7gVBHsc5c6tEIz5d8DFGIWGrB2
+        LGgc3UL9lSFRhQbQlR8hfTZoCW9H4goNoFuuq3ZPfgktWl4VK0DQyVUxAgSfXFUJfUrpk0qdKshfNO81
+        2vVK1jMPPrktfUwqhO5E+sdmJntm6zXgMlXo53kFElYq9Q1xqujU2mssywAAAABJRU5ErkJggg==
+</value>
   </data>
   <data name="moveJobDownButton.Size" type="System.Drawing.Size, System.Drawing">
     <value>25, 25</value>
@@ -2382,6 +2375,9 @@
   </data>
   <data name="workingOnLabel.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
+  </data>
+  <data name="&gt;&gt;deleteJobButton.ZOrder" xml:space="preserve">
+    <value>3</value>
   </data>
   <data name="startButton.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
@@ -2399,8 +2395,11 @@
   <data name="workingOnLabel.TabIndex" type="System.Int32, mscorlib">
     <value>1</value>
   </data>
-  <data name="autoClearWarningJobsToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>269, 22</value>
+  <data name="moveJobBottomButton.Size" type="System.Drawing.Size, System.Drawing">
+    <value>25, 25</value>
+  </data>
+  <data name="startButton.ImageAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>MiddleLeft</value>
   </data>
   <data name="$this.AutoScaleDimensions" type="System.Drawing.SizeF, System.Drawing">
     <value>6, 13</value>
@@ -2425,11 +2424,11 @@
         AABJRU5ErkJggg==
 </value>
   </data>
-  <data name="autoClearOkJobsToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>269, 22</value>
+  <data name="errorLabel.TabIndex" type="System.Int32, mscorlib">
+    <value>4</value>
   </data>
-  <data name="&gt;&gt;jobStatusDataGridViewTextBoxColumn.Type" xml:space="preserve">
-    <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  <data name="$this.ToolTip" xml:space="preserve">
+    <value />
   </data>
   <data name="&gt;&gt;stopButton.Parent" xml:space="preserve">
     <value>panel1</value>
@@ -2437,8 +2436,8 @@
   <data name="totalProgressBar.ToolTip" xml:space="preserve">
     <value />
   </data>
-  <data name="jobsDataGridView.Location" type="System.Drawing.Point, System.Drawing">
-    <value>12, 13</value>
+  <data name="moveJobBottomButton.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 93</value>
   </data>
   <data name="&gt;&gt;stopButton.ZOrder" xml:space="preserve">
     <value>5</value>
@@ -2449,6 +2448,69 @@
   <data name="fileFullPathDataGridViewTextBoxColumn.HeaderText" xml:space="preserve">
     <value>fileFullPath</value>
   </data>
+  <data name="moveJobUpButton.ToolTip" xml:space="preserve">
+    <value>Move selected job Up</value>
+  </data>
+  <data name="autoClearErrorJobsToolStripMenuItem.Text" xml:space="preserve">
+    <value>Automatically remove Error jobs?</value>
+  </data>
+  <data name="&gt;&gt;stopButton.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;autoClearOkJobsToolStripMenuItem.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;autoClearErrorJobsToolStripMenuItem.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="modelsListButtonsPanel.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="jobProgressBar.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="startButton.Text" xml:space="preserve">
+    <value>Start</value>
+  </data>
+  <data name="clearQueueButton.BackgroundImageLayout" type="System.Windows.Forms.ImageLayout, System.Windows.Forms">
+    <value>Stretch</value>
+  </data>
+  <data name="warningLabel.TabIndex" type="System.Int32, mscorlib">
+    <value>4</value>
+  </data>
+  <data name="errorLabel.Location" type="System.Drawing.Point, System.Drawing">
+    <value>526, 13</value>
+  </data>
+  <data name="&gt;&gt;panel1.Name" xml:space="preserve">
+    <value>panel1</value>
+  </data>
+  <data name="workingOnLabel.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="errorLabel.Size" type="System.Drawing.Size, System.Drawing">
+    <value>46, 13</value>
+  </data>
+  <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
+    <value>934, 481</value>
+  </data>
+  <data name="startButton.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;queueContextMenuStrip.Name" xml:space="preserve">
+    <value>queueContextMenuStrip</value>
+  </data>
+  <data name="outputTextBox.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="warningLabel.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="stopButton.ToolTip" xml:space="preserve">
+    <value>Stop the running queue</value>
+  </data>
+  <data name="&gt;&gt;startButton.Name" xml:space="preserve">
+    <value>startButton</value>
+  </data>
   <data name="moveJobUpButton.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6
@@ -2458,110 +2520,50 @@
         2ZF0s/RAMzOzfxTCBP6BEcrvyDZGAAAAAElFTkSuQmCC
 </value>
   </data>
-  <data name="autoClearErrorJobsToolStripMenuItem.Text" xml:space="preserve">
-    <value>Automatically remove Error jobs?</value>
+  <data name="&gt;&gt;jobProgressBar.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ProgressBar, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;stopButton.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="errorLabel.Location" type="System.Drawing.Point, System.Drawing">
-    <value>526, 13</value>
-  </data>
-  <data name="&gt;&gt;autoClearErrorJobsToolStripMenuItem.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="modelsListButtonsPanel.ToolTip" xml:space="preserve">
-    <value />
-  </data>
-  <data name="startButton.Size" type="System.Drawing.Size, System.Drawing">
-    <value>68, 39</value>
-  </data>
-  <data name="&gt;&gt;fileNameWithoutExtensionDataGridViewTextBoxColumn.Type" xml:space="preserve">
-    <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;moveJobDownButton.Parent" xml:space="preserve">
-    <value>modelsListButtonsPanel</value>
-  </data>
-  <data name="&gt;&gt;modelsListButtonsPanel.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="warningLabel.TabIndex" type="System.Int32, mscorlib">
-    <value>4</value>
+  <data name="&gt;&gt;totalProgressBar.ZOrder" xml:space="preserve">
+    <value>2</value>
   </data>
   <data name="stopButton.Size" type="System.Drawing.Size, System.Drawing">
     <value>68, 39</value>
   </data>
-  <data name="createBatButton.ToolTip" xml:space="preserve">
-    <value>Create a Bat file with the pending jobs</value>
-  </data>
-  <data name="errorLabel.Size" type="System.Drawing.Size, System.Drawing">
-    <value>46, 13</value>
-  </data>
-  <data name="&gt;&gt;queueContextMenuStrip.Name" xml:space="preserve">
-    <value>queueContextMenuStrip</value>
-  </data>
-  <data name="&gt;&gt;queueContextMenuStrip.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ContextMenuStrip, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="workingOnLabel.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="&gt;&gt;workingOnLabel.Parent" xml:space="preserve">
-    <value>panel1</value>
-  </data>
-  <data name="moveJobDownButton.Location" type="System.Drawing.Point, System.Drawing">
-    <value>0, 62</value>
-  </data>
-  <data name="stopButton.ToolTip" xml:space="preserve">
-    <value>Stop the running queue</value>
-  </data>
-  <data name="fileNameWithoutExtensionDataGridViewTextBoxColumn.Visible" type="System.Boolean, mscorlib">
-    <value>False</value>
-  </data>
-  <data name="&gt;&gt;deleteJobButton.ZOrder" xml:space="preserve">
-    <value>3</value>
-  </data>
-  <data name="workingOnLabel.ToolTip" xml:space="preserve">
-    <value />
-  </data>
-  <data name="stopButton.ImageAlign" type="System.Drawing.ContentAlignment, System.Drawing">
-    <value>MiddleLeft</value>
-  </data>
-  <data name="&gt;&gt;jobBindingSource.Type" xml:space="preserve">
-    <value>System.Windows.Forms.BindingSource, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="jobProgressBar.Size" type="System.Drawing.Size, System.Drawing">
-    <value>150, 13</value>
-  </data>
-  <data name="&gt;&gt;moveJobTopButton.Name" xml:space="preserve">
-    <value>moveJobTopButton</value>
+  <data name="moveJobDownButton.ToolTip" xml:space="preserve">
+    <value>Move selected job Down</value>
   </data>
   <data name="moveJobTopButton.TabIndex" type="System.Int32, mscorlib">
     <value>0</value>
   </data>
-  <data name="&gt;&gt;resetAllErrorJobsToolStripMenuItem.Name" xml:space="preserve">
-    <value>resetAllErrorJobsToolStripMenuItem</value>
+  <data name="&gt;&gt;autoClearWarningJobsToolStripMenuItem.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;resetAllOkJobsToolStripMenuItem.Name" xml:space="preserve">
     <value>resetAllOkJobsToolStripMenuItem</value>
   </data>
-  <data name="deleteJobButton.BackgroundImageLayout" type="System.Windows.Forms.ImageLayout, System.Windows.Forms">
-    <value>Stretch</value>
+  <data name="&gt;&gt;deleteJobButton.Parent" xml:space="preserve">
+    <value>modelsListButtonsPanel</value>
   </data>
-  <data name="&gt;&gt;errorLabel.ZOrder" xml:space="preserve">
-    <value>0</value>
+  <data name="&gt;&gt;jobBindingSource.Type" xml:space="preserve">
+    <value>System.Windows.Forms.BindingSource, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="createBatButton.Location" type="System.Drawing.Point, System.Drawing">
-    <value>667, 0</value>
+  <data name="&gt;&gt;jobProgressBar.ZOrder" xml:space="preserve">
+    <value>3</value>
   </data>
-  <data name="&gt;&gt;clearAllErrorJobsToolStripMenuItem.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  <data name="&gt;&gt;moveJobBottomButton.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="autoClearWarningJobsToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>269, 22</value>
+  </data>
+  <data name="deleteJobButton.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
   </data>
   <data name="&gt;&gt;modelsListButtonsPanel.Name" xml:space="preserve">
     <value>modelsListButtonsPanel</value>
   </data>
-  <data name="createBatButton.Size" type="System.Drawing.Size, System.Drawing">
-    <value>95, 39</value>
+  <data name="&gt;&gt;queueContextMenuStrip.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ContextMenuStrip, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="autoClearOkJobsToolStripMenuItem.Text" xml:space="preserve">
     <value>Automatically remove Ok jobs?</value>
@@ -2578,25 +2580,20 @@
   <data name="clearQueueToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
     <value>269, 22</value>
   </data>
-  <data name="stopButton.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
-    <value>MiddleRight</value>
+  <data name="clearAllOkJobsToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>269, 22</value>
   </data>
-  <data name="createBatButton.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-    <value>
-        iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6
-        JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAACXBIWXMAAB2HAAAdhwGP5fFlAAAByUlE
-        QVRYR+3XTStFQRzH8WvBhpSnWHhKeQs2tlbKWsnDRinlYYGywMJC8gIs7BTK1lohvAVZeH4sQslCHr+/
-        mqnp5nJm7uhu7r8+nXvObeb8zjkzczqpX6oANWiOoBrqz6u6sB3JFjqRuKqghj2oR2MW1L4XCqF+E5Ua
-        7phtjPLuLx8gHyAfIOcBarFutjHKO0A5WtAErWQhGlAKlVcANVrDOU5xZn5fmK327TG7r//S/9f+Kkqg
-        MIkDKL06+HI84BhXeDfHHvGMFyioXOMTtp360WNUn1kFmMYQBrBhjg1Cxw8xig6s4A22XbQAwxhHH5Zx
-        gG7ola0r38UE3DYSLcAI5jGDKSxAV9yGJezjXwPoVuuK+7GIMajDTUya33Nw20i0ABqEJ7jBK+7xAQ3I
-        O2ggPsFtI0EBNA01fTSlMk1Dd7r9dEzsNCyG1zRU5XQhUum25XQp9m7gVBHsc5c6tEIz5d8DFGIWGrB2
-        LGgc3UL9lSFRhQbQlR8hfTZoCW9H4goNoFuuq3ZPfgktWl4VK0DQyVUxAgSfXFUJfUrpk0qdKshfNO81
-        2vVK1jMPPrktfUwqhO5E+sdmJntm6zXgMlXo53kFElYq9Q1xqujU2mssywAAAABJRU5ErkJggg==
-</value>
+  <data name="&gt;&gt;moveJobDownButton.Parent" xml:space="preserve">
+    <value>modelsListButtonsPanel</value>
   </data>
-  <data name="startButton.ImageAlign" type="System.Drawing.ContentAlignment, System.Drawing">
-    <value>MiddleLeft</value>
+  <data name="&gt;&gt;startButton.ZOrder" xml:space="preserve">
+    <value>7</value>
+  </data>
+  <data name="fileNameDataGridViewTextBoxColumn.Width" type="System.Int32, mscorlib">
+    <value>48</value>
+  </data>
+  <data name="&gt;&gt;fileFolderDataGridViewTextBoxColumn.Name" xml:space="preserve">
+    <value>fileFolderDataGridViewTextBoxColumn</value>
   </data>
   <data name="&gt;&gt;warningLabel.Name" xml:space="preserve">
     <value>warningLabel</value>
@@ -2604,21 +2601,21 @@
   <data name="&gt;&gt;moveJobUpButton.Type" xml:space="preserve">
     <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
+  <data name="outputTextBox.Location" type="System.Drawing.Point, System.Drawing">
+    <value>12, 232</value>
+  </data>
   <data name="&gt;&gt;percentageDataGridViewTextBoxColumn.Name" xml:space="preserve">
     <value>percentageDataGridViewTextBoxColumn</value>
   </data>
-  <data name="deleteJobButton.Location" type="System.Drawing.Point, System.Drawing">
-    <value>0, 124</value>
+  <data name="createBatButton.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>MiddleRight</value>
   </data>
   <data name="&gt;&gt;jobsDataGridView.Name" xml:space="preserve">
     <value>jobsDataGridView</value>
   </data>
-  <data name="errorLabel.Text" xml:space="preserve">
-    <value>Errors: 0</value>
+  <data name="$this.MinimumSize" type="System.Drawing.Size, System.Drawing">
+    <value>950, 520</value>
   </data>
-  <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
   <metadata name="queueToolTip.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>160, 17</value>
   </metadata>
@@ -2628,13 +2625,13 @@
   <metadata name="queueTimer.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>291, 17</value>
   </metadata>
+  <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
   <metadata name="queueDataBindingSource.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>408, 17</value>
   </metadata>
   <metadata name="queueContextMenuStrip.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>604, 15</value>
-  </metadata>
-  <metadata name="$this.Language" type="System.Globalization.CultureInfo, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>it-IT</value>
   </metadata>
 </root>
