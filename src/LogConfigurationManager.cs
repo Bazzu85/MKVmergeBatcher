@@ -14,6 +14,10 @@ namespace MKVmergeBatcher.src
                 LogManager.Configuration.Variables["logLevel"] = MainForm.optionsData.selectedLogLevel;
                 LogManager.ReconfigExistingLoggers();
                 Logger.Info("Changed log level to " + MainForm.optionsData.selectedLogLevel);
+                // Call the method to enable the unhandled exceptions logging
+                // placed here so when the application register the log level, enable the exceptions loggin
+                LogExceptionsManager logExceptionsManager = new LogExceptionsManager();
+                logExceptionsManager.RegisterUnhandledExectionsLogging();
             }
             catch (Exception ex)
             {

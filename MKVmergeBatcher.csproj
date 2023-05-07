@@ -298,6 +298,7 @@
     <Compile Include="src\legacy\ImportLegacyData.cs" />
     <Compile Include="src\legacy\UserData.cs" />
     <Compile Include="src\legacy\UserDataJson.cs" />
+    <Compile Include="src\LogExceptionsManager.cs" />
     <Compile Include="src\VersionManager.cs" />
     <Compile Include="src\LocaleManager.cs" />
     <Compile Include="src\LogConfigurationManager.cs" />
